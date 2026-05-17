@@ -2,8 +2,6 @@ import type { MetadataRoute } from 'next'
 import { LOCALES } from '@/lib/content'
 import { getAcademicBlogPosts, getDeveloperBlogPosts } from '@/lib/blog'
 
-export const dynamic = 'force-static'
-
 const SITE_URL = 'https://www.atanusroy.com'
 
 const staticAcademicRoutes = [

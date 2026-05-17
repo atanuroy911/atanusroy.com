@@ -1,0 +1,15 @@
+research_statements:
+  - title: Autonomous Guided Vehicles (AGV)
+    description: >-
+      Developing energy-aware and robust path planning algorithms for
+      omnidirectional AGVs in unknown environments using evolutionary approaches
+      like Beetle Antennae Search.
+  - title: Computer Vision & Edge AI
+    description: >-
+      Designing lightweight deep learning architectures (e.g., Attentive-YOLO)
+      for real-time inference on edge devices, particularly for pipeline defect
+      detection and agricultural monitoring.
+  - title: IoT & Smart Infrastructure
+    description: >-
+      Creating scalable, low-power solutions using LoRaWAN and edge computing
+      for urban challenges like smart parking and intelligent street lighting.

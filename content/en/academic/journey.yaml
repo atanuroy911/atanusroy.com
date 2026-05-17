@@ -1,0 +1,10 @@
+journey:
+  title: Academic Journey
+  description: Moments from conferences, research labs, and teaching.
+  images:
+    - src: >-
+        https://images.unsplash.com/photo-1540317580384-e5d43867caa6?auto=format&fit=crop&w=600&q=80
+      caption: Presenting at IEEE Conference 2023
+    - src: >-
+        https://images.unsplash.com/photo-1560523159-4a9692d222f9?auto=format&fit=crop&w=600&q=80
+      caption: IoT Vision Lab, IIT Kanpur

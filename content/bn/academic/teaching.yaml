@@ -1,0 +1,44 @@
+# AUTO-GENERATED — do not edit manually
+# Run: npm run translate to regenerate
+
+teaching_courses:
+  - code: CSE 301
+    name: অপারেটিং সিস্টেম
+    semester: গ্রীষ্ম 2026
+    archived: false
+    description: প্রক্রিয়া পরিচালনা, মেমরি বরাদ্দকরণ, এবং ফাইল সিস্টেম সহ OS নীতিগুলির গভীরভাবে ওভারভিউ।
+    syllabus_link: https://drive.google.com/...
+    materials:
+      - title: বক্তৃতা
+        items:
+          - name: "লেকচার 1: OS কি?"
+            link: https://drive.google.com/...
+          - name: "লেকচার 2: প্রসেস এবং থ্রেড"
+            link: https://drive.google.com/...
+      - title: অ্যাসাইনমেন্ট
+        items:
+          - name: "প্রকল্প: কাস্টম শেল"
+            link: https://drive.google.com/...
+  - code: CSE 203
+    name: ডেটা স্ট্রাকচার এবং অ্যালগরিদম
+    semester: 2025 সালের পতন
+    archived: true
+    description: মূল ডেটা স্ট্রাকচার (অ্যারে, লিঙ্ক করা তালিকা, গাছ, গ্রাফ) এবং অ্যালগরিদমিক ডিজাইনের ব্যাপক অধ্যয়ন।
+    syllabus_link: https://drive.google.com/drive/folders/sample_link
+    materials:
+      - title: বক্তৃতা
+        items:
+          - name: "লেকচার 1: অ্যালগরিদমিক জটিলতার ভূমিকা"
+            link: https://drive.google.com/file/d/sample
+          - name: "লেকচার 2: অ্যারে এবং পয়েন্টার"
+            link: https://drive.google.com/file/d/sample
+          - name: "লেকচার 3: লিঙ্ক করা তালিকা (একক এবং দ্বিগুণ)"
+            link: https://drive.google.com/file/d/sample
+      - title: অ্যাসাইনমেন্ট
+        items:
+          - name: "অ্যাসাইনমেন্ট 1: বিগ-ও বিশ্লেষণ"
+            link: https://drive.google.com/file/d/sample
+      - title: অনুশীলনের সমস্যা
+        items:
+          - name: "অনুশীলন সেট 1: পুনরাবৃত্তি"
+            link: https://drive.google.com/file/d/sample

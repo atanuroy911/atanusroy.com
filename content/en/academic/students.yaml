@@ -1,0 +1,9 @@
+students:
+  - name: Sample Student 1
+    photo: /academic/students/student1.jpg
+    details: Undergraduate Researcher
+    project: Autonomous Navigation for AGVs
+  - name: Sample Student 2
+    photo: /academic/students/student2.jpg
+    details: Capstone Project Student
+    project: Smart City Traffic Management via IoT

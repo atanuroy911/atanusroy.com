@@ -1,0 +1,66 @@
+# AUTO-GENERATED — do not edit manually
+# Run: npm run translate to regenerate
+
+projects:
+  - title: BTC-CORE-WEBAPP
+    description: >-
+      বিটকয়েন কোর [RPC] ওয়েব অ্যাপ্লিকেশন। RPC কমান্ডের মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি
+      ওয়েব ইন্টারফেস তৈরি করা হয়েছে।
+    tags:
+      - Java
+      - Bitcoin
+      - RPC
+      - Web
+    link: https://github.com/atanuroy911/BTC-CORE-WEBAPP
+    github: https://github.com/atanuroy911/BTC-CORE-WEBAPP
+    featured: true
+  - title: CS724-RoboX
+    description: >-
+      আইআইটি কানপুরে রোবোটিক্স এবং স্বায়ত্তশাসিত সিস্টেম সম্পর্কিত একটি ভান্ডার। পথ পরিকল্পনা এবং নিয়ন্ত্রণের জন্য
+      উন্নত অ্যালগরিদম।
+    tags:
+      - Jupyter Notebook
+      - Robotics
+      - Python
+    github: https://github.com/atanuroy911/CS724-RoboX
+    featured: true
+  - title: iitk-fortinet-gui
+    description: >-
+      IITK Fortinet Authenticator অ্যাপ্লিকেশন স্বয়ংক্রিয়ভাবে বিশ্ববিদ্যালয় ক্যাম্পাসে নেটওয়ার্ক প্রমাণীকরণ পরিচালনা
+      করতে।
+    tags:
+      - JavaScript
+      - Network
+      - Automation
+    github: https://github.com/atanuroy911/iitk-fortinet-gui
+    featured: true
+  - title: স্ট্রেস-ডিটেকশন-অ্যাপ
+    description: শারীরবৃত্তীয় ডেটা এবং পাইথন ব্যবহার করে স্ট্রেস লেভেলের পূর্বাভাস দেওয়ার জন্য একটি ব্যাপক মেশিন লার্নিং সিস্টেম।
+    tags:
+      - Python
+      - Machine Learning
+      - Healthcare
+    github: https://github.com/atanuroy911/stress-detection-app
+  - title: ulab-mms
+    description: >-
+      ইউল্যাব (ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ) এর জন্য আধুনিক ম্যানেজমেন্ট সিস্টেম একাডেমিক ক্রিয়াকলাপগুলিকে
+      প্রবাহিত করতে।
+    tags:
+      - TypeScript
+      - Next.js
+      - Full-Stack
+    github: https://github.com/atanuroy911/ulab-mms
+  - title: name2meta
+    description: ফাইল এবং ডাটাবেস থেকে মেটাডেটা নিষ্কাশন বা পরিচালনার জন্য একটি পাইথন ইউটিলিটি।
+    tags:
+      - Python
+      - Utility
+      - Data Processing
+    github: https://github.com/atanuroy911/name2meta
+  - title: অনুসন্ধান-খাবার-ডিবি
+    description: দূরবর্তী ডাটাবেস API ব্যবহার করে খাবার অনুসন্ধানের জন্য একটি প্রতিক্রিয়াশীল ওয়েব অ্যাপ্লিকেশন।
+    tags:
+      - JavaScript
+      - API
+      - Frontend
+    github: https://github.com/atanuroy911/search-meal-db

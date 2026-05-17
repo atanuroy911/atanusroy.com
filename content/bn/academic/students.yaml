@@ -1,0 +1,12 @@
+# AUTO-GENERATED — do not edit manually
+# Run: npm run translate to regenerate
+
+students:
+  - name: নমুনা ছাত্র 1
+    photo: /academic/students/student1.jpg
+    details: স্নাতক গবেষক
+    project: AGV-এর জন্য স্বায়ত্তশাসিত নেভিগেশন
+  - name: নমুনা ছাত্র 2
+    photo: /academic/students/student2.jpg
+    details: ক্যাপস্টোন প্রকল্পের ছাত্র
+    project: আইওটি এর মাধ্যমে স্মার্ট সিটি ট্রাফিক ব্যবস্থাপনা

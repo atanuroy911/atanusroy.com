@@ -1,0 +1,190 @@
+blog_categories:
+  - id: project
+    label: Project
+    color: "#00a8c8"
+    bg: "#e0f9ff"
+  - id: devlog
+    label: Dev Log
+    color: "#ff3366"
+    bg: "#fff0f4"
+  - id: tutorial
+    label: Tutorial
+    color: "#c8a000"
+    bg: "#fffde0"
+  - id: deployment
+    label: Deployment
+    color: "#10b981"
+    bg: "#f0fdf4"
+  - id: tools
+    label: Tools & Setup
+    color: "#8b5cf6"
+    bg: "#f5f3ff"
+  - id: career
+    label: Career
+    color: "#f97316"
+    bg: "#fff7ed"
+  - id: opinion
+    label: Opinion
+    color: "#6b7280"
+    bg: "#f9fafb"
+
+blog_posts:
+  - id: btc-core-webapp-launch
+    title: "Building a Bitcoin RPC Browser with Java"
+    date: "2025-03-10"
+    category: project
+    tags: [bitcoin, java, rpc, web-app]
+    cover_image: ""
+    summary: >
+      Walk through building a full web interface to interact with a Bitcoin Core node
+      via JSON-RPC — the architecture, async challenges, and what I learned.
+    content: |
+      ## The itch
+
+      I run a Bitcoin Core full node at home. Every time I wanted to check mempool stats,
+      list UTXOs, or decode a raw transaction, I had to drop into the terminal and type
+      `bitcoin-cli` commands. Fine once. Annoying on repeat.
+
+      I wanted a clean browser UI. So I built one.
+
+      ## Tech Stack
+
+      - **Backend**: Java (Spring Boot) — wrapping the JSON-RPC calls
+      - **Frontend**: Vanilla JS + Fetch API
+      - **Auth**: HTTP Basic Auth (same credentials as bitcoin.conf)
+
+      ## The JSON-RPC Layer
+
+      Bitcoin Core exposes a simple HTTP JSON-RPC interface. Every command looks like:
+
+      ```json
+      {
+        "method": "getblockchaininfo",
+        "params": [],
+        "id": 1
+      }
+      ```
+
+      The Spring Boot service proxies these requests, adds auth headers, and returns clean JSON
+      to the frontend. The tricky part was handling **long-polling** for mempool updates — I didn't
+      want to hammer the node with constant requests.
+
+      **Solution**: a 5-second debounced poll with exponential backoff if the node is busy.
+
+      ## What I Learned
+
+      - Bitcoin Core's RPC surface is *huge*. Stick to what you need.
+      - `getblocktemplate` is expensive — don't call it frequently.
+      - Java's `HttpClient` (Java 11+) handles async nicely with `CompletableFuture`.
+
+      ## Code
+
+      The full source is on GitHub. PRs and issues welcome!
+    github: "https://github.com/atanuroy911/BTC-CORE-WEBAPP"
+    link: ""
+    pinned: true
+
+  - id: iitk-fortinet-authenticator
+    title: "Killing Campus Wi-Fi Timeouts with an Electron App"
+    date: "2024-09-05"
+    category: tools
+    tags: [automation, network, electron, tools]
+    cover_image: ""
+    summary: >
+      Campus Wi-Fi logs you out every 4 hours. I automated re-authentication with a
+      tiny Electron tray app that silently handles it in the background.
+    content: |
+      ## The Problem
+
+      IIT Kanpur's Fortinet captive portal logs you out every 4 hours. You're 3 hours into
+      a training run, walk away for lunch, come back to find the job dead because the
+      network dropped.
+
+      This is fixable. So I fixed it.
+
+      ## How Fortinet Auth Works
+
+      The captive portal is just a POST form:
+
+      ```
+      POST /fgtauth
+      Content-Type: application/x-www-form-urlencoded
+
+      username=ROLLNO&password=SECRET&magic=TOKEN&4Tredir=http://1.1.1.1
+      ```
+
+      The `magic` token changes each session — you have to scrape it from the login page first.
+
+      ## The Electron App
+
+      I wrapped this in an **Electron** tray app so it:
+
+      1. Watches for internet connectivity (polls `1.1.1.1` every 60s)
+      2. On failure: scrapes a fresh magic token, re-submits credentials
+      3. Notifies you via system tray if re-auth succeeds or fails
+
+      Lives in the system tray. Uses ~30MB RAM. Zero UI clutter.
+
+      ## Platform Support
+
+      Tested on:
+      - **Linux** (Arch, Ubuntu 22.04)
+      - **macOS** (Ventura)
+
+      Windows support is sketchy because Electron's tray behaves differently but it's on the roadmap.
+    github: "https://github.com/atanuroy911/iitk-fortinet-gui"
+    link: ""
+    pinned: false
+
+  - id: stress-detection-ml
+    title: "91% Accuracy Stress Detection from Wearable Sensors"
+    date: "2024-06-20"
+    category: project
+    tags: [machine-learning, healthcare, python, signal-processing]
+    cover_image: ""
+    summary: >
+      End-to-end ML pipeline for stress-level prediction using wearable sensor data —
+      from raw signal preprocessing to a 1D-CNN that hits 91% accuracy.
+    content: |
+      ## Dataset
+
+      I used the **WESAD** (Wearable Stress and Affect Detection) dataset — 15 subjects,
+      chest-worn RespiBAN sensor collecting:
+
+      - **EDA** (Electrodermal Activity / Galvanic Skin Response)
+      - **ECG** (Electrocardiogram)
+      - **Respiration**
+      - **ACC** (3-axis accelerometer)
+
+      Three labels: *Baseline*, *Stress*, *Amusement*.
+
+      ## Preprocessing Pipeline
+
+      ```python
+      # 1. Bandpass filter EDA (0.05–5 Hz)
+      # 2. Sliding window segmentation (60s, 50% overlap)
+      # 3. Feature extraction per window:
+      #    - EDA: SCR peaks, SCL mean, rise time
+      #    - HRV: SDNN, RMSSD, LF/HF ratio
+      #    - RESP: rate, amplitude variance
+      ```
+
+      ## Models Compared
+
+      | Model | Accuracy | F1 (macro) |
+      |---|---|---|
+      | SVM (RBF kernel) | 84.2% | 0.81 |
+      | Random Forest | 87.6% | 0.85 |
+      | **1D-CNN** | **91.3%** | **0.90** |
+
+      The 1D-CNN treats each feature channel as a separate temporal stream — it learns
+      correlations across modalities that handcrafted features miss.
+
+      ## Key Takeaway
+
+      For physiological time series: **deep learning wins on accuracy, tree models win on
+      interpretability**. If you're building for a clinical context, Random Forest + SHAP
+      values is the more defensible choice.
+    github: "https://github.com/atanuroy911/stress-detection-app"
+    link: ""
+    pinned: false

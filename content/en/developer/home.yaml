@@ -1,0 +1,31 @@
+hero:
+  greeting: Hey, I'm
+  name: Atanu.
+  roles:
+    - Software Engineer
+    - DevOps Engineer
+    - Full-Stack Developer
+    - System Architect
+  tagline: >-
+    I build robust, scalable applications — from responsive frontends to complex cloud-native microservices.
+  cta_primary: See My Projects
+  cta_secondary: Let's Talk
+bio: >
+  Engineer by training, builder by nature. I specialize in building and deploying 
+  high-performance web platforms. With a strong background in software engineering, 
+  I've led full-stack development and cloud infrastructure design for diverse clients 
+  across the US and Canada, focusing on clean code and robust systems.
+experience:
+  - role: Web Developer & DevOps Engineer
+    org: Backend Ace
+    period: Sep 2024 – Sep 2025
+    location: Remote · New York, USA
+    bullets:
+      - Full-stack development and cloud infrastructure for US clients
+      - Managed CI/CD pipelines and server deployments
+  - role: Associate Web Developer
+    org: Wizzartech
+    period: Apr 2022 – Dec 2022
+    location: Remote · Toronto, Canada
+    bullets:
+      - Built client-facing web applications using modern JS frameworks

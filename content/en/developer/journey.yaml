@@ -1,0 +1,10 @@
+journey:
+  title: Developer Journey
+  description: Moments from building software, hackathons, and tech events.
+  images:
+    - src: >-
+        https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80
+      caption: Deploying my first scalable architecture.
+    - src: >-
+        https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80
+      caption: Late night debugging sessions.

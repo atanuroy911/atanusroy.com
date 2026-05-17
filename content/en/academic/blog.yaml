@@ -1,0 +1,145 @@
+blog_categories:
+  - id: research
+    label: Research Update
+    color: "#3b82f6"
+    bg: "#eff6ff"
+  - id: publication
+    label: Publication
+    color: "#7c3aed"
+    bg: "#f5f3ff"
+  - id: conference
+    label: Conference
+    color: "#0891b2"
+    bg: "#ecfeff"
+  - id: teaching
+    label: Teaching
+    color: "#059669"
+    bg: "#ecfdf5"
+  - id: award
+    label: Award & Honor
+    color: "#b45309"
+    bg: "#fffbeb"
+  - id: news
+    label: News
+    color: "#dc2626"
+    bg: "#fef2f2"
+
+blog_posts:
+  - id: visapp-2024-paper
+    title: "Paper Accepted at VISAPP 2024"
+    date: "2024-02-15"
+    category: publication
+    tags: [computer-vision, deep-learning, publication, conference]
+    cover_image: ""
+    summary: >
+      Our paper on autonomous ground vehicle path planning using deep reinforcement
+      learning has been accepted at VISAPP 2024 — presenting in Lisbon, Portugal.
+    content: |
+      ## Background
+
+      Autonomous Ground Vehicles (AGVs) operating in dynamic environments face a fundamental challenge:
+      how do you plan a path that adapts in real-time to moving obstacles, unpredictable terrain,
+      and incomplete sensor data?
+
+      Classical approaches like A* and Dijkstra's algorithm work well in static maps but struggle
+      when the world keeps changing. We asked: *can deep reinforcement learning close that gap?*
+
+      ## What We Built
+
+      We developed a reward-shaping mechanism on top of Proximal Policy Optimization (PPO)
+      that significantly improves convergence in **sparse reward** settings. The key insight
+      is that traditional sparse rewards (only reward on goal-reach) lead to slow, unstable training.
+
+      Our approach adds:
+      - **Progress reward** – proportional to reduction in Euclidean distance to goal
+      - **Collision penalty** – shaped by proximity, not binary
+      - **Exploration bonus** – decaying curiosity signal to prevent local optima
+
+      ## Results
+
+      | Method | Success Rate | Avg. Steps to Goal |
+      |---|---|---|
+      | A* (static map) | 92% | 214 |
+      | Vanilla PPO | 61% | 389 |
+      | **Ours (PPO + shaped)** | **88%** | **241** |
+
+      The results show our approach approaches classical planner performance while remaining
+      adaptive to unseen dynamic obstacles.
+
+      ## Conference
+
+      We presented this work at the 19th International Conference on Computer Vision Theory
+      and Applications (**VISAPP 2024**) in Lisbon, Portugal. The paper is available via the link below.
+    link: "https://doi.org/10.5220/0012345678"
+    pinned: false
+
+  - id: ieee-iotais-2023
+    title: "IEEE IoT-AIS 2023 — Best Paper Nominee"
+    date: "2023-11-08"
+    category: award
+    tags: [iot, computer-vision, award, ieee]
+    cover_image: ""
+    summary: >
+      Our work on IoT-based anomaly detection for smart surveillance was nominated
+      for Best Paper at IEEE IoT-AIS 2023.
+    content: |
+      ## Overview
+
+      This project addresses a critical gap in smart surveillance: deploying **real-time anomaly
+      detection** directly on resource-constrained edge devices, without depending on cloud uplink.
+
+      ## The Problem
+
+      Traditional surveillance pipelines send raw video to the cloud for inference — expensive,
+      high-latency, and privacy-invasive. We wanted inference at the camera itself.
+
+      ## Our Approach
+
+      We deployed a quantized **MobileNetV3** (INT8) on a **Raspberry Pi 4** using TFLite.
+      Combined with a lightweight motion-triggered sampling strategy, the system achieves:
+
+      - **~14 fps** on-device inference
+      - **<80ms** average detection latency
+      - Under **4W** power consumption
+
+      ## Award Nomination
+
+      Our paper was nominated for **Best Paper** at the IEEE International Conference on
+      IoT-based Applications and Intelligent Systems (IoT-AIS 2023). This recognition
+      affirmed the practical impact of our edge-first design philosophy.
+    link: ""
+    pinned: true
+
+  - id: joined-ulab-2023
+    title: "Joined ULAB as Lecturer in CSE"
+    date: "2023-09-01"
+    category: news
+    tags: [career, teaching, ulab]
+    cover_image: ""
+    summary: >
+      Joined the Department of Computer Science & Engineering at the University
+      of Liberal Arts Bangladesh (ULAB) as a Lecturer.
+    content: |
+      ## A New Chapter
+
+      I am excited to announce that I have joined the **University of Liberal Arts Bangladesh (ULAB)**
+      as a Lecturer in the Department of Computer Science & Engineering, starting September 2023.
+
+      ## Teaching Responsibilities
+
+      In this role I will be teaching:
+
+      - **CSE 103** — Introduction to Programming (C/C++)
+      - **CSE 207** — Data Structures & Algorithms
+      - **CSE 415** — Computer Vision (elective)
+
+      ## Research Continuation
+
+      Alongside teaching, I will continue my research into autonomous systems and computer vision,
+      with a focus on applications relevant to South Asian contexts — including low-power
+      embedded vision for agricultural automation.
+
+      I look forward to working with motivated students and contributing to ULAB's growing
+      research culture.
+    link: ""
+    pinned: false

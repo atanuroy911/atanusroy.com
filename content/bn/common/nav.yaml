@@ -1,0 +1,16 @@
+# AUTO-GENERATED — do not edit manually
+# Run: npm run translate to regenerate
+
+nav:
+  home: বাড়ি
+  projects: প্রকল্প
+  teaching: শিক্ষাদান
+  journey: যাত্রা
+  contact: যোগাযোগ
+  publications: প্রকাশনা
+  students: ছাত্ররা
+  research: গবেষণা
+  blog: ব্লগ
+  switch_to_academic: একাডেমিক এ স্যুইচ করুন
+  switch_to_developer: বিকাশকারীতে স্যুইচ করুন
+  language: English

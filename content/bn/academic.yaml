@@ -1,0 +1,200 @@
+# AUTO-GENERATED — do not edit manually
+# Run: npm run translate to regenerate
+
+hero:
+  title: অতনু শুভম রায়
+  role: প্রভাষক ও গবেষক
+  institution: University of Liberal Arts Bangladesh
+  department: কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগ
+  tagline: কম্পিউটার ভিশন, রোবোটিক্স এবং এমবেডেড সিস্টেমের সীমান্ত অন্বেষণ করা
+  cta_primary: প্রকাশনা দেখুন
+  cta_secondary: আমার সাথে যোগাযোগ করুন
+bio: >-
+  আমি ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগের একজন প্রভাষক। আমি IIT
+  কানপুর (2022-2024) থেকে কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এ M.Tech করেছি, যেখানে আমি গভীর শিক্ষা-ভিত্তিক
+  পাইপলাইন পরিদর্শন সিস্টেমে কাজ করেছি। আমার গবেষণাটি তিনটি দেশে কম্পিউটার ভিশন, রোবোটিক্স, আইওটি এবং এমবেডেড সিস্টেম
+  নিয়ে বিস্তৃত - বাংলাদেশ, ভারত এবং চীন।
+research_interests:
+  - কম্পিউটার ভিশন এবং অবজেক্ট ডিটেকশন
+  - অটোনোমাস গাইডেড ভেহিকেল (AGV)
+  - আইওটি এবং এমবেডেড সিস্টেম
+  - এজ ডিভাইসে গভীর শিক্ষা
+  - স্মার্ট সিটি অবকাঠামো
+education:
+  - degree: M.Tech — কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং
+    institution: Indian Institute of Technology, Kanpur
+    location: Kanpur, India
+    period: 2022 – 2024
+    grade: "CPI: 7.29/10"
+  - degree: বি.ই. - কম্পিউটার বিজ্ঞান ও প্রযুক্তি
+    institution: Jiangxi University of Science & Technology
+    location: Jiangxi, China
+    period: 2018 – 2022
+    grade: 91.01%
+  - degree: উচ্চ মাধ্যমিক সার্টিফিকেট (HSC)
+    institution: Notre Dame College
+    location: Dhaka, Bangladesh
+    period: "2017"
+    grade: "GPA: 5.00/5.00"
+experience:
+  - role: প্রভাষক, CSE বিভাগ
+    org: University of Liberal Arts Bangladesh
+    type: teaching
+    period: Sep 2025 – Present
+    location: Dhaka, Bangladesh
+    bullets:
+      - "UG CSE কোর্স পড়ানো: OS, DSA, পরিসংখ্যান, সফটওয়্যার ইঞ্জিনিয়ারিং, এমবেডেড সিস্টেম"
+      - কম্পিউটার ভিশন, IoT, এবং রোবোটিক্স জুড়ে ক্যাপস্টোন প্রকল্পগুলিতে শিক্ষার্থীদের গাইড করা
+  - role: গবেষণা সহকারী (দূরবর্তী)
+    org: Robotics & Automation Research Lab (RARL), JUST
+    type: research
+    period: Aug 2024 – Present
+    location: Jiangxi, China
+    bullets:
+      - Dijkstra, Floyd-Warshall, DFS ব্যবহার করে শক্তি-সচেতন AGV সংক্ষিপ্ত পথ পরিকল্পনা
+      - কৃষি পর্যবেক্ষণের জন্য কম্পিউটার দৃষ্টিতে সহযোগিতা করা
+  - role: গবেষণা সহকারী
+    org: IoT Vision Lab, IIT Kanpur
+    type: research
+    period: Dec 2022 – Aug 2024
+    location: Kanpur, India
+    bullets:
+      - >-
+        YOLOv7-এ ইন্টিগ্রেটেড ECA মেকানিজম, জলের পাইপলাইনের ত্রুটি সনাক্তকরণের জন্য মডেল প্যারামিটারগুলি 20% হ্রাস করে
+        (জল জীবন মিশন, ভারত সরকার)
+      - FMCW RADAR এবং LoRaWAN সহ প্রোটোটাইপ করা স্ট্রিটলাইট ম্যানেজমেন্ট সিস্টেম
+  - role: গবেষণা সহকারী
+    org: Robotics & Automation Research Lab (RARL), JUST
+    type: research
+    period: Aug 2018 – Dec 2021
+    location: Jiangxi, China
+    bullets:
+      - Pixy Cam ব্যবহার করে ফুড ডেলিভারি রোবটের জন্য রিয়েল-টাইম ক্যামেরা মনিটরিং
+      - Raspberry Pi-এ MobileNet SSD ব্যবহার করে গভীর শিক্ষার UAV গতি সনাক্তকরণ
+      - IoT-এর জন্য E2E এনক্রিপশন সহ প্রতারণাবিরোধী পরীক্ষা এবং উপস্থিতি সিস্টেম তৈরি করা হয়েছে
+publications_bibtex: |-
+  @আর্টিকেল{moshayedi2026 ইন্টিগ্রেটেড,
+    শিরোনাম={একটি সমন্বিত বিটল অ্যান্টেনা অনুসন্ধান–অজানা পরিবেশে সর্বমুখী AGV মোবাইল রোবটের জন্য সক্ষম ন্যাভিগেশন ফ্রেমওয়ার্ক},
+    লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং করণ, ইউ. এবং ঝাং, এম. এবং বাসির, ডি.},
+    জার্নাল={ইএআই এনডোর্সড লেনদেন অন এআই এবং রোবোটিক্স},
+    বছর={2026},
+    প্রকার={জার্নাল}
+  } @inproceedings{moshayedi2025path,
+    শিরোনাম={এজিভিগুলির জন্য পথ পরিকল্পনা: কম্পিউটেশনাল দক্ষতা এবং সর্বোত্তমতার ভারসাম্য},
+    লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এইচ. এবং ইয়াং, এস. এবং রাজী, এ. এবং আন্দানি, এম.ই.},
+    বইয়ের শিরোনাম={5ম ICRAIC 2025, IEEE},
+    বছর={2025},
+    প্রকার={সম্মেলন}
+  } @inproceedings{moshayedi2025urbanpark,
+    শিরোনাম={আরবানপার্ক: LoRaWAN সক্ষম স্মার্ট পার্কিং মডিউল সহ পার্কিং পরিকাঠামোর অগ্রগতি},
+    লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এ. এবং ইয়াং, এস.},
+    বইয়ের শিরোনাম={4th ICCIT 2025},
+    বছর={2025},
+    প্রকার={সম্মেলন}
+  } @inproceedings{moshayedi2024dr,
+    শিরোনাম={ডঃ অরেঞ্জঅ্যাপ: সাইট্রাস বাগানে রিয়েল-টাইম পেস্ট ডিটেকশনে বিপ্লব ঘটানো},
+    লেখক={মোশায়েদী, এ.জে. এবং জাওয়াদি, এম.জে. এবং রায়, এ.এস. এবং অন্যান্য},
+    booktitle={4th Asia-Pacific AI & Big Data Forum 2024},
+    বছর={2024},
+    প্রকার={সম্মেলন}
+  } @আর্টিকেল{roy2024advanced,
+    title={আইআর সেন্সর এবং টাইমড অটোমেটা ব্যবহার করে অ্যাডভান্সড পাথ ট্র্যাকিং এবং ট্রাফিক ব্যবস্থাপনা},
+    লেখক={রায়, এ.এস. এবং দাস, এ.},
+    জার্নাল={রোবোটিক্স রিসার্চ জার্নাল (JRR), 1(1), 15–23},
+    বছর={2024},
+    প্রকার={জার্নাল}
+  } @inproceedings{roy2024 মনোযোগী,
+    শিরোনাম={অ্যাটেনটিভ-ইওলো: দক্ষ চ্যানেলের মনোযোগ ব্যবহার করে অন-সাইট জলের পাইপলাইন পরিদর্শন এবং ELAN-ভিত্তিক YOLOv7},
+    লেখক={রায়, এ.এস. এবং বাগাদে, পি.},
+    booktitle={VISAPP 2024},
+    বছর={2024},
+    প্রকার={সম্মেলন}
+  }
+students:
+  - name: নমুনা ছাত্র 1
+    photo: /academic/students/student1.jpg
+    details: স্নাতক গবেষক
+    project: AGV-এর জন্য স্বায়ত্তশাসিত নেভিগেশন
+  - name: নমুনা ছাত্র 2
+    photo: /academic/students/student2.jpg
+    details: ক্যাপস্টোন প্রকল্পের ছাত্র
+    project: আইওটি এর মাধ্যমে স্মার্ট সিটি ট্রাফিক ব্যবস্থাপনা
+research_statements:
+  - title: অটোনোমাস গাইডেড ভেহিকেল (AGV)
+    description: >-
+      বিটল অ্যান্টেনা অনুসন্ধানের মতো বিবর্তনীয় পদ্ধতি ব্যবহার করে অজানা পরিবেশে সর্বমুখী AGV-এর জন্য শক্তি-সচেতন এবং
+      শক্তিশালী পথ পরিকল্পনা অ্যালগরিদম তৈরি করা।
+  - title: কম্পিউটার ভিশন এবং এজ এআই
+    description: >-
+      এজ ডিভাইসে রিয়েল-টাইম ইনফরেন্সের জন্য লাইটওয়েট ডিপ লার্নিং আর্কিটেকচার (যেমন, অ্যাটেনটিভ-ইওলো) ডিজাইন করা, বিশেষ
+      করে পাইপলাইনের ত্রুটি সনাক্তকরণ এবং কৃষি পর্যবেক্ষণের জন্য।
+  - title: আইওটি এবং স্মার্ট পরিকাঠামো
+    description: >-
+      স্মার্ট পার্কিং এবং বুদ্ধিমান রাস্তার আলোর মতো শহুরে চ্যালেঞ্জের জন্য LoRaWAN এবং প্রান্ত কম্পিউটিং ব্যবহার করে
+      মাপযোগ্য, কম-পাওয়ার সমাধান তৈরি করা।
+awards:
+  - year: "2023"
+    title: MHRD ফেলোশিপ
+    org: IIT Kanpur
+  - year: "2022"
+    title: অসামান্য আন্তর্জাতিক স্নাতক পুরস্কার
+    org: Jiangxi University of Science & Technology
+  - year: "2021"
+    title: ২য় (প্রাদেশিক) ও ৩য় (জাতীয়)
+    org: 14th China University Computer Design Competition
+teaching_courses:
+  - code: CSE 301
+    name: অপারেটিং সিস্টেম
+    semester: গ্রীষ্ম 2026
+    archived: false
+    description: প্রক্রিয়া পরিচালনা, মেমরি বরাদ্দকরণ, এবং ফাইল সিস্টেম সহ OS নীতিগুলির গভীরভাবে ওভারভিউ।
+    syllabus_link: https://drive.google.com/...
+    materials:
+      - title: বক্তৃতা
+        items:
+          - name: "লেকচার 1: OS কি?"
+            link: https://drive.google.com/...
+          - name: "লেকচার 2: প্রসেস এবং থ্রেড"
+            link: https://drive.google.com/...
+      - title: অ্যাসাইনমেন্ট
+        items:
+          - name: "প্রকল্প: কাস্টম শেল"
+            link: https://drive.google.com/...
+  - code: CSE 203
+    name: ডেটা স্ট্রাকচার এবং অ্যালগরিদম
+    semester: 2025 সালের পতন
+    archived: true
+    description: মূল ডেটা স্ট্রাকচার (অ্যারে, লিঙ্ক করা তালিকা, গাছ, গ্রাফ) এবং অ্যালগরিদমিক ডিজাইনের ব্যাপক অধ্যয়ন।
+    syllabus_link: https://drive.google.com/drive/folders/sample_link
+    materials:
+      - title: বক্তৃতা
+        items:
+          - name: "লেকচার 1: অ্যালগরিদমিক জটিলতার ভূমিকা"
+            link: https://drive.google.com/file/d/sample
+          - name: "লেকচার 2: অ্যারে এবং পয়েন্টার"
+            link: https://drive.google.com/file/d/sample
+          - name: "লেকচার 3: লিঙ্ক করা তালিকা (একক এবং দ্বিগুণ)"
+            link: https://drive.google.com/file/d/sample
+      - title: অ্যাসাইনমেন্ট
+        items:
+          - name: "অ্যাসাইনমেন্ট 1: বিগ-ও বিশ্লেষণ"
+            link: https://drive.google.com/file/d/sample
+      - title: অনুশীলনের সমস্যা
+        items:
+          - name: "অনুশীলন সেট 1: পুনরাবৃত্তি"
+            link: https://drive.google.com/file/d/sample
+referees:
+  - name: প্রিয়াঙ্কা বাগদে ড
+    affiliation: IIT Kanpur
+    email: pbagade@iitk.ac.in
+  - name: আতা জাহাঙ্গীর মোশায়েদী ড
+    affiliation: Jiangxi University of Science & Technology
+    email: ajm@jxust.edu.cn
+journey:
+  title: একাডেমিক যাত্রা
+  description: সম্মেলন, গবেষণা ল্যাব এবং শিক্ষাদানের মুহূর্ত।
+  images:
+    - src: https://images.unsplash.com/photo-1540317580384-e5d43867caa6?auto=format&fit=crop&w=600&q=80
+      caption: IEEE সম্মেলন 2023-এ উপস্থাপনা
+    - src: https://images.unsplash.com/photo-1560523159-4a9692d222f9?auto=format&fit=crop&w=600&q=80
+      caption: আইওটি ভিশন ল্যাব, আইআইটি কানপুর

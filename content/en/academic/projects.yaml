@@ -1,0 +1,9 @@
+academic_projects:
+  - title: "Autonomous Robot Navigation System"
+    description: "Developed a vision-based autonomous navigation pipeline for an indoor mobile robot. The system utilizes depth sensors and a custom SLAM implementation to map dynamic environments in real-time. We tackled extreme sensor noise and tight compute constraints by using a lightweight neural network for obstacle detection alongside a traditional probabilistic roadmap planner."
+    video_id: "dQw4w9WgXcQ" # Youtube video ID
+    paper_link: "https://example.com/paper.pdf"
+  - title: "IoT Smart Agriculture Platform"
+    description: "Designed a low-power, wide-area IoT platform using LoRaWAN to monitor soil moisture and predict irrigation needs. The project involved deploying custom sensor nodes and building a central cloud backend that aggregates data and runs a predictive machine learning model to optimize water usage for local farmers."
+    video_id: "dQw4w9WgXcQ" # Youtube video ID
+    paper_link: "https://example.com/paper.pdf"

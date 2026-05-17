@@ -1,0 +1,45 @@
+teaching_courses:
+  - code: CSE 301
+    name: Operating Systems
+    semester: Summer 2026
+    archived: false
+    description: >-
+      In-depth overview of OS principles including process management, memory
+      allocation, and file systems.
+    syllabus_link: https://drive.google.com/...
+    materials:
+      - title: Lectures
+        items:
+          - name: 'Lecture 1: What is an OS?'
+            link: https://drive.google.com/...
+          - name: 'Lecture 2: Processes & Threads'
+            link: https://drive.google.com/...
+      - title: Assignments
+        items:
+          - name: 'Project: Custom Shell'
+            link: https://drive.google.com/...
+  - code: CSE 203
+    name: Data Structures & Algorithms
+    semester: Fall 2025
+    archived: true
+    description: >-
+      Comprehensive study of core data structures (arrays, linked lists, trees,
+      graphs) and algorithmic design.
+    syllabus_link: https://drive.google.com/drive/folders/sample_link
+    materials:
+      - title: Lectures
+        items:
+          - name: 'Lecture 1: Intro to Algorithmic Complexity'
+            link: https://drive.google.com/file/d/sample
+          - name: 'Lecture 2: Arrays & Pointers'
+            link: https://drive.google.com/file/d/sample
+          - name: 'Lecture 3: Linked Lists (Singly & Doubly)'
+            link: https://drive.google.com/file/d/sample
+      - title: Assignments
+        items:
+          - name: 'Assignment 1: Big-O Analysis'
+            link: https://drive.google.com/file/d/sample
+      - title: Practice Problems
+        items:
+          - name: 'Practice Set 1: Recursion'
+            link: https://drive.google.com/file/d/sample

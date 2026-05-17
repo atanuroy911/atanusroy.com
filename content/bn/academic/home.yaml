@@ -1,0 +1,84 @@
+# AUTO-GENERATED — do not edit manually
+# Run: npm run translate to regenerate
+
+hero:
+  title: অতনু শুভম রায়
+  role: প্রভাষক ও গবেষক
+  institution: University of Liberal Arts Bangladesh
+  department: কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগ
+  tagline: কম্পিউটার ভিশন, রোবোটিক্স এবং এমবেডেড সিস্টেমের সীমান্ত অন্বেষণ করা
+  cta_primary: প্রকাশনা দেখুন
+  cta_secondary: আমার সাথে যোগাযোগ করুন
+bio: >-
+  আমি ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগের একজন প্রভাষক। আমি IIT
+  কানপুর (2022-2024) থেকে কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এ M.Tech করেছি, যেখানে আমি গভীর শিক্ষা-ভিত্তিক
+  পাইপলাইন পরিদর্শন সিস্টেমে কাজ করেছি। আমার গবেষণাটি তিনটি দেশে কম্পিউটার ভিশন, রোবোটিক্স, আইওটি এবং এমবেডেড সিস্টেম
+  নিয়ে বিস্তৃত - বাংলাদেশ, ভারত এবং চীন।
+research_interests:
+  - কম্পিউটার ভিশন এবং অবজেক্ট ডিটেকশন
+  - অটোনোমাস গাইডেড ভেহিকেল (AGV)
+  - আইওটি এবং এমবেডেড সিস্টেম
+  - এজ ডিভাইসে গভীর শিক্ষা
+  - স্মার্ট সিটি অবকাঠামো
+education:
+  - degree: M.Tech — কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং
+    institution: Indian Institute of Technology, Kanpur
+    location: Kanpur, India
+    period: 2022 – 2024
+    grade: "CPI: 7.29/10"
+  - degree: বি.ই. - কম্পিউটার বিজ্ঞান ও প্রযুক্তি
+    institution: Jiangxi University of Science & Technology
+    location: Jiangxi, China
+    period: 2018 – 2022
+    grade: 91.01%
+  - degree: উচ্চ মাধ্যমিক সার্টিফিকেট (HSC)
+    institution: Notre Dame College
+    location: Dhaka, Bangladesh
+    period: "2017"
+    grade: "GPA: 5.00/5.00"
+experience:
+  - role: প্রভাষক, CSE বিভাগ
+    org: University of Liberal Arts Bangladesh
+    type: teaching
+    period: Sep 2025 – Present
+    location: Dhaka, Bangladesh
+    bullets:
+      - "UG CSE কোর্স পড়ানো: OS, DSA, পরিসংখ্যান, সফটওয়্যার ইঞ্জিনিয়ারিং, এমবেডেড সিস্টেম"
+      - কম্পিউটার ভিশন, IoT, এবং রোবোটিক্স জুড়ে ক্যাপস্টোন প্রকল্পগুলিতে শিক্ষার্থীদের গাইড করা
+  - role: গবেষণা সহকারী (দূরবর্তী)
+    org: Robotics & Automation Research Lab (RARL), JUST
+    type: research
+    period: Aug 2024 – Present
+    location: Jiangxi, China
+    bullets:
+      - Dijkstra, Floyd-Warshall, DFS ব্যবহার করে শক্তি-সচেতন AGV সংক্ষিপ্ত পথ পরিকল্পনা
+      - কৃষি পর্যবেক্ষণের জন্য কম্পিউটার দৃষ্টিতে সহযোগিতা করা
+  - role: গবেষণা সহকারী
+    org: IoT Vision Lab, IIT Kanpur
+    type: research
+    period: Dec 2022 – Aug 2024
+    location: Kanpur, India
+    bullets:
+      - >-
+        YOLOv7-এ ইন্টিগ্রেটেড ECA মেকানিজম, জলের পাইপলাইনের ত্রুটি সনাক্তকরণের জন্য মডেল প্যারামিটারগুলি 20% হ্রাস করে
+        (জল জীবন মিশন, ভারত সরকার)
+      - FMCW RADAR এবং LoRaWAN সহ প্রোটোটাইপ করা স্ট্রিটলাইট ম্যানেজমেন্ট সিস্টেম
+  - role: গবেষণা সহকারী
+    org: Robotics & Automation Research Lab (RARL), JUST
+    type: research
+    period: Aug 2018 – Dec 2021
+    location: Jiangxi, China
+    bullets:
+      - Pixy Cam ব্যবহার করে ফুড ডেলিভারি রোবটের জন্য রিয়েল-টাইম ক্যামেরা মনিটরিং
+      - Raspberry Pi-এ MobileNet SSD ব্যবহার করে গভীর শিক্ষার UAV গতি সনাক্তকরণ
+      - IoT-এর জন্য E2E এনক্রিপশন সহ প্রতারণাবিরোধী পরীক্ষা এবং উপস্থিতি সিস্টেম তৈরি করা হয়েছে
+awards:
+  - year: "2023"
+    title: MHRD ফেলোশিপ
+    org: IIT Kanpur
+  - year: "2022"
+    title: অসামান্য আন্তর্জাতিক স্নাতক পুরস্কার
+    org: Jiangxi University of Science & Technology
+  - year: "2021"
+    title: ২য় (প্রাদেশিক) ও ৩য় (জাতীয়)
+    org: 14th China University Computer Design Competition

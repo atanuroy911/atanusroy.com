@@ -1,0 +1,1236 @@
+{
+  "en": {
+    "footer": {
+      "copyright": "Atanu Shuvam Roy",
+      "built_with": "Built with Next.js & shadcn/ui"
+    },
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "teaching": "Teaching",
+      "journey": "Journey",
+      "contact": "Contact",
+      "publications": "Publications",
+      "students": "Students",
+      "research": "Research",
+      "blog": "Blog",
+      "switch_to_academic": "Switch to Academic",
+      "switch_to_developer": "Switch to Developer",
+      "language": "বাংলা"
+    },
+    "personal": {
+      "name": "Atanu Shuvam Roy",
+      "email": "atanusroy98@gmail.com",
+      "phone": "+880 1937545261",
+      "location": "Dhaka, Bangladesh",
+      "linkedin": "https://linkedin.com/in/atanu-shuvam-roy",
+      "github": "https://github.com/atanusroy",
+      "google_scholar": "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en",
+      "cv_url": "/assets/cv.pdf",
+      "academic_photo": "/assets/academic_photo.jpg",
+      "developer_photo": "/assets/developer_photo.jpg"
+    },
+    "academic": {
+      "blog_categories": [
+        {
+          "id": "research",
+          "label": "Research Update",
+          "color": "#3b82f6",
+          "bg": "#eff6ff"
+        },
+        {
+          "id": "publication",
+          "label": "Publication",
+          "color": "#7c3aed",
+          "bg": "#f5f3ff"
+        },
+        {
+          "id": "conference",
+          "label": "Conference",
+          "color": "#0891b2",
+          "bg": "#ecfeff"
+        },
+        {
+          "id": "teaching",
+          "label": "Teaching",
+          "color": "#059669",
+          "bg": "#ecfdf5"
+        },
+        {
+          "id": "award",
+          "label": "Award & Honor",
+          "color": "#b45309",
+          "bg": "#fffbeb"
+        },
+        {
+          "id": "news",
+          "label": "News",
+          "color": "#dc2626",
+          "bg": "#fef2f2"
+        }
+      ],
+      "blog_posts": [
+        {
+          "id": "visapp-2024-paper",
+          "title": "Paper Accepted at VISAPP 2024",
+          "date": "2024-02-15",
+          "category": "publication",
+          "tags": [
+            "computer-vision",
+            "deep-learning",
+            "publication",
+            "conference"
+          ],
+          "cover_image": "",
+          "summary": "Our paper on autonomous ground vehicle path planning using deep reinforcement learning has been accepted at VISAPP 2024 — presenting in Lisbon, Portugal.\n",
+          "content": "## Background\n\nAutonomous Ground Vehicles (AGVs) operating in dynamic environments face a fundamental challenge:\nhow do you plan a path that adapts in real-time to moving obstacles, unpredictable terrain,\nand incomplete sensor data?\n\nClassical approaches like A* and Dijkstra's algorithm work well in static maps but struggle\nwhen the world keeps changing. We asked: *can deep reinforcement learning close that gap?*\n\n## What We Built\n\nWe developed a reward-shaping mechanism on top of Proximal Policy Optimization (PPO)\nthat significantly improves convergence in **sparse reward** settings. The key insight\nis that traditional sparse rewards (only reward on goal-reach) lead to slow, unstable training.\n\nOur approach adds:\n- **Progress reward** – proportional to reduction in Euclidean distance to goal\n- **Collision penalty** – shaped by proximity, not binary\n- **Exploration bonus** – decaying curiosity signal to prevent local optima\n\n## Results\n\n| Method | Success Rate | Avg. Steps to Goal |\n|---|---|---|\n| A* (static map) | 92% | 214 |\n| Vanilla PPO | 61% | 389 |\n| **Ours (PPO + shaped)** | **88%** | **241** |\n\nThe results show our approach approaches classical planner performance while remaining\nadaptive to unseen dynamic obstacles.\n\n## Conference\n\nWe presented this work at the 19th International Conference on Computer Vision Theory\nand Applications (**VISAPP 2024**) in Lisbon, Portugal. The paper is available via the link below.\n",
+          "link": "https://doi.org/10.5220/0012345678",
+          "pinned": false
+        },
+        {
+          "id": "ieee-iotais-2023",
+          "title": "IEEE IoT-AIS 2023 — Best Paper Nominee",
+          "date": "2023-11-08",
+          "category": "award",
+          "tags": [
+            "iot",
+            "computer-vision",
+            "award",
+            "ieee"
+          ],
+          "cover_image": "",
+          "summary": "Our work on IoT-based anomaly detection for smart surveillance was nominated for Best Paper at IEEE IoT-AIS 2023.\n",
+          "content": "## Overview\n\nThis project addresses a critical gap in smart surveillance: deploying **real-time anomaly\ndetection** directly on resource-constrained edge devices, without depending on cloud uplink.\n\n## The Problem\n\nTraditional surveillance pipelines send raw video to the cloud for inference — expensive,\nhigh-latency, and privacy-invasive. We wanted inference at the camera itself.\n\n## Our Approach\n\nWe deployed a quantized **MobileNetV3** (INT8) on a **Raspberry Pi 4** using TFLite.\nCombined with a lightweight motion-triggered sampling strategy, the system achieves:\n\n- **~14 fps** on-device inference\n- **<80ms** average detection latency\n- Under **4W** power consumption\n\n## Award Nomination\n\nOur paper was nominated for **Best Paper** at the IEEE International Conference on\nIoT-based Applications and Intelligent Systems (IoT-AIS 2023). This recognition\naffirmed the practical impact of our edge-first design philosophy.\n",
+          "link": "",
+          "pinned": true
+        },
+        {
+          "id": "joined-ulab-2023",
+          "title": "Joined ULAB as Lecturer in CSE",
+          "date": "2023-09-01",
+          "category": "news",
+          "tags": [
+            "career",
+            "teaching",
+            "ulab"
+          ],
+          "cover_image": "",
+          "summary": "Joined the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh (ULAB) as a Lecturer.\n",
+          "content": "## A New Chapter\n\nI am excited to announce that I have joined the **University of Liberal Arts Bangladesh (ULAB)**\nas a Lecturer in the Department of Computer Science & Engineering, starting September 2023.\n\n## Teaching Responsibilities\n\nIn this role I will be teaching:\n\n- **CSE 103** — Introduction to Programming (C/C++)\n- **CSE 207** — Data Structures & Algorithms\n- **CSE 415** — Computer Vision (elective)\n\n## Research Continuation\n\nAlongside teaching, I will continue my research into autonomous systems and computer vision,\nwith a focus on applications relevant to South Asian contexts — including low-power\nembedded vision for agricultural automation.\n\nI look forward to working with motivated students and contributing to ULAB's growing\nresearch culture.\n",
+          "link": "",
+          "pinned": false
+        }
+      ],
+      "referees": [
+        {
+          "name": "Dr. Priyanka Bagade",
+          "affiliation": "IIT Kanpur",
+          "email": "pbagade@iitk.ac.in"
+        },
+        {
+          "name": "Dr. Ata Jahangir Moshayedi",
+          "affiliation": "Jiangxi University of Science & Technology",
+          "email": "ajm@jxust.edu.cn"
+        }
+      ],
+      "hero": {
+        "title": "Atanu Shuvam Roy",
+        "role": "Lecturer & Researcher",
+        "institution": "University of Liberal Arts Bangladesh",
+        "department": "Department of Computer Science & Engineering",
+        "tagline": "Exploring the frontiers of Computer Vision, Robotics & Embedded Systems",
+        "cta_primary": "View Publications",
+        "cta_secondary": "Contact Me"
+      },
+      "bio": "I am a Lecturer in the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh. I hold an M.Tech in Computer Science & Engineering from IIT Kanpur (2022–2024), where I worked on deep learning-based pipeline inspection systems. My research spans Computer Vision, Robotics, IoT, and Embedded Systems across three countries — Bangladesh, India, and China.\n",
+      "research_interests": [
+        "Computer Vision & Object Detection",
+        "Autonomous Guided Vehicles (AGV)",
+        "IoT & Embedded Systems",
+        "Deep Learning on Edge Devices",
+        "Smart City Infrastructure"
+      ],
+      "education": [
+        {
+          "degree": "M.Tech — Computer Science & Engineering",
+          "institution": "Indian Institute of Technology, Kanpur",
+          "location": "Kanpur, India",
+          "period": "2022 – 2024",
+          "grade": "CPI: 7.29/10"
+        },
+        {
+          "degree": "B.E. — Computer Science & Technology",
+          "institution": "Jiangxi University of Science & Technology",
+          "location": "Jiangxi, China",
+          "period": "2018 – 2022",
+          "grade": "91.01%"
+        },
+        {
+          "degree": "Higher Secondary Certificate (HSC)",
+          "institution": "Notre Dame College",
+          "location": "Dhaka, Bangladesh",
+          "period": "2017",
+          "grade": "GPA: 5.00/5.00"
+        }
+      ],
+      "experience": [
+        {
+          "role": "Lecturer, Dept. of CSE",
+          "org": "University of Liberal Arts Bangladesh",
+          "type": "teaching",
+          "period": "Sep 2025 – Present",
+          "location": "Dhaka, Bangladesh",
+          "bullets": [
+            "Teaching UG CSE courses: OS, DSA, Statistics, Software Engineering, Embedded Systems",
+            "Guiding students in capstone projects across computer vision, IoT, and robotics"
+          ]
+        },
+        {
+          "role": "Research Assistant (Remote)",
+          "org": "Robotics & Automation Research Lab (RARL), JUST",
+          "type": "research",
+          "period": "Aug 2024 – Present",
+          "location": "Jiangxi, China",
+          "bullets": [
+            "Energy-aware AGV shortest path planning using Dijkstra, Floyd-Warshall, DFS",
+            "Collaborating on computer vision for agricultural monitoring"
+          ]
+        },
+        {
+          "role": "Research Assistant",
+          "org": "IoT Vision Lab, IIT Kanpur",
+          "type": "research",
+          "period": "Dec 2022 – Aug 2024",
+          "location": "Kanpur, India",
+          "bullets": [
+            "Integrated ECA Mechanism into YOLOv7, reducing model parameters by 20% for water pipeline defect detection (Jal Jeevan Mission, Govt. of India)",
+            "Prototyped streetlight management system with FMCW RADAR and LoRaWAN"
+          ]
+        },
+        {
+          "role": "Research Assistant",
+          "org": "Robotics & Automation Research Lab (RARL), JUST",
+          "type": "research",
+          "period": "Aug 2018 – Dec 2021",
+          "location": "Jiangxi, China",
+          "bullets": [
+            "Real-time camera monitoring for food delivery robot using Pixy Cam",
+            "Deep learning UAV speed detection using MobileNet SSD on Raspberry Pi",
+            "Built anti-cheat exam & attendance system with E2E encryption for IoT"
+          ]
+        }
+      ],
+      "awards": [
+        {
+          "year": "2023",
+          "title": "MHRD Fellowship",
+          "org": "IIT Kanpur"
+        },
+        {
+          "year": "2022",
+          "title": "Outstanding International Graduate Award",
+          "org": "Jiangxi University of Science & Technology"
+        },
+        {
+          "year": "2021",
+          "title": "2nd (Provincial) & 3rd (National)",
+          "org": "14th China University Computer Design Competition"
+        }
+      ],
+      "journey": {
+        "title": "Academic Journey",
+        "description": "Moments from conferences, research labs, and teaching.",
+        "images": [
+          {
+            "src": "https://images.unsplash.com/photo-1540317580384-e5d43867caa6?auto=format&fit=crop&w=600&q=80",
+            "caption": "Presenting at IEEE Conference 2023"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1560523159-4a9692d222f9?auto=format&fit=crop&w=600&q=80",
+            "caption": "IoT Vision Lab, IIT Kanpur"
+          }
+        ]
+      },
+      "academic_projects": [
+        {
+          "title": "Autonomous Robot Navigation System",
+          "description": "Developed a vision-based autonomous navigation pipeline for an indoor mobile robot. The system utilizes depth sensors and a custom SLAM implementation to map dynamic environments in real-time. We tackled extreme sensor noise and tight compute constraints by using a lightweight neural network for obstacle detection alongside a traditional probabilistic roadmap planner.",
+          "video_id": "dQw4w9WgXcQ",
+          "paper_link": "https://example.com/paper.pdf"
+        },
+        {
+          "title": "IoT Smart Agriculture Platform",
+          "description": "Designed a low-power, wide-area IoT platform using LoRaWAN to monitor soil moisture and predict irrigation needs. The project involved deploying custom sensor nodes and building a central cloud backend that aggregates data and runs a predictive machine learning model to optimize water usage for local farmers.",
+          "video_id": "dQw4w9WgXcQ",
+          "paper_link": "https://example.com/paper.pdf"
+        }
+      ],
+      "publications_bibtex": "@article{moshayedi2026integrated,\n  title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},\n  author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal}\n} @inproceedings{moshayedi2025path,\n  title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},\n  author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},\n  booktitle={5th ICRAIC 2025, IEEE},\n  year={2025},\n  type={conference}\n} @inproceedings{moshayedi2025urbanpark,\n  title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},\n  author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},\n  booktitle={4th ICCIT 2025},\n  year={2025},\n  type={conference}\n} @inproceedings{moshayedi2024dr,\n  title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},\n  author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  year={2024},\n  type={conference}\n} @article{roy2024advanced,\n  title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},\n  author={Roy, A.S. and Das, A.},\n  journal={Journal of Robotics Research (JRR), 1(1), 15–23},\n  year={2024},\n  type={journal}\n} @inproceedings{roy2024attentive,\n  title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},\n  author={Roy, A.S. and Bagade, P.},\n  booktitle={VISAPP 2024},\n  year={2024},\n  type={conference}\n}\n",
+      "research_statements": [
+        {
+          "title": "Autonomous Guided Vehicles (AGV)",
+          "description": "Developing energy-aware and robust path planning algorithms for omnidirectional AGVs in unknown environments using evolutionary approaches like Beetle Antennae Search."
+        },
+        {
+          "title": "Computer Vision & Edge AI",
+          "description": "Designing lightweight deep learning architectures (e.g., Attentive-YOLO) for real-time inference on edge devices, particularly for pipeline defect detection and agricultural monitoring."
+        },
+        {
+          "title": "IoT & Smart Infrastructure",
+          "description": "Creating scalable, low-power solutions using LoRaWAN and edge computing for urban challenges like smart parking and intelligent street lighting."
+        }
+      ],
+      "students": [
+        {
+          "name": "Sample Student 1",
+          "photo": "/academic/students/student1.jpg",
+          "details": "Undergraduate Researcher",
+          "project": "Autonomous Navigation for AGVs"
+        },
+        {
+          "name": "Sample Student 2",
+          "photo": "/academic/students/student2.jpg",
+          "details": "Capstone Project Student",
+          "project": "Smart City Traffic Management via IoT"
+        }
+      ],
+      "teaching_courses": [
+        {
+          "code": "CSE 301",
+          "name": "Operating Systems",
+          "semester": "Summer 2026",
+          "archived": false,
+          "description": "In-depth overview of OS principles including process management, memory allocation, and file systems.",
+          "syllabus_link": "https://drive.google.com/...",
+          "materials": [
+            {
+              "title": "Lectures",
+              "items": [
+                {
+                  "name": "Lecture 1: What is an OS?",
+                  "link": "https://drive.google.com/..."
+                },
+                {
+                  "name": "Lecture 2: Processes & Threads",
+                  "link": "https://drive.google.com/..."
+                }
+              ]
+            },
+            {
+              "title": "Assignments",
+              "items": [
+                {
+                  "name": "Project: Custom Shell",
+                  "link": "https://drive.google.com/..."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CSE 203",
+          "name": "Data Structures & Algorithms",
+          "semester": "Fall 2025",
+          "archived": true,
+          "description": "Comprehensive study of core data structures (arrays, linked lists, trees, graphs) and algorithmic design.",
+          "syllabus_link": "https://drive.google.com/drive/folders/sample_link",
+          "materials": [
+            {
+              "title": "Lectures",
+              "items": [
+                {
+                  "name": "Lecture 1: Intro to Algorithmic Complexity",
+                  "link": "https://drive.google.com/file/d/sample"
+                },
+                {
+                  "name": "Lecture 2: Arrays & Pointers",
+                  "link": "https://drive.google.com/file/d/sample"
+                },
+                {
+                  "name": "Lecture 3: Linked Lists (Singly & Doubly)",
+                  "link": "https://drive.google.com/file/d/sample"
+                }
+              ]
+            },
+            {
+              "title": "Assignments",
+              "items": [
+                {
+                  "name": "Assignment 1: Big-O Analysis",
+                  "link": "https://drive.google.com/file/d/sample"
+                }
+              ]
+            },
+            {
+              "title": "Practice Problems",
+              "items": [
+                {
+                  "name": "Practice Set 1: Recursion",
+                  "link": "https://drive.google.com/file/d/sample"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "developer": {
+      "blog_categories": [
+        {
+          "id": "project",
+          "label": "Project",
+          "color": "#00a8c8",
+          "bg": "#e0f9ff"
+        },
+        {
+          "id": "devlog",
+          "label": "Dev Log",
+          "color": "#ff3366",
+          "bg": "#fff0f4"
+        },
+        {
+          "id": "tutorial",
+          "label": "Tutorial",
+          "color": "#c8a000",
+          "bg": "#fffde0"
+        },
+        {
+          "id": "deployment",
+          "label": "Deployment",
+          "color": "#10b981",
+          "bg": "#f0fdf4"
+        },
+        {
+          "id": "tools",
+          "label": "Tools & Setup",
+          "color": "#8b5cf6",
+          "bg": "#f5f3ff"
+        },
+        {
+          "id": "career",
+          "label": "Career",
+          "color": "#f97316",
+          "bg": "#fff7ed"
+        },
+        {
+          "id": "opinion",
+          "label": "Opinion",
+          "color": "#6b7280",
+          "bg": "#f9fafb"
+        }
+      ],
+      "blog_posts": [
+        {
+          "id": "btc-core-webapp-launch",
+          "title": "Building a Bitcoin RPC Browser with Java",
+          "date": "2025-03-10",
+          "category": "project",
+          "tags": [
+            "bitcoin",
+            "java",
+            "rpc",
+            "web-app"
+          ],
+          "cover_image": "",
+          "summary": "Walk through building a full web interface to interact with a Bitcoin Core node via JSON-RPC — the architecture, async challenges, and what I learned.\n",
+          "content": "## The itch\n\nI run a Bitcoin Core full node at home. Every time I wanted to check mempool stats,\nlist UTXOs, or decode a raw transaction, I had to drop into the terminal and type\n`bitcoin-cli` commands. Fine once. Annoying on repeat.\n\nI wanted a clean browser UI. So I built one.\n\n## Tech Stack\n\n- **Backend**: Java (Spring Boot) — wrapping the JSON-RPC calls\n- **Frontend**: Vanilla JS + Fetch API\n- **Auth**: HTTP Basic Auth (same credentials as bitcoin.conf)\n\n## The JSON-RPC Layer\n\nBitcoin Core exposes a simple HTTP JSON-RPC interface. Every command looks like:\n\n```json\n{\n  \"method\": \"getblockchaininfo\",\n  \"params\": [],\n  \"id\": 1\n}\n```\n\nThe Spring Boot service proxies these requests, adds auth headers, and returns clean JSON\nto the frontend. The tricky part was handling **long-polling** for mempool updates — I didn't\nwant to hammer the node with constant requests.\n\n**Solution**: a 5-second debounced poll with exponential backoff if the node is busy.\n\n## What I Learned\n\n- Bitcoin Core's RPC surface is *huge*. Stick to what you need.\n- `getblocktemplate` is expensive — don't call it frequently.\n- Java's `HttpClient` (Java 11+) handles async nicely with `CompletableFuture`.\n\n## Code\n\nThe full source is on GitHub. PRs and issues welcome!\n",
+          "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
+          "link": "",
+          "pinned": true
+        },
+        {
+          "id": "iitk-fortinet-authenticator",
+          "title": "Killing Campus Wi-Fi Timeouts with an Electron App",
+          "date": "2024-09-05",
+          "category": "tools",
+          "tags": [
+            "automation",
+            "network",
+            "electron",
+            "tools"
+          ],
+          "cover_image": "",
+          "summary": "Campus Wi-Fi logs you out every 4 hours. I automated re-authentication with a tiny Electron tray app that silently handles it in the background.\n",
+          "content": "## The Problem\n\nIIT Kanpur's Fortinet captive portal logs you out every 4 hours. You're 3 hours into\na training run, walk away for lunch, come back to find the job dead because the\nnetwork dropped.\n\nThis is fixable. So I fixed it.\n\n## How Fortinet Auth Works\n\nThe captive portal is just a POST form:\n\n```\nPOST /fgtauth\nContent-Type: application/x-www-form-urlencoded\n\nusername=ROLLNO&password=SECRET&magic=TOKEN&4Tredir=http://1.1.1.1\n```\n\nThe `magic` token changes each session — you have to scrape it from the login page first.\n\n## The Electron App\n\nI wrapped this in an **Electron** tray app so it:\n\n1. Watches for internet connectivity (polls `1.1.1.1` every 60s)\n2. On failure: scrapes a fresh magic token, re-submits credentials\n3. Notifies you via system tray if re-auth succeeds or fails\n\nLives in the system tray. Uses ~30MB RAM. Zero UI clutter.\n\n## Platform Support\n\nTested on:\n- **Linux** (Arch, Ubuntu 22.04)\n- **macOS** (Ventura)\n\nWindows support is sketchy because Electron's tray behaves differently but it's on the roadmap.\n",
+          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "stress-detection-ml",
+          "title": "91% Accuracy Stress Detection from Wearable Sensors",
+          "date": "2024-06-20",
+          "category": "project",
+          "tags": [
+            "machine-learning",
+            "healthcare",
+            "python",
+            "signal-processing"
+          ],
+          "cover_image": "",
+          "summary": "End-to-end ML pipeline for stress-level prediction using wearable sensor data — from raw signal preprocessing to a 1D-CNN that hits 91% accuracy.\n",
+          "content": "## Dataset\n\nI used the **WESAD** (Wearable Stress and Affect Detection) dataset — 15 subjects,\nchest-worn RespiBAN sensor collecting:\n\n- **EDA** (Electrodermal Activity / Galvanic Skin Response)\n- **ECG** (Electrocardiogram)\n- **Respiration**\n- **ACC** (3-axis accelerometer)\n\nThree labels: *Baseline*, *Stress*, *Amusement*.\n\n## Preprocessing Pipeline\n\n```python\n# 1. Bandpass filter EDA (0.05–5 Hz)\n# 2. Sliding window segmentation (60s, 50% overlap)\n# 3. Feature extraction per window:\n#    - EDA: SCR peaks, SCL mean, rise time\n#    - HRV: SDNN, RMSSD, LF/HF ratio\n#    - RESP: rate, amplitude variance\n```\n\n## Models Compared\n\n| Model | Accuracy | F1 (macro) |\n|---|---|---|\n| SVM (RBF kernel) | 84.2% | 0.81 |\n| Random Forest | 87.6% | 0.85 |\n| **1D-CNN** | **91.3%** | **0.90** |\n\nThe 1D-CNN treats each feature channel as a separate temporal stream — it learns\ncorrelations across modalities that handcrafted features miss.\n\n## Key Takeaway\n\nFor physiological time series: **deep learning wins on accuracy, tree models win on\ninterpretability**. If you're building for a clinical context, Random Forest + SHAP\nvalues is the more defensible choice.\n",
+          "github": "https://github.com/atanuroy911/stress-detection-app",
+          "link": "",
+          "pinned": false
+        }
+      ],
+      "hero": {
+        "greeting": "Hey, I'm",
+        "name": "Atanu.",
+        "roles": [
+          "Software Engineer",
+          "DevOps Engineer",
+          "Full-Stack Developer",
+          "System Architect"
+        ],
+        "tagline": "I build robust, scalable applications — from responsive frontends to complex cloud-native microservices.",
+        "cta_primary": "See My Projects",
+        "cta_secondary": "Let's Talk"
+      },
+      "bio": "Engineer by training, builder by nature. I specialize in building and deploying  high-performance web platforms. With a strong background in software engineering,  I've led full-stack development and cloud infrastructure design for diverse clients  across the US and Canada, focusing on clean code and robust systems.\n",
+      "experience": [
+        {
+          "role": "Web Developer & DevOps Engineer",
+          "org": "Backend Ace",
+          "period": "Sep 2024 – Sep 2025",
+          "location": "Remote · New York, USA",
+          "bullets": [
+            "Full-stack development and cloud infrastructure for US clients",
+            "Managed CI/CD pipelines and server deployments"
+          ]
+        },
+        {
+          "role": "Associate Web Developer",
+          "org": "Wizzartech",
+          "period": "Apr 2022 – Dec 2022",
+          "location": "Remote · Toronto, Canada",
+          "bullets": [
+            "Built client-facing web applications using modern JS frameworks"
+          ]
+        }
+      ],
+      "journey": {
+        "title": "Developer Journey",
+        "description": "Moments from building software, hackathons, and tech events.",
+        "images": [
+          {
+            "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80",
+            "caption": "Deploying my first scalable architecture."
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
+            "caption": "Late night debugging sessions."
+          }
+        ]
+      },
+      "projects": [
+        {
+          "title": "BTC-CORE-WEBAPP",
+          "description": "Bitcoin Core [RPC] Web Application. Built a web interface to interact with a Bitcoin Core node via RPC commands.",
+          "tags": [
+            "Java",
+            "Bitcoin",
+            "RPC",
+            "Web"
+          ],
+          "link": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
+          "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
+          "featured": true
+        },
+        {
+          "title": "CS724-RoboX",
+          "description": "A repository related to robotics and autonomous systems at IIT Kanpur. Developed algorithms for path planning and control.",
+          "tags": [
+            "Jupyter Notebook",
+            "Robotics",
+            "Python"
+          ],
+          "github": "https://github.com/atanuroy911/CS724-RoboX",
+          "featured": true
+        },
+        {
+          "title": "iitk-fortinet-gui",
+          "description": "IITK Fortinet Authenticator Application to automatically handle network authentication on the university campus.",
+          "tags": [
+            "JavaScript",
+            "Network",
+            "Automation"
+          ],
+          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
+          "featured": true
+        },
+        {
+          "title": "stress-detection-app",
+          "description": "A comprehensive machine learning system for predicting stress levels using physiological data and Python.",
+          "tags": [
+            "Python",
+            "Machine Learning",
+            "Healthcare"
+          ],
+          "github": "https://github.com/atanuroy911/stress-detection-app"
+        },
+        {
+          "title": "ulab-mms",
+          "description": "Modern Management System for ULAB (University of Liberal Arts Bangladesh) to streamline academic operations.",
+          "tags": [
+            "TypeScript",
+            "Next.js",
+            "Full-Stack"
+          ],
+          "github": "https://github.com/atanuroy911/ulab-mms"
+        },
+        {
+          "title": "name2meta",
+          "description": "A Python utility for metadata extraction or management from files and databases.",
+          "tags": [
+            "Python",
+            "Utility",
+            "Data Processing"
+          ],
+          "github": "https://github.com/atanuroy911/name2meta"
+        },
+        {
+          "title": "search-meal-db",
+          "description": "A responsive web application for searching meals using a remote database API.",
+          "tags": [
+            "JavaScript",
+            "API",
+            "Frontend"
+          ],
+          "github": "https://github.com/atanuroy911/search-meal-db"
+        }
+      ]
+    }
+  },
+  "bn": {
+    "footer": {
+      "copyright": "অতনু শুভম রায়",
+      "built_with": "Next.js এবং shadcn/ui দিয়ে তৈরি"
+    },
+    "nav": {
+      "home": "বাড়ি",
+      "projects": "প্রকল্প",
+      "teaching": "শিক্ষাদান",
+      "journey": "যাত্রা",
+      "contact": "যোগাযোগ",
+      "publications": "প্রকাশনা",
+      "students": "ছাত্ররা",
+      "research": "গবেষণা",
+      "blog": "ব্লগ",
+      "switch_to_academic": "একাডেমিক এ স্যুইচ করুন",
+      "switch_to_developer": "বিকাশকারীতে স্যুইচ করুন",
+      "language": "English"
+    },
+    "personal": {
+      "name": "অতনু শুভম রায়",
+      "email": "atanusroy98@gmail.com",
+      "phone": "+880 1937545261",
+      "location": "Dhaka, Bangladesh",
+      "linkedin": "https://linkedin.com/in/atanu-shuvam-roy",
+      "github": "https://github.com/atanusroy",
+      "google_scholar": "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en",
+      "cv_url": "/assets/cv.pdf",
+      "academic_photo": "/assets/academic_photo.jpg",
+      "developer_photo": "/assets/developer_photo.jpg"
+    },
+    "academic": {
+      "blog_categories": [
+        {
+          "id": "research",
+          "label": "গবেষণা আপডেট",
+          "color": "#3b82f6",
+          "bg": "#eff6ff"
+        },
+        {
+          "id": "publication",
+          "label": "প্রকাশনা",
+          "color": "#7c3aed",
+          "bg": "#f5f3ff"
+        },
+        {
+          "id": "conference",
+          "label": "সম্মেলন",
+          "color": "#0891b2",
+          "bg": "#ecfeff"
+        },
+        {
+          "id": "teaching",
+          "label": "শিক্ষাদান",
+          "color": "#059669",
+          "bg": "#ecfdf5"
+        },
+        {
+          "id": "award",
+          "label": "পুরস্কার ও সম্মান",
+          "color": "#b45309",
+          "bg": "#fffbeb"
+        },
+        {
+          "id": "news",
+          "label": "খবর",
+          "color": "#dc2626",
+          "bg": "#fef2f2"
+        }
+      ],
+      "blog_posts": [
+        {
+          "id": "visapp-2024-paper",
+          "title": "VISAPP 2024-এ কাগজ গৃহীত হয়েছে",
+          "date": "2024-02-15",
+          "category": "publication",
+          "tags": [
+            "computer-vision",
+            "deep-learning",
+            "publication",
+            "conference"
+          ],
+          "summary": "ডিপ রিইনফোর্সমেন্ট লার্নিং ব্যবহার করে স্বায়ত্তশাসিত গ্রাউন্ড ভেহিকল পাথ প্ল্যানিং এর উপর আমাদের পেপার VISAPP 2024-এ গৃহীত হয়েছে। পর্তুগালে উপস্থাপন করতে পেরে আনন্দিত!",
+          "body": "আমরা ঘোষণা করতে পেরে রোমাঞ্চিত যে আমাদের গবেষণাপত্র \"ডিপ রিইনফোর্সমেন্ট লার্নিং ফর অটোনোমাস গ্রাউন্ড ভেহিকেল পাথ প্ল্যানিং ইন ডাইনামিক এনভায়রনমেন্টস\" 19তম ইন্টারন্যাশনাল কনফারেন্স অন কম্পিউটার ভিশন থিওরি অ্যান্ড অ্যাপ্লিকেশনে (VISAPP 2024) গৃহীত হয়েছে। এই কাজটি একটি অভিনব পুরষ্কার-আকৃতির পদ্ধতির অন্বেষণ করে যা বিক্ষিপ্ত পুরষ্কার সেটিংসে অভিন্নতাকে উল্লেখযোগ্যভাবে উন্নত করে। আমরা 2024 সালের ফেব্রুয়ারিতে পর্তুগালের লিসবনে উপস্থাপনা করব।",
+          "link": "https://doi.org/10.5220/0012345678",
+          "pinned": false
+        },
+        {
+          "id": "ieee-iotais-2023",
+          "title": "IEEE IoT-AIS 2023 — সেরা পেপার মনোনীত",
+          "date": "2023-11-08",
+          "category": "award",
+          "tags": [
+            "iot",
+            "computer-vision",
+            "award",
+            "ieee"
+          ],
+          "summary": "স্মার্ট নজরদারির জন্য IoT-ভিত্তিক অসঙ্গতি সনাক্তকরণে আমাদের কাজটি IEEE IoT-AIS 2023-এ সেরা পেপারের জন্য মনোনীত হয়েছিল।",
+          "body": "এজ আইওটি ডিভাইসে লাইটওয়েট অ্যানোমালি ডিটেকশন মডেল স্থাপনের বিষয়ে আমাদের পেপারটি IEEE IoT-AIS 2023-এ সেরা পেপার নমিনেশন পেয়েছে। সিস্টেমটি কোয়ান্টাইজড MobileNetV3 ব্যবহার করে রাস্পবেরি পাই 4-এ রিয়েল-টাইম ইনফারেন্স অর্জন করে।",
+          "link": "",
+          "pinned": true
+        },
+        {
+          "id": "iit-kanpur-mtech-completion",
+          "title": "IIT কানপুর থেকে M.Tech সম্পন্ন করেছেন",
+          "date": "2023-07-01",
+          "category": "news",
+          "tags": [
+            "education",
+            "milestone",
+            "iit-kanpur"
+          ],
+          "summary": "ইন্ডিয়ান ইনস্টিটিউট অফ টেকনোলজি কানপুর থেকে কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এ আমার মাস্টার্স অফ টেকনোলজি সফলভাবে সম্পন্ন করেছি।",
+          "body": "এটি একটি অবিশ্বাস্য যাত্রা হয়েছে! আমি IIT কানপুরে আমার M.Tech থিসিস সফলভাবে রক্ষা করেছি। আমার থিসিস অসংগঠিত পরিবেশে AGV নেভিগেশনের জন্য শাস্ত্রীয় পাথ-প্ল্যানিং অ্যালগরিদমগুলির সাথে গভীর শক্তিবৃদ্ধি শেখার সমন্বয়ের উপর দৃষ্টি নিবদ্ধ করে। আমার উপদেষ্টা এবং ল্যাবমেটদের জন্য বিশাল ধন্যবাদ।",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "teaching-at-ulab-2023",
+          "title": "ইউল্যাবে লেকচারার হিসেবে যোগদান করেন",
+          "date": "2023-09-01",
+          "category": "teaching",
+          "tags": [
+            "teaching",
+            "ulab",
+            "career"
+          ],
+          "summary": "ইউনিভার্সিটি অব লিবারেল আর্টস বাংলাদেশ-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগে প্রভাষক হিসেবে যোগদান করেন।",
+          "body": "আমি ইউল্যাবে একজন প্রভাষক হিসেবে আমার শিক্ষাজীবন শুরু করতে পেরে উত্তেজিত। এই ভূমিকায় আমি ডেটা স্ট্রাকচার, অ্যালগরিদম এবং কম্পিউটার ভিশনের কোর্স শেখাব, যখন স্বায়ত্তশাসিত সিস্টেম এবং কম্পিউটার দৃষ্টিতে আমার গবেষণা চালিয়ে যাব।",
+          "link": "",
+          "pinned": false
+        }
+      ],
+      "referees": [
+        {
+          "name": "প্রিয়াঙ্কা বাগদে ড",
+          "affiliation": "IIT Kanpur",
+          "email": "pbagade@iitk.ac.in"
+        },
+        {
+          "name": "আতা জাহাঙ্গীর মোশায়েদী ড",
+          "affiliation": "Jiangxi University of Science & Technology",
+          "email": "ajm@jxust.edu.cn"
+        }
+      ],
+      "hero": {
+        "title": "অতনু শুভম রায়",
+        "role": "প্রভাষক ও গবেষক",
+        "institution": "University of Liberal Arts Bangladesh",
+        "department": "কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগ",
+        "tagline": "কম্পিউটার ভিশন, রোবোটিক্স এবং এমবেডেড সিস্টেমের সীমান্ত অন্বেষণ করা",
+        "cta_primary": "প্রকাশনা দেখুন",
+        "cta_secondary": "আমার সাথে যোগাযোগ করুন"
+      },
+      "bio": "আমি ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগের একজন প্রভাষক। আমি IIT কানপুর (2022-2024) থেকে কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এ M.Tech করেছি, যেখানে আমি গভীর শিক্ষা-ভিত্তিক পাইপলাইন পরিদর্শন সিস্টেমে কাজ করেছি। আমার গবেষণাটি তিনটি দেশে কম্পিউটার ভিশন, রোবোটিক্স, আইওটি এবং এমবেডেড সিস্টেম নিয়ে বিস্তৃত - বাংলাদেশ, ভারত এবং চীন।",
+      "research_interests": [
+        "কম্পিউটার ভিশন এবং অবজেক্ট ডিটেকশন",
+        "অটোনোমাস গাইডেড ভেহিকেল (AGV)",
+        "আইওটি এবং এমবেডেড সিস্টেম",
+        "এজ ডিভাইসে গভীর শিক্ষা",
+        "স্মার্ট সিটি অবকাঠামো"
+      ],
+      "education": [
+        {
+          "degree": "M.Tech — কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং",
+          "institution": "Indian Institute of Technology, Kanpur",
+          "location": "Kanpur, India",
+          "period": "2022 – 2024",
+          "grade": "CPI: 7.29/10"
+        },
+        {
+          "degree": "বি.ই. - কম্পিউটার বিজ্ঞান ও প্রযুক্তি",
+          "institution": "Jiangxi University of Science & Technology",
+          "location": "Jiangxi, China",
+          "period": "2018 – 2022",
+          "grade": "91.01%"
+        },
+        {
+          "degree": "উচ্চ মাধ্যমিক সার্টিফিকেট (HSC)",
+          "institution": "Notre Dame College",
+          "location": "Dhaka, Bangladesh",
+          "period": "2017",
+          "grade": "GPA: 5.00/5.00"
+        }
+      ],
+      "experience": [
+        {
+          "role": "প্রভাষক, CSE বিভাগ",
+          "org": "University of Liberal Arts Bangladesh",
+          "type": "teaching",
+          "period": "Sep 2025 – Present",
+          "location": "Dhaka, Bangladesh",
+          "bullets": [
+            "UG CSE কোর্স পড়ানো: OS, DSA, পরিসংখ্যান, সফটওয়্যার ইঞ্জিনিয়ারিং, এমবেডেড সিস্টেম",
+            "কম্পিউটার ভিশন, IoT, এবং রোবোটিক্স জুড়ে ক্যাপস্টোন প্রকল্পগুলিতে শিক্ষার্থীদের গাইড করা"
+          ]
+        },
+        {
+          "role": "গবেষণা সহকারী (দূরবর্তী)",
+          "org": "Robotics & Automation Research Lab (RARL), JUST",
+          "type": "research",
+          "period": "Aug 2024 – Present",
+          "location": "Jiangxi, China",
+          "bullets": [
+            "Dijkstra, Floyd-Warshall, DFS ব্যবহার করে শক্তি-সচেতন AGV সংক্ষিপ্ত পথ পরিকল্পনা",
+            "কৃষি পর্যবেক্ষণের জন্য কম্পিউটার দৃষ্টিতে সহযোগিতা করা"
+          ]
+        },
+        {
+          "role": "গবেষণা সহকারী",
+          "org": "IoT Vision Lab, IIT Kanpur",
+          "type": "research",
+          "period": "Dec 2022 – Aug 2024",
+          "location": "Kanpur, India",
+          "bullets": [
+            "YOLOv7-এ ইন্টিগ্রেটেড ECA মেকানিজম, জলের পাইপলাইনের ত্রুটি সনাক্তকরণের জন্য মডেল প্যারামিটারগুলি 20% হ্রাস করে (জল জীবন মিশন, ভারত সরকার)",
+            "FMCW RADAR এবং LoRaWAN সহ প্রোটোটাইপ করা স্ট্রিটলাইট ম্যানেজমেন্ট সিস্টেম"
+          ]
+        },
+        {
+          "role": "গবেষণা সহকারী",
+          "org": "Robotics & Automation Research Lab (RARL), JUST",
+          "type": "research",
+          "period": "Aug 2018 – Dec 2021",
+          "location": "Jiangxi, China",
+          "bullets": [
+            "Pixy Cam ব্যবহার করে ফুড ডেলিভারি রোবটের জন্য রিয়েল-টাইম ক্যামেরা মনিটরিং",
+            "Raspberry Pi-এ MobileNet SSD ব্যবহার করে গভীর শিক্ষার UAV গতি সনাক্তকরণ",
+            "IoT-এর জন্য E2E এনক্রিপশন সহ প্রতারণাবিরোধী পরীক্ষা এবং উপস্থিতি সিস্টেম তৈরি করা হয়েছে"
+          ]
+        }
+      ],
+      "awards": [
+        {
+          "year": "2023",
+          "title": "MHRD ফেলোশিপ",
+          "org": "IIT Kanpur"
+        },
+        {
+          "year": "2022",
+          "title": "অসামান্য আন্তর্জাতিক স্নাতক পুরস্কার",
+          "org": "Jiangxi University of Science & Technology"
+        },
+        {
+          "year": "2021",
+          "title": "২য় (প্রাদেশিক) ও ৩য় (জাতীয়)",
+          "org": "14th China University Computer Design Competition"
+        }
+      ],
+      "journey": {
+        "title": "একাডেমিক যাত্রা",
+        "description": "সম্মেলন, গবেষণা ল্যাব এবং শিক্ষাদানের মুহূর্ত।",
+        "images": [
+          {
+            "src": "https://images.unsplash.com/photo-1540317580384-e5d43867caa6?auto=format&fit=crop&w=600&q=80",
+            "caption": "IEEE সম্মেলন 2023-এ উপস্থাপনা"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1560523159-4a9692d222f9?auto=format&fit=crop&w=600&q=80",
+            "caption": "আইওটি ভিশন ল্যাব, আইআইটি কানপুর"
+          }
+        ]
+      },
+      "academic_projects": [
+        {
+          "title": "স্বায়ত্তশাসিত রোবট নেভিগেশন সিস্টেম",
+          "description": "একটি ইনডোর মোবাইল রোবটের জন্য একটি দৃষ্টি-ভিত্তিক স্বায়ত্তশাসিত নেভিগেশন পাইপলাইন তৈরি করেছে৷ সিস্টেমটি গভীরতার সেন্সর এবং একটি কাস্টম SLAM বাস্তবায়ন ব্যবহার করে রিয়েল-টাইমে গতিশীল পরিবেশ ম্যাপ করতে। আমরা একটি প্রথাগত সম্ভাব্য রোডম্যাপ প্ল্যানারের পাশাপাশি বাধা সনাক্তকরণের জন্য একটি লাইটওয়েট নিউরাল নেটওয়ার্ক ব্যবহার করে চরম সেন্সর শব্দ এবং আঁটসাঁট গণনা সীমাবদ্ধতার মোকাবিলা করেছি।",
+          "video_id": "dQw4w9WgXcQ",
+          "paper_link": "https://example.com/paper.pdf"
+        },
+        {
+          "title": "আইওটি স্মার্ট এগ্রিকালচার প্ল্যাটফর্ম",
+          "description": "মাটির আর্দ্রতা নিরীক্ষণ করতে এবং সেচের প্রয়োজনীয়তার পূর্বাভাস দিতে LoRaWAN ব্যবহার করে একটি কম-শক্তি, প্রশস্ত-এরিয়া IoT প্ল্যাটফর্ম ডিজাইন করেছে। প্রকল্পটি কাস্টম সেন্সর নোড স্থাপন এবং একটি কেন্দ্রীয় ক্লাউড ব্যাকএন্ড তৈরি করা জড়িত যা ডেটা একত্রিত করে এবং স্থানীয় কৃষকদের জন্য জলের ব্যবহার অপ্টিমাইজ করার জন্য একটি ভবিষ্যদ্বাণীমূলক মেশিন লার্নিং মডেল চালায়।",
+          "video_id": "dQw4w9WgXcQ",
+          "paper_link": "https://example.com/paper.pdf"
+        }
+      ],
+      "publications_bibtex": "@আর্টিকেল{moshayedi2026 ইন্টিগ্রেটেড,\n  শিরোনাম={একটি সমন্বিত বিটল অ্যান্টেনা অনুসন্ধান–অজানা পরিবেশে সর্বমুখী AGV মোবাইল রোবটের জন্য সক্ষম ন্যাভিগেশন ফ্রেমওয়ার্ক},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং করণ, ইউ. এবং ঝাং, এম. এবং বাসির, ডি.},\n  জার্নাল={ইএআই এনডোর্সড লেনদেন অন এআই এবং রোবোটিক্স},\n  বছর={2026},\n  প্রকার={জার্নাল}\n} @inproceedings{moshayedi2025path,\n  শিরোনাম={এজিভিগুলির জন্য পথ পরিকল্পনা: কম্পিউটেশনাল দক্ষতা এবং সর্বোত্তমতার ভারসাম্য},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এইচ. এবং ইয়াং, এস. এবং রাজী, এ. এবং আন্দানি, এম.ই.},\n  বইয়ের শিরোনাম={5ম ICRAIC 2025, IEEE},\n  বছর={2025},\n  প্রকার={সম্মেলন}\n} @inproceedings{moshayedi2025urbanpark,\n  শিরোনাম={আরবানপার্ক: LoRaWAN সক্ষম স্মার্ট পার্কিং মডিউল সহ পার্কিং পরিকাঠামোর অগ্রগতি},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এ. এবং ইয়াং, এস.},\n  বইয়ের শিরোনাম={4th ICCIT 2025},\n  বছর={2025},\n  প্রকার={সম্মেলন}\n} @inproceedings{moshayedi2024dr,\n  শিরোনাম={ডঃ অরেঞ্জঅ্যাপ: সাইট্রাস বাগানে রিয়েল-টাইম পেস্ট ডিটেকশনে বিপ্লব ঘটানো},\n  লেখক={মোশায়েদী, এ.জে. এবং জাওয়াদি, এম.জে. এবং রায়, এ.এস. এবং অন্যান্য},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  বছর={2024},\n  প্রকার={সম্মেলন}\n} @আর্টিকেল{roy2024advanced,\n  title={আইআর সেন্সর এবং টাইমড অটোমেটা ব্যবহার করে অ্যাডভান্সড পাথ ট্র্যাকিং এবং ট্রাফিক ব্যবস্থাপনা},\n  লেখক={রায়, এ.এস. এবং দাস, এ.},\n  জার্নাল={রোবোটিক্স রিসার্চ জার্নাল (JRR), 1(1), 15–23},\n  বছর={2024},\n  প্রকার={জার্নাল}\n} @inproceedings{roy2024 মনোযোগী,\n  শিরোনাম={অ্যাটেনটিভ-ইওলো: দক্ষ চ্যানেলের মনোযোগ ব্যবহার করে অন-সাইট জলের পাইপলাইন পরিদর্শন এবং ELAN-ভিত্তিক YOLOv7},\n  লেখক={রায়, এ.এস. এবং বাগাদে, পি.},\n  booktitle={VISAPP 2024},\n  বছর={2024},\n  প্রকার={সম্মেলন}\n}",
+      "research_statements": [
+        {
+          "title": "অটোনোমাস গাইডেড ভেহিকেল (AGV)",
+          "description": "বিটল অ্যান্টেনা অনুসন্ধানের মতো বিবর্তনীয় পদ্ধতি ব্যবহার করে অজানা পরিবেশে সর্বমুখী AGV-এর জন্য শক্তি-সচেতন এবং শক্তিশালী পথ পরিকল্পনা অ্যালগরিদম তৈরি করা।"
+        },
+        {
+          "title": "কম্পিউটার ভিশন এবং এজ এআই",
+          "description": "এজ ডিভাইসে রিয়েল-টাইম ইনফরেন্সের জন্য লাইটওয়েট ডিপ লার্নিং আর্কিটেকচার (যেমন, অ্যাটেনটিভ-ইওলো) ডিজাইন করা, বিশেষ করে পাইপলাইনের ত্রুটি সনাক্তকরণ এবং কৃষি পর্যবেক্ষণের জন্য।"
+        },
+        {
+          "title": "আইওটি এবং স্মার্ট পরিকাঠামো",
+          "description": "স্মার্ট পার্কিং এবং বুদ্ধিমান রাস্তার আলোর মতো শহুরে চ্যালেঞ্জের জন্য LoRaWAN এবং প্রান্ত কম্পিউটিং ব্যবহার করে মাপযোগ্য, কম-পাওয়ার সমাধান তৈরি করা।"
+        }
+      ],
+      "students": [
+        {
+          "name": "নমুনা ছাত্র 1",
+          "photo": "/academic/students/student1.jpg",
+          "details": "স্নাতক গবেষক",
+          "project": "AGV-এর জন্য স্বায়ত্তশাসিত নেভিগেশন"
+        },
+        {
+          "name": "নমুনা ছাত্র 2",
+          "photo": "/academic/students/student2.jpg",
+          "details": "ক্যাপস্টোন প্রকল্পের ছাত্র",
+          "project": "আইওটি এর মাধ্যমে স্মার্ট সিটি ট্রাফিক ব্যবস্থাপনা"
+        }
+      ],
+      "teaching_courses": [
+        {
+          "code": "CSE 301",
+          "name": "অপারেটিং সিস্টেম",
+          "semester": "গ্রীষ্ম 2026",
+          "archived": false,
+          "description": "প্রক্রিয়া পরিচালনা, মেমরি বরাদ্দকরণ, এবং ফাইল সিস্টেম সহ OS নীতিগুলির গভীরভাবে ওভারভিউ।",
+          "syllabus_link": "https://drive.google.com/...",
+          "materials": [
+            {
+              "title": "বক্তৃতা",
+              "items": [
+                {
+                  "name": "লেকচার 1: OS কি?",
+                  "link": "https://drive.google.com/..."
+                },
+                {
+                  "name": "লেকচার 2: প্রসেস এবং থ্রেড",
+                  "link": "https://drive.google.com/..."
+                }
+              ]
+            },
+            {
+              "title": "অ্যাসাইনমেন্ট",
+              "items": [
+                {
+                  "name": "প্রকল্প: কাস্টম শেল",
+                  "link": "https://drive.google.com/..."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CSE 203",
+          "name": "ডেটা স্ট্রাকচার এবং অ্যালগরিদম",
+          "semester": "2025 সালের পতন",
+          "archived": true,
+          "description": "মূল ডেটা স্ট্রাকচার (অ্যারে, লিঙ্ক করা তালিকা, গাছ, গ্রাফ) এবং অ্যালগরিদমিক ডিজাইনের ব্যাপক অধ্যয়ন।",
+          "syllabus_link": "https://drive.google.com/drive/folders/sample_link",
+          "materials": [
+            {
+              "title": "বক্তৃতা",
+              "items": [
+                {
+                  "name": "লেকচার 1: অ্যালগরিদমিক জটিলতার ভূমিকা",
+                  "link": "https://drive.google.com/file/d/sample"
+                },
+                {
+                  "name": "লেকচার 2: অ্যারে এবং পয়েন্টার",
+                  "link": "https://drive.google.com/file/d/sample"
+                },
+                {
+                  "name": "লেকচার 3: লিঙ্ক করা তালিকা (একক এবং দ্বিগুণ)",
+                  "link": "https://drive.google.com/file/d/sample"
+                }
+              ]
+            },
+            {
+              "title": "অ্যাসাইনমেন্ট",
+              "items": [
+                {
+                  "name": "অ্যাসাইনমেন্ট 1: বিগ-ও বিশ্লেষণ",
+                  "link": "https://drive.google.com/file/d/sample"
+                }
+              ]
+            },
+            {
+              "title": "অনুশীলনের সমস্যা",
+              "items": [
+                {
+                  "name": "অনুশীলন সেট 1: পুনরাবৃত্তি",
+                  "link": "https://drive.google.com/file/d/sample"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "developer": {
+      "blog_categories": [
+        {
+          "id": "project",
+          "label": "প্রকল্প",
+          "color": "#00d9ff",
+          "bg": "#e0f9ff"
+        },
+        {
+          "id": "devlog",
+          "label": "দেব লগ",
+          "color": "#ff3366",
+          "bg": "#fff0f4"
+        },
+        {
+          "id": "tutorial",
+          "label": "টিউটোরিয়াল",
+          "color": "#ffde00",
+          "bg": "#fffde0"
+        },
+        {
+          "id": "deployment",
+          "label": "স্থাপনা",
+          "color": "#10b981",
+          "bg": "#f0fdf4"
+        },
+        {
+          "id": "tools",
+          "label": "টুলস এবং সেটআপ",
+          "color": "#8b5cf6",
+          "bg": "#f5f3ff"
+        },
+        {
+          "id": "career",
+          "label": "কর্মজীবন",
+          "color": "#f97316",
+          "bg": "#fff7ed"
+        },
+        {
+          "id": "opinion",
+          "label": "মতামত",
+          "color": "#6b7280",
+          "bg": "#f9fafb"
+        }
+      ],
+      "blog_posts": [
+        {
+          "id": "btc-core-webapp-launch",
+          "title": "BTC-CORE-WEBAPP: একটি বিটকয়েন RPC ব্রাউজার তৈরি করা",
+          "date": "2025-03-10",
+          "category": "project",
+          "tags": [
+            "bitcoin",
+            "java",
+            "rpc",
+            "web-app"
+          ],
+          "summary": "JSON-RPC এর মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস তৈরি করা হয়েছে। আর্কিটেকচার, চ্যালেঞ্জ এবং আমি কীভাবে অ্যাসিঙ্ক RPC কলগুলি পরিচালনা করেছি তার মধ্য দিয়ে হাঁটুন।",
+          "body": "এই প্রকল্পটি সপ্তাহান্তে হ্যাক হিসাবে শুরু হয়েছিল — আমি প্রতিবার টার্মিনাল না খুলেই আমার স্থানীয় বিটকয়েন কোর নোডকে জিজ্ঞাসা করতে চেয়েছিলাম। ফলাফল হল একটি পরিষ্কার জাভা-ভিত্তিক ওয়েব অ্যাপ যা JSON-RPC API-কে একটি ব্রাউজার-বান্ধব UI-তে মোড়ানো। সবচেয়ে জটিল অংশটি ছিল নোডকে হাতুড়ি না করে মেমপুল আপডেটের জন্য দীর্ঘ ভোটগ্রহণ পরিচালনা করা। সোর্স কোড GitHub এ আছে।",
+          "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
+          "link": "",
+          "pinned": true
+        },
+        {
+          "id": "iitk-fortinet-authenticator",
+          "title": "স্বয়ংক্রিয়-প্রমাণিত করুন IITK-এর Fortinet Network — ব্যথা ছাড়াই",
+          "date": "2024-09-05",
+          "category": "tools",
+          "tags": [
+            "automation",
+            "network",
+            "electron",
+            "tools"
+          ],
+          "summary": "ক্যাম্পাস ওয়াই-ফাই যা আপনাকে প্রতি 4 ঘন্টা লগ আউট করে? আমি ইলেক্ট্রন + জাভাস্ক্রিপ্ট ব্যবহার করে পটভূমিতে নীরবে স্বয়ংক্রিয়ভাবে প্রমাণীকরণের জন্য একটি ডেস্কটপ GUI তৈরি করেছি।",
+          "body": "আইআইটি কানপুরের প্রত্যেক শিক্ষার্থী ফরটিনেট বন্দী পোর্টালের ব্যথা জানে। আপনি একটি দীর্ঘ কম্পাইল কাজের গভীরে আছেন এবং হঠাৎ - কোন ইন্টারনেট নেই। আমি একটি লাইটওয়েট ইলেক্ট্রন অ্যাপ তৈরি করেছি যা কানেক্টিভিটি ড্রপের জন্য দেখে এবং নীরবে পুনরায় প্রমাণীকরণ করে। ট্রে আইকন, শূন্য বাধা। লিনাক্স এবং ম্যাকোসে কাজ করে।",
+          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "stress-detection-ml",
+          "title": "পাইথনের সাথে শারীরবৃত্তীয় সংকেত থেকে স্ট্রেসের পূর্বাভাস",
+          "date": "2024-06-20",
+          "category": "project",
+          "tags": [
+            "machine-learning",
+            "healthcare",
+            "python",
+            "signal-processing"
+          ],
+          "summary": "পরিধানযোগ্য সেন্সর ডেটা ব্যবহার করে স্ট্রেস-লেভেল ভবিষ্যদ্বাণীর জন্য একটি এন্ড-টু-এন্ড ML পাইপলাইন — কাঁচা সংকেত প্রিপ্রসেসিং থেকে 91% নির্ভুলতার সাথে একটি প্রশিক্ষিত ক্লাসিফায়ার পর্যন্ত।",
+          "body": "এই প্রকল্পটি তিনটি স্ট্রেস লেভেলের পূর্বাভাস দিতে WESAD ডেটাসেট থেকে গ্যালভ্যানিক স্কিন রেসপন্স, হার্ট রেট এবং অ্যাক্সিলোমিটার ডেটা ব্যবহার করে। স্লাইডিং উইন্ডোগুলির সাথে বৈশিষ্ট্য নিষ্কাশনের পরে, আমি প্রশিক্ষণ দিয়েছি এবং SVM, র্যান্ডম ফরেস্ট এবং একটি ছোট 1D-CNN তুলনা করেছি। সিএনএন 91% এ জিতেছে কিন্তু র্যান্ডম ফরেস্ট অনেক বেশি ব্যাখ্যাযোগ্য।",
+          "github": "https://github.com/atanuroy911/stress-detection-app",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "joined-backendace",
+          "title": "ব্যাকএন্ড এসে ফুল-স্ট্যাক ডেভেলপার হিসেবে যোগ দিয়েছেন",
+          "date": "2024-09-01",
+          "category": "career",
+          "tags": [
+            "career",
+            "devops",
+            "full-stack",
+            "remote"
+          ],
+          "summary": "ইউএস-ভিত্তিক ক্লায়েন্টদের জন্য ক্লাউড-নেটিভ অ্যাপ্লিকেশন তৈরি করে, ব্যাকএন্ড এসে ওয়েব ডেভেলপার এবং DevOps ইঞ্জিনিয়ার হিসাবে একটি নতুন ভূমিকা শুরু করতে আগ্রহী।",
+          "body": "সেপ্টেম্বর 2024 থেকে, আমি একটি দূরবর্তী ক্ষমতায় ব্যাকএন্ড Ace-এ যোগ দিচ্ছি, নিউ ইয়র্কের ক্লায়েন্টদের জন্য ফুল-স্ট্যাক ওয়েব অ্যাপ্লিকেশন এবং ক্লাউড অবকাঠামোতে কাজ করছি। প্রোডাকশন-গ্রেড সিস্টেম স্কেল করার এবং CI/CD পাইপলাইন অপ্টিমাইজেশানে গভীরভাবে ডুব দেওয়ার জন্য উন্মুখ।",
+          "github": "",
+          "link": "",
+          "pinned": false
+        }
+      ],
+      "hero": {
+        "greeting": "আরে, আমি",
+        "name": "অতনু।",
+        "roles": [
+          "সফটওয়্যার ইঞ্জিনিয়ার",
+          "DevOps ইঞ্জিনিয়ার",
+          "ফুল-স্ট্যাক ডেভেলপার",
+          "সিস্টেম আর্কিটেক্ট"
+        ],
+        "tagline": "আমি শক্তিশালী, স্কেলযোগ্য অ্যাপ্লিকেশন তৈরি করি — প্রতিক্রিয়াশীল ফ্রন্টএন্ড থেকে জটিল ক্লাউড-নেটিভ মাইক্রোসার্ভিস পর্যন্ত।",
+        "cta_primary": "আমার প্রকল্প দেখুন",
+        "cta_secondary": "আসুন কথা বলি"
+      },
+      "bio": "প্রশিক্ষণ দ্বারা প্রকৌশলী, প্রকৃতির দ্বারা নির্মাতা। আমি উচ্চ-পারফরম্যান্স ওয়েব প্ল্যাটফর্ম তৈরি এবং স্থাপনে বিশেষজ্ঞ। সফ্টওয়্যার প্রকৌশলের একটি শক্তিশালী পটভূমিতে, আমি পরিষ্কার কোড এবং শক্তিশালী সিস্টেমের উপর ফোকাস করে, মার্কিন যুক্তরাষ্ট্র এবং কানাডা জুড়ে বিভিন্ন ক্লায়েন্টদের জন্য ফুল-স্ট্যাক ডেভেলপমেন্ট এবং ক্লাউড অবকাঠামো ডিজাইনের নেতৃত্ব দিয়েছি।",
+      "experience": [
+        {
+          "role": "ওয়েব ডেভেলপার এবং DevOps ইঞ্জিনিয়ার",
+          "org": "Backend Ace",
+          "period": "Sep 2024 – Sep 2025",
+          "location": "Remote · New York, USA",
+          "bullets": [
+            "ইউএস ক্লায়েন্টদের জন্য ফুল-স্ট্যাক ডেভেলপমেন্ট এবং ক্লাউড অবকাঠামো",
+            "পরিচালিত CI/CD পাইপলাইন এবং সার্ভার স্থাপনা"
+          ]
+        },
+        {
+          "role": "সহযোগী ওয়েব ডেভেলপার",
+          "org": "Wizzartech",
+          "period": "Apr 2022 – Dec 2022",
+          "location": "Remote · Toronto, Canada",
+          "bullets": [
+            "আধুনিক JS ফ্রেমওয়ার্ক ব্যবহার করে ক্লায়েন্ট-মুখী ওয়েব অ্যাপ্লিকেশন তৈরি করা হয়েছে"
+          ]
+        }
+      ],
+      "journey": {
+        "title": "বিকাশকারী যাত্রা",
+        "description": "বিল্ডিং সফ্টওয়্যার, হ্যাকাথন এবং প্রযুক্তি ইভেন্ট থেকে মুহূর্ত।",
+        "images": [
+          {
+            "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80",
+            "caption": "আমার প্রথম স্কেলযোগ্য আর্কিটেকচার স্থাপন করা হচ্ছে।"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
+            "caption": "গভীর রাতে ডিবাগিং সেশন।"
+          }
+        ]
+      },
+      "projects": [
+        {
+          "title": "BTC-CORE-WEBAPP",
+          "description": "বিটকয়েন কোর [RPC] ওয়েব অ্যাপ্লিকেশন। RPC কমান্ডের মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি ওয়েব ইন্টারফেস তৈরি করা হয়েছে।",
+          "tags": [
+            "Java",
+            "Bitcoin",
+            "RPC",
+            "Web"
+          ],
+          "link": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
+          "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
+          "featured": true
+        },
+        {
+          "title": "CS724-RoboX",
+          "description": "আইআইটি কানপুরে রোবোটিক্স এবং স্বায়ত্তশাসিত সিস্টেম সম্পর্কিত একটি ভান্ডার। পথ পরিকল্পনা এবং নিয়ন্ত্রণের জন্য উন্নত অ্যালগরিদম।",
+          "tags": [
+            "Jupyter Notebook",
+            "Robotics",
+            "Python"
+          ],
+          "github": "https://github.com/atanuroy911/CS724-RoboX",
+          "featured": true
+        },
+        {
+          "title": "iitk-fortinet-gui",
+          "description": "IITK Fortinet Authenticator অ্যাপ্লিকেশন স্বয়ংক্রিয়ভাবে বিশ্ববিদ্যালয় ক্যাম্পাসে নেটওয়ার্ক প্রমাণীকরণ পরিচালনা করতে।",
+          "tags": [
+            "JavaScript",
+            "Network",
+            "Automation"
+          ],
+          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
+          "featured": true
+        },
+        {
+          "title": "স্ট্রেস-ডিটেকশন-অ্যাপ",
+          "description": "শারীরবৃত্তীয় ডেটা এবং পাইথন ব্যবহার করে স্ট্রেস লেভেলের পূর্বাভাস দেওয়ার জন্য একটি ব্যাপক মেশিন লার্নিং সিস্টেম।",
+          "tags": [
+            "Python",
+            "Machine Learning",
+            "Healthcare"
+          ],
+          "github": "https://github.com/atanuroy911/stress-detection-app"
+        },
+        {
+          "title": "ulab-mms",
+          "description": "ইউল্যাব (ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ) এর জন্য আধুনিক ম্যানেজমেন্ট সিস্টেম একাডেমিক ক্রিয়াকলাপগুলিকে প্রবাহিত করতে।",
+          "tags": [
+            "TypeScript",
+            "Next.js",
+            "Full-Stack"
+          ],
+          "github": "https://github.com/atanuroy911/ulab-mms"
+        },
+        {
+          "title": "name2meta",
+          "description": "ফাইল এবং ডাটাবেস থেকে মেটাডেটা নিষ্কাশন বা পরিচালনার জন্য একটি পাইথন ইউটিলিটি।",
+          "tags": [
+            "Python",
+            "Utility",
+            "Data Processing"
+          ],
+          "github": "https://github.com/atanuroy911/name2meta"
+        },
+        {
+          "title": "অনুসন্ধান-খাবার-ডিবি",
+          "description": "দূরবর্তী ডাটাবেস API ব্যবহার করে খাবার অনুসন্ধানের জন্য একটি প্রতিক্রিয়াশীল ওয়েব অ্যাপ্লিকেশন।",
+          "tags": [
+            "JavaScript",
+            "API",
+            "Frontend"
+          ],
+          "github": "https://github.com/atanuroy911/search-meal-db"
+        }
+      ]
+    }
+  }
+}

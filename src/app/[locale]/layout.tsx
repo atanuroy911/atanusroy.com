@@ -8,6 +8,8 @@ import { getContent, getStaticLocaleParams, type Locale } from '@/lib/content'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { baseMetadata, buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
 
+export const dynamic = 'force-static'
+
 export function generateStaticParams() {
   return getStaticLocaleParams()
 }

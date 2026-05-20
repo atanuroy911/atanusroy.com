@@ -1,13 +1,37 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 export function TableOfContents({ locale }: { locale: string }) {
   const pathname = usePathname()
+  const [studentSections, setStudentSections] = useState<{ id: string; label: string }[]>([])
+
+  useEffect(() => {
+    if (pathname !== `/${locale}/students`) {
+      return
+    }
+
+    const frameId = window.requestAnimationFrame(() => {
+      const sections = Array.from(document.querySelectorAll<HTMLElement>('section[id^="year-"]'))
+        .map((element) => {
+          const id = element.id
+          const label = element.querySelector('h2')?.textContent?.trim() || id.replace(/^year-/, '')
+          return { id, label }
+        })
+        .filter((section, index, all) => all.findIndex((item) => item.id === section.id) === index)
+
+      setStudentSections(sections)
+    })
+
+    return () => window.cancelAnimationFrame(frameId)
+  }, [locale, pathname])
 
   let sections: { id: string; label: string }[] = []
 
-  if (pathname === `/${locale}` || pathname === `/${locale}/`) {
+  if (pathname === `/${locale}/students` && studentSections.length > 0) {
+    sections = studentSections
+  } else if (pathname === `/${locale}` || pathname === `/${locale}/`) {
     sections = [
       { id: 'about', label: 'About Me' },
       { id: 'education', label: 'Education' },
@@ -29,10 +53,6 @@ export function TableOfContents({ locale }: { locale: string }) {
   } else if (pathname === `/${locale}/teaching`) {
     sections = [
       { id: 'teaching', label: 'Teaching & Mentorship' },
-    ]
-  } else if (pathname === `/${locale}/students`) {
-    sections = [
-      { id: 'students', label: 'Students' },
     ]
   } else if (pathname === `/${locale}/contact`) {
     sections = [

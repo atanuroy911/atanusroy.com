@@ -1,9 +1,17 @@
 students:
-  - name: Sample Student 1
-    photo: /academic/students/student1.jpg
-    details: Undergraduate Researcher
-    project: Autonomous Navigation for AGVs
-  - name: Sample Student 2
-    photo: /academic/students/student2.jpg
-    details: Capstone Project Student
-    project: Smart City Traffic Management via IoT
+  - year: 2025
+    name: Saika Mehnaz Khan
+    photo: /images/students/saika.jpeg
+    designation: Undergraduate Researcher
+    linkedin: https://www.linkedin.com/in/saika-mehnaz-khan/
+    email: saikamkhan367@gmail.com
+    project: Biometrically Secured Women Safety Device
+    bio: At University of Liberal Arts Bangladesh, actively working on a Biometrically Secured Women Safety Device focused on improving personal security through smart technology. Her work integrates biometric authentication, emergency alert mechanisms, and embedded systems to create a reliable and user-friendly safety solution for women. She is passionate about using technology to address real-world social challenges and develop impactful innovations.
+  - year: 2025
+    name: Mst Mustara Khatun Mugni
+    photo: /images/students/mugni.jpeg
+    designation: Undergraduate Researcher
+    linkedin: https://www.linkedin.com/in/sample-student-2/
+    email: sample.student2@ulab.edu.bd
+    project: Biometrically Secured Women Safety Device
+    bio: At University of Liberal Arts Bangladesh, actively working on a Biometrically Secured Women Safety Device focused on improving personal security through smart technology. Her work integrates biometric authentication, emergency alert mechanisms, and embedded systems to create a reliable and user-friendly safety solution for women. She is passionate about using technology to address real-world social challenges and develop impactful innovations.

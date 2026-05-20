@@ -299,16 +299,24 @@
       ],
       "students": [
         {
-          "name": "Sample Student 1",
-          "photo": "/academic/students/student1.jpg",
-          "details": "Undergraduate Researcher",
-          "project": "Autonomous Navigation for AGVs"
+          "year": 2025,
+          "name": "Saika Mehnaz Khan",
+          "photo": "/images/students/saika.jpeg",
+          "designation": "Undergraduate Researcher",
+          "linkedin": "https://www.linkedin.com/in/saika-mehnaz-khan/",
+          "email": "saikamkhan367@gmail.com",
+          "project": "Biometrically Secured Women Safety Device",
+          "bio": "At University of Liberal Arts Bangladesh, actively working on a Biometrically Secured Women Safety Device focused on improving personal security through smart technology. Her work integrates biometric authentication, emergency alert mechanisms, and embedded systems to create a reliable and user-friendly safety solution for women. She is passionate about using technology to address real-world social challenges and develop impactful innovations."
         },
         {
-          "name": "Sample Student 2",
-          "photo": "/academic/students/student2.jpg",
-          "details": "Capstone Project Student",
-          "project": "Smart City Traffic Management via IoT"
+          "year": 2025,
+          "name": "Mst Mustara Khatun Mugni",
+          "photo": "/images/students/mugni.jpeg",
+          "designation": "Undergraduate Researcher",
+          "linkedin": "https://www.linkedin.com/in/sample-student-2/",
+          "email": "sample.student2@ulab.edu.bd",
+          "project": "Biometrically Secured Women Safety Device",
+          "bio": "At University of Liberal Arts Bangladesh, actively working on a Biometrically Secured Women Safety Device focused on improving personal security through smart technology. Her work integrates biometric authentication, emergency alert mechanisms, and embedded systems to create a reliable and user-friendly safety solution for women. She is passionate about using technology to address real-world social challenges and develop impactful innovations."
         }
       ],
       "teaching_courses": [
@@ -932,16 +940,24 @@
       ],
       "students": [
         {
-          "name": "নমুনা ছাত্র 1",
+          "year": 2026,
+          "name": "নমুনা ছাত্র ১",
           "photo": "/academic/students/student1.jpg",
-          "details": "স্নাতক গবেষক",
-          "project": "AGV-এর জন্য স্বায়ত্তশাসিত নেভিগেশন"
+          "designation": "স্নাতক গবেষক",
+          "linkedin": "https://www.linkedin.com/in/sample-student-1/",
+          "email": "sample.student1@ulab.edu.bd",
+          "project": "AGV-এর জন্য স্বায়ত্তশাসিত নেভিগেশন",
+          "bio": "সর্বমুখী AGV-এর জন্য মজবুত পারসেপশন এবং স্বায়ত্তশাসিত নেভিগেশনের উপর কাজ করছে, বিশেষভাবে অনিশ্চয়তার মধ্যে পরিকল্পনা এবং ব্যবহারিক প্রয়োগে গুরুত্ব দিয়ে।"
         },
         {
-          "name": "নমুনা ছাত্র 2",
+          "year": 2025,
+          "name": "নমুনা ছাত্র ২",
           "photo": "/academic/students/student2.jpg",
-          "details": "ক্যাপস্টোন প্রকল্পের ছাত্র",
-          "project": "আইওটি এর মাধ্যমে স্মার্ট সিটি ট্রাফিক ব্যবস্থাপনা"
+          "designation": "ক্যাপস্টোন প্রকল্পের ছাত্র",
+          "linkedin": "https://www.linkedin.com/in/sample-student-2/",
+          "email": "sample.student2@ulab.edu.bd",
+          "project": "আইওটি এর মাধ্যমে স্মার্ট সিটি ট্রাফিক ব্যবস্থাপনা",
+          "bio": "স্মার্ট সিটি পরিকাঠামোর জন্য একটি আইওটি-ভিত্তিক ট্রাফিক মনিটরিং ও কন্ট্রোল প্রোটোটাইপ তৈরি করছে।"
         }
       ],
       "teaching_courses": [

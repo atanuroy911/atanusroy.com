@@ -122,7 +122,7 @@
 @layer base {
   * { @apply border-border outline-ring/50; }
   body { @apply bg-background text-foreground; font-family: 'Inter', sans-serif; }
-  html { @apply font-sans; scroll-behavior: smooth; font-size: 18px; }
+  html { @apply font-sans; scroll-behavior: smooth; scroll-padding-top: 100px; font-size: 18px; }
 }
 
 /* ── Custom utilities ─────────────────────────────────── */

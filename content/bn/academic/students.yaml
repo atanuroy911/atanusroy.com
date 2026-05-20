@@ -2,11 +2,19 @@
 # Run: npm run translate to regenerate
 
 students:
-  - name: নমুনা ছাত্র 1
+  - year: 2026
+    name: নমুনা ছাত্র ১
     photo: /academic/students/student1.jpg
-    details: স্নাতক গবেষক
+    designation: স্নাতক গবেষক
+    linkedin: https://www.linkedin.com/in/sample-student-1/
+    email: sample.student1@ulab.edu.bd
     project: AGV-এর জন্য স্বায়ত্তশাসিত নেভিগেশন
-  - name: নমুনা ছাত্র 2
+    bio: সর্বমুখী AGV-এর জন্য মজবুত পারসেপশন এবং স্বায়ত্তশাসিত নেভিগেশনের উপর কাজ করছে, বিশেষভাবে অনিশ্চয়তার মধ্যে পরিকল্পনা এবং ব্যবহারিক প্রয়োগে গুরুত্ব দিয়ে।
+  - year: 2025
+    name: নমুনা ছাত্র ২
     photo: /academic/students/student2.jpg
-    details: ক্যাপস্টোন প্রকল্পের ছাত্র
+    designation: ক্যাপস্টোন প্রকল্পের ছাত্র
+    linkedin: https://www.linkedin.com/in/sample-student-2/
+    email: sample.student2@ulab.edu.bd
     project: আইওটি এর মাধ্যমে স্মার্ট সিটি ট্রাফিক ব্যবস্থাপনা
+    bio: স্মার্ট সিটি পরিকাঠামোর জন্য একটি আইওটি-ভিত্তিক ট্রাফিক মনিটরিং ও কন্ট্রোল প্রোটোটাইপ তৈরি করছে।

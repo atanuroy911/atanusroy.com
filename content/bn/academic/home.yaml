@@ -12,8 +12,8 @@ hero:
 bio: >-
   আমি ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগের একজন প্রভাষক। আমি IIT
   কানপুর (2022-2024) থেকে কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এ M.Tech করেছি, যেখানে আমি গভীর শিক্ষা-ভিত্তিক
-  পাইপলাইন পরিদর্শন সিস্টেমে কাজ করেছি। আমার গবেষণাটি তিনটি দেশে কম্পিউটার ভিশন, রোবোটিক্স, আইওটি এবং এমবেডেড সিস্টেম
-  নিয়ে বিস্তৃত - বাংলাদেশ, ভারত এবং চীন।
+  পাইপলাইন পরিদর্শন সিস্টেমে কাজ করেছি। আমার গবেষণাটি কম্পিউটার ভিশন, রোবোটিক্স, আইওটি, এবং এমবেডেড সিস্টেম তিনটি দেশ -
+  বাংলাদেশ, ভারত এবং চীন জুড়ে বিস্তৃত।
 research_interests:
   - কম্পিউটার ভিশন এবং অবজেক্ট ডিটেকশন
   - অটোনোমাস গাইডেড ভেহিকেল (AGV)
@@ -21,48 +21,48 @@ research_interests:
   - এজ ডিভাইসে গভীর শিক্ষা
   - স্মার্ট সিটি অবকাঠামো
 education:
-  - degree: M.Tech — কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং
+  - degree: M.Tech - কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং
     institution: Indian Institute of Technology, Kanpur
-    logo: https://logo.clearbit.com/iitk.ac.in
+    logo: https://atanuroy911.github.io/images/iitkredlogo.png
     location: Kanpur, India
-    period: 2022 – 2024
+    period: 2022 - 2024
     grade: "CPI: 7.29/10"
   - degree: বি.ই. - কম্পিউটার বিজ্ঞান ও প্রযুক্তি
     institution: Jiangxi University of Science & Technology
-    logo: https://logo.clearbit.com/just.edu.cn
+    logo: https://atanuroy911.github.io/images/jxust.png
     location: Jiangxi, China
-    period: 2018 – 2022
+    period: 2018 - 2022
     grade: 91.01%
   - degree: উচ্চ মাধ্যমিক সার্টিফিকেট (HSC)
     institution: Notre Dame College
-    logo: https://logo.clearbit.com/ndc.edu.bd
+    logo: /images/ndc_logo.svg
     location: Dhaka, Bangladesh
     period: "2017"
     grade: "GPA: 5.00/5.00"
 experience:
   - role: প্রভাষক, CSE বিভাগ
     org: University of Liberal Arts Bangladesh
-    logo: https://logo.clearbit.com/ulab.edu.bd
+    logo: https://atanuroy911.github.io/images/ulab.png
     type: teaching
-    period: Sep 2025 – Present
+    period: Sep 2025 - Present
     location: Dhaka, Bangladesh
     bullets:
       - "UG CSE কোর্স পড়ানো: OS, DSA, পরিসংখ্যান, সফটওয়্যার ইঞ্জিনিয়ারিং, এমবেডেড সিস্টেম"
       - কম্পিউটার ভিশন, IoT, এবং রোবোটিক্স জুড়ে ক্যাপস্টোন প্রকল্পগুলিতে শিক্ষার্থীদের গাইড করা
   - role: গবেষণা সহকারী (দূরবর্তী)
-    org: Robotics & Automation Research Lab (RARL), JUST
-    logo: https://logo.clearbit.com/just.edu.cn
+    org: Robotics & Automation Research Lab (RARL), JXUST
+    logo: https://atanuroy911.github.io/images/rarl.png
     type: research
-    period: Aug 2024 – Present
+    period: Aug 2024 - Present
     location: Jiangxi, China
     bullets:
       - Dijkstra, Floyd-Warshall, DFS ব্যবহার করে শক্তি-সচেতন AGV সংক্ষিপ্ত পথ পরিকল্পনা
       - কৃষি পর্যবেক্ষণের জন্য কম্পিউটার দৃষ্টিতে সহযোগিতা করা
   - role: গবেষণা সহকারী
     org: IoT Vision Lab, IIT Kanpur
-    logo: https://logo.clearbit.com/iitk.ac.in
+    logo: https://atanuroy911.github.io/images/iitkredlogo.png
     type: research
-    period: Dec 2022 – Aug 2024
+    period: Dec 2022 - Aug 2024
     location: Kanpur, India
     bullets:
       - >-
@@ -70,10 +70,10 @@ experience:
         (জল জীবন মিশন, ভারত সরকার)
       - FMCW RADAR এবং LoRaWAN সহ প্রোটোটাইপ করা স্ট্রিটলাইট ম্যানেজমেন্ট সিস্টেম
   - role: গবেষণা সহকারী
-    org: Robotics & Automation Research Lab (RARL), JUST
-    logo: https://logo.clearbit.com/just.edu.cn
+    org: Robotics & Automation Research Lab (RARL), JXUST
+    logo: https://atanuroy911.github.io/images/rarl.png
     type: research
-    period: Aug 2018 – Dec 2021
+    period: Aug 2018 - Dec 2021
     location: Jiangxi, China
     bullets:
       - Pixy Cam ব্যবহার করে ফুড ডেলিভারি রোবটের জন্য রিয়েল-টাইম ক্যামেরা মনিটরিং

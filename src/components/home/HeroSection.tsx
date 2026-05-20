@@ -10,6 +10,38 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 
 const Github = (props: any) => <GitHubLogoIcon width={props.size || 24} height={props.size || 24} {...props} />
 const Linkedin = (props: any) => <LinkedInLogoIcon width={props.size || 24} height={props.size || 24} {...props} />
+const Instagram = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" />
+    <circle cx="12" cy="12" r="4.1" stroke="currentColor" strokeWidth="1.8" />
+    <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" />
+  </svg>
+)
+const Youtube = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <rect x="3" y="6" width="18" height="12" rx="4" stroke="currentColor" strokeWidth="1.8" />
+    <path d="M10 9.5V14.5L15 12L10 9.5Z" fill="currentColor" />
+  </svg>
+)
+const ResearchGate = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <path d="M7.2 6.2h4.2c2.1 0 3.6 1.3 3.6 3.2 0 1.5-.8 2.6-2.2 3l2.5 4.4h-2.2l-2.3-4H9.2v4H7.2V6.2Zm2 1.7v3.3h1.9c1.2 0 1.9-.6 1.9-1.7s-.7-1.6-1.9-1.6H9.2Z" fill="currentColor" />
+    <path d="M17.2 8.1a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8Z" fill="currentColor" />
+  </svg>
+)
+const GoogleScholar = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <circle cx="12" cy="8" r="3.2" fill="currentColor" />
+    <path d="M12 10.8 6.2 14.1 12 17.4l5.8-3.3L12 10.8Z" fill="currentColor" opacity="0.9" />
+    <path d="M6.4 14.3V17.1L12 20l5.6-2.9v-2.8L12 17.2 6.4 14.3Z" fill="currentColor" opacity="0.6" />
+  </svg>
+)
+const Orcid = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <rect x="4" y="4" width="16" height="16" rx="8" fill="currentColor" />
+    <path d="M10.1 7.8h1.1v8.4h-1.1V7.8Zm2.4 0h2.7c1.9 0 3.2 1.4 3.2 4.2s-1.3 4.2-3.2 4.2h-2.7V7.8Zm1.1 1v6.4h1.4c1.3 0 2-.9 2-3.2s-.7-3.2-2-3.2h-1.4Z" fill="#fff" />
+  </svg>
+)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function HeroSection({ content, locale }: { content: any; locale: string }) {
@@ -61,8 +93,12 @@ export function HeroSection({ content, locale }: { content: any; locale: string 
   const socials = [
     { href: p?.github, icon: Github, label: 'GitHub' },
     { href: p?.linkedin, icon: Linkedin, label: 'LinkedIn' },
+    { href: p?.researchgate, icon: ResearchGate, label: 'ResearchGate' },
+    { href: p?.instagram, icon: Instagram, label: 'Instagram' },
+    { href: p?.youtube, icon: Youtube, label: 'YouTube' },
     { href: `mailto:${p?.email}`, icon: Mail, label: 'Email' },
-    { href: p?.google_scholar, icon: ExternalLink, label: 'Scholar' },
+    { href: p?.google_scholar, icon: GoogleScholar, label: 'Google Scholar' },
+    { href: p?.orcid, icon: Orcid, label: 'ORCID' },
   ].filter(s => s.href)
 
   return (
@@ -197,7 +233,7 @@ function DevHero({ devH, p, displayed, socials, locale, isAnimating }: any) {
             </Link>
             <Link href={`/${locale}/developer/contact`}>
               <Button variant="outline"
-                className="rounded-none px-6 py-6 text-sm font-bold uppercase tracking-widest bg-white text-black border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#000] dark:hover:shadow-[6px_6px_0px_#fff] transition-all"
+                className="rounded-none px-6 py-6 text-sm font-bold uppercase tracking-widest bg-white text-black border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_#000] dark:hover:shadow-[6px_6px_0px_#fff] transition-all"
               >
                 <Mail size={14} className="mr-2" />
                 {devH?.cta_secondary || "Let's Talk"}
@@ -206,7 +242,7 @@ function DevHero({ devH, p, displayed, socials, locale, isAnimating }: any) {
             {p?.cv_url && (
               <Link href={p.cv_url} target="_blank">
                 <Button variant="outline"
-                  className="rounded-none px-6 py-6 text-sm font-bold uppercase tracking-widest bg-[#ffde00] text-black border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#000] dark:hover:shadow-[6px_6px_0px_#fff] transition-all"
+                  className="rounded-none px-6 py-6 text-sm font-bold uppercase tracking-widest bg-[#ffde00] text-black border-2 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_#000] dark:hover:shadow-[6px_6px_0px_#fff] transition-all"
                 >
                   <FileText size={14} className="mr-2" />
                   resume.pdf
@@ -240,10 +276,10 @@ function DevHero({ devH, p, displayed, socials, locale, isAnimating }: any) {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="hidden lg:block w-72 h-96 relative border-4 border-black dark:border-white shadow-[8px_8px_0px_#00d9ff] dark:shadow-[8px_8px_0px_#ff3366] rotate-3 hover:rotate-0 transition-all duration-300 bg-white"
         >
-          <img src={p?.developer_photo || "/images/dev_profile.jpg"} alt={p?.name} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+          <img src={p?.developer_photo || "/images/dev_profile.jpg"} alt={p?.name} className="w-full h-full object-cover transition-all duration-500" />
           {/* Decorative tag on photo */}
           <div className="absolute -bottom-4 -left-4 bg-[#ffde00] border-2 border-black dark:border-white px-3 py-1 font-mono-dev text-black font-bold text-sm shadow-[2px_2px_0px_#000]">
-            <span className="animate-pulse mr-2 inline-block w-2 h-2 bg-black rounded-full" />
+            <span className="animate-pulse mr-2 inline-block w-2 h-2 bg-green-500 rounded-full" />
             ONLINE
           </div>
         </motion.div>
@@ -422,7 +458,7 @@ function AcademicHero({ acH, p, content, socials, locale, isAnimating }: any) {
               <ul className="space-y-2">
                 {content?.academic?.research_interests?.map((ri: string) => (
                   <li key={ri} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-400">
-                    <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0" style={{ background: 'var(--ac-gold)' }} />
+                    <span className="mt-1.5 w-1 h-1 rounded-full shrink-0" style={{ background: 'var(--ac-gold)' }} />
                     {ri}
                   </li>
                 ))}

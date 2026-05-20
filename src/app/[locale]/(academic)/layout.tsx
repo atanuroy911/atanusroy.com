@@ -2,7 +2,7 @@ import { getContent, type Locale } from '@/lib/content'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ModeProvider } from '@/providers/ModeProvider'
-import { FileText, MapPin, Mail, Globe, Sun, Moon } from 'lucide-react'
+import { FileText, MapPin, Mail, Globe } from 'lucide-react'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { Navbar } from '@/components/Navbar'
@@ -10,6 +10,47 @@ import { TableOfContents } from '@/components/TableOfContents'
 
 const Github = (props: any) => <GitHubLogoIcon width={props.size || 24} height={props.size || 24} {...props} />
 const Linkedin = (props: any) => <LinkedInLogoIcon width={props.size || 24} height={props.size || 24} {...props} />
+const Instagram = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" />
+    <circle cx="12" cy="12" r="4.1" stroke="currentColor" strokeWidth="1.8" />
+    <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" />
+  </svg>
+)
+const Youtube = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <rect x="3" y="6" width="18" height="12" rx="4" stroke="currentColor" strokeWidth="1.8" />
+    <path d="M10 9.5V14.5L15 12L10 9.5Z" fill="currentColor" />
+  </svg>
+)
+const ResearchGate = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <path d="M7.2 6.2h4.2c2.1 0 3.6 1.3 3.6 3.2 0 1.5-.8 2.6-2.2 3l2.5 4.4h-2.2l-2.3-4H9.2v4H7.2V6.2Zm2 1.7v3.3h1.9c1.2 0 1.9-.6 1.9-1.7s-.7-1.6-1.9-1.6H9.2Z" fill="currentColor" />
+    <path d="M17.2 8.1a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8Z" fill="currentColor" />
+  </svg>
+)
+const GoogleScholar = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <circle cx="12" cy="8" r="3.2" fill="currentColor" />
+    <path d="M12 10.8 6.2 14.1 12 17.4l5.8-3.3L12 10.8Z" fill="currentColor" opacity="0.9" />
+    <path d="M6.4 14.3V17.1L12 20l5.6-2.9v-2.8L12 17.2 6.4 14.3Z" fill="currentColor" opacity="0.6" />
+  </svg>
+)
+const Orcid = ({ size = 24, className, ...props }: any) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <rect x="4" y="4" width="16" height="16" rx="8" fill="currentColor" />
+    <path d="M10.1 7.8h1.1v8.4h-1.1V7.8Zm2.4 0h2.7c1.9 0 3.2 1.4 3.2 4.2s-1.3 4.2-3.2 4.2h-2.7V7.8Zm1.1 1v6.4h1.4c1.3 0 2-.9 2-3.2s-.7-3.2-2-3.2h-1.4Z" fill="#fff" />
+  </svg>
+)
+
+const SocialLink = ({ href, label, children }: { href?: string; label: string; children: React.ReactNode }) => {
+  if (!href) return null
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" title={label} className="text-muted-foreground hover:text-primary transition-colors">
+      {children}
+    </a>
+  )
+}
 
 export default async function AcademicLayout({
   children,
@@ -54,14 +95,29 @@ export default async function AcademicLayout({
 
           <TableOfContents locale={locale as string} />
 
-          <div className="mt-8 pt-8 border-t border-border mt-auto">
-            <div className="flex items-center justify-center gap-4">
-              <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <Github size={18} />
-              </a>
-              <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <div className="mt-auto pt-8 border-t border-border">
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <SocialLink href={p.researchgate} label="ResearchGate">
+                <ResearchGate size={18} />
+              </SocialLink>
+              <SocialLink href={p.linkedin} label="LinkedIn">
                 <Linkedin size={18} />
-              </a>
+              </SocialLink>
+              <SocialLink href={p.instagram} label="Instagram">
+                <Instagram size={18} />
+              </SocialLink>
+              <SocialLink href={p.github} label="GitHub">
+                <Github size={18} />
+              </SocialLink>
+              <SocialLink href={p.youtube} label="YouTube">
+                <Youtube size={18} />
+              </SocialLink>
+              <SocialLink href={p.google_scholar} label="Google Scholar">
+                <GoogleScholar size={18} />
+              </SocialLink>
+              <SocialLink href={p.orcid} label="ORCID">
+                <Orcid size={18} />
+              </SocialLink>
             </div>
           </div>
         </aside>

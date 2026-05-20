@@ -20,15 +20,19 @@
     },
     "personal": {
       "name": "Atanu Shuvam Roy",
-      "email": "atanusroy98@gmail.com",
+      "email": "atanuroy911[at]gmail.com",
       "phone": "+880 1937545261",
       "location": "Dhaka, Bangladesh",
       "linkedin": "https://linkedin.com/in/atanu-shuvam-roy",
-      "github": "https://github.com/atanusroy",
+      "researchgate": "https://www.researchgate.net/profile/Atanu-Roy-5",
+      "instagram": "https://www.instagram.com/atanu_shuvam_roy/",
+      "github": "https://github.com/atanuroy911",
+      "youtube": "https://www.youtube.com/@atanushuvamroy",
       "google_scholar": "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en",
+      "orcid": "https://orcid.org/0000-0002-0000-0000",
       "cv_url": "/assets/cv.pdf",
       "academic_photo": "/assets/academic_photo.jpg",
-      "developer_photo": "/assets/developer_photo.jpg"
+      "developer_photo": "/assets/developer_photo_2.jpg"
     },
     "academic": {
       "blog_categories": [
@@ -142,7 +146,7 @@
         "cta_primary": "View Publications",
         "cta_secondary": "Contact Me"
       },
-      "bio": "I am a Lecturer in the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh. I hold an M.Tech in Computer Science & Engineering from IIT Kanpur (2022–2024), where I worked on deep learning-based pipeline inspection systems. My research spans Computer Vision, Robotics, IoT, and Embedded Systems across three countries — Bangladesh, India, and China.\n",
+      "bio": "I am a Lecturer in the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh. I hold an M.Tech in Computer Science & Engineering from IIT Kanpur (2022-2024), where I worked on deep learning-based pipeline inspection systems. My research spans Computer Vision, Robotics, IoT, and Embedded Systems across three countries - Bangladesh, India, and China.\n",
       "research_interests": [
         "Computer Vision & Object Detection",
         "Autonomous Guided Vehicles (AGV)",
@@ -152,22 +156,25 @@
       ],
       "education": [
         {
-          "degree": "M.Tech — Computer Science & Engineering",
+          "degree": "M.Tech - Computer Science & Engineering",
           "institution": "Indian Institute of Technology, Kanpur",
+          "logo": "https://atanuroy911.github.io/images/iitkredlogo.png",
           "location": "Kanpur, India",
-          "period": "2022 – 2024",
+          "period": "2022 - 2024",
           "grade": "CPI: 7.29/10"
         },
         {
-          "degree": "B.E. — Computer Science & Technology",
+          "degree": "B.E. - Computer Science & Technology",
           "institution": "Jiangxi University of Science & Technology",
+          "logo": "https://atanuroy911.github.io/images/jxust.png",
           "location": "Jiangxi, China",
-          "period": "2018 – 2022",
+          "period": "2018 - 2022",
           "grade": "91.01%"
         },
         {
           "degree": "Higher Secondary Certificate (HSC)",
           "institution": "Notre Dame College",
+          "logo": "/images/ndc_logo.svg",
           "location": "Dhaka, Bangladesh",
           "period": "2017",
           "grade": "GPA: 5.00/5.00"
@@ -177,8 +184,9 @@
         {
           "role": "Lecturer, Dept. of CSE",
           "org": "University of Liberal Arts Bangladesh",
+          "logo": "https://atanuroy911.github.io/images/ulab.png",
           "type": "teaching",
-          "period": "Sep 2025 – Present",
+          "period": "Sep 2025 - Present",
           "location": "Dhaka, Bangladesh",
           "bullets": [
             "Teaching UG CSE courses: OS, DSA, Statistics, Software Engineering, Embedded Systems",
@@ -187,9 +195,10 @@
         },
         {
           "role": "Research Assistant (Remote)",
-          "org": "Robotics & Automation Research Lab (RARL), JUST",
+          "org": "Robotics & Automation Research Lab (RARL), JXUST",
+          "logo": "https://atanuroy911.github.io/images/rarl.png",
           "type": "research",
-          "period": "Aug 2024 – Present",
+          "period": "Aug 2024 - Present",
           "location": "Jiangxi, China",
           "bullets": [
             "Energy-aware AGV shortest path planning using Dijkstra, Floyd-Warshall, DFS",
@@ -199,8 +208,9 @@
         {
           "role": "Research Assistant",
           "org": "IoT Vision Lab, IIT Kanpur",
+          "logo": "https://atanuroy911.github.io/images/iitkredlogo.png",
           "type": "research",
-          "period": "Dec 2022 – Aug 2024",
+          "period": "Dec 2022 - Aug 2024",
           "location": "Kanpur, India",
           "bullets": [
             "Integrated ECA Mechanism into YOLOv7, reducing model parameters by 20% for water pipeline defect detection (Jal Jeevan Mission, Govt. of India)",
@@ -209,9 +219,10 @@
         },
         {
           "role": "Research Assistant",
-          "org": "Robotics & Automation Research Lab (RARL), JUST",
+          "org": "Robotics & Automation Research Lab (RARL), JXUST",
+          "logo": "https://atanuroy911.github.io/images/rarl.png",
           "type": "research",
-          "period": "Aug 2018 – Dec 2021",
+          "period": "Aug 2018 - Dec 2021",
           "location": "Jiangxi, China",
           "bullets": [
             "Real-time camera monitoring for food delivery robot using Pixy Cam",
@@ -628,8 +639,12 @@
       "phone": "+880 1937545261",
       "location": "Dhaka, Bangladesh",
       "linkedin": "https://linkedin.com/in/atanu-shuvam-roy",
+      "researchgate": "https://www.researchgate.net/profile/Atanu-Roy-5",
+      "instagram": "https://www.instagram.com/atanu_shuvam_roy/",
       "github": "https://github.com/atanusroy",
+      "youtube": "https://www.youtube.com/@atanushuvamroy",
       "google_scholar": "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en",
+      "orcid": "https://orcid.org/0000-0002-0000-0000",
       "cv_url": "/assets/cv.pdf",
       "academic_photo": "/assets/academic_photo.jpg",
       "developer_photo": "/assets/developer_photo.jpg"
@@ -770,6 +785,7 @@
         {
           "degree": "M.Tech — কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং",
           "institution": "Indian Institute of Technology, Kanpur",
+          "logo": "https://logo.clearbit.com/iitk.ac.in",
           "location": "Kanpur, India",
           "period": "2022 – 2024",
           "grade": "CPI: 7.29/10"
@@ -777,6 +793,7 @@
         {
           "degree": "বি.ই. - কম্পিউটার বিজ্ঞান ও প্রযুক্তি",
           "institution": "Jiangxi University of Science & Technology",
+          "logo": "https://logo.clearbit.com/just.edu.cn",
           "location": "Jiangxi, China",
           "period": "2018 – 2022",
           "grade": "91.01%"
@@ -784,6 +801,7 @@
         {
           "degree": "উচ্চ মাধ্যমিক সার্টিফিকেট (HSC)",
           "institution": "Notre Dame College",
+          "logo": "https://logo.clearbit.com/ndc.edu.bd",
           "location": "Dhaka, Bangladesh",
           "period": "2017",
           "grade": "GPA: 5.00/5.00"
@@ -793,6 +811,7 @@
         {
           "role": "প্রভাষক, CSE বিভাগ",
           "org": "University of Liberal Arts Bangladesh",
+          "logo": "https://logo.clearbit.com/ulab.edu.bd",
           "type": "teaching",
           "period": "Sep 2025 – Present",
           "location": "Dhaka, Bangladesh",
@@ -804,6 +823,7 @@
         {
           "role": "গবেষণা সহকারী (দূরবর্তী)",
           "org": "Robotics & Automation Research Lab (RARL), JUST",
+          "logo": "https://logo.clearbit.com/just.edu.cn",
           "type": "research",
           "period": "Aug 2024 – Present",
           "location": "Jiangxi, China",
@@ -815,6 +835,7 @@
         {
           "role": "গবেষণা সহকারী",
           "org": "IoT Vision Lab, IIT Kanpur",
+          "logo": "https://logo.clearbit.com/iitk.ac.in",
           "type": "research",
           "period": "Dec 2022 – Aug 2024",
           "location": "Kanpur, India",
@@ -826,6 +847,7 @@
         {
           "role": "গবেষণা সহকারী",
           "org": "Robotics & Automation Research Lab (RARL), JUST",
+          "logo": "https://logo.clearbit.com/just.edu.cn",
           "type": "research",
           "period": "Aug 2018 – Dec 2021",
           "location": "Jiangxi, China",

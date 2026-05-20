@@ -23,22 +23,26 @@ research_interests:
 education:
   - degree: M.Tech — কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং
     institution: Indian Institute of Technology, Kanpur
+    logo: https://logo.clearbit.com/iitk.ac.in
     location: Kanpur, India
     period: 2022 – 2024
     grade: "CPI: 7.29/10"
   - degree: বি.ই. - কম্পিউটার বিজ্ঞান ও প্রযুক্তি
     institution: Jiangxi University of Science & Technology
+    logo: https://logo.clearbit.com/just.edu.cn
     location: Jiangxi, China
     period: 2018 – 2022
     grade: 91.01%
   - degree: উচ্চ মাধ্যমিক সার্টিফিকেট (HSC)
     institution: Notre Dame College
+    logo: https://logo.clearbit.com/ndc.edu.bd
     location: Dhaka, Bangladesh
     period: "2017"
     grade: "GPA: 5.00/5.00"
 experience:
   - role: প্রভাষক, CSE বিভাগ
     org: University of Liberal Arts Bangladesh
+    logo: https://logo.clearbit.com/ulab.edu.bd
     type: teaching
     period: Sep 2025 – Present
     location: Dhaka, Bangladesh
@@ -47,6 +51,7 @@ experience:
       - কম্পিউটার ভিশন, IoT, এবং রোবোটিক্স জুড়ে ক্যাপস্টোন প্রকল্পগুলিতে শিক্ষার্থীদের গাইড করা
   - role: গবেষণা সহকারী (দূরবর্তী)
     org: Robotics & Automation Research Lab (RARL), JUST
+    logo: https://logo.clearbit.com/just.edu.cn
     type: research
     period: Aug 2024 – Present
     location: Jiangxi, China
@@ -55,6 +60,7 @@ experience:
       - কৃষি পর্যবেক্ষণের জন্য কম্পিউটার দৃষ্টিতে সহযোগিতা করা
   - role: গবেষণা সহকারী
     org: IoT Vision Lab, IIT Kanpur
+    logo: https://logo.clearbit.com/iitk.ac.in
     type: research
     period: Dec 2022 – Aug 2024
     location: Kanpur, India
@@ -65,6 +71,7 @@ experience:
       - FMCW RADAR এবং LoRaWAN সহ প্রোটোটাইপ করা স্ট্রিটলাইট ম্যানেজমেন্ট সিস্টেম
   - role: গবেষণা সহকারী
     org: Robotics & Automation Research Lab (RARL), JUST
+    logo: https://logo.clearbit.com/just.edu.cn
     type: research
     period: Aug 2018 – Dec 2021
     location: Jiangxi, China

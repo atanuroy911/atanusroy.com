@@ -9,9 +9,9 @@ hero:
 bio: >
   I am a Lecturer in the Department of Computer Science & Engineering at the
   University of Liberal Arts Bangladesh. I hold an M.Tech in Computer Science &
-  Engineering from IIT Kanpur (2022–2024), where I worked on deep learning-based
+  Engineering from IIT Kanpur (2022-2024), where I worked on deep learning-based
   pipeline inspection systems. My research spans Computer Vision, Robotics, IoT,
-  and Embedded Systems across three countries — Bangladesh, India, and China.
+  and Embedded Systems across three countries - Bangladesh, India, and China.
 research_interests:
   - Computer Vision & Object Detection
   - Autonomous Guided Vehicles (AGV)
@@ -19,26 +19,30 @@ research_interests:
   - Deep Learning on Edge Devices
   - Smart City Infrastructure
 education:
-  - degree: M.Tech — Computer Science & Engineering
+  - degree: M.Tech - Computer Science & Engineering
     institution: Indian Institute of Technology, Kanpur
+    logo: https://atanuroy911.github.io/images/iitkredlogo.png
     location: Kanpur, India
-    period: 2022 – 2024
+    period: 2022 - 2024
     grade: 'CPI: 7.29/10'
-  - degree: B.E. — Computer Science & Technology
+  - degree: B.E. - Computer Science & Technology
     institution: Jiangxi University of Science & Technology
+    logo: https://atanuroy911.github.io/images/jxust.png
     location: Jiangxi, China
-    period: 2018 – 2022
+    period: 2018 - 2022
     grade: 91.01%
   - degree: Higher Secondary Certificate (HSC)
     institution: Notre Dame College
+    logo: /images/ndc_logo.svg
     location: Dhaka, Bangladesh
     period: '2017'
     grade: 'GPA: 5.00/5.00'
 experience:
   - role: Lecturer, Dept. of CSE
     org: University of Liberal Arts Bangladesh
+    logo: https://atanuroy911.github.io/images/ulab.png
     type: teaching
-    period: Sep 2025 – Present
+    period: Sep 2025 - Present
     location: Dhaka, Bangladesh
     bullets:
       - >-
@@ -48,9 +52,10 @@ experience:
         Guiding students in capstone projects across computer vision, IoT, and
         robotics
   - role: Research Assistant (Remote)
-    org: Robotics & Automation Research Lab (RARL), JUST
+    org: Robotics & Automation Research Lab (RARL), JXUST
+    logo: https://atanuroy911.github.io/images/rarl.png
     type: research
-    period: Aug 2024 – Present
+    period: Aug 2024 - Present
     location: Jiangxi, China
     bullets:
       - >-
@@ -59,8 +64,9 @@ experience:
       - Collaborating on computer vision for agricultural monitoring
   - role: Research Assistant
     org: IoT Vision Lab, IIT Kanpur
+    logo: https://atanuroy911.github.io/images/iitkredlogo.png
     type: research
-    period: Dec 2022 – Aug 2024
+    period: Dec 2022 - Aug 2024
     location: Kanpur, India
     bullets:
       - >-
@@ -68,9 +74,10 @@ experience:
         for water pipeline defect detection (Jal Jeevan Mission, Govt. of India)
       - Prototyped streetlight management system with FMCW RADAR and LoRaWAN
   - role: Research Assistant
-    org: Robotics & Automation Research Lab (RARL), JUST
+    org: Robotics & Automation Research Lab (RARL), JXUST
+    logo: https://atanuroy911.github.io/images/rarl.png
     type: research
-    period: Aug 2018 – Dec 2021
+    period: Aug 2018 - Dec 2021
     location: Jiangxi, China
     bullets:
       - Real-time camera monitoring for food delivery robot using Pixy Cam

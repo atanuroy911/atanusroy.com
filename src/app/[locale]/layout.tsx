@@ -1,12 +1,9 @@
 import type { Metadata } from 'next'
 import '../globals.css'
 import { ThemeProvider } from '@/providers/ThemeProvider'
-import { ModeProvider } from '@/providers/ModeProvider'
-import { Navbar } from '@/components/Navbar'
-import { Footer } from '@/components/Footer'
 import { getContent, getStaticLocaleParams, type Locale } from '@/lib/content'
 import { TooltipProvider } from '@/components/ui/tooltip'
-import { baseMetadata, buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
+import { buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
 
 export const dynamic = 'force-static'
 
@@ -57,26 +54,17 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="alternate" hrefLang="en" href="https://www.atanusroy.com/en" />
-        <link rel="alternate" hrefLang="bn" href="https://www.atanusroy.com/bn" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.atanusroy.com/en" />
+    <ThemeProvider>
+      <TooltipProvider>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
         />
-      </head>
-      <body className={isBn ? 'font-bangla' : ''} suppressHydrationWarning>
-        <ThemeProvider>
-          <TooltipProvider>
-            {children}
-          </TooltipProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+        <div className={isBn ? 'font-bangla' : undefined}>
+          {children}
+        </div>
+      </TooltipProvider>
+    </ThemeProvider>
   )
 }
 

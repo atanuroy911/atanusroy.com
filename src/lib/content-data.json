@@ -280,15 +280,21 @@
       "research_statements": [
         {
           "title": "Autonomous Guided Vehicles (AGV)",
-          "description": "Developing energy-aware and robust path planning algorithms for omnidirectional AGVs in unknown environments using evolutionary approaches like Beetle Antennae Search."
+          "description": "Developing energy-aware and robust path planning algorithms for omnidirectional AGVs in unknown environments using evolutionary approaches like Beetle Antennae Search.",
+          "long_description": "My AGV research focuses on making autonomous navigation practical in cluttered, dynamic environments. I work on energy-aware path planning, robustness under uncertainty, and the balance between optimality and compute cost. The aim is to make navigation methods reliable enough for real deployments in labs, campuses, and city-scale environments.",
+          "featured_image": "/assets/research/agv.jpg"
         },
         {
           "title": "Computer Vision & Edge AI",
-          "description": "Designing lightweight deep learning architectures (e.g., Attentive-YOLO) for real-time inference on edge devices, particularly for pipeline defect detection and agricultural monitoring."
+          "description": "Designing lightweight deep learning architectures (e.g., Attentive-YOLO) for real-time inference on edge devices, particularly for pipeline defect detection and agricultural monitoring.",
+          "long_description": "I build compact computer vision models that can run where data is generated, not only in the cloud. This includes optimizing detection pipelines for edge devices, improving latency and model size, and applying these systems to infrastructure inspection and agricultural monitoring.",
+          "featured_image": "/assets/research/vision.jpg"
         },
         {
           "title": "IoT & Smart Infrastructure",
-          "description": "Creating scalable, low-power solutions using LoRaWAN and edge computing for urban challenges like smart parking and intelligent street lighting."
+          "description": "Creating scalable, low-power solutions using LoRaWAN and edge computing for urban challenges like smart parking and intelligent street lighting.",
+          "long_description": "This line of work explores how connected sensors and low-power networking can support modern infrastructure. I focus on practical systems that are reliable, easy to deploy, and useful for smart parking, lighting control, and other urban services that need continuous monitoring.",
+          "featured_image": "/assets/research/iot.jpg"
         }
       ],
       "students": [
@@ -907,15 +913,21 @@
       "research_statements": [
         {
           "title": "অটোনোমাস গাইডেড ভেহিকেল (AGV)",
-          "description": "বিটল অ্যান্টেনা অনুসন্ধানের মতো বিবর্তনীয় পদ্ধতি ব্যবহার করে অজানা পরিবেশে সর্বমুখী AGV-এর জন্য শক্তি-সচেতন এবং শক্তিশালী পথ পরিকল্পনা অ্যালগরিদম তৈরি করা।"
+          "description": "বিটল অ্যান্টেনা অনুসন্ধানের মতো বিবর্তনীয় পদ্ধতি ব্যবহার করে অজানা পরিবেশে সর্বমুখী AGV-এর জন্য শক্তি-সচেতন এবং শক্তিশালী পথ পরিকল্পনা অ্যালগরিদম তৈরি করা।",
+          "long_description": "আমার AGV গবেষণা বিশৃঙ্খল ও পরিবর্তনশীল পরিবেশে স্বয়ংক্রিয় নেভিগেশনকে বাস্তবসম্মত করার দিকে কেন্দ্রীভূত। এখানে শক্তি-সচেতন পথ পরিকল্পনা, অনিশ্চয়তার মধ্যে স্থিতিশীলতা, এবং সর্বোত্তমতা ও গণনাগত খরচের মধ্যে ভারসাম্য নিয়ে কাজ করা হয়। লক্ষ্য হলো ল্যাব, ক্যাম্পাস, এবং নগর-স্কেল পরিবেশে ব্যবহারযোগ্য নির্ভরযোগ্য নেভিগেশন তৈরি করা।",
+          "featured_image": "/assets/research/agv.jpg"
         },
         {
           "title": "কম্পিউটার ভিশন এবং এজ এআই",
-          "description": "এজ ডিভাইসে রিয়েল-টাইম ইনফরেন্সের জন্য লাইটওয়েট ডিপ লার্নিং আর্কিটেকচার (যেমন, অ্যাটেনটিভ-ইওলো) ডিজাইন করা, বিশেষ করে পাইপলাইনের ত্রুটি সনাক্তকরণ এবং কৃষি পর্যবেক্ষণের জন্য।"
+          "description": "এজ ডিভাইসে রিয়েল-টাইম ইনফরেন্সের জন্য লাইটওয়েট ডিপ লার্নিং আর্কিটেকচার (যেমন, অ্যাটেনটিভ-ইওলো) ডিজাইন করা, বিশেষ করে পাইপলাইনের ত্রুটি সনাক্তকরণ এবং কৃষি পর্যবেক্ষণের জন্য।",
+          "long_description": "আমি এমন কম্প্যাক্ট কম্পিউটার ভিশন মডেল তৈরি করি যা ডেটা যেখানে তৈরি হয় সেখানেই চালানো যায়, শুধু ক্লাউডে নয়। এতে ডিটেকশন পাইপলাইনকে edge device-এর জন্য অপ্টিমাইজ করা, latency ও model size কমানো, এবং অবকাঠামো পরিদর্শন ও কৃষি পর্যবেক্ষণের ক্ষেত্রে ব্যবহার অন্তর্ভুক্ত।",
+          "featured_image": "/assets/research/vision.jpg"
         },
         {
           "title": "আইওটি এবং স্মার্ট পরিকাঠামো",
-          "description": "স্মার্ট পার্কিং এবং বুদ্ধিমান রাস্তার আলোর মতো শহুরে চ্যালেঞ্জের জন্য LoRaWAN এবং প্রান্ত কম্পিউটিং ব্যবহার করে মাপযোগ্য, কম-পাওয়ার সমাধান তৈরি করা।"
+          "description": "স্মার্ট পার্কিং এবং বুদ্ধিমান রাস্তার আলোর মতো শহুরে চ্যালেঞ্জের জন্য LoRaWAN এবং প্রান্ত কম্পিউটিং ব্যবহার করে মাপযোগ্য, কম-পাওয়ার সমাধান তৈরি করা।",
+          "long_description": "এই কাজটি সংযুক্ত সেন্সর এবং কম-পাওয়ার নেটওয়ার্কিং কীভাবে আধুনিক অবকাঠামোকে সহায়তা করতে পারে তা নিয়ে। আমি এমন বাস্তবসম্মত সিস্টেমের উপর কাজ করি যা নির্ভরযোগ্য, সহজে স্থাপনযোগ্য, এবং স্মার্ট পার্কিং, লাইটিং কন্ট্রোল, ও ধারাবাহিক পর্যবেক্ষণ দরকার এমন নগর পরিষেবার জন্য কার্যকর।",
+          "featured_image": "/assets/research/iot.jpg"
         }
       ],
       "students": [

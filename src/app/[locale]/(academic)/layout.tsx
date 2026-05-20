@@ -69,64 +69,134 @@ export default async function AcademicLayout({
   return (
     <ModeProvider forcedMode="academic">
       <div className="min-h-screen bg-background flex flex-col pt-16 ac-font-serif">
-        <Navbar content={content} locale={locale as Locale} isDev={false} />
-        <div className="flex flex-1 flex-col md:flex-row">
-          {/* Left Sidebar (Profile & TOC) */}
-          <aside className="w-full md:w-72 lg:w-80 bg-secondary/30 border-r border-border p-8 flex flex-col md:fixed md:h-[calc(100vh-4rem)] overflow-y-auto">
-            <div className="flex flex-col items-center text-center mb-8">
-              <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-background shadow-lg">
-                <img src={p.academic_photo || "/images/profile.jpg"} alt={p.name} className="w-full h-full object-cover" />
+        <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col">
+          <Navbar content={content} locale={locale as Locale} isDev={false} />
+          <div className="flex flex-1 flex-col md:flex-row">
+            {/* Left Sidebar (Profile & TOC) */}
+            <aside className="w-full md:w-60 lg:w-64 bg-secondary/30 border-r border-border p-6 md:p-4 flex flex-col items-start text-left md:fixed md:ml-4 lg:ml-6 md:h-[calc(100vh-4rem)] overflow-y-auto">
+              <div className="flex w-full items-start justify-between gap-3 md:block mb-4">
+                <div className="flex min-w-0 flex-1 items-start gap-3 md:flex md:flex-col md:items-start md:gap-0 md:text-left">
+                  <div className="w-14 h-14 overflow-hidden rounded-full border-4 border-background shadow-lg md:w-20 md:h-20 md:mb-2.5 md:self-center">
+                    <img src={p.academic_photo || "/images/profile.jpg"} alt={p.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="min-w-0 md:w-full">
+                    <h1 className="text-base font-bold text-foreground leading-tight md:text-xl md:mb-0.5">{p.name}</h1>
+                    <p className="text-[11px] leading-snug text-muted-foreground md:text-xs">{acH.role}</p>
+                    <p className="text-[10px] mt-0.5 leading-snug text-muted-foreground md:text-[11px]">{acH.institution}</p>
+                    <div className="mt-2 space-y-1 text-[11px] text-foreground md:hidden">
+                      <div className="flex items-center justify-start gap-2 text-left">
+                        <MapPin size={15} className="text-muted-foreground shrink-0" />
+                        <span>{p.location}</span>
+                      </div>
+                      <div className="flex items-center justify-start gap-2 break-all text-left">
+                        <Mail size={15} className="text-muted-foreground shrink-0" />
+                        <a href={`mailto:${p.email}`} className="hover:text-primary transition-colors">{p.email}</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <details className="relative shrink-0 md:hidden">
+                  <summary className="flex cursor-pointer list-none items-center rounded-full border border-border bg-background px-3 py-2 text-xs font-semibold text-foreground shadow-sm transition-colors hover:bg-muted [&::-webkit-details-marker]:hidden">
+                    Follow
+                  </summary>
+                  <div className="absolute right-0 top-full z-20 mt-2 w-56 rounded-xl border border-border bg-background p-2 shadow-lg">
+                    <div className="flex flex-col gap-1">
+                      <SocialLink href={p.researchgate} label="ResearchGate">
+                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
+                          <ResearchGate size={16} />
+                          <span>ResearchGate</span>
+                        </span>
+                      </SocialLink>
+                      <SocialLink href={p.linkedin} label="LinkedIn">
+                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
+                          <Linkedin size={16} />
+                          <span>LinkedIn</span>
+                        </span>
+                      </SocialLink>
+                      <SocialLink href={p.instagram} label="Instagram">
+                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
+                          <Instagram size={16} />
+                          <span>Instagram</span>
+                        </span>
+                      </SocialLink>
+                      <SocialLink href={p.github} label="GitHub">
+                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
+                          <Github size={16} />
+                          <span>GitHub</span>
+                        </span>
+                      </SocialLink>
+                      <SocialLink href={p.youtube} label="YouTube">
+                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
+                          <Youtube size={16} />
+                          <span>YouTube</span>
+                        </span>
+                      </SocialLink>
+                      <SocialLink href={p.google_scholar} label="Google Scholar">
+                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
+                          <GoogleScholar size={16} />
+                          <span>Scholar</span>
+                        </span>
+                      </SocialLink>
+                      <SocialLink href={p.orcid} label="ORCID">
+                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
+                          <Orcid size={16} />
+                          <span>ORCID</span>
+                        </span>
+                      </SocialLink>
+                    </div>
+                  </div>
+                </details>
               </div>
-              <h1 className="text-2xl font-bold text-foreground mb-1">{p.name}</h1>
-              <p className="text-sm text-muted-foreground">{acH.role}</p>
-              <p className="text-xs text-muted-foreground mt-1">{acH.institution}</p>
-            </div>
 
-          <div className="space-y-4 mb-4 text-sm text-foreground">
-            <div className="flex items-center gap-3">
-              <MapPin size={16} className="text-muted-foreground" />
-              <span>{p.location}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Mail size={16} className="text-muted-foreground" />
-              <a href={`mailto:${p.email}`} className="hover:text-primary transition-colors">{p.email}</a>
-            </div>
+              <div className="hidden md:block space-y-2.5 mb-3 text-[11px] md:text-xs text-foreground w-full">
+                <div className="flex items-center justify-start gap-2 text-left">
+                  <MapPin size={15} className="text-muted-foreground text-center shrink-0" />
+                  <span>{p.location}</span>
+                </div>
+                <div className="flex items-center justify-start gap-2 break-all text-left">
+                  <Mail size={15} className="text-muted-foreground shrink-0" />
+                  <a href={`mailto:${p.email}`} className="hover:text-primary transition-colors">{p.email}</a>
+                </div>
+              </div>
+
+              <div className="hidden md:block w-full">
+                <TableOfContents locale={locale as string} />
+              </div>
+
+              <div className="mt-auto hidden w-full border-t border-border pt-4 md:block">
+                <div className="flex flex-wrap items-center justify-start gap-2.5 md:gap-3">
+                  <SocialLink href={p.researchgate} label="ResearchGate">
+                    <ResearchGate size={16} />
+                  </SocialLink>
+                  <SocialLink href={p.linkedin} label="LinkedIn">
+                    <Linkedin size={16} />
+                  </SocialLink>
+                  <SocialLink href={p.instagram} label="Instagram">
+                    <Instagram size={16} />
+                  </SocialLink>
+                  <SocialLink href={p.github} label="GitHub">
+                    <Github size={16} />
+                  </SocialLink>
+                  <SocialLink href={p.youtube} label="YouTube">
+                    <Youtube size={16} />
+                  </SocialLink>
+                  <SocialLink href={p.google_scholar} label="Google Scholar">
+                    <GoogleScholar size={16} />
+                  </SocialLink>
+                  <SocialLink href={p.orcid} label="ORCID">
+                    <Orcid size={16} />
+                  </SocialLink>
+                </div>
+              </div>
+            </aside>
+
+            {/* Main Content */}
+            <main className="flex-1 md:ml-72 lg:ml-80 p-8 md:p-8 lg:p-8 max-w-4xl">
+              {children}
+            </main>
           </div>
-
-          <TableOfContents locale={locale as string} />
-
-          <div className="mt-auto pt-8 border-t border-border">
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <SocialLink href={p.researchgate} label="ResearchGate">
-                <ResearchGate size={18} />
-              </SocialLink>
-              <SocialLink href={p.linkedin} label="LinkedIn">
-                <Linkedin size={18} />
-              </SocialLink>
-              <SocialLink href={p.instagram} label="Instagram">
-                <Instagram size={18} />
-              </SocialLink>
-              <SocialLink href={p.github} label="GitHub">
-                <Github size={18} />
-              </SocialLink>
-              <SocialLink href={p.youtube} label="YouTube">
-                <Youtube size={18} />
-              </SocialLink>
-              <SocialLink href={p.google_scholar} label="Google Scholar">
-                <GoogleScholar size={18} />
-              </SocialLink>
-              <SocialLink href={p.orcid} label="ORCID">
-                <Orcid size={18} />
-              </SocialLink>
-            </div>
-          </div>
-        </aside>
-
-        {/* Main Content */}
-        <main className="flex-1 md:ml-72 lg:ml-80 p-8 md:p-12 lg:p-16 max-w-4xl">
-          {children}
-        </main>
-      </div>
+        </div>
       </div>
     </ModeProvider>
   )

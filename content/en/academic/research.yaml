@@ -4,12 +4,32 @@ research_statements:
       Developing energy-aware and robust path planning algorithms for
       omnidirectional AGVs in unknown environments using evolutionary approaches
       like Beetle Antennae Search.
+    long_description: >-
+      My AGV research focuses on making autonomous navigation practical in
+      cluttered, dynamic environments. I work on energy-aware path planning,
+      robustness under uncertainty, and the balance between optimality and
+      compute cost. The aim is to make navigation methods reliable enough for
+      real deployments in labs, campuses, and city-scale environments.
+    featured_image: /assets/research/agv.jpg
   - title: Computer Vision & Edge AI
     description: >-
       Designing lightweight deep learning architectures (e.g., Attentive-YOLO)
       for real-time inference on edge devices, particularly for pipeline defect
       detection and agricultural monitoring.
+    long_description: >-
+      I build compact computer vision models that can run where data is
+      generated, not only in the cloud. This includes optimizing detection
+      pipelines for edge devices, improving latency and model size, and
+      applying these systems to infrastructure inspection and agricultural
+      monitoring.
+    featured_image: /assets/research/vision.jpg
   - title: IoT & Smart Infrastructure
     description: >-
       Creating scalable, low-power solutions using LoRaWAN and edge computing
       for urban challenges like smart parking and intelligent street lighting.
+    long_description: >-
+      This line of work explores how connected sensors and low-power networking
+      can support modern infrastructure. I focus on practical systems that are
+      reliable, easy to deploy, and useful for smart parking, lighting control,
+      and other urban services that need continuous monitoring.
+    featured_image: /assets/research/iot.jpg

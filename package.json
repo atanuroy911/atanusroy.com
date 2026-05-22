@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/compile-content.mjs",
+    "prebuild": "node scripts/compile-content.mjs && node scripts/translate.mjs",
     "build": "next build --webpack",
-    "precf:build": "node scripts/compile-content.mjs",
+    "precf:build": "node scripts/compile-content.mjs && node scripts/translate.mjs",
+    "translate": "node scripts/translate.mjs",
     "cf:build": "opennextjs-cloudflare build",
     "cf:deploy": "opennextjs-cloudflare deploy",
     "cf:preview": "npm run cf:build && opennextjs-cloudflare preview",

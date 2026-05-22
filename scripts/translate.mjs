@@ -6,6 +6,7 @@
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
+import { execSync } from 'child_process'
 import { fileURLToPath } from 'url'
 import yaml from 'js-yaml'
 
@@ -121,6 +122,26 @@ async function processDirectory(srcDir, destDir) {
 }
 
 async function main() {
+  async function shouldSkip() {
+    // env var override
+    const ev = process.env.SKIP_TRANSLATE
+    if (ev === '1' || ev === 'true') return true
+
+    // try to detect skip token in last commit message
+    try {
+      const msg = execSync('git log -1 --pretty=%B', { cwd: ROOT, encoding: 'utf8' })
+      if (/(\[skip-translate\]|\[no-translate\])/i.test(msg)) return true
+    } catch (e) {
+      // ignore if git not available
+    }
+
+    return false
+  }
+
+  if (await shouldSkip()) {
+    console.log('⚠️  Skipping translation (SKIP_TRANSLATE or commit message flag detected)')
+    return
+  }
   const enDir = join(ROOT, 'content', 'en')
   const bnDir = join(ROOT, 'content', 'bn')
   

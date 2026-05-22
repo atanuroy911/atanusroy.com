@@ -18,28 +18,44 @@ teaching_courses:
         items:
           - name: 'Project: Custom Shell'
             link: https://drive.google.com/...
-  - code: CSE 203
-    name: Data Structures & Algorithms
+  - code: CSE 2201
+    name: Algorithms
     semester: Fall 2025
     archived: true
     description: >-
-      Comprehensive study of core data structures (arrays, linked lists, trees,
-      graphs) and algorithmic design.
-    syllabus_link: https://drive.google.com/drive/folders/sample_link
+      Course covering fundamental algorithms, sorting, greedy methods, and
+      problem-solving techniques.
+    syllabus_link: '/classroom/Fall 25/CSE 2201 - Algorithms/CO.pdf'
     materials:
       - title: Lectures
         items:
-          - name: 'Lecture 1: Intro to Algorithmic Complexity'
-            link: https://drive.google.com/file/d/sample
-          - name: 'Lecture 2: Arrays & Pointers'
-            link: https://drive.google.com/file/d/sample
-          - name: 'Lecture 3: Linked Lists (Singly & Doubly)'
-            link: https://drive.google.com/file/d/sample
-      - title: Assignments
-        items:
-          - name: 'Assignment 1: Big-O Analysis'
-            link: https://drive.google.com/file/d/sample
-      - title: Practice Problems
-        items:
-          - name: 'Practice Set 1: Recursion'
-            link: https://drive.google.com/file/d/sample
+          - name: 'Lecture 01: Introduction to the Course'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 01.pdf'
+          - name: 'Lecture 02: Linear Data Structures'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 02.pdf'
+          - name: 'Lecture 03: Algorithms Ultra Pro Max'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 03.pdf'
+          - name: 'Lecture 03.5: Algorithms Ultra Pro Max'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 03.5.pdf'
+          - name: 'Lecture 04: Order of growth'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 04.pdf'
+          - name: 'Lecture 05: Theory of Algorithms'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 05.pdf'
+          - name: 'Lecture 06: Memory'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 06.pdf'
+          - name: 'Lecture 07: Stacks & Queues'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 07.pdf'
+          - name: 'Lecture 08: Sorting'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 08.pdf'
+          - name: 'Lecture 09: Sorting'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 09.pdf'
+          - name: 'Lecture 10: Merge Sort'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 10.pdf'
+          - name: 'Lecture 11: Quick Sort'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 11.pdf'
+          - name: 'Lecture 12: Greedy Problems  Bin Packing'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 12.pdf'
+          - name: 'Lecture 13: Greedy Problems  Bin Packing'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 13.pdf'
+          - name: 'Lecture 14: Greedy Problems  Bin Packing'
+            link: '/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 14.pdf'

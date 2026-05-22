@@ -353,56 +353,12 @@
           ]
         },
         {
-          "code": "CSE 203",
-          "name": "Data Structures & Algorithms",
-          "semester": "Fall 2025",
-          "archived": true,
-          "description": "Comprehensive study of core data structures (arrays, linked lists, trees, graphs) and algorithmic design.",
-          "syllabus_link": "https://drive.google.com/drive/folders/sample_link",
-          "materials": [
-            {
-              "title": "Lectures",
-              "items": [
-                {
-                  "name": "Lecture 1: Intro to Algorithmic Complexity",
-                  "link": "https://drive.google.com/file/d/sample"
-                },
-                {
-                  "name": "Lecture 2: Arrays & Pointers",
-                  "link": "https://drive.google.com/file/d/sample"
-                },
-                {
-                  "name": "Lecture 3: Linked Lists (Singly & Doubly)",
-                  "link": "https://drive.google.com/file/d/sample"
-                }
-              ]
-            },
-            {
-              "title": "Assignments",
-              "items": [
-                {
-                  "name": "Assignment 1: Big-O Analysis",
-                  "link": "https://drive.google.com/file/d/sample"
-                }
-              ]
-            },
-            {
-              "title": "Practice Problems",
-              "items": [
-                {
-                  "name": "Practice Set 1: Recursion",
-                  "link": "https://drive.google.com/file/d/sample"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "code": "CSE 2201",
           "name": "Algorithms",
           "semester": "Fall 2025",
           "archived": true,
           "description": "Course covering fundamental algorithms, sorting, greedy methods, and problem-solving techniques.",
+          "syllabus_link": "/classroom/Fall 25/CSE 2201 - Algorithms/CO.pdf",
           "materials": [
             {
               "title": "Lectures",
@@ -466,6 +422,287 @@
                 {
                   "name": "Lecture 14: Greedy Problems  Bin Packing",
                   "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 14.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CSE 3203",
+          "name": "Software Engineering",
+          "semester": "Fall 2025",
+          "archived": true,
+          "description": "Course covering software engineering principles, process models, requirements, design, and testing.",
+          "syllabus_link": "/classroom/Fall 25/Software Engineering/CO.pdf",
+          "materials": [
+            {
+              "title": "Lectures",
+              "items": [
+                {
+                  "name": "Lecture 01: Introduction to the Course",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 01.pdf"
+                },
+                {
+                  "name": "Lecture 02: Introduction to SE",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 02.pdf"
+                },
+                {
+                  "name": "Lecture 03: Introduction to SE (Part 2)",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 03.pdf"
+                },
+                {
+                  "name": "Lecture 04: Soft. Eng. Ethics",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 04.pdf"
+                },
+                {
+                  "name": "Lecture 05: Soft. Eng. Ethics",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 05.pdf"
+                },
+                {
+                  "name": "Lecture 06: Software Processes",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 06.pdf"
+                },
+                {
+                  "name": "Lecture 06.5: Software Processes",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 06.5.pdf"
+                },
+                {
+                  "name": "Lecture 07: Agile Methods",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 07.pdf"
+                },
+                {
+                  "name": "Lecture 08: Requirements Engineering",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 08.pdf"
+                },
+                {
+                  "name": "Lecture 09: Requirements Engineering - Contd.",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 09.pdf"
+                },
+                {
+                  "name": "Lecture 11: Chapter - 5 System Modelling",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 11.pdf"
+                },
+                {
+                  "name": "Lecture 12: Chapter - 6 Architectural Design",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 12.pdf"
+                },
+                {
+                  "name": "Lecture 13: Software Design Patterns Part 1",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 13.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "STA 2101 (Fall 25)",
+          "name": "Statistics",
+          "semester": "Fall 2025",
+          "archived": true,
+          "description": "Introductory statistics course covering sampling, measurement, data distribution, and probability foundations.",
+          "syllabus_link": "/classroom/Fall 25/STA 2101 - Statistics/CO.pdf",
+          "materials": [
+            {
+              "title": "Lectures",
+              "items": [
+                {
+                  "name": "Lecture 01: Introduction to the Course",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 1.pdf"
+                },
+                {
+                  "name": "Lecture 02: Sampling Frequency Chart",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 2.pdf"
+                },
+                {
+                  "name": "Lecture 03: Levels of Measurement, Frequency",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 3.pdf"
+                },
+                {
+                  "name": "Lecture 04: Data Distribution, Charts",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 4.pdf"
+                },
+                {
+                  "name": "Lecture 05: Charts and Graphs Continued",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 5.pdf"
+                },
+                {
+                  "name": "Lecture 06: Data Description (Ch 03)",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 6.pdf"
+                },
+                {
+                  "name": "Lecture 7-9 updated - BOOK",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 7-9 updated - BOOK.pdf"
+                },
+                {
+                  "name": "Lecture 10: Introduction to Probability",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 10.pdf"
+                },
+                {
+                  "name": "Lecture 11: Venn Diagram - Prob Intersection & Union",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 11.pdf"
+                },
+                {
+                  "name": "Lecture 12: Conditional Probabilities",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 12 - Conditional Probabilities.pdf"
+                },
+                {
+                  "name": "Lecture 13: Probability Distribution",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 13 - Probability Distro.pdf"
+                }
+              ]
+            },
+            {
+              "title": "Practice & Solutions",
+              "items": [
+                {
+                  "name": "Exercise Solutions - Lec 7-9",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Exercise Solutions - Lec 7-9.pdf"
+                },
+                {
+                  "name": "Maths Examples 1",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Maths Examples 1.pdf"
+                },
+                {
+                  "name": "Maths Examples 2 (Sampling)",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Maths Examples 2 (Sampling).pdf"
+                },
+                {
+                  "name": "Sample Questions Stats",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Sample Questions Stats.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CSE 4417",
+          "name": "Internet of Things (IoT)",
+          "semester": "Spring 2026",
+          "archived": true,
+          "description": "Course introducing the Internet of Things, including sensors, actuators, networking, middleware, cloud, and security.",
+          "materials": [
+            {
+              "title": "Lectures",
+              "items": [
+                {
+                  "name": "Lecture 01: Introduction to the Course",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 1 - Introduction to IoT.pdf"
+                },
+                {
+                  "name": "Lecture 02: Applications of IoT",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 2 - Applications of IoT.pdf"
+                },
+                {
+                  "name": "Lecture 03: Sensors",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 3 - Sensors.pdf"
+                },
+                {
+                  "name": "Lecture 04: Actuation & Actuators",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 4 - Actuation.pdf"
+                },
+                {
+                  "name": "Lecture 05: Networking",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 5 - Networking Pt. 1.pdf"
+                },
+                {
+                  "name": "Lecture 06: Controllers (Arduino)",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 6 - Controller.pdf"
+                },
+                {
+                  "name": "Lecture 06.5: Controllers (Raspberry Pi)",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 6.5 - Raspberry Pi.pdf"
+                },
+                {
+                  "name": "Lecture 07: Networking Part 2",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 7 - Networking Pt 2.pdf"
+                },
+                {
+                  "name": "Lecture 07.5: Networking Part 3",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 7.5 - Networking Pt 3.pdf"
+                },
+                {
+                  "name": "Lecture 08: IoT Middleware",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 8 - IoT Middleware.pdf"
+                },
+                {
+                  "name": "Lecture 09: IoT Cloud Computing",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 9 - Cloud Computing.pdf"
+                },
+                {
+                  "name": "Lecture 10: IoT Security",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 10 - Security.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "STA 2101 (Spring 25)",
+          "name": "Statistics & Probability",
+          "semester": "Spring 2026",
+          "archived": true,
+          "description": "Statistics and probability course covering sampling, data visualization, variance, and conditional probability.",
+          "syllabus_link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/CO.pdf",
+          "materials": [
+            {
+              "title": "Lectures",
+              "items": [
+                {
+                  "name": "Lecture 01: Introduction to the Course",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 1 - Intro to Stats.pdf"
+                },
+                {
+                  "name": "Lecture 02: Sampling Frequency Chart",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 2 - Sampling Methods.pdf"
+                },
+                {
+                  "name": "Lecture 03: Levels of Measurement, Frequency",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 3 - Levels of Measurement & Frequency.pdf"
+                },
+                {
+                  "name": "Lecture 04: Data Distribution, Charts",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 4 - Data Distributions - Graphs and Charts.pdf"
+                },
+                {
+                  "name": "Lecture 05: Charts and Graphs Continued",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 5 - Graphs Continued & Practice - Histogram.pdf"
+                },
+                {
+                  "name": "Lecture 06: Data Description (Ch 03)",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 6 - Mean, Median, Mode, Variance, SD.pdf"
+                },
+                {
+                  "name": "Lecture 07: Variance & Standard Deviation",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 7 - Variance and SD.pdf"
+                },
+                {
+                  "name": "Lecture 08: Exercise for Chebyshev",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 8 - Exercises for Chebyshev.pdf"
+                },
+                {
+                  "name": "Lecture 09: Introduction to Probability",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 9.pdf"
+                },
+                {
+                  "name": "Lecture 10: Venn Diagram - Prob Intersection & Union",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 10.pdf"
+                },
+                {
+                  "name": "Lecture 11: Conditional Probabilities",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 11 - Conditional Probabilities.pdf"
+                },
+                {
+                  "name": "Lecture 12: Probability Distribution",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 12 - Probability Distro.pdf"
+                }
+              ]
+            },
+            {
+              "title": "Practice & Solutions",
+              "items": [
+                {
+                  "name": "Exercise Solutions - Lec 8",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Exercise Solutions - Lec 8.pdf"
                 }
               ]
             }
@@ -1056,45 +1293,355 @@
           ]
         },
         {
-          "code": "CSE 203",
-          "name": "ডেটা স্ট্রাকচার এবং অ্যালগরিদম",
+          "code": "CSE 2201",
+          "name": "অ্যালগরিদম",
           "semester": "2025 সালের পতন",
           "archived": true,
-          "description": "মূল ডেটা স্ট্রাকচার (অ্যারে, লিঙ্ক করা তালিকা, গাছ, গ্রাফ) এবং অ্যালগরিদমিক ডিজাইনের ব্যাপক অধ্যয়ন।",
-          "syllabus_link": "https://drive.google.com/drive/folders/sample_link",
+          "description": "মৌলিক অ্যালগরিদম, বাছাই, লোভী পদ্ধতি এবং সমস্যা সমাধানের কৌশলগুলিকে কভার করে কোর্স।",
+          "syllabus_link": "/classroom/Fall 25/CSE 2201 - Algorithms/CO.pdf",
           "materials": [
             {
               "title": "বক্তৃতা",
               "items": [
                 {
-                  "name": "লেকচার 1: অ্যালগরিদমিক জটিলতার ভূমিকা",
-                  "link": "https://drive.google.com/file/d/sample"
+                  "name": "লেকচার 01: কোর্সের ভূমিকা",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 01.pdf"
                 },
                 {
-                  "name": "লেকচার 2: অ্যারে এবং পয়েন্টার",
-                  "link": "https://drive.google.com/file/d/sample"
+                  "name": "লেকচার 02: লিনিয়ার ডেটা স্ট্রাকচার",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 02.pdf"
                 },
                 {
-                  "name": "লেকচার 3: লিঙ্ক করা তালিকা (একক এবং দ্বিগুণ)",
-                  "link": "https://drive.google.com/file/d/sample"
+                  "name": "লেকচার 03: অ্যালগরিদম আল্ট্রা প্রো ম্যাক্স",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 03.pdf"
+                },
+                {
+                  "name": "লেকচার 03.5: অ্যালগরিদম আল্ট্রা প্রো ম্যাক্স",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 03.5.pdf"
+                },
+                {
+                  "name": "লেকচার 04: বৃদ্ধির ক্রম",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 04.pdf"
+                },
+                {
+                  "name": "লেকচার 05: অ্যালগরিদমের তত্ত্ব",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 05.pdf"
+                },
+                {
+                  "name": "লেকচার 06: মেমরি",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 06.pdf"
+                },
+                {
+                  "name": "লেকচার 07: স্ট্যাক এবং সারি",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 07.pdf"
+                },
+                {
+                  "name": "লেকচার 08: সাজানো",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 08.pdf"
+                },
+                {
+                  "name": "লেকচার 09: সাজানো",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 09.pdf"
+                },
+                {
+                  "name": "লেকচার 10: মার্জ সর্ট",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 10.pdf"
+                },
+                {
+                  "name": "লেকচার 11: দ্রুত সাজান",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 11.pdf"
+                },
+                {
+                  "name": "লেকচার 12: লোভী সমস্যা বিন প্যাকিং",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 12.pdf"
+                },
+                {
+                  "name": "লেকচার 13: লোভী সমস্যা বিন প্যাকিং",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 13.pdf"
+                },
+                {
+                  "name": "লেকচার 14: লোভী সমস্যা বিন প্যাকিং",
+                  "link": "/classroom/Fall 25/CSE 2201 - Algorithms/Lecture 14.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CSE 3203",
+          "name": "সফটওয়্যার ইঞ্জিনিয়ারিং",
+          "semester": "2025 সালের পতন",
+          "archived": true,
+          "description": "সফ্টওয়্যার প্রকৌশল নীতি, প্রক্রিয়া মডেল, প্রয়োজনীয়তা, নকশা, এবং পরীক্ষার কভারিং কোর্স।",
+          "materials": [
+            {
+              "title": "বক্তৃতা",
+              "items": [
+                {
+                  "name": "লেকচার 01: কোর্সের ভূমিকা",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 01.pdf"
+                },
+                {
+                  "name": "লেকচার 02: SE এর ভূমিকা",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 02.pdf"
+                },
+                {
+                  "name": "লেকচার 03: SE এর ভূমিকা (পর্ব 2)",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 03.pdf"
+                },
+                {
+                  "name": "লেকচার 04: নরম। ইঞ্জি. নৈতিকতা",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 04.pdf"
+                },
+                {
+                  "name": "লেকচার 05: নরম। ইঞ্জি. নৈতিকতা",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 05.pdf"
+                },
+                {
+                  "name": "লেকচার 06: সফটওয়্যার প্রসেস",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 06.pdf"
+                },
+                {
+                  "name": "লেকচার 06.5: সফটওয়্যার প্রসেস",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 06.5.pdf"
+                },
+                {
+                  "name": "লেকচার 07: চটপটে পদ্ধতি",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 07.pdf"
+                },
+                {
+                  "name": "লেকচার 08: প্রয়োজনীয় ইঞ্জিনিয়ারিং",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 08.pdf"
+                },
+                {
+                  "name": "বক্তৃতা 09: প্রয়োজনীয়তা প্রকৌশল - অব্যাহত.",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 09.pdf"
+                },
+                {
+                  "name": "লেকচার 11: অধ্যায় - 5 সিস্টেম মডেলিং",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 11.pdf"
+                },
+                {
+                  "name": "লেকচার 12: অধ্যায় - 6 আর্কিটেকচারাল ডিজাইন",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 12.pdf"
+                },
+                {
+                  "name": "লেকচার 13: সফ্টওয়্যার ডিজাইন প্যাটার্নস পার্ট 1",
+                  "link": "/classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 13.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "STA 2101",
+          "name": "পরিসংখ্যান",
+          "semester": "2025 সালের পতন",
+          "archived": true,
+          "description": "নমুনা, পরিমাপ, ডেটা বিতরণ, এবং সম্ভাব্যতা ভিত্তি কভার করে পরিচায়ক পরিসংখ্যান কোর্স।",
+          "syllabus_link": "/classroom/Fall 25/STA 2101 - Statistics/CO.pdf",
+          "materials": [
+            {
+              "title": "বক্তৃতা",
+              "items": [
+                {
+                  "name": "লেকচার 01: কোর্সের ভূমিকা",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 1.pdf"
+                },
+                {
+                  "name": "লেকচার 02: স্যাম্পলিং ফ্রিকোয়েন্সি চার্ট",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 2.pdf"
+                },
+                {
+                  "name": "লেকচার 03: পরিমাপের মাত্রা, ফ্রিকোয়েন্সি",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 3.pdf"
+                },
+                {
+                  "name": "লেকচার 04: ডাটা ডিস্ট্রিবিউশন, চার্ট",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 4.pdf"
+                },
+                {
+                  "name": "লেকচার 05: চার্ট এবং গ্রাফগুলি অব্যাহত",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 5.pdf"
+                },
+                {
+                  "name": "লেকচার 06: ডেটা বর্ণনা (Ch 03)",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 6.pdf"
+                },
+                {
+                  "name": "লেকচার 7-9 আপডেট করা হয়েছে - বই",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 7-9 updated - BOOK.pdf"
+                },
+                {
+                  "name": "লেকচার 10: সম্ভাবনার ভূমিকা",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 10.pdf"
+                },
+                {
+                  "name": "লেকচার 11: ভেন ডায়াগ্রাম - প্রোব ইন্টারসেকশন এবং ইউনিয়ন",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 11.pdf"
+                },
+                {
+                  "name": "লেকচার 12: শর্তাধীন সম্ভাবনা",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 12 - Conditional Probabilities.pdf"
+                },
+                {
+                  "name": "লেকচার 13: সম্ভাব্যতা বন্টন",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Lecture 13 - Probability Distro.pdf"
                 }
               ]
             },
             {
-              "title": "অ্যাসাইনমেন্ট",
+              "title": "অনুশীলন এবং সমাধান",
               "items": [
                 {
-                  "name": "অ্যাসাইনমেন্ট 1: বিগ-ও বিশ্লেষণ",
-                  "link": "https://drive.google.com/file/d/sample"
+                  "name": "ব্যায়াম সমাধান - Lec 7-9",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Exercise Solutions - Lec 7-9.pdf"
+                },
+                {
+                  "name": "গণিত উদাহরণ 1",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Maths Examples 1.pdf"
+                },
+                {
+                  "name": "গণিত উদাহরণ 2 (নমুনা)",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Maths Examples 2 (Sampling).pdf"
+                },
+                {
+                  "name": "নমুনা প্রশ্ন পরিসংখ্যান",
+                  "link": "/classroom/Fall 25/STA 2101 - Statistics/Sample Questions Stats.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "CSE 4417",
+          "name": "ইন্টারনেট অফ থিংস (IoT)",
+          "semester": "বসন্ত 2026",
+          "archived": true,
+          "description": "সেন্সর, অ্যাকচুয়েটর, নেটওয়ার্কিং, মিডলওয়্যার, ক্লাউড এবং নিরাপত্তা সহ ইন্টারনেট অফ থিংস প্রবর্তন করা কোর্স।",
+          "materials": [
+            {
+              "title": "বক্তৃতা",
+              "items": [
+                {
+                  "name": "লেকচার 01: কোর্সের ভূমিকা",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 1 - Introduction to IoT.pdf"
+                },
+                {
+                  "name": "লেকচার 02: IoT এর অ্যাপ্লিকেশন",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 2 - Applications of IoT.pdf"
+                },
+                {
+                  "name": "লেকচার 03: সেন্সর",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 3 - Sensors.pdf"
+                },
+                {
+                  "name": "লেকচার 04: অ্যাকচুয়েশন এবং অ্যাকচুয়েটর",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 4 - Actuation.pdf"
+                },
+                {
+                  "name": "লেকচার 05: নেটওয়ার্কিং",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 5 - Networking Pt. 1.pdf"
+                },
+                {
+                  "name": "লেকচার 06: কন্ট্রোলার (Arduino)",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 6 - Controller.pdf"
+                },
+                {
+                  "name": "লেকচার 06.5: কন্ট্রোলার (রাস্পবেরি পাই)",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 6.5 - Raspberry Pi.pdf"
+                },
+                {
+                  "name": "লেকচার 07: নেটওয়ার্কিং পার্ট 2",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 7 - Networking Pt 2.pdf"
+                },
+                {
+                  "name": "লেকচার 07.5: নেটওয়ার্কিং পার্ট 3",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 7.5 - Networking Pt 3.pdf"
+                },
+                {
+                  "name": "লেকচার 08: IoT Middleware",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 8 - IoT Middleware.pdf"
+                },
+                {
+                  "name": "লেকচার 09: IoT ক্লাউড কম্পিউটিং",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 9 - Cloud Computing.pdf"
+                },
+                {
+                  "name": "লেকচার 10: IoT নিরাপত্তা",
+                  "link": "/classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 10 - Security.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "STA 2101",
+          "name": "পরিসংখ্যান ও সম্ভাবনা",
+          "semester": "বসন্ত 2026",
+          "archived": true,
+          "description": "পরিসংখ্যান এবং সম্ভাব্যতা কোর্স নমুনা, ডেটা ভিজ্যুয়ালাইজেশন, প্রকরণ, এবং শর্তযুক্ত সম্ভাব্যতা কভার করে।",
+          "syllabus_link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/CO.pdf",
+          "materials": [
+            {
+              "title": "বক্তৃতা",
+              "items": [
+                {
+                  "name": "লেকচার 01: কোর্সের ভূমিকা",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 1 - Intro to Stats.pdf"
+                },
+                {
+                  "name": "লেকচার 02: স্যাম্পলিং ফ্রিকোয়েন্সি চার্ট",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 2 - Sampling Methods.pdf"
+                },
+                {
+                  "name": "লেকচার 03: পরিমাপের মাত্রা, ফ্রিকোয়েন্সি",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 3 - Levels of Measurement & Frequency.pdf"
+                },
+                {
+                  "name": "লেকচার 04: ডাটা ডিস্ট্রিবিউশন, চার্ট",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 4 - Data Distributions - Graphs and Charts.pdf"
+                },
+                {
+                  "name": "লেকচার 05: চার্ট এবং গ্রাফগুলি অব্যাহত",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 5 - Graphs Continued & Practice - Histogram.pdf"
+                },
+                {
+                  "name": "লেকচার 06: ডেটা বর্ণনা (Ch 03)",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 6 - Mean, Median, Mode, Variance, SD.pdf"
+                },
+                {
+                  "name": "লেকচার 07: ভ্যারিয়েন্স এবং স্ট্যান্ডার্ড ডেভিয়েশন",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 7 - Variance and SD.pdf"
+                },
+                {
+                  "name": "লেকচার 08: চেবিশেভের জন্য ব্যায়াম",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 8 - Exercises for Chebyshev.pdf"
+                },
+                {
+                  "name": "লেকচার 09: সম্ভাব্যতার ভূমিকা",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 9.pdf"
+                },
+                {
+                  "name": "লেকচার 10: ভেন ডায়াগ্রাম - প্রোব ইন্টারসেকশন এবং ইউনিয়ন",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 10.pdf"
+                },
+                {
+                  "name": "লেকচার 11: শর্তাধীন সম্ভাবনা",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 11 - Conditional Probabilities.pdf"
+                },
+                {
+                  "name": "লেকচার 12: সম্ভাব্যতা বন্টন",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 12 - Probability Distro.pdf"
                 }
               ]
             },
             {
-              "title": "অনুশীলনের সমস্যা",
+              "title": "অনুশীলন এবং সমাধান",
               "items": [
                 {
-                  "name": "অনুশীলন সেট 1: পুনরাবৃত্তি",
-                  "link": "https://drive.google.com/file/d/sample"
+                  "name": "ব্যায়াম সমাধান - Lec 8",
+                  "link": "/classroom/Spring 26/STA 2101 - Statistics and Probability/Exercise Solutions - Lec 8.pdf"
                 }
               ]
             }

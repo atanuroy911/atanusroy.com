@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/compile-content.mjs && node scripts/translate.mjs",
+    "prebuild": "node scripts/translate.mjs && node scripts/compile-content.mjs",
     "build": "next build --webpack",
-    "precf:build": "node scripts/compile-content.mjs && node scripts/translate.mjs",
+    "precf:build": "node scripts/translate.mjs && node scripts/compile-content.mjs",
     "translate": "node scripts/translate.mjs",
     "cf:build": "opennextjs-cloudflare build",
     "cf:deploy": "opennextjs-cloudflare deploy",

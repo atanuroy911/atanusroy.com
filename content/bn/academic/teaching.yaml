@@ -19,26 +19,194 @@ teaching_courses:
         items:
           - name: "প্রকল্প: কাস্টম শেল"
             link: https://drive.google.com/...
-  - code: CSE 203
-    name: ডেটা স্ট্রাকচার এবং অ্যালগরিদম
+  - code: CSE 2201
+    name: অ্যালগরিদম
     semester: 2025 সালের পতন
     archived: true
-    description: মূল ডেটা স্ট্রাকচার (অ্যারে, লিঙ্ক করা তালিকা, গাছ, গ্রাফ) এবং অ্যালগরিদমিক ডিজাইনের ব্যাপক অধ্যয়ন।
-    syllabus_link: https://drive.google.com/drive/folders/sample_link
+    description: মৌলিক অ্যালগরিদম, বাছাই, লোভী পদ্ধতি এবং সমস্যা সমাধানের কৌশলগুলিকে কভার করে কোর্স।
+    syllabus_link: /classroom/Fall 25/CSE 2201 - Algorithms/CO.pdf
     materials:
       - title: বক্তৃতা
         items:
-          - name: "লেকচার 1: অ্যালগরিদমিক জটিলতার ভূমিকা"
-            link: https://drive.google.com/file/d/sample
-          - name: "লেকচার 2: অ্যারে এবং পয়েন্টার"
-            link: https://drive.google.com/file/d/sample
-          - name: "লেকচার 3: লিঙ্ক করা তালিকা (একক এবং দ্বিগুণ)"
-            link: https://drive.google.com/file/d/sample
-      - title: অ্যাসাইনমেন্ট
+          - name: "লেকচার 01: কোর্সের ভূমিকা"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 01.pdf
+          - name: "লেকচার 02: লিনিয়ার ডেটা স্ট্রাকচার"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 02.pdf
+          - name: "লেকচার 03: অ্যালগরিদম আল্ট্রা প্রো ম্যাক্স"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 03.pdf
+          - name: "লেকচার 03.5: অ্যালগরিদম আল্ট্রা প্রো ম্যাক্স"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 03.5.pdf
+          - name: "লেকচার 04: বৃদ্ধির ক্রম"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 04.pdf
+          - name: "লেকচার 05: অ্যালগরিদমের তত্ত্ব"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 05.pdf
+          - name: "লেকচার 06: মেমরি"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 06.pdf
+          - name: "লেকচার 07: স্ট্যাক এবং সারি"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 07.pdf
+          - name: "লেকচার 08: সাজানো"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 08.pdf
+          - name: "লেকচার 09: সাজানো"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 09.pdf
+          - name: "লেকচার 10: মার্জ সর্ট"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 10.pdf
+          - name: "লেকচার 11: দ্রুত সাজান"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 11.pdf
+          - name: "লেকচার 12: লোভী সমস্যা বিন প্যাকিং"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 12.pdf
+          - name: "লেকচার 13: লোভী সমস্যা বিন প্যাকিং"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 13.pdf
+          - name: "লেকচার 14: লোভী সমস্যা বিন প্যাকিং"
+            link: /classroom/Fall 25/CSE 2201 - Algorithms/Lecture 14.pdf
+  - code: CSE 3203
+    name: সফটওয়্যার ইঞ্জিনিয়ারিং
+    semester: 2025 সালের পতন
+    archived: true
+    description: সফ্টওয়্যার প্রকৌশল নীতি, প্রক্রিয়া মডেল, প্রয়োজনীয়তা, নকশা, এবং পরীক্ষার কভারিং কোর্স।
+    materials:
+      - title: বক্তৃতা
         items:
-          - name: "অ্যাসাইনমেন্ট 1: বিগ-ও বিশ্লেষণ"
-            link: https://drive.google.com/file/d/sample
-      - title: অনুশীলনের সমস্যা
+          - name: "লেকচার 01: কোর্সের ভূমিকা"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 01.pdf
+          - name: "লেকচার 02: SE এর ভূমিকা"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 02.pdf
+          - name: "লেকচার 03: SE এর ভূমিকা (পর্ব 2)"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 03.pdf
+          - name: "লেকচার 04: নরম। ইঞ্জি. নৈতিকতা"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 04.pdf
+          - name: "লেকচার 05: নরম। ইঞ্জি. নৈতিকতা"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 05.pdf
+          - name: "লেকচার 06: সফটওয়্যার প্রসেস"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 06.pdf
+          - name: "লেকচার 06.5: সফটওয়্যার প্রসেস"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 06.5.pdf
+          - name: "লেকচার 07: চটপটে পদ্ধতি"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 07.pdf
+          - name: "লেকচার 08: প্রয়োজনীয় ইঞ্জিনিয়ারিং"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 08.pdf
+          - name: "বক্তৃতা 09: প্রয়োজনীয়তা প্রকৌশল - অব্যাহত."
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 09.pdf
+          - name: "লেকচার 11: অধ্যায় - 5 সিস্টেম মডেলিং"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 11.pdf
+          - name: "লেকচার 12: অধ্যায় - 6 আর্কিটেকচারাল ডিজাইন"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 12.pdf
+          - name: "লেকচার 13: সফ্টওয়্যার ডিজাইন প্যাটার্নস পার্ট 1"
+            link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 13.pdf
+  - code: STA 2101
+    name: পরিসংখ্যান
+    semester: 2025 সালের পতন
+    archived: true
+    description: নমুনা, পরিমাপ, ডেটা বিতরণ, এবং সম্ভাব্যতা ভিত্তি কভার করে পরিচায়ক পরিসংখ্যান কোর্স।
+    syllabus_link: /classroom/Fall 25/STA 2101 - Statistics/CO.pdf
+    materials:
+      - title: বক্তৃতা
         items:
-          - name: "অনুশীলন সেট 1: পুনরাবৃত্তি"
-            link: https://drive.google.com/file/d/sample
+          - name: "লেকচার 01: কোর্সের ভূমিকা"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 1.pdf
+          - name: "লেকচার 02: স্যাম্পলিং ফ্রিকোয়েন্সি চার্ট"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 2.pdf
+          - name: "লেকচার 03: পরিমাপের মাত্রা, ফ্রিকোয়েন্সি"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 3.pdf
+          - name: "লেকচার 04: ডাটা ডিস্ট্রিবিউশন, চার্ট"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 4.pdf
+          - name: "লেকচার 05: চার্ট এবং গ্রাফগুলি অব্যাহত"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 5.pdf
+          - name: "লেকচার 06: ডেটা বর্ণনা (Ch 03)"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 6.pdf
+          - name: লেকচার 7-9 আপডেট করা হয়েছে - বই
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 7-9 updated - BOOK.pdf
+          - name: "লেকচার 10: সম্ভাবনার ভূমিকা"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 10.pdf
+          - name: "লেকচার 11: ভেন ডায়াগ্রাম - প্রোব ইন্টারসেকশন এবং ইউনিয়ন"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 11.pdf
+          - name: "লেকচার 12: শর্তাধীন সম্ভাবনা"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 12 - Conditional Probabilities.pdf
+          - name: "লেকচার 13: সম্ভাব্যতা বন্টন"
+            link: /classroom/Fall 25/STA 2101 - Statistics/Lecture 13 - Probability Distro.pdf
+      - title: অনুশীলন এবং সমাধান
+        items:
+          - name: ব্যায়াম সমাধান - Lec 7-9
+            link: /classroom/Fall 25/STA 2101 - Statistics/Exercise Solutions - Lec 7-9.pdf
+          - name: গণিত উদাহরণ 1
+            link: /classroom/Fall 25/STA 2101 - Statistics/Maths Examples 1.pdf
+          - name: গণিত উদাহরণ 2 (নমুনা)
+            link: /classroom/Fall 25/STA 2101 - Statistics/Maths Examples 2 (Sampling).pdf
+          - name: নমুনা প্রশ্ন পরিসংখ্যান
+            link: /classroom/Fall 25/STA 2101 - Statistics/Sample Questions Stats.pdf
+  - code: CSE 4417
+    name: ইন্টারনেট অফ থিংস (IoT)
+    semester: বসন্ত 2026
+    archived: true
+    description: সেন্সর, অ্যাকচুয়েটর, নেটওয়ার্কিং, মিডলওয়্যার, ক্লাউড এবং নিরাপত্তা সহ ইন্টারনেট অফ থিংস প্রবর্তন করা কোর্স।
+    materials:
+      - title: বক্তৃতা
+        items:
+          - name: "লেকচার 01: কোর্সের ভূমিকা"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 1 - Introduction to IoT.pdf
+          - name: "লেকচার 02: IoT এর অ্যাপ্লিকেশন"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 2 - Applications of IoT.pdf
+          - name: "লেকচার 03: সেন্সর"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 3 - Sensors.pdf
+          - name: "লেকচার 04: অ্যাকচুয়েশন এবং অ্যাকচুয়েটর"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 4 - Actuation.pdf
+          - name: "লেকচার 05: নেটওয়ার্কিং"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 5 - Networking Pt. 1.pdf
+          - name: "লেকচার 06: কন্ট্রোলার (Arduino)"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 6 - Controller.pdf
+          - name: "লেকচার 06.5: কন্ট্রোলার (রাস্পবেরি পাই)"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 6.5 - Raspberry Pi.pdf
+          - name: "লেকচার 07: নেটওয়ার্কিং পার্ট 2"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 7 - Networking Pt 2.pdf
+          - name: "লেকচার 07.5: নেটওয়ার্কিং পার্ট 3"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 7.5 - Networking Pt 3.pdf
+          - name: "লেকচার 08: IoT Middleware"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 8 - IoT Middleware.pdf
+          - name: "লেকচার 09: IoT ক্লাউড কম্পিউটিং"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 9 - Cloud Computing.pdf
+          - name: "লেকচার 10: IoT নিরাপত্তা"
+            link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 10 - Security.pdf
+  - code: STA 2101
+    name: পরিসংখ্যান ও সম্ভাবনা
+    semester: বসন্ত 2026
+    archived: true
+    description: পরিসংখ্যান এবং সম্ভাব্যতা কোর্স নমুনা, ডেটা ভিজ্যুয়ালাইজেশন, প্রকরণ, এবং শর্তযুক্ত সম্ভাব্যতা কভার করে।
+    syllabus_link: /classroom/Spring 26/STA 2101 - Statistics and Probability/CO.pdf
+    materials:
+      - title: বক্তৃতা
+        items:
+          - name: "লেকচার 01: কোর্সের ভূমিকা"
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 1 - Intro to Stats.pdf
+          - name: "লেকচার 02: স্যাম্পলিং ফ্রিকোয়েন্সি চার্ট"
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 2 - Sampling Methods.pdf
+          - name: "লেকচার 03: পরিমাপের মাত্রা, ফ্রিকোয়েন্সি"
+            link: >-
+              /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 3 - Levels of Measurement &
+              Frequency.pdf
+          - name: "লেকচার 04: ডাটা ডিস্ট্রিবিউশন, চার্ট"
+            link: >-
+              /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 4 - Data Distributions - Graphs and
+              Charts.pdf
+          - name: "লেকচার 05: চার্ট এবং গ্রাফগুলি অব্যাহত"
+            link: >-
+              /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 5 - Graphs Continued & Practice -
+              Histogram.pdf
+          - name: "লেকচার 06: ডেটা বর্ণনা (Ch 03)"
+            link: >-
+              /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 6 - Mean, Median, Mode, Variance,
+              SD.pdf
+          - name: "লেকচার 07: ভ্যারিয়েন্স এবং স্ট্যান্ডার্ড ডেভিয়েশন"
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 7 - Variance and SD.pdf
+          - name: "লেকচার 08: চেবিশেভের জন্য ব্যায়াম"
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 8 - Exercises for Chebyshev.pdf
+          - name: "লেকচার 09: সম্ভাব্যতার ভূমিকা"
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 9.pdf
+          - name: "লেকচার 10: ভেন ডায়াগ্রাম - প্রোব ইন্টারসেকশন এবং ইউনিয়ন"
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 10.pdf
+          - name: "লেকচার 11: শর্তাধীন সম্ভাবনা"
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 11 - Conditional Probabilities.pdf
+          - name: "লেকচার 12: সম্ভাব্যতা বন্টন"
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Lecture 12 - Probability Distro.pdf
+      - title: অনুশীলন এবং সমাধান
+        items:
+          - name: ব্যায়াম সমাধান - Lec 8
+            link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Exercise Solutions - Lec 8.pdf

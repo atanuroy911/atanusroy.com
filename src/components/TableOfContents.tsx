@@ -6,9 +6,10 @@ import { usePathname } from 'next/navigation'
 export function TableOfContents({ locale }: { locale: string }) {
   const pathname = usePathname()
   const [studentSections, setStudentSections] = useState<{ id: string; label: string }[]>([])
+  const [projectSections, setProjectSections] = useState<{ id: string; label: string }[]>([])
 
   useEffect(() => {
-    if (pathname !== `/${locale}/students`) {
+    if (pathname !== `/${locale}/students` && pathname !== `/${locale}/projects`) {
       return
     }
 
@@ -21,7 +22,13 @@ export function TableOfContents({ locale }: { locale: string }) {
         })
         .filter((section, index, all) => all.findIndex((item) => item.id === section.id) === index)
 
-      setStudentSections(sections)
+      if (pathname === `/${locale}/students`) {
+        setStudentSections(sections)
+      }
+
+      if (pathname === `/${locale}/projects`) {
+        setProjectSections(sections)
+      }
     })
 
     return () => window.cancelAnimationFrame(frameId)
@@ -48,9 +55,7 @@ export function TableOfContents({ locale }: { locale: string }) {
       { id: 'journal', label: 'Journal' },
     ]
   } else if (pathname === `/${locale}/projects`) {
-    sections = [
-      { id: 'projects', label: 'Projects' },
-    ]
+    sections = projectSections.length > 0 ? projectSections : [{ id: 'projects', label: 'Projects' }]
   } else if (pathname === `/${locale}/teaching`) {
     sections = [
       { id: 'teaching', label: 'Teaching & Mentorship' },

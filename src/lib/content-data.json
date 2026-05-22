@@ -265,12 +265,14 @@
       "academic_projects": [
         {
           "title": "Autonomous Robot Navigation System",
+          "year": 2025,
           "description": "Developed a vision-based autonomous navigation pipeline for an indoor mobile robot. The system utilizes depth sensors and a custom SLAM implementation to map dynamic environments in real-time. We tackled extreme sensor noise and tight compute constraints by using a lightweight neural network for obstacle detection alongside a traditional probabilistic roadmap planner.",
           "video_id": "dQw4w9WgXcQ",
           "paper_link": "https://example.com/paper.pdf"
         },
         {
           "title": "IoT Smart Agriculture Platform",
+          "year": 2024,
           "description": "Designed a low-power, wide-area IoT platform using LoRaWAN to monitor soil moisture and predict irrigation needs. The project involved deploying custom sensor nodes and building a central cloud backend that aggregates data and runs a predictive machine learning model to optimize water usage for local farmers.",
           "video_id": "dQw4w9WgXcQ",
           "paper_link": "https://example.com/paper.pdf"
@@ -1186,12 +1188,14 @@
       "academic_projects": [
         {
           "title": "স্বায়ত্তশাসিত রোবট নেভিগেশন সিস্টেম",
+          "year": 2025,
           "description": "একটি ইনডোর মোবাইল রোবটের জন্য একটি দৃষ্টি-ভিত্তিক স্বায়ত্তশাসিত নেভিগেশন পাইপলাইন তৈরি করেছে৷ সিস্টেমটি গভীরতার সেন্সর এবং একটি কাস্টম SLAM বাস্তবায়ন ব্যবহার করে রিয়েল-টাইমে গতিশীল পরিবেশ ম্যাপ করতে। আমরা একটি প্রথাগত সম্ভাব্য রোডম্যাপ প্ল্যানারের পাশাপাশি বাধা সনাক্তকরণের জন্য একটি লাইটওয়েট নিউরাল নেটওয়ার্ক ব্যবহার করে চরম সেন্সর শব্দ এবং আঁটসাঁট গণনা সীমাবদ্ধতার মোকাবিলা করেছি।",
           "video_id": "dQw4w9WgXcQ",
           "paper_link": "https://example.com/paper.pdf"
         },
         {
           "title": "আইওটি স্মার্ট এগ্রিকালচার প্ল্যাটফর্ম",
+          "year": 2024,
           "description": "মাটির আর্দ্রতা নিরীক্ষণ করতে এবং সেচের প্রয়োজনীয়তার পূর্বাভাস দিতে LoRaWAN ব্যবহার করে একটি কম-শক্তি, প্রশস্ত-এরিয়া IoT প্ল্যাটফর্ম ডিজাইন করেছে। প্রকল্পটি কাস্টম সেন্সর নোড স্থাপন এবং একটি কেন্দ্রীয় ক্লাউড ব্যাকএন্ড তৈরি করা জড়িত যা ডেটা একত্রিত করে এবং স্থানীয় কৃষকদের জন্য জলের ব্যবহার অপ্টিমাইজ করার জন্য একটি ভবিষ্যদ্বাণীমূলক মেশিন লার্নিং মডেল চালায়।",
           "video_id": "dQw4w9WgXcQ",
           "paper_link": "https://example.com/paper.pdf"

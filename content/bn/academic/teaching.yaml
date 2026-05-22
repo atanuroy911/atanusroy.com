@@ -3,15 +3,15 @@
 
 teaching_courses:
   - code: CSE 4417
-    name: Internet of Things (IoT)
+    name: ইন্টারনেট অফ থিংস (IoT)
     semester: গ্রীষ্ম 2026
     archived: false
-    description: এই গ্রীষ্মে IoT আবার পড়ানো হচ্ছে, connected devices, networking, middleware, এবং cloud integration-এর উপর ফোকাসসহ।
+    description: সংযুক্ত ডিভাইস, নেটওয়ার্কিং, মিডলওয়্যার এবং ক্লাউড ইন্টিগ্রেশনের উপর ফোকাস করে এই গ্রীষ্মে IoT চালিয়ে যাওয়া।
   - code: CSE 2105
-    name: পাইথন প্রোগ্রামিং-এর পরিচিতি
+    name: পাইথন প্রোগ্রামিং এর ভূমিকা
     semester: গ্রীষ্ম 2026
     archived: false
-    description: পাইথন syntax, control flow, functions, modules, এবং basic data structures-এর উপর একটি প্রারম্ভিক প্রোগ্রামিং কোর্স।
+    description: পাইথন সিনট্যাক্স, কন্ট্রোল ফ্লো, ফাংশন, মডিউল এবং বেসিক ডেটা স্ট্রাকচার কভার করে প্রাথমিক প্রোগ্রামিং কোর্স।
   - code: CSE 2201
     name: অ্যালগরিদম
     semester: 2025 সালের পতন
@@ -85,7 +85,7 @@ teaching_courses:
             link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 12.pdf
           - name: "লেকচার 13: সফ্টওয়্যার ডিজাইন প্যাটার্নস পার্ট 1"
             link: /classroom/Fall 25/CSE 3203 - Software Engineering/Lecture 13.pdf
-  - code: STA 2101
+  - code: STA 2101 (Fall 25)
     name: পরিসংখ্যান
     semester: 2025 সালের পতন
     archived: true
@@ -158,7 +158,7 @@ teaching_courses:
             link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 9 - Cloud Computing.pdf
           - name: "লেকচার 10: IoT নিরাপত্তা"
             link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 10 - Security.pdf
-  - code: STA 2101
+  - code: STA 2101 (Spring 25)
     name: পরিসংখ্যান ও সম্ভাবনা
     semester: বসন্ত 2026
     archived: true

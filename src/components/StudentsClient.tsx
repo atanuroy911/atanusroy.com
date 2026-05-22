@@ -8,6 +8,7 @@ import { LinkedInLogoIcon } from '@radix-ui/react-icons'
 
 // Cache image load state across modal mounts to avoid refetch/blink
 const imageLoadedCache = new Map<string, boolean>()
+const defaultStudentPhoto = '/assets/placeholder-user-gray.svg'
 
 type Student = {
   name: string
@@ -78,12 +79,15 @@ function StudentDetailModal({
               className={`h-full w-full object-cover transition-opacity duration-200 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
             />
           ) : (
-            <div className="h-full w-full flex items-center justify-center p-8 text-center text-slate-500">
-              <div>
-                <BookOpen size={44} className="mx-auto mb-3 text-slate-400" />
-                <p className="text-sm uppercase tracking-widest font-semibold">Student Profile</p>
-              </div>
-            </div>
+            <Image
+              src={defaultStudentPhoto}
+              alt={student.name}
+              width={1200}
+              height={900}
+              priority
+              loading="eager"
+              className="h-full w-full object-cover"
+            />
           )}
         </div>
 
@@ -115,8 +119,16 @@ function StudentDetailModal({
                 />
               </div>
             ) : (
-              <div className="h-28 w-28 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-900 text-slate-500">
-                <BookOpen size={34} />
+              <div className="h-28 w-28 rounded-full overflow-hidden border-4 border-white shadow-[0_10px_25px_rgba(0,0,0,0.08)] bg-slate-100 dark:bg-slate-900">
+                <Image
+                  src={defaultStudentPhoto}
+                  alt={student.name}
+                  width={112}
+                  height={112}
+                  priority
+                  loading="eager"
+                  className="h-full w-full object-cover"
+                />
               </div>
             )}
           </div>
@@ -272,7 +284,7 @@ export function StudentsClient({ content }: { content: any }) {
                     <div className="flex flex-col items-center text-center">
                       <div className="h-36 w-36 overflow-hidden rounded-full border-4 border-white shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
                         <Image
-                          src={student.photo || `/images/profile.jpg`}
+                          src={student.photo || defaultStudentPhoto}
                           alt={student.name}
                           width={144}
                           height={144}

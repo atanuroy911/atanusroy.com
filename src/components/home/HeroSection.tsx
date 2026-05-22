@@ -276,7 +276,7 @@ function DevHero({ devH, p, displayed, socials, locale, isAnimating }: any) {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="hidden lg:block w-72 h-96 relative border-4 border-black dark:border-white shadow-[8px_8px_0px_#00d9ff] dark:shadow-[8px_8px_0px_#ff3366] rotate-3 hover:rotate-0 transition-all duration-300 bg-white"
         >
-          <img src={p?.developer_photo || "/images/dev_profile.jpg"} alt={p?.name} className="w-full h-full object-cover transition-all duration-500" />
+          <img src={p?.developer_photo || "/assets/placeholder-user-gray.svg"} alt={p?.name} className="w-full h-full object-cover transition-all duration-500" />
           {/* Decorative tag on photo */}
           <div className="absolute -bottom-4 -left-4 bg-[#ffde00] border-2 border-black dark:border-white px-3 py-1 font-mono-dev text-black font-bold text-sm shadow-[2px_2px_0px_#000]">
             <span className="animate-pulse mr-2 inline-block w-2 h-2 bg-green-500 rounded-full" />

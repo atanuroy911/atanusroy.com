@@ -44,7 +44,8 @@ export function TableOfContents({ locale }: { locale: string }) {
     ]
   } else if (pathname === `/${locale}/publications`) {
     sections = [
-      { id: 'publications', label: 'Publications' },
+      { id: 'conference', label: 'Conference' },
+      { id: 'journal', label: 'Journal' },
     ]
   } else if (pathname === `/${locale}/projects`) {
     sections = [

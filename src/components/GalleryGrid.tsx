@@ -22,7 +22,7 @@ export function GalleryGrid({ images, isDev }: { images: { src: string; caption:
           }`}
         >
           <img
-            src={img.src}
+            src={img.src || '/assets/placeholder-generic.svg'}
             alt={img.caption}
             className={`w-full h-auto object-cover ${isDev ? 'grayscale hover:grayscale-0 transition-all duration-300' : ''}`}
             loading="lazy"

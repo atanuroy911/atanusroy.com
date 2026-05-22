@@ -25,12 +25,7 @@ function ResearchDetailModal({
           {item.featured_image ? (
             <img src={item.featured_image} alt={item.title} className="h-full w-full object-cover" />
           ) : (
-            <div className="h-full w-full flex items-center justify-center p-8 text-center text-slate-500">
-              <div>
-                <FlaskConical size={44} className="mx-auto mb-3 text-slate-400" />
-                <p className="text-sm uppercase tracking-widest font-semibold">Research Detail</p>
-              </div>
-            </div>
+            <img src="/assets/placeholder-generic.svg" alt={item.title} className="h-full w-full object-cover" />
           )}
         </div>
         <div className="w-full md:w-[58%] p-5 md:p-7 overflow-y-auto">
@@ -97,9 +92,7 @@ export function ResearchClient({ content }: { content: any }) {
                   {r.featured_image ? (
                     <img src={r.featured_image} alt={r.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   ) : (
-                    <div className="flex h-full items-center justify-center p-8 text-slate-400">
-                      <FlaskConical size={48} />
-                    </div>
+                    <img src="/assets/placeholder-generic.svg" alt={r.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   )}
                 </div>
                 <div className="p-4 md:p-5">

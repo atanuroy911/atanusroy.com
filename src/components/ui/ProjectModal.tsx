@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, ExternalLink, Code2, Layers } from 'lucide-react'
+import { X, ExternalLink, Code2 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { useEffect } from 'react'
 
@@ -21,7 +21,7 @@ export function ProjectModal({ project, isOpen, onClose }: { project: any, isOpe
   return (
     <AnimatePresence>
       {isOpen && project && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -42,20 +42,17 @@ export function ProjectModal({ project, isOpen, onClose }: { project: any, isOpe
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center bg-[#ff3366] border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#000] dark:hover:shadow-[1px_1px_0px_#fff] transition-all"
+              className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center bg-[#ff3366] border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff] hover:translate-x-px hover:translate-y-px hover:shadow-[1px_1px_0px_#000] dark:hover:shadow-[1px_1px_0px_#fff] transition-all"
             >
               <X size={16} className="text-white font-bold" />
             </button>
 
             {/* Left Column (GIF/Image) */}
-            <div className="w-full md:w-[45%] bg-[#f8f9fa] dark:bg-[#111] border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-white flex items-center justify-center relative overflow-hidden min-h-[200px] md:min-h-full">
-               {project.gif ? (
+            <div className="w-full md:w-[45%] bg-[#f8f9fa] dark:bg-[#111] border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-white flex items-center justify-center relative overflow-hidden min-h-50 md:min-h-full">
+              {project.gif ? (
                   <img src={project.gif} alt={project.title} className="w-full h-full object-cover" />
                ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center p-12 text-center text-slate-400 relative z-0 dev-grid-bg">
-                    <Layers size={64} className="mb-4 opacity-50 text-black dark:text-white" />
-                    <span className="font-mono-dev font-bold uppercase tracking-widest text-sm text-black dark:text-white bg-white dark:bg-black px-3 py-1 border-2 border-black dark:border-white">Visual Demo Pending</span>
-                  </div>
+                <img src="/assets/placeholder-generic.svg" alt={project.title} className="w-full h-full object-cover" />
                )}
             </div>
 
@@ -87,12 +84,12 @@ export function ProjectModal({ project, isOpen, onClose }: { project: any, isOpe
                
                <div className="mt-auto pt-6 flex flex-wrap gap-4 border-t-2 border-black dark:border-white border-dashed">
                   {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-[#ffde00] border-2 border-black dark:border-white font-bold text-black uppercase tracking-widest text-xs sm:text-sm shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000] dark:hover:shadow-[2px_2px_0px_#fff] transition-all">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-[#ffde00] border-2 border-black dark:border-white font-bold text-black uppercase tracking-widest text-xs sm:text-sm shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_#000] dark:hover:shadow-[2px_2px_0px_#fff] transition-all">
                       Live Site <ExternalLink size={16} />
                     </a>
                   )}
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-black dark:bg-white border-2 border-black dark:border-white font-bold text-white dark:text-black uppercase tracking-widest text-xs sm:text-sm shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000] dark:hover:shadow-[2px_2px_0px_#fff] transition-all">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-black dark:bg-white border-2 border-black dark:border-white font-bold text-white dark:text-black uppercase tracking-widest text-xs sm:text-sm shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_#000] dark:hover:shadow-[2px_2px_0px_#fff] transition-all">
                       GitHub <Code2 size={16} />
                     </a>
                   )}

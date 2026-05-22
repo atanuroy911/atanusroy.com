@@ -135,11 +135,11 @@ function BlogIndex({
                     whileHover={{ y: -4 }}
                     className={`dev-glass dev-border-glow bg-white dark:bg-black flex flex-col group ${post.pinned ? 'border-[3px] border-[#ff3366] dark:border-[#00d9ff]' : ''}`}
                   >
-                    {/* Cover image strip or colored bar */}
+                    {/* Cover image strip or fallback image */}
                     {post.cover_image ? (
                       <img src={post.cover_image} alt={post.title} className="w-full h-36 object-cover border-b-2 border-black dark:border-white" />
                     ) : (
-                      <div className="h-2 w-full" style={{ background: cat.color }} />
+                      <img src="/assets/placeholder-generic.svg" alt={post.title} className="w-full h-36 object-cover border-b-2 border-black dark:border-white" />
                     )}
 
                     <div className="p-5 flex flex-col flex-1">

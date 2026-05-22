@@ -77,7 +77,7 @@ export default async function AcademicLayout({
               <div className="flex w-full items-start justify-between gap-3 md:block mb-4">
                 <div className="flex min-w-0 flex-1 items-start gap-3 md:flex md:flex-col md:items-start md:gap-0 md:text-left">
                   <div className="w-14 h-14 overflow-hidden rounded-full border-4 border-background shadow-lg md:w-20 md:h-20 md:mb-2.5 md:self-center">
-                    <Image src={p.academic_photo || "/images/profile.jpg"} alt={p.name} width={80} height={80} className="w-full h-full object-cover" />
+                    <Image src={p.academic_photo || "/assets/placeholder-user-gray.svg"} alt={p.name} width={80} height={80} className="w-full h-full object-cover" />
                   </div>
                   <div className="min-w-0 md:w-full">
                     <h1 className="text-base font-bold text-foreground leading-tight md:text-xl md:mb-0.5">{p.name}</h1>

@@ -4,35 +4,60 @@ publications_bibtex: |
     author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},
     journal={EAI Endorsed Transactions on AI and Robotics},
     year={2026},
-    type={journal}
+    type={journal},
+    pdf={}
   } @inproceedings{moshayedi2025path,
     title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},
     author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},
     booktitle={5th ICRAIC 2025, IEEE},
     year={2025},
-    type={conference}
+    type={conference},
+    pdf={}
   } @inproceedings{moshayedi2025urbanpark,
     title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},
     author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},
     booktitle={4th ICCIT 2025},
     year={2025},
-    type={conference}
+    type={conference},
+    pdf={}
   } @inproceedings{moshayedi2024dr,
     title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},
     author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},
     booktitle={4th Asia-Pacific AI & Big Data Forum 2024},
     year={2024},
-    type={conference}
+    type={conference},
+    pdf={}
   } @article{roy2024advanced,
     title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},
     author={Roy, A.S. and Das, A.},
     journal={Journal of Robotics Research (JRR), 1(1), 15–23},
     year={2024},
-    type={journal}
+    type={journal},
+    pdf={}
   } @inproceedings{roy2024attentive,
     title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},
     author={Roy, A.S. and Bagade, P.},
     booktitle={VISAPP 2024},
     year={2024},
-    type={conference}
+    type={conference},
+    pdf={}
+  } @article{moshayedi2023secure,
+    title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},
+    author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},
+    journal={Future transportation},
+    volume={3},
+    number={1},
+    pages={189--209},
+    year={2023},
+    publisher={MDPI},
+    pdf={}
+  } @article{moshayedi2024design,
+    title={Design and development of FOODIEBOT robot: From simulation to design},
+    author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},
+    journal={IEEE access},
+    volume={12},
+    pages={36148--36172},
+    year={2024},
+    publisher={IEEE},
+    pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}
   }

@@ -268,14 +268,19 @@
           "year": 2025,
           "description": "Developed a vision-based autonomous navigation pipeline for an indoor mobile robot. The system utilizes depth sensors and a custom SLAM implementation to map dynamic environments in real-time. We tackled extreme sensor noise and tight compute constraints by using a lightweight neural network for obstacle detection alongside a traditional probabilistic roadmap planner.",
           "video_id": "dQw4w9WgXcQ",
-          "paper_link": "https://example.com/paper.pdf"
+          "paper_link": "https://example.com/paper.pdf",
+          "github_link": "https://github.com/example/autonomous-robot-navigation-system",
+          "demo_link": "https://demo.example.com/autonomous-robot-navigation-system",
+          "blog_link": "https://example.com/blog/autonomous-robot-navigation-system"
         },
         {
           "title": "IoT Smart Agriculture Platform",
           "year": 2024,
           "description": "Designed a low-power, wide-area IoT platform using LoRaWAN to monitor soil moisture and predict irrigation needs. The project involved deploying custom sensor nodes and building a central cloud backend that aggregates data and runs a predictive machine learning model to optimize water usage for local farmers.",
-          "video_id": "dQw4w9WgXcQ",
-          "paper_link": "https://example.com/paper.pdf"
+          "paper_link": "https://example.com/paper.pdf",
+          "github_link": "https://github.com/example/iot-smart-agriculture-platform",
+          "blog_link": "https://example.com/blog/iot-smart-agriculture-platform",
+          "thumbnail": "/assets/placeholder-generic.svg"
         }
       ],
       "publications_bibtex": "@article{moshayedi2026integrated,\n  title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},\n  author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  pdf={}\n} @inproceedings{moshayedi2025path,\n  title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},\n  author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},\n  booktitle={5th ICRAIC 2025, IEEE},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},\n  author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},\n  booktitle={4th ICCIT 2025},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2024dr,\n  title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},\n  author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{roy2024advanced,\n  title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},\n  author={Roy, A.S. and Das, A.},\n  journal={Journal of Robotics Research (JRR), 1(1), 15–23},\n  year={2024},\n  type={journal},\n  pdf={}\n} @inproceedings{roy2024attentive,\n  title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},\n  author={Roy, A.S. and Bagade, P.},\n  booktitle={VISAPP 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{moshayedi2023secure,\n  title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},\n  journal={Future transportation},\n  volume={3},\n  number={1},\n  pages={189--209},\n  year={2023},\n  publisher={MDPI},\n  pdf={}\n} @article{moshayedi2024design,\n  title={Design and development of FOODIEBOT robot: From simulation to design},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},\n  journal={IEEE access},\n  volume={12},\n  pages={36148--36172},\n  year={2024},\n  publisher={IEEE},\n  pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n}\n",
@@ -1191,14 +1196,19 @@
           "year": 2025,
           "description": "একটি ইনডোর মোবাইল রোবটের জন্য একটি দৃষ্টি-ভিত্তিক স্বায়ত্তশাসিত নেভিগেশন পাইপলাইন তৈরি করেছে৷ সিস্টেমটি গভীরতার সেন্সর এবং একটি কাস্টম SLAM বাস্তবায়ন ব্যবহার করে রিয়েল-টাইমে গতিশীল পরিবেশ ম্যাপ করতে। আমরা একটি প্রথাগত সম্ভাব্য রোডম্যাপ প্ল্যানারের পাশাপাশি বাধা সনাক্তকরণের জন্য একটি লাইটওয়েট নিউরাল নেটওয়ার্ক ব্যবহার করে চরম সেন্সর শব্দ এবং আঁটসাঁট গণনা সীমাবদ্ধতার মোকাবিলা করেছি।",
           "video_id": "dQw4w9WgXcQ",
-          "paper_link": "https://example.com/paper.pdf"
+          "paper_link": "https://example.com/paper.pdf",
+          "github_link": "https://github.com/example/autonomous-robot-navigation-system",
+          "demo_link": "https://demo.example.com/autonomous-robot-navigation-system",
+          "blog_link": "https://example.com/blog/autonomous-robot-navigation-system"
         },
         {
           "title": "আইওটি স্মার্ট এগ্রিকালচার প্ল্যাটফর্ম",
           "year": 2024,
           "description": "মাটির আর্দ্রতা নিরীক্ষণ করতে এবং সেচের প্রয়োজনীয়তার পূর্বাভাস দিতে LoRaWAN ব্যবহার করে একটি কম-শক্তি, প্রশস্ত-এরিয়া IoT প্ল্যাটফর্ম ডিজাইন করেছে। প্রকল্পটি কাস্টম সেন্সর নোড স্থাপন এবং একটি কেন্দ্রীয় ক্লাউড ব্যাকএন্ড তৈরি করা জড়িত যা ডেটা একত্রিত করে এবং স্থানীয় কৃষকদের জন্য জলের ব্যবহার অপ্টিমাইজ করার জন্য একটি ভবিষ্যদ্বাণীমূলক মেশিন লার্নিং মডেল চালায়।",
-          "video_id": "dQw4w9WgXcQ",
-          "paper_link": "https://example.com/paper.pdf"
+          "paper_link": "https://example.com/paper.pdf",
+          "github_link": "https://github.com/example/iot-smart-agriculture-platform",
+          "blog_link": "https://example.com/blog/iot-smart-agriculture-platform",
+          "thumbnail": "/assets/placeholder-generic.svg"
         }
       ],
       "publications_bibtex": "@আর্টিকেল{moshayedi2026 ইন্টিগ্রেটেড,\n  শিরোনাম={একটি সমন্বিত বিটল অ্যান্টেনা অনুসন্ধান–অজানা পরিবেশে সর্বমুখী AGV মোবাইল রোবটের জন্য সক্ষম ন্যাভিগেশন ফ্রেমওয়ার্ক},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং করণ, ইউ. এবং ঝাং, এম. এবং বাসির, ডি.},\n  জার্নাল={ইএআই এনডোর্সড লেনদেন অন এআই এবং রোবোটিক্স},\n  বছর={2026},\n  টাইপ={জার্নাল}\n} @inproceedings{moshayedi2025path,\n  শিরোনাম={এজিভিগুলির জন্য পথ পরিকল্পনা: কম্পিউটেশনাল দক্ষতা এবং সর্বোত্তমতার ভারসাম্য},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এইচ. এবং ইয়াং, এস. এবং রাজী, এ. এবং আন্দানি, এম.ই.},\n  বইয়ের শিরোনাম={5ম ICRAIC 2025, IEEE},\n  বছর={2025},\n  প্রকার={সম্মেলন}\n} @inproceedings{moshayedi2025urbanpark,\n  শিরোনাম={আরবানপার্ক: LoRaWAN সক্ষম স্মার্ট পার্কিং মডিউল সহ পার্কিং পরিকাঠামোর অগ্রগতি},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এ. এবং ইয়াং, এস.},\n  বইয়ের শিরোনাম={4th ICCIT 2025},\n  বছর={2025},\n  প্রকার={সম্মেলন}\n} @inproceedings{moshayedi2024dr,\n  শিরোনাম={ডঃ অরেঞ্জঅ্যাপ: সাইট্রাস বাগানে রিয়েল-টাইম পেস্ট ডিটেকশনে বিপ্লব ঘটানো},\n  লেখক={মোশায়েদী, এ.জে. এবং জাওয়াদি, এম.জে. এবং রায়, এ.এস. এবং অন্যান্য},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  বছর={2024},\n  প্রকার={সম্মেলন}\n} @আর্টিকেল{roy2024advanced,\n  title={আইআর সেন্সর এবং টাইমড অটোমেটা ব্যবহার করে অ্যাডভান্সড পাথ ট্র্যাকিং এবং ট্রাফিক ব্যবস্থাপনা},\n  লেখক={রায়, এ.এস. এবং দাস, এ.},\n  জার্নাল={রোবোটিক্স রিসার্চ জার্নাল (JRR), 1(1), 15–23},\n  বছর={2024},\n  টাইপ={জার্নাল}\n} @inproceedings{roy2024 মনোযোগী,\n  শিরোনাম={অ্যাটেনটিভ-ইওলো: দক্ষ চ্যানেলের মনোযোগ ব্যবহার করে অন-সাইট জলের পাইপলাইন পরিদর্শন এবং ELAN-ভিত্তিক YOLOv7},\n  লেখক={রায়, এ.এস. এবং বাগাদে, পি.},\n  booktitle={VISAPP 2024},\n  বছর={2024},\n  প্রকার={সম্মেলন}\n}",

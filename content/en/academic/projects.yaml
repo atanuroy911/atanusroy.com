@@ -4,8 +4,13 @@ academic_projects:
     description: "Developed a vision-based autonomous navigation pipeline for an indoor mobile robot. The system utilizes depth sensors and a custom SLAM implementation to map dynamic environments in real-time. We tackled extreme sensor noise and tight compute constraints by using a lightweight neural network for obstacle detection alongside a traditional probabilistic roadmap planner."
     video_id: "dQw4w9WgXcQ" # Youtube video ID
     paper_link: "https://example.com/paper.pdf"
+    github_link: "https://github.com/example/autonomous-robot-navigation-system"
+    demo_link: "https://demo.example.com/autonomous-robot-navigation-system"
+    blog_link: "https://example.com/blog/autonomous-robot-navigation-system"
   - title: "IoT Smart Agriculture Platform"
     year: 2024
     description: "Designed a low-power, wide-area IoT platform using LoRaWAN to monitor soil moisture and predict irrigation needs. The project involved deploying custom sensor nodes and building a central cloud backend that aggregates data and runs a predictive machine learning model to optimize water usage for local farmers."
-    video_id: "dQw4w9WgXcQ" # Youtube video ID
     paper_link: "https://example.com/paper.pdf"
+    github_link: "https://github.com/example/iot-smart-agriculture-platform"
+    blog_link: "https://example.com/blog/iot-smart-agriculture-platform"
+    thumbnail: "/assets/placeholder-generic.svg"

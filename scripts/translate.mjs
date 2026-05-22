@@ -19,6 +19,7 @@ const SKIP_KEYS = new Set([
   'website', 'code', 'year', 'period', 'grade', 'type', 'highlight',
   'value', 'proficiency', 'icon', 'academic_photo', 'developer_photo',
   'link', 'syllabus_link', 'src', 'paper_link', 'video_id', 'logo',
+  'github_link', 'demo_link', 'blog_link', 'thumbnail',
   'researchgate', 'instagram', 'youtube', 'orcid',
   'featured_image', 'long_description',
   // Blog-specific keys

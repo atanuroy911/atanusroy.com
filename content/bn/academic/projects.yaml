@@ -11,6 +11,9 @@ academic_projects:
       সেন্সর শব্দ এবং আঁটসাঁট গণনা সীমাবদ্ধতার মোকাবিলা করেছি।
     video_id: dQw4w9WgXcQ
     paper_link: https://example.com/paper.pdf
+    github_link: https://github.com/example/autonomous-robot-navigation-system
+    demo_link: https://demo.example.com/autonomous-robot-navigation-system
+    blog_link: https://example.com/blog/autonomous-robot-navigation-system
   - title: আইওটি স্মার্ট এগ্রিকালচার প্ল্যাটফর্ম
     year: 2024
     description: >-
@@ -18,5 +21,7 @@ academic_projects:
       প্রশস্ত-এরিয়া IoT প্ল্যাটফর্ম ডিজাইন করেছে। প্রকল্পটি কাস্টম সেন্সর নোড স্থাপন এবং একটি কেন্দ্রীয় ক্লাউড
       ব্যাকএন্ড তৈরি করা জড়িত যা ডেটা একত্রিত করে এবং স্থানীয় কৃষকদের জন্য জলের ব্যবহার অপ্টিমাইজ করার জন্য একটি
       ভবিষ্যদ্বাণীমূলক মেশিন লার্নিং মডেল চালায়।
-    video_id: dQw4w9WgXcQ
     paper_link: https://example.com/paper.pdf
+    github_link: https://github.com/example/iot-smart-agriculture-platform
+    blog_link: https://example.com/blog/iot-smart-agriculture-platform
+    thumbnail: /assets/placeholder-generic.svg

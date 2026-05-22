@@ -66,7 +66,7 @@ export function TeachingClient({ content }: { content: any }) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
           <h1 className="ac-font-serif text-5xl font-bold dark:text-white" style={{ color: 'var(--ac-text)' }}>
-            Teaching & Mentorship
+            Teaching
           </h1>
           <div className="h-0.5 w-20 mt-4" style={{ background: 'var(--ac-gold)' }} />
           <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">

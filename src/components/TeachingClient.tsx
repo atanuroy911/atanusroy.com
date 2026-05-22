@@ -2,23 +2,40 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useMode } from '@/providers/ModeProvider'
 import Link from 'next/link'
-import { BookOpen, Users, Code, Server, Cpu, Activity, GraduationCap, Link as LinkIcon, ChevronDown, ChevronUp, FileText, FolderOpen, History } from 'lucide-react'
+import { BookOpen, Code, Server, Cpu, Activity, Link as LinkIcon, ChevronDown, ChevronUp, FileText, FolderOpen, History } from 'lucide-react'
 
 import { usePathname } from 'next/navigation'
 
+type TeachingCourseMaterialItem = {
+  name: string
+  link: string
+}
+
+type TeachingCourseMaterialGroup = {
+  title: string
+  items?: TeachingCourseMaterialItem[]
+}
+
+type TeachingCourse = {
+  name: string
+  code: string
+  semester?: string
+  archived?: boolean
+  description?: string
+  syllabus_link?: string
+  materials?: TeachingCourseMaterialGroup[]
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function TeachingClient({ content }: { content: any }) {
-  const { mode } = useMode()
   const pathname = usePathname()
-  const isDev = mode === 'developer'
-  const courses = content?.academic?.teaching_courses || []
+  const courses = (content?.academic?.teaching_courses || []) as TeachingCourse[]
 
-  const activeCourses = courses.filter((c: any) => !c.archived)
-  const archivedCourses = courses.filter((c: any) => c.archived)
+  const activeCourses = courses.filter((c) => !c.archived)
+  const archivedCourses = courses.filter((c) => c.archived)
 
-  const coursesBySemester = activeCourses.reduce((acc: any, course: any) => {
+  const coursesBySemester = activeCourses.reduce<Record<string, TeachingCourse[]>>((acc, course) => {
     const sem = course.semester || 'Other'
     if (!acc[sem]) acc[sem] = []
     acc[sem].push(course)
@@ -35,27 +52,27 @@ export function TeachingClient({ content }: { content: any }) {
   }
 
   return (
-    <div className="py-8" style={{ minHeight: '100vh' }}>
-      <div className="max-w-5xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
-          <h1 className="text-4xl font-bold" style={{ color: 'var(--ac-navy)' }}>
-            Teaching & Mentorship
+    <div className="py-8 sm:py-10" style={{ minHeight: '100vh' }}>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold" style={{ color: 'var(--ac-navy)' }}>
+            Teaching
           </h1>
           <div className="h-1 w-20 mt-4" style={{ background: 'var(--ac-gold)' }} />
-          <p className="mt-4 text-slate-600 max-w-2xl leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-slate-600 max-w-2xl leading-relaxed">
             I serve as a Lecturer in the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh (ULAB), guiding students in core computer science principles and supervising capstone engineering projects.
           </p>
         </motion.div>
 
-        <div className="space-y-12">
-          {Object.entries(coursesBySemester).map(([semester, sCourses], semIdx) => (
+        <div className="space-y-10">
+          {Object.entries(coursesBySemester).map(([semester, sCourses]) => (
             <div key={semester}>
-              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2 text-slate-800">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2 text-slate-800">
                 <span className="w-2 h-2 rounded-full bg-blue-500" />
                 {semester}
               </h3>
-              <div className="grid lg:grid-cols-2 gap-6">
-                {(sCourses as any[]).map((c: any, i: number) => (
+              <div className="space-y-4">
+                {(sCourses as TeachingCourse[]).map((c, i) => (
                   <CourseCard key={c.name} course={c} index={i} meta={getCourseMeta(c.name)} />
                 ))}
               </div>
@@ -63,9 +80,9 @@ export function TeachingClient({ content }: { content: any }) {
           ))}
 
           {archivedCourses.length > 0 && (
-            <div className="pt-8 mt-8 border-t border-slate-200">
-              <Link href={`${pathname}/archived`} className="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg transition-colors">
-                <History size={18} />
+            <div className="pt-6 mt-6 border-t border-slate-200">
+              <Link href={`${pathname}/archived`} className="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold rounded-lg transition-colors">
+                <History size={16} />
                 Show Past Courses
               </Link>
             </div>
@@ -76,8 +93,7 @@ export function TeachingClient({ content }: { content: any }) {
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function CourseCard({ course, index, meta }: { course: any, index: number, meta: any }) {
+function CourseCard({ course, index, meta }: { course: TeachingCourse, index: number, meta: { icon: typeof BookOpen, color: string, bg: string, border: string } }) {
   const [isOpen, setIsOpen] = useState(false)
   const Icon = meta.icon
 
@@ -90,25 +106,25 @@ function CourseCard({ course, index, meta }: { course: any, index: number, meta:
     >
       {/* Header */}
       <div 
-        className={`p-5 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors ${isOpen ? 'border-b border-slate-100' : ''}`}
+        className={`p-4 sm:p-5 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors ${isOpen ? 'border-b border-slate-100' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex items-center gap-4">
-          <div className={`w-12 h-12 rounded-lg flex items-center justify-center border ${meta.bg} ${meta.border} flex-shrink-0`}>
-            <Icon size={24} className={meta.color} />
+        <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+          <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center border ${meta.bg} ${meta.border} shrink-0`}>
+            <Icon size={20} className={meta.color} />
           </div>
-          <div>
-            <h4 className="font-bold text-slate-800 text-lg leading-snug">{course.name}</h4>
-            <div className="flex items-center gap-2 mt-1">
-              <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">{course.code}</span>
+          <div className="min-w-0">
+            <h4 className="font-bold text-slate-800 text-sm sm:text-base leading-snug wrap-break-word">{course.name}</h4>
+            <div className="flex flex-wrap items-center gap-2 mt-1">
+              <span className="text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">{course.code}</span>
               {course.semester && (
-                <span className="text-xs font-medium text-slate-400">{course.semester}</span>
+                <span className="text-[11px] font-medium text-slate-400">{course.semester}</span>
               )}
             </div>
           </div>
         </div>
         <div className="text-slate-400">
-          {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+          {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </div>
       </div>
 
@@ -121,36 +137,36 @@ function CourseCard({ course, index, meta }: { course: any, index: number, meta:
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <div className="p-5 bg-slate-50 border-t border-slate-100">
+              <div className="p-4 sm:p-5 bg-slate-50 border-t border-slate-100">
               {course.description && (
-                <p className="text-sm text-slate-600 mb-5 leading-relaxed">{course.description}</p>
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">{course.description}</p>
               )}
 
               {course.syllabus_link && (
-                <a href={course.syllabus_link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-md transition-colors mb-6 border border-blue-100">
-                  <FileText size={16} />
+                  <a href={course.syllabus_link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-md transition-colors mb-4 border border-blue-100">
+                    <FileText size={14} />
                   Course Syllabus & Details
                 </a>
               )}
 
               {/* Materials groups */}
               {course.materials && course.materials.length > 0 && (
-                <div className="space-y-6">
-                  {course.materials.map((group: any, idx: number) => (
+                <div className="space-y-5">
+                  {course.materials.map((group, idx) => (
                     <div key={idx}>
-                      <h5 className="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
-                        <FolderOpen size={16} className="text-slate-400" />
+                      <h5 className="text-sm font-bold text-slate-800 mb-2.5 flex items-center gap-2">
+                        <FolderOpen size={14} className="text-slate-400" />
                         {group.title}
                       </h5>
-                      <ul className="space-y-2 pl-6">
-                        {group.items?.map((item: any, i: number) => (
+                      <ul className="space-y-2 pl-5 sm:pl-6">
+                        {group.items?.map((item, i) => (
                           <li key={i} className="relative">
                             <div className="absolute -left-4 top-2 w-1.5 h-1.5 rounded-full bg-slate-300" />
                             <a 
                               href={item.link} 
                               target="_blank" 
                               rel="noreferrer" 
-                              className="text-sm text-slate-600 hover:text-blue-600 hover:underline flex items-center gap-1.5 transition-colors group"
+                              className="text-sm text-slate-600 hover:text-blue-600 hover:underline flex items-center gap-1.5 transition-colors group wrap-break-word"
                             >
                               <LinkIcon size={12} className="text-slate-400 group-hover:text-blue-500" />
                               {item.name}

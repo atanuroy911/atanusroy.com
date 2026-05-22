@@ -6,6 +6,9 @@ import Image from 'next/image'
 import { BookOpen, GraduationCap, Mail, X } from 'lucide-react'
 import { LinkedInLogoIcon } from '@radix-ui/react-icons'
 
+// Cache image load state across modal mounts to avoid refetch/blink
+const imageLoadedCache = new Map<string, boolean>()
+
 type Student = {
   name: string
   photo?: string
@@ -45,6 +48,10 @@ function StudentDetailModal({
   year: string | number
   onClose: () => void
 }) {
+  const [imgLoaded, setImgLoaded] = useState(() => {
+    if (!student.photo) return true
+    return !!imageLoadedCache.get(student.photo)
+  })
   if (!student) return null
 
   return (
@@ -54,10 +61,22 @@ function StudentDetailModal({
         onClick={onClose}
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
       />
-      <div className="relative z-10 w-full max-w-4xl max-h-[92vh] overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl dark:bg-slate-950 dark:border-white/10 flex flex-col md:flex-row">
-        <div className="w-full md:w-[42%] min-h-55 md:min-h-full bg-slate-100 dark:bg-slate-900 border-b md:border-b-0 md:border-r border-black/10 dark:border-white/10">
+      <div className="relative z-10 w-full max-w-3xl md:max-w-4xl max-h-[92vh] overflow-hidden rounded-2xl border border-black/10 bg-white shadow-2xl dark:bg-slate-950 dark:border-white/10 flex flex-col md:flex-row">
+        <div className="hidden md:block md:w-[42%] md:h-auto bg-slate-100 dark:bg-slate-900 md:border-b-0 md:border-r border-black/10 dark:border-white/10 overflow-hidden">
           {student.photo ? (
-            <Image src={student.photo} alt={student.name} width={700} height={700} className="h-full w-full object-cover" />
+            <Image
+              src={student.photo}
+              alt={student.name}
+              width={1200}
+              height={900}
+              priority
+              loading="eager"
+              onLoadingComplete={() => {
+                if (student.photo) imageLoadedCache.set(student.photo, true)
+                setImgLoaded(true)
+              }}
+              className={`h-full w-full object-cover transition-opacity duration-200 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
+            />
           ) : (
             <div className="h-full w-full flex items-center justify-center p-8 text-center text-slate-500">
               <div>
@@ -68,7 +87,39 @@ function StudentDetailModal({
           )}
         </div>
 
-        <div className="w-full md:w-[58%] p-5 md:p-7 overflow-y-auto">
+        <div className="w-full md:w-[58%] p-4 md:p-7 overflow-y-auto relative">
+          <button
+            onClick={onClose}
+            className="md:hidden absolute top-3 right-3 z-20 rounded-full border border-slate-200 bg-white p-2 text-slate-600 shadow-sm"
+            aria-label="Close"
+          >
+            <X size={18} />
+          </button>
+
+          {/* Mobile circular image */}
+            <div className="md:hidden flex justify-center mb-4">
+            {student.photo ? (
+              <div className="h-28 w-28 rounded-full overflow-hidden border-4 border-white shadow-[0_10px_25px_rgba(0,0,0,0.08)] bg-slate-100 dark:bg-slate-900">
+                <Image
+                  src={student.photo}
+                  alt={student.name}
+                  width={112}
+                  height={112}
+                  priority
+                  loading="eager"
+                  onLoadingComplete={() => {
+                    if (student.photo) imageLoadedCache.set(student.photo, true)
+                    setImgLoaded(true)
+                  }}
+                  className={`h-full w-full object-cover transition-opacity duration-200 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
+                />
+              </div>
+            ) : (
+              <div className="h-28 w-28 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-900 text-slate-500">
+                <BookOpen size={34} />
+              </div>
+            )}
+          </div>
           <div className="flex items-start justify-between gap-4 mb-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-2">Student Profile</p>
@@ -81,7 +132,7 @@ function StudentDetailModal({
             </div>
             <button
               onClick={onClose}
-              className="shrink-0 rounded-full border border-slate-200 bg-white p-2 text-slate-600 hover:text-black hover:border-slate-300 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-300"
+              className="hidden md:inline-flex shrink-0 rounded-full border border-slate-200 bg-white p-2 text-slate-600 hover:text-black hover:border-slate-300 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-300"
               aria-label="Close"
             >
               <X size={18} />
@@ -174,8 +225,8 @@ export function StudentsClient({ content }: { content: any }) {
   const [selectedStudent, setSelectedStudent] = useState<{ student: Student; year: string | number } | null>(null)
 
   return (
-    <div className="py-8" style={{ minHeight: '100vh' }}>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div className="py-4" style={{ minHeight: '100vh' }}>
+      <div className="mx-auto max-w-6xl px-2 sm:px-4 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-14 text-left">
           <h1 className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--ac-navy)' }}>
             Students

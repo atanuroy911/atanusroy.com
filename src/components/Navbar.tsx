@@ -52,6 +52,7 @@ export function Navbar({ content, locale, isDev }: Props) {
     { href: `/${locale}/developer/contact`, label: nav?.contact || 'Contact' },
   ] : [
     { href: `/${locale}`, label: nav?.home || 'Home' },
+    { href: `/${locale}/about`, label: nav?.about || 'About' },
     { href: `/${locale}/research`, label: nav?.research || 'Research' },
     { href: `/${locale}/publications`, label: nav?.publications || 'Publications' },
     { href: `/${locale}/projects`, label: nav?.projects || 'Projects' },
@@ -90,8 +91,8 @@ export function Navbar({ content, locale, isDev }: Props) {
 
   const linkClass = (href: string) => {
     const active = isActive(href)
-    return `relative text-sm font-mono-dev transition-colors duration-200 ${
-      active ? 'text-primary font-bold' : 'text-muted-foreground hover:text-primary'
+    return `relative text-[0.9rem] font-sans tracking-wide transition-colors duration-200 ${
+      active ? 'text-primary font-semibold' : 'text-muted-foreground hover:text-primary'
     }`
   }
 

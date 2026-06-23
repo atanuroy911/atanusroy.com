@@ -40,9 +40,15 @@ export function TableOfContents({ locale }: { locale: string }) {
     sections = studentSections
   } else if (pathname === `/${locale}` || pathname === `/${locale}/`) {
     sections = [
+      { id: 'about', label: 'About' },
+      { id: 'news', label: 'Recent News' },
+      { id: 'latest-projects', label: 'Latest Projects' },
+    ]
+  } else if (pathname === `/${locale}/about`) {
+    sections = [
       { id: 'about', label: 'About Me' },
-      { id: 'education', label: 'Education' },
       { id: 'experience', label: 'Experience' },
+      { id: 'education', label: 'Education' },
       { id: 'awards', label: 'Awards' },
     ]
   } else if (pathname === `/${locale}/research`) {

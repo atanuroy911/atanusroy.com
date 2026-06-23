@@ -1,217 +1,283 @@
 'use client'
 
-import { useMemo, useState } from 'react'
-import { motion } from 'framer-motion'
-import { ExternalLink, FileText, PlayCircle } from 'lucide-react'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ExternalLink, FileText, X, Tag } from 'lucide-react'
 import { GitHubLogoIcon as Github } from '@radix-ui/react-icons'
 
 type AcademicProject = {
   title: string
   description?: string
-  video_id?: string
+  abstract?: string
+  image?: string
   paper_link?: string
   github_link?: string
   demo_link?: string
   blog_link?: string
-  thumbnail?: string
   year?: string | number
+  venue?: string
+  tags?: string[]
+}
+
+function ProjectLinks({ p, size = 'sm' }: { p: AcademicProject; size?: 'sm' | 'md' }) {
+  const base =
+    size === 'md'
+      ? 'inline-flex shrink-0 items-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors'
+      : 'inline-flex shrink-0 items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs font-semibold whitespace-nowrap transition-colors'
+  return (
+    <div className="flex flex-wrap gap-2">
+      {p.paper_link && (
+        <a
+          href={p.paper_link}
+          target="_blank"
+          rel="noreferrer"
+          className={`${base} border-blue-700 bg-blue-700 text-white hover:bg-blue-800`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <FileText size={size === 'md' ? 15 : 12} />
+          Paper
+        </a>
+      )}
+      {p.github_link && (
+        <a
+          href={p.github_link}
+          target="_blank"
+          rel="noreferrer"
+          className={`${base} border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:bg-slate-50`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Github width={size === 'md' ? 15 : 12} height={size === 'md' ? 15 : 12} />
+          Code
+        </a>
+      )}
+      {p.demo_link && (
+        <a
+          href={p.demo_link}
+          target="_blank"
+          rel="noreferrer"
+          className={`${base} border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:bg-slate-50`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <ExternalLink size={size === 'md' ? 15 : 12} />
+          Demo
+        </a>
+      )}
+      {p.blog_link && (
+        <a
+          href={p.blog_link}
+          target="_blank"
+          rel="noreferrer"
+          className={`${base} border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:bg-slate-50`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <FileText size={size === 'md' ? 15 : 12} />
+          Blog
+        </a>
+      )}
+    </div>
+  )
+}
+
+function ProjectModal({ project, onClose }: { project: AcademicProject; onClose: () => void }) {
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      >
+        {/* Backdrop */}
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          aria-label="Close modal"
+          onClick={onClose}
+          className="absolute inset-0 bg-black/60 backdrop-blur-sm cursor-default"
+        />
+
+        {/* Modal */}
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.97 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 10, scale: 0.97 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
+          className="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl"
+        >
+          {/* Header */}
+          <div className="sticky top-0 z-10 flex items-start justify-between gap-3 bg-white border-b border-slate-100 px-5 pt-5 pb-4">
+            <div className="min-w-0">
+              {project.venue && (
+                <span className="inline-block mb-2 rounded-md bg-blue-50 border border-blue-200 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-widest text-blue-700">
+                  {project.venue}
+                </span>
+              )}
+              <h2 className="text-xl font-bold text-slate-900 leading-snug">{project.title}</h2>
+            </div>
+            <button
+              type="button"
+              onClick={onClose}
+              className="shrink-0 rounded-full border border-slate-200 bg-white p-1.5 text-slate-500 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-700 transition-colors"
+            >
+              <X size={16} />
+            </button>
+          </div>
+
+          <div className="px-5 py-5 space-y-5">
+            {/* Image */}
+            {project.image && (
+              <div className="w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full object-cover"
+                  style={{ maxHeight: '280px' }}
+                />
+              </div>
+            )}
+
+            {/* Tags */}
+            {project.tags && project.tags.length > 0 && (
+              <div className="flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-0.5 text-[11px] font-medium text-slate-600"
+                  >
+                    <Tag size={10} />
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* Year badge */}
+            {project.year && (
+              <span className="inline-block rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                {project.year}
+              </span>
+            )}
+
+            {/* Abstract */}
+            {project.abstract && (
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-2">Abstract</p>
+                <p className="text-sm leading-relaxed text-slate-700 whitespace-pre-wrap">{project.abstract.trim()}</p>
+              </div>
+            )}
+
+            {/* Links */}
+            {(project.paper_link || project.github_link || project.demo_link || project.blog_link) && (
+              <div className="pt-1">
+                <ProjectLinks p={project} size="md" />
+              </div>
+            )}
+          </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  )
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function AcademicProjectsClient({ content }: { content: any }) {
   const projects = (content?.academic?.academic_projects || []) as AcademicProject[]
-  const [year, setYear] = useState<'all' | string>('all')
+  const [activeProject, setActiveProject] = useState<AcademicProject | null>(null)
   const placeholderImage = '/assets/placeholder-generic.svg'
 
-  const years = useMemo(
-    () => [...new Set(projects.map((project) => project.year).filter(Boolean))].sort((a, b) => Number(b) - Number(a)),
-    [projects]
-  )
-
-  const groupedProjects = useMemo(() => {
-    const filtered = projects.filter((project) => year === 'all' || String(project.year) === year)
-    const groups = new Map<string, AcademicProject[]>()
-
-    filtered.forEach((project) => {
-      const groupYear = String(project.year ?? 'Other')
-      const list = groups.get(groupYear) || []
-      list.push(project)
-      groups.set(groupYear, list)
-    })
-
-    return [...groups.entries()]
-      .map(([groupYear, items]) => ({ year: groupYear, projects: items }))
-      .sort((a, b) => Number(b.year) - Number(a.year))
-  }, [projects, year])
+  const sorted = [...projects].sort((a, b) => Number(b.year ?? 0) - Number(a.year ?? 0))
 
   return (
     <div className="py-8" style={{ minHeight: '100vh' }}>
-      <div className="max-w-6xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8 md:mb-10">
-          <h1 className="text-2xl md:text-3xl font-bold text-blue-800">
-            Research Projects
-          </h1>
+      <div className="max-w-5xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
+          <h1 className="text-2xl md:text-3xl font-bold text-blue-800">Research Projects</h1>
           <div className="h-1 w-16 mt-3 bg-blue-600" />
           <p className="mt-4 max-w-2xl text-sm md:text-base leading-relaxed text-slate-600">
-            Highlighting key academic research and capstone engineering projects, grouped by year.
+            Highlighting key academic research and capstone engineering projects. Click any project to read the full abstract.
           </p>
         </motion.div>
 
-        <div className="mb-6 flex flex-wrap items-center gap-2 rounded-2xl border border-blue-100 bg-blue-50/70 p-4 shadow-sm dark:border-blue-900/40 dark:bg-slate-950/60">
-          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-700">Year</span>
-          <button
-            type="button"
-            onClick={() => setYear('all')}
-            className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-widest transition-colors ${year === 'all' ? 'border-blue-700 bg-blue-700 text-white' : 'border-blue-200 bg-white text-blue-700 hover:border-blue-700 hover:bg-blue-50'}`}
-          >
-            All
-          </button>
-          {years.map((value) => (
-            <button
-              key={String(value)}
-              type="button"
-              onClick={() => setYear(String(value))}
-              className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-widest transition-colors ${year === String(value) ? 'border-blue-700 bg-blue-700 text-white' : 'border-blue-200 bg-white text-blue-700 hover:border-blue-700 hover:bg-blue-50'}`}
+        <div className="space-y-4">
+          {sorted.map((p, i) => (
+            <motion.div
+              key={`${p.year}-${p.title}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.07 }}
+              onClick={() => setActiveProject(p)}
+              className="group flex gap-4 items-start rounded-xl border border-slate-200 bg-white p-3 md:p-4 shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-pointer"
             >
-              {value}
-            </button>
-          ))}
-        </div>
-
-        <div className="space-y-10 md:space-y-12">
-          {groupedProjects.map((group, groupIndex) => (
-            <section key={group.year} id={`year-${group.year}`} className="space-y-4 md:space-y-5 scroll-mt-24">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
-                transition={{ delay: groupIndex * 0.06 }}
-                className="flex items-center gap-3"
-              >
-                <h2 className="text-xl md:text-2xl font-bold text-blue-800">{group.year}</h2>
-                <div className="h-1 flex-1 bg-blue-100" />
-                <span className="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">
-                  {group.projects.length} project{group.projects.length > 1 ? 's' : ''}
-                </span>
-              </motion.div>
-
-              <div className="space-y-6">
-                {group.projects.map((p, projectIndex) => (
-                  <motion.article
-                    key={`${group.year}-${p.title}`}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: '-80px' }}
-                    transition={{ delay: projectIndex * 0.05 }}
-                    className="space-y-4 border-b border-slate-200 pb-6 last:border-b-0 last:pb-0 dark:border-slate-800"
-                  >
-                    <div className="space-y-3">
-                      <h3 className="text-base md:text-lg font-bold leading-snug text-blue-800">
-                        {p.title}
-                      </h3>
-
-                      <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] md:items-center md:gap-8">
-                        <div className="space-y-3 md:self-center">
-                          {p.description && (
-                            <p className="text-sm md:text-[0.95rem] leading-relaxed text-slate-600">
-                              {p.description}
-                            </p>
-                          )}
-                        </div>
-
-                        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900">
-                          {p.video_id ? (
-                            <iframe
-                              className="h-full w-full"
-                              src={`https://www.youtube.com/embed/${p.video_id}`}
-                              title={p.title}
-                              loading="lazy"
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
-                            />
-                          ) : (
-                            <div className="relative h-full w-full">
-                              <img
-                                src={p.thumbnail || placeholderImage}
-                                alt={p.title}
-                                className="h-full w-full object-cover"
-                                loading="lazy"
-                              />
-                              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-4 py-3 text-white">
-                                <div className="flex items-center gap-2 text-sm font-medium">
-                                  <PlayCircle size={18} className="shrink-0" />
-                                  <span>No video available</span>
-                                </div>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-
-                      {(p.paper_link || p.github_link || p.demo_link || p.blog_link) && (
-                        <div className="flex w-full flex-nowrap gap-2 overflow-x-auto pt-1 pb-1">
-                          {p.paper_link && (
-                            <a
-                              href={p.paper_link}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold whitespace-nowrap text-blue-700 transition-colors hover:border-blue-300 hover:bg-blue-100 md:px-4 md:py-2 md:text-sm"
-                            >
-                              <FileText size={15} />
-                              Read the Paper
-                            </a>
-                          )}
-
-                          {p.github_link && (
-                            <a
-                              href={p.github_link}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold whitespace-nowrap text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 md:px-4 md:py-2 md:text-sm"
-                            >
-                              <Github width={15} height={15} />
-                              GitHub
-                            </a>
-                          )}
-
-                          {p.demo_link && (
-                            <a
-                              href={p.demo_link}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold whitespace-nowrap text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 md:px-4 md:py-2 md:text-sm"
-                            >
-                              <ExternalLink size={15} />
-                              Demo
-                            </a>
-                          )}
-
-                          {p.blog_link && (
-                            <a
-                              href={p.blog_link}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold whitespace-nowrap text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 md:px-4 md:py-2 md:text-sm"
-                            >
-                              <FileText size={15} />
-                              Blog Post
-                            </a>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  </motion.article>
-                ))}
+              {/* Thumbnail — left */}
+              <div className="shrink-0 w-28 h-20 md:w-36 md:h-24 overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
+                <img
+                  src={p.image || placeholderImage}
+                  alt={p.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
               </div>
-            </section>
+
+              {/* Text — right */}
+              <div className="min-w-0 flex-1 space-y-1.5">
+                {/* Venue tag + year */}
+                <div className="flex flex-wrap items-center gap-2">
+                  {p.venue && (
+                    <span className="rounded-md bg-blue-50 border border-blue-200 px-2 py-0.5 text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-blue-700">
+                      {p.venue}
+                    </span>
+                  )}
+                  {p.year && (
+                    <span className="text-[10px] md:text-xs font-semibold text-slate-400">{p.year}</span>
+                  )}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-sm md:text-base font-bold leading-snug text-slate-900 group-hover:text-blue-800 transition-colors">
+                  {p.title}
+                </h3>
+
+                {/* Description (one-liner) */}
+                {p.description && (
+                  <p className="text-xs md:text-sm text-slate-500 leading-snug line-clamp-2">
+                    <span className="font-semibold text-blue-700">TL;DR</span>{' '}
+                    {p.description}
+                  </p>
+                )}
+
+                {/* Tags */}
+                {p.tags && p.tags.length > 0 && (
+                  <div className="hidden md:flex flex-wrap gap-1 pt-0.5">
+                    {p.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-500"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {/* Links */}
+                <div className="pt-1" onClick={(e) => e.stopPropagation()}>
+                  <ProjectLinks p={p} size="sm" />
+                </div>
+              </div>
+            </motion.div>
           ))}
 
-          {groupedProjects.length === 0 && (
-            <p className="text-slate-500 italic">No academic projects available for the selected year.</p>
+          {sorted.length === 0 && (
+            <p className="text-slate-500 italic">No academic projects available.</p>
           )}
         </div>
       </div>
+
+      {/* Modal */}
+      {activeProject && (
+        <ProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
+      )}
     </div>
   )
 }

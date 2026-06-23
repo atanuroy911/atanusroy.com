@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -83,6 +83,12 @@
   --ac-navy: var(--primary);
   --ac-gold: #b8860b;
   --ac-text: var(--foreground);
+
+  /* Academic typography & layout tokens */
+  --font-display: 'EB Garamond', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --sidebar-w: 230px;
+  --gap: 2.5rem;
 }
 
 /* ── Dark ──────────────────────────────────────────────── */
@@ -122,7 +128,7 @@
 @layer base {
   * { @apply border-border outline-ring/50; }
   body { @apply bg-background text-foreground; font-family: 'Inter', sans-serif; }
-  html { @apply font-sans; scroll-behavior: smooth; scroll-padding-top: 100px; font-size: 18px; }
+  html { @apply font-sans; scroll-behavior: smooth; scroll-padding-top: 100px; font-size: 16px; }
 }
 
 /* ── Custom utilities ─────────────────────────────────── */
@@ -206,7 +212,22 @@
 }
 
 /* Academic mode specific */
-.ac-font-serif { font-family: 'Crimson Pro', Georgia, serif; }
+/* Academic type system — body uses Inter, headings use EB Garamond */
+.ac-font-serif {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.ac-font-serif h1,
+.ac-font-serif h2,
+.ac-font-serif h3,
+.ac-font-serif h4 {
+  font-family: var(--font-display);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.ac-font-poppins { font-family: var(--font-body); }
 .ac-paper {
   background: linear-gradient(135deg, #ffffff 0%, #fcfbf8 100%);
   border: 1px solid #e8e4d9;

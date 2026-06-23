@@ -1,10 +1,9 @@
 import { getContent, type Locale } from '@/lib/content'
 import Image from 'next/image'
 import { ModeProvider } from '@/providers/ModeProvider'
-import { MapPin, Mail } from 'lucide-react'
+import { MapPin, Mail, FileText } from 'lucide-react'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 import { Navbar } from '@/components/Navbar'
-import { TableOfContents } from '@/components/TableOfContents'
 
 type SocialIconProps = Omit<React.SVGProps<SVGSVGElement>, 'children'> & { size?: number }
 
@@ -42,7 +41,47 @@ const Orcid = ({ size = 24, className, ...props }: SocialIconProps) => (
     <path d="M10.1 7.8h1.1v8.4h-1.1V7.8Zm2.4 0h2.7c1.9 0 3.2 1.4 3.2 4.2s-1.3 4.2-3.2 4.2h-2.7V7.8Zm1.1 1v6.4h1.4c1.3 0 2-.9 2-3.2s-.7-3.2-2-3.2h-1.4Z" fill="#fff" />
   </svg>
 )
+const XIcon = ({ size = 24, className, ...props }: SocialIconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} {...props}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" fill="currentColor" />
+  </svg>
+)
 
+// Reusable sidebar button — clean pill style with left accent
+const SidebarBtn = ({
+  href,
+  icon,
+  label,
+  accent = false,
+  className = '',
+}: {
+  href?: string
+  icon: React.ReactNode
+  label: string
+  accent?: boolean
+  className?: string
+}) => {
+  if (!href) return null
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`group flex items-center gap-2 rounded-md px-3 py-2.5 text-xs font-medium transition-all
+        ${accent
+          ? 'bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200'
+          : 'bg-slate-50 text-slate-600 hover:bg-slate-100 hover:text-slate-800 border border-slate-200'
+        } ${className}`}
+    >
+      <span className={`shrink-0 transition-colors ${accent ? 'text-indigo-500 group-hover:text-indigo-600' : 'text-slate-400 group-hover:text-slate-600'}`}>
+        {icon}
+      </span>
+      <span className="truncate">{label}</span>
+    </a>
+  )
+}
+
+// Mobile dropdown social link (unchanged style)
 const SocialLink = ({ href, label, children }: { href?: string; label: string; children: React.ReactNode }) => {
   if (!href) return null
   return (
@@ -64,137 +103,113 @@ export default async function AcademicLayout({
   const p = content.personal
   const acH = content.academic.hero
 
-
-
   return (
     <ModeProvider forcedMode="academic">
       <div className="min-h-screen bg-background flex flex-col pt-16 ac-font-serif">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col">
           <Navbar content={content} locale={locale as Locale} isDev={false} />
-          <div className="flex flex-1 flex-col md:flex-row">
-            {/* Left Sidebar (Profile & TOC) */}
-            <aside className="w-full md:w-60 lg:w-64 bg-secondary/30 border-r border-border p-6 md:p-4 flex flex-col items-start text-left md:fixed md:ml-4 lg:ml-6 md:h-[calc(100vh-4rem)] overflow-y-auto">
-              <div className="flex w-full items-start justify-between gap-3 md:block mb-4">
-                <div className="flex min-w-0 flex-1 items-start gap-3 md:flex md:flex-col md:items-start md:gap-0 md:text-left">
-                  <div className="w-14 h-14 overflow-hidden rounded-full border-4 border-background shadow-lg md:w-20 md:h-20 md:mb-2.5 md:self-center">
-                    <Image src={p.academic_photo || "/assets/placeholder-user-gray.svg"} alt={p.name} width={80} height={80} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="min-w-0 md:w-full">
-                    <h1 className="text-base font-bold text-foreground leading-tight md:text-xl md:mb-0.5">{p.name}</h1>
-                    <p className="text-[11px] leading-snug text-muted-foreground md:text-xs">{acH.role}</p>
-                    <p className="text-[10px] mt-0.5 leading-snug text-muted-foreground md:text-[11px]">{acH.institution}</p>
-                    <div className="mt-2 space-y-1 text-[11px] text-foreground md:hidden">
-                      <div className="flex items-center justify-start gap-2 text-left">
-                        <MapPin size={15} className="text-muted-foreground shrink-0" />
-                        <span>{p.location}</span>
-                      </div>
-                      <div className="flex items-center justify-start gap-2 break-all text-left">
-                        <Mail size={15} className="text-muted-foreground shrink-0" />
-                        <a href={`mailto:${p.email}`} className="hover:text-primary transition-colors">{p.email}</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <details className="relative shrink-0 md:hidden">
-                  <summary className="flex cursor-pointer list-none items-center rounded-full border border-border bg-background px-3 py-2 text-xs font-semibold text-foreground shadow-sm transition-colors hover:bg-muted [&::-webkit-details-marker]:hidden">
-                    Follow
-                  </summary>
-                  <div className="absolute right-0 top-full z-20 mt-2 w-56 rounded-xl border border-border bg-background p-2 shadow-lg">
-                    <div className="flex flex-col gap-1">
-                      <SocialLink href={p.researchgate} label="ResearchGate">
-                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
-                          <ResearchGate size={16} />
-                          <span>ResearchGate</span>
-                        </span>
-                      </SocialLink>
-                      <SocialLink href={p.linkedin} label="LinkedIn">
-                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
-                          <Linkedin size={16} />
-                          <span>LinkedIn</span>
-                        </span>
-                      </SocialLink>
-                      <SocialLink href={p.instagram} label="Instagram">
-                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
-                          <Instagram size={16} />
-                          <span>Instagram</span>
-                        </span>
-                      </SocialLink>
-                      <SocialLink href={p.github} label="GitHub">
-                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
-                          <Github size={16} />
-                          <span>GitHub</span>
-                        </span>
-                      </SocialLink>
-                      <SocialLink href={p.youtube} label="YouTube">
-                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
-                          <Youtube size={16} />
-                          <span>YouTube</span>
-                        </span>
-                      </SocialLink>
-                      <SocialLink href={p.google_scholar} label="Google Scholar">
-                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
-                          <GoogleScholar size={16} />
-                          <span>Scholar</span>
-                        </span>
-                      </SocialLink>
-                      <SocialLink href={p.orcid} label="ORCID">
-                        <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted">
-                          <Orcid size={16} />
-                          <span>ORCID</span>
-                        </span>
-                      </SocialLink>
-                    </div>
-                  </div>
-                </details>
+          {/* ── Mobile profile bar ──────────────────────────────── */}
+          <div className="md:hidden flex items-center justify-between gap-3 border-b border-border bg-background px-4 py-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 overflow-hidden rounded-full border-2 border-border shadow-sm shrink-0">
+                <Image src={p.academic_photo || "/assets/placeholder-user-gray.svg"} alt={p.name} width={40} height={40} className="w-full h-full object-cover" />
               </div>
-
-              <div className="hidden md:block space-y-2.5 mb-3 text-[11px] md:text-xs text-foreground w-full">
-                <div className="flex items-center justify-start gap-2 text-left">
-                  <MapPin size={15} className="text-muted-foreground text-center shrink-0" />
-                  <span>{p.location}</span>
-                </div>
-                <div className="flex items-center justify-start gap-2 break-all text-left">
-                  <Mail size={15} className="text-muted-foreground shrink-0" />
-                  <a href={`mailto:${p.email}`} className="hover:text-primary transition-colors">{p.email}</a>
-                </div>
+              <div>
+                <p className="text-sm font-semibold text-foreground leading-tight">{p.name}</p>
+                <p className="text-[11px] text-muted-foreground">{acH.role}</p>
               </div>
-
-              <div className="hidden md:block w-full">
-                <TableOfContents locale={locale as string} />
-              </div>
-
-              <div className="mt-auto hidden w-full border-t border-border pt-4 md:block">
-                <div className="flex flex-wrap items-center justify-start gap-2.5 md:gap-3">
-                  <SocialLink href={p.researchgate} label="ResearchGate">
-                    <ResearchGate size={16} />
-                  </SocialLink>
-                  <SocialLink href={p.linkedin} label="LinkedIn">
-                    <Linkedin size={16} />
-                  </SocialLink>
-                  <SocialLink href={p.instagram} label="Instagram">
-                    <Instagram size={16} />
+            </div>
+            <details className="relative shrink-0">
+              <summary className="flex cursor-pointer list-none items-center rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground shadow-sm hover:bg-muted [&::-webkit-details-marker]:hidden">
+                Follow
+              </summary>
+              <div className="absolute right-0 top-full z-20 mt-2 w-52 rounded-xl border border-border bg-background p-2 shadow-lg">
+                <div className="flex flex-col gap-1">
+                  <SocialLink href={p.google_scholar} label="Google Scholar">
+                    <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><GoogleScholar size={16} /><span>Google Scholar</span></span>
                   </SocialLink>
                   <SocialLink href={p.github} label="GitHub">
-                    <Github size={16} />
+                    <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><Github size={16} /><span>GitHub</span></span>
                   </SocialLink>
-                  <SocialLink href={p.youtube} label="YouTube">
-                    <Youtube size={16} />
+                  <SocialLink href={p.linkedin} label="LinkedIn">
+                    <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><Linkedin size={16} /><span>LinkedIn</span></span>
                   </SocialLink>
-                  <SocialLink href={p.google_scholar} label="Google Scholar">
-                    <GoogleScholar size={16} />
+                  <SocialLink href={p.researchgate} label="ResearchGate">
+                    <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><ResearchGate size={16} /><span>ResearchGate</span></span>
                   </SocialLink>
                   <SocialLink href={p.orcid} label="ORCID">
-                    <Orcid size={16} />
+                    <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><Orcid size={16} /><span>ORCID</span></span>
                   </SocialLink>
                 </div>
               </div>
+            </details>
+          </div>
+
+          {/* ── Desktop: sidebar + main ──────────────────────────── */}
+          <div className="flex flex-1 flex-row">
+
+            {/* Left Sidebar — sticky in flow, no fixed positioning */}
+            <aside
+              className="hidden md:flex shrink-0 flex-col bg-background border-r border-border"
+              style={{ width: 'var(--sidebar-w)' }}
+            >
+              {/* Sticky scroll container */}
+              <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto p-4 flex flex-col">
+
+                {/* ── Photo + Name ──────────────────────────────── */}
+                <div className="mb-4 flex flex-col items-center text-center">
+                  <div className="w-24 h-24 overflow-hidden rounded-full border-4 border-border shadow mb-3">
+                    <Image src={p.academic_photo || "/assets/placeholder-user-gray.svg"} alt={p.name} width={96} height={96} className="w-full h-full object-cover" />
+                  </div>
+                  <h1 className="text-lg font-semibold text-foreground leading-tight mb-1">{p.name}</h1>
+                  <p className="text-xs leading-snug text-muted-foreground">{acH.role}</p>
+                  <p className="text-[11px] mt-0.5 leading-snug text-muted-foreground">{acH.department || acH.institution}</p>
+                </div>
+
+                {/* ── Location + Email ──────────────────────────── */}
+                <div className="space-y-1.5 mb-4 text-xs text-foreground w-full">
+                  <div className="flex items-center gap-2">
+                    <MapPin size={13} className="text-muted-foreground shrink-0" />
+                    <span className="truncate">{p.location}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Mail size={13} className="text-muted-foreground shrink-0 mt-0.5" />
+                    <a href={`mailto:${p.email}`} className="hover:text-primary transition-colors break-all text-[11px]">{p.email}</a>
+                  </div>
+                </div>
+
+                <div className="w-full h-px bg-border mb-3" />
+
+                {/* ── Social Buttons ────────────────────────────── */}
+                <div className="flex flex-col gap-2 w-full">
+                  <SidebarBtn href={p.google_scholar} icon={<GoogleScholar size={15} />} label="Google Scholar" accent className="w-full justify-start" />
+                  <SidebarBtn href={p.github} icon={<Github size={15} />} label="GitHub" className="w-full justify-start" />
+                  <SidebarBtn href={p.linkedin} icon={<Linkedin size={15} />} label="LinkedIn" className="w-full justify-start" />
+                  <SidebarBtn href={p.researchgate} icon={<ResearchGate size={15} />} label="ResearchGate" className="w-full justify-start" />
+                  <SidebarBtn href={p.orcid} icon={<Orcid size={15} />} label="ORCID" className="w-full justify-start" />
+
+                  {p.cv_url && (
+                    <a
+                      href={p.cv_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 flex w-full items-center justify-center gap-2 rounded-md bg-indigo-700 px-3 py-2 text-[11px] font-semibold uppercase tracking-widest text-white transition-colors hover:bg-indigo-800"
+                    >
+                      <FileText size={12} />
+                      Curriculum Vitae
+                    </a>
+                  )}
+                </div>
+
+              </div>{/* end sticky */}
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 md:ml-72 lg:ml-80 p-8 md:p-8 lg:p-8 max-w-4xl">
+            <main className="flex-1 min-w-0" style={{ padding: 'var(--gap)' }}>
               {children}
             </main>
+
           </div>
         </div>
       </div>

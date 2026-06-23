@@ -106,6 +106,18 @@ export function getAcademicHomeSEO(locale: Locale): PageSEOOptions {
   }
 }
 
+export function getAcademicAboutSEO(locale: Locale): PageSEOOptions {
+  const c = getContent(locale)
+  return {
+    title: `About — ${c.personal.name}`,
+    description: (c.academic?.bio as string)?.slice(0, 160) || 'About Atanu Shuvam Roy — Lecturer, Researcher, Computer Vision, Robotics, IIT Kanpur.',
+    path: `/${locale}/about`,
+    locale,
+    type: 'profile',
+    keywords: ['About', 'CV', 'Resume', 'Experience', 'Education', 'Computer Vision', 'Robotics', 'IIT Kanpur', 'ULAB'],
+  }
+}
+
 export function getAcademicResearchSEO(locale: Locale): PageSEOOptions {
   return {
     title: 'Research — Atanu Shuvam Roy',

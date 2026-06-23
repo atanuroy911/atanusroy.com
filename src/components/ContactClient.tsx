@@ -2,12 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { useMode } from '@/providers/ModeProvider'
-import { Mail, MapPin, BookOpen, UserCircle2 } from 'lucide-react'
+import { Mail, MapPin, BookOpen, UserCircle2, Send } from 'lucide-react'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 
-const Github = (props: any) => <GitHubLogoIcon width={props.size || 24} height={props.size || 24} {...props} />
-const Linkedin = (props: any) => <LinkedInLogoIcon width={props.size || 24} height={props.size || 24} {...props} />
-import { Button } from '@/components/ui/button'
+const GithubIcon = (props: any) => <GitHubLogoIcon width={props.size || 18} height={props.size || 18} />
+const LinkedinIcon = (props: any) => <LinkedInLogoIcon width={props.size || 18} height={props.size || 18} />
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function ContactClient({ content }: { content: any }) {
@@ -19,76 +18,163 @@ export function ContactClient({ content }: { content: any }) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Placeholder for actual form submission
     alert('Contact form submission would happen here.')
   }
 
   if (isDev) {
     return (
-      <div className="port pt-40 pb-32 min-h-screen">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="mb-24 text-center">
+      <div className="port">
+        <div className="dev-contact-page">
+          {/* Header */}
+          <div style={{ marginBottom: 48 }}>
             <div className="sec-label">// ping_me</div>
-            <div className="sec-title">Get in Touch</div>
-            <div className="sec-sub max-w-2xl mx-auto">Whether you have a project idea, want to collaborate on research, or just want to chat about tech.</div>
+            <h1 className="sec-title">Get in Touch</h1>
+            <p className="sec-sub" style={{ maxWidth: 520 }}>
+              Have a project idea? Let&apos;s talk. I reply within 24 hours.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-12">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="md:col-span-3">
-              <form onSubmit={handleSubmit} className="service-card w-full space-y-8 !p-8">
-                <div className="grid grid-cols-2 gap-6 w-full">
-                  <div className="space-y-3 w-full">
-                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-widest">Name</label>
-                    <input type="text" className="w-full bg-white border border-gray-200 rounded-lg px-5 py-3 focus:outline-none focus:border-blue-500 transition-colors text-base" placeholder="John Doe" required />
+          <div className="dev-contact-grid">
+            {/* Form */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+              <div className="dev-contact-form-card">
+                <form onSubmit={handleSubmit}>
+                  <div className="dev-form-row">
+                    <div className="dev-form-group" style={{ marginBottom: 0 }}>
+                      <label className="dev-form-label">Name</label>
+                      <input
+                        type="text"
+                        className="dev-form-input"
+                        placeholder="John Doe"
+                        required
+                      />
+                    </div>
+                    <div className="dev-form-group" style={{ marginBottom: 0 }}>
+                      <label className="dev-form-label">Email</label>
+                      <input
+                        type="email"
+                        className="dev-form-input"
+                        placeholder="john@example.com"
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-3 w-full">
-                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-widest">Email</label>
-                    <input type="email" className="w-full bg-white border border-gray-200 rounded-lg px-5 py-3 focus:outline-none focus:border-blue-500 transition-colors text-base" placeholder="john@example.com" required />
+
+                  <div className="dev-form-group">
+                    <label className="dev-form-label">Subject</label>
+                    <input
+                      type="text"
+                      className="dev-form-input"
+                      placeholder="Project inquiry / collaboration / say hi"
+                    />
                   </div>
-                </div>
-                <div className="space-y-3 w-full">
-                  <label className="text-sm font-semibold text-gray-500 uppercase tracking-widest">Message</label>
-                  <textarea className="w-full bg-white border border-gray-200 rounded-lg px-5 py-3 focus:outline-none focus:border-blue-500 transition-colors text-base min-h-[200px]" placeholder="Hello Atanu..." required />
-                </div>
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 rounded-lg transition-colors text-lg">
-                  Send Message
-                </Button>
-              </form>
+
+                  <div className="dev-form-group">
+                    <label className="dev-form-label">Message</label>
+                    <textarea
+                      className="dev-form-textarea"
+                      placeholder="Tell me about your project..."
+                      required
+                    />
+                  </div>
+
+                  <button type="submit" className="dev-form-submit">
+                    <Send size={16} />
+                    Send Message
+                  </button>
+                </form>
+              </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="md:col-span-2 space-y-8">
-              <div className="service-card w-full h-full flex flex-col justify-center space-y-10 !p-8">
-                <a href={`mailto:${p?.email}`} className="flex items-center gap-6 group">
-                  <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors">
-                    <Mail className="text-blue-600" size={24} />
+            {/* Side info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="dev-contact-side"
+            >
+              {/* Contact info card */}
+              <div className="dev-contact-info-card">
+                <a href={`mailto:${p?.email}`} className="dev-contact-item">
+                  <div
+                    className="dev-contact-icon-wrap"
+                    style={{ background: 'var(--dev-accent-light)', border: '1px solid var(--dev-accent-border)' }}
+                  >
+                    <Mail size={20} color="var(--dev-accent)" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-1">Email</div>
-                    <div className="text-lg font-medium text-gray-800 group-hover:text-blue-600 transition-colors truncate max-w-[200px] sm:max-w-xs">{p?.email}</div>
+                    <div className="dev-contact-label">Email</div>
+                    <div className="dev-contact-value" style={{ wordBreak: 'break-all' }}>
+                      {p?.email}
+                    </div>
                   </div>
                 </a>
-                
-                <div className="flex items-center gap-6 group cursor-default">
-                  <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-green-600" size={24} />
+
+                <div className="dev-contact-item" style={{ cursor: 'default' }}>
+                  <div
+                    className="dev-contact-icon-wrap"
+                    style={{ background: '#f0fdf4', border: '1px solid #bbf7d0' }}
+                  >
+                    <MapPin size={20} color="#16a34a" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-1">Location</div>
-                    <div className="text-lg font-medium text-gray-800">{p?.location}</div>
+                    <div className="dev-contact-label">Location</div>
+                    <div className="dev-contact-value">{p?.location}</div>
                   </div>
                 </div>
+              </div>
 
-                <div className="pt-10 border-t border-gray-100 flex justify-start gap-6">
-                  {[
-                    { href: p?.github, icon: Github },
-                    { href: p?.linkedin, icon: Linkedin },
-                    { href: p?.google_scholar, icon: BookOpen }
-                  ].map((social, i) => social.href && (
-                    <a key={i} href={social.href} target="_blank" rel="noreferrer" className="w-14 h-14 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-white hover:border-gray-300 hover:text-blue-600 hover:-translate-y-1 transition-all">
-                      <social.icon size={24} />
+              {/* Social links */}
+              <div className="dev-socials-card">
+                <div className="dev-socials-title">Find me online</div>
+                <div className="dev-socials-row">
+                  {p?.github && (
+                    <a href={p.github} target="_blank" rel="noreferrer" className="dev-social-btn">
+                      <GithubIcon size={16} />
+                      GitHub
                     </a>
-                  ))}
+                  )}
+                  {p?.linkedin && (
+                    <a href={p.linkedin} target="_blank" rel="noreferrer" className="dev-social-btn">
+                      <LinkedinIcon size={16} />
+                      LinkedIn
+                    </a>
+                  )}
+                  {p?.google_scholar && (
+                    <a href={p.google_scholar} target="_blank" rel="noreferrer" className="dev-social-btn">
+                      <BookOpen size={16} />
+                      Scholar
+                    </a>
+                  )}
                 </div>
+              </div>
+
+              {/* Availability note */}
+              <div
+                style={{
+                  background: 'var(--dev-accent-light)',
+                  border: '1px solid var(--dev-accent-border)',
+                  borderRadius: 'var(--r-lg)',
+                  padding: '20px 24px',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
+                  <div
+                    style={{
+                      width: 10, height: 10, borderRadius: '50%',
+                      background: '#16a34a',
+                      boxShadow: '0 0 0 3px rgba(22,163,74,0.2)',
+                      animation: 'pulse-dot 2s infinite',
+                      flexShrink: 0,
+                    }}
+                  />
+                  <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--dev-accent)', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'var(--font-mono)' }}>
+                    Open to projects
+                  </span>
+                </div>
+                <p style={{ fontSize: 14, color: 'var(--dev-text-3)', lineHeight: 1.6 }}>
+                  Currently available for freelance work and short-term contracts. Response time is typically within 24 hours.
+                </p>
               </div>
             </motion.div>
           </div>
@@ -145,7 +231,7 @@ export function ContactClient({ content }: { content: any }) {
                   )}
                   {p?.linkedin && (
                     <a href={p.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 hover:border-slate-300 bg-white dark:bg-slate-900 text-sm font-medium transition-colors">
-                      <Linkedin size={16} className="text-blue-600" /> LinkedIn
+                      <LinkedinIcon size={16} /> LinkedIn
                     </a>
                   )}
                 </div>
@@ -159,7 +245,7 @@ export function ContactClient({ content }: { content: any }) {
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                 The following individuals can provide references regarding my academic performance and research capabilities.
               </p>
-              
+
               <div className="space-y-4">
                 {ac?.referees?.map((ref: { name: string; affiliation: string; email: string }, i: number) => (
                   <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800">

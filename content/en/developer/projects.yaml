@@ -2,6 +2,7 @@ projects:
   - title: "BTC-CORE-WEBAPP"
     description: "Built a full web interface to interact with a Bitcoin Core node via RPC commands — real-time block data, wallet management, and transaction broadcasting in a clean UI."
     tags: ["Java", "Bitcoin RPC", "REST API", "React"]
+    image: "https://picsum.photos/seed/btc/600/400"
     link: "https://btc-core-app.vercel.app"
     github: "https://github.com/atanuroy911/BTC-CORE-WEBAPP"
     featured: true
@@ -16,6 +17,7 @@ projects:
   - title: "Fortinet Auth GUI"
     description: "Automated network authentication for large-scale campus environments. Reduced manual login steps to zero — one-click background auth that just works."
     tags: ["JavaScript", "Network", "Automation", "Electron"]
+    image: "https://picsum.photos/seed/fortinet/600/400"
     link: "https://fortinet-gui.io"
     github: "https://github.com/atanuroy911/iitk-fortinet-gui"
     featured: true
@@ -30,25 +32,30 @@ projects:
   - title: "CS724-RoboX"
     description: "A repository related to robotics and autonomous systems at IIT Kanpur. Developed algorithms for path planning and control."
     tags: ["Jupyter Notebook", "Robotics", "Python"]
+    image: "https://picsum.photos/seed/robox/600/400"
     github: "https://github.com/atanuroy911/CS724-RoboX"
     featured: false
 
   - title: "stress-detection-app"
     description: "A comprehensive machine learning system for predicting stress levels using physiological data and Python."
     tags: ["Python", "Machine Learning", "Healthcare"]
+    image: "https://picsum.photos/seed/stress/600/400"
     github: "https://github.com/atanuroy911/stress-detection-app"
   
   - title: "ulab-mms"
     description: "Modern Management System for ULAB (University of Liberal Arts Bangladesh) to streamline academic operations."
     tags: ["TypeScript", "Next.js", "Full-Stack"]
+    image: "https://picsum.photos/seed/ulab/600/400"
     github: "https://github.com/atanuroy911/ulab-mms"
 
   - title: "name2meta"
     description: "A Python utility for metadata extraction or management from files and databases."
     tags: ["Python", "Utility", "Data Processing"]
+    image: "https://picsum.photos/seed/name2meta/600/400"
     github: "https://github.com/atanuroy911/name2meta"
 
   - title: "search-meal-db"
     description: "A responsive web application for searching meals using a remote database API."
     tags: ["JavaScript", "API", "Frontend"]
+    image: "https://picsum.photos/seed/mealdb/600/400"
     github: "https://github.com/atanuroy911/search-meal-db"

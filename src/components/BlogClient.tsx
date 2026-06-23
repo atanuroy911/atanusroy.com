@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Calendar, ExternalLink, Pin, Search, ArrowRight, Code2 } from 'lucide-react'
+import { Calendar, ExternalLink, Pin, Search, ArrowRight, Code2, Tag } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { BlogPost, BlogCategory } from '@/lib/blog'
@@ -75,114 +75,166 @@ function BlogIndex({
 
   if (isDev) {
     return (
-      <div className="port pt-40 pb-32 min-h-screen">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="mb-24 text-center">
+      <div className="port">
+        <div className="dev-blog-page">
+          {/* Header */}
+          <div className="dev-blog-header">
             <div className="sec-label">// blog</div>
-            <div className="sec-title">Blog & Notes</div>
-            <div className="sec-sub mb-12">Dev logs, project write-ups, tools, and technical deep-dives.</div>
+            <h1 className="sec-title">Blog &amp; Notes</h1>
+            <p className="sec-sub" style={{ marginBottom: 32 }}>
+              Dev logs, project write-ups, tools, and technical deep-dives.
+            </p>
 
-            {/* Search & Categories */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative mb-8">
-                <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
-                <input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search posts..."
-                  className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors text-lg" />
-              </div>
+            {/* Search */}
+            <div className="dev-blog-search-wrap">
+              <Search size={16} />
+              <input
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search posts..."
+                className="dev-blog-search"
+              />
+            </div>
 
-              <div className="flex flex-wrap justify-center gap-3 mb-6">
-                {['all', ...categories.map((c) => c.id)].map((catId) => {
-                  const cat = catId === 'all' ? null : getCategoryMeta(catId)
-                  return (
-                    <button key={catId} onClick={() => setActiveCategory(catId)}
-                      style={activeCategory === catId && cat ? { background: cat.color, color: '#fff', borderColor: cat.color } : cat ? { background: cat.bg, color: cat.color, borderColor: cat.color + '44' } : {}}
-                      className={`project-tag px-4 py-2 border transition-all rounded text-sm ${activeCategory === catId && !cat ? 'bg-blue-600 text-white border-blue-600' : !cat ? 'bg-gray-50 text-gray-600 border-gray-200' : ''}`}>
-                      {catId === 'all' ? 'ALL' : cat?.label}
-                    </button>
-                  )
-                })}
-              </div>
+            {/* Category filters */}
+            <div className="dev-blog-filters">
+              <button
+                onClick={() => setActiveCategory('all')}
+                className={`dev-filter-btn ${activeCategory === 'all' ? 'active-all' : ''}`}
+              >
+                All
+              </button>
+              {categories.map((cat) => {
+                const isActive = activeCategory === cat.id
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(isActive ? 'all' : cat.id)}
+                    className="dev-filter-btn"
+                    style={isActive ? { background: cat.color, color: '#fff', borderColor: cat.color } : { background: cat.bg, color: cat.color, borderColor: cat.color + '66' }}
+                  >
+                    {cat.label}
+                  </button>
+                )
+              })}
+            </div>
 
-              <div className="flex flex-wrap justify-center gap-2 mb-16">
+            {/* Tag chips */}
+            {allTags.length > 0 && (
+              <div className="dev-tag-filters">
                 {allTags.map((tag) => (
-                  <button key={tag} onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-                    className={`pill transition-all ${activeTag === tag ? '!bg-blue-600 !text-white !border-blue-600' : ''}`}>
+                  <button
+                    key={tag}
+                    onClick={() => setActiveTag(activeTag === tag ? null : tag)}
+                    className={`dev-tag-btn ${activeTag === tag ? 'active' : ''}`}
+                  >
                     #{tag}
                   </button>
                 ))}
               </div>
-            </div>
+            )}
           </div>
 
-          <div className="grid gap-12">
+          {/* Posts */}
+          <div className="dev-blog-list">
             <AnimatePresence mode="popLayout">
               {filtered.length === 0 ? (
-                <motion.div key="empty" className="py-24 text-center sec-sub">
+                <motion.div
+                  key="empty"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="sec-sub"
+                  style={{ textAlign: 'center', padding: '64px 0' }}
+                >
                   No posts found.
                 </motion.div>
-              ) : filtered.map((post, i) => {
-                const cat = getCategoryMeta(post.category)
-                return (
-                  <motion.article key={post.id} layout
-                    initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95 }} transition={{ delay: i * 0.05 }}
-                    whileHover={{ y: -4 }}
-                    className="service-card cursor-pointer !p-0 overflow-hidden flex flex-col md:flex-row"
-                  >
-                    {/* Cover image strip or fallback image */}
-                    {post.cover_image ? (
-                      <img src={post.cover_image} alt={post.title} className="w-full md:w-1/3 md:h-auto h-48 object-cover border-b md:border-b-0 md:border-r border-gray-100" />
-                    ) : (
-                      <div className="w-full md:w-1/3 md:h-auto h-48 bg-gray-50 border-b md:border-b-0 md:border-r border-gray-100 flex items-center justify-center">
-                        <ExternalLink className="text-gray-300" size={48} />
-                      </div>
-                    )}
+              ) : (
+                filtered.map((post, i) => {
+                  const cat = getCategoryMeta(post.category)
+                  return (
+                    <motion.div
+                      key={post.id}
+                      layout
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.97 }}
+                      transition={{ delay: i * 0.04 }}
+                    >
+                      <article className="dev-blog-card" style={{ position: 'relative' }}>
+                        <Link 
+                          href={`${basePath}/${post.id}`} 
+                          style={{ position: 'absolute', inset: 0, zIndex: 1 }}
+                          aria-label={`Read ${post.title}`}
+                        />
+                        <div style={{ position: 'relative', zIndex: 2, pointerEvents: 'none' }}>
+                          {/* Meta row */}
+                          <div className="dev-blog-card-meta">
+                            {post.pinned && (
+                              <span className="dev-pinned-badge">
+                                <Pin size={9} /> Pinned
+                              </span>
+                            )}
+                            <span
+                              className="dev-blog-cat-badge"
+                              style={{ background: cat.bg, color: cat.color, borderColor: cat.color + '55' }}
+                            >
+                              {cat.label}
+                            </span>
+                            <span className="dev-blog-date">
+                              <Calendar size={12} />
+                              {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                            </span>
+                          </div>
 
-                    <div className="p-8 flex flex-col flex-1 items-start text-left w-full">
-                      <div className="flex items-center gap-3 mb-4 flex-wrap">
-                        {post.pinned && (
-                          <span className="flex items-center gap-1 text-[11px] font-bold uppercase text-red-600 bg-red-50 px-2 py-1 border border-red-200 rounded">
-                            <Pin size={10} /> PINNED
-                          </span>
-                        )}
-                        <span className="project-tag px-3 py-1 border rounded"
-                          style={{ background: cat.bg, color: cat.color, borderColor: cat.color + '44' }}>
-                          {cat.label}
-                        </span>
-                        <span className="flex items-center gap-1 text-sm text-gray-500">
-                          <Calendar size={14} /> {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-                        </span>
-                      </div>
+                          {/* Title */}
+                          <h2 className="dev-blog-card-title">{post.title}</h2>
 
-                      <h2 className="project-title !text-2xl !mb-4 group-hover:text-blue-600 transition-colors">{post.title}</h2>
-                      <p className="project-desc !text-base mb-6 flex-1">{post.summary}</p>
+                          {/* Summary */}
+                          <p className="dev-blog-card-summary">{post.summary}</p>
 
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {post.tags?.slice(0, 6).map((t) => (
-                          <span key={t} className="pill">#{t}</span>
-                        ))}
-                      </div>
+                          {/* Tags */}
+                          {post.tags && post.tags.length > 0 && (
+                            <div className="dev-blog-card-tags">
+                              {post.tags.slice(0, 5).map((t) => (
+                                <span key={t} className="pill">#{t}</span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
 
-                      <div className="flex items-center gap-4 pt-6 border-t border-gray-100 w-full mt-auto">
-                        <Link href={`${basePath}/${post.id}`} className="project-cta flex items-center gap-2">
-                          Read Post <ArrowRight size={16} />
-                        </Link>
-                        {post.github && (
-                          <a href={post.github} target="_blank" rel="noopener noreferrer" className="ml-auto text-sm font-semibold text-gray-500 hover:text-blue-600 transition-colors flex items-center gap-1">
-                            <Code2 size={16} /> GitHub
-                          </a>
-                        )}
-                        {post.link && (
-                          <a href={post.link} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-gray-500 hover:text-blue-600 transition-colors flex items-center gap-1 ml-4">
-                            <ExternalLink size={16} /> Link
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </motion.article>
-                )
-              })}
+                          {/* Footer */}
+                          <div className="dev-blog-card-footer" style={{ position: 'relative', zIndex: 3 }}>
+                            <Link href={`${basePath}/${post.id}`} style={{ textDecoration: 'none' }} className="project-cta">
+                              Read post <ArrowRight size={14} />
+                            </Link>
+                            {post.github && (
+                              <a
+                                href={post.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                style={{ marginLeft: 'auto', display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 13, fontWeight: 600, color: 'var(--dev-text-3)', textDecoration: 'none' }}
+                              >
+                                <Code2 size={14} /> GitHub
+                              </a>
+                            )}
+                            {post.link && (
+                              <a
+                                href={post.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 13, fontWeight: 600, color: 'var(--dev-text-3)', textDecoration: 'none' }}
+                              >
+                                <ExternalLink size={14} /> Link
+                              </a>
+                            )}
+                          </div>
+                        </article>
+                      </motion.div>
+                  )
+                })
+              )}
             </AnimatePresence>
           </div>
         </div>
@@ -195,7 +247,7 @@ function BlogIndex({
     <div className="py-8" style={{ minHeight: '100vh' }}>
       <div className="max-w-4xl">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
-          <h1 className="text-4xl font-bold ac-font-serif" style={{ color: 'var(--ac-navy)' }}>News & Updates</h1>
+          <h1 className="text-4xl font-bold ac-font-serif" style={{ color: 'var(--ac-navy)' }}>News &amp; Updates</h1>
           <div className="h-1 w-20 mt-3" style={{ background: 'var(--ac-gold)' }} />
           <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed text-sm">
             Research updates, publications, conference announcements, and other academic news.

@@ -11,6 +11,7 @@ projects:
       - Bitcoin RPC
       - REST API
       - React
+    image: https://picsum.photos/seed/btc/600/400
     link: https://btc-core-app.vercel.app
     github: https://github.com/atanuroy911/BTC-CORE-WEBAPP
     featured: true
@@ -32,6 +33,7 @@ projects:
       - Network
       - Automation
       - Electron
+    image: https://picsum.photos/seed/fortinet/600/400
     link: https://fortinet-gui.io
     github: https://github.com/atanuroy911/iitk-fortinet-gui
     featured: true
@@ -52,6 +54,7 @@ projects:
       - Jupyter Notebook
       - Robotics
       - Python
+    image: https://picsum.photos/seed/robox/600/400
     github: https://github.com/atanuroy911/CS724-RoboX
     featured: false
   - title: স্ট্রেস-ডিটেকশন-অ্যাপ
@@ -60,6 +63,7 @@ projects:
       - Python
       - Machine Learning
       - Healthcare
+    image: https://picsum.photos/seed/stress/600/400
     github: https://github.com/atanuroy911/stress-detection-app
   - title: ulab-mms
     description: >-
@@ -69,6 +73,7 @@ projects:
       - TypeScript
       - Next.js
       - Full-Stack
+    image: https://picsum.photos/seed/ulab/600/400
     github: https://github.com/atanuroy911/ulab-mms
   - title: name2meta
     description: ফাইল এবং ডাটাবেস থেকে মেটাডেটা নিষ্কাশন বা পরিচালনার জন্য একটি পাইথন ইউটিলিটি।
@@ -76,6 +81,7 @@ projects:
       - Python
       - Utility
       - Data Processing
+    image: https://picsum.photos/seed/name2meta/600/400
     github: https://github.com/atanuroy911/name2meta
   - title: অনুসন্ধান-খাবার-ডিবি
     description: দূরবর্তী ডাটাবেস API ব্যবহার করে খাবার অনুসন্ধানের জন্য একটি প্রতিক্রিয়াশীল ওয়েব অ্যাপ্লিকেশন।
@@ -83,4 +89,5 @@ projects:
       - JavaScript
       - API
       - Frontend
+    image: https://picsum.photos/seed/mealdb/600/400
     github: https://github.com/atanuroy911/search-meal-db

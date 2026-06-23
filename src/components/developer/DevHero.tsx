@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiPython, SiTensorflow, SiPytorch, SiOpenai, SiDocker, SiGraphql } from 'react-icons/si';
 import { DiAws } from 'react-icons/di';
+
 function TypingEffect({ words }: { words: string[] }) {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -15,7 +16,7 @@ function TypingEffect({ words }: { words: string[] }) {
       const i = loopNum % words.length;
       const fullText = words[i];
 
-      setText(isDeleting 
+      setText(isDeleting
         ? fullText.substring(0, text.length - 1)
         : fullText.substring(0, text.length + 1)
       );
@@ -23,7 +24,7 @@ function TypingEffect({ words }: { words: string[] }) {
       setTypingSpeed(isDeleting ? 50 : 150);
 
       if (!isDeleting && text === fullText) {
-        setTimeout(() => setIsDeleting(true), 1500);
+        setTimeout(() => setIsDeleting(true), 1800);
       } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
@@ -43,20 +44,21 @@ function TypingEffect({ words }: { words: string[] }) {
 }
 
 export function DevHero({ content }: { content: any }) {
-  const { hero, marquee } = content.developer;
+  const { hero } = content.developer;
 
   return (
     <>
       <section className="hero">
+        {/* Text content */}
         <div>
           <div className="hero-eyebrow">Hey, I&apos;m</div>
           <div className="hero-name">
-            Atanu.<br />
+            Atanu.
           </div>
           <div className="hero-role">
             <TypingEffect words={hero.rotating_text} />
           </div>
-          <div className="hero-sub" style={{ marginBottom: '64px' }}>{hero.tagline}</div>
+          <div className="hero-sub">{hero.tagline}</div>
 
           <div className="hero-btns">
             <Link href={hero.cta_primary_link} className="btn-primary">
@@ -67,14 +69,17 @@ export function DevHero({ content }: { content: any }) {
             </a>
           </div>
         </div>
+
+        {/* Photo */}
         <div className="hero-right">
-          <Image 
-            src={hero.photo_url} 
-            alt="Developer Avatar" 
-            width={400} 
-            height={500} 
+          <Image
+            src={hero.photo_url}
+            alt="Atanu Shuvam Roy"
+            width={400}
+            height={500}
             className="hero-avatar"
             unoptimized
+            priority
           />
           <div className="avail-badge">
             <div className="dot"></div>
@@ -84,17 +89,12 @@ export function DevHero({ content }: { content: any }) {
       </section>
 
       {/* MARQUEE */}
-      <div className="marquee-row mt-12 border-t border-b border-gray-100 py-6">
-        <div className="marquee-track flex items-center gap-12">
-          {TECH_STACK.map((tech, i) => (
-            <div key={`m1-${i}`} className="marquee-item flex items-center gap-2 text-xl font-medium text-gray-500 whitespace-nowrap">
-              <tech.icon className="text-2xl text-blue-600" /> {tech.name}
-            </div>
-          ))}
-          {/* Repeat for seamless infinite scrolling */}
-          {TECH_STACK.map((tech, i) => (
-            <div key={`m2-${i}`} className="marquee-item flex items-center gap-2 text-xl font-medium text-gray-500 whitespace-nowrap">
-              <tech.icon className="text-2xl text-blue-600" /> {tech.name}
+      <div className="marquee-row">
+        <div className="marquee-track">
+          {[...TECH_STACK, ...TECH_STACK].map((tech, i) => (
+            <div key={i} className="marquee-item">
+              <tech.icon style={{ fontSize: '16px', color: 'var(--dev-accent)' }} />
+              {tech.name}
             </div>
           ))}
         </div>

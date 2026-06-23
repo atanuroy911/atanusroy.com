@@ -3,8 +3,7 @@
 import { motion } from 'framer-motion'
 import { useMode } from '@/providers/ModeProvider'
 import { Badge } from '@/components/ui/badge'
-import { FileText, ExternalLink, BookOpen, Layers } from 'lucide-react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { ExternalLink, BookOpen, Layers, GitBranch, Globe } from 'lucide-react'
 import { useState } from 'react'
 import { ProjectModal } from '@/components/ui/ProjectModal'
 
@@ -24,51 +23,95 @@ function DevProjects({ content }: { content: any }) {
   const [selectedProject, setSelectedProject] = useState<any | null>(null)
 
   return (
-    <div className="port pt-40 pb-32 min-h-screen">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="mb-24 text-center">
+    <div className="port">
+      <div className="dev-projects-page">
+        {/* Header */}
+        <div style={{ marginBottom: 48 }}>
           <div className="sec-label">// all_projects</div>
-          <div className="sec-title">My Work</div>
+          <h1 className="sec-title">My Work</h1>
+          <p className="sec-sub">A collection of things I&apos;ve shipped — from side projects to production systems.</p>
         </div>
 
-        <div className="grid gap-12">
+        {/* Project grid */}
+        <div className="dev-proj-grid">
           {projects.map((p: any, i: number) => (
             <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-              whileHover={{ y: -5 }}
+              transition={{ delay: i * 0.06 }}
+              className="dev-proj-card"
               onClick={() => setSelectedProject(p)}
-              className="service-card cursor-pointer !items-start w-full"
             >
-              <div className="flex items-start justify-between w-full mb-6">
-                <div className="service-icon mb-0">
-                  <Layers size={32} />
+              {p.image && (
+                <div className="dev-proj-image-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.image} alt={p.title} className="dev-proj-image" />
                 </div>
-                {p.type && (
-                  <div className="project-tag !text-[12px]">{p.type}</div>
+              )}
+              <div className="dev-proj-card-inner">
+                {/* Top row: icon + links */}
+                <div className="dev-proj-card-top">
+                  <div className="dev-proj-icon">
+                    <Layers size={22} />
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    {p.featured && (
+                      <span className="dev-proj-featured-badge">Featured</span>
+                    )}
+                    <div className="dev-proj-links">
+                      {p.github && (
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="dev-proj-link-btn"
+                          title="View on GitHub"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                        <GitBranch size={16} />
+                        </a>
+                      )}
+                      {p.link && (
+                        <a
+                          href={p.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="dev-proj-link-btn"
+                          title="Live demo"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Globe size={16} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <div className="dev-proj-title">{p.title}</div>
+
+                {/* Description */}
+                <div className="dev-proj-desc">{p.description}</div>
+
+                {/* Tags */}
+                {p.tags && p.tags.length > 0 && (
+                  <div className="dev-proj-tags">
+                    {p.tags.map((t: string) => (
+                      <span key={t} className="dev-proj-tag">{t}</span>
+                    ))}
+                  </div>
                 )}
-              </div>
-              <div className="project-title !text-3xl !mb-4 group-hover:text-blue-600 transition-colors">
-                {p.title}
-              </div>
-              <div className="project-desc !text-lg mb-8 flex-grow max-w-3xl">
-                {p.description}
-              </div>
-              <div className="tech-pills mt-auto">
-                {p.tags.map((t: string) => (
-                  <div key={t} className="pill">{t}</div>
-                ))}
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-      <ProjectModal 
-        isOpen={!!selectedProject} 
-        onClose={() => setSelectedProject(null)} 
-        project={selectedProject} 
+
+      <ProjectModal
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+        project={selectedProject}
       />
     </div>
   )

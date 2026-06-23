@@ -25,70 +25,67 @@ export function ContactClient({ content }: { content: any }) {
 
   if (isDev) {
     return (
-      <div className="py-24 bg-white dark:bg-black min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 mt-16">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12 text-center">
-            <span className="font-mono-dev text-sm text-black dark:text-black uppercase font-bold mb-2 block tracking-widest bg-[#00d9ff] w-fit px-2 py-0.5 border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff] mx-auto">// ping_me</span>
-            <h1 className="text-5xl md:text-6xl font-black text-black dark:text-white uppercase tracking-tighter">Get in Touch</h1>
-            <div className="h-2 w-24 mt-4 bg-black dark:bg-white mx-auto" />
-            <p className="mt-6 text-black dark:text-white font-medium bg-[#ffde00] p-4 border-4 border-black dark:border-white shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] max-w-lg mx-auto dark:text-black">
-              Whether you have a project idea, want to collaborate on research, or just want to chat about tech.
-            </p>
-          </motion.div>
+      <div className="port pt-40 pb-32 min-h-screen">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="mb-24 text-center">
+            <div className="sec-label">// ping_me</div>
+            <div className="sec-title">Get in Touch</div>
+            <div className="sec-sub max-w-2xl mx-auto">Whether you have a project idea, want to collaborate on research, or just want to chat about tech.</div>
+          </div>
 
-          <div className="grid md:grid-cols-5 gap-8">
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="md:col-span-3">
-              <form onSubmit={handleSubmit} className="dev-glass rounded-none p-8 dev-border-glow bg-white dark:bg-black space-y-6 border-[3px] border-[#ff3366] dark:border-[#00d9ff]">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="font-mono-dev font-bold uppercase tracking-widest text-xs text-black dark:text-white">Name</label>
-                    <input type="text" className="w-full bg-white dark:bg-black border-2 border-black dark:border-white rounded-none px-4 py-3 text-black dark:text-white focus:outline-none focus:shadow-[4px_4px_0px_#00d9ff] dark:focus:shadow-[4px_4px_0px_#ffde00] transition-all font-mono-dev text-sm" placeholder="John Doe" required />
+          <div className="grid md:grid-cols-5 gap-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="md:col-span-3">
+              <form onSubmit={handleSubmit} className="service-card w-full space-y-8 !p-8">
+                <div className="grid grid-cols-2 gap-6 w-full">
+                  <div className="space-y-3 w-full">
+                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-widest">Name</label>
+                    <input type="text" className="w-full bg-white border border-gray-200 rounded-lg px-5 py-3 focus:outline-none focus:border-blue-500 transition-colors text-base" placeholder="John Doe" required />
                   </div>
-                  <div className="space-y-2">
-                    <label className="font-mono-dev font-bold uppercase tracking-widest text-xs text-black dark:text-white">Email</label>
-                    <input type="email" className="w-full bg-white dark:bg-black border-2 border-black dark:border-white rounded-none px-4 py-3 text-black dark:text-white focus:outline-none focus:shadow-[4px_4px_0px_#00d9ff] dark:focus:shadow-[4px_4px_0px_#ffde00] transition-all font-mono-dev text-sm" placeholder="john@example.com" required />
+                  <div className="space-y-3 w-full">
+                    <label className="text-sm font-semibold text-gray-500 uppercase tracking-widest">Email</label>
+                    <input type="email" className="w-full bg-white border border-gray-200 rounded-lg px-5 py-3 focus:outline-none focus:border-blue-500 transition-colors text-base" placeholder="john@example.com" required />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="font-mono-dev font-bold uppercase tracking-widest text-xs text-black dark:text-white">Message</label>
-                  <textarea className="w-full bg-white dark:bg-black border-2 border-black dark:border-white rounded-none px-4 py-3 text-black dark:text-white focus:outline-none focus:shadow-[4px_4px_0px_#00d9ff] dark:focus:shadow-[4px_4px_0px_#ffde00] transition-all font-mono-dev text-sm min-h-[150px]" placeholder="Hello Atanu..." required />
+                <div className="space-y-3 w-full">
+                  <label className="text-sm font-semibold text-gray-500 uppercase tracking-widest">Message</label>
+                  <textarea className="w-full bg-white border border-gray-200 rounded-lg px-5 py-3 focus:outline-none focus:border-blue-500 transition-colors text-base min-h-[200px]" placeholder="Hello Atanu..." required />
                 </div>
-                <Button type="submit" className="w-full rounded-none font-mono-dev bg-[#00d9ff] dark:bg-[#ff3366] hover:-translate-y-1 hover:shadow-[4px_4px_0px_#000] dark:hover:shadow-[4px_4px_0px_#fff] text-black dark:text-white border-2 border-black dark:border-white font-bold py-6 uppercase tracking-widest transition-all">
-                  &gt; Send_Message
+                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 rounded-lg transition-colors text-lg">
+                  Send Message
                 </Button>
               </form>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="md:col-span-2 space-y-6">
-              <div className="dev-glass rounded-none p-8 dev-border-glow bg-white dark:bg-black h-full flex flex-col justify-center space-y-8">
-                <a href={`mailto:${p?.email}`} className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 rounded-none bg-[#ffde00] flex items-center justify-center border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff] group-hover:shadow-[4px_4px_0px_#000] dark:group-hover:shadow-[4px_4px_0px_#fff] group-hover:-translate-y-1 transition-all">
-                    <Mail className="text-black" />
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="md:col-span-2 space-y-8">
+              <div className="service-card w-full h-full flex flex-col justify-center space-y-10 !p-8">
+                <a href={`mailto:${p?.email}`} className="flex items-center gap-6 group">
+                  <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors">
+                    <Mail className="text-blue-600" size={24} />
                   </div>
                   <div>
-                    <div className="font-mono-dev font-bold uppercase tracking-widest text-[10px] text-black dark:text-white mb-1">Email</div>
-                    <div className="text-black dark:text-white group-hover:text-[#ff3366] dark:group-hover:text-[#00d9ff] transition-colors font-black text-sm">{p?.email}</div>
+                    <div className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-1">Email</div>
+                    <div className="text-lg font-medium text-gray-800 group-hover:text-blue-600 transition-colors truncate max-w-[200px] sm:max-w-xs">{p?.email}</div>
                   </div>
                 </a>
                 
-                <div className="flex items-center gap-4 group cursor-default">
-                  <div className="w-12 h-12 rounded-none bg-[#00d9ff] dark:bg-[#ff3366] flex items-center justify-center border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff]">
-                    <MapPin className="text-black dark:text-white" />
+                <div className="flex items-center gap-6 group cursor-default">
+                  <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="text-green-600" size={24} />
                   </div>
                   <div>
-                    <div className="font-mono-dev font-bold uppercase tracking-widest text-[10px] text-black dark:text-white mb-1">Location</div>
-                    <div className="text-black dark:text-white font-black text-sm">{p?.location}</div>
+                    <div className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-1">Location</div>
+                    <div className="text-lg font-medium text-gray-800">{p?.location}</div>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t-2 border-black dark:border-white flex justify-center gap-4">
+                <div className="pt-10 border-t border-gray-100 flex justify-start gap-6">
                   {[
                     { href: p?.github, icon: Github },
                     { href: p?.linkedin, icon: Linkedin },
                     { href: p?.google_scholar, icon: BookOpen }
                   ].map((social, i) => social.href && (
-                    <a key={i} href={social.href} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-none bg-white dark:bg-black flex items-center justify-center text-black dark:text-white hover:bg-[#ffde00] dark:hover:bg-[#ff3366] hover:text-black dark:hover:text-black transition-all border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff] hover:-translate-y-1 hover:shadow-[4px_4px_0px_#000] dark:hover:shadow-[4px_4px_0px_#fff]">
-                      <social.icon size={18} />
+                    <a key={i} href={social.href} target="_blank" rel="noreferrer" className="w-14 h-14 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-white hover:border-gray-300 hover:text-blue-600 hover:-translate-y-1 transition-all">
+                      <social.icon size={24} />
                     </a>
                   ))}
                 </div>

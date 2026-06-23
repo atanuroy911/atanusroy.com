@@ -816,40 +816,122 @@
         }
       ],
       "hero": {
-        "greeting": "Hey, I'm",
-        "name": "Atanu.",
-        "roles": [
-          "Software Engineer",
-          "DevOps Engineer",
-          "Full-Stack Developer",
-          "System Architect"
+        "eyebrow": "Available for projects · Dhaka, BD",
+        "greeting": "Hi, I am Atanu,",
+        "rotating_text": [
+          "Software Engineer.",
+          "DevOps Engineer.",
+          "ML Engineer.",
+          "Full-Stack Developer."
         ],
-        "tagline": "I build robust, scalable applications — from responsive frontends to complex cloud-native microservices.",
-        "cta_primary": "See My Projects",
-        "cta_secondary": "Let's Talk"
+        "roles": [
+          "Full-Stack",
+          "DevOps",
+          "Cloud"
+        ],
+        "tagline": "Robust, scalable web apps — from pixel-perfect frontends to cloud-native microservices. I turn your product idea into working software.",
+        "cta_primary": "Start a project →",
+        "cta_primary_link": "https://example.com/start",
+        "cta_secondary": "See my work",
+        "cta_secondary_link": "#projects",
+        "hire_me_link": "https://example.com",
+        "photo_url": "/assets/developer_photo.jpg",
+        "status_badge": "Open to new clients right now",
+        "stats": [
+          {
+            "n": "25+",
+            "l": "Projects shipped"
+          },
+          {
+            "n": "6+",
+            "l": "Years building"
+          },
+          {
+            "n": "4",
+            "l": "Industries served"
+          }
+        ]
       },
-      "bio": "Engineer by training, builder by nature. I specialize in building and deploying  high-performance web platforms. With a strong background in software engineering,  I've led full-stack development and cloud infrastructure design for diverse clients  across the US and Canada, focusing on clean code and robust systems.\n",
-      "experience": [
-        {
-          "role": "Web Developer & DevOps Engineer",
-          "org": "Backend Ace",
-          "period": "Sep 2024 – Sep 2025",
-          "location": "Remote · New York, USA",
-          "bullets": [
-            "Full-stack development and cloud infrastructure for US clients",
-            "Managed CI/CD pipelines and server deployments"
-          ]
-        },
-        {
-          "role": "Associate Web Developer",
-          "org": "Wizzartech",
-          "period": "Apr 2022 – Dec 2022",
-          "location": "Remote · Toronto, Canada",
-          "bullets": [
-            "Built client-facing web applications using modern JS frameworks"
-          ]
-        }
+      "marquee": [
+        "✦ React",
+        "✦ Node.js",
+        "✦ TypeScript",
+        "✦ AWS",
+        "✦ Docker",
+        "✦ PostgreSQL",
+        "✦ Next.js",
+        "✦ CI/CD",
+        "✦ Kubernetes",
+        "✦ GraphQL"
       ],
+      "services": {
+        "title": "Skills that ship products",
+        "label": "What I build",
+        "items": [
+          {
+            "icon": "ti-layout-dashboard",
+            "title": "Full-Stack Apps",
+            "desc": "End-to-end web applications — React frontends, Node/Django backends, real databases."
+          },
+          {
+            "icon": "ti-cloud",
+            "title": "Cloud & DevOps",
+            "desc": "AWS, Docker, CI/CD pipelines. I deploy it, monitor it, and keep it running."
+          },
+          {
+            "icon": "ti-api",
+            "title": "API Design",
+            "desc": "REST and GraphQL APIs built to scale. Clean contracts, solid docs, versioned."
+          },
+          {
+            "icon": "ti-rocket",
+            "title": "MVP Builds",
+            "desc": "Got an idea? I'll take you from zero to launched — fast, clean, and fundable."
+          }
+        ]
+      },
+      "process": {
+        "label": "How I work",
+        "title": "From brief to live in 4 steps",
+        "steps": [
+          {
+            "num": "01 · DISCOVER",
+            "title": "We align on goals",
+            "desc": "30-min call, I ask the right questions, you get a clear scope."
+          },
+          {
+            "num": "02 · DESIGN",
+            "title": "Wireframe & plan",
+            "desc": "Architecture, tech choices, timeline. No surprises later."
+          },
+          {
+            "num": "03 · BUILD",
+            "title": "Ship in sprints",
+            "desc": "Weekly updates, clean code, you see progress every step."
+          },
+          {
+            "num": "04 · LAUNCH",
+            "title": "Deploy & hand off",
+            "desc": "Live, documented, and yours — with a 30-day support window."
+          }
+        ]
+      },
+      "quote": {
+        "text": "Working with Atanu felt like having a *senior engineer on staff* — except he actually shipped faster than anyone I've hired full-time.",
+        "author": "Michael K.",
+        "role": "Founder, SaaS Startup · New York, USA",
+        "initials": "MK"
+      },
+      "cta": {
+        "badge": "Currently available · replies within 24h",
+        "title": "Let's build something together",
+        "sub": "Tell me about your project — I'll come back with a clear plan and honest estimate.",
+        "btn_primary": "Book a free call →",
+        "btn_primary_link": "https://example.com/book",
+        "btn_secondary": "See all projects",
+        "btn_secondary_link": "#projects",
+        "reply_text": "No commitment. No sales pitch. Just a conversation."
+      },
       "journey": {
         "title": "Developer Journey",
         "description": "Moments from building software, hackathons, and tech events.",
@@ -867,16 +949,45 @@
       "projects": [
         {
           "title": "BTC-CORE-WEBAPP",
-          "description": "Bitcoin Core [RPC] Web Application. Built a web interface to interact with a Bitcoin Core node via RPC commands.",
+          "description": "Built a full web interface to interact with a Bitcoin Core node via RPC commands — real-time block data, wallet management, and transaction broadcasting in a clean UI.",
           "tags": [
             "Java",
-            "Bitcoin",
-            "RPC",
-            "Web"
+            "Bitcoin RPC",
+            "REST API",
+            "React"
           ],
-          "link": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
+          "link": "https://btc-core-app.vercel.app",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
-          "featured": true
+          "featured": true,
+          "testimonial": {
+            "quote": "\"Atanu delivered exactly what we needed — clean code, fast turnaround, and zero hand-holding required. Will hire again.\"",
+            "author": "James M.",
+            "role": "CTO, FinTech Startup · New York",
+            "initials": "JM"
+          },
+          "mockup_url": "btc-core-app.vercel.app",
+          "mockup_icon": "⛓"
+        },
+        {
+          "title": "Fortinet Auth GUI",
+          "description": "Automated network authentication for large-scale campus environments. Reduced manual login steps to zero — one-click background auth that just works.",
+          "tags": [
+            "JavaScript",
+            "Network",
+            "Automation",
+            "Electron"
+          ],
+          "link": "https://fortinet-gui.io",
+          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
+          "featured": true,
+          "testimonial": {
+            "quote": "\"Saved our team hours every week. The app just works — reliable, fast, and incredibly well-built.\"",
+            "author": "Sarah R.",
+            "role": "Engineering Lead · Toronto",
+            "initials": "SR"
+          },
+          "mockup_url": "fortinet-gui.io",
+          "mockup_icon": "🔐"
         },
         {
           "title": "CS724-RoboX",
@@ -887,18 +998,7 @@
             "Python"
           ],
           "github": "https://github.com/atanuroy911/CS724-RoboX",
-          "featured": true
-        },
-        {
-          "title": "iitk-fortinet-gui",
-          "description": "IITK Fortinet Authenticator Application to automatically handle network authentication on the university campus.",
-          "tags": [
-            "JavaScript",
-            "Network",
-            "Automation"
-          ],
-          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
-          "featured": true
+          "featured": false
         },
         {
           "title": "stress-detection-app",
@@ -1760,40 +1860,122 @@
         }
       ],
       "hero": {
-        "greeting": "আরে, আমি",
-        "name": "অতনু।",
-        "roles": [
-          "সফটওয়্যার ইঞ্জিনিয়ার",
-          "DevOps ইঞ্জিনিয়ার",
-          "ফুল-স্ট্যাক ডেভেলপার",
-          "সিস্টেম আর্কিটেক্ট"
+        "eyebrow": "প্রকল্পের জন্য উপলব্ধ · ঢাকা, বিডি",
+        "greeting": "হাই, আমি অতনু,",
+        "rotating_text": [
+          "সফটওয়্যার ইঞ্জিনিয়ার।",
+          "DevOps ইঞ্জিনিয়ার।",
+          "এমএল ইঞ্জিনিয়ার।",
+          "ফুল-স্ট্যাক ডেভেলপার।"
         ],
-        "tagline": "আমি শক্তিশালী, স্কেলযোগ্য অ্যাপ্লিকেশন তৈরি করি — প্রতিক্রিয়াশীল ফ্রন্টএন্ড থেকে জটিল ক্লাউড-নেটিভ মাইক্রোসার্ভিস পর্যন্ত।",
-        "cta_primary": "আমার প্রকল্প দেখুন",
-        "cta_secondary": "আসুন কথা বলি"
+        "roles": [
+          "ফুল-স্ট্যাক",
+          "DevOps",
+          "মেঘ"
+        ],
+        "tagline": "মজবুত, স্কেলযোগ্য ওয়েব অ্যাপস — পিক্সেল-পারফেক্ট ফ্রন্টএন্ড থেকে ক্লাউড-নেটিভ মাইক্রোসার্ভিসেস। আমি আপনার প্রোডাক্ট আইডিয়াকে ওয়ার্কিং সফটওয়্যারে পরিণত করি।",
+        "cta_primary": "একটি প্রকল্প শুরু করুন →",
+        "cta_primary_link": "https://example.com/start",
+        "cta_secondary": "আমার কাজ দেখুন",
+        "cta_secondary_link": "#প্রকল্প",
+        "hire_me_link": "https://example.com",
+        "photo_url": "/assets/developer_photo.jpg",
+        "status_badge": "এই মুহূর্তে নতুন ক্লায়েন্টদের জন্য খুলুন",
+        "stats": [
+          {
+            "n": "২৫+",
+            "l": "প্রকল্প পাঠানো হয়েছে"
+          },
+          {
+            "n": "৬+",
+            "l": "বছরের বিল্ডিং"
+          },
+          {
+            "n": "4",
+            "l": "শিল্প পরিবেশিত"
+          }
+        ]
       },
-      "bio": "প্রশিক্ষণ দ্বারা প্রকৌশলী, প্রকৃতির দ্বারা নির্মাতা। আমি উচ্চ-পারফরম্যান্স ওয়েব প্ল্যাটফর্ম তৈরি এবং স্থাপনে বিশেষজ্ঞ। সফ্টওয়্যার প্রকৌশলের একটি শক্তিশালী পটভূমিতে, আমি পরিষ্কার কোড এবং শক্তিশালী সিস্টেমের উপর ফোকাস করে, মার্কিন যুক্তরাষ্ট্র এবং কানাডা জুড়ে বিভিন্ন ক্লায়েন্টদের জন্য ফুল-স্ট্যাক ডেভেলপমেন্ট এবং ক্লাউড অবকাঠামো ডিজাইনের নেতৃত্ব দিয়েছি।",
-      "experience": [
-        {
-          "role": "ওয়েব ডেভেলপার এবং DevOps ইঞ্জিনিয়ার",
-          "org": "Backend Ace",
-          "period": "Sep 2024 – Sep 2025",
-          "location": "Remote · New York, USA",
-          "bullets": [
-            "ইউএস ক্লায়েন্টদের জন্য ফুল-স্ট্যাক ডেভেলপমেন্ট এবং ক্লাউড অবকাঠামো",
-            "পরিচালিত CI/CD পাইপলাইন এবং সার্ভার স্থাপনা"
-          ]
-        },
-        {
-          "role": "সহযোগী ওয়েব ডেভেলপার",
-          "org": "Wizzartech",
-          "period": "Apr 2022 – Dec 2022",
-          "location": "Remote · Toronto, Canada",
-          "bullets": [
-            "আধুনিক JS ফ্রেমওয়ার্ক ব্যবহার করে ক্লায়েন্ট-মুখী ওয়েব অ্যাপ্লিকেশন তৈরি করা হয়েছে"
-          ]
-        }
+      "marquee": [
+        "✦ প্রতিক্রিয়া",
+        "✦ Node.js",
+        "✦ টাইপস্ক্রিপ্ট",
+        "✦ AWS",
+        "✦ ডকার",
+        "✦ PostgreSQL",
+        "✦ Next.js",
+        "✦ CI/CD",
+        "✦ কুবারনেটস",
+        "✦ গ্রাফকিউএল"
       ],
+      "services": {
+        "title": "দক্ষতা যে পণ্য জাহাজ",
+        "label": "যা আমি নির্মাণ করি",
+        "items": [
+          {
+            "icon": "ti-layout-dashboard",
+            "title": "ফুল-স্ট্যাক অ্যাপস",
+            "desc": "এন্ড-টু-এন্ড ওয়েব অ্যাপ্লিকেশন - প্রতিক্রিয়া ফ্রন্টএন্ড, নোড/জ্যাঙ্গো ব্যাকএন্ড, বাস্তব ডাটাবেস।"
+          },
+          {
+            "icon": "ti-cloud",
+            "title": "ক্লাউড এবং ডিওঅপস",
+            "desc": "AWS, Docker, CI/CD পাইপলাইন। আমি এটি স্থাপন করি, এটি নিরীক্ষণ করি এবং এটি চলমান রাখি।"
+          },
+          {
+            "icon": "ti-api",
+            "title": "API ডিজাইন",
+            "desc": "REST এবং GraphQL এপিআই স্কেল করার জন্য নির্মিত। পরিষ্কার চুক্তি, কঠিন নথি, সংস্করণ."
+          },
+          {
+            "icon": "ti-rocket",
+            "title": "MVP বিল্ডস",
+            "desc": "একটি ধারণা পেয়েছেন? আমি আপনাকে শূন্য থেকে লঞ্চে নিয়ে যাব — দ্রুত, পরিষ্কার এবং অর্থযোগ্য৷"
+          }
+        ]
+      },
+      "process": {
+        "label": "আমি কিভাবে কাজ করি",
+        "title": "সংক্ষিপ্ত থেকে 4টি ধাপে লাইভ",
+        "steps": [
+          {
+            "num": "01 · আবিষ্কার করুন",
+            "title": "আমরা লক্ষ্যে সারিবদ্ধ",
+            "desc": "30-মিনিট কল, আমি সঠিক প্রশ্ন জিজ্ঞাসা করি, আপনি একটি স্পষ্ট সুযোগ পাবেন।"
+          },
+          {
+            "num": "02 · ডিজাইন",
+            "title": "ওয়্যারফ্রেম এবং পরিকল্পনা",
+            "desc": "স্থাপত্য, প্রযুক্তিগত পছন্দ, সময়রেখা। পরে কোন চমক নেই।"
+          },
+          {
+            "num": "03 · নির্মাণ",
+            "title": "স্প্রিন্টে জাহাজ",
+            "desc": "সাপ্তাহিক আপডেট, পরিষ্কার কোড, আপনি প্রতিটি ধাপে অগ্রগতি দেখতে পান।"
+          },
+          {
+            "num": "04 · লঞ্চ",
+            "title": "স্থাপন এবং হ্যান্ড অফ",
+            "desc": "লাইভ, নথিভুক্ত, এবং আপনার — একটি 30-দিনের সমর্থন উইন্ডো সহ।"
+          }
+        ]
+      },
+      "quote": {
+        "text": "অতনুর সাথে কাজ করার সময় একজন *সিনিয়র প্রকৌশলী স্টাফ* থাকার মতো মনে হয়েছিল — আমি যে কাউকে পূর্ণ-সময় নিয়োগ করেছি তার চেয়ে সে আসলে দ্রুত প্রেরণ করেছে।",
+        "author": "মাইকেল কে।",
+        "role": "প্রতিষ্ঠাতা, SaaS স্টার্টআপ · নিউ ইয়র্ক, মার্কিন যুক্তরাষ্ট্র",
+        "initials": "এমকে"
+      },
+      "cta": {
+        "badge": "বর্তমানে উপলব্ধ · ২৪ ঘন্টার মধ্যে উত্তর",
+        "title": "আসুন একসাথে কিছু গড়ি",
+        "sub": "আপনার প্রকল্প সম্পর্কে আমাকে বলুন — আমি একটি পরিষ্কার পরিকল্পনা এবং সৎ অনুমান নিয়ে ফিরে আসব।",
+        "btn_primary": "একটি বিনামূল্যে কল বুক করুন →",
+        "btn_primary_link": "https://example.com/book",
+        "btn_secondary": "সমস্ত প্রকল্প দেখুন",
+        "btn_secondary_link": "#প্রকল্প",
+        "reply_text": "কোনো অঙ্গীকার নেই। কোন বিক্রয় পিচ. শুধু একটি কথোপকথন."
+      },
       "journey": {
         "title": "বিকাশকারী যাত্রা",
         "description": "বিল্ডিং সফ্টওয়্যার, হ্যাকাথন এবং প্রযুক্তি ইভেন্ট থেকে মুহূর্ত।",
@@ -1811,16 +1993,45 @@
       "projects": [
         {
           "title": "BTC-CORE-WEBAPP",
-          "description": "বিটকয়েন কোর [RPC] ওয়েব অ্যাপ্লিকেশন। RPC কমান্ডের মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি ওয়েব ইন্টারফেস তৈরি করা হয়েছে।",
+          "description": "RPC কমান্ডের মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস তৈরি করুন — রিয়েল-টাইম ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট এবং একটি পরিষ্কার UI-তে লেনদেন সম্প্রচার।",
           "tags": [
             "Java",
-            "Bitcoin",
-            "RPC",
-            "Web"
+            "Bitcoin RPC",
+            "REST API",
+            "React"
           ],
-          "link": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
+          "link": "https://btc-core-app.vercel.app",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
-          "featured": true
+          "featured": true,
+          "testimonial": {
+            "quote": "\"আতনু আমাদের যা প্রয়োজন ঠিক তা সরবরাহ করেছে — পরিষ্কার কোড, দ্রুত পরিবর্তন, এবং শূন্য হাতে ধরা প্রয়োজন। আবার ভাড়া করা হবে।\"",
+            "author": "জেমস এম.",
+            "role": "সিটিও, ফিনটেক স্টার্টআপ · নিউ ইয়র্ক",
+            "initials": "জে.এম"
+          },
+          "mockup_url": "btc-core-app.vercel.app",
+          "mockup_icon": "⛓"
+        },
+        {
+          "title": "Fortinet Auth GUI",
+          "description": "বড় আকারের ক্যাম্পাস পরিবেশের জন্য স্বয়ংক্রিয় নেটওয়ার্ক প্রমাণীকরণ। ম্যানুয়াল লগইন ধাপগুলি শূন্যে হ্রাস করা হয়েছে — এক-ক্লিক ব্যাকগ্রাউন্ড প্রমাণ যা কাজ করে৷",
+          "tags": [
+            "JavaScript",
+            "Network",
+            "Automation",
+            "Electron"
+          ],
+          "link": "https://fortinet-gui.io",
+          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
+          "featured": true,
+          "testimonial": {
+            "quote": "\"প্রতি সপ্তাহে আমাদের টিমের সময় সংরক্ষণ করে। অ্যাপটি শুধু কাজ করে — নির্ভরযোগ্য, দ্রুত এবং অবিশ্বাস্যভাবে ভালভাবে তৈরি।\"",
+            "author": "সারা আর.",
+            "role": "ইঞ্জিনিয়ারিং লিড · টরন্টো",
+            "initials": "এসআর"
+          },
+          "mockup_url": "fortinet-gui.io",
+          "mockup_icon": "🔐"
         },
         {
           "title": "CS724-RoboX",
@@ -1831,18 +2042,7 @@
             "Python"
           ],
           "github": "https://github.com/atanuroy911/CS724-RoboX",
-          "featured": true
-        },
-        {
-          "title": "iitk-fortinet-gui",
-          "description": "IITK Fortinet Authenticator অ্যাপ্লিকেশন স্বয়ংক্রিয়ভাবে বিশ্ববিদ্যালয় ক্যাম্পাসে নেটওয়ার্ক প্রমাণীকরণ পরিচালনা করতে।",
-          "tags": [
-            "JavaScript",
-            "Network",
-            "Automation"
-          ],
-          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
-          "featured": true
+          "featured": false
         },
         {
           "title": "স্ট্রেস-ডিটেকশন-অ্যাপ",

@@ -54,14 +54,14 @@ export default async function DevBlogPostPage({
   }
 
   return (
-    <div className="py-24 bg-white dark:bg-black min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 mt-16">
+    <div className="port pt-32 pb-24 min-h-screen">
+      <div className="max-w-3xl mx-auto px-6">
         {/* Back link */}
         <Link
           href={`/${locale}/developer/blog`}
-          className="inline-flex items-center gap-2 font-mono-dev text-xs font-bold uppercase tracking-widest text-black dark:text-white hover:text-[#00d9ff] dark:hover:text-[#00d9ff] transition-colors mb-10 border-b-2 border-transparent hover:border-[#00d9ff] pb-0.5"
+          className="inline-flex items-center gap-2 font-mono-dev text-sm font-semibold uppercase tracking-widest text-gray-500 hover:text-blue-600 transition-colors mb-12"
         >
-          <ArrowLeft size={14} /> Back to Blog
+          <ArrowLeft size={16} /> Back to Blog
         </Link>
 
         {/* Cover image */}
@@ -69,39 +69,37 @@ export default async function DevBlogPostPage({
           <img
             src={post.cover_image}
             alt={post.title}
-            className="w-full h-64 object-cover border-4 border-black dark:border-white shadow-[8px_8px_0px_#000] dark:shadow-[8px_8px_0px_#fff] mb-10"
+            className="w-full h-80 object-cover rounded-xl border border-gray-100 shadow-sm mb-12"
           />
         )}
 
         {/* Header */}
-        <header className="mb-10">
-          <div className="flex flex-wrap items-center gap-3 mb-4">
+        <header className="mb-12">
+          <div className="flex flex-wrap items-center gap-4 mb-6">
             <span
-              className="font-mono-dev text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff]"
+              className="text-sm font-semibold uppercase tracking-widest px-3 py-1 rounded-md"
               style={{ background: cat.bg, color: cat.color }}
             >
               {cat.label}
             </span>
-            <span className="flex items-center gap-1.5 font-mono-dev text-xs text-slate-500 dark:text-slate-400">
-              <Calendar size={11} /> {formatBlogDate(post.date)}
+            <span className="flex items-center gap-2 text-sm text-gray-500">
+              <Calendar size={16} /> {formatBlogDate(post.date)}
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-black text-black dark:text-white uppercase tracking-tighter leading-none mb-5">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             {post.title}
           </h1>
 
-          <div className="h-2 w-24 bg-[#00d9ff] border-2 border-black dark:border-white shadow-[3px_3px_0px_#000] dark:shadow-[3px_3px_0px_#fff] mb-6" />
-
-          <p className="text-lg font-medium text-black dark:text-white leading-relaxed opacity-70 max-w-2xl">
+          <p className="text-xl text-gray-600 leading-relaxed mb-8">
             {post.summary}
           </p>
 
           {/* Tags */}
           {post.tags?.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-5">
+            <div className="flex flex-wrap gap-2 mt-6">
               {post.tags.map((t) => (
-                <span key={t} className="font-mono-dev text-[10px] font-bold uppercase px-2 py-0.5 border-2 border-black dark:border-white bg-white dark:bg-black text-black dark:text-white shadow-[1px_1px_0px_#000] dark:shadow-[1px_1px_0px_#fff]">
+                <span key={t} className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full font-medium">
                   #{t}
                 </span>
               ))}
@@ -110,11 +108,11 @@ export default async function DevBlogPostPage({
         </header>
 
         {/* Thick separator */}
-        <div className="h-1 w-full bg-black dark:bg-white mb-10" />
+        <div className="h-px w-full bg-gray-200 mb-12" />
 
         {/* Markdown body */}
         {post.content ? (
-          <div className="max-w-none">
+          <div className="max-w-none prose prose-lg prose-gray">
             <MarkdownRenderer content={post.content} mode="developer" />
           </div>
         ) : (
@@ -123,17 +121,17 @@ export default async function DevBlogPostPage({
 
         {/* Footer CTAs */}
         {(post.link || post.github) && (
-          <footer className="mt-16 pt-6 border-t-2 border-black dark:border-white flex flex-wrap gap-4">
+          <footer className="mt-16 pt-8 border-t border-gray-200 flex flex-wrap gap-4">
             {post.link && (
               <a href={post.link} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#ffde00] border-2 border-black dark:border-white font-bold text-black uppercase tracking-widest text-xs shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000] dark:hover:shadow-[2px_2px_0px_#fff] transition-all">
-                <ExternalLink size={14} /> External Link
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                <ExternalLink size={18} /> External Link
               </a>
             )}
             {post.github && (
               <a href={post.github} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-black dark:bg-white border-2 border-black dark:border-white font-bold text-white dark:text-black uppercase tracking-widest text-xs shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000] dark:hover:shadow-[2px_2px_0px_#fff] transition-all">
-                <Code2 size={14} /> View on GitHub
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                <Code2 size={18} /> View on GitHub
               </a>
             )}
           </footer>

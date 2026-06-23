@@ -4,16 +4,46 @@
 projects:
   - title: BTC-CORE-WEBAPP
     description: >-
-      বিটকয়েন কোর [RPC] ওয়েব অ্যাপ্লিকেশন। RPC কমান্ডের মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি
-      ওয়েব ইন্টারফেস তৈরি করা হয়েছে।
+      RPC কমান্ডের মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস তৈরি করুন —
+      রিয়েল-টাইম ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট এবং একটি পরিষ্কার UI-তে লেনদেন সম্প্রচার।
     tags:
       - Java
-      - Bitcoin
-      - RPC
-      - Web
-    link: https://github.com/atanuroy911/BTC-CORE-WEBAPP
+      - Bitcoin RPC
+      - REST API
+      - React
+    link: https://btc-core-app.vercel.app
     github: https://github.com/atanuroy911/BTC-CORE-WEBAPP
     featured: true
+    testimonial:
+      quote: >-
+        "আতনু আমাদের যা প্রয়োজন ঠিক তা সরবরাহ করেছে — পরিষ্কার কোড, দ্রুত পরিবর্তন, এবং শূন্য হাতে ধরা প্রয়োজন। আবার
+        ভাড়া করা হবে।"
+      author: জেমস এম.
+      role: সিটিও, ফিনটেক স্টার্টআপ · নিউ ইয়র্ক
+      initials: জে.এম
+    mockup_url: btc-core-app.vercel.app
+    mockup_icon: ⛓
+  - title: Fortinet Auth GUI
+    description: >-
+      বড় আকারের ক্যাম্পাস পরিবেশের জন্য স্বয়ংক্রিয় নেটওয়ার্ক প্রমাণীকরণ। ম্যানুয়াল লগইন ধাপগুলি শূন্যে হ্রাস করা
+      হয়েছে — এক-ক্লিক ব্যাকগ্রাউন্ড প্রমাণ যা কাজ করে৷
+    tags:
+      - JavaScript
+      - Network
+      - Automation
+      - Electron
+    link: https://fortinet-gui.io
+    github: https://github.com/atanuroy911/iitk-fortinet-gui
+    featured: true
+    testimonial:
+      quote: >-
+        "প্রতি সপ্তাহে আমাদের টিমের সময় সংরক্ষণ করে। অ্যাপটি শুধু কাজ করে — নির্ভরযোগ্য, দ্রুত এবং অবিশ্বাস্যভাবে
+        ভালভাবে তৈরি।"
+      author: সারা আর.
+      role: ইঞ্জিনিয়ারিং লিড · টরন্টো
+      initials: এসআর
+    mockup_url: fortinet-gui.io
+    mockup_icon: 🔐
   - title: CS724-RoboX
     description: >-
       আইআইটি কানপুরে রোবোটিক্স এবং স্বায়ত্তশাসিত সিস্টেম সম্পর্কিত একটি ভান্ডার। পথ পরিকল্পনা এবং নিয়ন্ত্রণের জন্য
@@ -23,17 +53,7 @@ projects:
       - Robotics
       - Python
     github: https://github.com/atanuroy911/CS724-RoboX
-    featured: true
-  - title: iitk-fortinet-gui
-    description: >-
-      IITK Fortinet Authenticator অ্যাপ্লিকেশন স্বয়ংক্রিয়ভাবে বিশ্ববিদ্যালয় ক্যাম্পাসে নেটওয়ার্ক প্রমাণীকরণ পরিচালনা
-      করতে।
-    tags:
-      - JavaScript
-      - Network
-      - Automation
-    github: https://github.com/atanuroy911/iitk-fortinet-gui
-    featured: true
+    featured: false
   - title: স্ট্রেস-ডিটেকশন-অ্যাপ
     description: শারীরবৃত্তীয় ডেটা এবং পাইথন ব্যবহার করে স্ট্রেস লেভেলের পূর্বাভাস দেওয়ার জন্য একটি ব্যাপক মেশিন লার্নিং সিস্টেম।
     tags:

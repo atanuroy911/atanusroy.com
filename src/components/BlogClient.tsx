@@ -75,56 +75,51 @@ function BlogIndex({
 
   if (isDev) {
     return (
-      <div className="py-24 bg-white dark:bg-black min-h-screen">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-16">
-          {/* Header */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
-            <span className="font-mono-dev text-sm text-black dark:text-black uppercase font-bold mb-2 block tracking-widest bg-[#00d9ff] w-fit px-2 py-0.5 border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff]">// blog</span>
-            <h1 className="text-5xl md:text-6xl font-black text-black dark:text-white uppercase tracking-tighter">Blog & Notes</h1>
-            <div className="h-2 w-24 mt-4 bg-black dark:bg-white" />
-            <p className="mt-4 text-black dark:text-white font-medium text-base max-w-2xl">
-              Dev logs, project write-ups, tools, and technical deep-dives.
-            </p>
-          </motion.div>
+      <div className="port pt-40 pb-32 min-h-screen">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="mb-24 text-center">
+            <div className="sec-label">// blog</div>
+            <div className="sec-title">Blog & Notes</div>
+            <div className="sec-sub mb-12">Dev logs, project write-ups, tools, and technical deep-dives.</div>
 
-          {/* Search */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }} className="relative mb-5">
-            <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-black dark:text-white opacity-50" />
-            <input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search posts..."
-              className="w-full pl-9 pr-4 py-2.5 border-2 border-black dark:border-white bg-white dark:bg-black text-black dark:text-white text-sm font-mono-dev focus:outline-none shadow-[4px_4px_0px_#000] dark:shadow-[4px_4px_0px_#fff] focus:shadow-[2px_2px_0px_#000] dark:focus:shadow-[2px_2px_0px_#fff] transition-all placeholder:text-slate-400" />
-          </motion.div>
+            {/* Search & Categories */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative mb-8">
+                <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+                <input value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search posts..."
+                  className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 transition-colors text-lg" />
+              </div>
 
-          {/* Category pills */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap gap-2 mb-3">
-            {['all', ...categories.map((c) => c.id)].map((catId) => {
-              const cat = catId === 'all' ? null : getCategoryMeta(catId)
-              return (
-                <button key={catId} onClick={() => setActiveCategory(catId)}
-                  style={activeCategory === catId && cat ? { background: cat.color, color: '#fff', borderColor: cat.color } : cat ? { background: cat.bg, color: cat.color, borderColor: cat.color + '88' } : {}}
-                  className={`font-mono-dev text-xs font-bold uppercase tracking-widest px-3 py-1 border-2 transition-all hover:translate-y-[1px] shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff] hover:shadow-[1px_1px_0px_#000] dark:hover:shadow-[1px_1px_0px_#fff] ${activeCategory === catId && !cat ? 'bg-black dark:bg-white text-white dark:text-black border-black dark:border-white' : !cat ? 'bg-white dark:bg-black text-black dark:text-white border-black dark:border-white' : ''}`}>
-                  {catId === 'all' ? 'ALL' : cat?.label}
-                </button>
-              )
-            })}
-          </motion.div>
+              <div className="flex flex-wrap justify-center gap-3 mb-6">
+                {['all', ...categories.map((c) => c.id)].map((catId) => {
+                  const cat = catId === 'all' ? null : getCategoryMeta(catId)
+                  return (
+                    <button key={catId} onClick={() => setActiveCategory(catId)}
+                      style={activeCategory === catId && cat ? { background: cat.color, color: '#fff', borderColor: cat.color } : cat ? { background: cat.bg, color: cat.color, borderColor: cat.color + '44' } : {}}
+                      className={`project-tag px-4 py-2 border transition-all rounded text-sm ${activeCategory === catId && !cat ? 'bg-blue-600 text-white border-blue-600' : !cat ? 'bg-gray-50 text-gray-600 border-gray-200' : ''}`}>
+                      {catId === 'all' ? 'ALL' : cat?.label}
+                    </button>
+                  )
+                })}
+              </div>
 
-          {/* Tag chips */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="flex flex-wrap gap-1.5 mb-10">
-            {allTags.map((tag) => (
-              <button key={tag} onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-                className={`font-mono-dev text-[10px] font-bold uppercase px-2 py-0.5 border-2 border-black dark:border-white transition-all ${activeTag === tag ? 'bg-[#ff3366] text-white shadow-[1px_1px_0px_#000]' : 'bg-white dark:bg-black text-black dark:text-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff]'}`}>
-                #{tag}
-              </button>
-            ))}
-          </motion.div>
+              <div className="flex flex-wrap justify-center gap-2 mb-16">
+                {allTags.map((tag) => (
+                  <button key={tag} onClick={() => setActiveTag(activeTag === tag ? null : tag)}
+                    className={`pill transition-all ${activeTag === tag ? '!bg-blue-600 !text-white !border-blue-600' : ''}`}>
+                    #{tag}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
 
-          {/* Card grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid gap-12">
             <AnimatePresence mode="popLayout">
               {filtered.length === 0 ? (
-                <motion.div key="empty" className="col-span-3 py-24 text-center font-mono-dev text-black dark:text-white font-bold uppercase tracking-widest opacity-40">
-                  // no_posts_found
+                <motion.div key="empty" className="py-24 text-center sec-sub">
+                  No posts found.
                 </motion.div>
               ) : filtered.map((post, i) => {
                 const cat = getCategoryMeta(post.category)
@@ -133,53 +128,54 @@ function BlogIndex({
                     initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95 }} transition={{ delay: i * 0.05 }}
                     whileHover={{ y: -4 }}
-                    className={`dev-glass dev-border-glow bg-white dark:bg-black flex flex-col group ${post.pinned ? 'border-[3px] border-[#ff3366] dark:border-[#00d9ff]' : ''}`}
+                    className="service-card cursor-pointer !p-0 overflow-hidden flex flex-col md:flex-row"
                   >
                     {/* Cover image strip or fallback image */}
                     {post.cover_image ? (
-                      <img src={post.cover_image} alt={post.title} className="w-full h-36 object-cover border-b-2 border-black dark:border-white" />
+                      <img src={post.cover_image} alt={post.title} className="w-full md:w-1/3 md:h-auto h-48 object-cover border-b md:border-b-0 md:border-r border-gray-100" />
                     ) : (
-                      <img src="/assets/placeholder-generic.svg" alt={post.title} className="w-full h-36 object-cover border-b-2 border-black dark:border-white" />
+                      <div className="w-full md:w-1/3 md:h-auto h-48 bg-gray-50 border-b md:border-b-0 md:border-r border-gray-100 flex items-center justify-center">
+                        <ExternalLink className="text-gray-300" size={48} />
+                      </div>
                     )}
 
-                    <div className="p-5 flex flex-col flex-1">
-                      <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    <div className="p-8 flex flex-col flex-1 items-start text-left w-full">
+                      <div className="flex items-center gap-3 mb-4 flex-wrap">
                         {post.pinned && (
-                          <span className="flex items-center gap-1 text-[9px] font-mono-dev font-bold uppercase text-white bg-[#ff3366] px-2 py-0.5 border border-black dark:border-white shadow-[1px_1px_0px_#000]">
-                            <Pin size={8} /> PINNED
+                          <span className="flex items-center gap-1 text-[11px] font-bold uppercase text-red-600 bg-red-50 px-2 py-1 border border-red-200 rounded">
+                            <Pin size={10} /> PINNED
                           </span>
                         )}
-                        <span className="font-mono-dev text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 border-2 border-black dark:border-white shadow-[1px_1px_0px_#000] dark:shadow-[1px_1px_0px_#fff]"
-                          style={{ background: cat.bg, color: cat.color }}>
+                        <span className="project-tag px-3 py-1 border rounded"
+                          style={{ background: cat.bg, color: cat.color, borderColor: cat.color + '44' }}>
                           {cat.label}
                         </span>
-                        <span className="flex items-center gap-1 font-mono-dev text-[10px] text-slate-500 dark:text-slate-400">
-                          <Calendar size={9} /> {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                        <span className="flex items-center gap-1 text-sm text-gray-500">
+                          <Calendar size={14} /> {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                         </span>
                       </div>
 
-                      <h2 className="text-lg font-black uppercase text-black dark:text-white leading-snug mb-2 group-hover:text-[#00d9ff] transition-colors">{post.title}</h2>
-                      <p className="text-sm text-black dark:text-white font-medium leading-relaxed mb-3 flex-1 opacity-70">{post.summary}</p>
+                      <h2 className="project-title !text-2xl !mb-4 group-hover:text-blue-600 transition-colors">{post.title}</h2>
+                      <p className="project-desc !text-base mb-6 flex-1">{post.summary}</p>
 
-                      <div className="flex flex-wrap gap-1 mb-4">
-                        {post.tags?.slice(0, 4).map((t) => (
-                          <span key={t} className="font-mono-dev text-[9px] uppercase px-1.5 py-0.5 border border-black/30 dark:border-white/30 text-black dark:text-white opacity-60">#{t}</span>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {post.tags?.slice(0, 6).map((t) => (
+                          <span key={t} className="pill">#{t}</span>
                         ))}
                       </div>
 
-                      <div className="flex items-center gap-3 pt-3 border-t-2 border-black dark:border-white">
-                        <Link href={`${basePath}/${post.id}`}
-                          className="flex items-center gap-1.5 font-mono-dev text-xs font-bold uppercase tracking-widest text-black dark:text-white hover:text-[#00d9ff] dark:hover:text-[#00d9ff] transition-colors">
-                          Read Post <ArrowRight size={12} />
+                      <div className="flex items-center gap-4 pt-6 border-t border-gray-100 w-full mt-auto">
+                        <Link href={`${basePath}/${post.id}`} className="project-cta flex items-center gap-2">
+                          Read Post <ArrowRight size={16} />
                         </Link>
                         {post.github && (
-                          <a href={post.github} target="_blank" rel="noopener noreferrer" className="ml-auto font-mono-dev text-xs font-bold uppercase text-black dark:text-white hover:text-[#00d9ff] transition-colors flex items-center gap-1">
-                            <Code2 size={11} /> GitHub
+                          <a href={post.github} target="_blank" rel="noopener noreferrer" className="ml-auto text-sm font-semibold text-gray-500 hover:text-blue-600 transition-colors flex items-center gap-1">
+                            <Code2 size={16} /> GitHub
                           </a>
                         )}
                         {post.link && (
-                          <a href={post.link} target="_blank" rel="noopener noreferrer" className="ml-auto font-mono-dev text-xs font-bold uppercase text-black dark:text-white hover:text-[#00d9ff] transition-colors flex items-center gap-1">
-                            <ExternalLink size={11} /> Link
+                          <a href={post.link} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-gray-500 hover:text-blue-600 transition-colors flex items-center gap-1 ml-4">
+                            <ExternalLink size={16} /> Link
                           </a>
                         )}
                       </div>

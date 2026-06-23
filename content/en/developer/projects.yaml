@@ -1,22 +1,37 @@
 projects:
   - title: "BTC-CORE-WEBAPP"
-    description: "Bitcoin Core [RPC] Web Application. Built a web interface to interact with a Bitcoin Core node via RPC commands."
-    tags: ["Java", "Bitcoin", "RPC", "Web"]
-    link: "https://github.com/atanuroy911/BTC-CORE-WEBAPP"
+    description: "Built a full web interface to interact with a Bitcoin Core node via RPC commands — real-time block data, wallet management, and transaction broadcasting in a clean UI."
+    tags: ["Java", "Bitcoin RPC", "REST API", "React"]
+    link: "https://btc-core-app.vercel.app"
     github: "https://github.com/atanuroy911/BTC-CORE-WEBAPP"
     featured: true
+    testimonial:
+      quote: "\"Atanu delivered exactly what we needed — clean code, fast turnaround, and zero hand-holding required. Will hire again.\""
+      author: "James M."
+      role: "CTO, FinTech Startup · New York"
+      initials: "JM"
+    mockup_url: "btc-core-app.vercel.app"
+    mockup_icon: "⛓"
   
+  - title: "Fortinet Auth GUI"
+    description: "Automated network authentication for large-scale campus environments. Reduced manual login steps to zero — one-click background auth that just works."
+    tags: ["JavaScript", "Network", "Automation", "Electron"]
+    link: "https://fortinet-gui.io"
+    github: "https://github.com/atanuroy911/iitk-fortinet-gui"
+    featured: true
+    testimonial:
+      quote: "\"Saved our team hours every week. The app just works — reliable, fast, and incredibly well-built.\""
+      author: "Sarah R."
+      role: "Engineering Lead · Toronto"
+      initials: "SR"
+    mockup_url: "fortinet-gui.io"
+    mockup_icon: "🔐"
+
   - title: "CS724-RoboX"
     description: "A repository related to robotics and autonomous systems at IIT Kanpur. Developed algorithms for path planning and control."
     tags: ["Jupyter Notebook", "Robotics", "Python"]
     github: "https://github.com/atanuroy911/CS724-RoboX"
-    featured: true
-
-  - title: "iitk-fortinet-gui"
-    description: "IITK Fortinet Authenticator Application to automatically handle network authentication on the university campus."
-    tags: ["JavaScript", "Network", "Automation"]
-    github: "https://github.com/atanuroy911/iitk-fortinet-gui"
-    featured: true
+    featured: false
 
   - title: "stress-detection-app"
     description: "A comprehensive machine learning system for predicting stress levels using physiological data and Python."

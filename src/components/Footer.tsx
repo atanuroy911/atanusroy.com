@@ -15,14 +15,14 @@ export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
   return (
     <footer className={`border-t py-8 mt-16 ${
       _isDev
-        ? 'border-black bg-white dark:bg-black border-2 border-x-0 border-b-0'
+        ? 'border-gray-200 bg-white dark:bg-black'
         : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950'
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className={`text-sm ${
             _isDev 
-              ? 'font-mono-dev font-bold tracking-widest uppercase text-black dark:text-white' 
+              ? 'text-gray-500 font-medium' 
               : 'text-slate-500'
           }`}>
             © {new Date().getFullYear()} {f?.copyright} · {f?.built_with}
@@ -31,7 +31,7 @@ export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
             {p?.github && (
               <Link href={p.github} target="_blank" rel="noopener noreferrer"
                 className={`transition-colors ${
-                  _isDev ? 'text-black dark:text-white hover:text-[#ff3366]' : 'text-slate-500 hover:text-slate-800'
+                  _isDev ? 'text-gray-400 hover:text-blue-600' : 'text-slate-500 hover:text-slate-800'
                 }`}>
                 <Github width={18} height={18} />
               </Link>
@@ -39,7 +39,7 @@ export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
             {p?.linkedin && (
               <Link href={p.linkedin} target="_blank" rel="noopener noreferrer"
                 className={`transition-colors ${
-                  _isDev ? 'text-black dark:text-white hover:text-[#00d9ff]' : 'text-slate-500 hover:text-blue-700'
+                  _isDev ? 'text-gray-400 hover:text-blue-600' : 'text-slate-500 hover:text-blue-700'
                 }`}>
                 <Linkedin width={18} height={18} />
               </Link>
@@ -47,7 +47,7 @@ export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
             {p?.google_scholar && (
               <Link href={p.google_scholar} target="_blank" rel="noopener noreferrer"
                 className={`transition-colors ${
-                  _isDev ? 'text-black dark:text-white hover:text-[#ffde00]' : 'text-slate-500 hover:text-slate-800'
+                  _isDev ? 'text-gray-400 hover:text-blue-600' : 'text-slate-500 hover:text-slate-800'
                 }`}>
                 <BookOpen size={18} />
               </Link>
@@ -55,7 +55,7 @@ export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
             {p?.email && (
               <Link href={`mailto:${p.email}`}
                 className={`transition-colors ${
-                  _isDev ? 'text-black dark:text-white hover:text-[#ff3366]' : 'text-slate-500 hover:text-slate-800'
+                  _isDev ? 'text-gray-400 hover:text-blue-600' : 'text-slate-500 hover:text-slate-800'
                 }`}>
                 <Mail size={18} />
               </Link>

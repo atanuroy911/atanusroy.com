@@ -24,50 +24,41 @@ function DevProjects({ content }: { content: any }) {
   const [selectedProject, setSelectedProject] = useState<any | null>(null)
 
   return (
-    <div className="py-24 bg-white dark:bg-black min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-12"
-        >
-          <span className="font-mono-dev text-sm text-black dark:text-black uppercase font-bold mb-2 block tracking-widest bg-[#00d9ff] w-fit px-2 py-0.5 border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff]">// all_projects</span>
-          <h1 className="text-5xl md:text-6xl font-black text-black dark:text-white uppercase tracking-tighter">My Work</h1>
-          <div className="h-2 w-24 mt-4 bg-black dark:bg-white" />
-        </motion.div>
+    <div className="port pt-40 pb-32 min-h-screen">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="mb-24 text-center">
+          <div className="sec-label">// all_projects</div>
+          <div className="sec-title">My Work</div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p: { title: string; description: string; tags: string[]; type?: string; highlight?: boolean; featured?: boolean; link?: string; github?: string }, i: number) => (
+        <div className="grid gap-12">
+          {projects.map((p: any, i: number) => (
             <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
-              whileHover={{ y: -5, scale: 1.01 }}
+              whileHover={{ y: -5 }}
               onClick={() => setSelectedProject(p)}
-              className={`dev-glass rounded-none p-6 dev-border-glow bg-white dark:bg-black group flex flex-col h-full cursor-pointer ${p.featured || p.highlight ? 'border-[3px] border-[#ff3366] dark:border-[#00d9ff]' : ''}`}
+              className="service-card cursor-pointer !items-start w-full"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 rounded-none flex items-center justify-center border-2 border-black dark:border-white bg-[#ffde00] shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff]">
-                  <Layers size={18} className="text-black" />
+              <div className="flex items-start justify-between w-full mb-6">
+                <div className="service-icon mb-0">
+                  <Layers size={32} />
                 </div>
                 {p.type && (
-                  <Badge variant="outline" className="font-mono-dev font-bold uppercase tracking-widest text-[10px] border-2 border-black dark:border-white bg-white dark:bg-black text-black dark:text-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff]">
-                    {p.type}
-                  </Badge>
+                  <div className="project-tag !text-[12px]">{p.type}</div>
                 )}
               </div>
-              <h3 className="text-xl text-black dark:text-white font-black uppercase mb-2 group-hover:text-[#ff3366] dark:group-hover:text-[#00d9ff] transition-colors">
+              <div className="project-title !text-3xl !mb-4 group-hover:text-blue-600 transition-colors">
                 {p.title}
-              </h3>
-              <p className="text-black dark:text-white font-medium text-sm leading-relaxed mb-6 flex-grow">
+              </div>
+              <div className="project-desc !text-lg mb-8 flex-grow max-w-3xl">
                 {p.description}
-              </p>
-              <div className="flex flex-wrap gap-1.5 mt-auto">
+              </div>
+              <div className="tech-pills mt-auto">
                 {p.tags.map((t: string) => (
-                  <span key={t} className="font-mono-dev text-[10px] font-bold uppercase px-2 py-0.5 border-2 border-black dark:border-white bg-white dark:bg-black text-black dark:text-white shadow-[1px_1px_0px_#000] dark:shadow-[1px_1px_0px_#fff]">
-                    {t}
-                  </span>
+                  <div key={t} className="pill">{t}</div>
                 ))}
               </div>
             </motion.div>

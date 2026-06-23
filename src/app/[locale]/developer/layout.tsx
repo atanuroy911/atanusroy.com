@@ -2,6 +2,7 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { getContent, type Locale } from '@/lib/content'
 import { ModeProvider } from '@/providers/ModeProvider'
+import './DevStyles.css'
 
 export default async function DevLayout({
   children,

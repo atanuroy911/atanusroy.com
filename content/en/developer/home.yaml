@@ -1,31 +1,86 @@
 hero:
-  greeting: Hey, I'm
-  name: Atanu.
+  eyebrow: "Available for projects · Dhaka, BD"
+  greeting: "Hi, I am Atanu,"
+  rotating_text: ["Software Engineer.", "DevOps Engineer.", "ML Engineer.", "Full-Stack Developer."]
   roles:
-    - Software Engineer
-    - DevOps Engineer
-    - Full-Stack Developer
-    - System Architect
+    - Full-Stack
+    - DevOps
+    - Cloud
   tagline: >-
-    I build robust, scalable applications — from responsive frontends to complex cloud-native microservices.
-  cta_primary: See My Projects
-  cta_secondary: Let's Talk
-bio: >
-  Engineer by training, builder by nature. I specialize in building and deploying 
-  high-performance web platforms. With a strong background in software engineering, 
-  I've led full-stack development and cloud infrastructure design for diverse clients 
-  across the US and Canada, focusing on clean code and robust systems.
-experience:
-  - role: Web Developer & DevOps Engineer
-    org: Backend Ace
-    period: Sep 2024 – Sep 2025
-    location: Remote · New York, USA
-    bullets:
-      - Full-stack development and cloud infrastructure for US clients
-      - Managed CI/CD pipelines and server deployments
-  - role: Associate Web Developer
-    org: Wizzartech
-    period: Apr 2022 – Dec 2022
-    location: Remote · Toronto, Canada
-    bullets:
-      - Built client-facing web applications using modern JS frameworks
+    Robust, scalable web apps — from pixel-perfect frontends to cloud-native microservices. I turn your product idea into working software.
+  cta_primary: "Start a project →"
+  cta_primary_link: "https://example.com/start"
+  cta_secondary: "See my work"
+  cta_secondary_link: "#projects"
+  hire_me_link: "https://example.com"
+  photo_url: "/assets/developer_photo.jpg"
+  status_badge: "Open to new clients right now"
+  stats:
+    - n: "25+"
+      l: "Projects shipped"
+    - n: "6+"
+      l: "Years building"
+    - n: "4"
+      l: "Industries served"
+
+marquee:
+  - "✦ React"
+  - "✦ Node.js"
+  - "✦ TypeScript"
+  - "✦ AWS"
+  - "✦ Docker"
+  - "✦ PostgreSQL"
+  - "✦ Next.js"
+  - "✦ CI/CD"
+  - "✦ Kubernetes"
+  - "✦ GraphQL"
+
+services:
+  title: "Skills that ship products"
+  label: "What I build"
+  items:
+    - icon: "ti-layout-dashboard"
+      title: "Full-Stack Apps"
+      desc: "End-to-end web applications — React frontends, Node/Django backends, real databases."
+    - icon: "ti-cloud"
+      title: "Cloud & DevOps"
+      desc: "AWS, Docker, CI/CD pipelines. I deploy it, monitor it, and keep it running."
+    - icon: "ti-api"
+      title: "API Design"
+      desc: "REST and GraphQL APIs built to scale. Clean contracts, solid docs, versioned."
+    - icon: "ti-rocket"
+      title: "MVP Builds"
+      desc: "Got an idea? I'll take you from zero to launched — fast, clean, and fundable."
+
+process:
+  label: "How I work"
+  title: "From brief to live in 4 steps"
+  steps:
+    - num: "01 · DISCOVER"
+      title: "We align on goals"
+      desc: "30-min call, I ask the right questions, you get a clear scope."
+    - num: "02 · DESIGN"
+      title: "Wireframe & plan"
+      desc: "Architecture, tech choices, timeline. No surprises later."
+    - num: "03 · BUILD"
+      title: "Ship in sprints"
+      desc: "Weekly updates, clean code, you see progress every step."
+    - num: "04 · LAUNCH"
+      title: "Deploy & hand off"
+      desc: "Live, documented, and yours — with a 30-day support window."
+
+quote:
+  text: "Working with Atanu felt like having a *senior engineer on staff* — except he actually shipped faster than anyone I've hired full-time."
+  author: "Michael K."
+  role: "Founder, SaaS Startup · New York, USA"
+  initials: "MK"
+
+cta:
+  badge: "Currently available · replies within 24h"
+  title: "Let's build something together"
+  sub: "Tell me about your project — I'll come back with a clear plan and honest estimate."
+  btn_primary: "Book a free call →"
+  btn_primary_link: "https://example.com/book"
+  btn_secondary: "See all projects"
+  btn_secondary_link: "#projects"
+  reply_text: "No commitment. No sales pitch. Just a conversation."

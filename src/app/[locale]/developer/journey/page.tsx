@@ -14,18 +14,15 @@ export default async function DevJourney({ params }: { params: Promise<{ locale:
   const journey = content.developer.journey
 
   return (
-    <div className="pt-24 pb-24 max-w-6xl mx-auto px-4 sm:px-6">
-      <section className="space-y-4 pb-6 mb-12">
-        <span className="font-mono-dev text-sm text-black dark:text-white uppercase font-bold mb-2 block tracking-widest bg-[#ffde00] dark:bg-[#ff3366] w-fit px-2 py-0.5 border-2 border-black dark:border-white">// my_journey</span>
-        <h1 className="text-5xl md:text-6xl font-black text-black dark:text-white uppercase tracking-tighter">
-          {journey?.title || 'Developer Journey'}
-        </h1>
-        <div className="h-2 w-24 mt-3 bg-black dark:bg-white" />
-        <p className="text-xl font-medium text-black dark:text-white max-w-2xl mt-4 bg-[#00d9ff] p-2 border-2 border-black dark:border-white shadow-[2px_2px_0px_#000] dark:shadow-[2px_2px_0px_#fff]">
-          {journey?.description}
-        </p>
-      </section>
-      <GalleryGrid images={journey?.images || []} isDev={true} />
+    <div className="port pt-40 pb-32 min-h-screen">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="mb-24 text-center">
+          <div className="sec-label">// my_journey</div>
+          <div className="sec-title">{journey?.title || 'Developer Journey'}</div>
+          <div className="sec-sub max-w-2xl mx-auto">{journey?.description}</div>
+        </div>
+        <GalleryGrid images={journey?.images || []} isDev={true} />
+      </div>
     </div>
   )
 }

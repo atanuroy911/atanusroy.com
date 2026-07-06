@@ -11,7 +11,10 @@
     "cf:build": "opennextjs-cloudflare build",
     "cf:deploy": "opennextjs-cloudflare deploy",
     "cf:preview": "npm run cf:build && opennextjs-cloudflare preview",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "release": "semantic-release",
+    "release:dry": "semantic-release --dry-run --no-ci",
+    "prepare": "husky"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
@@ -35,13 +38,21 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260517.1",
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
     "@opennextjs/cloudflare": "^1.19.10",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/git": "^10.0.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "conventional-changelog-conventionalcommits": "^10.2.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "husky": "^9.1.7",
+    "semantic-release": "^25.0.5",
     "tailwindcss": "^4",
     "typescript": "^5",
     "wrangler": "^4.92.0"

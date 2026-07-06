@@ -1,5 +1,20 @@
 publications_bibtex: |
-  @article{moshayedi2026integrated,
+  @article{moshayedi2026agro,
+    title={Smart Agro-ecosystem: A Review of LLM-based Robotic Systems for Sensing and Decision Support in Precision Agriculture},
+    author={Moshayedi, A. J. and Roy, A. S. and others},
+    journal={EAI Endorsed Transactions on AI and Robotics},
+    year={2026},
+    type={journal},
+    pdf={}
+  } @incollection{moshayedi2026lidar,
+    title={Comparative Analysis of LiDAR and Kinect Sensors for XiaoQiang AGV Navigation in Real and Simulated Environments},
+    author={Moshayedi, A. J. and Zou, Z. and Roy, A. S. and Kolahdooz, A.},
+    booktitle={Proceedings of the 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Vol. I},
+    publisher={Springer},
+    year={2026},
+    type={conference},
+    pdf={}
+  } @article{moshayedi2026integrated,
     title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},
     author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},
     journal={EAI Endorsed Transactions on AI and Robotics},
@@ -60,4 +75,24 @@ publications_bibtex: |
     year={2024},
     publisher={IEEE},
     pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}
+  } @article{moshayedi2025emtihan,
+    title={EMTIHAN: Design of a novel approach to secure online examination challenge in remote learning},
+    author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},
+    journal={Education and Information Technologies},
+    year={2025},
+    publisher={Springer},
+    pdf={}
+  } @article{moshayedi2024iot,
+    title={A novel IoT-enabled portable, secure automatic self-lecture attendance system: design, development and comparison},
+    author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},
+    journal={International Journal of Electronic Security and Digital Forensics},
+    year={2024},
+    publisher={Inderscience},
+    pdf={}
+  } @article{roy2022automation,
+    title={Automation Attendance Systems Approaches: A Practical Review},
+    author={Shuvam Roy, Atanu and Lan, H. and Gheisari, Mehdi and Abbasi, Aqif Afzaal and Moshayedi, Ata Jahangir and Liao, Liefa and Hosseini Bamakan, Seyed Mojtaba},
+    journal={BOHR International Journal of Internet of Things, Artificial Intelligence and Machine Learning},
+    year={2022},
+    pdf={}
   }

@@ -25,121 +25,282 @@ blog_categories:
     bg: "#fef2f2"
 
 blog_posts:
-  - id: visapp-2024-paper
-    title: "Paper Accepted at VISAPP 2024"
-    date: "2024-02-15"
+  - id: agv-lidar-kinect-icfeict
+    title: "New Book Chapter: Comparing LiDAR and Kinect for AGV Navigation"
+    date: "2026-05-08"
     category: publication
-    tags: [computer-vision, deep-learning, publication, conference]
+    tags: [agv, lidar, robotics, navigation, icfeict]
     cover_image: ""
     summary: >
-      Our paper on autonomous ground vehicle path planning using deep reinforcement
-      learning has been accepted at VISAPP 2024 — presenting in Lisbon, Portugal.
+      Our chapter comparing LiDAR and Kinect sensors for XiaoQiang AGV navigation
+      is out in the Proceedings of the 5th ICFEICT 2025 (Springer).
     content: |
-      ## Background
+      ## What We Studied
 
-      Autonomous Ground Vehicles (AGVs) operating in dynamic environments face a fundamental challenge:
-      how do you plan a path that adapts in real-time to moving obstacles, unpredictable terrain,
-      and incomplete sensor data?
+      Together with Ata Jahangir Moshayedi, Zhenpeng Zou, and Amin Kolahdooz, I
+      contributed to a comparative study of **LiDAR** and **Kinect** sensing for
+      trajectory tracking on the XiaoQiang Automated Guided Vehicle (AGV), evaluated
+      in both real-world and simulated (ROS/Gazebo/MATLAB) settings.
 
-      Classical approaches like A* and Dijkstra's algorithm work well in static maps but struggle
-      when the world keeps changing. We asked: *can deep reinforcement learning close that gap?*
+      ## Method
 
-      ## What We Built
+      We ran 400 bidirectional trajectory trials and 100 parking tests across
+      obstacle-free and obstacle-rich scenarios to measure path accuracy,
+      processing latency, and sensor reliability.
 
-      We developed a reward-shaping mechanism on top of Proximal Policy Optimization (PPO)
-      that significantly improves convergence in **sparse reward** settings. The key insight
-      is that traditional sparse rewards (only reward on goal-reach) lead to slow, unstable training.
+      ## Findings
 
-      Our approach adds:
-      - **Progress reward** – proportional to reduction in Euclidean distance to goal
-      - **Collision penalty** – shaped by proximity, not binary
-      - **Exploration bonus** – decaying curiosity signal to prevent local optima
+      - **LiDAR** was more robust in cluttered environments — average distance
+        error of **1.7 cm** and angular deviation of **2.9°**.
+      - **Kinect** processed faster in open spaces but showed more angular drift
+        (**2.4 cm** / **4.1°**).
 
-      ## Results
+      The chapter appears in *Proceedings of the 5th International Conference on
+      Frontiers of Electronics, Information and Computation Technologies
+      (ICFEICT 2025), Volume I*, published by Springer.
+    link: "https://link.springer.com/chapter/10.1007/978-981-95-8660-8_18"
+    pinned: true
 
-      | Method | Success Rate | Avg. Steps to Goal |
-      |---|---|---|
-      | A* (static map) | 92% | 214 |
-      | Vanilla PPO | 61% | 389 |
-      | **Ours (PPO + shaped)** | **88%** | **241** |
-
-      The results show our approach approaches classical planner performance while remaining
-      adaptive to unseen dynamic obstacles.
-
-      ## Conference
-
-      We presented this work at the 19th International Conference on Computer Vision Theory
-      and Applications (**VISAPP 2024**) in Lisbon, Portugal. The paper is available via the link below.
-    link: "https://doi.org/10.5220/0012345678"
-    pinned: false
-
-  - id: ieee-iotais-2023
-    title: "IEEE IoT-AIS 2023 — Best Paper Nominee"
-    date: "2023-11-08"
-    category: award
-    tags: [iot, computer-vision, award, ieee]
+  - id: smart-agro-ecosystem-review
+    title: "Review Paper: LLM-based Robotic Systems for Precision Agriculture"
+    date: "2026-06-01"
+    category: publication
+    tags: [llm, agriculture, robotics, review]
     cover_image: ""
     summary: >
-      Our work on IoT-based anomaly detection for smart surveillance was nominated
-      for Best Paper at IEEE IoT-AIS 2023.
+      Our review, "Smart Agro-ecosystem," surveys how LLM-based robotic systems
+      support sensing and decision-making in precision agriculture, published in
+      EAI Endorsed Transactions on AI and Robotics.
     content: |
       ## Overview
 
-      This project addresses a critical gap in smart surveillance: deploying **real-time anomaly
-      detection** directly on resource-constrained edge devices, without depending on cloud uplink.
+      With Ata Jahangir Moshayedi and collaborators, I co-authored a review
+      examining how large language models are being integrated into robotic
+      systems for **sensing, perception, and decision support** in precision
+      agriculture — from crop monitoring to autonomous field robots.
 
-      ## The Problem
+      ## Why This Matters
 
-      Traditional surveillance pipelines send raw video to the cloud for inference — expensive,
-      high-latency, and privacy-invasive. We wanted inference at the camera itself.
+      Agricultural robotics has historically relied on narrow, task-specific
+      models. LLM-based reasoning layers open the door to more flexible systems
+      that can interpret sensor data, plan multi-step field operations, and
+      communicate findings in natural language to farmers and agronomists.
 
-      ## Our Approach
+      The paper is published in *EAI Endorsed Transactions on AI and Robotics*.
+    link: "https://publications.eai.eu/index.php/airo/article/view/13032"
+    pinned: false
 
-      We deployed a quantized **MobileNetV3** (INT8) on a **Raspberry Pi 4** using TFLite.
-      Combined with a lightweight motion-triggered sampling strategy, the system achieves:
+  - id: beetle-antennae-agv-2026
+    title: "Journal Paper: Beetle Antennae Search for Omnidirectional AGV Navigation"
+    date: "2026-01-15"
+    category: publication
+    tags: [agv, path-planning, optimization, robotics]
+    cover_image: ""
+    summary: >
+      Our paper on an integrated Beetle Antennae Search–enabled navigation
+      framework for omnidirectional AGVs in unknown environments is published in
+      EAI Endorsed Transactions on AI and Robotics.
+    content: |
+      ## Background
 
-      - **~14 fps** on-device inference
-      - **<80ms** average detection latency
-      - Under **4W** power consumption
+      Omnidirectional AGVs promise flexible motion in tight, unstructured spaces,
+      but path planning for them in **unknown environments** remains difficult.
+      With Ata Jahangir Moshayedi, Utsab Karan, Meng Zhang, and David Bassir, I
+      worked on a navigation framework built around **Beetle Antennae Search
+      (BAS)**, a swarm-inspired evolutionary optimization technique.
 
-      ## Award Nomination
+      ## Contribution
 
-      Our paper was nominated for **Best Paper** at the IEEE International Conference on
-      IoT-based Applications and Intelligent Systems (IoT-AIS 2023). This recognition
-      affirmed the practical impact of our edge-first design philosophy.
+      The framework integrates BAS-based local search with global path planning
+      to balance exploration and computational cost, aiming for reliable
+      navigation without requiring a pre-built map.
+
+      Published in *EAI Endorsed Transactions on AI and Robotics* (2026).
     link: ""
-    pinned: true
+    pinned: false
 
-  - id: joined-ulab-2023
-    title: "Joined ULAB as Lecturer in CSE"
-    date: "2023-09-01"
+  - id: icraic-2025-path-planning
+    title: "Presented at 5th ICRAIC 2025: AGV Path Planning Trade-offs"
+    date: "2025-10-10"
+    category: conference
+    tags: [agv, path-planning, ieee, conference]
+    cover_image: ""
+    summary: >
+      Presented "Path Planning for AGVs: Balancing Computational Efficiency and
+      Optimality" at the 5th ICRAIC 2025 (IEEE).
+    content: |
+      ## The Talk
+
+      This work, co-authored with Ata Jahangir Moshayedi, Zeashan Hameed Khan,
+      Sen Yang, Abolfazl Razi, and Mohammad E. Andani, compares classical and
+      metaheuristic path planners for AGVs under real-time computational
+      constraints — asking how much optimality you can trade for speed, and when
+      that trade is worth it.
+
+      Presented at the **5th International Conference on Robotics, Automation,
+      and Intelligent Control (ICRAIC 2025)**, IEEE.
+    link: ""
+    pinned: false
+
+  - id: urbanpark-iccit-2025
+    title: "UrbanPark: LoRaWAN-Enabled Smart Parking at ICCIT 2025"
+    date: "2025-08-20"
+    category: conference
+    tags: [iot, lorawan, smart-city, conference]
+    cover_image: ""
+    summary: >
+      Our paper "UrbanPark" on LoRaWAN-enabled smart parking modules was
+      presented at the 4th ICCIT 2025.
+    content: |
+      ## Overview
+
+      With Ata Jahangir Moshayedi, Zeashan Ahmed Khan, and Sen Yang, I worked on
+      **UrbanPark**, a low-power smart parking infrastructure built on LoRaWAN
+      connectivity — designed to scale across a city's parking modules without
+      the cost and maintenance burden of dense Wi-Fi or cellular deployments.
+
+      Presented at the **4th International Conference on Computing and
+      Information Technology (ICCIT 2025)**.
+    link: ""
+    pinned: false
+
+  - id: joined-ulab-2025
+    title: "Joined ULAB as Lecturer, Dept. of CSE"
+    date: "2025-09-01"
     category: news
     tags: [career, teaching, ulab]
     cover_image: ""
     summary: >
       Joined the Department of Computer Science & Engineering at the University
-      of Liberal Arts Bangladesh (ULAB) as a Lecturer.
+      of Liberal Arts Bangladesh (ULAB) as a Lecturer, teaching OS, DSA,
+      Statistics, Software Engineering, and Embedded Systems.
     content: |
       ## A New Chapter
 
-      I am excited to announce that I have joined the **University of Liberal Arts Bangladesh (ULAB)**
-      as a Lecturer in the Department of Computer Science & Engineering, starting September 2023.
+      I've joined the **University of Liberal Arts Bangladesh (ULAB)** as a
+      Lecturer in the Department of Computer Science & Engineering, starting
+      September 2025.
 
-      ## Teaching Responsibilities
+      ## Teaching
 
-      In this role I will be teaching:
+      This term I'm teaching undergraduate courses spanning **Operating
+      Systems**, **Data Structures & Algorithms**, **Statistics**, **Software
+      Engineering**, and **Embedded Systems**, and supervising capstone projects
+      in computer vision, IoT, and robotics.
 
-      - **CSE 103** — Introduction to Programming (C/C++)
-      - **CSE 207** — Data Structures & Algorithms
-      - **CSE 415** — Computer Vision (elective)
+      ## Continuing Research
 
-      ## Research Continuation
-
-      Alongside teaching, I will continue my research into autonomous systems and computer vision,
-      with a focus on applications relevant to South Asian contexts — including low-power
-      embedded vision for agricultural automation.
-
-      I look forward to working with motivated students and contributing to ULAB's growing
-      research culture.
+      Alongside teaching, I remain a remote Research Assistant with the Robotics
+      & Automation Research Lab (RARL) at JXUST, continuing work on energy-aware
+      AGV path planning and computer vision for agricultural monitoring.
     link: ""
+    pinned: true
+
+  - id: emtihan-2025
+    title: "EMTIHAN: A Secure Approach to Online Examinations"
+    date: "2025-01-10"
+    category: publication
+    tags: [education-technology, security, remote-learning]
+    cover_image: ""
+    summary: >
+      Our paper on EMTIHAN, a secure online examination framework for remote
+      learning, is published in Education and Information Technologies.
+    content: |
+      ## The Problem
+
+      Remote examinations for handwritten or diagram-based answers remain
+      awkward — students improvise with scanning apps, and instructors struggle
+      to verify authenticity. **EMTIHAN** (Arabic/Persian/Urdu/Turkish for
+      "exam") is our answer: a portable, secure submission workflow paired with
+      lightweight cloud infrastructure.
+
+      ## Results
+
+      Tested across participants in five countries against existing tools like
+      Chaoxing MOOC and Google Classroom, EMTIHAN improved submission security
+      and speed, with **94.5% student satisfaction**.
+
+      Published in *Education and Information Technologies* (Springer, 2025),
+      with Ata Jahangir Moshayedi and collaborators.
+    link: "https://link.springer.com/article/10.1007/s10639-024-13170-4"
+    pinned: false
+
+  - id: iot-self-lecture-attendance-2024
+    title: "A Novel IoT-Enabled Self-Lecture Attendance System"
+    date: "2024-06-05"
+    category: publication
+    tags: [iot, attendance, embedded-systems]
+    cover_image: ""
+    summary: >
+      Our design for a portable, secure self-lecture attendance system (SLAS)
+      using IoT and QR codes is published in the International Journal of
+      Electronic Security and Digital Forensics.
+    content: |
+      ## Motivation
+
+      Classroom attendance tracking is still often manual, slow, or easy to
+      spoof. We designed **SLAS**, a self-lecture attendance system that pairs
+      students' smartphones with QR-code-based check-in over a low-cost IoT
+      backend, addressing privacy and security gaps in existing systems.
+
+      ## Deployment
+
+      We validated SLAS in a live lecture setting, comparing it against existing
+      attendance methods on accuracy, cost, and processing time.
+
+      Published in the *International Journal of Electronic Security and
+      Digital Forensics* (2024), with Ata Jahangir Moshayedi and collaborators.
+    link: ""
+    pinned: false
+
+  - id: visapp-2024-attentive-yolo
+    title: "Attentive-YOLO Accepted at VISAPP 2024"
+    date: "2024-02-15"
+    category: publication
+    tags: [computer-vision, deep-learning, yolo, publication]
+    cover_image: ""
+    summary: >
+      Our paper "Attentive-YOLO," on efficient on-site water pipeline inspection
+      using an optimized YOLOv7, was accepted at VISAPP 2024.
+    content: |
+      ## Background
+
+      Water pipeline inspection under the Jal Jeevan Mission (Government of
+      India) needs detection models that are both accurate and light enough to
+      run in the field. With Priyanka Bagade, I worked on **Attentive-YOLO**, a
+      YOLOv7 variant integrating **Efficient Channel Attention (ECA)** and a
+      reduced ELAN backbone.
+
+      ## Result
+
+      The optimized model cut parameter count by roughly **20%** compared to
+      baseline YOLOv7 while maintaining detection accuracy for pipeline defects —
+      making on-site, real-time inspection more practical.
+
+      Presented at the 19th International Conference on Computer Vision Theory
+      and Applications (**VISAPP 2024**), Rome, Italy.
+    link: ""
+    pinned: false
+
+  - id: foodiebot-ieee-access-2024
+    title: "FOODIEBOT Robot Design Published in IEEE Access"
+    date: "2024-01-20"
+    category: publication
+    tags: [robotics, service-robots, ieee, publication]
+    cover_image: ""
+    summary: >
+      Our paper on the design and development of FOODIEBOT, a food-service
+      robot, is published in IEEE Access.
+    content: |
+      ## Overview
+
+      FOODIEBOT is an adaptive service robot for object manipulation and
+      delivery in dining-hall settings, combining image processing with mobile
+      and web interfaces for control. This paper traces its evolution from
+      simulation to physical prototype.
+
+      With Ata Jahangir Moshayedi, Liefa Liao, Amir Sohail Khan, Amin Kolahdooz,
+      and Ali Eftekhari. Published in *IEEE Access*, Vol. 12, pp. 36148–36172
+      (2024).
+    link: "https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf"
     pinned: false

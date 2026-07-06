@@ -6,6 +6,9 @@ import Link from 'next/link'
 import { ArrowLeft, Calendar, ExternalLink, Tag } from 'lucide-react'
 import type { Metadata } from 'next'
 import { buildMetadata } from '@/lib/seo'
+import { ShareButtons } from '@/components/ShareButtons'
+
+const SITE_URL = 'https://www.atanusroy.com'
 
 export async function generateStaticParams() {
   const params: { locale: string; postId: string }[] = []
@@ -108,6 +111,10 @@ export default async function AcademicBlogPostPage({
               ))}
             </div>
           )}
+
+          <div className="mt-6">
+            <ShareButtons url={`${SITE_URL}/${locale}/blog/${postId}`} title={post.title} />
+          </div>
         </header>
 
         {/* Divider */}

@@ -31,7 +31,7 @@
       "youtube": "https://www.youtube.com/@atanushuvamroy",
       "google_scholar": "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en",
       "orcid": "https://orcid.org/0000-0002-0000-0000",
-      "cv_url": "/assets/cv.pdf",
+      "cv_url": "/assets/Research_CV.pdf",
       "academic_photo": "/assets/academic_photo.jpg",
       "developer_photo": "/assets/developer_photo_2.jpg"
     },
@@ -76,43 +76,95 @@
       ],
       "blog_posts": [
         {
-          "id": "visapp-2024-paper",
-          "title": "Paper Accepted at VISAPP 2024",
-          "date": "2024-02-15",
+          "id": "agv-lidar-kinect-icfeict",
+          "title": "New Book Chapter: Comparing LiDAR and Kinect for AGV Navigation",
+          "date": "2026-05-08",
           "category": "publication",
           "tags": [
-            "computer-vision",
-            "deep-learning",
-            "publication",
-            "conference"
+            "agv",
+            "lidar",
+            "robotics",
+            "navigation",
+            "icfeict"
           ],
           "cover_image": "",
-          "summary": "Our paper on autonomous ground vehicle path planning using deep reinforcement learning has been accepted at VISAPP 2024 — presenting in Lisbon, Portugal.\n",
-          "content": "## Background\n\nAutonomous Ground Vehicles (AGVs) operating in dynamic environments face a fundamental challenge:\nhow do you plan a path that adapts in real-time to moving obstacles, unpredictable terrain,\nand incomplete sensor data?\n\nClassical approaches like A* and Dijkstra's algorithm work well in static maps but struggle\nwhen the world keeps changing. We asked: *can deep reinforcement learning close that gap?*\n\n## What We Built\n\nWe developed a reward-shaping mechanism on top of Proximal Policy Optimization (PPO)\nthat significantly improves convergence in **sparse reward** settings. The key insight\nis that traditional sparse rewards (only reward on goal-reach) lead to slow, unstable training.\n\nOur approach adds:\n- **Progress reward** – proportional to reduction in Euclidean distance to goal\n- **Collision penalty** – shaped by proximity, not binary\n- **Exploration bonus** – decaying curiosity signal to prevent local optima\n\n## Results\n\n| Method | Success Rate | Avg. Steps to Goal |\n|---|---|---|\n| A* (static map) | 92% | 214 |\n| Vanilla PPO | 61% | 389 |\n| **Ours (PPO + shaped)** | **88%** | **241** |\n\nThe results show our approach approaches classical planner performance while remaining\nadaptive to unseen dynamic obstacles.\n\n## Conference\n\nWe presented this work at the 19th International Conference on Computer Vision Theory\nand Applications (**VISAPP 2024**) in Lisbon, Portugal. The paper is available via the link below.\n",
-          "link": "https://doi.org/10.5220/0012345678",
-          "pinned": false
-        },
-        {
-          "id": "ieee-iotais-2023",
-          "title": "IEEE IoT-AIS 2023 — Best Paper Nominee",
-          "date": "2023-11-08",
-          "category": "award",
-          "tags": [
-            "iot",
-            "computer-vision",
-            "award",
-            "ieee"
-          ],
-          "cover_image": "",
-          "summary": "Our work on IoT-based anomaly detection for smart surveillance was nominated for Best Paper at IEEE IoT-AIS 2023.\n",
-          "content": "## Overview\n\nThis project addresses a critical gap in smart surveillance: deploying **real-time anomaly\ndetection** directly on resource-constrained edge devices, without depending on cloud uplink.\n\n## The Problem\n\nTraditional surveillance pipelines send raw video to the cloud for inference — expensive,\nhigh-latency, and privacy-invasive. We wanted inference at the camera itself.\n\n## Our Approach\n\nWe deployed a quantized **MobileNetV3** (INT8) on a **Raspberry Pi 4** using TFLite.\nCombined with a lightweight motion-triggered sampling strategy, the system achieves:\n\n- **~14 fps** on-device inference\n- **<80ms** average detection latency\n- Under **4W** power consumption\n\n## Award Nomination\n\nOur paper was nominated for **Best Paper** at the IEEE International Conference on\nIoT-based Applications and Intelligent Systems (IoT-AIS 2023). This recognition\naffirmed the practical impact of our edge-first design philosophy.\n",
-          "link": "",
+          "summary": "Our chapter comparing LiDAR and Kinect sensors for XiaoQiang AGV navigation is out in the Proceedings of the 5th ICFEICT 2025 (Springer).\n",
+          "content": "## What We Studied\n\nTogether with Ata Jahangir Moshayedi, Zhenpeng Zou, and Amin Kolahdooz, I\ncontributed to a comparative study of **LiDAR** and **Kinect** sensing for\ntrajectory tracking on the XiaoQiang Automated Guided Vehicle (AGV), evaluated\nin both real-world and simulated (ROS/Gazebo/MATLAB) settings.\n\n## Method\n\nWe ran 400 bidirectional trajectory trials and 100 parking tests across\nobstacle-free and obstacle-rich scenarios to measure path accuracy,\nprocessing latency, and sensor reliability.\n\n## Findings\n\n- **LiDAR** was more robust in cluttered environments — average distance\n  error of **1.7 cm** and angular deviation of **2.9°**.\n- **Kinect** processed faster in open spaces but showed more angular drift\n  (**2.4 cm** / **4.1°**).\n\nThe chapter appears in *Proceedings of the 5th International Conference on\nFrontiers of Electronics, Information and Computation Technologies\n(ICFEICT 2025), Volume I*, published by Springer.\n",
+          "link": "https://link.springer.com/chapter/10.1007/978-981-95-8660-8_18",
           "pinned": true
         },
         {
-          "id": "joined-ulab-2023",
-          "title": "Joined ULAB as Lecturer in CSE",
-          "date": "2023-09-01",
+          "id": "smart-agro-ecosystem-review",
+          "title": "Review Paper: LLM-based Robotic Systems for Precision Agriculture",
+          "date": "2026-06-01",
+          "category": "publication",
+          "tags": [
+            "llm",
+            "agriculture",
+            "robotics",
+            "review"
+          ],
+          "cover_image": "",
+          "summary": "Our review, \"Smart Agro-ecosystem,\" surveys how LLM-based robotic systems support sensing and decision-making in precision agriculture, published in EAI Endorsed Transactions on AI and Robotics.\n",
+          "content": "## Overview\n\nWith Ata Jahangir Moshayedi and collaborators, I co-authored a review\nexamining how large language models are being integrated into robotic\nsystems for **sensing, perception, and decision support** in precision\nagriculture — from crop monitoring to autonomous field robots.\n\n## Why This Matters\n\nAgricultural robotics has historically relied on narrow, task-specific\nmodels. LLM-based reasoning layers open the door to more flexible systems\nthat can interpret sensor data, plan multi-step field operations, and\ncommunicate findings in natural language to farmers and agronomists.\n\nThe paper is published in *EAI Endorsed Transactions on AI and Robotics*.\n",
+          "link": "https://publications.eai.eu/index.php/airo/article/view/13032",
+          "pinned": false
+        },
+        {
+          "id": "beetle-antennae-agv-2026",
+          "title": "Journal Paper: Beetle Antennae Search for Omnidirectional AGV Navigation",
+          "date": "2026-01-15",
+          "category": "publication",
+          "tags": [
+            "agv",
+            "path-planning",
+            "optimization",
+            "robotics"
+          ],
+          "cover_image": "",
+          "summary": "Our paper on an integrated Beetle Antennae Search–enabled navigation framework for omnidirectional AGVs in unknown environments is published in EAI Endorsed Transactions on AI and Robotics.\n",
+          "content": "## Background\n\nOmnidirectional AGVs promise flexible motion in tight, unstructured spaces,\nbut path planning for them in **unknown environments** remains difficult.\nWith Ata Jahangir Moshayedi, Utsab Karan, Meng Zhang, and David Bassir, I\nworked on a navigation framework built around **Beetle Antennae Search\n(BAS)**, a swarm-inspired evolutionary optimization technique.\n\n## Contribution\n\nThe framework integrates BAS-based local search with global path planning\nto balance exploration and computational cost, aiming for reliable\nnavigation without requiring a pre-built map.\n\nPublished in *EAI Endorsed Transactions on AI and Robotics* (2026).\n",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "icraic-2025-path-planning",
+          "title": "Presented at 5th ICRAIC 2025: AGV Path Planning Trade-offs",
+          "date": "2025-10-10",
+          "category": "conference",
+          "tags": [
+            "agv",
+            "path-planning",
+            "ieee",
+            "conference"
+          ],
+          "cover_image": "",
+          "summary": "Presented \"Path Planning for AGVs: Balancing Computational Efficiency and Optimality\" at the 5th ICRAIC 2025 (IEEE).\n",
+          "content": "## The Talk\n\nThis work, co-authored with Ata Jahangir Moshayedi, Zeashan Hameed Khan,\nSen Yang, Abolfazl Razi, and Mohammad E. Andani, compares classical and\nmetaheuristic path planners for AGVs under real-time computational\nconstraints — asking how much optimality you can trade for speed, and when\nthat trade is worth it.\n\nPresented at the **5th International Conference on Robotics, Automation,\nand Intelligent Control (ICRAIC 2025)**, IEEE.\n",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "urbanpark-iccit-2025",
+          "title": "UrbanPark: LoRaWAN-Enabled Smart Parking at ICCIT 2025",
+          "date": "2025-08-20",
+          "category": "conference",
+          "tags": [
+            "iot",
+            "lorawan",
+            "smart-city",
+            "conference"
+          ],
+          "cover_image": "",
+          "summary": "Our paper \"UrbanPark\" on LoRaWAN-enabled smart parking modules was presented at the 4th ICCIT 2025.\n",
+          "content": "## Overview\n\nWith Ata Jahangir Moshayedi, Zeashan Ahmed Khan, and Sen Yang, I worked on\n**UrbanPark**, a low-power smart parking infrastructure built on LoRaWAN\nconnectivity — designed to scale across a city's parking modules without\nthe cost and maintenance burden of dense Wi-Fi or cellular deployments.\n\nPresented at the **4th International Conference on Computing and\nInformation Technology (ICCIT 2025)**.\n",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "joined-ulab-2025",
+          "title": "Joined ULAB as Lecturer, Dept. of CSE",
+          "date": "2025-09-01",
           "category": "news",
           "tags": [
             "career",
@@ -120,9 +172,75 @@
             "ulab"
           ],
           "cover_image": "",
-          "summary": "Joined the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh (ULAB) as a Lecturer.\n",
-          "content": "## A New Chapter\n\nI am excited to announce that I have joined the **University of Liberal Arts Bangladesh (ULAB)**\nas a Lecturer in the Department of Computer Science & Engineering, starting September 2023.\n\n## Teaching Responsibilities\n\nIn this role I will be teaching:\n\n- **CSE 103** — Introduction to Programming (C/C++)\n- **CSE 207** — Data Structures & Algorithms\n- **CSE 415** — Computer Vision (elective)\n\n## Research Continuation\n\nAlongside teaching, I will continue my research into autonomous systems and computer vision,\nwith a focus on applications relevant to South Asian contexts — including low-power\nembedded vision for agricultural automation.\n\nI look forward to working with motivated students and contributing to ULAB's growing\nresearch culture.\n",
+          "summary": "Joined the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh (ULAB) as a Lecturer, teaching OS, DSA, Statistics, Software Engineering, and Embedded Systems.\n",
+          "content": "## A New Chapter\n\nI've joined the **University of Liberal Arts Bangladesh (ULAB)** as a\nLecturer in the Department of Computer Science & Engineering, starting\nSeptember 2025.\n\n## Teaching\n\nThis term I'm teaching undergraduate courses spanning **Operating\nSystems**, **Data Structures & Algorithms**, **Statistics**, **Software\nEngineering**, and **Embedded Systems**, and supervising capstone projects\nin computer vision, IoT, and robotics.\n\n## Continuing Research\n\nAlongside teaching, I remain a remote Research Assistant with the Robotics\n& Automation Research Lab (RARL) at JXUST, continuing work on energy-aware\nAGV path planning and computer vision for agricultural monitoring.\n",
           "link": "",
+          "pinned": true
+        },
+        {
+          "id": "emtihan-2025",
+          "title": "EMTIHAN: A Secure Approach to Online Examinations",
+          "date": "2025-01-10",
+          "category": "publication",
+          "tags": [
+            "education-technology",
+            "security",
+            "remote-learning"
+          ],
+          "cover_image": "",
+          "summary": "Our paper on EMTIHAN, a secure online examination framework for remote learning, is published in Education and Information Technologies.\n",
+          "content": "## The Problem\n\nRemote examinations for handwritten or diagram-based answers remain\nawkward — students improvise with scanning apps, and instructors struggle\nto verify authenticity. **EMTIHAN** (Arabic/Persian/Urdu/Turkish for\n\"exam\") is our answer: a portable, secure submission workflow paired with\nlightweight cloud infrastructure.\n\n## Results\n\nTested across participants in five countries against existing tools like\nChaoxing MOOC and Google Classroom, EMTIHAN improved submission security\nand speed, with **94.5% student satisfaction**.\n\nPublished in *Education and Information Technologies* (Springer, 2025),\nwith Ata Jahangir Moshayedi and collaborators.\n",
+          "link": "https://link.springer.com/article/10.1007/s10639-024-13170-4",
+          "pinned": false
+        },
+        {
+          "id": "iot-self-lecture-attendance-2024",
+          "title": "A Novel IoT-Enabled Self-Lecture Attendance System",
+          "date": "2024-06-05",
+          "category": "publication",
+          "tags": [
+            "iot",
+            "attendance",
+            "embedded-systems"
+          ],
+          "cover_image": "",
+          "summary": "Our design for a portable, secure self-lecture attendance system (SLAS) using IoT and QR codes is published in the International Journal of Electronic Security and Digital Forensics.\n",
+          "content": "## Motivation\n\nClassroom attendance tracking is still often manual, slow, or easy to\nspoof. We designed **SLAS**, a self-lecture attendance system that pairs\nstudents' smartphones with QR-code-based check-in over a low-cost IoT\nbackend, addressing privacy and security gaps in existing systems.\n\n## Deployment\n\nWe validated SLAS in a live lecture setting, comparing it against existing\nattendance methods on accuracy, cost, and processing time.\n\nPublished in the *International Journal of Electronic Security and\nDigital Forensics* (2024), with Ata Jahangir Moshayedi and collaborators.\n",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "visapp-2024-attentive-yolo",
+          "title": "Attentive-YOLO Accepted at VISAPP 2024",
+          "date": "2024-02-15",
+          "category": "publication",
+          "tags": [
+            "computer-vision",
+            "deep-learning",
+            "yolo",
+            "publication"
+          ],
+          "cover_image": "",
+          "summary": "Our paper \"Attentive-YOLO,\" on efficient on-site water pipeline inspection using an optimized YOLOv7, was accepted at VISAPP 2024.\n",
+          "content": "## Background\n\nWater pipeline inspection under the Jal Jeevan Mission (Government of\nIndia) needs detection models that are both accurate and light enough to\nrun in the field. With Priyanka Bagade, I worked on **Attentive-YOLO**, a\nYOLOv7 variant integrating **Efficient Channel Attention (ECA)** and a\nreduced ELAN backbone.\n\n## Result\n\nThe optimized model cut parameter count by roughly **20%** compared to\nbaseline YOLOv7 while maintaining detection accuracy for pipeline defects —\nmaking on-site, real-time inspection more practical.\n\nPresented at the 19th International Conference on Computer Vision Theory\nand Applications (**VISAPP 2024**), Rome, Italy.\n",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "foodiebot-ieee-access-2024",
+          "title": "FOODIEBOT Robot Design Published in IEEE Access",
+          "date": "2024-01-20",
+          "category": "publication",
+          "tags": [
+            "robotics",
+            "service-robots",
+            "ieee",
+            "publication"
+          ],
+          "cover_image": "",
+          "summary": "Our paper on the design and development of FOODIEBOT, a food-service robot, is published in IEEE Access.\n",
+          "content": "## Overview\n\nFOODIEBOT is an adaptive service robot for object manipulation and\ndelivery in dining-hall settings, combining image processing with mobile\nand web interfaces for control. This paper traces its evolution from\nsimulation to physical prototype.\n\nWith Ata Jahangir Moshayedi, Liefa Liao, Amir Sohail Khan, Amin Kolahdooz,\nand Ali Eftekhari. Published in *IEEE Access*, Vol. 12, pp. 36148–36172\n(2024).\n",
+          "link": "https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf",
           "pinned": false
         }
       ],
@@ -265,41 +383,114 @@
       },
       "academic_projects": [
         {
-          "title": "Autonomous Robot Navigation System",
-          "year": 2025,
+          "title": "Bengali Song Visualization",
+          "year": 2024,
           "tags": [
-            "Computer Vision",
-            "SLAM",
-            "Robotics"
+            "NLP",
+            "Stylometry",
+            "Data Visualization",
+            "Bengali"
           ],
-          "venue": "RARL, JXUST",
-          "description": "Vision-based autonomous navigation pipeline for an indoor mobile robot using depth sensors and a custom SLAM implementation to map dynamic environments in real-time.",
-          "abstract": "We developed a vision-based autonomous navigation pipeline for an indoor mobile robot operating in dynamic warehouse environments. The system utilizes depth sensors (Intel RealSense D435) and a custom lightweight SLAM implementation that maps the environment in real-time using occupancy grid representations.\nA key challenge was extreme sensor noise and tight compute constraints (NVIDIA Jetson Nano). We tackled this by using a lightweight EfficientDet-based neural network for obstacle detection alongside a traditional probabilistic roadmap (PRM) planner. The hybrid approach reduces average path planning time by 38% compared to pure learning-based methods.\nThe robot achieved a 94.2% task completion rate across 200 unseen indoor layouts, with an average replanning latency of under 120ms.\n",
-          "image": "/assets/project_agv_nav.png",
+          "venue": "Independent Research",
+          "description": "Stylometric analysis and self-similarity mapping of Bengali song lyrics, with an integrated web application to visualize the resulting linguistic patterns.",
+          "abstract": "This project applies stylometric analysis and self-similarity mapping techniques to corpora of Bengali song lyrics, surfacing structural and linguistic patterns across artists and eras. An integrated web application renders these patterns as interactive visualizations, making the analysis explorable rather than static.\n",
+          "image": "",
           "paper_link": "",
-          "github_link": "https://github.com/atanuroy911/autonomous-robot-navigation",
+          "github_link": "",
           "demo_link": "",
           "blog_link": ""
         },
         {
-          "title": "IoT Smart Agriculture Platform",
-          "year": 2024,
+          "title": "Robot Assistant X — Your Personal ChatBot",
+          "year": 2023,
+          "tags": [
+            "NLP",
+            "Robotics",
+            "Edge AI",
+            "Mobile"
+          ],
+          "venue": "Independent Research",
+          "description": "An NLP-driven voice assistant running on Raspberry Pi, paired with a Flutter companion app for interactive, voice-controlled human-robot interaction.",
+          "abstract": "Robot Assistant X implements an NLP model on a Raspberry Pi using TensorFlow to provide interactive, voice-controlled assistance at the edge — without depending on a cloud round-trip for every query. A companion mobile application, built with Flutter, extends the assistant's reach and improves the human-robot interaction loop.\n",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
+          "demo_link": "",
+          "blog_link": ""
+        },
+        {
+          "title": "Welding Defect Detection using Improved YOLOv7",
+          "year": 2023,
+          "tags": [
+            "Computer Vision",
+            "YOLOv7",
+            "Edge AI",
+            "Industrial Inspection"
+          ],
+          "venue": "Independent Research",
+          "description": "An Efficient Channel Attention-enhanced YOLOv7 model for automated welding defect detection, optimized for deployment on resource-constrained IoT edge devices.",
+          "abstract": "This project integrates an Efficient Channel Attention (ECA) mechanism into YOLOv7 to improve detection accuracy for welding defects, then optimizes the resulting model for deployment on resource-constrained IoT edge devices — targeting inspection scenarios where a full-size model isn't practical.\n",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
+          "demo_link": "",
+          "blog_link": ""
+        },
+        {
+          "title": "Automated Guided Vehicle (AGV) Path Tracking",
+          "year": 2022,
+          "tags": [
+            "Robotics",
+            "AGV",
+            "Simulation",
+            "Path Planning"
+          ],
+          "venue": "Independent Research",
+          "description": "A simulated 4-wheel differential drive AGV in CoppeliaSim (V-REP) with a real-time, sensor-driven path tracking algorithm.",
+          "abstract": "This project designs and simulates a 4-wheel differential drive AGV in CoppeliaSim (V-REP), then develops a robust path tracking algorithm that leverages real-time sensor data to keep the vehicle on its planned trajectory under simulated disturbances.\n",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
+          "demo_link": "",
+          "blog_link": ""
+        },
+        {
+          "title": "Activity Recognition Application using LSTM",
+          "year": 2023,
+          "tags": [
+            "Deep Learning",
+            "LSTM",
+            "Mobile",
+            "Cloud"
+          ],
+          "venue": "Personal Project",
+          "description": "An LSTM-based sensor activity recognition model deployed to the cloud, paired with a companion mobile app for real-time monitoring and prediction.",
+          "abstract": "This project trains an LSTM model in PyTorch for sensor-based human activity recognition and deploys it as a cloud-hosted inference service. A companion mobile app streams live sensor data to the model and surfaces real-time activity predictions to the user.\n",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
+          "demo_link": "",
+          "blog_link": ""
+        },
+        {
+          "title": "Smart Parking System",
+          "year": 2022,
           "tags": [
             "IoT",
             "LoRaWAN",
-            "Machine Learning"
+            "Web Development"
           ],
-          "venue": "IoT Vision Lab, IIT Kanpur",
-          "description": "Low-power, wide-area IoT platform using LoRaWAN to monitor soil moisture and predict irrigation needs, deploying custom sensor nodes with a predictive ML backend.",
-          "abstract": "We designed a low-power, wide-area IoT platform using LoRaWAN Class A devices to monitor soil moisture, ambient temperature, and humidity across agricultural fields. The project involved hardware design of custom sensor nodes (STM32L476 MCU + capacitive soil sensor + SX1276 LoRa transceiver) achieving a battery life exceeding 18 months on 2× AA cells.\nA central cloud backend (AWS IoT Core + Lambda) aggregates sensor telemetry and runs a gradient-boosted tree model (XGBoost) to predict optimal irrigation schedules 48 hours ahead, trained on 3 years of local climate and crop data.\nField trials across 5 farms in Uttar Pradesh showed a 31% reduction in water usage while maintaining equivalent or higher crop yields. The platform supports up to 512 sensor nodes per gateway with ~2km indoor and ~10km outdoor range.\n",
-          "image": "/assets/project_iot_agri.png",
-          "paper_link": "https://example.com/paper.pdf",
-          "github_link": "https://github.com/atanuroy911/iot-smart-agriculture",
+          "venue": "Personal Project",
+          "description": "A ReactJS/ExpressJS web application for managing multiple parking lots, backed by LoRaWAN for low-power device networking.",
+          "abstract": "This project engineers a web application using ReactJS and ExpressJS to manage occupancy and availability across multiple parking lots, with LoRa-WAN integration providing robust, low-power networking between distributed parking sensors.\n",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
           "demo_link": "",
           "blog_link": ""
         }
       ],
-      "publications_bibtex": "@article{moshayedi2026integrated,\n  title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},\n  author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  pdf={}\n} @inproceedings{moshayedi2025path,\n  title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},\n  author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},\n  booktitle={5th ICRAIC 2025, IEEE},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},\n  author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},\n  booktitle={4th ICCIT 2025},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2024dr,\n  title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},\n  author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{roy2024advanced,\n  title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},\n  author={Roy, A.S. and Das, A.},\n  journal={Journal of Robotics Research (JRR), 1(1), 15–23},\n  year={2024},\n  type={journal},\n  pdf={}\n} @inproceedings{roy2024attentive,\n  title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},\n  author={Roy, A.S. and Bagade, P.},\n  booktitle={VISAPP 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{moshayedi2023secure,\n  title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},\n  journal={Future transportation},\n  volume={3},\n  number={1},\n  pages={189--209},\n  year={2023},\n  publisher={MDPI},\n  pdf={}\n} @article{moshayedi2024design,\n  title={Design and development of FOODIEBOT robot: From simulation to design},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},\n  journal={IEEE access},\n  volume={12},\n  pages={36148--36172},\n  year={2024},\n  publisher={IEEE},\n  pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n}\n",
+      "publications_bibtex": "@article{moshayedi2026agro,\n  title={Smart Agro-ecosystem: A Review of LLM-based Robotic Systems for Sensing and Decision Support in Precision Agriculture},\n  author={Moshayedi, A. J. and Roy, A. S. and others},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  pdf={}\n} @incollection{moshayedi2026lidar,\n  title={Comparative Analysis of LiDAR and Kinect Sensors for XiaoQiang AGV Navigation in Real and Simulated Environments},\n  author={Moshayedi, A. J. and Zou, Z. and Roy, A. S. and Kolahdooz, A.},\n  booktitle={Proceedings of the 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Vol. I},\n  publisher={Springer},\n  year={2026},\n  type={conference},\n  pdf={}\n} @article{moshayedi2026integrated,\n  title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},\n  author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  pdf={}\n} @inproceedings{moshayedi2025path,\n  title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},\n  author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},\n  booktitle={5th ICRAIC 2025, IEEE},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},\n  author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},\n  booktitle={4th ICCIT 2025},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2024dr,\n  title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},\n  author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{roy2024advanced,\n  title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},\n  author={Roy, A.S. and Das, A.},\n  journal={Journal of Robotics Research (JRR), 1(1), 15–23},\n  year={2024},\n  type={journal},\n  pdf={}\n} @inproceedings{roy2024attentive,\n  title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},\n  author={Roy, A.S. and Bagade, P.},\n  booktitle={VISAPP 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{moshayedi2023secure,\n  title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},\n  journal={Future transportation},\n  volume={3},\n  number={1},\n  pages={189--209},\n  year={2023},\n  publisher={MDPI},\n  pdf={}\n} @article{moshayedi2024design,\n  title={Design and development of FOODIEBOT robot: From simulation to design},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},\n  journal={IEEE access},\n  volume={12},\n  pages={36148--36172},\n  year={2024},\n  publisher={IEEE},\n  pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n} @article{moshayedi2025emtihan,\n  title={EMTIHAN: Design of a novel approach to secure online examination challenge in remote learning},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={Education and Information Technologies},\n  year={2025},\n  publisher={Springer},\n  pdf={}\n} @article{moshayedi2024iot,\n  title={A novel IoT-enabled portable, secure automatic self-lecture attendance system: design, development and comparison},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={International Journal of Electronic Security and Digital Forensics},\n  year={2024},\n  publisher={Inderscience},\n  pdf={}\n} @article{roy2022automation,\n  title={Automation Attendance Systems Approaches: A Practical Review},\n  author={Shuvam Roy, Atanu and Lan, H. and Gheisari, Mehdi and Abbasi, Aqif Afzaal and Moshayedi, Ata Jahangir and Liao, Liefa and Hosseini Bamakan, Seyed Mojtaba},\n  journal={BOHR International Journal of Internet of Things, Artificial Intelligence and Machine Learning},\n  year={2022},\n  pdf={}\n}\n",
       "research_statements": [
         {
           "title": "Autonomous Guided Vehicles (AGV)",
@@ -1082,7 +1273,7 @@
       "youtube": "https://www.youtube.com/@atanushuvamroy",
       "google_scholar": "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en",
       "orcid": "https://orcid.org/0000-0002-0000-0000",
-      "cv_url": "/assets/cv.pdf",
+      "cv_url": "/assets/Research_CV.pdf",
       "academic_photo": "/assets/academic_photo.jpg",
       "developer_photo": "/assets/developer_photo_2.jpg"
     },
@@ -1127,43 +1318,95 @@
       ],
       "blog_posts": [
         {
-          "id": "visapp-2024-paper",
-          "title": "VISAPP 2024-এ কাগজ গৃহীত হয়েছে",
-          "date": "2024-02-15",
+          "id": "agv-lidar-kinect-icfeict",
+          "title": "নতুন বই অধ্যায়: AGV নেভিগেশনের জন্য LiDAR এবং Kinect তুলনা করা",
+          "date": "2026-05-08",
           "category": "publication",
           "tags": [
-            "computer-vision",
-            "deep-learning",
-            "publication",
-            "conference"
+            "agv",
+            "lidar",
+            "robotics",
+            "navigation",
+            "icfeict"
           ],
           "cover_image": "",
-          "summary": "ডিপ রিইনফোর্সমেন্ট লার্নিং ব্যবহার করে স্বায়ত্তশাসিত গ্রাউন্ড ভেহিকল পাথ প্ল্যানিং সংক্রান্ত আমাদের পেপার VISAPP 2024-এ গৃহীত হয়েছে — যা লিসবন, পর্তুগালে উপস্থাপন করা হচ্ছে।",
-          "content": "## পটভূমি\n\nগতিশীল পরিবেশে অটোনোমাস গ্রাউন্ড ভেহিকেল (AGVs) একটি মৌলিক চ্যালেঞ্জের সম্মুখীন হয়:\nআপনি কীভাবে এমন একটি পথের পরিকল্পনা করবেন যা বাস্তব সময়ে চলমান বাধা, অপ্রত্যাশিত ভূখণ্ডের সাথে খাপ খাইয়ে নেয়,\nএবং অসম্পূর্ণ সেন্সর ডেটা?\n\nA* এবং Dijkstra-এর অ্যালগরিদমের মতো ধ্রুপদী পদ্ধতিগুলি স্ট্যাটিক মানচিত্রে ভাল কাজ করে কিন্তু সংগ্রাম করে\nযখন পৃথিবী পরিবর্তন হতে থাকে। আমরা জিজ্ঞাসা করেছি: *গভীর শক্তিবৃদ্ধি শিক্ষা কি সেই ব্যবধান বন্ধ করতে পারে?*\n\n## আমরা যা তৈরি করেছি\n\nআমরা প্রক্সিমাল পলিসি অপ্টিমাইজেশান (পিপিও) এর উপরে একটি পুরষ্কার-আকৃতির প্রক্রিয়া তৈরি করেছি\nযা **স্পার্স রিওয়ার্ড** সেটিংসে কনভারজেন্সকে উল্লেখযোগ্যভাবে উন্নত করে। মূল অন্তর্দৃষ্টি\nঐতিহ্যগত বিরল পুরষ্কার (শুধুমাত্র লক্ষ্যে পৌঁছানোর জন্য পুরস্কার) ধীর, অস্থির প্রশিক্ষণের দিকে পরিচালিত করে।\n\nআমাদের পদ্ধতি যোগ করে:\n- **প্রগতি পুরষ্কার** - লক্ষ্য থেকে ইউক্লিডীয় দূরত্ব হ্রাসের সমানুপাতিক\n- **সংঘর্ষের শাস্তি** - প্রক্সিমিটি দ্বারা আকৃতি, বাইনারি নয়\n- **অন্বেষণ বোনাস** - স্থানীয় অপটিমা প্রতিরোধ করতে ক্ষয়িষ্ণু কৌতূহল সংকেত\n\n## ফলাফল\n\n| পদ্ধতি | সাফল্যের হার | গড় লক্ষ্যের ধাপ |\n|---|---|---|\n| A* (স্থির মানচিত্র) | 92% | 214 |\n| ভ্যানিলা পিপিও | 61% | 389 |\n| **আমাদের (PPO + আকৃতির)** | **88%** | **241** |\n\nফলাফলগুলি দেখায় যে আমাদের দৃষ্টিভঙ্গি ক্লাসিক্যাল প্ল্যানার পারফরম্যান্সের কাছে বাকী থাকা অবস্থায়\nঅদেখা গতিশীল বাধার সাথে অভিযোজিত।\n\n## সম্মেলন\n\nআমরা কম্পিউটার ভিশন তত্ত্বের 19তম আন্তর্জাতিক সম্মেলনে এই কাজটি উপস্থাপন করেছি\nএবং অ্যাপ্লিকেশন (**VISAPP 2024**) লিসবন, পর্তুগালে। কাগজটি নীচের লিঙ্কের মাধ্যমে উপলব্ধ।",
-          "link": "https://doi.org/10.5220/0012345678",
-          "pinned": false
-        },
-        {
-          "id": "ieee-iotais-2023",
-          "title": "IEEE IoT-AIS 2023 — সেরা পেপার মনোনীত",
-          "date": "2023-11-08",
-          "category": "award",
-          "tags": [
-            "iot",
-            "computer-vision",
-            "award",
-            "ieee"
-          ],
-          "cover_image": "",
-          "summary": "স্মার্ট নজরদারির জন্য IoT-ভিত্তিক অসঙ্গতি সনাক্তকরণে আমাদের কাজটি IEEE IoT-AIS 2023-এ সেরা পেপারের জন্য মনোনীত হয়েছিল।",
-          "content": "## ওভারভিউ\n\nএই প্রকল্পটি স্মার্ট নজরদারির একটি গুরুত্বপূর্ণ ব্যবধানের সমাধান করে: **রিয়েল-টাইম অসঙ্গতি স্থাপন করা\nক্লাউড আপলিঙ্কের উপর নির্ভর না করে সরাসরি রিসোর্স-সংবদ্ধ প্রান্ত ডিভাইসে সনাক্তকরণ।\n\n## সমস্যা\n\nঐতিহ্যগত নজরদারি পাইপলাইনগুলি অনুমানের জন্য ক্লাউডে কাঁচা ভিডিও পাঠায় — ব্যয়বহুল,\nউচ্চ-বিলম্বতা, এবং গোপনীয়তা-আক্রমণকারী। আমরা ক্যামেরা নিজেই অনুমান চেয়েছিলাম.\n\n## আমাদের দৃষ্টিভঙ্গি\n\nআমরা TFLite ব্যবহার করে একটি **Raspberry Pi 4** এ একটি কোয়ান্টাইজড **MobileNetV3** (INT8) স্থাপন করেছি।\nএকটি লাইটওয়েট মোশন-ট্রিগারড স্যাম্পলিং কৌশলের সাথে মিলিত, সিস্টেমটি অর্জন করে:\n\n- **~14 fps** ডিভাইসে অনুমান\n- **<80ms** গড় শনাক্তকরণ লেটেন্সি\n- **4W** পাওয়ার খরচের অধীনে\n\n## পুরস্কার মনোনয়ন\n\nআমাদের কাগজটি IEEE আন্তর্জাতিক সম্মেলনে **সেরা পেপার**-এর জন্য মনোনীত হয়েছিল\nIoT-ভিত্তিক অ্যাপ্লিকেশন এবং ইন্টেলিজেন্ট সিস্টেম (IoT-AIS 2023)। এই স্বীকৃতি\nআমাদের প্রান্ত-প্রথম নকশা দর্শনের ব্যবহারিক প্রভাব নিশ্চিত করেছে।",
-          "link": "",
+          "summary": "XiaoQiang AGV নেভিগেশনের জন্য LiDAR এবং Kinect সেন্সর তুলনা করার আমাদের অধ্যায়টি 5th ICFEICT 2025 (স্প্রিংগার) এর কার্যধারায় রয়েছে।",
+          "content": "## আমরা যা অধ্যয়ন করেছি\n\nআতা জাহাঙ্গীর মোশায়েদী, ঝেনপেং জু, এবং আমিন কোলাহদুজের সাথে, আমি\n**LiDAR** এবং **Kinect** সেন্সিং এর তুলনামূলক গবেষণায় অবদান রেখেছে\nXiaoQiang অটোমেটেড গাইডেড ভেহিকেল (AGV) এর ট্র্যাজেক্টরি ট্র্যাকিং, মূল্যায়ন করা হয়েছে\nবাস্তব-জগত এবং সিমুলেটেড (ROS/Gazebo/MATLAB) উভয় সেটিংসে।\n\n## পদ্ধতি\n\nআমরা 400টি দ্বিমুখী ট্রাজেক্টরি ট্রায়াল এবং 100টি পার্কিং পরীক্ষা চালিয়েছি\nপথের নির্ভুলতা পরিমাপ করার জন্য বাধা-মুক্ত এবং বাধা-সমৃদ্ধ পরিস্থিতি,\nপ্রসেসিং লেটেন্সি, এবং সেন্সর নির্ভরযোগ্যতা।\n\n## অনুসন্ধান\n\n- **LiDAR** বিশৃঙ্খল পরিবেশে আরও শক্তিশালী ছিল — গড় দূরত্ব\n  **1.7 সেমি** এর ত্রুটি এবং **2.9°** এর কৌণিক বিচ্যুতি।\n- **Kinect** খোলা জায়গায় দ্রুত প্রক্রিয়া করা হয়েছে কিন্তু আরও কৌণিক প্রবাহ দেখায়\n  (**2.4 সেমি** / **4.1°**)।\n\nঅধ্যায়টি * 5ম আন্তর্জাতিক সম্মেলনের কার্যপ্রণালীতে উপস্থিত হয়েছে\nইলেকট্রনিক্স, তথ্য ও গণনা প্রযুক্তির সীমান্ত\n(ICFEICT 2025), ভলিউম I*, স্প্রিংগার দ্বারা প্রকাশিত।",
+          "link": "https://link.springer.com/chapter/10.1007/978-981-95-8660-8_18",
           "pinned": true
         },
         {
-          "id": "joined-ulab-2023",
-          "title": "ইউল্যাবে CSE-তে প্রভাষক হিসেবে যোগদান করেছেন",
-          "date": "2023-09-01",
+          "id": "smart-agro-ecosystem-review",
+          "title": "পর্যালোচনা কাগজ: যথার্থ কৃষির জন্য এলএলএম-ভিত্তিক রোবোটিক সিস্টেম",
+          "date": "2026-06-01",
+          "category": "publication",
+          "tags": [
+            "llm",
+            "agriculture",
+            "robotics",
+            "review"
+          ],
+          "cover_image": "",
+          "summary": "আমাদের পর্যালোচনা, \"স্মার্ট এগ্রো-ইকোসিস্টেম,\" সমীক্ষা করে যে কীভাবে এলএলএম-ভিত্তিক রোবোটিক সিস্টেমগুলি নির্ভুল কৃষিতে সেন্সিং এবং সিদ্ধান্ত গ্রহণকে সমর্থন করে, এটি এআই এবং রোবোটিক্সের উপর EAI অনুমোদনকৃত লেনদেনে প্রকাশিত।",
+          "content": "## ওভারভিউ\n\nআতা জাহাঙ্গীর মোশায়েদী এবং সহযোগীদের সাথে, আমি একটি পর্যালোচনা সহ-লেখক\nকিভাবে বড় ভাষা মডেল রোবোটিক মধ্যে একত্রিত করা হচ্ছে পরীক্ষা\nনির্ভুলভাবে **সেন্সিং, উপলব্ধি এবং সিদ্ধান্ত সমর্থনের জন্য সিস্টেম\nকৃষি - শস্য পর্যবেক্ষণ থেকে স্বায়ত্তশাসিত ফিল্ড রোবট পর্যন্ত।\n\n## কেন এই ব্যাপার\n\nকৃষি রোবোটিক্স ঐতিহাসিকভাবে সংকীর্ণ, টাস্ক-নির্দিষ্টের উপর নির্ভর করে\nমডেল এলএলএম-ভিত্তিক যুক্তি স্তরগুলি আরও নমনীয় সিস্টেমের দরজা খুলে দেয়\nযেটি সেন্সর ডেটা ব্যাখ্যা করতে পারে, মাল্টি-স্টেপ ফিল্ড অপারেশনের পরিকল্পনা করতে পারে এবং\nকৃষক এবং কৃষিবিদদের কাছে প্রাকৃতিক ভাষায় ফলাফলের সাথে যোগাযোগ করুন।\n\nকাগজটি *EAI এনডোর্সড লেনদেন অন এআই এবং রোবোটিক্স*-এ প্রকাশিত হয়েছে।",
+          "link": "https://publications.eai.eu/index.php/airo/article/view/13032",
+          "pinned": false
+        },
+        {
+          "id": "beetle-antennae-agv-2026",
+          "title": "জার্নাল পেপার: বিটল অ্যান্টেনা সার্চ ফর অমনিডাইরেশনাল এজিভি নেভিগেশন",
+          "date": "2026-01-15",
+          "category": "publication",
+          "tags": [
+            "agv",
+            "path-planning",
+            "optimization",
+            "robotics"
+          ],
+          "cover_image": "",
+          "summary": "অজানা পরিবেশে সর্বমুখী AGV-এর জন্য একটি সমন্বিত বিটল অ্যান্টেনা সার্চ-সক্ষম ন্যাভিগেশন ফ্রেমওয়ার্কের বিষয়ে আমাদের গবেষণাপত্র EAI এন্ডোর্সড লেনদেন অন এআই এবং রোবোটিক্স-এ প্রকাশিত হয়েছে।",
+          "content": "## পটভূমি\n\nসর্বমুখী AGVগুলি আঁটসাঁট, অসংগঠিত স্থানগুলিতে নমনীয় গতির প্রতিশ্রুতি দেয়,\nকিন্তু **অজানা পরিবেশে** তাদের জন্য পথ পরিকল্পনা করা কঠিন থেকে যায়।\nআতা জাহাঙ্গীর মোশায়েদী, উত্সব করণ, মেং ঝাং এবং ডেভিড বাসিরের সাথে, আমি\n**বিটল অ্যান্টেনা অনুসন্ধানের চারপাশে নির্মিত একটি নেভিগেশন কাঠামোতে কাজ করেছে\n(BAS)**, একটি ঝাঁক-অনুপ্রাণিত বিবর্তনীয় অপ্টিমাইজেশান কৌশল।\n\n## অবদান\n\nফ্রেমওয়ার্ক বিশ্বব্যাপী পথ পরিকল্পনার সাথে BAS-ভিত্তিক স্থানীয় অনুসন্ধানকে একীভূত করে\nঅন্বেষণ এবং কম্পিউটেশনাল খরচের ভারসাম্য বজায় রাখা, নির্ভরযোগ্য করার লক্ষ্যে\nএকটি পূর্ব-নির্মিত মানচিত্রের প্রয়োজন ছাড়াই নেভিগেশন।\n\n*EAI এন্ডোর্সড ট্রানজ্যাকশন অন AI এবং রোবোটিক্স* (2026) এ প্রকাশিত।",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "icraic-2025-path-planning",
+          "title": "5ম ICRAIC 2025-এ উপস্থাপিত: AGV পাথ প্ল্যানিং ট্রেড-অফ",
+          "date": "2025-10-10",
+          "category": "conference",
+          "tags": [
+            "agv",
+            "path-planning",
+            "ieee",
+            "conference"
+          ],
+          "cover_image": "",
+          "summary": "5ম ICRAIC 2025 (IEEE) এ \"এজিভিগুলির জন্য পথ পরিকল্পনা: কম্পিউটেশনাল দক্ষতা এবং সর্বোত্তমতার ভারসাম্য\" উপস্থাপন করা হয়েছে।",
+          "content": "## কথা\n\nএই কাজটি, আতা জাহাঙ্গীর মোশায়েদী, জিশান হামিদ খানের সাথে সহ-লেখক,\nসেন ইয়াং, আবোলফজল রাজি, এবং মোহাম্মদ ই. আন্দানি, ক্লাসিক্যাল এবং তুলনা করেন\nরিয়েল-টাইম কম্পিউটেশনালের অধীনে AGV-এর জন্য মেটাহিউরিস্টিক পাথ প্ল্যানার\nসীমাবদ্ধতা — আপনি গতির জন্য কতটা সর্বোত্তমতা ট্রেড করতে পারেন তা জিজ্ঞাসা করুন এবং কখন\nযে বাণিজ্য এটা মূল্য.\n\nরোবোটিক্স, অটোমেশনের উপর **5তম আন্তর্জাতিক সম্মেলনে উপস্থাপিত,\nএবং ইন্টেলিজেন্ট কন্ট্রোল (ICRAIC 2025)**, IEEE।",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "urbanpark-iccit-2025",
+          "title": "আরবানপার্ক: ICCIT 2025-এ LoRaWAN-সক্ষম স্মার্ট পার্কিং",
+          "date": "2025-08-20",
+          "category": "conference",
+          "tags": [
+            "iot",
+            "lorawan",
+            "smart-city",
+            "conference"
+          ],
+          "cover_image": "",
+          "summary": "লোরাওয়ান-সক্ষম স্মার্ট পার্কিং মডিউলগুলির উপর আমাদের গবেষণাপত্র \"আরবানপার্ক\" চতুর্থ ICCIT 2025-এ উপস্থাপন করা হয়েছিল।",
+          "content": "## ওভারভিউ\n\nআতা জাহাঙ্গীর মোশায়েদী, জিশান আহমেদ খান এবং সেন ইয়াং এর সাথে আমি কাজ করেছি\n**আরবানপার্ক**, LoRaWAN-এ নির্মিত একটি স্বল্প-শক্তির স্মার্ট পার্কিং অবকাঠামো\nকানেক্টিভিটি — শহরের পার্কিং মডিউল ছাড়াই স্কেল করার জন্য ডিজাইন করা হয়েছে\nঘন Wi-Fi বা সেলুলার স্থাপনার খরচ এবং রক্ষণাবেক্ষণের বোঝা।\n\nকম্পিউটিং এবং **4র্থ আন্তর্জাতিক সম্মেলনে উপস্থাপিত\nতথ্য প্রযুক্তি (ICCIT 2025)**।",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "joined-ulab-2025",
+          "title": "ইউল্যাবে প্রভাষক হিসেবে যোগদান করেছেন, সিএসই বিভাগের",
+          "date": "2025-09-01",
           "category": "news",
           "tags": [
             "career",
@@ -1171,9 +1414,75 @@
             "ulab"
           ],
           "cover_image": "",
-          "summary": "ইউনিভার্সিটি অব লিবারেল আর্টস বাংলাদেশ (ইউল্যাব)-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগে প্রভাষক হিসেবে যোগদান করেন।",
-          "content": "## একটি নতুন অধ্যায়\n\nআমি ঘোষণা করতে পেরে আনন্দিত যে আমি **ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ (ইউল্যাব)** এ যোগদান করেছি\nসেপ্টেম্বর 2023 থেকে কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগের প্রভাষক হিসেবে।\n\n## শিক্ষাদানের দায়িত্ব\n\nএই ভূমিকায় আমি শিক্ষা দেব:\n\n- **CSE 103** — প্রোগ্রামিং এর ভূমিকা (C/C++)\n- **CSE 207** — ডেটা স্ট্রাকচার এবং অ্যালগরিদম\n- **CSE 415** — কম্পিউটার ভিশন (ইলেক্টিভ)\n\n## গবেষণার ধারাবাহিকতা\n\nশিক্ষাদানের পাশাপাশি, আমি স্বায়ত্তশাসিত সিস্টেম এবং কম্পিউটার দৃষ্টিতে আমার গবেষণা চালিয়ে যাব,\nদক্ষিণ এশীয় প্রেক্ষাপটের সাথে প্রাসঙ্গিক অ্যাপ্লিকেশনগুলির উপর ফোকাস সহ — নিম্ন-শক্তি সহ\nকৃষি অটোমেশন জন্য এমবেডেড দৃষ্টি.\n\nআমি অনুপ্রাণিত শিক্ষার্থীদের সাথে কাজ করার এবং ULAB এর বৃদ্ধিতে অবদান রাখার জন্য উন্মুখ\nগবেষণা সংস্কৃতি।",
+          "summary": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ (ইউল্যাব)-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগে একজন প্রভাষক হিসেবে যোগদান করেন, OS, DSA, পরিসংখ্যান, সফটওয়্যার ইঞ্জিনিয়ারিং এবং এমবেডেড সিস্টেমের শিক্ষা দেন।",
+          "content": "## একটি নতুন অধ্যায়\n\nআমি **University of Liberal Arts Bangladesh (ULAB)** এ যোগ দিয়েছি\nকম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং বিভাগের প্রভাষক, শুরু\nসেপ্টেম্বর 2025।\n\n## শিক্ষাদান\n\nএই শব্দটি আমি **অপারেটিং বিস্তৃত স্নাতক কোর্স শেখাচ্ছি\nসিস্টেম**, **ডেটা স্ট্রাকচার এবং অ্যালগরিদম**, **পরিসংখ্যান**, **সফ্টওয়্যার\nইঞ্জিনিয়ারিং**, এবং **এমবেডেড সিস্টেম**, এবং ক্যাপস্টোন প্রকল্পের তত্ত্বাবধান\nকম্পিউটার ভিশন, আইওটি এবং রোবোটিক্সে।\n\n## অবিরত গবেষণা\n\nশিক্ষকতার পাশাপাশি, আমি রোবোটিক্সের সাথে রিমোট রিসার্চ অ্যাসিস্ট্যান্ট রয়েছি\nএবং JXUST-এ অটোমেশন রিসার্চ ল্যাব (RARL), শক্তি-সচেতনতার উপর কাজ চালিয়ে যাচ্ছে\nকৃষি পর্যবেক্ষণের জন্য AGV পথ পরিকল্পনা এবং কম্পিউটার দৃষ্টি।",
           "link": "",
+          "pinned": true
+        },
+        {
+          "id": "emtihan-2025",
+          "title": "ইমতিহান: অনলাইন পরীক্ষার জন্য একটি নিরাপদ পদ্ধতি",
+          "date": "2025-01-10",
+          "category": "publication",
+          "tags": [
+            "education-technology",
+            "security",
+            "remote-learning"
+          ],
+          "cover_image": "",
+          "summary": "EMTIHAN-এর উপর আমাদের গবেষণাপত্র, দূরবর্তী শিক্ষার জন্য একটি নিরাপদ অনলাইন পরীক্ষার কাঠামো, শিক্ষা ও তথ্য প্রযুক্তিতে প্রকাশিত হয়েছে।",
+          "content": "## সমস্যা\n\nহস্তলিখিত বা ডায়াগ্রাম-ভিত্তিক উত্তরগুলির জন্য দূরবর্তী পরীক্ষাগুলি অবশিষ্ট রয়েছে\nবিশ্রী — শিক্ষার্থীরা স্ক্যানিং অ্যাপের সাহায্যে উন্নতি করে, এবং প্রশিক্ষকরা লড়াই করে\nসত্যতা যাচাই করতে। **এমতিহান** (এর জন্য আরবি/ফার্সি/উর্দু/তুর্কি\n\"পরীক্ষা\") হল আমাদের উত্তর: একটি পোর্টেবল, সুরক্ষিত জমা ওয়ার্কফ্লো এর সাথে যুক্ত\nলাইটওয়েট ক্লাউড অবকাঠামো।\n\n## ফলাফল\n\nবিদ্যমান সরঞ্জামগুলির বিরুদ্ধে পাঁচটি দেশে অংশগ্রহণকারীদের জুড়ে পরীক্ষা করা হয়েছে\nChaoxing MOOC এবং Google Classroom, EMTIHAN উন্নত জমা নিরাপত্তা\nএবং গতি, **94.5% শিক্ষার্থীর সন্তুষ্টি** সহ।\n\n*এডুকেশন অ্যান্ড ইনফরমেশন টেকনোলজিস* (স্প্রিংগার, 2025) এ প্রকাশিত,\nআতা জাহাঙ্গীর মোশায়েদী এবং সহযোগীদের সাথে।",
+          "link": "https://link.springer.com/article/10.1007/s10639-024-13170-4",
+          "pinned": false
+        },
+        {
+          "id": "iot-self-lecture-attendance-2024",
+          "title": "একটি অভিনব আইওটি-সক্ষম স্ব-বক্তৃতা উপস্থিতি সিস্টেম",
+          "date": "2024-06-05",
+          "category": "publication",
+          "tags": [
+            "iot",
+            "attendance",
+            "embedded-systems"
+          ],
+          "cover_image": "",
+          "summary": "IoT এবং QR কোড ব্যবহার করে একটি পোর্টেবল, সুরক্ষিত সেলফ-লেকচার অ্যাটেনডেন্স সিস্টেম (SLAS) এর জন্য আমাদের ডিজাইন ইন্টারন্যাশনাল জার্নাল অফ ইলেকট্রনিক সিকিউরিটি অ্যান্ড ডিজিটাল ফরেনসিক্সে প্রকাশিত হয়েছে।",
+          "content": "## প্রেরণা\n\nশ্রেণীকক্ষে উপস্থিতি ট্র্যাকিং এখনও প্রায়ই ম্যানুয়াল, ধীর বা সহজ\nফাঁকি আমরা **SLAS** ডিজাইন করেছি, একটি স্ব-বক্তৃতা উপস্থিতি সিস্টেম যা জোড়া করে\nকম খরচে IoT-এর মাধ্যমে QR-কোড-ভিত্তিক চেক-ইন সহ শিক্ষার্থীদের স্মার্টফোন\nব্যাকএন্ড, বিদ্যমান সিস্টেমে গোপনীয়তা এবং সুরক্ষা ফাঁকগুলিকে মোকাবেলা করা।\n\n## স্থাপনা\n\nআমরা SLAS কে একটি লাইভ লেকচার সেটিংয়ে যাচাই করেছি, এটি বিদ্যমানের সাথে তুলনা করে\nসঠিকতা, খরচ, এবং প্রক্রিয়াকরণ সময় উপস্থিতি পদ্ধতি.\n\n*ইলেক্ট্রনিক নিরাপত্তার আন্তর্জাতিক জার্নালে প্রকাশিত এবং\nডিজিটাল ফরেনসিক* (2024), আতা জাহাঙ্গীর মোশায়েদী এবং সহযোগীদের সাথে।",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "visapp-2024-attentive-yolo",
+          "title": "মনোযোগী-YOLO VISAPP 2024-এ গৃহীত",
+          "date": "2024-02-15",
+          "category": "publication",
+          "tags": [
+            "computer-vision",
+            "deep-learning",
+            "yolo",
+            "publication"
+          ],
+          "cover_image": "",
+          "summary": "একটি অপ্টিমাইজড YOLOv7 ব্যবহার করে দক্ষ অন-সাইট ওয়াটার পাইপলাইন পরিদর্শনের বিষয়ে আমাদের কাগজ \"Attentive-YOLO\", VISAPP 2024-এ গৃহীত হয়েছিল।",
+          "content": "## পটভূমি\n\nজল জীবন মিশনের অধীনে জলের পাইপলাইন পরিদর্শন (সরকার\nভারত) সনাক্তকরণ মডেল প্রয়োজন যা সঠিক এবং যথেষ্ট হালকা\nমাঠে দৌড়ানো। প্রিয়াঙ্কা বাগাদে-এর সাথে, আমি **Atentive-YOLO**, a-এ কাজ করেছি\nYOLOv7 ভেরিয়েন্ট ইন্টিগ্রেটিং **দক্ষ চ্যানেল অ্যাটেনশন (ECA)** এবং একটি\nELAN ব্যাকবোন হ্রাস।\n\n## ফলাফল\n\nঅপ্টিমাইজ করা মডেলের তুলনায় প্যারামিটারের সংখ্যা মোটামুটি **20%** কেটেছে\nপাইপলাইনের ত্রুটি সনাক্তকরণের নির্ভুলতা বজায় রাখার সময় বেসলাইন YOLOv7 —\nঅন-সাইট, রিয়েল-টাইম পরিদর্শনকে আরও বাস্তবসম্মত করে তোলা।\n\nকম্পিউটার ভিশন তত্ত্বের 19তম আন্তর্জাতিক সম্মেলনে উপস্থাপিত\nএবং অ্যাপ্লিকেশন (**VISAPP 2024**), রোম, ইতালি।",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "foodiebot-ieee-access-2024",
+          "title": "FOODIEBOT রোবট ডিজাইন IEEE অ্যাক্সেসে প্রকাশিত হয়েছে",
+          "date": "2024-01-20",
+          "category": "publication",
+          "tags": [
+            "robotics",
+            "service-robots",
+            "ieee",
+            "publication"
+          ],
+          "cover_image": "",
+          "summary": "ফুড-পরিষেবা রোবট, FOODIEBOT-এর নকশা এবং বিকাশের বিষয়ে আমাদের গবেষণাপত্র IEEE Access-এ প্রকাশিত হয়েছে।",
+          "content": "## ওভারভিউ\n\nFOODIEBOT অবজেক্ট ম্যানিপুলেশন এবং এর জন্য একটি অভিযোজিত পরিষেবা রোবট\nডাইনিং-হল সেটিংসে ডেলিভারি, মোবাইলের সাথে ইমেজ প্রসেসিং একত্রিত করে\nএবং নিয়ন্ত্রণের জন্য ওয়েব ইন্টারফেস। এই কাগজ থেকে তার বিবর্তন ট্রেস\nফিজিক্যাল প্রোটোটাইপের সিমুলেশন।\n\nসাথে আতা জাহাঙ্গীর মোশায়েদী, লিফা লিয়াও, আমির সোহেল খান, আমিন কোলাহদুজ,\nএবং আলী ইফতেখারী। *IEEE অ্যাক্সেস*, ভলিউমে প্রকাশিত। 12, পৃ. 36148–36172\n(2024)।",
+          "link": "https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf",
           "pinned": false
         }
       ],
@@ -1350,7 +1659,7 @@
           "blog_link": ""
         }
       ],
-      "publications_bibtex": "@আর্টিকেল{moshayedi2026 ইন্টিগ্রেটেড,\n  শিরোনাম={একটি সমন্বিত বিটল অ্যান্টেনা অনুসন্ধান–অজানা পরিবেশে সর্বমুখী AGV মোবাইল রোবটের জন্য সক্ষম ন্যাভিগেশন ফ্রেমওয়ার্ক},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং করণ, ইউ. এবং ঝাং, এম. এবং বাসির, ডি.},\n  জার্নাল={ইএআই এনডোর্সড লেনদেন অন এআই এবং রোবোটিক্স},\n  বছর={2026},\n  টাইপ={জার্নাল},\n  pdf={}\n} @inproceedings{moshayedi2025path,\n  শিরোনাম={এজিভিগুলির জন্য পথ পরিকল্পনা: কম্পিউটেশনাল দক্ষতা এবং সর্বোত্তমতার ভারসাম্য},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এইচ. এবং ইয়াং, এস. এবং রাজী, এ. এবং আন্দানি, এম.ই.},\n  বইয়ের শিরোনাম={5ম ICRAIC 2025, IEEE},\n  বছর={2025},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  শিরোনাম={আরবানপার্ক: LoRaWAN সক্ষম স্মার্ট পার্কিং মডিউল সহ পার্কিং পরিকাঠামোর অগ্রগতি},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এ. এবং ইয়াং, এস.},\n  বইয়ের শিরোনাম={4th ICCIT 2025},\n  বছর={2025},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @inproceedings{moshayedi2024dr,\n  শিরোনাম={ডঃ অরেঞ্জঅ্যাপ: সাইট্রাস বাগানে রিয়েল-টাইম পেস্ট ডিটেকশনে বিপ্লব ঘটানো},\n  লেখক={মোশায়েদী, এ.জে. এবং জাওয়াদি, এম.জে. এবং রায়, এ.এস. এবং অন্যান্য},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  বছর={2024},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @আর্টিকেল{roy2024advanced,\n  title={আইআর সেন্সর এবং টাইমড অটোমেটা ব্যবহার করে অ্যাডভান্সড পাথ ট্র্যাকিং এবং ট্রাফিক ব্যবস্থাপনা},\n  লেখক={রায়, এ.এস. এবং দাস, এ.},\n  জার্নাল={রোবোটিক্স রিসার্চ জার্নাল (JRR), 1(1), 15–23},\n  বছর={2024},\n  টাইপ={জার্নাল},\n  pdf={}\n} @inproceedings{roy2024 মনোযোগী,\n  শিরোনাম={অ্যাটেনটিভ-ইওলো: দক্ষ চ্যানেলের মনোযোগ ব্যবহার করে অন-সাইট জলের পাইপলাইন পরিদর্শন এবং ELAN-ভিত্তিক YOLOv7},\n  লেখক={রায়, এ.এস. এবং বাগাদে, পি.},\n  booktitle={VISAPP 2024},\n  বছর={2024},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @আর্টিকেল{moshayedi2023secure,\n  শিরোনাম={একটি সুরক্ষিত ট্রাফিক পুলিশ রিমোট সেন্সিং পদ্ধতির মাধ্যমে একটি গভীর শিক্ষা-ভিত্তিক নিম্ন-উচ্চতা গাড়ির গতি সনাক্তকারীর মাধ্যমে ইউএভিএসের মাধ্যমে স্মার্ট সাইট: অ্যালগরিদম, বাস্তবায়ন এবং মূল্যায়ন},\n  লেখক={মোশায়েদী, আতা জাহাঙ্গীর এবং রায়, আতানু শুভম এবং তারাভেত, আলিরেজা এবং লিয়াও, লিফা এবং উ, জিয়ানকিং এবং ঘেসারি, মেহেদি},\n  জার্নাল={ভবিষ্যত পরিবহন},\n  ভলিউম={3},\n  সংখ্যা={1},\n  পৃষ্ঠা={189--209},\n  বছর={2023},\n  প্রকাশক={MDPI},\n  pdf={}\n} @আর্টিকেল{moshayedi2024design,\n  title={FOODIEBOT রোবটের ডিজাইন এবং বিকাশ: সিমুলেশন থেকে ডিজাইন পর্যন্ত},\n  লেখক={মোশায়েদী, আতা জাহাঙ্গীর এবং রায়, আতনু শুভম এবং লিয়াও, লাইফা এবং খান, আমির সোহেল এবং কোলাহদুজ, আমিন এবং ইফতেখারি, আলী},\n  জার্নাল={IEEE অ্যাক্সেস},\n  ভলিউম={12},\n  পৃষ্ঠা={36148--36172},\n  বছর={2024},\n  প্রকাশক={IEEE},\n  pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n}",
+      "publications_bibtex": "@article{moshayedi2026agro,\n  title={Smart Agro-ecosystem: A Review of LLM-based Robotic Systems for Sensing and Decision Support in Precision Agriculture},\n  author={Moshayedi, A. J. and Roy, A. S. and others},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  pdf={}\n} @incollection{moshayedi2026lidar,\n  title={Comparative Analysis of LiDAR and Kinect Sensors for XiaoQiang AGV Navigation in Real and Simulated Environments},\n  author={Moshayedi, A. J. and Zou, Z. and Roy, A. S. and Kolahdooz, A.},\n  booktitle={Proceedings of the 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Vol. I},\n  publisher={Springer},\n  year={2026},\n  type={conference},\n  pdf={}\n} @article{moshayedi2026integrated,\n  title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},\n  author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  pdf={}\n} @inproceedings{moshayedi2025path,\n  title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},\n  author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},\n  booktitle={5th ICRAIC 2025, IEEE},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},\n  author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},\n  booktitle={4th ICCIT 2025},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2024dr,\n  title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},\n  author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{roy2024advanced,\n  title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},\n  author={Roy, A.S. and Das, A.},\n  journal={Journal of Robotics Research (JRR), 1(1), 15–23},\n  year={2024},\n  type={journal},\n  pdf={}\n} @inproceedings{roy2024attentive,\n  title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},\n  author={Roy, A.S. and Bagade, P.},\n  booktitle={VISAPP 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{moshayedi2023secure,\n  title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},\n  journal={Future transportation},\n  volume={3},\n  number={1},\n  pages={189--209},\n  year={2023},\n  publisher={MDPI},\n  pdf={}\n} @article{moshayedi2024design,\n  title={Design and development of FOODIEBOT robot: From simulation to design},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},\n  journal={IEEE access},\n  volume={12},\n  pages={36148--36172},\n  year={2024},\n  publisher={IEEE},\n  pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n} @article{moshayedi2025emtihan,\n  title={EMTIHAN: Design of a novel approach to secure online examination challenge in remote learning},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={Education and Information Technologies},\n  year={2025},\n  publisher={Springer},\n  pdf={}\n} @article{moshayedi2024iot,\n  title={A novel IoT-enabled portable, secure automatic self-lecture attendance system: design, development and comparison},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={International Journal of Electronic Security and Digital Forensics},\n  year={2024},\n  publisher={Inderscience},\n  pdf={}\n} @article{roy2022automation,\n  title={Automation Attendance Systems Approaches: A Practical Review},\n  author={Shuvam Roy, Atanu and Lan, H. and Gheisari, Mehdi and Abbasi, Aqif Afzaal and Moshayedi, Ata Jahangir and Liao, Liefa and Hosseini Bamakan, Seyed Mojtaba},\n  journal={BOHR International Journal of Internet of Things, Artificial Intelligence and Machine Learning},\n  year={2022},\n  pdf={}\n}\n",
       "research_statements": [
         {
           "title": "অটোনোমাস গাইডেড ভেহিকেল (AGV)",

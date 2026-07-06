@@ -1,33 +1,98 @@
 projects:
+  - title: "Saladology"
+    description: "Designed and built the pitch site for Saladology, a next-gen healthy fast-food concept centered on smart-farmed, freshly prepared salads — clean product storytelling paired with a fast, conversion-focused build."
+    tags: ["Webflow", "Web Design", "Brand Site", "CMS"]
+    image: ""
+    showcase_image: "/assets/saladology.webp"
+    link: "https://www.saladology.co.uk"
+    github: ""
+    featured: true
+    mockup_url: "saladology.co.uk"
+    mockup_icon: "🥗"
+
+  - title: "Cual.co Restaurant Data Platform"
+    description: "Imported 14,536 restaurants for Cual.co — photos, reviews, and metadata pulled from Google Maps — with deduplication and clean formatting in Python, then wired the new data into the product's Laravel backend and Next.js frontend."
+    tags: ["Python", "PHP", "Laravel", "Next.js", "Data Engineering"]
+    image: ""
+    link: ""
+    github: ""
+    featured: true
+    mockup_url: "cual.co"
+    mockup_icon: "🍽️"
+
+  - title: "The Bronx Clinic — Medical Website"
+    description: "Full-stack medical website built for a Backend Ace client in NY, USA, covering booking, content, and patient-facing information pages."
+    tags: ["Laravel", "PHP", "Next.js", "React"]
+    image: ""
+    link: ""
+    github: ""
+    featured: true
+    mockup_url: "bronxclinic.com"
+    mockup_icon: "🏥"
+
   - title: "BTC-CORE-WEBAPP"
-    description: "Built a full web interface to interact with a Bitcoin Core node via RPC commands — real-time block data, wallet management, and transaction broadcasting in a clean UI."
+    description: "A full web interface to interact with a Bitcoin Core node via JSON-RPC — real-time block data, wallet management, and transaction broadcasting in a clean UI."
     tags: ["Java", "Bitcoin RPC", "REST API", "React"]
     image: "https://picsum.photos/seed/btc/600/400"
     link: "https://btc-core-app.vercel.app"
     github: "https://github.com/atanuroy911/BTC-CORE-WEBAPP"
-    featured: true
-    testimonial:
-      quote: "\"Atanu delivered exactly what we needed — clean code, fast turnaround, and zero hand-holding required. Will hire again.\""
-      author: "James M."
-      role: "CTO, FinTech Startup · New York"
-      initials: "JM"
-    mockup_url: "btc-core-app.vercel.app"
-    mockup_icon: "⛓"
-  
-  - title: "Fortinet Auth GUI"
-    description: "Automated network authentication for large-scale campus environments. Reduced manual login steps to zero — one-click background auth that just works."
-    tags: ["JavaScript", "Network", "Automation", "Electron"]
+    featured: false
+
+  - title: "IIT Kanpur Firewall Authenticator"
+    description: "A PyQt5 GUI wrapper that auto-authenticates against IIT Kanpur's Fortinet captive portal, with keep-alive polling and background execution so embedded devices never silently drop off the network."
+    tags: ["Python", "PyQt5", "Network", "Automation"]
     image: "https://picsum.photos/seed/fortinet/600/400"
-    link: "https://fortinet-gui.io"
+    link: ""
     github: "https://github.com/atanuroy911/iitk-fortinet-gui"
-    featured: true
-    testimonial:
-      quote: "\"Saved our team hours every week. The app just works — reliable, fast, and incredibly well-built.\""
-      author: "Sarah R."
-      role: "Engineering Lead · Toronto"
-      initials: "SR"
-    mockup_url: "fortinet-gui.io"
-    mockup_icon: "🔐"
+    featured: false
+
+  - title: "RADAR+Camera Monitoring App"
+    description: "Desktop app to interact with an OPS-243C Doppler radar with live camera integration for speed and distance detection of moving objects."
+    tags: ["Python", "PyQt5", "Computer Vision"]
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+
+  - title: "Self-Lecture Attendance System (SLAS)"
+    description: "A full-stack QR-based attendance system built as a WeChat Mini Program with a Java Spring Boot backend, securely recording attendance at Chinese institutions. Won 2nd Prize in the Central China \"Internet+\" Innovation Competition and the 7th \"Discovery Cup.\""
+    tags: ["WeChat Mini Program", "JavaScript", "Java", "Spring Boot"]
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+
+  - title: "Online Exam Assistant"
+    description: "A full-stack Android app for distance education — course management, exam scheduling, and timed assessments with anti-cheating mechanisms. Ranked 2nd (Provincial) and 3rd (National) in the 14th China University Computer Design Competition."
+    tags: ["Kotlin", "PHP", "Android"]
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+
+  - title: "Smart Parking System"
+    description: "Web application connecting to cloud and LoRaWAN-based parking modules to manage occupancy across multiple parking lots."
+    tags: ["ReactJS", "ExpressJS", "LoRaWAN"]
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+
+  - title: "Car Dealership CRM"
+    description: "Full-stack CRM for capturing leads, recording customer information, and sending promotional emails — built for dealership clients."
+    tags: ["ReactJS", "Material UI", "ExpressJS"]
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+
+  - title: "Facebook Ad Automation Tool"
+    description: "Selenium-driven Python tool that automates posting and managing Facebook ad campaigns, built while leading junior developers at Wizzartech."
+    tags: ["Python", "Selenium", "Automation"]
+    image: ""
+    link: ""
+    github: ""
+    featured: false
 
   - title: "CS724-RoboX"
     description: "A repository related to robotics and autonomous systems at IIT Kanpur. Developed algorithms for path planning and control."
@@ -36,12 +101,13 @@ projects:
     github: "https://github.com/atanuroy911/CS724-RoboX"
     featured: false
 
-  - title: "stress-detection-app"
-    description: "A comprehensive machine learning system for predicting stress levels using physiological data and Python."
-    tags: ["Python", "Machine Learning", "Healthcare"]
+  - title: "Activity Recognition App (LSTM)"
+    description: "Mobile app to live-monitor physical activity using motion sensors and an LSTM model served from the cloud."
+    tags: ["Flutter", "Python", "Machine Learning"]
     image: "https://picsum.photos/seed/stress/600/400"
     github: "https://github.com/atanuroy911/stress-detection-app"
-  
+    featured: false
+
   - title: "ulab-mms"
     description: "Modern Management System for ULAB (University of Liberal Arts Bangladesh) to streamline academic operations."
     tags: ["TypeScript", "Next.js", "Full-Stack"]

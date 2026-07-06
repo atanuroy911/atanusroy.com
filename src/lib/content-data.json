@@ -910,8 +910,8 @@
         {
           "id": "project",
           "label": "Project",
-          "color": "#00a8c8",
-          "bg": "#e0f9ff"
+          "color": "#059669",
+          "bg": "#ecfdf5"
         },
         {
           "id": "devlog",
@@ -952,6 +952,62 @@
       ],
       "blog_posts": [
         {
+          "id": "joined-backend-ace",
+          "title": "Joined Backend Ace as Software & DevOps Engineer",
+          "date": "2024-11-01",
+          "category": "career",
+          "tags": [
+            "career",
+            "devops",
+            "aws",
+            "laravel"
+          ],
+          "cover_image": "",
+          "summary": "Started as Software & DevOps Engineer at Backend Ace (NY, USA) — full-stack work on Laravel/Next.js products and infrastructure migrations for real clients.\n",
+          "content": "## New Role\n\nI joined **Backend Ace**, a NY-based dev shop, as a Software & DevOps Engineer in\nNovember 2024. The work spans backend (PHP/Laravel), frontend (Next.js/React), and\ninfrastructure — a mix that suits how I like to work.\n\n## What I've Shipped So Far\n\n- Migrated a client's server and DNS from **DigitalOcean to AWS**, moving deployment\n  onto Docker + Jenkins on EC2 instances\n- Imported and cleaned **14,536 restaurant records** (with photos and reviews pulled\n  from Google Maps) for a client product, deduplicated and reformatted in Python\n- Built backend and frontend changes to support the new data — Laravel on the backend,\n  Next.js on the frontend\n- Delivered a full-stack medical website for a healthcare client (The Bronx Clinic, NY)\n\nMore on each of these as they ship publicly.\n",
+          "github": "",
+          "link": "",
+          "pinned": true
+        },
+        {
+          "id": "digitalocean-to-aws-migration",
+          "title": "Migrating Production Off DigitalOcean, Onto AWS",
+          "date": "2025-01-20",
+          "category": "deployment",
+          "tags": [
+            "aws",
+            "docker",
+            "jenkins",
+            "devops",
+            "migration"
+          ],
+          "cover_image": "",
+          "summary": "Notes from moving a live client server and DNS from DigitalOcean to AWS EC2, with Docker and Jenkins handling deployment end to end.\n",
+          "content": "## Why Migrate\n\nThe client's DigitalOcean droplet had grown past what a single-box setup could\ncomfortably handle — no real CI/CD, manual deploys, and DNS management that made\nevery change risky.\n\n## The Move\n\n- Re-platformed onto **AWS EC2**, containerizing the app with **Docker** so the\n  environment is reproducible\n- Set up **Jenkins** pipelines for build → test → deploy, replacing manual SSH-and-pray\n  deployments\n- Migrated DNS carefully with low TTLs beforehand to keep the cutover close to zero\n  downtime\n\n## Takeaway\n\nMost of the actual risk in a migration like this isn't the compute — it's DNS and\nstate (databases, uploaded files). Get those right first, and the rest is just\nfollowing a checklist.\n",
+          "github": "",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "iitk-fortinet-authenticator",
+          "title": "Killing Campus Wi-Fi Timeouts with a PyQt5 Tray App",
+          "date": "2023-09-05",
+          "category": "tools",
+          "tags": [
+            "automation",
+            "network",
+            "python",
+            "pyqt5",
+            "tools"
+          ],
+          "cover_image": "",
+          "summary": "IIT Kanpur's Fortinet captive portal logs you out every few hours. I built a PyQt5 GUI wrapper that silently re-authenticates in the background.\n",
+          "content": "## The Problem\n\nIIT Kanpur's Fortinet captive portal logs you out periodically — inconvenient any\ntime, actively damaging when it kills a long-running training job or a remote SSH\nsession.\n\n## The Fix\n\nI built a small **PyQt5** GUI wrapper that:\n\n1. Watches connectivity in the background\n2. Automatically re-submits the auth form with keep-alive polling when the session drops\n3. Runs quietly, designed to survive on embedded devices left running unattended\n\nIt's a small tool, but it's the kind of thing that pays for itself the first time it\nsaves a job you'd otherwise have restarted from scratch.\n",
+          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
+          "link": "",
+          "pinned": false
+        },
+        {
           "id": "btc-core-webapp-launch",
           "title": "Building a Bitcoin RPC Browser with Java",
           "date": "2025-03-10",
@@ -963,45 +1019,45 @@
             "web-app"
           ],
           "cover_image": "",
-          "summary": "Walk through building a full web interface to interact with a Bitcoin Core node via JSON-RPC — the architecture, async challenges, and what I learned.\n",
-          "content": "## The itch\n\nI run a Bitcoin Core full node at home. Every time I wanted to check mempool stats,\nlist UTXOs, or decode a raw transaction, I had to drop into the terminal and type\n`bitcoin-cli` commands. Fine once. Annoying on repeat.\n\nI wanted a clean browser UI. So I built one.\n\n## Tech Stack\n\n- **Backend**: Java (Spring Boot) — wrapping the JSON-RPC calls\n- **Frontend**: Vanilla JS + Fetch API\n- **Auth**: HTTP Basic Auth (same credentials as bitcoin.conf)\n\n## The JSON-RPC Layer\n\nBitcoin Core exposes a simple HTTP JSON-RPC interface. Every command looks like:\n\n```json\n{\n  \"method\": \"getblockchaininfo\",\n  \"params\": [],\n  \"id\": 1\n}\n```\n\nThe Spring Boot service proxies these requests, adds auth headers, and returns clean JSON\nto the frontend. The tricky part was handling **long-polling** for mempool updates — I didn't\nwant to hammer the node with constant requests.\n\n**Solution**: a 5-second debounced poll with exponential backoff if the node is busy.\n\n## What I Learned\n\n- Bitcoin Core's RPC surface is *huge*. Stick to what you need.\n- `getblocktemplate` is expensive — don't call it frequently.\n- Java's `HttpClient` (Java 11+) handles async nicely with `CompletableFuture`.\n\n## Code\n\nThe full source is on GitHub. PRs and issues welcome!\n",
+          "summary": "A full web interface to interact with a Bitcoin Core node via JSON-RPC — real-time block data, wallet management, and transaction broadcasting.\n",
+          "content": "## The itch\n\nRunning a Bitcoin Core full node means dropping into `bitcoin-cli` for anything —\nchecking mempool stats, listing UTXOs, decoding a raw transaction. I wanted a clean\nbrowser UI instead, so I built one.\n\n## Tech Stack\n\n- **Backend**: Java, wrapping the JSON-RPC calls\n- **Frontend**: React\n- **Auth**: HTTP Basic Auth (same credentials as `bitcoin.conf`)\n\n## What I Learned\n\n- Bitcoin Core's RPC surface is *huge* — stick to what you need\n- `getblocktemplate` is expensive; don't call it frequently\n- Polling for mempool updates needs backoff, or you'll hammer the node\n\nSource is on GitHub — PRs and issues welcome.\n",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
-          "link": "",
-          "pinned": true
-        },
-        {
-          "id": "iitk-fortinet-authenticator",
-          "title": "Killing Campus Wi-Fi Timeouts with an Electron App",
-          "date": "2024-09-05",
-          "category": "tools",
-          "tags": [
-            "automation",
-            "network",
-            "electron",
-            "tools"
-          ],
-          "cover_image": "",
-          "summary": "Campus Wi-Fi logs you out every 4 hours. I automated re-authentication with a tiny Electron tray app that silently handles it in the background.\n",
-          "content": "## The Problem\n\nIIT Kanpur's Fortinet captive portal logs you out every 4 hours. You're 3 hours into\na training run, walk away for lunch, come back to find the job dead because the\nnetwork dropped.\n\nThis is fixable. So I fixed it.\n\n## How Fortinet Auth Works\n\nThe captive portal is just a POST form:\n\n```\nPOST /fgtauth\nContent-Type: application/x-www-form-urlencoded\n\nusername=ROLLNO&password=SECRET&magic=TOKEN&4Tredir=http://1.1.1.1\n```\n\nThe `magic` token changes each session — you have to scrape it from the login page first.\n\n## The Electron App\n\nI wrapped this in an **Electron** tray app so it:\n\n1. Watches for internet connectivity (polls `1.1.1.1` every 60s)\n2. On failure: scrapes a fresh magic token, re-submits credentials\n3. Notifies you via system tray if re-auth succeeds or fails\n\nLives in the system tray. Uses ~30MB RAM. Zero UI clutter.\n\n## Platform Support\n\nTested on:\n- **Linux** (Arch, Ubuntu 22.04)\n- **macOS** (Ventura)\n\nWindows support is sketchy because Electron's tray behaves differently but it's on the roadmap.\n",
-          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
           "link": "",
           "pinned": false
         },
         {
-          "id": "stress-detection-ml",
-          "title": "91% Accuracy Stress Detection from Wearable Sensors",
-          "date": "2024-06-20",
-          "category": "project",
+          "id": "freelance-since-2023",
+          "title": "Going Freelance Alongside Research",
+          "date": "2023-01-10",
+          "category": "career",
           "tags": [
-            "machine-learning",
-            "healthcare",
-            "python",
-            "signal-processing"
+            "career",
+            "freelance",
+            "react-native",
+            "flutter"
           ],
           "cover_image": "",
-          "summary": "End-to-end ML pipeline for stress-level prediction using wearable sensor data — from raw signal preprocessing to a 1D-CNN that hits 91% accuracy.\n",
-          "content": "## Dataset\n\nI used the **WESAD** (Wearable Stress and Affect Detection) dataset — 15 subjects,\nchest-worn RespiBAN sensor collecting:\n\n- **EDA** (Electrodermal Activity / Galvanic Skin Response)\n- **ECG** (Electrocardiogram)\n- **Respiration**\n- **ACC** (3-axis accelerometer)\n\nThree labels: *Baseline*, *Stress*, *Amusement*.\n\n## Preprocessing Pipeline\n\n```python\n# 1. Bandpass filter EDA (0.05–5 Hz)\n# 2. Sliding window segmentation (60s, 50% overlap)\n# 3. Feature extraction per window:\n#    - EDA: SCR peaks, SCL mean, rise time\n#    - HRV: SDNN, RMSSD, LF/HF ratio\n#    - RESP: rate, amplitude variance\n```\n\n## Models Compared\n\n| Model | Accuracy | F1 (macro) |\n|---|---|---|\n| SVM (RBF kernel) | 84.2% | 0.81 |\n| Random Forest | 87.6% | 0.85 |\n| **1D-CNN** | **91.3%** | **0.90** |\n\nThe 1D-CNN treats each feature channel as a separate temporal stream — it learns\ncorrelations across modalities that handcrafted features miss.\n\n## Key Takeaway\n\nFor physiological time series: **deep learning wins on accuracy, tree models win on\ninterpretability**. If you're building for a clinical context, Random Forest + SHAP\nvalues is the more defensible choice.\n",
-          "github": "https://github.com/atanuroy911/stress-detection-app",
+          "summary": "Started taking on freelance web and mobile projects in parallel with my research — cross-platform apps, ML-backed tools, and client work.\n",
+          "content": "## Why Freelance\n\nAlongside research at IIT Kanpur, I started freelancing in January 2023 — mostly\ncross-platform web and mobile work, and a good amount of it ML-adjacent.\n\n## What I've Built\n\n- **Activity recognition** app using an LSTM model, built in Flutter with a\n  cloud-hosted inference backend\n- **OpenCV-based object detection** tooling\n- **IoT intrusion detection** proof-of-concepts\n- Assorted **React Native / Flutter** client apps\n\nFreelancing forces a different kind of discipline than research — the deadline is\nreal, the client is real, and \"it works on my machine\" isn't an acceptable answer.\n",
+          "github": "",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "slas-competition-win",
+          "title": "SLAS Won 2nd Prize in the Central China Innovation Competition",
+          "date": "2020-01-15",
+          "category": "career",
+          "tags": [
+            "award",
+            "wechat",
+            "attendance",
+            "java"
+          ],
+          "cover_image": "",
+          "summary": "Self-Lecture Attendance System (SLAS), a WeChat Mini Program I built for secure QR-based attendance, won 2nd Prize in Central China's \"Internet+\" Innovation Competition and the 7th \"Discovery Cup.\"\n",
+          "content": "## What SLAS Does\n\nSLAS is a full-stack QR-based attendance system built as a **WeChat Mini Program**\nwith a **Java Spring Boot** backend, letting institutions record attendance securely\nwithout extra hardware — just the phone students already carry.\n\n## Recognition\n\nThe project won **2nd Prize** in the Central China \"Internet+\" Innovation Competition\nand the **7th \"Discovery Cup\"** in China, and later formed the basis of a registered\nsoftware copyright (SLAS, Copyright No. 2020SR0058411).\n\nIt also fed directly into later academic work on IoT-based self-lecture attendance\nsystems.\n",
+          "github": "",
           "link": "",
           "pinned": false
         }
@@ -1020,21 +1076,21 @@
           "DevOps",
           "Cloud"
         ],
-        "tagline": "Robust, scalable web apps — from pixel-perfect frontends to cloud-native microservices. I turn your product idea into working software.",
-        "cta_primary": "Start a project →",
-        "cta_primary_link": "https://example.com/start",
+        "tagline": "Full-stack and DevOps engineer — React/Next.js frontends, Laravel & Node backends, shipped on AWS with Docker and Jenkins. I also build cross-platform ML apps with Flutter and Python.",
+        "cta_primary": "Book a free call →",
+        "cta_primary_link": "https://calendly.com/atanusroy",
         "cta_secondary": "See my work",
         "cta_secondary_link": "#projects",
-        "hire_me_link": "https://example.com",
+        "hire_me_link": "https://calendly.com/atanusroy",
         "photo_url": "/assets/developer_photo.jpg",
         "status_badge": "Open to new clients right now",
         "stats": [
           {
-            "n": "25+",
+            "n": "15+",
             "l": "Projects shipped"
           },
           {
-            "n": "6+",
+            "n": "7+",
             "l": "Years building"
           },
           {
@@ -1045,15 +1101,15 @@
       },
       "marquee": [
         "✦ React",
-        "✦ Node.js",
-        "✦ TypeScript",
-        "✦ AWS",
-        "✦ Docker",
-        "✦ PostgreSQL",
         "✦ Next.js",
-        "✦ CI/CD",
-        "✦ Kubernetes",
-        "✦ GraphQL"
+        "✦ TypeScript",
+        "✦ PHP / Laravel",
+        "✦ Python",
+        "✦ Docker",
+        "✦ Jenkins",
+        "✦ AWS",
+        "✦ Flutter",
+        "✦ React Native"
       ],
       "services": {
         "title": "Skills that ship products",
@@ -1062,22 +1118,22 @@
           {
             "icon": "ti-layout-dashboard",
             "title": "Full-Stack Apps",
-            "desc": "End-to-end web applications — React frontends, Node/Django backends, real databases."
+            "desc": "React/Next.js frontends paired with Laravel (PHP) or Node.js backends — real production sites, not demos."
           },
           {
             "icon": "ti-cloud",
             "title": "Cloud & DevOps",
-            "desc": "AWS, Docker, CI/CD pipelines. I deploy it, monitor it, and keep it running."
+            "desc": "AWS, Docker, and Jenkins CI/CD. I've migrated production infra off DigitalOcean and kept it running since."
           },
           {
             "icon": "ti-api",
-            "title": "API Design",
-            "desc": "REST and GraphQL APIs built to scale. Clean contracts, solid docs, versioned."
+            "title": "Data & Integrations",
+            "desc": "Clean, deduplicated data pipelines — imports, scraping, and API integrations that don't fall over at scale."
           },
           {
             "icon": "ti-rocket",
-            "title": "MVP Builds",
-            "desc": "Got an idea? I'll take you from zero to launched — fast, clean, and fundable."
+            "title": "Cross-Platform & ML Apps",
+            "desc": "React Native / Flutter apps with embedded ML — activity recognition, object detection, sensor pipelines."
           }
         ]
       },
@@ -1108,17 +1164,17 @@
         ]
       },
       "quote": {
-        "text": "Working with Atanu felt like having a *senior engineer on staff* — except he actually shipped faster than anyone I've hired full-time.",
-        "author": "Michael K.",
-        "role": "Founder, SaaS Startup · New York, USA",
-        "initials": "MK"
+        "text": "I'd rather ship something *small and working* on day one than something perfect that never leaves my laptop.",
+        "author": "Atanu Shuvam Roy",
+        "role": "Software & DevOps Engineer",
+        "initials": "AR"
       },
       "cta": {
         "badge": "Currently available · replies within 24h",
         "title": "Let's build something together",
         "sub": "Tell me about your project — I'll come back with a clear plan and honest estimate.",
         "btn_primary": "Book a free call →",
-        "btn_primary_link": "https://example.com/book",
+        "btn_primary_link": "https://calendly.com/atanusroy",
         "btn_secondary": "See all projects",
         "btn_secondary_link": "#projects",
         "reply_text": "No commitment. No sales pitch. Just a conversation."
@@ -1139,8 +1195,58 @@
       },
       "projects": [
         {
+          "title": "Saladology",
+          "description": "Designed and built the pitch site for Saladology, a next-gen healthy fast-food concept centered on smart-farmed, freshly prepared salads — clean product storytelling paired with a fast, conversion-focused build.",
+          "tags": [
+            "Webflow",
+            "Web Design",
+            "Brand Site",
+            "CMS"
+          ],
+          "image": "",
+          "showcase_image": "/assets/saladology.webp",
+          "link": "https://www.saladology.co.uk",
+          "github": "",
+          "featured": true,
+          "mockup_url": "saladology.co.uk",
+          "mockup_icon": "🥗"
+        },
+        {
+          "title": "Cual.co Restaurant Data Platform",
+          "description": "Imported 14,536 restaurants for Cual.co — photos, reviews, and metadata pulled from Google Maps — with deduplication and clean formatting in Python, then wired the new data into the product's Laravel backend and Next.js frontend.",
+          "tags": [
+            "Python",
+            "PHP",
+            "Laravel",
+            "Next.js",
+            "Data Engineering"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": true,
+          "mockup_url": "cual.co",
+          "mockup_icon": "🍽️"
+        },
+        {
+          "title": "The Bronx Clinic — Medical Website",
+          "description": "Full-stack medical website built for a Backend Ace client in NY, USA, covering booking, content, and patient-facing information pages.",
+          "tags": [
+            "Laravel",
+            "PHP",
+            "Next.js",
+            "React"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": true,
+          "mockup_url": "bronxclinic.com",
+          "mockup_icon": "🏥"
+        },
+        {
           "title": "BTC-CORE-WEBAPP",
-          "description": "Built a full web interface to interact with a Bitcoin Core node via RPC commands — real-time block data, wallet management, and transaction broadcasting in a clean UI.",
+          "description": "A full web interface to interact with a Bitcoin Core node via JSON-RPC — real-time block data, wallet management, and transaction broadcasting in a clean UI.",
           "tags": [
             "Java",
             "Bitcoin RPC",
@@ -1150,37 +1256,100 @@
           "image": "https://picsum.photos/seed/btc/600/400",
           "link": "https://btc-core-app.vercel.app",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
-          "featured": true,
-          "testimonial": {
-            "quote": "\"Atanu delivered exactly what we needed — clean code, fast turnaround, and zero hand-holding required. Will hire again.\"",
-            "author": "James M.",
-            "role": "CTO, FinTech Startup · New York",
-            "initials": "JM"
-          },
-          "mockup_url": "btc-core-app.vercel.app",
-          "mockup_icon": "⛓"
+          "featured": false
         },
         {
-          "title": "Fortinet Auth GUI",
-          "description": "Automated network authentication for large-scale campus environments. Reduced manual login steps to zero — one-click background auth that just works.",
+          "title": "IIT Kanpur Firewall Authenticator",
+          "description": "A PyQt5 GUI wrapper that auto-authenticates against IIT Kanpur's Fortinet captive portal, with keep-alive polling and background execution so embedded devices never silently drop off the network.",
           "tags": [
-            "JavaScript",
+            "Python",
+            "PyQt5",
             "Network",
-            "Automation",
-            "Electron"
+            "Automation"
           ],
           "image": "https://picsum.photos/seed/fortinet/600/400",
-          "link": "https://fortinet-gui.io",
+          "link": "",
           "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
-          "featured": true,
-          "testimonial": {
-            "quote": "\"Saved our team hours every week. The app just works — reliable, fast, and incredibly well-built.\"",
-            "author": "Sarah R.",
-            "role": "Engineering Lead · Toronto",
-            "initials": "SR"
-          },
-          "mockup_url": "fortinet-gui.io",
-          "mockup_icon": "🔐"
+          "featured": false
+        },
+        {
+          "title": "RADAR+Camera Monitoring App",
+          "description": "Desktop app to interact with an OPS-243C Doppler radar with live camera integration for speed and distance detection of moving objects.",
+          "tags": [
+            "Python",
+            "PyQt5",
+            "Computer Vision"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "Self-Lecture Attendance System (SLAS)",
+          "description": "A full-stack QR-based attendance system built as a WeChat Mini Program with a Java Spring Boot backend, securely recording attendance at Chinese institutions. Won 2nd Prize in the Central China \"Internet+\" Innovation Competition and the 7th \"Discovery Cup.\"",
+          "tags": [
+            "WeChat Mini Program",
+            "JavaScript",
+            "Java",
+            "Spring Boot"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "Online Exam Assistant",
+          "description": "A full-stack Android app for distance education — course management, exam scheduling, and timed assessments with anti-cheating mechanisms. Ranked 2nd (Provincial) and 3rd (National) in the 14th China University Computer Design Competition.",
+          "tags": [
+            "Kotlin",
+            "PHP",
+            "Android"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "Smart Parking System",
+          "description": "Web application connecting to cloud and LoRaWAN-based parking modules to manage occupancy across multiple parking lots.",
+          "tags": [
+            "ReactJS",
+            "ExpressJS",
+            "LoRaWAN"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "Car Dealership CRM",
+          "description": "Full-stack CRM for capturing leads, recording customer information, and sending promotional emails — built for dealership clients.",
+          "tags": [
+            "ReactJS",
+            "Material UI",
+            "ExpressJS"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "Facebook Ad Automation Tool",
+          "description": "Selenium-driven Python tool that automates posting and managing Facebook ad campaigns, built while leading junior developers at Wizzartech.",
+          "tags": [
+            "Python",
+            "Selenium",
+            "Automation"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
         },
         {
           "title": "CS724-RoboX",
@@ -1195,15 +1364,16 @@
           "featured": false
         },
         {
-          "title": "stress-detection-app",
-          "description": "A comprehensive machine learning system for predicting stress levels using physiological data and Python.",
+          "title": "Activity Recognition App (LSTM)",
+          "description": "Mobile app to live-monitor physical activity using motion sensors and an LSTM model served from the cloud.",
           "tags": [
+            "Flutter",
             "Python",
-            "Machine Learning",
-            "Healthcare"
+            "Machine Learning"
           ],
           "image": "https://picsum.photos/seed/stress/600/400",
-          "github": "https://github.com/atanuroy911/stress-detection-app"
+          "github": "https://github.com/atanuroy911/stress-detection-app",
+          "featured": false
         },
         {
           "title": "ulab-mms",
@@ -2079,8 +2249,8 @@
         {
           "id": "project",
           "label": "প্রকল্প",
-          "color": "#00a8c8",
-          "bg": "#e0f9ff"
+          "color": "#059669",
+          "bg": "#ecfdf5"
         },
         {
           "id": "devlog",
@@ -2121,6 +2291,62 @@
       ],
       "blog_posts": [
         {
+          "id": "joined-backend-ace",
+          "title": "সফ্টওয়্যার এবং ডিওঅপস ইঞ্জিনিয়ার হিসাবে ব্যাকএন্ড এসে যোগদান করেছেন",
+          "date": "2024-11-01",
+          "category": "career",
+          "tags": [
+            "career",
+            "devops",
+            "aws",
+            "laravel"
+          ],
+          "cover_image": "",
+          "summary": "Backend Ace (NY, USA)-এ সফ্টওয়্যার এবং DevOps ইঞ্জিনিয়ার হিসাবে শুরু হয়েছে — Laravel/Next.js পণ্য এবং প্রকৃত ক্লায়েন্টদের জন্য পরিকাঠামো স্থানান্তরের সম্পূর্ণ স্ট্যাক কাজ৷",
+          "content": "## নতুন ভূমিকা\n\nআমি **Backend Ace**, একটি NY-ভিত্তিক ডেভ শপ-এ সফটওয়্যার এবং DevOps ইঞ্জিনিয়ার হিসেবে যোগদান করেছি\nনভেম্বর 2024। কাজটি ব্যাকএন্ড (PHP/Laravel), ফ্রন্টএন্ড (Next.js/React) এবং\nপরিকাঠামো — আমি যেভাবে কাজ করতে পছন্দ করি তার জন্য একটি মিশ্রণ।\n\n## আমি এতদূর যা পাঠিয়েছি\n\n- একটি ক্লায়েন্টের সার্ভার এবং DNS **DigitalOcean থেকে AWS**-এ স্থানান্তরিত হয়েছে, ডিপ্লয়মেন্ট সরানো হয়েছে\n  EC2 দৃষ্টান্তে ডকার + জেনকিন্সে\n- আমদানি করা এবং পরিষ্কার করা **14,536 রেস্তোরাঁর রেকর্ড** (ছবি এবং পর্যালোচনা টানা সহ\n  Google মানচিত্র থেকে) একটি ক্লায়েন্ট পণ্যের জন্য, ডিডুপ্লিকেট এবং পাইথনে পুনরায় ফর্ম্যাট করা হয়েছে৷\n- নতুন ডেটা সমর্থন করার জন্য নির্মিত ব্যাকএন্ড এবং ফ্রন্টএন্ড পরিবর্তনগুলি - ব্যাকএন্ডে লারাভেল,\n  সামনের প্রান্তে Next.js\n- স্বাস্থ্যসেবা ক্লায়েন্টের জন্য একটি সম্পূর্ণ-স্ট্যাক মেডিকেল ওয়েবসাইট সরবরাহ করা হয়েছে (The Bronx Clinic, NY)\n\nতারা প্রকাশ্যে জাহাজ হিসাবে এই প্রতিটি উপর আরো.",
+          "github": "",
+          "link": "",
+          "pinned": true
+        },
+        {
+          "id": "digitalocean-to-aws-migration",
+          "title": "DigitalOcean বন্ধ উৎপাদন স্থানান্তর, AWS-এ",
+          "date": "2025-01-20",
+          "category": "deployment",
+          "tags": [
+            "aws",
+            "docker",
+            "jenkins",
+            "devops",
+            "migration"
+          ],
+          "cover_image": "",
+          "summary": "একটি লাইভ ক্লায়েন্ট সার্ভার এবং ডিএনএস ডিজিটালওশেন থেকে AWS EC2-এ সরানোর নোট, ডকার এবং জেনকিনস ডিপ্লয়মেন্ট এন্ড টু এন্ড পরিচালনা করে।",
+          "content": "## কেন মাইগ্রেট\n\nক্লায়েন্টের DigitalOcean ড্রপলেট একটি একক-বক্স সেটআপ যা করতে পারে তা অতীত হয়ে গেছে\nআরামদায়কভাবে পরিচালনা করুন — কোন বাস্তব CI/CD, ম্যানুয়াল স্থাপনা, এবং DNS ব্যবস্থাপনা যা তৈরি করেছে\nপ্রতিটি পরিবর্তন ঝুঁকিপূর্ণ।\n\n## পদক্ষেপ\n\n- **AWS EC2**-এ পুনরায় প্ল্যাটফর্ম করা হয়েছে, অ্যাপটিকে **ডকার** দিয়ে কন্টেনারাইজ করা হয়েছে যাতে\n  পরিবেশ প্রজননযোগ্য\n- বিল্ড → টেস্ট → ডিপ্লোয় করার জন্য **জেনকিন্স** পাইপলাইন সেট আপ করুন, ম্যানুয়াল SSH-এন্ড-প্রে প্রতিস্থাপন করুন\n  স্থাপনা\n- কাটওভারকে শূন্যের কাছাকাছি রাখতে আগেই কম TTL দিয়ে সাবধানে DNS স্থানান্তরিত করুন৷\n  ডাউনটাইম\n\n## টেকঅ্যাওয়ে\n\nএই ধরনের মাইগ্রেশনে প্রকৃত ঝুঁকির বেশিরভাগই গণনা নয় - এটি ডিএনএস এবং\nরাষ্ট্র (ডাটাবেস, আপলোড করা ফাইল)। প্রথমে সেই অধিকারগুলি পান, এবং বাকিটা ঠিক\nএকটি চেকলিস্ট অনুসরণ করে।",
+          "github": "",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "iitk-fortinet-authenticator",
+          "title": "একটি PyQt5 ট্রে অ্যাপ দিয়ে ক্যাম্পাসের ওয়াই-ফাই টাইমআউটগুলিকে হত্যা করা",
+          "date": "2023-09-05",
+          "category": "tools",
+          "tags": [
+            "automation",
+            "network",
+            "python",
+            "pyqt5",
+            "tools"
+          ],
+          "cover_image": "",
+          "summary": "আইআইটি কানপুরের ফরটিনেট ক্যাপটিভ পোর্টাল আপনাকে প্রতি কয়েক ঘণ্টায় লগ আউট করে। আমি একটি PyQt5 GUI র‍্যাপার তৈরি করেছি যা নীরবে পটভূমিতে পুনরায় প্রমাণীকরণ করে।",
+          "content": "## সমস্যা\n\nআইআইটি কানপুরের ফোরটিনেট ক্যাপটিভ পোর্টাল আপনাকে পর্যায়ক্রমে লগ আউট করে — অসুবিধাজনক কোনো\nসময়, সক্রিয়ভাবে ক্ষতিকর যখন এটি একটি দীর্ঘ-চলমান প্রশিক্ষণের কাজ বা একটি দূরবর্তী SSH হত্যা করে\nঅধিবেশন\n\n## ফিক্স\n\nআমি একটি ছোট **PyQt5** GUI র‍্যাপার তৈরি করেছি যা:\n\n1. পটভূমিতে সংযোগ ঘড়ি\n2. অধিবেশন কমে গেলে স্বয়ংক্রিয়ভাবে পুনঃপ্রমাণ ফর্মটিকে কিপ-লাইভ পোলিং সহ পুনরায় জমা দেয়\n3. চুপচাপ চালায়, এম্বেড করা ডিভাইসগুলিতে টিকে থাকার জন্য ডিজাইন করা হয়েছে যা অনুপস্থিতিতে চলছে\n\nএটি একটি ছোট হাতিয়ার, তবে এটি এমন একটি জিনিস যা প্রথমবার নিজের জন্য অর্থ প্রদান করে\nআপনি অন্যথায় স্ক্র্যাচ থেকে পুনরায় আরম্ভ করতে চান একটি কাজ সংরক্ষণ করে.",
+          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
+          "link": "",
+          "pinned": false
+        },
+        {
           "id": "btc-core-webapp-launch",
           "title": "জাভা দিয়ে একটি বিটকয়েন RPC ব্রাউজার তৈরি করা",
           "date": "2025-03-10",
@@ -2132,45 +2358,45 @@
             "web-app"
           ],
           "cover_image": "",
-          "summary": "JSON-RPC-এর মাধ্যমে একটি বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস তৈরি করুন — আর্কিটেকচার, অ্যাসিঙ্ক চ্যালেঞ্জ এবং আমি যা শিখেছি।",
-          "content": "## চুলকানি\n\nআমি বাড়িতে একটি বিটকয়েন কোর সম্পূর্ণ নোড চালাই। প্রতিবার আমি মেম্পুল পরিসংখ্যান পরীক্ষা করতে চেয়েছিলাম,\nUTXO তালিকাভুক্ত করুন, অথবা একটি কাঁচা লেনদেন ডিকোড করুন, আমাকে টার্মিনালে নেমে টাইপ করতে হয়েছিল\n`bitcoin-cli` কমান্ড। একবার ভালো। পুনরাবৃত্তিতে বিরক্তিকর।\n\nআমি একটি পরিষ্কার ব্রাউজার UI চেয়েছিলাম। তাই আমি একটি নির্মাণ.\n\n## টেক স্ট্যাক\n\n- **ব্যাকএন্ড**: জাভা (স্প্রিং বুট) — JSON-RPC কলগুলি মোড়ানো\n- **ফ্রন্টেন্ড**: ভ্যানিলা জেএস + ফেচ এপিআই\n- **প্রমাণ**: HTTP বেসিক প্রমাণ (bitcoin.conf এর মতো একই শংসাপত্র)\n\n## JSON-RPC স্তর\n\nবিটকয়েন কোর একটি সাধারণ HTTP JSON-RPC ইন্টারফেস প্রকাশ করে। প্রতিটি কমান্ড এর মত দেখাচ্ছে:\n\n``জসন\n{\n  \"পদ্ধতি\": \"getblockchaininfo\",\n  \"পরম\": [],\n  \"আইডি\": 1\n}\n```\n\nস্প্রিং বুট পরিষেবা এই অনুরোধগুলি প্রক্সি করে, প্রমাণ শিরোনাম যোগ করে এবং পরিষ্কার JSON প্রদান করে\nসম্মুখ প্রান্তে চতুর অংশটি মেম্পুল আপডেটের জন্য **দীর্ঘ ভোটগ্রহণ** পরিচালনা করছিল — আমি করিনি\nধ্রুবক অনুরোধ সহ নোড হাতুড়ি করতে চান.\n\n**সমাধান**: নোড ব্যস্ত থাকলে সূচকীয় ব্যাকঅফ সহ একটি 5-সেকেন্ডের ডিবাউন্সড পোল।\n\n## যা শিখেছি\n\n- বিটকয়েন কোরের RPC পৃষ্ঠ *বিশাল*। আপনার যা প্রয়োজন তা আটকে রাখুন।\n- `getblocktemplate` ব্যয়বহুল — এটিকে ঘন ঘন কল করবেন না।\n- Java এর `HttpClient` (Java 11+) `Completable Future` এর সাথে সুন্দরভাবে অ্যাসিঙ্ক পরিচালনা করে।\n\n## কোড\n\nসম্পূর্ণ উৎস GitHub এ আছে। PRs এবং সমস্যা স্বাগত জানাই!",
+          "summary": "JSON-RPC-এর মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস — রিয়েল-টাইম ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট এবং লেনদেন সম্প্রচার।",
+          "content": "## চুলকানি\n\nএকটি বিটকয়েন কোর সম্পূর্ণ নোড চালানোর অর্থ হল যেকোনো কিছুর জন্য `বিটকয়েন-ক্লাই`-এ ড্রপ করা —\nমেম্পুল পরিসংখ্যান পরীক্ষা করা, UTXO তালিকা করা, একটি কাঁচা লেনদেন ডিকোড করা। আমি একটি পরিষ্কার চেয়েছিলাম\nপরিবর্তে ব্রাউজার UI, তাই আমি একটি তৈরি করেছি।\n\n## টেক স্ট্যাক\n\n- **ব্যাকএন্ড**: জাভা, JSON-RPC কলগুলি মোড়ানো\n- **ফ্রন্টেন্ড**: প্রতিক্রিয়া\n- **প্রমাণ**: HTTP মৌলিক প্রমাণীকরণ (`bitcoin.conf` এর মতো একই শংসাপত্র)\n\n## যা শিখেছি\n\n- বিটকয়েন কোরের RPC সারফেস *বিশাল* — আপনার যা প্রয়োজন তার সাথে লেগে থাকুন\n- `getblocktemplate` ব্যয়বহুল; ঘন ঘন কল করবেন না\n- মেম্পুল আপডেটের জন্য পোলিং ব্যাকঅফ প্রয়োজন, নতুবা আপনি নোডকে হাতুড়ি দেবেন\n\nউৎস GitHub-এ রয়েছে - পিআর এবং সমস্যাগুলি স্বাগত জানাই৷",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
-          "link": "",
-          "pinned": true
-        },
-        {
-          "id": "iitk-fortinet-authenticator",
-          "title": "একটি ইলেক্ট্রন অ্যাপের মাধ্যমে ক্যাম্পাসের ওয়াই-ফাই টাইমআউটকে হত্যা করা",
-          "date": "2024-09-05",
-          "category": "tools",
-          "tags": [
-            "automation",
-            "network",
-            "electron",
-            "tools"
-          ],
-          "cover_image": "",
-          "summary": "ক্যাম্পাস ওয়াই-ফাই আপনাকে প্রতি 4 ঘন্টায় লগ আউট করে। আমি একটি ছোট ইলেক্ট্রন ট্রে অ্যাপের মাধ্যমে স্বয়ংক্রিয়ভাবে পুনরায় প্রমাণীকরণ করেছি যা নীরবে এটিকে ব্যাকগ্রাউন্ডে পরিচালনা করে।",
-          "content": "## সমস্যা\n\nIIT কানপুরের Fortinet ক্যাপটিভ পোর্টাল আপনাকে প্রতি 4 ঘন্টায় লগ আউট করে। আপনি 3 ঘন্টা মধ্যে আছেন\nএকটি প্রশিক্ষণ দৌড়, লাঞ্চের জন্য দূরে হাঁটা, কাজ মৃত খুঁজে ফিরে আসা কারণ\nনেটওয়ার্ক কমে গেছে।\n\nএই fixable. তাই আমি এটা ঠিক করেছি.\n\n## কিভাবে Fortinet Auth কাজ করে\n\nক্যাপটিভ পোর্টালটি শুধুমাত্র একটি পোস্ট ফর্ম:\n\n```\nপোস্ট/fgtauth\nবিষয়বস্তুর প্রকার: অ্যাপ্লিকেশন/x-www-form-urlencoded\n\nusername=ROLLNO&password=SECRET&magic=TOKEN&4Tredir=http://1.1.1.1\n```\n\n'ম্যাজিক' টোকেন প্রতিটি সেশন পরিবর্তন করে — আপনাকে প্রথমে লগইন পৃষ্ঠা থেকে এটি স্ক্র্যাপ করতে হবে।\n\n## ইলেক্ট্রন অ্যাপ\n\nআমি এটিকে একটি **ইলেক্ট্রন** ট্রে অ্যাপে মোড়ানো করেছি তাই এটি:\n\n1. ইন্টারনেট সংযোগের জন্য ঘড়ি (প্রতি 60 সেকেন্ডে পোল `1.1.1.1`)\n2. ব্যর্থ হলে: একটি নতুন জাদু টোকেন স্ক্র্যাপ করে, প্রমাণপত্র পুনরায় জমা দেয়\n3. পুনরায় প্রমাণীকরণ সফল হলে বা ব্যর্থ হলে সিস্টেম ট্রের মাধ্যমে আপনাকে অবহিত করে\n\nসিস্টেম ট্রেতে বাস করে। ~30MB RAM ব্যবহার করে। জিরো UI বিশৃঙ্খলা।\n\n## প্ল্যাটফর্ম সমর্থন\n\nপরীক্ষা করা হয়েছে:\n- **লিনাক্স** (আর্ক, উবুন্টু 22.04)\n- **macOS** (ভেন্টুরা)\n\nউইন্ডোজ সমর্থন স্কেচি কারণ ইলেক্ট্রনের ট্রে ভিন্নভাবে আচরণ করে কিন্তু এটি রোডম্যাপে রয়েছে।",
-          "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
           "link": "",
           "pinned": false
         },
         {
-          "id": "stress-detection-ml",
-          "title": "পরিধানযোগ্য সেন্সর থেকে 91% নির্ভুলতা স্ট্রেস সনাক্তকরণ",
-          "date": "2024-06-20",
-          "category": "project",
+          "id": "freelance-since-2023",
+          "title": "গবেষণার পাশাপাশি ফ্রিল্যান্সে যাচ্ছেন",
+          "date": "2023-01-10",
+          "category": "career",
           "tags": [
-            "machine-learning",
-            "healthcare",
-            "python",
-            "signal-processing"
+            "career",
+            "freelance",
+            "react-native",
+            "flutter"
           ],
           "cover_image": "",
-          "summary": "পরিধানযোগ্য সেন্সর ডেটা ব্যবহার করে স্ট্রেস-লেভেল ভবিষ্যদ্বাণীর জন্য এন্ড-টু-এন্ড ML পাইপলাইন — কাঁচা সংকেত প্রিপ্রসেসিং থেকে 1D-CNN যা 91% নির্ভুলতাকে আঘাত করে।",
-          "content": "## ডেটাসেট\n\nআমি **WESAD** (পরিধানযোগ্য স্ট্রেস এবং প্রভাব সনাক্তকরণ) ডেটাসেট ব্যবহার করেছি — 15টি বিষয়,\nবুক ধৃত RespiBAN সেন্সর সংগ্রহ:\n\n- **EDA** (ইলেক্ট্রোডার্মাল অ্যাক্টিভিটি / গ্যালভানিক স্কিন রেসপন্স)\n- **ECG** (ইলেক্ট্রোকার্ডিওগ্রাম)\n- **শ্বসন**\n- **ACC** (3-অক্ষ অ্যাক্সিলোমিটার)\n\nতিনটি লেবেল: *বেসলাইন*, *স্ট্রেস*, *বিনোদন*।\n\n## প্রিপ্রসেসিং পাইপলাইন\n\nঅজগর\n# 1. ব্যান্ডপাস ফিল্টার EDA (0.05–5 Hz)\n# 2. স্লাইডিং উইন্ডো সেগমেন্টেশন (60s, 50% ওভারল্যাপ)\n# 3. উইন্ডো প্রতি বৈশিষ্ট্য নিষ্কাশন:\n# - EDA: SCR শিখর, SCL মানে, বৃদ্ধির সময়\n# - HRV: SDNN, RMSSD, LF/HF অনুপাত\n# - RESP: হার, প্রশস্ততা বৈচিত্র্য\n```\n\n## মডেল তুলনা\n\n| মডেল | নির্ভুলতা | F1 (ম্যাক্রো) |\n|---|---|---|\n| SVM (RBF কার্নেল) | ৮৪.২% | 0.81 |\n| এলোমেলো বন | ৮৭.৬% | 0.85 |\n| **1D-CNN** | **91.3%** | **0.90** |\n\n1D-CNN প্রতিটি বৈশিষ্ট্য চ্যানেলকে একটি পৃথক অস্থায়ী স্ট্রিম হিসাবে বিবেচনা করে — এটি শিখেছে\nহস্তশিল্পের বৈশিষ্ট্যগুলি মিস করে এমন পদ্ধতি জুড়ে পারস্পরিক সম্পর্ক।\n\n## কী টেকঅ্যাওয়ে\n\nশারীরবৃত্তীয় টাইম সিরিজের জন্য: **গভীর শিক্ষা নির্ভুলতার উপর জয়লাভ করে, গাছের মডেল জয়লাভ করে\nব্যাখ্যাযোগ্যতা**। আপনি যদি ক্লিনিকাল প্রেক্ষাপটের জন্য তৈরি করছেন, র্যান্ডম ফরেস্ট + SHAP\nমান হল আরো প্রতিরক্ষাযোগ্য পছন্দ।",
-          "github": "https://github.com/atanuroy911/stress-detection-app",
+          "summary": "আমার গবেষণা - ক্রস-প্ল্যাটফর্ম অ্যাপস, ML-ব্যাকড টুলস, এবং ক্লায়েন্ট কাজের সাথে সমান্তরালভাবে ফ্রিল্যান্স ওয়েব এবং মোবাইল প্রকল্পগুলি গ্রহণ করা শুরু করেছি।",
+          "content": "## কেন ফ্রিল্যান্স\n\nআইআইটি কানপুরে গবেষণার পাশাপাশি, আমি 2023 সালের জানুয়ারিতে ফ্রিল্যান্সিং শুরু করি — বেশিরভাগই\nক্রস-প্ল্যাটফর্ম ওয়েব এবং মোবাইল কাজ, এবং এর একটি ভাল পরিমাণ ML-সংলগ্ন।\n\n## আমি যা তৈরি করেছি\n\n- **অ্যাক্টিভিটি রিকগনিশন** অ্যাপ, একটি LSTM মডেল ব্যবহার করে, যা ফ্লাটার-এ বিল্ট-এ\n  ক্লাউড-হোস্টেড ইনফারেন্স ব্যাকএন্ড\n- **ওপেনসিভি-ভিত্তিক অবজেক্ট ডিটেকশন** টুলিং\n- **আইওটি অনুপ্রবেশ সনাক্তকরণ** ধারণার প্রমাণ\n- বিভিন্ন ধরনের **প্রতিক্রিয়া নেটিভ/ফ্লাটার** ক্লায়েন্ট অ্যাপ\n\nফ্রিল্যান্সিং গবেষণার চেয়ে ভিন্ন ধরনের শৃঙ্খলা জোর করে - সময়সীমা হল\nবাস্তব, ক্লায়েন্ট বাস্তব, এবং \"এটি আমার মেশিনে কাজ করে\" একটি গ্রহণযোগ্য উত্তর নয়।",
+          "github": "",
+          "link": "",
+          "pinned": false
+        },
+        {
+          "id": "slas-competition-win",
+          "title": "SLAS সেন্ট্রাল চায়না ইনোভেশন প্রতিযোগিতায় ২য় পুরস্কার জিতেছে",
+          "date": "2020-01-15",
+          "category": "career",
+          "tags": [
+            "award",
+            "wechat",
+            "attendance",
+            "java"
+          ],
+          "cover_image": "",
+          "summary": "সেল্ফ-লেকচার অ্যাটেনডেন্স সিস্টেম (SLAS), একটি ওয়েচ্যাট মিনি প্রোগ্রাম যা আমি নিরাপদ QR-ভিত্তিক উপস্থিতির জন্য তৈরি করেছি, মধ্য চীনের \"ইন্টারনেট+\" উদ্ভাবন প্রতিযোগিতা এবং 7তম \"ডিসকভারি কাপ\"-এ দ্বিতীয় পুরস্কার জিতেছে৷",
+          "content": "## SLAS কি করে\n\nSLAS হল একটি ফুল-স্ট্যাক QR-ভিত্তিক উপস্থিতি সিস্টেম যা একটি **WeChat Mini Program** হিসেবে নির্মিত\nএকটি **জাভা স্প্রিং বুট** ব্যাকএন্ড সহ, প্রতিষ্ঠানগুলিকে নিরাপদে উপস্থিতি রেকর্ড করতে দেয়\nঅতিরিক্ত হার্ডওয়্যার ছাড়া - শুধু ফোন শিক্ষার্থীরা ইতিমধ্যে বহন করে।\n\n## স্বীকৃতি\n\nপ্রকল্পটি মধ্য চীন \"ইন্টারনেট+\" উদ্ভাবন প্রতিযোগিতায় **২য় পুরস্কার** জিতেছে\nএবং চীনে **7ম \"ডিসকভারি কাপ\"**, এবং পরে একটি নিবন্ধিত ভিত্তি তৈরি করে\nসফ্টওয়্যার কপিরাইট (SLAS, কপিরাইট নম্বর 2020SR0058411)।\n\nএটি আইওটি-ভিত্তিক স্ব-বক্তৃতা উপস্থিতির উপর পরবর্তী একাডেমিক কাজে সরাসরি যোগ দেয়\nসিস্টেম",
+          "github": "",
           "link": "",
           "pinned": false
         }
@@ -2189,21 +2415,21 @@
           "DevOps",
           "মেঘ"
         ],
-        "tagline": "মজবুত, স্কেলযোগ্য ওয়েব অ্যাপস — পিক্সেল-পারফেক্ট ফ্রন্টএন্ড থেকে ক্লাউড-নেটিভ মাইক্রোসার্ভিসেস। আমি আপনার প্রোডাক্ট আইডিয়াকে ওয়ার্কিং সফটওয়্যারে পরিণত করি।",
-        "cta_primary": "একটি প্রকল্প শুরু করুন →",
-        "cta_primary_link": "https://example.com/start",
+        "tagline": "ফুল-স্ট্যাক এবং DevOps ইঞ্জিনিয়ার — React/Next.js ফ্রন্টএন্ড, লারাভেল এবং নোড ব্যাকএন্ড, ডকার এবং জেনকিন্সের সাথে AWS-এ পাঠানো হয়েছে। আমি Flutter এবং Python এর সাথে ক্রস-প্ল্যাটফর্ম ML অ্যাপও তৈরি করি।",
+        "cta_primary": "একটি বিনামূল্যে কল বুক করুন →",
+        "cta_primary_link": "https://calendly.com/atanusroy",
         "cta_secondary": "আমার কাজ দেখুন",
-        "cta_secondary_link": "#প্রকল্প",
-        "hire_me_link": "https://example.com",
+        "cta_secondary_link": "#projects",
+        "hire_me_link": "https://calendly.com/atanusroy",
         "photo_url": "/assets/developer_photo.jpg",
         "status_badge": "এই মুহূর্তে নতুন ক্লায়েন্টদের জন্য খুলুন",
         "stats": [
           {
-            "n": "২৫+",
+            "n": "15+",
             "l": "প্রকল্প পাঠানো হয়েছে"
           },
           {
-            "n": "৬+",
+            "n": "7+",
             "l": "বছরের বিল্ডিং"
           },
           {
@@ -2214,15 +2440,15 @@
       },
       "marquee": [
         "✦ প্রতিক্রিয়া",
-        "✦ Node.js",
-        "✦ টাইপস্ক্রিপ্ট",
-        "✦ AWS",
-        "✦ ডকার",
-        "✦ PostgreSQL",
         "✦ Next.js",
-        "✦ CI/CD",
-        "✦ কুবারনেটস",
-        "✦ গ্রাফকিউএল"
+        "✦ টাইপস্ক্রিপ্ট",
+        "✦ পিএইচপি / লারাভেল",
+        "✦ পাইথন",
+        "✦ ডকার",
+        "✦ জেনকিন্স",
+        "✦ AWS",
+        "✦ ফ্লটার",
+        "✦ প্রতিক্রিয়া নেটিভ"
       ],
       "services": {
         "title": "দক্ষতা যে পণ্য জাহাজ",
@@ -2231,22 +2457,22 @@
           {
             "icon": "ti-layout-dashboard",
             "title": "ফুল-স্ট্যাক অ্যাপস",
-            "desc": "এন্ড-টু-এন্ড ওয়েব অ্যাপ্লিকেশন - প্রতিক্রিয়া ফ্রন্টএন্ড, নোড/জ্যাঙ্গো ব্যাকএন্ড, বাস্তব ডাটাবেস।"
+            "desc": "React/Next.js ফ্রন্টএন্ড Laravel (PHP) বা Node.js ব্যাকএন্ডের সাথে পেয়ার করা হয়েছে — প্রকৃত উৎপাদন সাইট, ডেমো নয়।"
           },
           {
             "icon": "ti-cloud",
             "title": "ক্লাউড এবং ডিওঅপস",
-            "desc": "AWS, Docker, CI/CD পাইপলাইন। আমি এটি স্থাপন করি, এটি নিরীক্ষণ করি এবং এটি চলমান রাখি।"
+            "desc": "AWS, Docker, এবং Jenkins CI/CD. আমি DigitalOcean থেকে প্রোডাকশন ইনফ্রা স্থানান্তরিত করেছি এবং এটি চালু রেখেছি।"
           },
           {
             "icon": "ti-api",
-            "title": "API ডিজাইন",
-            "desc": "REST এবং GraphQL এপিআই স্কেল করার জন্য নির্মিত। পরিষ্কার চুক্তি, কঠিন নথি, সংস্করণ."
+            "title": "ডেটা ও ইন্টিগ্রেশন",
+            "desc": "পরিষ্কার, অনুলিপি করা ডেটা পাইপলাইন — আমদানি, স্ক্র্যাপিং এবং API ইন্টিগ্রেশন যা স্কেলে পড়ে না।"
           },
           {
             "icon": "ti-rocket",
-            "title": "MVP বিল্ডস",
-            "desc": "একটি ধারণা পেয়েছেন? আমি আপনাকে শূন্য থেকে লঞ্চে নিয়ে যাব — দ্রুত, পরিষ্কার এবং অর্থযোগ্য৷"
+            "title": "ক্রস-প্ল্যাটফর্ম এবং এমএল অ্যাপস",
+            "desc": "এমবেডেড এমএল সহ নেটিভ / ফ্লাটার অ্যাপ্লিকেশানগুলির প্রতিক্রিয়া করুন — কার্যকলাপের স্বীকৃতি, অবজেক্ট সনাক্তকরণ, সেন্সর পাইপলাইন।"
           }
         ]
       },
@@ -2277,19 +2503,19 @@
         ]
       },
       "quote": {
-        "text": "অতনুর সাথে কাজ করার সময় একজন *সিনিয়র প্রকৌশলী স্টাফ* থাকার মতো মনে হয়েছিল — আমি যে কাউকে পূর্ণ-সময় নিয়োগ করেছি তার চেয়ে সে আসলে দ্রুত প্রেরণ করেছে।",
-        "author": "মাইকেল কে।",
-        "role": "প্রতিষ্ঠাতা, SaaS স্টার্টআপ · নিউ ইয়র্ক, মার্কিন যুক্তরাষ্ট্র",
-        "initials": "এমকে"
+        "text": "আমি বরং নিখুঁত কিছু যা আমার ল্যাপটপ ছেড়ে যায় না তার চেয়ে প্রথম দিনে কিছু *ছোট এবং কাজ* পাঠাতে চাই।",
+        "author": "অতনু শুভম রায়",
+        "role": "সফটওয়্যার ও ডিভোপস ইঞ্জিনিয়ার",
+        "initials": "AR"
       },
       "cta": {
         "badge": "বর্তমানে উপলব্ধ · ২৪ ঘন্টার মধ্যে উত্তর",
         "title": "আসুন একসাথে কিছু গড়ি",
         "sub": "আপনার প্রকল্প সম্পর্কে আমাকে বলুন — আমি একটি পরিষ্কার পরিকল্পনা এবং সৎ অনুমান নিয়ে ফিরে আসব।",
         "btn_primary": "একটি বিনামূল্যে কল বুক করুন →",
-        "btn_primary_link": "https://example.com/book",
+        "btn_primary_link": "https://calendly.com/atanusroy",
         "btn_secondary": "সমস্ত প্রকল্প দেখুন",
-        "btn_secondary_link": "#প্রকল্প",
+        "btn_secondary_link": "#projects",
         "reply_text": "কোনো অঙ্গীকার নেই। কোন বিক্রয় পিচ. শুধু একটি কথোপকথন."
       },
       "journey": {
@@ -2308,8 +2534,58 @@
       },
       "projects": [
         {
+          "title": "সালাদোলজি",
+          "description": "স্যালাডলজির জন্য পিচ সাইট ডিজাইন এবং তৈরি করা হয়েছে, একটি পরবর্তী প্রজন্মের স্বাস্থ্যকর ফাস্ট-ফুড ধারণা যা স্মার্ট-ফার্মড, সদ্য প্রস্তুত সালাদকে কেন্দ্র করে - একটি দ্রুত, রূপান্তর-কেন্দ্রিক বিল্ডের সাথে পরিষ্কার পণ্যের গল্প বলা।",
+          "tags": [
+            "Webflow",
+            "Web Design",
+            "Brand Site",
+            "CMS"
+          ],
+          "image": "",
+          "showcase_image": "/assets/saladology.webp",
+          "link": "https://www.saladology.co.uk",
+          "github": "",
+          "featured": true,
+          "mockup_url": "saladology.co.uk",
+          "mockup_icon": "🥗"
+        },
+        {
+          "title": "Cual.co রেস্টুরেন্ট ডেটা প্ল্যাটফর্ম",
+          "description": "Cual.co-এর জন্য 14,536টি রেস্তোরাঁ আমদানি করা হয়েছে — ফটো, রিভিউ, এবং মেটাডেটা Google Maps থেকে নেওয়া — Python-এ ডিডুপ্লিকেশন এবং ক্লিন ফরম্যাটিং সহ, তারপর পণ্যের Laravel ব্যাকএন্ড এবং Next.js ফ্রন্টএন্ডে নতুন ডেটা যুক্ত করেছে৷",
+          "tags": [
+            "Python",
+            "PHP",
+            "Laravel",
+            "Next.js",
+            "Data Engineering"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": true,
+          "mockup_url": "cual.co",
+          "mockup_icon": "🍽️"
+        },
+        {
+          "title": "ব্রঙ্কস ক্লিনিক — মেডিকেল ওয়েবসাইট",
+          "description": "এনওয়াই, ইউএসএ-তে ব্যাকএন্ড এস ক্লায়েন্টের জন্য তৈরি ফুল-স্ট্যাক মেডিকেল ওয়েবসাইট, বুকিং, বিষয়বস্তু এবং রোগীর মুখোমুখি তথ্য পৃষ্ঠাগুলি কভার করে।",
+          "tags": [
+            "Laravel",
+            "PHP",
+            "Next.js",
+            "React"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": true,
+          "mockup_url": "bronxclinic.com",
+          "mockup_icon": "🏥"
+        },
+        {
           "title": "BTC-CORE-WEBAPP",
-          "description": "RPC কমান্ডের মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস তৈরি করুন — রিয়েল-টাইম ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট এবং একটি পরিষ্কার UI-তে লেনদেন সম্প্রচার।",
+          "description": "JSON-RPC-এর মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস — রিয়েল-টাইম ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট, এবং একটি পরিষ্কার UI-তে লেনদেন সম্প্রচার।",
           "tags": [
             "Java",
             "Bitcoin RPC",
@@ -2319,37 +2595,100 @@
           "image": "https://picsum.photos/seed/btc/600/400",
           "link": "https://btc-core-app.vercel.app",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
-          "featured": true,
-          "testimonial": {
-            "quote": "\"আতনু আমাদের যা প্রয়োজন ঠিক তা সরবরাহ করেছে — পরিষ্কার কোড, দ্রুত পরিবর্তন, এবং শূন্য হাতে ধরা প্রয়োজন। আবার ভাড়া করা হবে।\"",
-            "author": "জেমস এম.",
-            "role": "সিটিও, ফিনটেক স্টার্টআপ · নিউ ইয়র্ক",
-            "initials": "জে.এম"
-          },
-          "mockup_url": "btc-core-app.vercel.app",
-          "mockup_icon": "⛓"
+          "featured": false
         },
         {
-          "title": "Fortinet Auth GUI",
-          "description": "বড় আকারের ক্যাম্পাস পরিবেশের জন্য স্বয়ংক্রিয় নেটওয়ার্ক প্রমাণীকরণ। ম্যানুয়াল লগইন ধাপগুলি শূন্যে হ্রাস করা হয়েছে — এক-ক্লিক ব্যাকগ্রাউন্ড প্রমাণ যা কাজ করে৷",
+          "title": "আইআইটি কানপুর ফায়ারওয়াল প্রমাণীকরণকারী",
+          "description": "একটি PyQt5 GUI র‍্যাপার যা IIT কানপুরের ফোর্টিনেট ক্যাপটিভ পোর্টালের বিরুদ্ধে স্বয়ংক্রিয়ভাবে প্রমাণীকরণ করে, সাথে রাখা-জীবিত পোলিং এবং ব্যাকগ্রাউন্ড এক্সিকিউশন যাতে এমবেড করা ডিভাইসগুলি কখনই নীরবে নেটওয়ার্ক বন্ধ করে না।",
           "tags": [
-            "JavaScript",
+            "Python",
+            "PyQt5",
             "Network",
-            "Automation",
-            "Electron"
+            "Automation"
           ],
           "image": "https://picsum.photos/seed/fortinet/600/400",
-          "link": "https://fortinet-gui.io",
+          "link": "",
           "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
-          "featured": true,
-          "testimonial": {
-            "quote": "\"প্রতি সপ্তাহে আমাদের টিমের সময় সংরক্ষণ করে। অ্যাপটি শুধু কাজ করে — নির্ভরযোগ্য, দ্রুত এবং অবিশ্বাস্যভাবে ভালভাবে তৈরি।\"",
-            "author": "সারা আর.",
-            "role": "ইঞ্জিনিয়ারিং লিড · টরন্টো",
-            "initials": "এসআর"
-          },
-          "mockup_url": "fortinet-gui.io",
-          "mockup_icon": "🔐"
+          "featured": false
+        },
+        {
+          "title": "রাডার+ক্যামেরা মনিটরিং অ্যাপ",
+          "description": "চলমান বস্তুর গতি এবং দূরত্ব সনাক্তকরণের জন্য লাইভ ক্যামেরা ইন্টিগ্রেশন সহ একটি OPS-243C ডপলার রাডারের সাথে যোগাযোগ করতে ডেস্কটপ অ্যাপ।",
+          "tags": [
+            "Python",
+            "PyQt5",
+            "Computer Vision"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "স্ব-বক্তৃতা উপস্থিতি সিস্টেম (SLAS)",
+          "description": "জাভা স্প্রিং বুট ব্যাকএন্ড সহ ওয়েচ্যাট মিনি প্রোগ্রাম হিসাবে তৈরি একটি ফুল-স্ট্যাক QR-ভিত্তিক উপস্থিতি সিস্টেম, নিরাপদে চীনা প্রতিষ্ঠানে উপস্থিতি রেকর্ড করে। সেন্ট্রাল চায়না \"ইন্টারনেট+\" ইনোভেশন কম্পিটিশন এবং ৭ম \"ডিসকভারি কাপ\"-এ ২য় পুরস্কার জিতেছে।",
+          "tags": [
+            "WeChat Mini Program",
+            "JavaScript",
+            "Java",
+            "Spring Boot"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "অনলাইন পরীক্ষা সহকারী",
+          "description": "দূরশিক্ষার জন্য একটি সম্পূর্ণ-স্ট্যাক অ্যান্ড্রয়েড অ্যাপ — কোর্স ম্যানেজমেন্ট, পরীক্ষার সময়সূচী এবং প্রতারণা বিরোধী প্রক্রিয়া সহ সময়মতো মূল্যায়ন। 14তম চায়না ইউনিভার্সিটি কম্পিউটার ডিজাইন প্রতিযোগিতায় 2য় (প্রদেশিক) এবং 3য় (জাতীয়) স্থান পেয়েছে।",
+          "tags": [
+            "Kotlin",
+            "PHP",
+            "Android"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "স্মার্ট পার্কিং সিস্টেম",
+          "description": "একাধিক পার্কিং লট জুড়ে দখল পরিচালনা করতে ক্লাউড এবং LoRaWAN-ভিত্তিক পার্কিং মডিউলের সাথে সংযুক্ত ওয়েব অ্যাপ্লিকেশন।",
+          "tags": [
+            "ReactJS",
+            "ExpressJS",
+            "LoRaWAN"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "গাড়ির ডিলারশিপ সিআরএম",
+          "description": "লিড ক্যাপচার করা, গ্রাহকের তথ্য রেকর্ড করা এবং প্রচারমূলক ইমেল পাঠানোর জন্য ফুল-স্ট্যাক CRM - ডিলারশিপ ক্লায়েন্টদের জন্য তৈরি।",
+          "tags": [
+            "ReactJS",
+            "Material UI",
+            "ExpressJS"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
+        },
+        {
+          "title": "ফেসবুক অ্যাড অটোমেশন টুল",
+          "description": "সেলেনিয়াম-চালিত পাইথন টুল যা স্বয়ংক্রিয়ভাবে পোস্টিং এবং ফেসবুক বিজ্ঞাপন প্রচারাভিযান পরিচালনা করে, যা Wizzartech এ জুনিয়র ডেভেলপারদের নেতৃত্ব দেওয়ার সময় নির্মিত।",
+          "tags": [
+            "Python",
+            "Selenium",
+            "Automation"
+          ],
+          "image": "",
+          "link": "",
+          "github": "",
+          "featured": false
         },
         {
           "title": "CS724-RoboX",
@@ -2364,15 +2703,16 @@
           "featured": false
         },
         {
-          "title": "স্ট্রেস-ডিটেকশন-অ্যাপ",
-          "description": "শারীরবৃত্তীয় ডেটা এবং পাইথন ব্যবহার করে স্ট্রেস লেভেলের পূর্বাভাস দেওয়ার জন্য একটি ব্যাপক মেশিন লার্নিং সিস্টেম।",
+          "title": "অ্যাক্টিভিটি রিকগনিশন অ্যাপ (LSTM)",
+          "description": "ক্লাউড থেকে পরিবেশিত মোশন সেন্সর এবং একটি LSTM মডেল ব্যবহার করে শারীরিক কার্যকলাপ লাইভ-মনিটর করার জন্য মোবাইল অ্যাপ।",
           "tags": [
+            "Flutter",
             "Python",
-            "Machine Learning",
-            "Healthcare"
+            "Machine Learning"
           ],
           "image": "https://picsum.photos/seed/stress/600/400",
-          "github": "https://github.com/atanuroy911/stress-detection-app"
+          "github": "https://github.com/atanuroy911/stress-detection-app",
+          "featured": false
         },
         {
           "title": "ulab-mms",

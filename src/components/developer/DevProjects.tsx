@@ -6,6 +6,7 @@ import {
   SiGraphql, SiFirebase, SiPostgresql, SiMongodb
 } from 'react-icons/si';
 import { DiAws } from 'react-icons/di';
+import { Showcase3D } from './Showcase3D';
 
 const iconMap: Record<string, any> = {
   react: SiReact,
@@ -82,24 +83,15 @@ export function DevProjects({ content }: { content: any }) {
               )}
             </div>
 
-            {/* Mockup column */}
+            {/* 3D showcase column */}
             <div className="split-right">
-              <div className="project-screen">
-                <div className="screen-bar">
-                  <div className="screen-dot"></div>
-                  <div className="screen-dot"></div>
-                  <div className="screen-dot"></div>
-                  {project.mockup_url && (
-                    <div className="screen-url">{project.mockup_url}</div>
-                  )}
-                </div>
-                <div className="screen-body">
-                  <div className="screen-placeholder">
-                    <span className="pi">{project.mockup_icon || '💻'}</span>
-                    <p>Project Screenshot / Demo</p>
-                  </div>
-                </div>
-              </div>
+              <Showcase3D
+                image={project.showcase_image || project.image}
+                glyph={project.mockup_icon || '✦'}
+                hint={project.title}
+                badge={index === 0 ? 'Flagship' : undefined}
+                url={project.mockup_url}
+              />
             </div>
           </div>
         </section>

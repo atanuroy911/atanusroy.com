@@ -7,33 +7,33 @@ hero:
     - DevOps
     - Cloud
   tagline: >-
-    Robust, scalable web apps — from pixel-perfect frontends to cloud-native microservices. I turn your product idea into working software.
-  cta_primary: "Start a project →"
-  cta_primary_link: "https://example.com/start"
+    Full-stack and DevOps engineer — React/Next.js frontends, Laravel & Node backends, shipped on AWS with Docker and Jenkins. I also build cross-platform ML apps with Flutter and Python.
+  cta_primary: "Book a free call →"
+  cta_primary_link: "https://calendly.com/atanusroy"
   cta_secondary: "See my work"
   cta_secondary_link: "#projects"
-  hire_me_link: "https://example.com"
+  hire_me_link: "https://calendly.com/atanusroy"
   photo_url: "/assets/developer_photo.jpg"
   status_badge: "Open to new clients right now"
   stats:
-    - n: "25+"
+    - n: "15+"
       l: "Projects shipped"
-    - n: "6+"
+    - n: "7+"
       l: "Years building"
     - n: "4"
       l: "Industries served"
 
 marquee:
   - "✦ React"
-  - "✦ Node.js"
-  - "✦ TypeScript"
-  - "✦ AWS"
-  - "✦ Docker"
-  - "✦ PostgreSQL"
   - "✦ Next.js"
-  - "✦ CI/CD"
-  - "✦ Kubernetes"
-  - "✦ GraphQL"
+  - "✦ TypeScript"
+  - "✦ PHP / Laravel"
+  - "✦ Python"
+  - "✦ Docker"
+  - "✦ Jenkins"
+  - "✦ AWS"
+  - "✦ Flutter"
+  - "✦ React Native"
 
 services:
   title: "Skills that ship products"
@@ -41,16 +41,16 @@ services:
   items:
     - icon: "ti-layout-dashboard"
       title: "Full-Stack Apps"
-      desc: "End-to-end web applications — React frontends, Node/Django backends, real databases."
+      desc: "React/Next.js frontends paired with Laravel (PHP) or Node.js backends — real production sites, not demos."
     - icon: "ti-cloud"
       title: "Cloud & DevOps"
-      desc: "AWS, Docker, CI/CD pipelines. I deploy it, monitor it, and keep it running."
+      desc: "AWS, Docker, and Jenkins CI/CD. I've migrated production infra off DigitalOcean and kept it running since."
     - icon: "ti-api"
-      title: "API Design"
-      desc: "REST and GraphQL APIs built to scale. Clean contracts, solid docs, versioned."
+      title: "Data & Integrations"
+      desc: "Clean, deduplicated data pipelines — imports, scraping, and API integrations that don't fall over at scale."
     - icon: "ti-rocket"
-      title: "MVP Builds"
-      desc: "Got an idea? I'll take you from zero to launched — fast, clean, and fundable."
+      title: "Cross-Platform & ML Apps"
+      desc: "React Native / Flutter apps with embedded ML — activity recognition, object detection, sensor pipelines."
 
 process:
   label: "How I work"
@@ -70,17 +70,17 @@ process:
       desc: "Live, documented, and yours — with a 30-day support window."
 
 quote:
-  text: "Working with Atanu felt like having a *senior engineer on staff* — except he actually shipped faster than anyone I've hired full-time."
-  author: "Michael K."
-  role: "Founder, SaaS Startup · New York, USA"
-  initials: "MK"
+  text: "I'd rather ship something *small and working* on day one than something perfect that never leaves my laptop."
+  author: "Atanu Shuvam Roy"
+  role: "Software & DevOps Engineer"
+  initials: "AR"
 
 cta:
   badge: "Currently available · replies within 24h"
   title: "Let's build something together"
   sub: "Tell me about your project — I'll come back with a clear plan and honest estimate."
   btn_primary: "Book a free call →"
-  btn_primary_link: "https://example.com/book"
+  btn_primary_link: "https://calendly.com/atanusroy"
   btn_secondary: "See all projects"
   btn_secondary_link: "#projects"
   reply_text: "No commitment. No sales pitch. Just a conversation."

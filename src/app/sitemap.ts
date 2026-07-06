@@ -6,6 +6,7 @@ const SITE_URL = 'https://www.atanusroy.com'
 
 const staticAcademicRoutes = [
   '',             // home
+  '/about',
   '/blog',
   '/contact',
   '/journey',

@@ -2,10 +2,58 @@
 # Run: npm run translate to regenerate
 
 projects:
+  - title: সালাদোলজি
+    description: >-
+      স্যালাডলজির জন্য পিচ সাইট ডিজাইন এবং তৈরি করা হয়েছে, একটি পরবর্তী প্রজন্মের স্বাস্থ্যকর ফাস্ট-ফুড ধারণা যা
+      স্মার্ট-ফার্মড, সদ্য প্রস্তুত সালাদকে কেন্দ্র করে - একটি দ্রুত, রূপান্তর-কেন্দ্রিক বিল্ডের সাথে পরিষ্কার পণ্যের
+      গল্প বলা।
+    tags:
+      - Webflow
+      - Web Design
+      - Brand Site
+      - CMS
+    image: ""
+    showcase_image: /assets/saladology.webp
+    link: https://www.saladology.co.uk
+    github: ""
+    featured: true
+    mockup_url: saladology.co.uk
+    mockup_icon: 🥗
+  - title: Cual.co রেস্টুরেন্ট ডেটা প্ল্যাটফর্ম
+    description: >-
+      Cual.co-এর জন্য 14,536টি রেস্তোরাঁ আমদানি করা হয়েছে — ফটো, রিভিউ, এবং মেটাডেটা Google Maps থেকে নেওয়া — Python-এ
+      ডিডুপ্লিকেশন এবং ক্লিন ফরম্যাটিং সহ, তারপর পণ্যের Laravel ব্যাকএন্ড এবং Next.js ফ্রন্টএন্ডে নতুন ডেটা যুক্ত করেছে৷
+    tags:
+      - Python
+      - PHP
+      - Laravel
+      - Next.js
+      - Data Engineering
+    image: ""
+    link: ""
+    github: ""
+    featured: true
+    mockup_url: cual.co
+    mockup_icon: 🍽️
+  - title: ব্রঙ্কস ক্লিনিক — মেডিকেল ওয়েবসাইট
+    description: >-
+      এনওয়াই, ইউএসএ-তে ব্যাকএন্ড এস ক্লায়েন্টের জন্য তৈরি ফুল-স্ট্যাক মেডিকেল ওয়েবসাইট, বুকিং, বিষয়বস্তু এবং রোগীর
+      মুখোমুখি তথ্য পৃষ্ঠাগুলি কভার করে।
+    tags:
+      - Laravel
+      - PHP
+      - Next.js
+      - React
+    image: ""
+    link: ""
+    github: ""
+    featured: true
+    mockup_url: bronxclinic.com
+    mockup_icon: 🏥
   - title: BTC-CORE-WEBAPP
     description: >-
-      RPC কমান্ডের মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস তৈরি করুন —
-      রিয়েল-টাইম ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট এবং একটি পরিষ্কার UI-তে লেনদেন সম্প্রচার।
+      JSON-RPC-এর মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস — রিয়েল-টাইম
+      ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট, এবং একটি পরিষ্কার UI-তে লেনদেন সম্প্রচার।
     tags:
       - Java
       - Bitcoin RPC
@@ -14,38 +62,95 @@ projects:
     image: https://picsum.photos/seed/btc/600/400
     link: https://btc-core-app.vercel.app
     github: https://github.com/atanuroy911/BTC-CORE-WEBAPP
-    featured: true
-    testimonial:
-      quote: >-
-        "আতনু আমাদের যা প্রয়োজন ঠিক তা সরবরাহ করেছে — পরিষ্কার কোড, দ্রুত পরিবর্তন, এবং শূন্য হাতে ধরা প্রয়োজন। আবার
-        ভাড়া করা হবে।"
-      author: জেমস এম.
-      role: সিটিও, ফিনটেক স্টার্টআপ · নিউ ইয়র্ক
-      initials: জে.এম
-    mockup_url: btc-core-app.vercel.app
-    mockup_icon: ⛓
-  - title: Fortinet Auth GUI
+    featured: false
+  - title: আইআইটি কানপুর ফায়ারওয়াল প্রমাণীকরণকারী
     description: >-
-      বড় আকারের ক্যাম্পাস পরিবেশের জন্য স্বয়ংক্রিয় নেটওয়ার্ক প্রমাণীকরণ। ম্যানুয়াল লগইন ধাপগুলি শূন্যে হ্রাস করা
-      হয়েছে — এক-ক্লিক ব্যাকগ্রাউন্ড প্রমাণ যা কাজ করে৷
+      একটি PyQt5 GUI র‍্যাপার যা IIT কানপুরের ফোর্টিনেট ক্যাপটিভ পোর্টালের বিরুদ্ধে স্বয়ংক্রিয়ভাবে প্রমাণীকরণ করে,
+      সাথে রাখা-জীবিত পোলিং এবং ব্যাকগ্রাউন্ড এক্সিকিউশন যাতে এমবেড করা ডিভাইসগুলি কখনই নীরবে নেটওয়ার্ক বন্ধ করে না।
     tags:
-      - JavaScript
+      - Python
+      - PyQt5
       - Network
       - Automation
-      - Electron
     image: https://picsum.photos/seed/fortinet/600/400
-    link: https://fortinet-gui.io
+    link: ""
     github: https://github.com/atanuroy911/iitk-fortinet-gui
-    featured: true
-    testimonial:
-      quote: >-
-        "প্রতি সপ্তাহে আমাদের টিমের সময় সংরক্ষণ করে। অ্যাপটি শুধু কাজ করে — নির্ভরযোগ্য, দ্রুত এবং অবিশ্বাস্যভাবে
-        ভালভাবে তৈরি।"
-      author: সারা আর.
-      role: ইঞ্জিনিয়ারিং লিড · টরন্টো
-      initials: এসআর
-    mockup_url: fortinet-gui.io
-    mockup_icon: 🔐
+    featured: false
+  - title: রাডার+ক্যামেরা মনিটরিং অ্যাপ
+    description: >-
+      চলমান বস্তুর গতি এবং দূরত্ব সনাক্তকরণের জন্য লাইভ ক্যামেরা ইন্টিগ্রেশন সহ একটি OPS-243C ডপলার রাডারের সাথে যোগাযোগ
+      করতে ডেস্কটপ অ্যাপ।
+    tags:
+      - Python
+      - PyQt5
+      - Computer Vision
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+  - title: স্ব-বক্তৃতা উপস্থিতি সিস্টেম (SLAS)
+    description: >-
+      জাভা স্প্রিং বুট ব্যাকএন্ড সহ ওয়েচ্যাট মিনি প্রোগ্রাম হিসাবে তৈরি একটি ফুল-স্ট্যাক QR-ভিত্তিক উপস্থিতি সিস্টেম,
+      নিরাপদে চীনা প্রতিষ্ঠানে উপস্থিতি রেকর্ড করে। সেন্ট্রাল চায়না "ইন্টারনেট+" ইনোভেশন কম্পিটিশন এবং ৭ম "ডিসকভারি
+      কাপ"-এ ২য় পুরস্কার জিতেছে।
+    tags:
+      - WeChat Mini Program
+      - JavaScript
+      - Java
+      - Spring Boot
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+  - title: অনলাইন পরীক্ষা সহকারী
+    description: >-
+      দূরশিক্ষার জন্য একটি সম্পূর্ণ-স্ট্যাক অ্যান্ড্রয়েড অ্যাপ — কোর্স ম্যানেজমেন্ট, পরীক্ষার সময়সূচী এবং প্রতারণা
+      বিরোধী প্রক্রিয়া সহ সময়মতো মূল্যায়ন। 14তম চায়না ইউনিভার্সিটি কম্পিউটার ডিজাইন প্রতিযোগিতায় 2য় (প্রদেশিক) এবং
+      3য় (জাতীয়) স্থান পেয়েছে।
+    tags:
+      - Kotlin
+      - PHP
+      - Android
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+  - title: স্মার্ট পার্কিং সিস্টেম
+    description: >-
+      একাধিক পার্কিং লট জুড়ে দখল পরিচালনা করতে ক্লাউড এবং LoRaWAN-ভিত্তিক পার্কিং মডিউলের সাথে সংযুক্ত ওয়েব
+      অ্যাপ্লিকেশন।
+    tags:
+      - ReactJS
+      - ExpressJS
+      - LoRaWAN
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+  - title: গাড়ির ডিলারশিপ সিআরএম
+    description: >-
+      লিড ক্যাপচার করা, গ্রাহকের তথ্য রেকর্ড করা এবং প্রচারমূলক ইমেল পাঠানোর জন্য ফুল-স্ট্যাক CRM - ডিলারশিপ
+      ক্লায়েন্টদের জন্য তৈরি।
+    tags:
+      - ReactJS
+      - Material UI
+      - ExpressJS
+    image: ""
+    link: ""
+    github: ""
+    featured: false
+  - title: ফেসবুক অ্যাড অটোমেশন টুল
+    description: >-
+      সেলেনিয়াম-চালিত পাইথন টুল যা স্বয়ংক্রিয়ভাবে পোস্টিং এবং ফেসবুক বিজ্ঞাপন প্রচারাভিযান পরিচালনা করে, যা
+      Wizzartech এ জুনিয়র ডেভেলপারদের নেতৃত্ব দেওয়ার সময় নির্মিত।
+    tags:
+      - Python
+      - Selenium
+      - Automation
+    image: ""
+    link: ""
+    github: ""
+    featured: false
   - title: CS724-RoboX
     description: >-
       আইআইটি কানপুরে রোবোটিক্স এবং স্বায়ত্তশাসিত সিস্টেম সম্পর্কিত একটি ভান্ডার। পথ পরিকল্পনা এবং নিয়ন্ত্রণের জন্য
@@ -57,14 +162,17 @@ projects:
     image: https://picsum.photos/seed/robox/600/400
     github: https://github.com/atanuroy911/CS724-RoboX
     featured: false
-  - title: স্ট্রেস-ডিটেকশন-অ্যাপ
-    description: শারীরবৃত্তীয় ডেটা এবং পাইথন ব্যবহার করে স্ট্রেস লেভেলের পূর্বাভাস দেওয়ার জন্য একটি ব্যাপক মেশিন লার্নিং সিস্টেম।
+  - title: অ্যাক্টিভিটি রিকগনিশন অ্যাপ (LSTM)
+    description: >-
+      ক্লাউড থেকে পরিবেশিত মোশন সেন্সর এবং একটি LSTM মডেল ব্যবহার করে শারীরিক কার্যকলাপ লাইভ-মনিটর করার জন্য মোবাইল
+      অ্যাপ।
     tags:
+      - Flutter
       - Python
       - Machine Learning
-      - Healthcare
     image: https://picsum.photos/seed/stress/600/400
     github: https://github.com/atanuroy911/stress-detection-app
+    featured: false
   - title: ulab-mms
     description: >-
       ইউল্যাব (ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ) এর জন্য আধুনিক ম্যানেজমেন্ট সিস্টেম একাডেমিক ক্রিয়াকলাপগুলিকে

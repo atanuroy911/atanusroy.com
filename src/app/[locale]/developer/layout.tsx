@@ -2,7 +2,9 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { getContent, type Locale } from '@/lib/content'
 import { ModeProvider } from '@/providers/ModeProvider'
+import { DevThemeProvider } from '@/providers/DevThemeProvider'
 import { CursorGlow } from '@/components/developer/CursorGlow'
+import { ScrollToTop } from '@/components/developer/ScrollToTop'
 import './DevStyles.css'
 
 export default async function DevLayout({
@@ -17,12 +19,15 @@ export default async function DevLayout({
 
   return (
     <ModeProvider forcedMode="developer">
-      <div className="min-h-screen flex flex-col dev-layout">
-        <CursorGlow />
-        <Navbar content={content} locale={locale as Locale} isDev={true} />
-        <main className="flex-1">{children}</main>
-        <Footer content={content} isDev={true} />
-      </div>
+      <DevThemeProvider>
+        <div className="flex flex-col dev-layout">
+          <CursorGlow />
+          <ScrollToTop />
+          <Navbar content={content} locale={locale as Locale} isDev={true} />
+          <main>{children}</main>
+          <Footer content={content} isDev={true} />
+        </div>
+      </DevThemeProvider>
     </ModeProvider>
   )
 }

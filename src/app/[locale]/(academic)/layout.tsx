@@ -4,6 +4,7 @@ import { ModeProvider } from '@/providers/ModeProvider'
 import { MapPin, Mail, FileText } from 'lucide-react'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 import { Navbar } from '@/components/Navbar'
+import { Footer } from '@/components/Footer'
 
 type SocialIconProps = Omit<React.SVGProps<SVGSVGElement>, 'children'> & { size?: number }
 
@@ -212,6 +213,8 @@ export default async function AcademicLayout({
 
           </div>
         </div>
+
+        <Footer content={content} isDev={false} />
       </div>
     </ModeProvider>
   )

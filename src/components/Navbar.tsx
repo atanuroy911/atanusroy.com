@@ -6,13 +6,12 @@ import { usePathname, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useMode } from '@/providers/ModeProvider'
 import { usePageTransition } from '@/providers/PageTransitionProvider'
-import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import {
-  GraduationCap, Code2, Globe, Menu, X, FlaskConical, Laptop2
+  GraduationCap, Code2, Menu, X, FlaskConical, Laptop2
 } from 'lucide-react'
 import type { Locale } from '@/lib/content'
 
@@ -29,15 +28,12 @@ function get(obj: any, path: string) {
 
 export function Navbar({ content, locale, isDev }: Props) {
   const { mode, setMode } = useMode()
-  const { theme, setTheme } = useTheme()
   const { beginModeTransition } = usePageTransition()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
 
-  useEffect(() => { setMounted(true) }, [])
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', onScroll)
@@ -106,14 +102,14 @@ export function Navbar({ content, locale, isDev }: Props) {
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 grid grid-cols-[auto_1fr_auto] items-center gap-4">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex-shrink-0">
             {logoText}
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center justify-center gap-6">
             {links.map(link => (
               <Link key={link.href} href={link.href} className={linkClass(link.href)}>
                 {link.label}
@@ -128,7 +124,7 @@ export function Navbar({ content, locale, isDev }: Props) {
           </div>
 
           {/* Controls */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-end gap-2">
             {/* Mode Link */}
             {isDev ? (
               <Button
@@ -157,15 +153,13 @@ export function Navbar({ content, locale, isDev }: Props) {
             {/* Language toggle */}
             <Button
               variant="ghost"
-              size="icon"
-              className="w-8 h-8 text-muted-foreground hover:text-primary"
+              size="sm"
               onClick={switchLocale}
+              className="w-9 px-0 text-xs font-bold tracking-wide text-muted-foreground hover:text-primary"
               title={nav?.language}
             >
-              <Globe size={15} />
+              {otherLocale === 'bn' ? 'বাং' : 'EN'}
             </Button>
-
-
 
             {/* Mobile menu */}
             <Button
@@ -227,6 +221,18 @@ export function Navbar({ content, locale, isDev }: Props) {
                   {nav?.switch_to_developer || 'Developer Profile'}
                 </Button>
               )}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  setMobileOpen(false)
+                  switchLocale()
+                }}
+                className="w-full justify-start gap-2 text-sm text-muted-foreground hover:text-primary"
+              >
+                <span className="font-bold">{otherLocale === 'bn' ? 'বাং' : 'EN'}</span>
+                {nav?.language}
+              </Button>
             </div>
           </motion.div>
         )}

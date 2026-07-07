@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion'
 import { useMode } from '@/providers/ModeProvider'
 import { Badge } from '@/components/ui/badge'
-import { ExternalLink, BookOpen, Layers, GitBranch, Globe } from 'lucide-react'
-import { useState } from 'react'
+import { ExternalLink, BookOpen, Layers, GitBranch, Globe, Loader2 } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 import { DevProjectModal } from '@/components/developer/DevProjectModal'
+
+const PAGE_SIZE = 6
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function ProjectsClient({ content }: { content: any }) {
@@ -21,6 +23,27 @@ export function ProjectsClient({ content }: { content: any }) {
 function DevProjects({ content }: { content: any }) {
   const projects = content?.projects || []
   const [selectedProject, setSelectedProject] = useState<any | null>(null)
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+  const sentinelRef = useRef<HTMLDivElement>(null)
+
+  const visibleProjects = projects.slice(0, visibleCount)
+  const hasMore = visibleCount < projects.length
+
+  useEffect(() => {
+    if (!hasMore) return
+    const el = sentinelRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((c) => Math.min(c + PAGE_SIZE, projects.length))
+        }
+      },
+      { rootMargin: '400px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [hasMore, projects.length])
 
   return (
     <div className="port">
@@ -34,19 +57,19 @@ function DevProjects({ content }: { content: any }) {
 
         {/* Project grid */}
         <div className="dev-proj-grid">
-          {projects.map((p: any, i: number) => (
+          {visibleProjects.map((p: any, i: number) => (
             <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.06 }}
+              transition={{ delay: (i % PAGE_SIZE) * 0.06 }}
               className="dev-proj-card"
               onClick={() => setSelectedProject(p)}
             >
               {p.image && (
                 <div className="dev-proj-image-wrap">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.image} alt={p.title} className="dev-proj-image" />
+                  <img src={p.image} alt={p.title} className="dev-proj-image" loading="lazy" />
                 </div>
               )}
               <div className="dev-proj-card-inner">
@@ -106,6 +129,13 @@ function DevProjects({ content }: { content: any }) {
             </motion.div>
           ))}
         </div>
+
+        {hasMore && (
+          <div ref={sentinelRef} className="dev-proj-load-more">
+            <Loader2 size={18} className="animate-spin" />
+            <span>Loading more projects…</span>
+          </div>
+        )}
       </div>
 
       <DevProjectModal

@@ -990,7 +990,6 @@
   max-width: 860px;
   margin: 0 auto;
   padding: clamp(100px, 14vw, 140px) clamp(20px, 6vw, 48px) clamp(60px, 10vw, 100px);
-  min-height: 100vh;
 }
 
 .port .dev-blog-header {
@@ -1212,7 +1211,6 @@
   max-width: 900px;
   margin: 0 auto;
   padding: clamp(100px, 14vw, 140px) clamp(20px, 6vw, 48px) clamp(60px, 10vw, 100px);
-  min-height: 100vh;
 }
 
 .port .dev-proj-grid {
@@ -1220,6 +1218,17 @@
   grid-template-columns: 1fr;
   gap: 32px;
   max-width: 1000px;
+}
+
+.port .dev-proj-load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px 0 8px;
+  color: var(--dev-text-3);
+  font-size: 13px;
+  font-family: var(--font-mono);
 }
 
 .port .dev-proj-card {
@@ -1388,7 +1397,6 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: clamp(100px, 14vw, 140px) clamp(20px, 6vw, 48px) clamp(60px, 10vw, 100px);
-  min-height: 100vh;
 }
 
 .port .dev-contact-grid {
@@ -1876,6 +1884,41 @@
 }
 
 /* ══════════════════════════════════════════════════════════
+   SCROLL TO TOP — floating button
+   ══════════════════════════════════════════════════════════ */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--dev-accent, #059669);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-accent, 0 8px 24px rgba(5, 150, 105, 0.2)), var(--shadow-lg);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.scroll-to-top-btn:hover {
+  background: var(--dev-accent-2, #10b981);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .scroll-to-top-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
    CURSOR GLOW — mouse-interactive ambient artifact
    ══════════════════════════════════════════════════════════ */
 .cursor-glow-layer {
@@ -2237,7 +2280,6 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: clamp(100px, 14vw, 140px) clamp(20px, 6vw, 48px) clamp(60px, 10vw, 100px);
-  min-height: 100vh;
 }
 
 .dev-timeline {

@@ -18,8 +18,8 @@ export function usePageTransition() {
   return ctx
 }
 
-const MIN_DISPLAY_MS = 550
-const PRE_NAVIGATE_MS = 220
+const MIN_DISPLAY_MS = 650
+const PRE_NAVIGATE_MS = 260
 
 export function PageTransitionProvider({ children }: { children: React.ReactNode }) {
   const [active, setActive] = useState(false)
@@ -59,7 +59,7 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             className="fixed inset-0 z-[10000] flex items-center justify-center"
             style={{
               background: isDev ? '#09090b' : '#fafafa',
@@ -97,11 +97,11 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
                 <motion.div
                   initial={{ x: '-100%' }}
                   animate={{ x: '100%' }}
-                  transition={{ duration: 0.9, repeat: Infinity, ease: 'easeInOut' }}
+                  transition={{ duration: 1.1, repeat: Infinity, ease: 'easeInOut' }}
                   style={{
                     width: '50%',
                     height: '100%',
-                    background: isDev ? '#34d399' : '#b8860b',
+                    background: isDev ? '#34d399' : '#2563eb',
                   }}
                 />
               </div>

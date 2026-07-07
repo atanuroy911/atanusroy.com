@@ -2,12 +2,14 @@
 
 import Link from 'next/link'
 import { useMode } from '@/providers/ModeProvider'
-import { Mail, BookOpen } from 'lucide-react'
+import { useOptionalDevTheme } from '@/providers/DevThemeProvider'
+import { Mail, BookOpen, Sun, Moon } from 'lucide-react'
 import { GitHubLogoIcon as Github, LinkedInLogoIcon as Linkedin } from '@radix-ui/react-icons'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
   const { mode } = useMode()
+  const devTheme = useOptionalDevTheme()
   const _isDev = isDev !== undefined ? isDev : mode === 'developer'
   const p = content?.personal
   const f = content?.footer
@@ -59,6 +61,15 @@ export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
                 }`}>
                 <Mail size={18} />
               </Link>
+            )}
+            {_isDev && devTheme?.mounted && (
+              <button
+                onClick={devTheme.toggleDevTheme}
+                title="Toggle dark mode"
+                className="text-gray-400 hover:text-blue-600 transition-colors"
+              >
+                {devTheme.devTheme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
             )}
           </div>
         </div>

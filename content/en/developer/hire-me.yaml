@@ -1,0 +1,95 @@
+hire_me:
+  eyebrow: "Why hire me"
+  title: "One engineer. Full stack, DevOps, and ML — no handoffs."
+  sub: >-
+    Most freelancers hand off the parts they can't do. Most agencies add a project
+    manager between you and the person actually writing code. I do the frontend,
+    the backend, the infrastructure, and the ML when a project needs it — and I
+    talk to you directly, every time.
+
+  reasons:
+    - icon: "layers"
+      title: "One person, the whole stack"
+      desc: "React/Next.js frontend, Laravel or Node backend, AWS/Docker/Jenkins infra — I own the full path from UI to production, so nothing gets lost in a handoff between specialists."
+    - icon: "server"
+      title: "I've actually run production, not just built demos"
+      desc: "I migrated a live client off DigitalOcean onto AWS EC2 with Docker + Jenkins CI/CD, with a real DNS cutover and real users — not a tutorial project."
+    - icon: "brain"
+      title: "ML and cross-platform when you need it"
+      desc: "Flutter and React Native apps with embedded ML — LSTM activity recognition, OpenCV object detection — when the project calls for more than a CRUD app."
+    - icon: "trophy"
+      title: "A track record, not just a portfolio"
+      desc: "Nationally ranked twice in China's University Computer Design Competition, two registered software copyrights, and an MHRD Fellowship at IIT Kanpur."
+    - icon: "message"
+      title: "Direct communication, always"
+      desc: "No account manager relaying messages. You talk to the person building your product, and you get a straight answer about timeline and cost."
+
+  stats:
+    - n: "15+"
+      l: "Projects shipped"
+    - n: "7+"
+      l: "Years building"
+    - n: "3"
+      l: "Countries worked across"
+    - n: "24h"
+      l: "Typical reply time"
+
+  case_studies:
+    - title: "DigitalOcean → AWS migration"
+      client: "Backend Ace client (NY, USA)"
+      problem: "A growing product outgrew a single DigitalOcean droplet — manual deploys, risky DNS changes, no real CI/CD."
+      solution: "Re-platformed onto AWS EC2, containerized with Docker, and set up Jenkins pipelines for build → test → deploy."
+      result: "Reproducible deployments and a DNS cutover with near-zero downtime."
+      tags: ["AWS", "Docker", "Jenkins", "DevOps"]
+    - title: "14,536-restaurant data platform"
+      client: "Cual.co"
+      problem: "Client needed a large, messy restaurant dataset (photos, reviews, metadata) turned into clean, usable product data."
+      solution: "Built a Python pipeline to import, deduplicate, and reformat the data, then wired it into the product's Laravel backend and Next.js frontend."
+      result: "14,536 restaurants live in production with no duplicate records."
+      tags: ["Python", "Laravel", "Next.js", "Data Engineering"]
+    - title: "Full-stack medical website"
+      client: "The Bronx Clinic (NY, USA)"
+      problem: "A healthcare client needed a professional, patient-facing site built and shipped on a tight timeline."
+      solution: "Delivered the full stack — Laravel backend, Next.js frontend — as part of the Backend Ace team."
+      result: "Live site handling real patient-facing traffic."
+      tags: ["Laravel", "Next.js", "Healthcare"]
+
+  comparison:
+    title: "Freelancer vs. agency vs. me"
+    rows:
+      - label: "Who you talk to"
+        agency: "Account manager"
+        freelancer: "Usually just them"
+        me: "Me, directly — always"
+      - label: "Skill coverage"
+        agency: "Team of specialists (slower handoffs)"
+        freelancer: "Often one layer (frontend OR backend)"
+        me: "Full stack + DevOps + ML in one person"
+      - label: "Production experience"
+        agency: "Varies by team"
+        freelancer: "Varies"
+        me: "Real migrations, real clients, real uptime"
+      - label: "Turnaround"
+        agency: "Slower — more process overhead"
+        freelancer: "Fast, but scope can be narrow"
+        me: "Fast, and full-scope"
+
+  guarantee:
+    title: "Every project ships with a 30-day support window"
+    sub: "Launch isn't the finish line. If something breaks or needs a small adjustment in the first 30 days, it's covered."
+
+  faq:
+    - q: "What if my project needs more than web development?"
+      a: "I also build cross-platform mobile apps (React Native/Flutter) and can wire in ML models when the product needs them — activity recognition, object detection, and similar. One conversation covers the whole scope."
+    - q: "Do you work with agencies or only direct clients?"
+      a: "Both. I've worked as part of a dev shop (Backend Ace) on client projects, and I take on direct freelance work. Either way, you get direct access to the person writing the code."
+    - q: "How fast can you start?"
+      a: "I reply within 24 hours. After a quick discovery call, most projects can start within the same week."
+    - q: "What does the process look like?"
+      a: "Discover → Design → Build → Launch. A 30-minute call to align on scope, a short architecture/timeline plan, weekly progress updates during the build, and a documented handoff with 30 days of support."
+
+  cta:
+    title: "Let's talk about your project"
+    sub: "Tell me what you're building — I'll tell you honestly whether I'm the right fit."
+    btn_primary: "Book a free call →"
+    btn_secondary: "See my work"

@@ -1,10 +1,108 @@
 journey:
   title: Developer Journey
-  description: Moments from building software, hackathons, and tech events.
-  images:
-    - src: >-
-        https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80
-      caption: Deploying my first scalable architecture.
-    - src: >-
-        https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80
-      caption: Late night debugging sessions.
+  description: A timeline of what I've shipped, won, and learned since 2018.
+  timeline:
+    - year: "2018"
+      title: "Joined RARL as Chief Tech Expert & RA"
+      summary: "Started at the Robotics & Automation Research Lab, JXUST — real-time robot vision and UAV speed detection."
+      details: >-
+        Joined the Robotics & Automation Research Lab (RARL) at Jiangxi University of Science
+        & Technology as Chief Tech Expert and Research Assistant. Developed real-time
+        camera-based monitoring for a novel food delivery robot using Pixy Cam for
+        color-coded location detection, and began work on a deep learning-based low-altitude
+        vehicle speed detector for UAVs using MobileNet SSD on Raspberry Pi.
+      tags: ["Robotics", "Embedded Systems", "Raspberry Pi"]
+      image: ""
+
+    - year: "2019"
+      title: "Built the Self-Lecture Attendance System"
+      summary: "A QR-based WeChat Mini Program for secure attendance, backed by Java Spring Boot."
+      details: >-
+        Designed and built SLAS, a full-stack QR-based attendance system delivered as a
+        WeChat Mini Program with a Java Spring Boot backend — giving institutions a secure
+        way to record attendance without extra hardware. Also completed the Google IT
+        Support Specialization and received the Jiangxi Provincial Government Scholarship
+        for international students.
+      tags: ["WeChat Mini Program", "Java", "Spring Boot"]
+      image: ""
+
+    - year: "2020"
+      title: "SLAS wins national recognition"
+      summary: "2nd Prize in Central China's \"Internet+\" Innovation Competition, plus a registered software copyright."
+      details: >-
+        SLAS won 2nd Prize in the Central China "Internet+" Innovation Competition and the
+        7th "Discovery Cup," and was registered as a software copyright in China
+        (Copyright No. 2020SR0058411). Renewed the Jiangxi Provincial Government
+        Scholarship for a second year.
+      tags: ["Award", "Software Copyright"]
+      image: ""
+
+    - year: "2021"
+      title: "Online Exam Assistant ranks nationally"
+      summary: "Ranked 2nd (Provincial) & 3rd (National) in the 14th China University Computer Design Competition."
+      details: >-
+        Built a full-stack Android app for distance education — course management, exam
+        scheduling, and timed assessments with anti-cheating mechanisms (Kotlin, PHP).
+        Ranked 2nd (Provincial) and 3rd (National) in the 14th China University Computer
+        Design Competition. Also began research on remote traffic-police sensing —
+        multi-label vehicle detection with OpenCV and speed detection via OpenVINO on
+        Raspberry Pi.
+      tags: ["Android", "Kotlin", "Computer Vision", "Award"]
+      image: ""
+
+    - year: "2022"
+      title: "Graduated JXUST, joined Wizzartech"
+      summary: "B.Eng in Computer Science & Technology (91.01%), then Associate Web Developer in Toronto."
+      details: >-
+        Graduated from Jiangxi University of Science & Technology with a B.Eng in Computer
+        Science & Technology (91.01%), earning the Outstanding International Graduate
+        Award. Registered the Pandemic-driven Exam Assistant (PEA) software copyright
+        (No. 2022SR0088310). Joined Wizzartech (Toronto, Canada) as Associate Web Developer —
+        leading junior developers on WordPress/JS projects and building a Selenium-based
+        Facebook Ad automation tool.
+      tags: ["Graduation", "Award", "WordPress", "Automation"]
+      image: ""
+
+    - year: "2023"
+      title: "IIT Kanpur, MHRD Fellowship, and freelancing"
+      summary: "Started M.Tech at IIT Kanpur on the MHRD Fellowship, and began freelancing in parallel."
+      details: >-
+        Began M.Tech in Computer Science & Engineering at IIT Kanpur, awarded the MHRD
+        Fellowship. Started freelancing alongside research — cross-platform ML apps
+        including activity recognition (LSTM) and OpenCV object detection. Built the
+        RADAR+Camera monitoring app (OPS-243C radar + camera fusion) and the IIT Kanpur
+        Firewall Authenticator, a PyQt5 tray tool for the campus Fortinet portal.
+      tags: ["IIT Kanpur", "Freelance", "Machine Learning", "PyQt5"]
+      image: ""
+
+    - year: "2024"
+      title: "M.Tech complete, joined Backend Ace"
+      summary: "Graduated IIT Kanpur (CPI 7.29/10), then joined Backend Ace (NY, USA) as Software & DevOps Engineer."
+      details: >-
+        Completed the M.Tech in Computer Science & Engineering at IIT Kanpur (CPI 7.29/10).
+        Joined Backend Ace, a NY-based dev shop, as Software & DevOps Engineer — full-stack
+        work on Laravel and Next.js products alongside cloud infrastructure. Continued as a
+        remote Research Assistant at RARL, working on energy-aware AGV path planning.
+      tags: ["Graduation", "Career", "Laravel", "Next.js"]
+      image: ""
+
+    - year: "2025"
+      title: "Production migrations and real client launches"
+      summary: "Led a DigitalOcean-to-AWS migration, a 14,536-restaurant data platform, and a medical website launch."
+      details: >-
+        Led a DigitalOcean-to-AWS migration for a Backend Ace client, containerizing the
+        deployment with Docker and standing up Jenkins CI/CD pipelines. Imported and cleaned
+        a 14,536-restaurant dataset (photos, reviews, metadata) for Cual.co. Shipped a
+        full-stack medical website for The Bronx Clinic (NY, USA).
+      tags: ["AWS", "Docker", "Jenkins", "Data Engineering"]
+      image: ""
+
+    - year: "2026"
+      title: "Present — full-stack, DevOps, and research"
+      summary: "Continuing production engineering at Backend Ace, freelance ML work, and AGV research with RARL."
+      details: >-
+        Currently splitting time between full-stack and DevOps engineering at Backend Ace,
+        freelance cross-platform and ML projects, and ongoing robotics research collaboration
+        with the Robotics & Automation Research Lab on AGV navigation.
+      tags: ["Current"]
+      image: ""

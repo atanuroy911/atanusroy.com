@@ -43,7 +43,7 @@ function TypingEffect({ words }: { words: string[] }) {
   );
 }
 
-export function DevHero({ content }: { content: any }) {
+export function DevHero({ content, locale = 'en' }: { content: any; locale?: string }) {
   const { hero } = content.developer;
 
   return (
@@ -64,9 +64,9 @@ export function DevHero({ content }: { content: any }) {
             <Link href={hero.cta_primary_link} className="btn-primary">
               {hero.cta_primary}
             </Link>
-            <a href="https://calendly.com/atanusroy" className="btn-ghost" target="_blank" rel="noopener noreferrer">
-              Hire Me
-            </a>
+            <Link href={`/${locale}/developer/hire-me`} className="btn-ghost">
+              Why Hire Me
+            </Link>
           </div>
         </div>
 

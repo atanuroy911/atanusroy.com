@@ -20,6 +20,7 @@ const staticAcademicRoutes = [
 
 const staticDevRoutes = [
   '/developer',
+  '/developer/hire-me',
   '/developer/blog',
   '/developer/contact',
   '/developer/journey',
@@ -49,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${SITE_URL}/${locale}${route}`,
         lastModified: new Date(),
         changeFrequency: route === '/developer' ? 'weekly' : 'monthly',
-        priority: route === '/developer' ? 0.9 : 0.7,
+        priority: route === '/developer' ? 0.9 : route === '/developer/hire-me' ? 0.85 : 0.7,
         alternates: {
           languages: Object.fromEntries(LOCALES.map((l) => [l, `${SITE_URL}/${l}${route}`])),
         },

@@ -1,80 +1,99 @@
 'use client'
 
-import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useMode } from '@/providers/ModeProvider'
 import { useOptionalDevTheme } from '@/providers/DevThemeProvider'
-import { Mail, BookOpen, Sun, Moon } from 'lucide-react'
+import { LanguageToggle } from '@/components/LanguageToggle'
+import { Mail, BookOpen, Sun, Moon, ArrowUpRight } from 'lucide-react'
 import { GitHubLogoIcon as Github, LinkedInLogoIcon as Linkedin } from '@radix-ui/react-icons'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
   const { mode } = useMode()
   const devTheme = useOptionalDevTheme()
+  const pathname = usePathname()
   const _isDev = isDev !== undefined ? isDev : mode === 'developer'
+  const locale = (pathname.split('/')[1] || 'en') as 'en' | 'bn'
   const p = content?.personal
   const f = content?.footer
 
+  const tagline = _isDev ? content?.developer?.hero?.tagline : content?.academic?.hero?.tagline
+
+  const socials = [
+    p?.github && { href: p.github, icon: <Github width={17} height={17} />, label: 'GitHub' },
+    p?.linkedin && { href: p.linkedin, icon: <Linkedin width={17} height={17} />, label: 'LinkedIn' },
+    p?.google_scholar && { href: p.google_scholar, icon: <BookOpen size={17} />, label: 'Google Scholar' },
+    p?.email && { href: `mailto:${p.email}`, icon: <Mail size={17} />, label: 'Email' },
+  ].filter(Boolean) as { href: string; icon: React.ReactNode; label: string }[]
+
   return (
-    <footer className={`border-t py-8 mt-16 ${
-      _isDev
-        ? 'border-gray-200 bg-white dark:bg-black'
-        : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950'
-    }`}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className={`text-sm ${
-            _isDev 
-              ? 'text-gray-500 font-medium' 
-              : 'text-slate-500'
-          }`}>
-            © {new Date().getFullYear()} {f?.copyright} · {f?.built_with}
-          </p>
-          <div className="flex items-center gap-4">
-            {p?.github && (
-              <Link href={p.github} target="_blank" rel="noopener noreferrer"
-                className={`transition-colors ${
-                  _isDev ? 'text-gray-400 hover:text-blue-600' : 'text-slate-500 hover:text-slate-800'
-                }`}>
-                <Github width={18} height={18} />
-              </Link>
-            )}
-            {p?.linkedin && (
-              <Link href={p.linkedin} target="_blank" rel="noopener noreferrer"
-                className={`transition-colors ${
-                  _isDev ? 'text-gray-400 hover:text-blue-600' : 'text-slate-500 hover:text-blue-700'
-                }`}>
-                <Linkedin width={18} height={18} />
-              </Link>
-            )}
-            {p?.google_scholar && (
-              <Link href={p.google_scholar} target="_blank" rel="noopener noreferrer"
-                className={`transition-colors ${
-                  _isDev ? 'text-gray-400 hover:text-blue-600' : 'text-slate-500 hover:text-slate-800'
-                }`}>
-                <BookOpen size={18} />
-              </Link>
-            )}
-            {p?.email && (
-              <Link href={`mailto:${p.email}`}
-                className={`transition-colors ${
-                  _isDev ? 'text-gray-400 hover:text-blue-600' : 'text-slate-500 hover:text-slate-800'
-                }`}>
-                <Mail size={18} />
-              </Link>
-            )}
-            {_isDev && devTheme?.mounted && (
-              <button
-                onClick={devTheme.toggleDevTheme}
-                title="Toggle dark mode"
-                className="text-gray-400 hover:text-blue-600 transition-colors"
-              >
-                {devTheme.devTheme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-              </button>
-            )}
+    <footer
+      className={
+        _isDev
+          ? 'footer-dev'
+          : 'footer-academic'
+      }
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+        <div className="grid gap-10 sm:grid-cols-2">
+          {/* Brand */}
+          <div>
+            <div className={_isDev ? 'footer-brand-dev' : 'footer-brand-academic'}>
+              {_isDev ? (
+                <>ASR<span className="footer-brand-blink">_</span></>
+              ) : (
+                p?.name || 'Atanu Shuvam Roy'
+              )}
+            </div>
+            {tagline && <p className="footer-tagline mt-3">{tagline}</p>}
           </div>
+
+          {/* Connect */}
+          <div className="sm:justify-self-end sm:text-right">
+            <div className="footer-col-label">
+              {_isDev ? '// connect' : 'Connect'}
+            </div>
+            <div className="flex items-center gap-3 mt-3 sm:justify-end">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={s.href.startsWith('mailto:') ? undefined : '_blank'}
+                  rel="noopener noreferrer"
+                  title={s.label}
+                  className="footer-icon-btn"
+                >
+                  {s.icon}
+                </a>
+              ))}
+              {_isDev && devTheme?.mounted && (
+                <button
+                  onClick={devTheme.toggleDevTheme}
+                  title="Toggle dark mode"
+                  className="footer-icon-btn"
+                >
+                  {devTheme.devTheme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+                </button>
+              )}
+            </div>
+            <div className="mt-5 flex sm:justify-end">
+              <LanguageToggle locale={locale} />
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} {f?.copyright}</p>
+          <a
+            href="https://github.com/atanuroy911"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-built-with"
+          >
+            {f?.built_with} <ArrowUpRight size={12} />
+          </a>
         </div>
       </div>
     </footer>
   )
 }
-

@@ -133,6 +133,166 @@
 
 /* ── Custom utilities ─────────────────────────────────── */
 
+/* Language toggle — pill switch, EN | বাং */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid var(--primary);
+  border-radius: 9999px;
+  padding: 2px;
+  gap: 2px;
+}
+.lang-toggle-seg {
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  color: var(--primary);
+  transition: background 0.2s ease, color 0.2s ease;
+  line-height: 1;
+}
+.lang-toggle-seg.is-active {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.lang-toggle-seg:not(.is-active):hover {
+  background: color-mix(in oklab, var(--primary) 12%, transparent);
+}
+
+/* Nav globe icon that expands the EN/বাং pill inline on hover/focus.
+   The pill is a real flex item (not absolutely positioned), so growing it
+   pushes the mode-switch button to its left out of the way — and because
+   the controls row is justify-end, everything settles back on mouse-leave. */
+.lang-reveal .lang-expand {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-right: 0;
+  transition: max-width 0.28s ease, opacity 0.2s ease, margin-right 0.28s ease;
+}
+.lang-reveal:hover .lang-expand,
+.lang-reveal:focus-within .lang-expand {
+  max-width: 110px;
+  opacity: 1;
+  margin-right: 6px;
+}
+
+/* ── Footer (shared structure, mode-specific color) ─────── */
+.footer-dev,
+.footer-academic {
+  position: relative;
+  margin-top: 64px;
+}
+
+.footer-dev {
+  border-top: 1px solid var(--dev-border, #e4e4e7);
+  background: var(--dev-bg-alt, #f4f4f5);
+  color: var(--dev-text-3, #71717a);
+}
+.footer-academic {
+  border-top: 1px solid var(--border);
+  background: var(--ac-bg2, var(--secondary));
+  color: var(--muted-foreground);
+}
+
+.footer-brand-dev {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--dev-text, #09090b);
+  letter-spacing: -0.02em;
+}
+.footer-brand-blink {
+  color: var(--dev-accent, #059669);
+  animation: blink 1.2s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.footer-brand-academic {
+  font-family: var(--font-display, 'EB Garamond', Georgia, serif);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ac-navy, var(--primary));
+}
+
+.footer-tagline {
+  font-size: 13px;
+  line-height: 1.65;
+  max-width: 320px;
+  opacity: 0.85;
+}
+
+.footer-col-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.footer-dev .footer-col-label { font-family: var(--font-mono, monospace); }
+
+.footer-link {
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-block;
+}
+.footer-dev .footer-link { color: var(--dev-text-2, #3f3f46); }
+.footer-academic .footer-link { color: var(--foreground); }
+.footer-link:hover {
+  color: var(--primary);
+  transform: translateX(2px);
+}
+
+.footer-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  transition: all 0.15s ease;
+  background: transparent;
+  cursor: pointer;
+}
+.footer-dev .footer-icon-btn,
+.footer-academic .footer-icon-btn {
+  color: inherit;
+}
+.footer-icon-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12.5px;
+  opacity: 0.75;
+}
+.footer-built-with {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s ease;
+}
+.footer-built-with:hover {
+  color: var(--primary);
+}
+
 /* Dev mode specific */
 .dev-glow-cyan {
   box-shadow: 4px 4px 0px rgba(0,0,0,1);

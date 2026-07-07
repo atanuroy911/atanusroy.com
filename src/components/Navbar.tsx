@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useMode } from '@/providers/ModeProvider'
 import { usePageTransition } from '@/providers/PageTransitionProvider'
@@ -11,8 +11,9 @@ import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import {
-  GraduationCap, Code2, Menu, X, FlaskConical, Laptop2
+  GraduationCap, Code2, Menu, X, FlaskConical, Laptop2, Globe
 } from 'lucide-react'
+import { LanguageToggle } from '@/components/LanguageToggle'
 import type { Locale } from '@/lib/content'
 
 interface Props {
@@ -32,7 +33,6 @@ export function Navbar({ content, locale, isDev }: Props) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
-  const router = useRouter()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -66,12 +66,6 @@ export function Navbar({ content, locale, isDev }: Props) {
       return pathname === href || pathname === `${href}/`
     }
     return pathname.startsWith(href)
-  }
-
-  const otherLocale: Locale = locale === 'en' ? 'bn' : 'en'
-  const switchLocale = () => {
-    const newPath = pathname.replace(`/${locale}`, `/${otherLocale}`)
-    router.push(newPath)
   }
 
   // Developer Layout uses Navbar. We don't use ModeProvider to toggle anymore, we route to Academic Profile.
@@ -150,16 +144,22 @@ export function Navbar({ content, locale, isDev }: Props) {
               </Button>
             )}
 
-            {/* Language toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={switchLocale}
-              className="w-9 px-0 text-xs font-bold tracking-wide text-muted-foreground hover:text-primary"
-              title={nav?.language}
-            >
-              {otherLocale === 'bn' ? 'বাং' : 'EN'}
-            </Button>
+            {/* Language toggle — compact globe icon; hovering expands the EN/বাং pill
+                inline, which (via justify-end) nudges the mode-switch button left
+                to make room, and everything settles back on mouse-leave. */}
+            <div className="lang-reveal hidden sm:flex items-center">
+              <div className="lang-expand">
+                <LanguageToggle locale={locale} />
+              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="w-8 h-8 text-muted-foreground hover:text-primary shrink-0"
+                title={nav?.language}
+              >
+                <Globe size={15} />
+              </Button>
+            </div>
 
             {/* Mobile menu */}
             <Button
@@ -221,18 +221,9 @@ export function Navbar({ content, locale, isDev }: Props) {
                   {nav?.switch_to_developer || 'Developer Profile'}
                 </Button>
               )}
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => {
-                  setMobileOpen(false)
-                  switchLocale()
-                }}
-                className="w-full justify-start gap-2 text-sm text-muted-foreground hover:text-primary"
-              >
-                <span className="font-bold">{otherLocale === 'bn' ? 'বাং' : 'EN'}</span>
-                {nav?.language}
-              </Button>
+              <div className="pt-1">
+                <LanguageToggle locale={locale} />
+              </div>
             </div>
           </motion.div>
         )}

@@ -1,6 +1,11 @@
+'use client'
+
 import React from 'react';
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Search, Compass, Hammer, Rocket, type LucideIcon } from 'lucide-react';
 import Link from 'next/link';
+
+const STEP_ICONS: LucideIcon[] = [Search, Compass, Hammer, Rocket];
 
 export function DevProcess({ content }: { content: any }) {
   const { process } = content.developer;
@@ -13,23 +18,44 @@ export function DevProcess({ content }: { content: any }) {
           <div className="sec-title">{process.title}</div>
         </div>
 
+        <motion.div
+          className="process-track"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <motion.div
+            className="process-track-fill"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          />
+        </motion.div>
+
         <div className="flex flex-col lg:flex-row items-stretch justify-center gap-4">
-          {process.steps.map((step: any, index: number) => (
-            <React.Fragment key={index}>
-              <div className="process-step">
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+          {process.steps.map((step: any, index: number) => {
+            const Icon = STEP_ICONS[index] || Search;
+            return (
+              <motion.div
+                key={index}
+                className="process-step"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+              >
+                <div className="step-ghost-num">{String(index + 1).padStart(2, '0')}</div>
+                <div className="step-icon">
+                  <Icon size={20} />
+                </div>
                 <div className="step-num">{step.num}</div>
                 <div className="step-title">{step.title}</div>
                 <div className="step-desc">{step.desc}</div>
-              </div>
-
-              {index < process.steps.length - 1 && (
-                <div className="flex items-center justify-center text-[var(--dev-border-2)] flex-shrink-0 py-2 lg:py-0">
-                  <ArrowRight className="hidden lg:block" size={20} />
-                  <ArrowDown className="block lg:hidden" size={20} />
-                </div>
-              )}
-            </React.Fragment>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         <div className="flex justify-center mt-10">

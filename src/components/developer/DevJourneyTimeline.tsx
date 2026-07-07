@@ -59,24 +59,24 @@ export function DevJourneyTimeline({ timeline }: { timeline: TimelineEntry[] }) 
       <AnimatePresence>
         {active && (
           <motion.div
-            className="dev-timeline-modal-backdrop"
+            className="dev-modal-backdrop"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setActive(null)}
           >
             <motion.div
-              className="dev-timeline-modal"
+              className="dev-modal"
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: 'spring', damping: 26, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <button className="dev-timeline-modal-close" onClick={() => setActive(null)} aria-label="Close">
+              <button className="dev-modal-close" onClick={() => setActive(null)} aria-label="Close">
                 <X size={16} />
               </button>
-              <div className="dev-timeline-modal-media">
+              <div className="dev-modal-media">
                 {active.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={active.image} alt={active.title} />
@@ -84,10 +84,10 @@ export function DevJourneyTimeline({ timeline }: { timeline: TimelineEntry[] }) 
                   <span>{active.year}</span>
                 )}
               </div>
-              <div className="dev-timeline-modal-body">
-                <div className="dev-timeline-modal-year">{active.year}</div>
-                <div className="dev-timeline-modal-title">{active.title}</div>
-                <div className="dev-timeline-modal-details">{active.details || active.summary}</div>
+              <div className="dev-modal-body">
+                <div className="dev-modal-year">{active.year}</div>
+                <div className="dev-modal-title">{active.title}</div>
+                <div className="dev-modal-details">{active.details || active.summary}</div>
                 {active.tags && active.tags.length > 0 && (
                   <div className="tech-pills">
                     {active.tags.map((t) => (

@@ -5,7 +5,7 @@ import { useMode } from '@/providers/ModeProvider'
 import { Badge } from '@/components/ui/badge'
 import { ExternalLink, BookOpen, Layers, GitBranch, Globe } from 'lucide-react'
 import { useState } from 'react'
-import { ProjectModal } from '@/components/ui/ProjectModal'
+import { DevProjectModal } from '@/components/developer/DevProjectModal'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function ProjectsClient({ content }: { content: any }) {
@@ -108,10 +108,9 @@ function DevProjects({ content }: { content: any }) {
         </div>
       </div>
 
-      <ProjectModal
-        isOpen={!!selectedProject}
-        onClose={() => setSelectedProject(null)}
+      <DevProjectModal
         project={selectedProject}
+        onClose={() => setSelectedProject(null)}
       />
     </div>
   )

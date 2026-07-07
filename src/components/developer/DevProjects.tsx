@@ -1,4 +1,6 @@
-import React from 'react';
+'use client'
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs,
@@ -7,6 +9,7 @@ import {
 } from 'react-icons/si';
 import { DiAws } from 'react-icons/di';
 import { Showcase3D } from './Showcase3D';
+import { DevProjectModal } from './DevProjectModal';
 
 const iconMap: Record<string, any> = {
   react: SiReact,
@@ -35,6 +38,7 @@ function getTechIcon(tag: string) {
 export function DevProjects({ content }: { content: any }) {
   const allProjects = content.developer.projects || [];
   const featured = allProjects.filter((p: any) => p.featured).slice(0, 3);
+  const [activeProject, setActiveProject] = useState<any | null>(null);
 
   return (
     <>
@@ -72,19 +76,13 @@ export function DevProjects({ content }: { content: any }) {
                 </div>
               )}
 
-              {project.link ? (
-                <Link href={project.link} target="_blank" className="project-cta">
-                  View Live Project <span>→</span>
-                </Link>
-              ) : (
-                <Link href={project.github || '#'} target="_blank" className="project-cta">
-                  View Source Code <span>→</span>
-                </Link>
-              )}
+              <button onClick={() => setActiveProject(project)} className="project-cta" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
+                View Details <span>→</span>
+              </button>
             </div>
 
             {/* 3D showcase column */}
-            <div className="split-right">
+            <div className="split-right" onClick={() => setActiveProject(project)} style={{ cursor: 'pointer' }}>
               <Showcase3D
                 image={project.showcase_image || project.image}
                 glyph={project.mockup_icon || '✦'}
@@ -107,6 +105,8 @@ export function DevProjects({ content }: { content: any }) {
           Book a Free Call
         </Link>
       </div>
+
+      <DevProjectModal project={activeProject} onClose={() => setActiveProject(null)} />
     </>
   );
 }

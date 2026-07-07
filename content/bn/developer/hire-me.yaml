@@ -45,7 +45,7 @@ hire_me:
       l: সাধারণ উত্তর সময়
   case_studies:
     - title: DigitalOcean → AWS মাইগ্রেশন
-      client: Backend Ace client (NY, USA)
+      client: ব্যাকএন্ড এস ক্লায়েন্ট (NY, USA)
       problem: >-
         একটি ক্রমবর্ধমান পণ্য একটি একক DigitalOcean ড্রপলেটকে ছাড়িয়ে গেছে - ম্যানুয়াল স্থাপন, ঝুঁকিপূর্ণ DNS
         পরিবর্তন, কোন বাস্তব CI/CD নেই।
@@ -73,7 +73,7 @@ hire_me:
         - Next.js
         - Data Engineering
     - title: সম্পূর্ণ স্ট্যাক মেডিকেল ওয়েবসাইট
-      client: The Bronx Clinic (NY, USA)
+      client: ব্রঙ্কস ক্লিনিক (NY, USA)
       problem: একজন স্বাস্থ্যসেবা ক্লায়েন্টের একটি পেশাদার, রোগী-মুখী সাইট তৈরি এবং একটি শক্ত টাইমলাইনে পাঠানো প্রয়োজন।
       solution: ব্যাকএন্ড Ace দলের অংশ হিসাবে সম্পূর্ণ স্ট্যাক — Laravel ব্যাকএন্ড, Next.js ফ্রন্টএন্ড বিতরণ করা হয়েছে।
       result: লাইভ সাইট প্রকৃত রোগীর মুখোমুখি ট্রাফিক পরিচালনা করে।

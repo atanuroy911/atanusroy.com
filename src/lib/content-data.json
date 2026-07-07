@@ -2044,41 +2044,114 @@
       },
       "academic_projects": [
         {
-          "title": "স্বায়ত্তশাসিত রোবট নেভিগেশন সিস্টেম",
-          "year": 2025,
+          "title": "বাংলা গানের দৃশ্যায়ন",
+          "year": 2024,
           "tags": [
-            "Computer Vision",
-            "SLAM",
-            "Robotics"
+            "NLP",
+            "Stylometry",
+            "Data Visualization",
+            "Bengali"
           ],
-          "venue": "RARL, JXUST",
-          "description": "গভীরতার সেন্সর ব্যবহার করে একটি ইনডোর মোবাইল রোবটের জন্য দৃষ্টি-ভিত্তিক স্বায়ত্তশাসিত নেভিগেশন পাইপলাইন এবং রিয়েল-টাইমে গতিশীল পরিবেশের মানচিত্র করার জন্য একটি কাস্টম SLAM বাস্তবায়ন।",
-          "abstract": "আমরা একটি ভিশন-ভিত্তিক স্বায়ত্তশাসিত নেভিগেশন পাইপলাইন তৈরি করেছি যেটি গতিশীল গুদাম পরিবেশে অপারেটিং একটি ইনডোর মোবাইল রোবট। সিস্টেমটি ডেপথ সেন্সর (Intel RealSense D435) এবং একটি কাস্টম লাইটওয়েট SLAM ইমপ্লিমেন্টেশন ব্যবহার করে যা অকুপেন্সি গ্রিড উপস্থাপনা ব্যবহার করে রিয়েল-টাইমে পরিবেশকে ম্যাপ করে।\nএকটি মূল চ্যালেঞ্জ ছিল চরম সেন্সর নয়েজ এবং টাইট কম্পিউট সীমাবদ্ধতা (NVIDIA Jetson Nano)। আমরা একটি প্রথাগত সম্ভাব্য রোডম্যাপ (PRM) পরিকল্পনাকারীর পাশাপাশি বাধা সনাক্তকরণের জন্য একটি লাইটওয়েট EfficientDet-ভিত্তিক নিউরাল নেটওয়ার্ক ব্যবহার করে এটি মোকাবেলা করেছি। হাইব্রিড পদ্ধতি বিশুদ্ধ শিক্ষা-ভিত্তিক পদ্ধতির তুলনায় গড় পথ পরিকল্পনার সময় 38% কমিয়ে দেয়।\nরোবটটি 200টি অদেখা ইনডোর লেআউট জুড়ে 94.2% টাস্ক সম্পূর্ণ করার হার অর্জন করেছে, যার গড় রিপ্ল্যানিং লেটেন্সি 120ms এর কম।",
-          "image": "/assets/project_agv_nav.png",
+          "venue": "Independent Research",
+          "description": "বাংলা গানের লিরিক্সের স্টাইলোমেট্রিক বিশ্লেষণ এবং স্ব-সাদৃশ্য ম্যাপিং, ফলে ভাষাগত নিদর্শনগুলি কল্পনা করার জন্য একটি সমন্বিত ওয়েব অ্যাপ্লিকেশন সহ।",
+          "abstract": "এই প্রকল্পটি বাংলা গানের লিরিক্সের জন্য স্টাইলোমেট্রিক বিশ্লেষণ এবং স্ব-সাম্য ম্যাপিং কৌশল প্রয়োগ করে, শিল্পী এবং যুগ জুড়ে কাঠামোগত এবং ভাষাগত নিদর্শনগুলিকে দেখায়। একটি সমন্বিত ওয়েব অ্যাপ্লিকেশন এই প্যাটার্নগুলিকে ইন্টারেক্টিভ ভিজ্যুয়ালাইজেশন হিসাবে রেন্ডার করে, বিশ্লেষণটিকে স্ট্যাটিক না করে অন্বেষণযোগ্য করে তোলে।",
+          "image": "",
           "paper_link": "",
-          "github_link": "https://github.com/atanuroy911/autonomous-robot-navigation",
+          "github_link": "",
           "demo_link": "",
           "blog_link": ""
         },
         {
-          "title": "আইওটি স্মার্ট এগ্রিকালচার প্ল্যাটফর্ম",
-          "year": 2024,
+          "title": "রোবট সহকারী এক্স - আপনার ব্যক্তিগত চ্যাটবট",
+          "year": 2023,
+          "tags": [
+            "NLP",
+            "Robotics",
+            "Edge AI",
+            "Mobile"
+          ],
+          "venue": "Independent Research",
+          "description": "রাস্পবেরি পাইতে চলমান একটি NLP-চালিত ভয়েস সহকারী, ইন্টারেক্টিভ, ভয়েস-নিয়ন্ত্রিত মানব-রোবট ইন্টারঅ্যাকশনের জন্য একটি Flutter সহচর অ্যাপের সাথে যুক্ত।",
+          "abstract": "রোবট সহকারী X প্রান্তে ইন্টারেক্টিভ, ভয়েস-নিয়ন্ত্রিত সহায়তা প্রদান করতে টেনসরফ্লো ব্যবহার করে রাস্পবেরি পাইতে একটি NLP মডেল প্রয়োগ করে — প্রতিটি প্রশ্নের জন্য ক্লাউড রাউন্ড-ট্রিপের উপর নির্ভর না করে। Flutter সহ নির্মিত একটি সহচর মোবাইল অ্যাপ্লিকেশন সহকারীর নাগাল প্রসারিত করে এবং মানব-রোবট ইন্টারঅ্যাকশন লুপ উন্নত করে৷",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
+          "demo_link": "",
+          "blog_link": ""
+        },
+        {
+          "title": "উন্নত YOLOv7 ব্যবহার করে ঢালাই ত্রুটি সনাক্তকরণ",
+          "year": 2023,
+          "tags": [
+            "Computer Vision",
+            "YOLOv7",
+            "Edge AI",
+            "Industrial Inspection"
+          ],
+          "venue": "Independent Research",
+          "description": "স্বয়ংক্রিয় ওয়েল্ডিং ত্রুটি সনাক্তকরণের জন্য একটি দক্ষ চ্যানেল মনোযোগ-বর্ধিত YOLOv7 মডেল, সংস্থান-সীমাবদ্ধ IoT প্রান্ত ডিভাইসগুলিতে স্থাপনার জন্য অপ্টিমাইজ করা হয়েছে৷",
+          "abstract": "এই প্রকল্পটি YOLOv7-এ একটি দক্ষ চ্যানেল অ্যাটেনশন (ECA) মেকানিজমকে সংহত করে যাতে ঢালাই ত্রুটির জন্য সনাক্তকরণের নির্ভুলতা উন্নত করা যায়, তারপরে রিসোর্স-সীমাবদ্ধ IoT প্রান্ত ডিভাইসগুলিতে স্থাপনার জন্য ফলাফল মডেলটিকে অপ্টিমাইজ করে — পরিদর্শন পরিস্থিতিতে লক্ষ্য করে যেখানে একটি পূর্ণ-আকারের বাস্তব মডেল নেই।",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
+          "demo_link": "",
+          "blog_link": ""
+        },
+        {
+          "title": "অটোমেটেড গাইডেড ভেহিকল (AGV) পাথ ট্র্যাকিং",
+          "year": 2022,
+          "tags": [
+            "Robotics",
+            "AGV",
+            "Simulation",
+            "Path Planning"
+          ],
+          "venue": "Independent Research",
+          "description": "CoppeliaSim (V-REP) এ একটি সিমুলেটেড 4-হুইল ডিফারেনশিয়াল ড্রাইভ AGV একটি রিয়েল-টাইম, সেন্সর-চালিত পাথ ট্র্যাকিং অ্যালগরিদম।",
+          "abstract": "এই প্রকল্পটি CoppeliaSim (V-REP) তে একটি 4-হুইল ডিফারেনশিয়াল ড্রাইভ AGV ডিজাইন এবং অনুকরণ করে, তারপর একটি শক্তিশালী পাথ ট্র্যাকিং অ্যালগরিদম তৈরি করে যা সিমুলেটেড ঝামেলার অধীনে গাড়িটিকে তার পরিকল্পিত গতিপথে রাখতে রিয়েল-টাইম সেন্সর ডেটা ব্যবহার করে।",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
+          "demo_link": "",
+          "blog_link": ""
+        },
+        {
+          "title": "LSTM ব্যবহার করে অ্যাক্টিভিটি রিকগনিশন অ্যাপ্লিকেশন",
+          "year": 2023,
+          "tags": [
+            "Deep Learning",
+            "LSTM",
+            "Mobile",
+            "Cloud"
+          ],
+          "venue": "Personal Project",
+          "description": "একটি LSTM-ভিত্তিক সেন্সর কার্যকলাপ স্বীকৃতি মডেল ক্লাউডে মোতায়েন করা হয়েছে, রিয়েল-টাইম পর্যবেক্ষণ এবং পূর্বাভাসের জন্য একটি সহচর মোবাইল অ্যাপের সাথে যুক্ত।",
+          "abstract": "এই প্রকল্পটি সেন্সর-ভিত্তিক মানব ক্রিয়াকলাপ স্বীকৃতির জন্য PyTorch-এ একটি LSTM মডেলকে প্রশিক্ষণ দেয় এবং এটিকে ক্লাউড-হোস্টেড ইনফারেন্স পরিষেবা হিসাবে স্থাপন করে৷ একটি সহচর মোবাইল অ্যাপ মডেলটিতে লাইভ সেন্সর ডেটা স্ট্রিম করে এবং ব্যবহারকারীকে রিয়েল-টাইম কার্যকলাপের পূর্বাভাস দেয়।",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
+          "demo_link": "",
+          "blog_link": ""
+        },
+        {
+          "title": "স্মার্ট পার্কিং সিস্টেম",
+          "year": 2022,
           "tags": [
             "IoT",
             "LoRaWAN",
-            "Machine Learning"
+            "Web Development"
           ],
-          "venue": "IoT Vision Lab, IIT Kanpur",
-          "description": "মাটির আর্দ্রতা নিরীক্ষণ এবং সেচের প্রয়োজনীয়তা অনুমান করতে LoRaWAN ব্যবহার করে নিম্ন-শক্তি, প্রশস্ত-এরিয়া IoT প্ল্যাটফর্ম, একটি ভবিষ্যদ্বাণীমূলক ML ব্যাকএন্ড সহ কাস্টম সেন্সর নোড স্থাপন করে।",
-          "abstract": "আমরা কৃষিক্ষেত্র জুড়ে মাটির আর্দ্রতা, পরিবেষ্টিত তাপমাত্রা এবং আর্দ্রতা নিরীক্ষণের জন্য LoRaWAN ক্লাস A ডিভাইস ব্যবহার করে একটি কম-পাওয়ার, ওয়াইড-এরিয়া IoT প্ল্যাটফর্ম ডিজাইন করেছি। প্রকল্পটিতে কাস্টম সেন্সর নোডের হার্ডওয়্যার ডিজাইন জড়িত ছিল (STM32L476 MCU + ক্যাপাসিটিভ সয়েল সেন্সর + SX1276 LoRa ট্রান্সসিভার) যা 2× AA কোষে 18 মাসের বেশি ব্যাটারি লাইফ অর্জন করে।\nএকটি কেন্দ্রীয় ক্লাউড ব্যাকএন্ড (AWS IoT Core + Lambda) সেন্সর টেলিমেট্রিকে একত্রিত করে এবং একটি গ্রেডিয়েন্ট-বুস্টেড ট্রি মডেল (XGBoost) চালায় যাতে 48 ঘন্টা আগে সর্বোত্তম সেচের সময়সূচী অনুমান করা যায়, 3 বছরের স্থানীয় জলবায়ু এবং ফসলের ডেটার উপর প্রশিক্ষিত।\nউত্তরপ্রদেশের 5টি খামার জুড়ে মাঠ পরীক্ষায় সমতুল্য বা উচ্চতর ফসলের ফলন বজায় রেখে জলের ব্যবহার 31% হ্রাস পেয়েছে। প্ল্যাটফর্মটি ~2কিমি ইনডোর এবং ~10কিমি আউটডোর রেঞ্জ সহ গেটওয়ে প্রতি 512টি সেন্সর নোড সমর্থন করে৷",
-          "image": "/assets/project_iot_agri.png",
-          "paper_link": "https://example.com/paper.pdf",
-          "github_link": "https://github.com/atanuroy911/iot-smart-agriculture",
+          "venue": "Personal Project",
+          "description": "একাধিক পার্কিং লট পরিচালনার জন্য একটি ReactJS/ExpressJS ওয়েব অ্যাপ্লিকেশন, লো-পাওয়ার ডিভাইস নেটওয়ার্কিংয়ের জন্য LoRaWAN দ্বারা সমর্থিত।",
+          "abstract": "এই প্রজেক্টটি ReactJS এবং ExpressJS ব্যবহার করে একাধিক পার্কিং লট জুড়ে দখল এবং প্রাপ্যতা পরিচালনা করতে একটি ওয়েব অ্যাপ্লিকেশন প্রকৌশলী করে, LoRa-WAN ইন্টিগ্রেশন দিয়ে বিতরণ করা পার্কিং সেন্সরগুলির মধ্যে শক্তিশালী, কম-পাওয়ার নেটওয়ার্কিং প্রদান করে৷",
+          "image": "",
+          "paper_link": "",
+          "github_link": "",
           "demo_link": "",
           "blog_link": ""
         }
       ],
-      "publications_bibtex": "@incollection{moshayedi2026lidar,\n  title={Comparative Analysis of LiDAR and Kinect Sensors for XiaoQiang AGV Navigation in Real and Simulated Environments},\n  author={Moshayedi, A. J. and Zou, Z. and Roy, A. S. and Kolahdooz, A.},\n  booktitle={Proceedings of the 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Vol. I},\n  publisher={Springer},\n  year={2026},\n  type={conference},\n  pdf={}\n} @article{moshayedi2026integrated,\n  title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},\n  author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  pdf={}\n} @inproceedings{moshayedi2025path,\n  title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},\n  author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},\n  booktitle={5th ICRAIC 2025, IEEE},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},\n  author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},\n  booktitle={4th ICCIT 2025},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2024dr,\n  title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},\n  author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{roy2024advanced,\n  title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},\n  author={Roy, A.S. and Das, A.},\n  journal={Journal of Robotics Research (JRR), 1(1), 15–23},\n  year={2024},\n  type={journal},\n  pdf={}\n} @inproceedings{roy2024attentive,\n  title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},\n  author={Roy, A.S. and Bagade, P.},\n  booktitle={VISAPP 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{moshayedi2023secure,\n  title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},\n  journal={Future transportation},\n  volume={3},\n  number={1},\n  pages={189--209},\n  year={2023},\n  publisher={MDPI},\n  pdf={}\n} @article{moshayedi2024design,\n  title={Design and development of FOODIEBOT robot: From simulation to design},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},\n  journal={IEEE access},\n  volume={12},\n  pages={36148--36172},\n  year={2024},\n  publisher={IEEE},\n  pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n} @article{moshayedi2025emtihan,\n  title={EMTIHAN: Design of a novel approach to secure online examination challenge in remote learning},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={Education and Information Technologies},\n  year={2025},\n  publisher={Springer},\n  pdf={}\n} @article{moshayedi2024iot,\n  title={A novel IoT-enabled portable, secure automatic self-lecture attendance system: design, development and comparison},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={International Journal of Electronic Security and Digital Forensics},\n  year={2024},\n  publisher={Inderscience},\n  pdf={}\n} @article{roy2022automation,\n  title={Automation Attendance Systems Approaches: A Practical Review},\n  author={Shuvam Roy, Atanu and Lan, H. and Gheisari, Mehdi and Abbasi, Aqif Afzaal and Moshayedi, Ata Jahangir and Liao, Liefa and Hosseini Bamakan, Seyed Mojtaba},\n  journal={BOHR International Journal of Internet of Things, Artificial Intelligence and Machine Learning},\n  year={2022},\n  pdf={}\n}\n",
+      "publications_bibtex": "@incollection{moshayedi2026lidar,\n  শিরোনাম={লিডার এবং কাইনেক্ট সেন্সরগুলির তুলনামূলক বিশ্লেষণ XiaoQiang এজিভি নেভিগেশনের জন্য বাস্তব এবং সিমুলেটেড পরিবেশে},\n  লেখক={মোশায়েদী, এ.জে. এবং জু, জেড. এবং রায়, এ.এস. এবং কোলাহদুজ, এ.},\n  বইয়ের শিরোনাম={প্রসিডিংস অফ দ্য 5ম ইন্টারন্যাশনাল কনফারেন্স অন ফ্রন্টিয়ার্স অফ ইলেকট্রনিক্স, ইনফরমেশন অ্যান্ড কম্পিউটেশন টেকনোলজিস (ICFEICT 2025), ভলিউম। আমি},\n  প্রকাশক={স্প্রিংগার},\n  বছর={2026},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @আর্টিকেল{moshayedi2026 ইন্টিগ্রেটেড,\n  শিরোনাম={একটি সমন্বিত বিটল অ্যান্টেনা অনুসন্ধান–অজানা পরিবেশে সর্বমুখী AGV মোবাইল রোবটের জন্য সক্ষম ন্যাভিগেশন ফ্রেমওয়ার্ক},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং করণ, ইউ. এবং ঝাং, এম. এবং বাসির, ডি.},\n  জার্নাল={ইএআই এনডোর্সড লেনদেন অন এআই এবং রোবোটিক্স},\n  বছর={2026},\n  টাইপ={জার্নাল},\n  pdf={}\n} @inproceedings{moshayedi2025path,\n  শিরোনাম={এজিভিগুলির জন্য পথ পরিকল্পনা: কম্পিউটেশনাল দক্ষতা এবং সর্বোত্তমতার ভারসাম্য},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এইচ. এবং ইয়াং, এস. এবং রাজী, এ. এবং আন্দানি, এম.ই.},\n  বইয়ের শিরোনাম={5ম ICRAIC 2025, IEEE},\n  বছর={2025},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  শিরোনাম={আরবানপার্ক: LoRaWAN সক্ষম স্মার্ট পার্কিং মডিউল সহ পার্কিং পরিকাঠামোর অগ্রগতি},\n  লেখক={মোশায়েদী, এ.জে. এবং রায়, এ.এস. এবং খান, জেড.এ. এবং ইয়াং, এস.},\n  বইয়ের শিরোনাম={4th ICCIT 2025},\n  বছর={2025},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @inproceedings{moshayedi2024dr,\n  শিরোনাম={ডঃ অরেঞ্জঅ্যাপ: সাইট্রাস বাগানে রিয়েল-টাইম পেস্ট ডিটেকশনে বিপ্লব ঘটানো},\n  লেখক={মোশায়েদী, এ.জে. এবং জাওয়াদি, এম.জে. এবং রায়, এ.এস. এবং অন্যান্য},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  বছর={2024},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @আর্টিকেল{roy2024advanced,\n  title={আইআর সেন্সর এবং টাইমড অটোমেটা ব্যবহার করে অ্যাডভান্সড পাথ ট্র্যাকিং এবং ট্রাফিক ব্যবস্থাপনা},\n  লেখক={রায়, এ.এস. এবং দাস, এ.},\n  জার্নাল={রোবোটিক্স রিসার্চ জার্নাল (JRR), 1(1), 15–23},\n  বছর={2024},\n  টাইপ={জার্নাল},\n  pdf={}\n} @inproceedings{roy2024 মনোযোগী,\n  শিরোনাম={অ্যাটেনটিভ-ইওলো: দক্ষ চ্যানেলের মনোযোগ ব্যবহার করে অন-সাইট জলের পাইপলাইন পরিদর্শন এবং ELAN-ভিত্তিক YOLOv7},\n  লেখক={রায়, এ.এস. এবং বাগাদে, পি.},\n  booktitle={VISAPP 2024},\n  বছর={2024},\n  প্রকার={সম্মেলন},\n  pdf={}\n} @আর্টিকেল{moshayedi2023secure,\n  শিরোনাম={একটি সুরক্ষিত ট্রাফিক পুলিশ রিমোট সেন্সিং পদ্ধতির মাধ্যমে একটি গভীর শিক্ষা-ভিত্তিক নিম্ন-উচ্চতা গাড়ির গতি সনাক্তকারীর মাধ্যমে ইউএভিএসের মাধ্যমে স্মার্ট সাইট: অ্যালগরিদম, বাস্তবায়ন এবং মূল্যায়ন},\n  লেখক={মোশায়েদী, আতা জাহাঙ্গীর এবং রায়, আতানু শুভম এবং তারাভেত, আলিরেজা এবং লিয়াও, লিফা এবং উ, জিয়ানকিং এবং ঘেসারি, মেহেদি},\n  জার্নাল={ভবিষ্যত পরিবহন},\n  ভলিউম={3},\n  সংখ্যা={1},\n  পৃষ্ঠা={189--209},\n  বছর={2023},\n  প্রকাশক={MDPI},\n  pdf={}\n} @আর্টিকেল{moshayedi2024design,\n  title={FOODIEBOT রোবটের ডিজাইন এবং বিকাশ: সিমুলেশন থেকে ডিজাইন পর্যন্ত},\n  লেখক={মোশায়েদী, আতা জাহাঙ্গীর এবং রায়, আতনু শুভম এবং লিয়াও, লাইফা এবং খান, আমির সোহেল এবং কোলাহদুজ, আমিন এবং ইফতেখারি, আলী},\n  জার্নাল={IEEE অ্যাক্সেস},\n  ভলিউম={12},\n  পৃষ্ঠা={36148--36172},\n  বছর={2024},\n  প্রকাশক={IEEE},\n  pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n} @আর্টিকেল{moshayedi2025emtihan,\n  শিরোনাম={ইমতিহান: দূরবর্তী শিক্ষায় অনলাইন পরীক্ষার চ্যালেঞ্জ সুরক্ষিত করার জন্য একটি অভিনব পদ্ধতির নকশা},\n  লেখক={মোশায়েদী, আতা জাহাঙ্গীর এবং রায়, অতনু শুভম এবং অন্যান্য},\n  জার্নাল={শিক্ষা ও তথ্য প্রযুক্তি},\n  বছর={2025},\n  প্রকাশক={স্প্রিংগার},\n  pdf={}\n} @আর্টিকেল{moshayedi2024iot,\n  শিরোনাম={একটি উপন্যাস IoT-সক্ষম পোর্টেবল, সুরক্ষিত স্বয়ংক্রিয় স্ব-বক্তৃতা উপস্থিতি সিস্টেম: নকশা, উন্নয়ন এবং তুলনা},\n  লেখক={মোশায়েদী, আতা জাহাঙ্গীর এবং রায়, অতনু শুভম এবং অন্যান্য},\n  জার্নাল={ইলেক্ট্রনিক সিকিউরিটি অ্যান্ড ডিজিটাল ফরেনসিক্সের আন্তর্জাতিক জার্নাল},\n  বছর={2024},\n  প্রকাশক={অন্তর্বিজ্ঞান},\n  pdf={}\n} @আর্টিকেল{roy2022অটোমেশন,\n  title={অটোমেশন অ্যাটেনডেন্স সিস্টেম অ্যাপ্রোচস: একটি ব্যবহারিক পর্যালোচনা},\n  লেখক={শুভম রায়, আতনু এবং ল্যান, এইচ. এবং ঘিসারি, মেহেদী এবং আব্বাসী, আকিফ আফজাল এবং মোশায়েদী, আতা জাহাঙ্গীর এবং লিয়াও, লিফা এবং হোসেইনি বামাকান, সৈয়দ মোজতবা},\n  জার্নাল={BOHR ইন্টারন্যাশনাল জার্নাল অফ ইন্টারনেট অফ থিংস, কৃত্রিম বুদ্ধিমত্তা এবং মেশিন লার্নিং},\n  বছর={2022},\n  pdf={}\n}",
       "research_statements": [
         {
           "title": "অটোনোমাস গাইডেড ভেহিকেল (AGV)",
@@ -2421,7 +2494,7 @@
         },
         {
           "code": "STA 2101 (Spring 25)",
-          "name": "পরিসংখ্যান এবং সম্ভাব্যতা",
+          "name": "পরিসংখ্যান ও সম্ভাবনা",
           "semester": "বসন্ত 2026",
           "archived": true,
           "description": "পরিসংখ্যান এবং সম্ভাব্যতা কোর্স নমুনা, ডেটা ভিজ্যুয়ালাইজেশন, প্রকরণ, এবং শর্তযুক্ত সম্ভাব্যতা কভার করে।",
@@ -2716,7 +2789,7 @@
         "case_studies": [
           {
             "title": "DigitalOcean → AWS মাইগ্রেশন",
-            "client": "Backend Ace client (NY, USA)",
+            "client": "ব্যাকএন্ড এস ক্লায়েন্ট (NY, USA)",
             "problem": "একটি ক্রমবর্ধমান পণ্য একটি একক DigitalOcean ড্রপলেটকে ছাড়িয়ে গেছে - ম্যানুয়াল স্থাপন, ঝুঁকিপূর্ণ DNS পরিবর্তন, কোন বাস্তব CI/CD নেই।",
             "solution": "AWS EC2-এ পুনরায় প্ল্যাটফর্ম করা হয়েছে, ডকারের সাথে কনটেইনার করা হয়েছে এবং বিল্ড → টেস্ট → ডিপ্লোয় করার জন্য জেনকিন্স পাইপলাইন সেট আপ করা হয়েছে।",
             "result": "প্রায় শূন্য ডাউনটাইম সহ পুনরুত্পাদনযোগ্য স্থাপনা এবং একটি DNS কাটওভার।",
@@ -2742,7 +2815,7 @@
           },
           {
             "title": "সম্পূর্ণ স্ট্যাক মেডিকেল ওয়েবসাইট",
-            "client": "The Bronx Clinic (NY, USA)",
+            "client": "ব্রঙ্কস ক্লিনিক (NY, USA)",
             "problem": "একজন স্বাস্থ্যসেবা ক্লায়েন্টের একটি পেশাদার, রোগী-মুখী সাইট তৈরি এবং একটি শক্ত টাইমলাইনে পাঠানো প্রয়োজন।",
             "solution": "ব্যাকএন্ড Ace দলের অংশ হিসাবে সম্পূর্ণ স্ট্যাক — Laravel ব্যাকএন্ড, Next.js ফ্রন্টএন্ড বিতরণ করা হয়েছে।",
             "result": "লাইভ সাইট প্রকৃত রোগীর মুখোমুখি ট্রাফিক পরিচালনা করে।",
@@ -2829,7 +2902,7 @@
         "cta_primary": "একটি বিনামূল্যে কল বুক করুন →",
         "cta_primary_link": "https://calendly.com/atanusroy",
         "cta_secondary": "আমার কাজ দেখুন",
-        "cta_secondary_link": "#projects",
+        "cta_secondary_link": "#প্রকল্প",
         "hire_me_link": "https://calendly.com/atanusroy",
         "photo_url": "/assets/developer_photo.jpg",
         "status_badge": "এই মুহূর্তে নতুন ক্লায়েন্টদের জন্য খুলুন",
@@ -2916,7 +2989,7 @@
         "text": "আমি বরং নিখুঁত কিছু যা আমার ল্যাপটপ ছেড়ে যায় না তার চেয়ে প্রথম দিনে কিছু *ছোট এবং কাজ* পাঠাতে চাই।",
         "author": "অতনু শুভম রায়",
         "role": "সফটওয়্যার ও ডিভোপস ইঞ্জিনিয়ার",
-        "initials": "AR"
+        "initials": "এআর"
       },
       "cta": {
         "badge": "বর্তমানে উপলব্ধ · ২৪ ঘন্টার মধ্যে উত্তর",
@@ -2925,7 +2998,7 @@
         "btn_primary": "একটি বিনামূল্যে কল বুক করুন →",
         "btn_primary_link": "https://calendly.com/atanusroy",
         "btn_secondary": "সমস্ত প্রকল্প দেখুন",
-        "btn_secondary_link": "#projects",
+        "btn_secondary_link": "#প্রকল্প",
         "reply_text": "কোনো অঙ্গীকার নেই। কোন বিক্রয় পিচ. শুধু একটি কথোপকথন."
       },
       "journey": {

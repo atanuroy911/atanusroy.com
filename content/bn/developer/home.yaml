@@ -19,7 +19,7 @@ hero:
   cta_primary: একটি বিনামূল্যে কল বুক করুন →
   cta_primary_link: https://calendly.com/atanusroy
   cta_secondary: আমার কাজ দেখুন
-  cta_secondary_link: "#projects"
+  cta_secondary_link: "#প্রকল্প"
   hire_me_link: https://calendly.com/atanusroy
   photo_url: /assets/developer_photo.jpg
   status_badge: এই মুহূর্তে নতুন ক্লায়েন্টদের জন্য খুলুন
@@ -81,7 +81,7 @@ quote:
   text: আমি বরং নিখুঁত কিছু যা আমার ল্যাপটপ ছেড়ে যায় না তার চেয়ে প্রথম দিনে কিছু *ছোট এবং কাজ* পাঠাতে চাই।
   author: অতনু শুভম রায়
   role: সফটওয়্যার ও ডিভোপস ইঞ্জিনিয়ার
-  initials: AR
+  initials: এআর
 cta:
   badge: বর্তমানে উপলব্ধ · ২৪ ঘন্টার মধ্যে উত্তর
   title: আসুন একসাথে কিছু গড়ি
@@ -89,5 +89,5 @@ cta:
   btn_primary: একটি বিনামূল্যে কল বুক করুন →
   btn_primary_link: https://calendly.com/atanusroy
   btn_secondary: সমস্ত প্রকল্প দেখুন
-  btn_secondary_link: "#projects"
+  btn_secondary_link: "#প্রকল্প"
   reply_text: কোনো অঙ্গীকার নেই। কোন বিক্রয় পিচ. শুধু একটি কথোপকথন.

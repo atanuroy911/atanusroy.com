@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import '../globals.css'
 import { ThemeProvider } from '@/providers/ThemeProvider'
+import { PageTransitionProvider } from '@/providers/PageTransitionProvider'
 import { getContent, getStaticLocaleParams, type Locale } from '@/lib/content'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
@@ -106,9 +107,11 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
         />
-        <div className={isBn ? 'font-bangla' : undefined}>
-          {children}
-        </div>
+        <PageTransitionProvider>
+          <div className={isBn ? 'font-bangla' : undefined}>
+            {children}
+          </div>
+        </PageTransitionProvider>
       </TooltipProvider>
     </ThemeProvider>
   )

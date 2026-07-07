@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useMode } from '@/providers/ModeProvider'
+import { usePageTransition } from '@/providers/PageTransitionProvider'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import {
@@ -29,6 +30,7 @@ function get(obj: any, path: string) {
 export function Navbar({ content, locale, isDev }: Props) {
   const { mode, setMode } = useMode()
   const { theme, setTheme } = useTheme()
+  const { beginModeTransition } = usePageTransition()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -129,29 +131,27 @@ export function Navbar({ content, locale, isDev }: Props) {
           <div className="flex items-center gap-2">
             {/* Mode Link */}
             {isDev ? (
-              <Link href={`/${locale}`}>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="hidden sm:flex items-center gap-1.5 text-xs rounded-full px-3 py-1.5 transition-all border border-border text-muted-foreground hover:text-primary hover:border-primary/50"
-                  title={nav?.switch_to_academic || 'Academic Profile'}
-                >
-                  <GraduationCap size={13} />
-                  <span className="font-mono-dev">Academic</span>
-                </Button>
-              </Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => beginModeTransition(`/${locale}`, 'academic')}
+                className="hidden sm:flex items-center gap-1.5 text-xs rounded-full px-3 py-1.5 transition-all border border-border text-muted-foreground hover:text-primary hover:border-primary/50"
+                title={nav?.switch_to_academic || 'Academic Profile'}
+              >
+                <GraduationCap size={13} />
+                <span className="font-mono-dev">Academic</span>
+              </Button>
             ) : (
-              <Link href={`/${locale}/developer`}>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="hidden sm:flex items-center gap-1.5 text-xs rounded-full px-3 py-1.5 transition-all border border-border text-muted-foreground hover:text-primary hover:border-primary/50"
-                  title={nav?.switch_to_developer || 'Developer Profile'}
-                >
-                  <Laptop2 size={13} />
-                  <span className="font-mono-dev">Developer</span>
-                </Button>
-              </Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => beginModeTransition(`/${locale}/developer`, 'developer')}
+                className="hidden sm:flex items-center gap-1.5 text-xs rounded-full px-3 py-1.5 transition-all border border-border text-muted-foreground hover:text-primary hover:border-primary/50"
+                title={nav?.switch_to_developer || 'Developer Profile'}
+              >
+                <Laptop2 size={13} />
+                <span className="font-mono-dev">Developer</span>
+              </Button>
             )}
 
             {/* Language toggle */}
@@ -201,27 +201,31 @@ export function Navbar({ content, locale, isDev }: Props) {
                 </Link>
               ))}
               {isDev ? (
-                <Link href={`/${locale}`} onClick={() => setMobileOpen(false)}>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="w-full justify-start gap-2 text-sm text-muted-foreground hover:text-primary"
-                  >
-                    <GraduationCap size={14} />
-                    {nav?.switch_to_academic || 'Academic Profile'}
-                  </Button>
-                </Link>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    setMobileOpen(false)
+                    beginModeTransition(`/${locale}`, 'academic')
+                  }}
+                  className="w-full justify-start gap-2 text-sm text-muted-foreground hover:text-primary"
+                >
+                  <GraduationCap size={14} />
+                  {nav?.switch_to_academic || 'Academic Profile'}
+                </Button>
               ) : (
-                <Link href={`/${locale}/developer`} onClick={() => setMobileOpen(false)}>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="w-full justify-start gap-2 text-sm text-muted-foreground hover:text-primary"
-                  >
-                    <Laptop2 size={14} />
-                    {nav?.switch_to_developer || 'Developer Profile'}
-                  </Button>
-                </Link>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    setMobileOpen(false)
+                    beginModeTransition(`/${locale}/developer`, 'developer')
+                  }}
+                  className="w-full justify-start gap-2 text-sm text-muted-foreground hover:text-primary"
+                >
+                  <Laptop2 size={14} />
+                  {nav?.switch_to_developer || 'Developer Profile'}
+                </Button>
               )}
             </div>
           </motion.div>

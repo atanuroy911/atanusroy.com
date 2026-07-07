@@ -2,14 +2,7 @@
 # Run: npm run translate to regenerate
 
 publications_bibtex: |
-  @article{moshayedi2026agro,
-    title={Smart Agro-ecosystem: A Review of LLM-based Robotic Systems for Sensing and Decision Support in Precision Agriculture},
-    author={Moshayedi, A. J. and Roy, A. S. and others},
-    journal={EAI Endorsed Transactions on AI and Robotics},
-    year={2026},
-    type={journal},
-    pdf={}
-  } @incollection{moshayedi2026lidar,
+  @incollection{moshayedi2026lidar,
     title={Comparative Analysis of LiDAR and Kinect Sensors for XiaoQiang AGV Navigation in Real and Simulated Environments},
     author={Moshayedi, A. J. and Zou, Z. and Roy, A. S. and Kolahdooz, A.},
     booktitle={Proceedings of the 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Vol. I},

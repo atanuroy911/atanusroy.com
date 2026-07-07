@@ -61,35 +61,6 @@ blog_posts:
     link: "https://link.springer.com/chapter/10.1007/978-981-95-8660-8_18"
     pinned: true
 
-  - id: smart-agro-ecosystem-review
-    title: "Review Paper: LLM-based Robotic Systems for Precision Agriculture"
-    date: "2026-06-01"
-    category: publication
-    tags: [llm, agriculture, robotics, review]
-    cover_image: ""
-    summary: >
-      Our review, "Smart Agro-ecosystem," surveys how LLM-based robotic systems
-      support sensing and decision-making in precision agriculture, published in
-      EAI Endorsed Transactions on AI and Robotics.
-    content: |
-      ## Overview
-
-      With Ata Jahangir Moshayedi and collaborators, I co-authored a review
-      examining how large language models are being integrated into robotic
-      systems for **sensing, perception, and decision support** in precision
-      agriculture — from crop monitoring to autonomous field robots.
-
-      ## Why This Matters
-
-      Agricultural robotics has historically relied on narrow, task-specific
-      models. LLM-based reasoning layers open the door to more flexible systems
-      that can interpret sensor data, plan multi-step field operations, and
-      communicate findings in natural language to farmers and agronomists.
-
-      The paper is published in *EAI Endorsed Transactions on AI and Robotics*.
-    link: "https://publications.eai.eu/index.php/airo/article/view/13032"
-    pinned: false
-
   - id: beetle-antennae-agv-2026
     title: "Journal Paper: Beetle Antennae Search for Omnidirectional AGV Navigation"
     date: "2026-01-15"

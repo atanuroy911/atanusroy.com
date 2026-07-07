@@ -106,7 +106,7 @@ export function Navbar({ content, locale, isDev }: Props) {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center justify-center gap-6">
             {links.map(link => (
-              <Link key={link.href} href={link.href} className={linkClass(link.href)}>
+              <Link key={link.href} href={link.href} prefetch={false} className={linkClass(link.href)}>
                 {link.label}
                 {isActive(link.href) && (
                   <motion.div
@@ -189,6 +189,7 @@ export function Navbar({ content, locale, isDev }: Props) {
                 <Link
                   key={link.href}
                   href={link.href}
+                  prefetch={false}
                   onClick={() => setMobileOpen(false)}
                   className={linkClass(link.href) + ' text-base py-2'}
                 >

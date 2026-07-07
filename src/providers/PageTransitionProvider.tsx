@@ -20,6 +20,7 @@ export function usePageTransition() {
 
 const MIN_DISPLAY_MS = 650
 const PRE_NAVIGATE_MS = 260
+const MAX_DISPLAY_MS = 4000
 
 export function PageTransitionProvider({ children }: { children: React.ReactNode }) {
   const [active, setActive] = useState(false)
@@ -28,20 +29,40 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
   const pathname = usePathname()
   const prevPathname = useRef(pathname)
   const router = useRouter()
+  const pendingNavigate = useRef<number | null>(null)
+  const failSafe = useRef<number | null>(null)
 
   const beginModeTransition = useCallback((href: string, mode: TargetMode) => {
+    // Ignore re-clicks while a transition is already in flight — avoids
+    // stacking router.push calls and resetting state mid-navigation.
+    if (pendingNavigate.current !== null || failSafe.current !== null) return
+
     setTargetMode(mode)
     setActive(true)
     startedAt.current = Date.now()
-    window.setTimeout(() => {
+    prevPathname.current = pathname
+
+    pendingNavigate.current = window.setTimeout(() => {
+      pendingNavigate.current = null
       router.push(href)
     }, PRE_NAVIGATE_MS)
-  }, [router])
+
+    // Safety net: if the navigation never lands (aborted request, Worker
+    // CPU limit, cancelled fetch) the overlay would otherwise stay up forever.
+    failSafe.current = window.setTimeout(() => {
+      failSafe.current = null
+      setActive(false)
+    }, MAX_DISPLAY_MS)
+  }, [router, pathname])
 
   useEffect(() => {
     if (pathname === prevPathname.current) return
     prevPathname.current = pathname
     if (!active) return
+    if (failSafe.current !== null) {
+      window.clearTimeout(failSafe.current)
+      failSafe.current = null
+    }
     const elapsed = Date.now() - startedAt.current
     const remaining = Math.max(0, MIN_DISPLAY_MS - elapsed)
     const t = window.setTimeout(() => setActive(false), remaining)

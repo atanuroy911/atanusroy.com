@@ -159,7 +159,7 @@ teaching_courses:
           - name: "লেকচার 10: IoT নিরাপত্তা"
             link: /classroom/Spring 26/CSE 4417 - Internet of Things (IoT)/Lecture 10 - Security.pdf
   - code: STA 2101 (Spring 25)
-    name: পরিসংখ্যান এবং সম্ভাব্যতা
+    name: পরিসংখ্যান ও সম্ভাবনা
     semester: বসন্ত 2026
     archived: true
     description: পরিসংখ্যান এবং সম্ভাব্যতা কোর্স নমুনা, ডেটা ভিজ্যুয়ালাইজেশন, প্রকরণ, এবং শর্তযুক্ত সম্ভাব্যতা কভার করে।

@@ -11,6 +11,7 @@
       "projects": "Projects",
       "teaching": "Teaching",
       "journey": "Journey",
+      "gallery": "Gallery",
       "contact": "Contact",
       "publications": "Publications",
       "students": "Students",
@@ -352,7 +353,7 @@
         }
       ],
       "journey": {
-        "title": "Academic Journey",
+        "title": "Gallery",
         "description": "Moments from conferences, research labs, and teaching.",
         "images": [
           {
@@ -1046,6 +1047,20 @@
           "pinned": false
         }
       ],
+      "gallery": {
+        "title": "Gallery",
+        "description": "Screens, demos, and moments from what I've shipped.",
+        "images": [
+          {
+            "src": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
+            "caption": "Late night debugging sessions"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80",
+            "caption": "Deploying to production"
+          }
+        ]
+      },
       "hire_me": {
         "eyebrow": "Why hire me",
         "title": "One engineer. Full stack, DevOps, and ML — no handoffs.",
@@ -1672,6 +1687,7 @@
       "projects": "প্রকল্প",
       "teaching": "শিক্ষাদান",
       "journey": "যাত্রা",
+      "gallery": "গ্যালারি",
       "contact": "যোগাযোগ",
       "publications": "প্রকাশনা",
       "students": "ছাত্ররা",
@@ -2013,7 +2029,7 @@
         }
       ],
       "journey": {
-        "title": "একাডেমিক যাত্রা",
+        "title": "গ্যালারি",
         "description": "সম্মেলন, গবেষণা ল্যাব এবং শিক্ষাদানের মুহূর্ত।",
         "images": [
           {
@@ -2634,6 +2650,20 @@
           "pinned": false
         }
       ],
+      "gallery": {
+        "title": "গ্যালারি",
+        "description": "স্ক্রীন, ডেমো এবং মুহূর্ত যা আমি পাঠিয়েছি।",
+        "images": [
+          {
+            "src": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80",
+            "caption": "গভীর রাতে ডিবাগিং সেশন"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80",
+            "caption": "উৎপাদনে স্থাপন করা হচ্ছে"
+          }
+        ]
+      },
       "hire_me": {
         "eyebrow": "কেন আমাকে ভাড়া",
         "title": "একজন ইঞ্জিনিয়ার। সম্পূর্ণ স্ট্যাক, DevOps, এবং ML — কোনো হ্যান্ডঅফ নেই।",

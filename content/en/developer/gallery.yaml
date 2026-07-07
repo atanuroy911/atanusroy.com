@@ -1,0 +1,10 @@
+gallery:
+  title: Gallery
+  description: Screens, demos, and moments from what I've shipped.
+  images:
+    - src: >-
+        https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80
+      caption: Late night debugging sessions
+    - src: >-
+        https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80
+      caption: Deploying to production

@@ -24,6 +24,7 @@ const staticDevRoutes = [
   '/developer/blog',
   '/developer/contact',
   '/developer/journey',
+  '/developer/gallery',
   '/developer/projects',
 ]
 

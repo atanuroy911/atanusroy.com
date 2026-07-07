@@ -241,6 +241,16 @@ export function getDevJourneySEO(locale: Locale): PageSEOOptions {
   }
 }
 
+export function getDevGallerySEO(locale: Locale): PageSEOOptions {
+  return {
+    title: 'Gallery — Atanu Shuvam Roy',
+    description: 'Screens, demos, and moments from projects shipped by Atanu Shuvam Roy.',
+    path: `/${locale}/developer/gallery`,
+    locale,
+    keywords: ['Gallery', 'Screenshots', 'Demos', 'Software Engineer'],
+  }
+}
+
 export function getDevContactSEO(locale: Locale): PageSEOOptions {
   return {
     title: 'Contact — Atanu Shuvam Roy (Developer)',

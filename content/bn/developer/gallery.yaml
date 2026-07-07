@@ -1,0 +1,11 @@
+# AUTO-GENERATED — do not edit manually
+# Run: npm run translate to regenerate
+
+gallery:
+  title: গ্যালারি
+  description: স্ক্রীন, ডেমো এবং মুহূর্ত যা আমি পাঠিয়েছি।
+  images:
+    - src: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80
+      caption: গভীর রাতে ডিবাগিং সেশন
+    - src: https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80
+      caption: উৎপাদনে স্থাপন করা হচ্ছে

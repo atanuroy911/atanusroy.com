@@ -47,6 +47,7 @@ export function Navbar({ content, locale, isDev }: Props) {
     { href: `/${locale}/developer/projects`, label: nav?.projects || 'Projects' },
     { href: `/${locale}/developer/blog`, label: nav?.blog || 'Blog' },
     { href: `/${locale}/developer/journey`, label: nav?.journey || 'Journey' },
+    { href: `/${locale}/developer/gallery`, label: nav?.gallery || 'Gallery' },
     { href: `/${locale}/developer/contact`, label: nav?.contact || 'Contact' },
   ] : [
     { href: `/${locale}`, label: nav?.home || 'Home' },
@@ -57,7 +58,7 @@ export function Navbar({ content, locale, isDev }: Props) {
     { href: `/${locale}/teaching`, label: nav?.teaching || 'Teaching' },
     { href: `/${locale}/students`, label: nav?.students || 'Students' },
     { href: `/${locale}/blog`, label: nav?.blog || 'News' },
-    { href: `/${locale}/journey`, label: nav?.journey || 'Journey' },
+    { href: `/${locale}/journey`, label: nav?.gallery || 'Gallery' },
     { href: `/${locale}/contact`, label: nav?.contact || 'Contact' },
   ]
 

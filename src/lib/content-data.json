@@ -1462,6 +1462,24 @@
           "mockup_icon": "🥗"
         },
         {
+          "title": "Calorie Bank",
+          "description": "A gamified calorie tracker built on a banking metaphor — your daily calorie budget is income, meals are transactions, and unspent calories become savings you can withdraw later. CalBot, a Gemini-powered assistant, logs meals from plain-language descriptions instead of manual food search.",
+          "tags": [
+            "Flutter",
+            "Kotlin",
+            "Riverpod",
+            "Gemini AI",
+            "SQLite"
+          ],
+          "image": "https://atanuroy911.github.io/calorie-bank-app/assets/screenshots/home_dashboard.png",
+          "showcase_image": "https://atanuroy911.github.io/calorie-bank-app/assets/demo.gif",
+          "link": "https://atanuroy911.github.io/calorie-bank-app/",
+          "github": "https://github.com/atanuroy911/calorie-bank-app",
+          "featured": true,
+          "mockup_url": "atanuroy911.github.io/calorie-bank-app",
+          "mockup_icon": "🏦"
+        },
+        {
           "title": "Cual.co Restaurant Data Platform",
           "description": "Imported 14,536 restaurants for Cual.co — photos, reviews, and metadata pulled from Google Maps — with deduplication and clean formatting in Python, then wired the new data into the product's Laravel backend and Next.js frontend.",
           "tags": [
@@ -1490,7 +1508,7 @@
           "image": "",
           "link": "",
           "github": "",
-          "featured": true,
+          "featured": false,
           "mockup_url": "bronxclinic.com",
           "mockup_icon": "🏥"
         },
@@ -1503,8 +1521,8 @@
             "REST API",
             "React"
           ],
-          "image": "https://picsum.photos/seed/btc/600/400",
-          "link": "https://btc-core-app.vercel.app",
+          "image": "",
+          "link": "",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
           "featured": false
         },
@@ -1517,7 +1535,7 @@
             "Network",
             "Automation"
           ],
-          "image": "https://picsum.photos/seed/fortinet/600/400",
+          "image": "",
           "link": "",
           "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
           "featured": false
@@ -1602,18 +1620,6 @@
           "featured": false
         },
         {
-          "title": "CS724-RoboX",
-          "description": "A repository related to robotics and autonomous systems at IIT Kanpur. Developed algorithms for path planning and control.",
-          "tags": [
-            "Jupyter Notebook",
-            "Robotics",
-            "Python"
-          ],
-          "image": "https://picsum.photos/seed/robox/600/400",
-          "github": "https://github.com/atanuroy911/CS724-RoboX",
-          "featured": false
-        },
-        {
           "title": "Activity Recognition App (LSTM)",
           "description": "Mobile app to live-monitor physical activity using motion sensors and an LSTM model served from the cloud.",
           "tags": [
@@ -1621,42 +1627,52 @@
             "Python",
             "Machine Learning"
           ],
-          "image": "https://picsum.photos/seed/stress/600/400",
+          "image": "",
           "github": "https://github.com/atanuroy911/stress-detection-app",
           "featured": false
         },
         {
-          "title": "ulab-mms",
-          "description": "Modern Management System for ULAB (University of Liberal Arts Bangladesh) to streamline academic operations.",
+          "title": "ULAB Marks Management System",
+          "description": "The internal academic operations platform for the University of Liberal Arts Bangladesh — marks/grades management with authentication, built on Next.js and MongoDB.",
           "tags": [
-            "TypeScript",
             "Next.js",
-            "Full-Stack"
+            "MongoDB",
+            "TypeScript"
           ],
-          "image": "https://picsum.photos/seed/ulab/600/400",
-          "github": "https://github.com/atanuroy911/ulab-mms"
+          "image": "",
+          "link": "https://atanuroy911.github.io/ulab-mms/#/",
+          "github": "https://github.com/atanuroy911/ulab-mms",
+          "featured": false
         },
         {
-          "title": "name2meta",
-          "description": "A Python utility for metadata extraction or management from files and databases.",
+          "title": "ULAB Free Time Finder",
+          "description": "A browser extension for ULAB faculty that finds common free time slots across a group of students — parses student IDs from attendance-sheet PDFs, pulls each student's registered courses from the URMS portal, and highlights shared availability. Everything runs client-side; no schedule data ever leaves the browser.",
           "tags": [
-            "Python",
-            "Utility",
-            "Data Processing"
-          ],
-          "image": "https://picsum.photos/seed/name2meta/600/400",
-          "github": "https://github.com/atanuroy911/name2meta"
-        },
-        {
-          "title": "search-meal-db",
-          "description": "A responsive web application for searching meals using a remote database API.",
-          "tags": [
+            "Browser Extension",
             "JavaScript",
-            "API",
-            "Frontend"
+            "Automation",
+            "Privacy"
           ],
-          "image": "https://picsum.photos/seed/mealdb/600/400",
-          "github": "https://github.com/atanuroy911/search-meal-db"
+          "image": "https://atanuroy911.github.io/ulab-student-freetime-check-urms/assets/SS1.png",
+          "link": "https://atanuroy911.github.io/ulab-student-freetime-check-urms/",
+          "github": "https://github.com/atanuroy911/ulab-student-freetime-check-urms",
+          "featured": false
+        },
+        {
+          "title": "LinkedIn AI Publisher",
+          "description": "An open-source, self-hosted platform that turns notes or articles into multiple LinkedIn post drafts using AI, then schedules and publishes them. Supports OpenAI, Claude, Gemini, Ollama, or OpenRouter as the model provider, with optional email approval before anything goes live and AES-256-GCM encryption for stored data.",
+          "tags": [
+            "Next.js",
+            "MongoDB",
+            "Redis",
+            "BullMQ",
+            "TypeScript",
+            "AI"
+          ],
+          "image": "",
+          "link": "https://atanuroy911.github.io/linkedin-autopost/",
+          "github": "https://github.com/atanuroy911/linkedin-autopost",
+          "featured": false
         }
       ]
     }
@@ -3051,6 +3067,24 @@
           "mockup_icon": "🥗"
         },
         {
+          "title": "ক্যালোরি ব্যাংক",
+          "description": "একটি ব্যাঙ্কিং রূপকের উপর নির্মিত একটি গ্যামিফাইড ক্যালোরি ট্র্যাকার — আপনার দৈনিক ক্যালোরি বাজেট হল আয়, খাবার হল লেনদেন এবং অব্যয়িত ক্যালোরি সঞ্চয় হয়ে ওঠে যা আপনি পরে তুলতে পারবেন৷ ক্যালবট, একটি মিথুন-চালিত সহকারী, ম্যানুয়াল খাদ্য অনুসন্ধানের পরিবর্তে সরল-ভাষার বর্ণনা থেকে খাবার লগ করে।",
+          "tags": [
+            "Flutter",
+            "Kotlin",
+            "Riverpod",
+            "Gemini AI",
+            "SQLite"
+          ],
+          "image": "https://atanuroy911.github.io/calorie-bank-app/assets/screenshots/home_dashboard.png",
+          "showcase_image": "https://atanuroy911.github.io/calorie-bank-app/assets/demo.gif",
+          "link": "https://atanuroy911.github.io/calorie-bank-app/",
+          "github": "https://github.com/atanuroy911/calorie-bank-app",
+          "featured": true,
+          "mockup_url": "atanuroy911.github.io/calorie-bank-app",
+          "mockup_icon": "🏦"
+        },
+        {
           "title": "Cual.co রেস্টুরেন্ট ডেটা প্ল্যাটফর্ম",
           "description": "Cual.co-এর জন্য 14,536টি রেস্তোরাঁ আমদানি করা হয়েছে — ফটো, রিভিউ, এবং মেটাডেটা Google Maps থেকে নেওয়া — Python-এ ডিডুপ্লিকেশন এবং ক্লিন ফরম্যাটিং সহ, তারপর পণ্যের Laravel ব্যাকএন্ড এবং Next.js ফ্রন্টএন্ডে নতুন ডেটা যুক্ত করেছে৷",
           "tags": [
@@ -3079,7 +3113,7 @@
           "image": "",
           "link": "",
           "github": "",
-          "featured": true,
+          "featured": false,
           "mockup_url": "bronxclinic.com",
           "mockup_icon": "🏥"
         },
@@ -3092,8 +3126,8 @@
             "REST API",
             "React"
           ],
-          "image": "https://picsum.photos/seed/btc/600/400",
-          "link": "https://btc-core-app.vercel.app",
+          "image": "",
+          "link": "",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
           "featured": false
         },
@@ -3106,7 +3140,7 @@
             "Network",
             "Automation"
           ],
-          "image": "https://picsum.photos/seed/fortinet/600/400",
+          "image": "",
           "link": "",
           "github": "https://github.com/atanuroy911/iitk-fortinet-gui",
           "featured": false
@@ -3191,18 +3225,6 @@
           "featured": false
         },
         {
-          "title": "CS724-RoboX",
-          "description": "আইআইটি কানপুরে রোবোটিক্স এবং স্বায়ত্তশাসিত সিস্টেম সম্পর্কিত একটি ভান্ডার। পথ পরিকল্পনা এবং নিয়ন্ত্রণের জন্য উন্নত অ্যালগরিদম।",
-          "tags": [
-            "Jupyter Notebook",
-            "Robotics",
-            "Python"
-          ],
-          "image": "https://picsum.photos/seed/robox/600/400",
-          "github": "https://github.com/atanuroy911/CS724-RoboX",
-          "featured": false
-        },
-        {
           "title": "অ্যাক্টিভিটি রিকগনিশন অ্যাপ (LSTM)",
           "description": "ক্লাউড থেকে পরিবেশিত মোশন সেন্সর এবং একটি LSTM মডেল ব্যবহার করে শারীরিক কার্যকলাপ লাইভ-মনিটর করার জন্য মোবাইল অ্যাপ।",
           "tags": [
@@ -3210,42 +3232,52 @@
             "Python",
             "Machine Learning"
           ],
-          "image": "https://picsum.photos/seed/stress/600/400",
+          "image": "",
           "github": "https://github.com/atanuroy911/stress-detection-app",
           "featured": false
         },
         {
-          "title": "ulab-mms",
-          "description": "ইউল্যাব (ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ) এর জন্য আধুনিক ম্যানেজমেন্ট সিস্টেম একাডেমিক ক্রিয়াকলাপগুলিকে প্রবাহিত করতে।",
+          "title": "ইউল্যাব মার্কস ম্যানেজমেন্ট সিস্টেম",
+          "description": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশের জন্য অভ্যন্তরীণ একাডেমিক অপারেশন প্ল্যাটফর্ম — প্রমাণীকরণ সহ মার্কস/গ্রেড ব্যবস্থাপনা, যা Next.js এবং MongoDB-তে নির্মিত।",
           "tags": [
-            "TypeScript",
             "Next.js",
-            "Full-Stack"
+            "MongoDB",
+            "TypeScript"
           ],
-          "image": "https://picsum.photos/seed/ulab/600/400",
-          "github": "https://github.com/atanuroy911/ulab-mms"
+          "image": "",
+          "link": "https://atanuroy911.github.io/ulab-mms/#/",
+          "github": "https://github.com/atanuroy911/ulab-mms",
+          "featured": false
         },
         {
-          "title": "name2meta",
-          "description": "ফাইল এবং ডাটাবেস থেকে মেটাডেটা নিষ্কাশন বা পরিচালনার জন্য একটি পাইথন ইউটিলিটি।",
+          "title": "ইউল্যাব ফ্রি টাইম ফাইন্ডার",
+          "description": "ইউল্যাব ফ্যাকাল্টির জন্য একটি ব্রাউজার এক্সটেনশন যা ছাত্রদের একটি গোষ্ঠী জুড়ে সাধারণ ফ্রি টাইম স্লট খুঁজে পায় — উপস্থিতি-শীট পিডিএফ থেকে ছাত্র আইডি পার্স করে, ইউআরএমএস পোর্টাল থেকে প্রতিটি ছাত্রের নিবন্ধিত কোর্স টেনে নেয় এবং শেয়ার করা প্রাপ্যতা হাইলাইট করে। সবকিছু ক্লায়েন্ট-সাইড রান; কোন সময়সূচী ডেটা কখনও ব্রাউজার ছেড়ে যায় না।",
           "tags": [
-            "Python",
-            "Utility",
-            "Data Processing"
-          ],
-          "image": "https://picsum.photos/seed/name2meta/600/400",
-          "github": "https://github.com/atanuroy911/name2meta"
-        },
-        {
-          "title": "অনুসন্ধান-খাবার-ডিবি",
-          "description": "দূরবর্তী ডাটাবেস API ব্যবহার করে খাবার অনুসন্ধানের জন্য একটি প্রতিক্রিয়াশীল ওয়েব অ্যাপ্লিকেশন।",
-          "tags": [
+            "Browser Extension",
             "JavaScript",
-            "API",
-            "Frontend"
+            "Automation",
+            "Privacy"
           ],
-          "image": "https://picsum.photos/seed/mealdb/600/400",
-          "github": "https://github.com/atanuroy911/search-meal-db"
+          "image": "https://atanuroy911.github.io/ulab-student-freetime-check-urms/assets/SS1.png",
+          "link": "https://atanuroy911.github.io/ulab-student-freetime-check-urms/",
+          "github": "https://github.com/atanuroy911/ulab-student-freetime-check-urms",
+          "featured": false
+        },
+        {
+          "title": "লিঙ্কডইন এআই প্রকাশক",
+          "description": "একটি ওপেন-সোর্স, স্ব-হোস্টেড প্ল্যাটফর্ম যা AI ব্যবহার করে নোট বা নিবন্ধগুলিকে একাধিক LinkedIn পোস্ট ড্রাফ্টে পরিণত করে, তারপর সময়সূচী করে এবং সেগুলি প্রকাশ করে। মডেল প্রদানকারী হিসাবে OpenAI, Claude, Gemini, Ollama, বা OpenRouter-কে সমর্থন করে, কিছু লাইভ হওয়ার আগে ঐচ্ছিক ইমেল অনুমোদন এবং সঞ্চিত ডেটার জন্য AES-256-GCM এনক্রিপশন সহ।",
+          "tags": [
+            "Next.js",
+            "MongoDB",
+            "Redis",
+            "BullMQ",
+            "TypeScript",
+            "AI"
+          ],
+          "image": "",
+          "link": "https://atanuroy911.github.io/linkedin-autopost/",
+          "github": "https://github.com/atanuroy911/linkedin-autopost",
+          "featured": false
         }
       ]
     }

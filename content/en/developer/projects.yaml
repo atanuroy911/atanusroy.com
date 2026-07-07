@@ -10,6 +10,17 @@ projects:
     mockup_url: "saladology.co.uk"
     mockup_icon: "🥗"
 
+  - title: "Calorie Bank"
+    description: "A gamified calorie tracker built on a banking metaphor — your daily calorie budget is income, meals are transactions, and unspent calories become savings you can withdraw later. CalBot, a Gemini-powered assistant, logs meals from plain-language descriptions instead of manual food search."
+    tags: ["Flutter", "Kotlin", "Riverpod", "Gemini AI", "SQLite"]
+    image: "https://atanuroy911.github.io/calorie-bank-app/assets/screenshots/home_dashboard.png"
+    showcase_image: "https://atanuroy911.github.io/calorie-bank-app/assets/demo.gif"
+    link: "https://atanuroy911.github.io/calorie-bank-app/"
+    github: "https://github.com/atanuroy911/calorie-bank-app"
+    featured: true
+    mockup_url: "atanuroy911.github.io/calorie-bank-app"
+    mockup_icon: "🏦"
+
   - title: "Cual.co Restaurant Data Platform"
     description: "Imported 14,536 restaurants for Cual.co — photos, reviews, and metadata pulled from Google Maps — with deduplication and clean formatting in Python, then wired the new data into the product's Laravel backend and Next.js frontend."
     tags: ["Python", "PHP", "Laravel", "Next.js", "Data Engineering"]
@@ -26,22 +37,22 @@ projects:
     image: ""
     link: ""
     github: ""
-    featured: true
+    featured: false
     mockup_url: "bronxclinic.com"
     mockup_icon: "🏥"
 
   - title: "BTC-CORE-WEBAPP"
     description: "A full web interface to interact with a Bitcoin Core node via JSON-RPC — real-time block data, wallet management, and transaction broadcasting in a clean UI."
     tags: ["Java", "Bitcoin RPC", "REST API", "React"]
-    image: "https://picsum.photos/seed/btc/600/400"
-    link: "https://btc-core-app.vercel.app"
+    image: ""
+    link: ""
     github: "https://github.com/atanuroy911/BTC-CORE-WEBAPP"
     featured: false
 
   - title: "IIT Kanpur Firewall Authenticator"
     description: "A PyQt5 GUI wrapper that auto-authenticates against IIT Kanpur's Fortinet captive portal, with keep-alive polling and background execution so embedded devices never silently drop off the network."
     tags: ["Python", "PyQt5", "Network", "Automation"]
-    image: "https://picsum.photos/seed/fortinet/600/400"
+    image: ""
     link: ""
     github: "https://github.com/atanuroy911/iitk-fortinet-gui"
     featured: false
@@ -94,34 +105,33 @@ projects:
     github: ""
     featured: false
 
-  - title: "CS724-RoboX"
-    description: "A repository related to robotics and autonomous systems at IIT Kanpur. Developed algorithms for path planning and control."
-    tags: ["Jupyter Notebook", "Robotics", "Python"]
-    image: "https://picsum.photos/seed/robox/600/400"
-    github: "https://github.com/atanuroy911/CS724-RoboX"
-    featured: false
-
   - title: "Activity Recognition App (LSTM)"
     description: "Mobile app to live-monitor physical activity using motion sensors and an LSTM model served from the cloud."
     tags: ["Flutter", "Python", "Machine Learning"]
-    image: "https://picsum.photos/seed/stress/600/400"
+    image: ""
     github: "https://github.com/atanuroy911/stress-detection-app"
     featured: false
 
-  - title: "ulab-mms"
-    description: "Modern Management System for ULAB (University of Liberal Arts Bangladesh) to streamline academic operations."
-    tags: ["TypeScript", "Next.js", "Full-Stack"]
-    image: "https://picsum.photos/seed/ulab/600/400"
+  - title: "ULAB Marks Management System"
+    description: "The internal academic operations platform for the University of Liberal Arts Bangladesh — marks/grades management with authentication, built on Next.js and MongoDB."
+    tags: ["Next.js", "MongoDB", "TypeScript"]
+    image: ""
+    link: "https://atanuroy911.github.io/ulab-mms/#/"
     github: "https://github.com/atanuroy911/ulab-mms"
+    featured: false
 
-  - title: "name2meta"
-    description: "A Python utility for metadata extraction or management from files and databases."
-    tags: ["Python", "Utility", "Data Processing"]
-    image: "https://picsum.photos/seed/name2meta/600/400"
-    github: "https://github.com/atanuroy911/name2meta"
+  - title: "ULAB Free Time Finder"
+    description: "A browser extension for ULAB faculty that finds common free time slots across a group of students — parses student IDs from attendance-sheet PDFs, pulls each student's registered courses from the URMS portal, and highlights shared availability. Everything runs client-side; no schedule data ever leaves the browser."
+    tags: ["Browser Extension", "JavaScript", "Automation", "Privacy"]
+    image: "https://atanuroy911.github.io/ulab-student-freetime-check-urms/assets/SS1.png"
+    link: "https://atanuroy911.github.io/ulab-student-freetime-check-urms/"
+    github: "https://github.com/atanuroy911/ulab-student-freetime-check-urms"
+    featured: false
 
-  - title: "search-meal-db"
-    description: "A responsive web application for searching meals using a remote database API."
-    tags: ["JavaScript", "API", "Frontend"]
-    image: "https://picsum.photos/seed/mealdb/600/400"
-    github: "https://github.com/atanuroy911/search-meal-db"
+  - title: "LinkedIn AI Publisher"
+    description: "An open-source, self-hosted platform that turns notes or articles into multiple LinkedIn post drafts using AI, then schedules and publishes them. Supports OpenAI, Claude, Gemini, Ollama, or OpenRouter as the model provider, with optional email approval before anything goes live and AES-256-GCM encryption for stored data."
+    tags: ["Next.js", "MongoDB", "Redis", "BullMQ", "TypeScript", "AI"]
+    image: ""
+    link: "https://atanuroy911.github.io/linkedin-autopost/"
+    github: "https://github.com/atanuroy911/linkedin-autopost"
+    featured: false

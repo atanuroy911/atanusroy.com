@@ -5,7 +5,7 @@ import Link from 'next/link';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs,
   SiPython, SiTensorflow, SiPytorch, SiOpenai, SiDocker,
-  SiGraphql, SiFirebase, SiPostgresql, SiMongodb
+  SiGraphql, SiFirebase, SiPostgresql, SiMongodb, SiCloudflare
 } from 'react-icons/si';
 import { DiAws } from 'react-icons/di';
 import { Showcase3D } from './Showcase3D';
@@ -16,6 +16,7 @@ const iconMap: Record<string, any> = {
   'next.js': SiNextdotjs,
   typescript: SiTypescript,
   tailwind: SiTailwindcss,
+  cloudflareworkers: SiCloudflare,
   node: SiNodedotjs,
   python: SiPython,
   tensorflow: SiTensorflow,
@@ -35,7 +36,7 @@ function getTechIcon(tag: string) {
   return Icon ? <Icon style={{ fontSize: '13px' }} /> : null;
 }
 
-export function DevProjects({ content }: { content: any }) {
+export function DevProjects({ content, locale = 'en' }: { content: any; locale?: string }) {
   const allProjects = content.developer.projects || [];
   const featured = allProjects.filter((p: any) => p.featured).slice(0, 3);
   const [activeProject, setActiveProject] = useState<any | null>(null);
@@ -85,6 +86,7 @@ export function DevProjects({ content }: { content: any }) {
             <div className="split-right" onClick={() => setActiveProject(project)} style={{ cursor: 'pointer' }}>
               <Showcase3D
                 image={project.showcase_image || project.image}
+                video={project.video}
                 glyph={project.mockup_icon || '✦'}
                 hint={project.title}
                 badge={index === 0 ? 'Flagship' : undefined}
@@ -95,7 +97,10 @@ export function DevProjects({ content }: { content: any }) {
         </section>
       ))}
 
-      <div className="flex justify-center py-12 px-5 border-b border-[var(--dev-border)]">
+      <div className="flex flex-wrap justify-center gap-3 py-12 px-5 border-b border-[var(--dev-border)]">
+        <Link href={`/${locale}/developer/projects`} className="btn-ghost">
+          See all projects
+        </Link>
         <Link
           href="https://calendly.com/atanusroy"
           target="_blank"

@@ -12,6 +12,7 @@ function TypingEffect({ words }: { words: string[] }) {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   useEffect(() => {
+    let pause: ReturnType<typeof setTimeout> | undefined;
     const handleType = () => {
       const i = loopNum % words.length;
       const fullText = words[i];
@@ -24,7 +25,7 @@ function TypingEffect({ words }: { words: string[] }) {
       setTypingSpeed(isDeleting ? 50 : 150);
 
       if (!isDeleting && text === fullText) {
-        setTimeout(() => setIsDeleting(true), 1800);
+        pause = setTimeout(() => setIsDeleting(true), 1800);
       } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
@@ -32,7 +33,10 @@ function TypingEffect({ words }: { words: string[] }) {
     };
 
     const timer = setTimeout(handleType, typingSpeed);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      if (pause) clearTimeout(pause);
+    };
   }, [text, isDeleting, loopNum, words, typingSpeed]);
 
   return (

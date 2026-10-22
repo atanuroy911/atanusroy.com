@@ -1,18 +1,31 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 
 interface Showcase3DProps {
   image?: string
+  video?: string
   glyph?: string
   hint?: string
   badge?: string
   url?: string
 }
 
-export function Showcase3D({ image, glyph = '✦', hint = 'Live project', badge, url }: Showcase3DProps) {
+export function Showcase3D({ image, video, glyph = '✦', hint = 'Live project', badge, url }: Showcase3DProps) {
   const ref = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) v.play().catch(() => {})
+      else v.pause()
+    }, { threshold: 0.25 })
+    io.observe(v)
+    return () => io.disconnect()
+  }, [video])
   const mouseX = useMotionValue(0.5)
   const mouseY = useMotionValue(0.5)
 
@@ -43,7 +56,9 @@ export function Showcase3D({ image, glyph = '✦', hint = 'Live project', badge,
         style={{ rotateX, rotateY }}
       >
         <div className="showcase-3d-media">
-          {image ? (
+          {video ? (
+            <video ref={videoRef} src={video} poster={image} muted loop playsInline preload="none" aria-label={hint} />
+          ) : image ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={image} alt={hint} loading="lazy" />
           ) : (

@@ -2,7 +2,7 @@ import { getContent, type Locale } from '@/lib/content'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
-import { Newspaper, ArrowRight } from 'lucide-react'
+import { Newspaper, ArrowRight, BookOpen, Download } from 'lucide-react'
 import { HomeProjectsSection } from '@/components/home/HomeProjectsSection'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -27,6 +27,8 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
   const latestProjects = [...allProjects]
     .sort((a, b) => Number(b.year ?? 0) - Number(a.year ?? 0))
     .slice(0, 3)
+
+  const ebooks: { title: string; description?: string; link: string }[] = content?.academic?.free_ebooks || []
 
   return (
     <div className="space-y-14 pb-16">
@@ -102,6 +104,41 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
         {/* Client component handles the modal interaction */}
         <HomeProjectsSection projects={latestProjects} />
       </section>
+
+      {/* ── Free Ebooks ───────────────────────────────────────────── */}
+      {ebooks.length > 0 && (
+        <section id="free-ebooks" className="space-y-4">
+          <div className="flex items-center justify-between border-b border-border pb-2">
+            <h2 className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--ac-navy)' }}>
+              Free Ebooks
+            </h2>
+            <Link
+              href={`/${locale}/teaching`}
+              className="text-xs font-semibold text-primary hover:underline underline-offset-4 flex items-center gap-1"
+            >
+              Teaching <ArrowRight size={12} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {ebooks.map((b) => (
+              <a
+                key={b.link}
+                href={b.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 rounded-xl border border-border p-4 hover:bg-muted/50 transition-colors"
+              >
+                <BookOpen size={20} className="text-amber-600 shrink-0 mt-0.5" />
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold text-sm md:text-base">{b.title}</span>
+                  {b.description && <span className="block text-xs md:text-sm text-muted-foreground mt-0.5">{b.description}</span>}
+                </span>
+                <Download size={16} className="text-muted-foreground shrink-0 mt-1" />
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
     </div>
   )

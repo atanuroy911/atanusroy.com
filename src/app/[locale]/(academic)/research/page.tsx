@@ -1,4 +1,4 @@
-import { getContent, type Locale } from '@/lib/content'
+import { getContent, pickContent, type Locale } from '@/lib/content'
 import { ResearchClient } from '@/components/ResearchClient'
 import type { Metadata } from 'next'
 import { buildMetadata, getAcademicResearchSEO } from '@/lib/seo'
@@ -13,7 +13,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
   const content = getContent(locale as Locale)
   return (
     <div id="research">
-      <ResearchClient content={content} />
+      <ResearchClient content={pickContent(content, ['academic.research_statements'])} />
     </div>
   )
 }

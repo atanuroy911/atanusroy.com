@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export function DevCTA({ content }: { content: any }) {
+export function DevCTA({ content, locale = 'en' }: { content: any; locale?: string }) {
   const { cta } = content.developer;
 
   return (
@@ -25,7 +25,7 @@ export function DevCTA({ content }: { content: any }) {
             >
               Book a free call
             </Link>
-            <Link href="/en/developer/projects" className="btn-ghost">
+            <Link href={`/${locale}/developer/projects`} className="btn-ghost">
               See all projects
             </Link>
           </div>

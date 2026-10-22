@@ -1,4 +1,4 @@
-import { getContent, type Locale } from '@/lib/content'
+import { getContent, pickContent, type Locale } from '@/lib/content'
 import { ContactClient } from '@/components/ContactClient'
 import type { Metadata } from 'next'
 import { buildMetadata, getDevContactSEO } from '@/lib/seo'
@@ -11,5 +11,5 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function DevContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const content = getContent(locale as Locale)
-  return <ContactClient content={content} />
+  return <ContactClient content={pickContent(content, ['academic.referees', 'personal'])} />
 }

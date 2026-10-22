@@ -1,0 +1,44 @@
+certsend:
+  label: "// my_product"
+  name: CertSend
+  tagline: Make and send certificates for free.
+  description: >-
+    Design a certificate, paste a list of names, then download every certificate
+    as a PDF (or one ZIP) or email them from Gmail. Everything runs in your
+    browser: no server, no sign-up, nothing uploaded.
+  banner_title: "New: I launched CertSend"
+  banner_sub: >-
+    A free certificate maker I designed and built end to end. Bulk names in,
+    print-ready PDFs out, all in the browser.
+  link: https://certsend.app
+  product_hunt: https://www.producthunt.com/products/certsend
+  video: /assets/certsend/certsend-demo.mp4
+  poster: /assets/certsend/certsend-poster.jpg
+  icon: /assets/certsend/icon.png
+  features_title: What it does
+  features:
+    - title: Ready-made designs
+      desc: Templates for achievement, participation, completion, awards, kids and more, or upload your own background.
+    - title: Drag-and-drop designer
+      desc: Text, fonts, colours, logos and signatures, with snapping guides, undo/redo and keyboard shortcuts.
+    - title: Bulk names
+      desc: Paste from Excel or Google Sheets, or open a CSV. Duplicates are removed and long names shrink to fit.
+    - title: PDF and ZIP output
+      desc: One PDF per person in a ZIP, or one combined PDF for printing. Fonts are embedded and text stays selectable.
+    - title: Gmail send queue
+      desc: Opens a ready-written Gmail message for each person with their certificate ready to attach.
+    - title: Private by design
+      desc: Work is autosaved in your own browser only. Nothing is uploaded to a server.
+  templates_title: Some of the templates
+  templates:
+    - image: /assets/certsend/gold-frame.jpg
+      name: Gold Frame
+    - image: /assets/certsend/black-gold.jpg
+      name: Black and Gold
+    - image: /assets/certsend/kids-rainbow.jpg
+      name: Rainbow Star
+  stack_title: Built with
+  stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "pdf-lib", "JSZip", "IndexedDB", "Cloudflare Workers"]
+  cta_primary: Try CertSend free
+  cta_secondary: See it on Product Hunt
+  learn_more: Learn more

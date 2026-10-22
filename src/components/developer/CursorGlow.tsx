@@ -20,6 +20,7 @@ export function CursorGlow() {
     function handleMove(e: PointerEvent) {
       pos.current.x = e.clientX
       pos.current.y = e.clientY
+      if (raf.current == null) raf.current = requestAnimationFrame(tick)
     }
 
     function handleOver(e: PointerEvent) {
@@ -40,13 +41,15 @@ export function CursorGlow() {
       if (ringRef.current) {
         ringRef.current.style.transform = `translate3d(${ring.current.x}px, ${ring.current.y}px, 0) translate(-50%, -50%)`
       }
-      raf.current = requestAnimationFrame(tick)
+      // Stop the loop once the ring has caught up; pointermove restarts it.
+      const settled =
+        Math.abs(pos.current.x - ring.current.x) < 0.1 && Math.abs(pos.current.y - ring.current.y) < 0.1
+      raf.current = settled ? null : requestAnimationFrame(tick)
     }
 
     document.documentElement.classList.add('dev-cursor-none')
     window.addEventListener('pointermove', handleMove, { passive: true })
     window.addEventListener('pointerover', handleOver, { passive: true })
-    raf.current = requestAnimationFrame(tick)
 
     return () => {
       document.documentElement.classList.remove('dev-cursor-none')

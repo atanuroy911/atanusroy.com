@@ -108,7 +108,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
         />
         <PageTransitionProvider>
-          <div className={isBn ? 'font-bangla' : undefined}>
+          <div lang={locale} className={isBn ? 'font-bangla' : undefined}>
             {children}
           </div>
         </PageTransitionProvider>

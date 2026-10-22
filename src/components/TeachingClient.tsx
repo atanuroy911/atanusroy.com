@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { BookOpen, Code, Server, Cpu, Activity, Link as LinkIcon, ChevronDown, ChevronUp, FileText, FolderOpen, History } from 'lucide-react'
+import { BookOpen, Code, Server, Cpu, Activity, Link as LinkIcon, ChevronDown, ChevronUp, FileText, FolderOpen, History, Download } from 'lucide-react'
 
 import { usePathname } from 'next/navigation'
 
@@ -31,6 +31,8 @@ type TeachingCourse = {
 export function TeachingClient({ content }: { content: any }) {
   const pathname = usePathname()
   const courses = (content?.academic?.teaching_courses || []) as TeachingCourse[]
+
+  const ebooks = (content?.academic?.free_ebooks || []) as { title: string; description?: string; link: string }[]
 
   const activeCourses = courses.filter((c) => !c.archived)
   const archivedCourses = courses.filter((c) => c.archived)
@@ -78,6 +80,35 @@ export function TeachingClient({ content }: { content: any }) {
               </div>
             </div>
           ))}
+
+          {ebooks.length > 0 && (
+            <div className="pt-6 mt-6 border-t border-slate-200">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2 text-slate-800">
+                <span className="w-2 h-2 rounded-full bg-amber-500" />
+                Free Ebooks
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {ebooks.map((b) => (
+                  <a
+                    key={b.link}
+                    href={b.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ac-paper rounded-xl border border-slate-200 p-4 sm:p-5 flex items-start gap-3 hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center border bg-amber-50 border-amber-100 text-amber-600 shrink-0">
+                      <BookOpen size={20} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-bold text-slate-800 text-sm sm:text-base leading-snug">{b.title}</h4>
+                      {b.description && <p className="text-xs sm:text-sm text-slate-500 mt-1">{b.description}</p>}
+                    </div>
+                    <Download size={16} className="text-slate-400 mt-1 shrink-0" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
 
           {archivedCourses.length > 0 && (
             <div className="pt-6 mt-6 border-t border-slate-200">

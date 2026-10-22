@@ -1,4 +1,4 @@
-import { getContent, type Locale } from '@/lib/content'
+import { getContent, pickContent, type Locale } from '@/lib/content'
 import type { Metadata } from 'next'
 import { buildMetadata, getDevHomeSEO } from '@/lib/seo'
 
@@ -9,6 +9,7 @@ import { DevServices } from '@/components/developer/DevServices'
 import { DevProcess } from '@/components/developer/DevProcess'
 import { DevQuote } from '@/components/developer/DevQuote'
 import { DevCTA } from '@/components/developer/DevCTA'
+import { DevProductBanner } from '@/components/developer/DevProductBanner'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -22,13 +23,14 @@ export default async function DevHomePage({ params }: { params: Promise<{ locale
   return (
     <div className="port">
       <h2 className="sr-only">Atanu Shuvam Roy — Developer Portfolio</h2>
-      <DevHero content={content} locale={locale} />
-      <DevProjects content={content} />
+      <DevHero content={pickContent(content, ['developer.hero'])} locale={locale} />
+      <DevProductBanner product={content.developer.certsend} locale={locale} />
+      <DevProjects content={pickContent(content, ['developer.projects'])} locale={locale} />
       <DevHireMeTeaser locale={locale} />
-      <DevServices content={content} />
-      <DevProcess content={content} />
-      <DevQuote content={content} />
-      <DevCTA content={content} />
+      <DevServices content={pickContent(content, ['developer.services'])} />
+      <DevProcess content={pickContent(content, ['developer.process'])} />
+      <DevQuote content={pickContent(content, ['developer.quote'])} />
+      <DevCTA content={pickContent(content, ['developer.cta'])} locale={locale} />
     </div>
   )
 }

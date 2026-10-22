@@ -1,4 +1,4 @@
-import { getContent, type Locale } from '@/lib/content'
+import { getContent, pickContent, type Locale } from '@/lib/content'
 import { AcademicProjectsClient } from '@/components/AcademicProjectsClient'
 import type { Metadata } from 'next'
 import { buildMetadata, getAcademicProjectsSEO } from '@/lib/seo'
@@ -13,7 +13,7 @@ export default async function AcademicProjectsPage({ params }: { params: Promise
   const content = getContent(locale as Locale)
   return (
     <div id="projects">
-      <AcademicProjectsClient content={content} />
+      <AcademicProjectsClient content={pickContent(content, ['academic.academic_projects'])} />
     </div>
   )
 }

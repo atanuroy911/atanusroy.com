@@ -203,3 +203,10 @@ teaching_courses:
         items:
           - name: ব্যায়াম সমাধান - Lec 8
             link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Exercise Solutions - Lec 8.pdf
+free_ebooks:
+  - title: Write Like a Researcher
+    description: A practical guide to academic and research writing.
+    link: '/assets/free-ebooks/Write Like a Researcher.pdf'
+  - title: Train Like an Engineer
+    description: A practical guide to building engineering skills and habits.
+    link: '/assets/free-ebooks/Train Like an Engineer.pdf'

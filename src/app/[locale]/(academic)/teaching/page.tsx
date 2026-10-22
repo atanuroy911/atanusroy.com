@@ -1,4 +1,4 @@
-import { getContent, type Locale } from '@/lib/content'
+import { getContent, pickContent, type Locale } from '@/lib/content'
 import { TeachingClient } from '@/components/TeachingClient'
 import type { Metadata } from 'next'
 import { buildMetadata, getAcademicTeachingSEO } from '@/lib/seo'
@@ -13,7 +13,7 @@ export default async function TeachingPage({ params }: { params: Promise<{ local
   const content = getContent(locale as Locale)
   return (
     <div id="teaching">
-      <TeachingClient content={content} />
+      <TeachingClient content={pickContent(content, ['academic.teaching_courses', 'academic.free_ebooks'])} />
     </div>
   )
 }

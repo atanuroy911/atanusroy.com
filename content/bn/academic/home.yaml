@@ -23,13 +23,13 @@ research_interests:
 education:
   - degree: M.Tech - কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং
     institution: Indian Institute of Technology, Kanpur
-    logo: https://atanuroy911.github.io/images/iitkredlogo.png
+    logo: /images/logos/iitk.png
     location: Kanpur, India
     period: 2022 - 2024
     grade: "CPI: 7.29/10"
   - degree: বি.ই. - কম্পিউটার বিজ্ঞান ও প্রযুক্তি
     institution: Jiangxi University of Science & Technology
-    logo: https://atanuroy911.github.io/images/jxust.png
+    logo: /images/logos/jxust.png
     location: Jiangxi, China
     period: 2018 - 2022
     grade: 91.01%
@@ -42,7 +42,7 @@ education:
 experience:
   - role: প্রভাষক, CSE বিভাগ
     org: University of Liberal Arts Bangladesh
-    logo: https://atanuroy911.github.io/images/ulab.png
+    logo: /images/logos/ulab.svg
     type: teaching
     period: Sep 2025 - Present
     location: Dhaka, Bangladesh
@@ -51,7 +51,7 @@ experience:
       - কম্পিউটার ভিশন, IoT, এবং রোবোটিক্স জুড়ে ক্যাপস্টোন প্রকল্পগুলিতে শিক্ষার্থীদের গাইড করা
   - role: গবেষণা সহকারী (দূরবর্তী)
     org: Robotics & Automation Research Lab (RARL), JXUST
-    logo: https://atanuroy911.github.io/images/rarl.png
+    logo: /images/logos/jxust.png
     type: research
     period: Aug 2024 - Present
     location: Jiangxi, China
@@ -60,7 +60,7 @@ experience:
       - কৃষি পর্যবেক্ষণের জন্য কম্পিউটার দৃষ্টিতে সহযোগিতা করা
   - role: গবেষণা সহকারী
     org: IoT Vision Lab, IIT Kanpur
-    logo: https://atanuroy911.github.io/images/iitkredlogo.png
+    logo: /images/logos/iitk.png
     type: research
     period: Dec 2022 - Aug 2024
     location: Kanpur, India
@@ -71,7 +71,7 @@ experience:
       - FMCW RADAR এবং LoRaWAN সহ প্রোটোটাইপ করা স্ট্রিটলাইট ম্যানেজমেন্ট সিস্টেম
   - role: গবেষণা সহকারী
     org: Robotics & Automation Research Lab (RARL), JXUST
-    logo: https://atanuroy911.github.io/images/rarl.png
+    logo: /images/logos/jxust.png
     type: research
     period: Aug 2018 - Dec 2021
     location: Jiangxi, China

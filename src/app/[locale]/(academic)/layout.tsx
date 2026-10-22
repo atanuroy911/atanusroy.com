@@ -1,4 +1,4 @@
-import { getContent, type Locale } from '@/lib/content'
+import { getContent, pickContent, type Locale } from '@/lib/content'
 import Image from 'next/image'
 import { ModeProvider } from '@/providers/ModeProvider'
 import { MapPin, Mail, FileText } from 'lucide-react'
@@ -108,7 +108,7 @@ export default async function AcademicLayout({
     <ModeProvider forcedMode="academic">
       <div className="min-h-screen bg-background flex flex-col pt-16 ac-font-serif">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col">
-          <Navbar content={content} locale={locale as Locale} isDev={false} />
+          <Navbar content={pickContent(content, ['nav'])} locale={locale as Locale} isDev={false} />
 
           {/* ── Mobile profile bar ──────────────────────────────── */}
           <div className="md:hidden flex items-center justify-between gap-3 border-b border-border bg-background px-4 py-3">
@@ -214,7 +214,7 @@ export default async function AcademicLayout({
           </div>
         </div>
 
-        <Footer content={content} isDev={false} />
+        <Footer content={pickContent(content, ['personal', 'footer'])} isDev={false} />
       </div>
     </ModeProvider>
   )

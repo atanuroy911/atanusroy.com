@@ -1,4 +1,4 @@
-import { getContent, type Locale } from '@/lib/content'
+import { getContent, pickContent, type Locale } from '@/lib/content'
 import { ArchivedCoursesClient } from '@/components/ArchivedCoursesClient'
 import type { Metadata } from 'next'
 import { buildMetadata, getArchivedCoursesSEO } from '@/lib/seo'
@@ -13,7 +13,7 @@ export default async function ArchivedCoursesPage({ params }: { params: Promise<
   const content = getContent(locale as Locale)
   return (
     <div id="archived-courses">
-      <ArchivedCoursesClient content={content} />
+      <ArchivedCoursesClient content={pickContent(content, ['academic.teaching_courses'])} />
     </div>
   )
 }

@@ -2427,7 +2427,8 @@
   border-radius: var(--r-xl) var(--r-xl) 0 0;
   overflow: hidden;
 }
-.dev-modal-media img {
+.dev-modal-media img,
+.dev-modal-media video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2592,4 +2593,102 @@
   font-size: 13px;
   font-weight: 600;
   font-family: var(--font-mono);
+}
+
+/* Product banner (home page, below the hero) */
+.port .product-banner {
+  margin: clamp(24px, 5vw, 48px) clamp(20px, 6vw, 64px) 0;
+  padding: clamp(20px, 4vw, 28px);
+  border: 1px solid var(--dev-accent-border);
+  border-radius: var(--r-xl);
+  background: var(--dev-accent-light);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.port .product-banner-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+.port .product-banner-text {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+.port .product-banner-title {
+  font-size: clamp(17px, 2.4vw, 21px);
+  font-weight: 700;
+  color: var(--dev-text);
+  margin-bottom: 4px;
+}
+.port .product-banner-sub {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--dev-text-2);
+}
+.port .product-banner-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Product page */
+.port .product-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 48px);
+}
+.port .product-hero {
+  max-width: 760px;
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+.port .product-tagline {
+  font-size: clamp(18px, 2.6vw, 24px);
+  font-weight: 600;
+  color: var(--dev-accent);
+  margin: 8px 0 12px;
+}
+.port .product-hero .hero-btns {
+  margin-top: 24px;
+}
+.port .product-video {
+  border: 1px solid var(--dev-border);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: var(--dev-bg-alt);
+  aspect-ratio: 16 / 9;
+}
+.port .product-video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.port .product-section {
+  margin-top: clamp(48px, 8vw, 88px);
+}
+.port .product-section .sec-title {
+  margin-bottom: 24px;
+}
+.port .product-templates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.port .product-templates figure {
+  margin: 0;
+}
+.port .product-templates img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg, 12px);
+  border: 1px solid var(--dev-border);
+  display: block;
+}
+.port .product-templates figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--dev-text-3);
 }

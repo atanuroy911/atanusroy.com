@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { LOCALES } from '@/lib/content'
+import { LOCALES, getContent } from '@/lib/content'
 import { getAcademicBlogPosts, getDeveloperBlogPosts } from '@/lib/blog'
 
 const SITE_URL = 'https://www.atanusroy.com'
@@ -26,6 +26,7 @@ const staticDevRoutes = [
   '/developer/journey',
   '/developer/gallery',
   '/developer/projects',
+  '/developer/certsend',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -85,6 +86,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       })
     }
+  }
+
+  // Free ebooks (PDFs are language-neutral, so list them once)
+  for (const book of getContent('en').academic.free_ebooks || []) {
+    entries.push({
+      url: `${SITE_URL}${encodeURI(book.link)}`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.6,
+    })
   }
 
   return entries

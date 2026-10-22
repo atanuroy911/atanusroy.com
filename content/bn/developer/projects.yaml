@@ -2,6 +2,19 @@
 # Run: npm run translate to regenerate
 
 projects:
+  - title: "CertSend"
+    description: "My own product: a free certificate maker. Design a certificate, paste a list of names, then download every certificate as a PDF (or one ZIP) or email them from Gmail. Everything runs in the browser, with no sign-up and nothing uploaded. Launched on Product Hunt."
+    tags: ["Next.js", "React", "TypeScript", "Tailwind", "pdf-lib", "Cloudflare Workers"]
+    image: "/assets/certsend/og.png"
+    showcase_image: "/assets/certsend/certsend-poster.jpg"
+    video: "/assets/certsend/certsend-demo.mp4"
+    link: "https://certsend.app"
+    github: ""
+    product_hunt: "https://www.producthunt.com/products/certsend"
+    featured: true
+    mockup_url: "certsend.app"
+    mockup_icon: "🎓"
+
   - title: সালাদোলজি
     description: >-
       স্যালাডলজির জন্য পিচ সাইট ডিজাইন এবং তৈরি করা হয়েছে, একটি পরবর্তী প্রজন্মের স্বাস্থ্যকর ফাস্ট-ফুড ধারণা যা
@@ -13,7 +26,8 @@ projects:
       - Brand Site
       - CMS
     image: ""
-    showcase_image: /assets/saladology.webp
+    showcase_image: /assets/saladology-poster.jpg
+    video: /assets/saladology.mp4
     link: https://www.saladology.co.uk
     github: ""
     featured: true

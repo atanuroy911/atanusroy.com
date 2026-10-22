@@ -262,7 +262,7 @@
         {
           "degree": "M.Tech - Computer Science & Engineering",
           "institution": "Indian Institute of Technology, Kanpur",
-          "logo": "https://atanuroy911.github.io/images/iitkredlogo.png",
+          "logo": "/images/logos/iitk.png",
           "location": "Kanpur, India",
           "period": "2022 - 2024",
           "grade": "CPI: 7.29/10"
@@ -270,7 +270,7 @@
         {
           "degree": "B.E. - Computer Science & Technology",
           "institution": "Jiangxi University of Science & Technology",
-          "logo": "https://atanuroy911.github.io/images/jxust.png",
+          "logo": "/images/logos/jxust.png",
           "location": "Jiangxi, China",
           "period": "2018 - 2022",
           "grade": "91.01%"
@@ -288,7 +288,7 @@
         {
           "role": "Lecturer, Dept. of CSE",
           "org": "University of Liberal Arts Bangladesh",
-          "logo": "https://atanuroy911.github.io/images/ulab.png",
+          "logo": "/images/logos/ulab.svg",
           "type": "teaching",
           "period": "Sep 2025 - Present",
           "location": "Dhaka, Bangladesh",
@@ -300,7 +300,7 @@
         {
           "role": "Research Assistant (Remote)",
           "org": "Robotics & Automation Research Lab (RARL), JXUST",
-          "logo": "https://atanuroy911.github.io/images/rarl.png",
+          "logo": "/images/logos/jxust.png",
           "type": "research",
           "period": "Aug 2024 - Present",
           "location": "Jiangxi, China",
@@ -312,7 +312,7 @@
         {
           "role": "Research Assistant",
           "org": "IoT Vision Lab, IIT Kanpur",
-          "logo": "https://atanuroy911.github.io/images/iitkredlogo.png",
+          "logo": "/images/logos/iitk.png",
           "type": "research",
           "period": "Dec 2022 - Aug 2024",
           "location": "Kanpur, India",
@@ -324,7 +324,7 @@
         {
           "role": "Research Assistant",
           "org": "Robotics & Automation Research Lab (RARL), JXUST",
-          "logo": "https://atanuroy911.github.io/images/rarl.png",
+          "logo": "/images/logos/jxust.png",
           "type": "research",
           "period": "Aug 2018 - Dec 2021",
           "location": "Jiangxi, China",
@@ -888,6 +888,18 @@
             }
           ]
         }
+      ],
+      "free_ebooks": [
+        {
+          "title": "Write Like a Researcher",
+          "description": "A practical guide to academic and research writing.",
+          "link": "/assets/free-ebooks/Write Like a Researcher.pdf"
+        },
+        {
+          "title": "Train Like an Engineer",
+          "description": "A practical guide to building engineering skills and habits.",
+          "link": "/assets/free-ebooks/Train Like an Engineer.pdf"
+        }
       ]
     },
     "developer": {
@@ -1047,6 +1059,75 @@
           "pinned": false
         }
       ],
+      "certsend": {
+        "label": "// my_product",
+        "name": "CertSend",
+        "tagline": "Make and send certificates for free.",
+        "description": "Design a certificate, paste a list of names, then download every certificate as a PDF (or one ZIP) or email them from Gmail. Everything runs in your browser: no server, no sign-up, nothing uploaded.",
+        "banner_title": "New: I launched CertSend",
+        "banner_sub": "A free certificate maker I designed and built end to end. Bulk names in, print-ready PDFs out, all in the browser.",
+        "link": "https://certsend.app",
+        "product_hunt": "https://www.producthunt.com/products/certsend",
+        "video": "/assets/certsend/certsend-demo.mp4",
+        "poster": "/assets/certsend/certsend-poster.jpg",
+        "icon": "/assets/certsend/icon.png",
+        "features_title": "What it does",
+        "features": [
+          {
+            "title": "Ready-made designs",
+            "desc": "Templates for achievement, participation, completion, awards, kids and more, or upload your own background."
+          },
+          {
+            "title": "Drag-and-drop designer",
+            "desc": "Text, fonts, colours, logos and signatures, with snapping guides, undo/redo and keyboard shortcuts."
+          },
+          {
+            "title": "Bulk names",
+            "desc": "Paste from Excel or Google Sheets, or open a CSV. Duplicates are removed and long names shrink to fit."
+          },
+          {
+            "title": "PDF and ZIP output",
+            "desc": "One PDF per person in a ZIP, or one combined PDF for printing. Fonts are embedded and text stays selectable."
+          },
+          {
+            "title": "Gmail send queue",
+            "desc": "Opens a ready-written Gmail message for each person with their certificate ready to attach."
+          },
+          {
+            "title": "Private by design",
+            "desc": "Work is autosaved in your own browser only. Nothing is uploaded to a server."
+          }
+        ],
+        "templates_title": "Some of the templates",
+        "templates": [
+          {
+            "image": "/assets/certsend/gold-frame.jpg",
+            "name": "Gold Frame"
+          },
+          {
+            "image": "/assets/certsend/black-gold.jpg",
+            "name": "Black and Gold"
+          },
+          {
+            "image": "/assets/certsend/kids-rainbow.jpg",
+            "name": "Rainbow Star"
+          }
+        ],
+        "stack_title": "Built with",
+        "stack": [
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS v4",
+          "pdf-lib",
+          "JSZip",
+          "IndexedDB",
+          "Cloudflare Workers"
+        ],
+        "cta_primary": "Try CertSend free",
+        "cta_secondary": "See it on Product Hunt",
+        "learn_more": "Learn more"
+      },
       "gallery": {
         "title": "Gallery",
         "description": "Screens, demos, and moments from what I've shipped.",
@@ -1443,6 +1524,27 @@
       },
       "projects": [
         {
+          "title": "CertSend",
+          "description": "My own product: a free certificate maker. Design a certificate, paste a list of names, then download every certificate as a PDF (or one ZIP) or email them from Gmail. Everything runs in the browser, with no sign-up and nothing uploaded. Launched on Product Hunt.",
+          "tags": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind",
+            "pdf-lib",
+            "Cloudflare Workers"
+          ],
+          "image": "/assets/certsend/og.png",
+          "showcase_image": "/assets/certsend/certsend-poster.jpg",
+          "video": "/assets/certsend/certsend-demo.mp4",
+          "link": "https://certsend.app",
+          "github": "",
+          "product_hunt": "https://www.producthunt.com/products/certsend",
+          "featured": true,
+          "mockup_url": "certsend.app",
+          "mockup_icon": "🎓"
+        },
+        {
           "title": "Saladology",
           "description": "Designed and built the pitch site for Saladology, a next-gen healthy fast-food concept centered on smart-farmed, freshly prepared salads — clean product storytelling paired with a fast, conversion-focused build.",
           "tags": [
@@ -1452,7 +1554,8 @@
             "CMS"
           ],
           "image": "",
-          "showcase_image": "/assets/saladology.webp",
+          "showcase_image": "/assets/saladology-poster.jpg",
+          "video": "/assets/saladology.mp4",
           "link": "https://www.saladology.co.uk",
           "github": "",
           "featured": true,
@@ -1938,7 +2041,7 @@
         {
           "degree": "M.Tech - কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং",
           "institution": "Indian Institute of Technology, Kanpur",
-          "logo": "https://atanuroy911.github.io/images/iitkredlogo.png",
+          "logo": "/images/logos/iitk.png",
           "location": "Kanpur, India",
           "period": "2022 - 2024",
           "grade": "CPI: 7.29/10"
@@ -1946,7 +2049,7 @@
         {
           "degree": "বি.ই. - কম্পিউটার বিজ্ঞান ও প্রযুক্তি",
           "institution": "Jiangxi University of Science & Technology",
-          "logo": "https://atanuroy911.github.io/images/jxust.png",
+          "logo": "/images/logos/jxust.png",
           "location": "Jiangxi, China",
           "period": "2018 - 2022",
           "grade": "91.01%"
@@ -1964,7 +2067,7 @@
         {
           "role": "প্রভাষক, CSE বিভাগ",
           "org": "University of Liberal Arts Bangladesh",
-          "logo": "https://atanuroy911.github.io/images/ulab.png",
+          "logo": "/images/logos/ulab.svg",
           "type": "teaching",
           "period": "Sep 2025 - Present",
           "location": "Dhaka, Bangladesh",
@@ -1976,7 +2079,7 @@
         {
           "role": "গবেষণা সহকারী (দূরবর্তী)",
           "org": "Robotics & Automation Research Lab (RARL), JXUST",
-          "logo": "https://atanuroy911.github.io/images/rarl.png",
+          "logo": "/images/logos/jxust.png",
           "type": "research",
           "period": "Aug 2024 - Present",
           "location": "Jiangxi, China",
@@ -1988,7 +2091,7 @@
         {
           "role": "গবেষণা সহকারী",
           "org": "IoT Vision Lab, IIT Kanpur",
-          "logo": "https://atanuroy911.github.io/images/iitkredlogo.png",
+          "logo": "/images/logos/iitk.png",
           "type": "research",
           "period": "Dec 2022 - Aug 2024",
           "location": "Kanpur, India",
@@ -2000,7 +2103,7 @@
         {
           "role": "গবেষণা সহকারী",
           "org": "Robotics & Automation Research Lab (RARL), JXUST",
-          "logo": "https://atanuroy911.github.io/images/rarl.png",
+          "logo": "/images/logos/jxust.png",
           "type": "research",
           "period": "Aug 2018 - Dec 2021",
           "location": "Jiangxi, China",
@@ -2564,6 +2667,18 @@
             }
           ]
         }
+      ],
+      "free_ebooks": [
+        {
+          "title": "Write Like a Researcher",
+          "description": "A practical guide to academic and research writing.",
+          "link": "/assets/free-ebooks/Write Like a Researcher.pdf"
+        },
+        {
+          "title": "Train Like an Engineer",
+          "description": "A practical guide to building engineering skills and habits.",
+          "link": "/assets/free-ebooks/Train Like an Engineer.pdf"
+        }
       ]
     },
     "developer": {
@@ -2723,6 +2838,75 @@
           "pinned": false
         }
       ],
+      "certsend": {
+        "label": "// my_product",
+        "name": "CertSend",
+        "tagline": "Make and send certificates for free.",
+        "description": "Design a certificate, paste a list of names, then download every certificate as a PDF (or one ZIP) or email them from Gmail. Everything runs in your browser: no server, no sign-up, nothing uploaded.",
+        "banner_title": "New: I launched CertSend",
+        "banner_sub": "A free certificate maker I designed and built end to end. Bulk names in, print-ready PDFs out, all in the browser.",
+        "link": "https://certsend.app",
+        "product_hunt": "https://www.producthunt.com/products/certsend",
+        "video": "/assets/certsend/certsend-demo.mp4",
+        "poster": "/assets/certsend/certsend-poster.jpg",
+        "icon": "/assets/certsend/icon.png",
+        "features_title": "What it does",
+        "features": [
+          {
+            "title": "Ready-made designs",
+            "desc": "Templates for achievement, participation, completion, awards, kids and more, or upload your own background."
+          },
+          {
+            "title": "Drag-and-drop designer",
+            "desc": "Text, fonts, colours, logos and signatures, with snapping guides, undo/redo and keyboard shortcuts."
+          },
+          {
+            "title": "Bulk names",
+            "desc": "Paste from Excel or Google Sheets, or open a CSV. Duplicates are removed and long names shrink to fit."
+          },
+          {
+            "title": "PDF and ZIP output",
+            "desc": "One PDF per person in a ZIP, or one combined PDF for printing. Fonts are embedded and text stays selectable."
+          },
+          {
+            "title": "Gmail send queue",
+            "desc": "Opens a ready-written Gmail message for each person with their certificate ready to attach."
+          },
+          {
+            "title": "Private by design",
+            "desc": "Work is autosaved in your own browser only. Nothing is uploaded to a server."
+          }
+        ],
+        "templates_title": "Some of the templates",
+        "templates": [
+          {
+            "image": "/assets/certsend/gold-frame.jpg",
+            "name": "Gold Frame"
+          },
+          {
+            "image": "/assets/certsend/black-gold.jpg",
+            "name": "Black and Gold"
+          },
+          {
+            "image": "/assets/certsend/kids-rainbow.jpg",
+            "name": "Rainbow Star"
+          }
+        ],
+        "stack_title": "Built with",
+        "stack": [
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS v4",
+          "pdf-lib",
+          "JSZip",
+          "IndexedDB",
+          "Cloudflare Workers"
+        ],
+        "cta_primary": "Try CertSend free",
+        "cta_secondary": "See it on Product Hunt",
+        "learn_more": "Learn more"
+      },
       "gallery": {
         "title": "গ্যালারি",
         "description": "স্ক্রীন, ডেমো এবং মুহূর্ত যা আমি পাঠিয়েছি।",
@@ -3119,6 +3303,27 @@
       },
       "projects": [
         {
+          "title": "CertSend",
+          "description": "My own product: a free certificate maker. Design a certificate, paste a list of names, then download every certificate as a PDF (or one ZIP) or email them from Gmail. Everything runs in the browser, with no sign-up and nothing uploaded. Launched on Product Hunt.",
+          "tags": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind",
+            "pdf-lib",
+            "Cloudflare Workers"
+          ],
+          "image": "/assets/certsend/og.png",
+          "showcase_image": "/assets/certsend/certsend-poster.jpg",
+          "video": "/assets/certsend/certsend-demo.mp4",
+          "link": "https://certsend.app",
+          "github": "",
+          "product_hunt": "https://www.producthunt.com/products/certsend",
+          "featured": true,
+          "mockup_url": "certsend.app",
+          "mockup_icon": "🎓"
+        },
+        {
           "title": "সালাদোলজি",
           "description": "স্যালাডলজির জন্য পিচ সাইট ডিজাইন এবং তৈরি করা হয়েছে, একটি পরবর্তী প্রজন্মের স্বাস্থ্যকর ফাস্ট-ফুড ধারণা যা স্মার্ট-ফার্মড, সদ্য প্রস্তুত সালাদকে কেন্দ্র করে - একটি দ্রুত, রূপান্তর-কেন্দ্রিক বিল্ডের সাথে পরিষ্কার পণ্যের গল্প বলা।",
           "tags": [
@@ -3128,7 +3333,8 @@
             "CMS"
           ],
           "image": "",
-          "showcase_image": "/assets/saladology.webp",
+          "showcase_image": "/assets/saladology-poster.jpg",
+          "video": "/assets/saladology.mp4",
           "link": "https://www.saladology.co.uk",
           "github": "",
           "featured": true,

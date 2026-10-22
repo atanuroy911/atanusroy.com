@@ -8,10 +8,15 @@ import { X, ExternalLink, Code2 } from 'lucide-react'
 export function DevProjectModal({ project, onClose }: { project: any; onClose: () => void }) {
   useEffect(() => {
     document.body.style.overflow = project ? 'hidden' : ''
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    if (project) window.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKey)
     }
-  }, [project])
+  }, [project, onClose])
 
   return (
     <AnimatePresence>
@@ -35,7 +40,9 @@ export function DevProjectModal({ project, onClose }: { project: any; onClose: (
               <X size={16} />
             </button>
             <div className="dev-modal-media">
-              {project.showcase_image || project.image ? (
+              {project.video ? (
+                <video src={project.video} poster={project.showcase_image || project.image} controls autoPlay muted loop playsInline />
+              ) : project.showcase_image || project.image ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={project.showcase_image || project.image} alt={project.title} />
               ) : (
@@ -59,6 +66,11 @@ export function DevProjectModal({ project, onClose }: { project: any; onClose: (
                   {project.link && (
                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn-primary">
                       Live Site <ExternalLink size={15} />
+                    </a>
+                  )}
+                  {project.product_hunt && (
+                    <a href={project.product_hunt} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                      Product Hunt <ExternalLink size={15} />
                     </a>
                   )}
                   {project.github && (

@@ -21,13 +21,13 @@ research_interests:
 education:
   - degree: M.Tech - Computer Science & Engineering
     institution: Indian Institute of Technology, Kanpur
-    logo: https://atanuroy911.github.io/images/iitkredlogo.png
+    logo: /images/logos/iitk.png
     location: Kanpur, India
     period: 2022 - 2024
     grade: 'CPI: 7.29/10'
   - degree: B.E. - Computer Science & Technology
     institution: Jiangxi University of Science & Technology
-    logo: https://atanuroy911.github.io/images/jxust.png
+    logo: /images/logos/jxust.png
     location: Jiangxi, China
     period: 2018 - 2022
     grade: 91.01%
@@ -40,7 +40,7 @@ education:
 experience:
   - role: Lecturer, Dept. of CSE
     org: University of Liberal Arts Bangladesh
-    logo: https://atanuroy911.github.io/images/ulab.png
+    logo: /images/logos/ulab.svg
     type: teaching
     period: Sep 2025 - Present
     location: Dhaka, Bangladesh
@@ -53,7 +53,7 @@ experience:
         robotics
   - role: Research Assistant (Remote)
     org: Robotics & Automation Research Lab (RARL), JXUST
-    logo: https://atanuroy911.github.io/images/rarl.png
+    logo: /images/logos/jxust.png
     type: research
     period: Aug 2024 - Present
     location: Jiangxi, China
@@ -64,7 +64,7 @@ experience:
       - Collaborating on computer vision for agricultural monitoring
   - role: Research Assistant
     org: IoT Vision Lab, IIT Kanpur
-    logo: https://atanuroy911.github.io/images/iitkredlogo.png
+    logo: /images/logos/iitk.png
     type: research
     period: Dec 2022 - Aug 2024
     location: Kanpur, India
@@ -75,7 +75,7 @@ experience:
       - Prototyped streetlight management system with FMCW RADAR and LoRaWAN
   - role: Research Assistant
     org: Robotics & Automation Research Lab (RARL), JXUST
-    logo: https://atanuroy911.github.io/images/rarl.png
+    logo: /images/logos/jxust.png
     type: research
     period: Aug 2018 - Dec 2021
     location: Jiangxi, China

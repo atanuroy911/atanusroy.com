@@ -1,4 +1,4 @@
-import { getContent, type Locale } from '@/lib/content'
+import { getContent, pickContent, type Locale } from '@/lib/content'
 import { ContactClient } from '@/components/ContactClient'
 import type { Metadata } from 'next'
 import { buildMetadata, getAcademicContactSEO } from '@/lib/seo'
@@ -13,7 +13,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const content = getContent(locale as Locale)
   return (
     <div id="contact">
-      <ContactClient content={content} />
+      <ContactClient content={pickContent(content, ['academic.referees', 'personal'])} />
     </div>
   )
 }

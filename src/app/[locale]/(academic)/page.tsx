@@ -96,14 +96,6 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
             All papers on Google Scholar <ArrowRight size={14} aria-hidden="true" />
             <span className="sr-only">(opens in a new tab)</span>
           </a>
-          <a
-            href={content.personal.dblp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold text-primary hover:underline underline-offset-4"
-          >
-            DBLP<span className="sr-only"> (opens in a new tab)</span>
-          </a>
         </div>
         <p className="text-sm text-muted-foreground">Recent papers. Select a card for the abstract, figures and citation.</p>
         <PublicationList pubs={(content.academic.publications || []).slice(0, 3)} locale={locale} />

@@ -138,13 +138,13 @@ export function getAcademicResearchSEO(locale: Locale): PageSEOOptions {
   }
 }
 
-export function getAcademicProjectsSEO(locale: Locale): PageSEOOptions {
+export function getAcademicPublicationsSEO(locale: Locale): PageSEOOptions {
   return {
-    title: 'Projects — Atanu Shuvam Roy',
-    description: 'Research projects by Atanu Shuvam Roy including AGV navigation, stress detection, smart surveillance, and more.',
-    path: `/${locale}/projects`,
+    title: 'Publications — Atanu Shuvam Roy',
+    description: 'Journal papers, conference papers and book chapters by Atanu Shuvam Roy on computer vision, robotics, AGV navigation and IoT, with abstracts, figures and citations.',
+    path: `/${locale}/publications`,
     locale,
-    keywords: ['Research Projects', 'Computer Vision Projects', 'Robotics Projects', 'ML Projects'],
+    keywords: ['Publications', 'Papers', 'Computer Vision', 'Robotics', 'AGV', 'IoT', 'IEEE', 'VISAPP'],
   }
 }
 

@@ -90,7 +90,7 @@ export default async function LocaleLayout({
     { name: nav.home || 'Home', path: '' },
     { name: nav.about || 'About', path: '/about' },
     { name: nav.research || 'Research', path: '/research' },
-    { name: nav.projects || 'Projects', path: '/projects' },
+    { name: nav.publications || 'Publications', path: '/publications' },
     { name: nav.teaching || 'Teaching', path: '/teaching' },
     { name: nav.students || 'Students', path: '/students' },
     { name: nav.journey || 'Journey', path: '/journey' },

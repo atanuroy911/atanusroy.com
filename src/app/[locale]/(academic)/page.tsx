@@ -3,8 +3,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
 import { Newspaper, ArrowRight, BookOpen, Download } from 'lucide-react'
-import { getCombinedBlog } from '@/lib/blog'
-import { SelectedPublications } from '@/components/home/SelectedPublications'
+import { getBlogList } from '@/lib/blog'
+import { PublicationList } from '@/components/Publications'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -15,7 +15,7 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
   const { locale } = await params
   const content = getContent(locale as Locale)
 
-  const latestNews = getCombinedBlog(locale as Locale).posts.slice(0, 5)
+  const latestNews = getBlogList(locale as Locale, 'academic').posts.slice(0, 5)
 
 
   const ebooks: { title: string; description?: string; link: string }[] = content?.academic?.free_ebooks || []
@@ -70,7 +70,7 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
           {latestNews.map((post) => (
             <li key={post.href} className="flex items-start gap-2.5 text-sm md:text-base">
               <Newspaper size={15} className="text-muted-foreground shrink-0 mt-1" aria-hidden="true" />
-              <time dateTime={post.date} className="text-muted-foreground text-xs md:text-sm shrink-0 pt-0.5 font-mono-dev w-16">
+              <time dateTime={post.date} className="text-muted-foreground text-xs md:text-sm shrink-0 pt-0.5 font-mono-dev w-20 whitespace-nowrap">
                 {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
               </time>
               <Link href={post.href} className="leading-snug text-foreground hover:underline underline-offset-4">
@@ -85,7 +85,7 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
       <section id="publications" aria-labelledby="publications-heading" className="space-y-4">
         <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-border pb-2">
           <h2 id="publications-heading" className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--ac-navy)' }}>
-            Publications
+            Recent Publications
           </h2>
           <a
             href={content.personal.google_scholar}
@@ -105,8 +105,14 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
             DBLP<span className="sr-only"> (opens in a new tab)</span>
           </a>
         </div>
-        <p className="text-sm text-muted-foreground">Selected papers. Select a card for the abstract and figures.</p>
-        <SelectedPublications pubs={content.academic.selected_publications || []} locale={locale} />
+        <p className="text-sm text-muted-foreground">Recent papers. Select a card for the abstract, figures and citation.</p>
+        <PublicationList pubs={(content.academic.publications || []).slice(0, 3)} locale={locale} />
+        <Link
+          href={`/${locale}/publications`}
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline underline-offset-4"
+        >
+          All publications <ArrowRight size={14} aria-hidden="true" />
+        </Link>
       </section>
 
       {/* ── Free Ebooks ───────────────────────────────────────────── */}

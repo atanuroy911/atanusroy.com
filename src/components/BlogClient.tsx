@@ -215,7 +215,7 @@ function BlogIndex({
         <h1 className="text-4xl font-bold ac-font-serif" style={{ color: 'var(--ac-navy)' }}>Blog</h1>
         <div className="h-1 w-20 mt-3" style={{ background: 'var(--ac-gold)' }} aria-hidden="true" />
         <p className="mt-4 text-slate-700 dark:text-slate-300 max-w-4xl leading-relaxed">
-          Papers, conference talks, project write-ups and other news from my research, teaching and engineering work.
+          Papers, conference talks and other news from my research and teaching.
         </p>
 
         <div className="mt-8 mb-10 space-y-4">

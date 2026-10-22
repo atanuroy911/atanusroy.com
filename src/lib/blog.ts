@@ -55,21 +55,19 @@ export function formatBlogDate(dateStr: string) {
 
 export type BlogListItem = Omit<BlogPost, 'content'> & { href: string }
 
-// One feed for both sides of the site: academic news and developer posts together.
-// Each post keeps its own URL; the body is left out because lists only show summaries.
-export function getCombinedBlog(locale: Locale): { posts: BlogListItem[]; categories: BlogCategory[] } {
-  const ac = getAcademicBlogPosts(locale)
-  const dev = getDeveloperBlogPosts(locale)
-  const strip = (p: BlogPost, href: string): BlogListItem => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { content, ...rest } = p
-    return { ...rest, href }
+// Posts for one side of the site, for list pages. Academic and developer blogs are
+// kept separate. The body is left out because lists only show summaries.
+export function getBlogList(locale: Locale, mode: 'academic' | 'developer'): { posts: BlogListItem[]; categories: BlogCategory[] } {
+  const { posts, categories } = mode === 'academic' ? getAcademicBlogPosts(locale) : getDeveloperBlogPosts(locale)
+  const base = mode === 'academic' ? `/${locale}/blog` : `/${locale}/developer/blog`
+  return {
+    posts: posts
+      .map((p) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { content, ...rest } = p
+        return { ...rest, href: `${base}/${p.id}` }
+      })
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
+    categories,
   }
-  const posts = [
-    ...ac.posts.map((p) => strip(p, `/${locale}/blog/${p.id}`)),
-    ...dev.posts.map((p) => strip(p, `/${locale}/developer/blog/${p.id}`)),
-  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  const seen = new Set<string>()
-  const categories = [...ac.categories, ...dev.categories].filter((c) => !seen.has(c.id) && !!seen.add(c.id))
-  return { posts, categories }
 }

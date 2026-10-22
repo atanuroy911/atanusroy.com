@@ -6,10 +6,10 @@ import { usePathname } from 'next/navigation'
 export function TableOfContents({ locale }: { locale: string }) {
   const pathname = usePathname()
   const [studentSections, setStudentSections] = useState<{ id: string; label: string }[]>([])
-  const [projectSections, setProjectSections] = useState<{ id: string; label: string }[]>([])
+  const [pubSections, setPubSections] = useState<{ id: string; label: string }[]>([])
 
   useEffect(() => {
-    if (pathname !== `/${locale}/students` && pathname !== `/${locale}/projects`) {
+    if (pathname !== `/${locale}/students` && pathname !== `/${locale}/publications`) {
       return
     }
 
@@ -26,8 +26,8 @@ export function TableOfContents({ locale }: { locale: string }) {
         setStudentSections(sections)
       }
 
-      if (pathname === `/${locale}/projects`) {
-        setProjectSections(sections)
+      if (pathname === `/${locale}/publications`) {
+        setPubSections(sections)
       }
     })
 
@@ -56,8 +56,8 @@ export function TableOfContents({ locale }: { locale: string }) {
     sections = [
       { id: 'research', label: 'Research' },
     ]
-  } else if (pathname === `/${locale}/projects`) {
-    sections = projectSections.length > 0 ? projectSections : [{ id: 'projects', label: 'Projects' }]
+  } else if (pathname === `/${locale}/publications`) {
+    sections = pubSections.length > 0 ? pubSections : [{ id: 'main', label: 'Publications' }]
   } else if (pathname === `/${locale}/teaching`) {
     sections = [
       { id: 'teaching', label: 'Teaching & Mentorship' },

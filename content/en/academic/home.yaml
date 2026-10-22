@@ -3,19 +3,19 @@ hero:
   role: Lecturer & Researcher
   institution: University of Liberal Arts Bangladesh
   department: Department of Computer Science & Engineering
-  tagline: Exploring the frontiers of Computer Vision, Robotics & Embedded Systems
+  tagline: Vision-language models, vision-language-action models, robotic simulation and computer vision
   cta_primary: View Publications
   cta_secondary: Contact Me
 bio: >-
-  Robots and connected devices increasingly work out in the real world, but the
-  models that drive them are often too heavy for the hardware they run on, or too
-  brittle when the scene changes. I'm interested in making perception and
-  navigation work reliably on small, low-cost devices. My work spans lightweight
-  deep learning for on-site inspection, such as finding water-pipe defects on a
-  Raspberry Pi, and navigation for automated guided vehicles in unknown and
-  crowded spaces, using SLAM, bio-inspired optimisation and timed automata. The
-  goal is systems that are cheap enough to deploy widely and dependable enough to
-  trust.
+  Robots are starting to see, understand instructions in plain language and act
+  on them. I am interested in what it takes to make that work reliably. My current
+  research focuses on vision-language models (VLMs) and vision-language-action
+  models (VLAs), robotic simulation and computer vision: how robots can ground
+  language in what they see, and how simulation can be used to train and test
+  them before they meet the real world. This builds on my earlier work on
+  lightweight deep learning for on-site inspection, such as finding water-pipe
+  defects on a Raspberry Pi, and on navigation for automated guided vehicles in
+  unknown and crowded spaces.
 
   I am a Lecturer in Computer Science & Engineering at the University of Liberal
   Arts Bangladesh (ULAB), where I teach and supervise capstone projects in
@@ -28,13 +28,12 @@ bio: >-
   Jiangxi University of Science & Technology in China, advised by Dr. Ata
   Jahangir Moshayedi, where I first joined RARL in 2018.
 
-  Outside research, I enjoy playing guitar, singing and travelling.
+  Outside research, I enjoy playing guitar 🎸, singing 🎵 and travelling ✈️.
 research_interests:
-  - Computer Vision & Object Detection
-  - Autonomous Guided Vehicles (AGV)
-  - IoT & Embedded Systems
-  - Deep Learning on Edge Devices
-  - Smart City Infrastructure
+  - Vision-Language Models (VLMs)
+  - Vision-Language-Action Models (VLAs)
+  - Robotic Simulation
+  - Computer Vision
 education:
   - degree: M.Tech - Computer Science & Engineering
     institution: Indian Institute of Technology, Kanpur

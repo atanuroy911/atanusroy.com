@@ -108,11 +108,18 @@ blog_posts:
     content: |
       ## The Talk
 
-      This work, co-authored with Ata Jahangir Moshayedi, Zeashan Hameed Khan,
-      Sen Yang, Abolfazl Razi, and Mohammad E. Andani, compares classical and
-      metaheuristic path planners for AGVs under real-time computational
-      constraints — asking how much optimality you can trade for speed, and when
-      that trade is worth it.
+      With Ata Jahangir Moshayedi, Zeashan Hameed Khan, Shuxin Yang, Abolfazl Razi
+      and Mehran Emadi Andani, I compared **eleven classical path planners**,
+      including Dijkstra, DFS, Floyd–Warshall and Prim's MST, on an electric AGV
+      visiting six charging stations in a simulated city. We also introduced an
+      **Energy Consumption Score** that weighs route efficiency against
+      computing cost.
+
+      ## Results
+
+      - **Floyd–Warshall** gave the lowest cost and the best energy score
+      - **TSP** and **Prim's MST** covered the most stations
+      - Edge-based planners were reliable on fixed routes but used more energy
 
       Presented at the **5th International Conference on Robotics, Automation,
       and Intelligent Control (ICRAIC 2025)**, IEEE.

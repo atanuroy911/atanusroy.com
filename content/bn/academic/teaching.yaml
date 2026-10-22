@@ -16,7 +16,7 @@ teaching_courses:
     name: অ্যালগরিদম
     semester: 2025 সালের পতন
     archived: true
-    description: মৌলিক অ্যালগরিদম, বাছাই, লোভী পদ্ধতি এবং সমস্যা সমাধানের কৌশলগুলিকে কভার করে কোর্স।
+    description: মৌলিক অ্যালগরিদম, বাছাই, লোভী পদ্ধতি এবং সমস্যা সমাধানের কৌশলগুলি কভার করে কোর্স।
     syllabus_link: /classroom/Fall 25/CSE 2201 - Algorithms/CO.pdf
     materials:
       - title: বক্তৃতা
@@ -204,9 +204,9 @@ teaching_courses:
           - name: ব্যায়াম সমাধান - Lec 8
             link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Exercise Solutions - Lec 8.pdf
 free_ebooks:
-  - title: Write Like a Researcher
-    description: A practical guide to academic and research writing.
-    link: '/assets/free-ebooks/Write Like a Researcher.pdf'
-  - title: Train Like an Engineer
-    description: A practical guide to building engineering skills and habits.
-    link: '/assets/free-ebooks/Train Like an Engineer.pdf'
+  - title: একজন গবেষকের মতো লিখুন
+    description: একাডেমিক এবং গবেষণা লেখার জন্য একটি ব্যবহারিক গাইড।
+    link: /assets/free-ebooks/Write Like a Researcher.pdf
+  - title: একজন ইঞ্জিনিয়ারের মতো ট্রেন করুন
+    description: ইঞ্জিনিয়ারিং দক্ষতা এবং অভ্যাস তৈরির জন্য একটি ব্যবহারিক গাইড।
+    link: /assets/free-ebooks/Train Like an Engineer.pdf

@@ -1,418 +1,444 @@
-# All publications. The home page shows the 3 newest; the Publications page shows all.
-# Newest first. Fields:
-#   type: journal | conference | chapter
-#   image: card thumbnail (a real figure from the paper; leave out if none)
-#   figures: shown in the details popup
-#   abstract: leave out if not available; the popup then links to the publisher
-#   post: id of the matching blog post (optional)
+# AUTO-GENERATED — do not edit manually
+# Run: npm run translate to regenerate
+
 publications:
-  - title: Comparative Analysis of LiDAR and Kinect Sensors for XiaoQiang AGV Navigation in Real and Simulated Environments
+  - title: বাস্তব এবং সিমুলেটেড পরিবেশে XiaoQiang AGV নেভিগেশনের জন্য LiDAR এবং Kinect সেন্সরগুলির তুলনামূলক বিশ্লেষণ
     year: 2026
     type: chapter
     venue: ICFEICT 2025 (Springer)
-    venue_full: Proceedings of the 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Lecture Notes in Electrical Engineering, Springer
-    authors: [A. J. Moshayedi, Z. Zou, A. S. Roy, A. Kolahdooz]
+    venue_full: >-
+      ইলেকট্রনিক্স, ইনফরমেশন অ্যান্ড কম্পিউটেশন টেকনোলজিস (ICFEICT 2025) এর ফ্রন্টিয়ার্স অন 5ম ইন্টারন্যাশনাল
+      কনফারেন্সের কার্যক্রম, ইলেকট্রিক্যাল ইঞ্জিনিয়ারিং-এ লেকচার নোটস, স্প্রিংগার
+    authors:
+      - A. J. Moshayedi
+      - Z. Zou
+      - A. S. Roy
+      - A. Kolahdooz
     tldr: >-
-      Over 400 trajectory runs and 100 parking tests, LiDAR tracked paths more
-      accurately in cluttered spaces (1.7 cm, 2.9°), while Kinect was faster in open
-      ones but drifted more (2.4 cm, 4.1°).
+      400 টিরও বেশি ট্র্যাজেক্টরি রান এবং 100টি পার্কিং পরীক্ষা, LiDAR বিশৃঙ্খল জায়গায় (1.7 সেমি, 2.9°) পথগুলিকে আরও
+      নিখুঁতভাবে ট্র্যাক করেছে, যখন Kinect খোলা জায়গায় দ্রুত ছিল কিন্তু বেশি (2.4 সেমি, 4.1°)।
     doi: 10.1007/978-981-95-8660-8_18
     post: agv-lidar-kinect-icfeict
-
-  - title: An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments
+  - title: >-
+      একটি সমন্বিত বিটল অ্যান্টেনা অনুসন্ধান-অজানা পরিবেশে সর্বমুখী AGV মোবাইল রোবটগুলির জন্য সক্ষম নেভিগেশন
+      ফ্রেমওয়ার্ক
     year: 2026
     type: journal
     venue: EAI Trans. AI & Robotics
-    venue_full: EAI Endorsed Transactions on AI and Robotics, Vol. 5
-    authors: [A. J. Moshayedi, A. S. Roy, U. Karan, M. Zhang, D. Bassir]
+    venue_full: AI এবং রোবোটিক্সের উপর EAI অনুমোদনকৃত লেনদেন, ভলিউম। 5
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - U. Karan
+      - M. Zhang
+      - D. Bassir
     image: /images/papers/omni-agv-design.jpg
-    image_alt: The omnidirectional AGV robot platform used in the study
+    image_alt: গবেষণায় ব্যবহৃত সর্বমুখী AGV রোবট প্ল্যাটফর্ম
     tldr: >-
-      A beetle-inspired optimizer tunes a robot's PID controller while it drives.
-      Combined with LiDAR SLAM and A* re-planning, it lets an omnidirectional AGV
-      find its way through unknown spaces better than plain PID control.
+      একটি বিটল-অনুপ্রাণিত অপ্টিমাইজার একটি রোবটের পিআইডি কন্ট্রোলারকে ড্রাইভ করার সময় সুর করে৷ LiDAR SLAM এবং A*
+      পুনঃ-পরিকল্পনার সাথে মিলিত, এটি একটি সর্বমুখী AGV কে প্লেইন PID কন্ট্রোলের চেয়ে ভাল অজানা স্থানগুলির মধ্য দিয়ে
+      তার পথ খুঁজে পেতে দেয়।
     abstract: >-
-      The Beetle Antennae Search (BAS) algorithm is a recent optimization approach
-      inspired by the foraging behaviour of long-horn beetles. Its simple,
-      derivative-free structure suits robots with limited computing power, yet most
-      BAS navigation studies handle path planning and control separately, or use BAS
-      only offline. This research presents an integrated BAS-enabled navigation
-      framework, combined with Simultaneous Localization and Mapping (SLAM), for an
-      omnidirectional mobile robot in CoppeliaSim. A LiDAR-based occupancy grid is
-      updated during motion, a modified A* algorithm creates smoothed collision-free
-      paths, and a BAS-driven adaptive PID controller tunes its gains using
-      trajectory deviation as feedback. A nine-sensor infrared array handles line
-      tracking. Tested with no obstacles and three levels of obstacles, the system
-      performed better with SLAM and BAS together than conventional PID-based
-      navigation.
+      বিটল অ্যান্টেনা সার্চ (বিএএস) অ্যালগরিদম হল একটি সাম্প্রতিক অপ্টিমাইজেশান পদ্ধতি যা দীর্ঘ-শিং বিটলের চরণের আচরণ
+      দ্বারা অনুপ্রাণিত। এর সহজ, ডেরিভেটিভ-মুক্ত কাঠামো সীমিত কম্পিউটিং ক্ষমতা সহ রোবটগুলির জন্য উপযুক্ত, তবুও বেশিরভাগ
+      BAS নেভিগেশন অধ্যয়ন পৃথকভাবে পথ পরিকল্পনা এবং নিয়ন্ত্রণ পরিচালনা করে, অথবা শুধুমাত্র অফলাইনে BAS ব্যবহার করে। এই
+      গবেষণাটি একটি সমন্বিত BAS-সক্ষম ন্যাভিগেশন ফ্রেমওয়ার্ক উপস্থাপন করে, যা যুগপত লোকালাইজেশন এবং ম্যাপিং (SLAM) এর
+      সাথে মিলিত, কপেলিয়াসিমে একটি সর্বমুখী মোবাইল রোবটের জন্য। একটি LiDAR-ভিত্তিক অকুপেন্সি গ্রিড গতির সময় আপডেট করা
+      হয়, একটি পরিবর্তিত A* অ্যালগরিদম মসৃণ সংঘর্ষ-মুক্ত পাথ তৈরি করে, এবং একটি BAS-চালিত অভিযোজিত পিআইডি কন্ট্রোলার
+      প্রতিক্রিয়া হিসাবে ট্র্যাজেক্টরি বিচ্যুতি ব্যবহার করে তার লাভগুলিকে সুর করে। একটি নয়-সেন্সর ইনফ্রারেড অ্যারে
+      লাইন ট্র্যাকিং পরিচালনা করে। কোনো বাধা ছাড়াই এবং তিন স্তরের বাধা ছাড়াই পরীক্ষা করা হয়েছে, সিস্টেমটি প্রচলিত
+      পিআইডি-ভিত্তিক নেভিগেশনের চেয়ে SLAM এবং BAS-এর সাথে একসাথে ভাল পারফর্ম করেছে।
     figures:
       - src: /images/papers/omni-agv-design.jpg
-        alt: Design views of the omnidirectional AGV with a robot arm
-        caption: The omnidirectional AGV platform. Figure from the paper, CC BY.
+        alt: একটি রোবট বাহু দিয়ে সর্বমুখী AGV-এর দৃশ্য ডিজাইন করুন
+        caption: সর্বমুখী AGV প্ল্যাটফর্ম। কাগজ থেকে চিত্র, CC BY.
     doi: 10.4108/airo.11438
     open_access: true
     post: beetle-antennae-agv-2026
-
-  - title: "Path Planning for AGVs: Balancing Computational Efficiency and Optimality"
+  - title: "AGV-এর জন্য পথ পরিকল্পনা: কম্পিউটেশনাল দক্ষতা এবং সর্বোত্তমতার ভারসাম্য"
     year: 2025
     type: conference
     venue: IEEE ICRAIC 2025
-    venue_full: 2025 5th International Conference on Robotics, Automation and Intelligent Control (ICRAIC), IEEE
-    authors: [A. J. Moshayedi, A. S. Roy, Z. H. Khan, S. Yang, A. Razi, M. E. Andani]
+    venue_full: 2025 রোবোটিক্স, অটোমেশন এবং ইন্টেলিজেন্ট কন্ট্রোল (ICRAIC), IEEE এর উপর 5 তম আন্তর্জাতিক সম্মেলন
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - Z. H. Khan
+      - S. Yang
+      - A. Razi
+      - M. E. Andani
     tldr: >-
-      Eleven classical path planners compared on an electric AGV visiting six
-      charging stations. Floyd–Warshall gave the lowest cost and energy score; TSP
-      and Prim's MST covered the most stations.
+      ছয়টি চার্জিং স্টেশন পরিদর্শনকারী একটি বৈদ্যুতিক AGV-এর তুলনায় এগারোটি ধ্রুপদী পথ পরিকল্পনাকারী। Floyd-Warshall
+      সর্বনিম্ন খরচ এবং শক্তি স্কোর দিয়েছেন; TSP এবং Prim's MST সবচেয়ে বেশি স্টেশন কভার করেছে।
     abstract: >-
-      Automated Guided Vehicles (AGVs) streamline material handling and logistics in
-      industrial automation. This paper evaluates eleven classical pathfinding
-      algorithms, including Dijkstra, Depth First Search, Floyd–Warshall, Binary
-      Search and Prim's MST, on an Ackermann-steered electric AGV navigating six
-      charging stations in a simulated urban environment. Algorithms are grouped
-      into By Station and By Edge. Performance is measured by runtime, travel
-      distance, cost, speed and station visits, alongside a new Energy Consumption
-      Score (ECS) that balances operational efficiency with computational overhead.
-      Floyd–Warshall achieved the best overall cost and ECS; TSP and Prim's MST were
-      best for station coverage; edge-based algorithms were reliable on predefined
-      routes but less efficient overall.
+      অটোমেটেড গাইডেড ভেহিক্যালস (AGVs) শিল্প অটোমেশনে উপাদান হ্যান্ডলিং এবং লজিস্টিককে স্ট্রিমলাইন করে। এই পেপারটি
+      অ্যাকারম্যান-স্টিয়ারড বৈদ্যুতিক AGV-তে একটি সিমুলেটেড শহুরে পরিবেশে ছয়টি চার্জিং স্টেশনে নেভিগেট করে ডিজকস্ট্রা,
+      ডেপথ ফার্স্ট সার্চ, ফ্লয়েড-ওয়ারশাল, বাইনারি সার্চ এবং প্রিমস এমএসটি সহ এগারোটি ক্লাসিক্যাল পাথফাইন্ডিং
+      অ্যালগরিদম মূল্যায়ন করে। অ্যালগরিদমগুলি বাই স্টেশন এবং বাই এজ-এ বিভক্ত। কর্মক্ষমতা রানটাইম, ভ্রমণের দূরত্ব, খরচ,
+      গতি এবং স্টেশন পরিদর্শন দ্বারা পরিমাপ করা হয়, পাশাপাশি একটি নতুন শক্তি খরচ স্কোর (ECS) যা কম্পিউটেশনাল ওভারহেডের
+      সাথে অপারেশনাল দক্ষতার ভারসাম্য বজায় রাখে। Floyd–Warshall সর্বোত্তম সামগ্রিক খরচ এবং ECS অর্জন করেছে; স্টেশন
+      কভারেজের জন্য TSP এবং Prim-এর MST সেরা ছিল; প্রান্ত-ভিত্তিক অ্যালগরিদমগুলি পূর্বনির্ধারিত রুটে নির্ভরযোগ্য ছিল
+      কিন্তু সামগ্রিকভাবে কম দক্ষ।
     doi: 10.1109/ICRAIC67376.2025.11375850
     post: icraic-2025-path-planning
-
-  - title: "UrbanPark: Advancing Parking Infrastructure with LoRaWAN-Enabled Smart Parking Modules"
+  - title: "আরবানপার্ক: LoRaWAN-সক্ষম স্মার্ট পার্কিং মডিউল সহ পার্কিং পরিকাঠামোর অগ্রগতি"
     year: 2025
     type: conference
     venue: IEEE ICCIT 2025
-    venue_full: 2025 4th International Conference on Computing and Information Technology (ICCIT), IEEE
-    authors: [A. J. Moshayedi, A. S. Roy, Z. H. Khan, S. Yang]
+    venue_full: 2025 কম্পিউটিং অ্যান্ড ইনফরমেশন টেকনোলজির (ICCIT), IEEE তে চতুর্থ আন্তর্জাতিক সম্মেলন
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - Z. H. Khan
+      - S. Yang
     tldr: >-
-      LoRaWAN sensors report free parking spaces in real time to a driver app and an
-      admin dashboard, with a Raspberry Pi as the server.
+      LoRaWAN সেন্সরগুলি একটি ড্রাইভার অ্যাপ এবং একটি অ্যাডমিন ড্যাশবোর্ডে রিয়েল টাইমে বিনামূল্যে পার্কিং স্পেস রিপোর্ট
+      করে, সার্ভার হিসাবে একটি রাস্পবেরি পাই সহ।
     abstract: >-
-      This paper presents UrbanPark, a LoRaWAN-based autonomous smart parking system
-      for growing urban parking challenges. It combines a mobile app, a web-based
-      admin interface and LoRaWAN-enabled smart parking modules to give drivers and
-      administrators real-time parking availability. Drivers can find and reserve
-      spaces in the app, while administrators manage the system from the web. The
-      modules monitor occupancy on their own and send data over long distances with
-      little energy, using a Raspberry Pi as the server. The result is a scalable,
-      low-cost and sustainable approach to urban parking management.
+      এই কাগজটি আরবানপার্ক উপস্থাপন করে, ক্রমবর্ধমান শহুরে পার্কিং চ্যালেঞ্জের জন্য একটি LoRaWAN-ভিত্তিক স্বায়ত্তশাসিত
+      স্মার্ট পার্কিং ব্যবস্থা। এটি একটি মোবাইল অ্যাপ, একটি ওয়েব-ভিত্তিক অ্যাডমিন ইন্টারফেস এবং LoRaWAN-সক্ষম স্মার্ট
+      পার্কিং মডিউলগুলিকে একত্রিত করে যাতে ড্রাইভার এবং অ্যাডমিনিস্ট্রেটরদের রিয়েল-টাইম পার্কিং উপলব্ধতা দেওয়া যায়।
+      ড্রাইভাররা অ্যাপে স্পেস খুঁজে পেতে এবং রিজার্ভ করতে পারে, যখন অ্যাডমিনিস্ট্রেটররা ওয়েব থেকে সিস্টেম পরিচালনা করে।
+      মডিউলগুলি তাদের নিজস্ব দখল নিরীক্ষণ করে এবং সার্ভার হিসাবে একটি রাস্পবেরি পাই ব্যবহার করে অল্প শক্তির সাথে দীর্ঘ
+      দূরত্বে ডেটা পাঠায়। ফলাফল শহুরে পার্কিং ব্যবস্থাপনার জন্য একটি মাপযোগ্য, কম খরচে এবং টেকসই পদ্ধতি।
     doi: 10.1109/ICCIT63348.2025.10989299
     post: urbanpark-iccit-2025
-
-  - title: "EMTIHAN: Design of a Novel Approach to Secure Online Examination Challenge in Remote Learning"
+  - title: "ইমতিহান: দূরবর্তী শিক্ষায় অনলাইন পরীক্ষার চ্যালেঞ্জ সুরক্ষিত করার জন্য একটি অভিনব পদ্ধতির নকশা"
     year: 2025
     type: journal
     venue: Educ. & Inf. Technologies
-    venue_full: Education and Information Technologies 30(7), 9573–9604, Springer
-    authors: [A. J. Moshayedi, A. S. Roy, Z. H. Khan, H. Lan, H. Lotfi, X. Zhang]
+    venue_full: শিক্ষা ও তথ্য প্রযুক্তি 30(7), 9573–9604, স্প্রিংগার
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - Z. H. Khan
+      - H. Lan
+      - H. Lotfi
+      - X. Zhang
     tldr: >-
-      A secure, portable way to submit handwritten exam answers remotely. Tested in
-      five countries against Chaoxing MOOC and Google Classroom, with 94.5% student
-      satisfaction.
+      দূরবর্তীভাবে হাতে লেখা পরীক্ষার উত্তর জমা দেওয়ার একটি নিরাপদ, বহনযোগ্য উপায়। Chaoxing MOOC এবং Google Classroom
+      এর বিরুদ্ধে পাঁচটি দেশে পরীক্ষা করা হয়েছে, 94.5% শিক্ষার্থী সন্তুষ্টি সহ।
     doi: 10.1007/s10639-024-13170-4
     post: emtihan-2025
-
-  - title: "Dr_OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards"
+  - title: "Dr_OrangeApp: সাইট্রাস বাগানে রিয়েল-টাইম কীটপতঙ্গ সনাক্তকরণে বিপ্লব ঘটাচ্ছে"
     year: 2024
     type: conference
     venue: ACM APAIBDF 2024
-    venue_full: Proceedings of the 4th Asia-Pacific Artificial Intelligence and Big Data Forum, ACM
-    authors: [A. J. Moshayedi, M. J. Jawadi, A. S. Roy, E. Rostami, Z. Wang, L. Yang, Q. Xu]
+    venue_full: ৪র্থ এশিয়া-প্যাসিফিক কৃত্রিম বুদ্ধিমত্তা ও বিগ ডেটা ফোরামের কার্যক্রম, ACM
+    authors:
+      - A. J. Moshayedi
+      - M. J. Jawadi
+      - A. S. Roy
+      - E. Rostami
+      - Z. Wang
+      - L. Yang
+      - Q. Xu
     tldr: >-
-      A phone app that recognises five orange pests from a photo, with precision 1.00
-      and F1 0.856 on 313 images, and found Citrus Leafminer on 10 trees in a real
-      orchard.
+      একটি ফোন অ্যাপ যেটি একটি ফটো থেকে পাঁচটি কমলা কীটপতঙ্গকে চিনতে পারে, 313টি ছবিতে নির্ভুলতা 1.00 এবং F1 0.856 সহ,
+      এবং একটি বাস্তব বাগানে 10টি গাছে সাইট্রাস লিফমাইনার পাওয়া গেছে৷
     abstract: >-
-      Orange pests threaten citrus crops, reducing yield and quality. This paper
-      presents Dr_Orange, an app for real-time monitoring of pest infestations so
-      farmers can act sooner, use less pesticide and improve productivity. Built
-      with a personal image classifier, it adds charts, reports and QR codes to help
-      farmers track pests and treatment. Tested on 313 images of five pests, it
-      reached average accuracy and recall of 0.75, precision of 1.00 and an F1 score
-      of 0.856. In an orange orchard it identified and reported Citrus Leafminer on
-      10 trees. Lighting, photo angle and data quality can affect accuracy, and
-      taking several photos helps.
+      কমলা কীটপতঙ্গ সাইট্রাস ফসলকে হুমকির মুখে ফেলে, ফলন এবং গুণমান হ্রাস করে। এই কাগজটি Dr_Orange উপস্থাপন করে, একটি
+      অ্যাপ যা কীটপতঙ্গের প্রাদুর্ভাবের রিয়েল-টাইম পর্যবেক্ষণের জন্য যাতে কৃষকরা তাড়াতাড়ি কাজ করতে পারে, কম কীটনাশক
+      ব্যবহার করতে পারে এবং উৎপাদনশীলতা উন্নত করতে পারে। একটি ব্যক্তিগত ইমেজ ক্লাসিফায়ার দিয়ে তৈরি, এটি কৃষকদের
+      কীটপতঙ্গ এবং চিকিত্সা ট্র্যাক করতে সাহায্য করার জন্য চার্ট, রিপোর্ট এবং QR কোড যোগ করে। পাঁচটি কীটপতঙ্গের 313টি
+      চিত্রের উপর পরীক্ষা করা হয়েছে, এটি গড় নির্ভুলতা এবং 0.75 এর প্রত্যাহার, 1.00 এর নির্ভুলতা এবং 0.856 এর F1 স্কোরে
+      পৌঁছেছে। একটি কমলা বাগানে এটি 10টি গাছে সাইট্রাস লিফমাইনার সনাক্ত করে রিপোর্ট করেছে। আলো, ছবির কোণ এবং ডেটার
+      গুণমান নির্ভুলতাকে প্রভাবিত করতে পারে এবং বেশ কিছু ছবি তোলা সাহায্য করে।
     doi: 10.1145/3718491.3718618
     open_access: true
     post: dr-orangeapp-2024
-
-  - title: Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata
+  - title: আইআর সেন্সর এবং টাইমড অটোমেটা ব্যবহার করে উন্নত পাথ ট্র্যাকিং এবং ট্রাফিক ব্যবস্থাপনা
     year: 2024
     type: journal
     venue: J. Robotics Research
-    venue_full: Journal of Robotics Research (JRR) 1(1)
-    authors: [A. S. Roy, A. Das]
+    venue_full: জার্নাল অফ রোবোটিক্স রিসার্চ (JRR) 1(1)
+    authors:
+      - A. S. Roy
+      - A. Das
     image: /images/papers/agv-ir-sensor.jpg
-    image_alt: Simulated AGV with its IR sensor and line sensor labelled
+    image_alt: সিমুলেটেড AGV এর IR সেন্সর এবং লাইন সেন্সর লেবেলযুক্ত
     tldr: >-
-      IR sensors plus timed automata coordinate AGVs that share the same
-      intersections. In simulation, peak congestion drops by 20% and traffic never
-      fully blocks.
+      IR সেন্সর প্লাস টাইমড অটোমেটা কোঅর্ডিনেট এজিভি যা একই ছেদ ভাগ করে। সিমুলেশনে, পিক কনজেশন 20% কমে যায় এবং ট্রাফিক
+      কখনই পুরোপুরি বন্ধ হয় না।
     abstract: >-
-      Path tracking for Automated Guided Vehicles (AGVs) is a critical challenge,
-      particularly where multiple AGVs share the same pathways. It matters even more
-      in traffic management, where efficient coordination is essential to prevent
-      congestion and ensure safety. As automation grows, for example with automated
-      delivery robots, robust path tracking becomes more important. This paper
-      reviews existing strategies, then simulates how integrating timed automata and
-      sensors can minimize waiting times, reduce congestion and improve traffic
-      efficiency. Simulation results in CoppeliaSim (V-REP) show AGVs keeping normal
-      to moderate speeds (5 to 7 units) in high-congestion scenarios, reducing
-      maximum congestion by 20% and preventing total blockage.
+      অটোমেটেড গাইডেড ভেহিকেল (AGVs) এর জন্য পাথ ট্র্যাকিং একটি গুরুত্বপূর্ণ চ্যালেঞ্জ, বিশেষ করে যেখানে একাধিক AGV একই
+      পাথওয়ে শেয়ার করে। এটি ট্রাফিক ব্যবস্থাপনায় আরও বেশি গুরুত্বপূর্ণ, যেখানে যানজট রোধ করতে এবং নিরাপত্তা নিশ্চিত
+      করতে দক্ষ সমন্বয় অপরিহার্য। স্বয়ংক্রিয়তা বৃদ্ধির সাথে সাথে, উদাহরণস্বরূপ স্বয়ংক্রিয় ডেলিভারি রোবটের সাথে,
+      শক্তিশালী পথ ট্র্যাকিং আরও গুরুত্বপূর্ণ হয়ে ওঠে। এই কাগজটি বিদ্যমান কৌশলগুলি পর্যালোচনা করে, তারপরে অনুকরণ করে যে
+      কীভাবে টাইমড অটোমেটা এবং সেন্সরগুলিকে একীভূত করা অপেক্ষার সময়গুলিকে কমিয়ে আনতে পারে, যানজট কমাতে পারে এবং
+      ট্র্যাফিক দক্ষতা উন্নত করতে পারে৷ CoppeliaSim (V-REP) এর সিমুলেশন ফলাফলগুলি দেখায় যে AGVগুলি উচ্চ-জড়িত
+      পরিস্থিতিতে স্বাভাবিক থেকে মাঝারি গতিতে (5 থেকে 7 ইউনিট) রাখে, সর্বাধিক যানজট 20% হ্রাস করে এবং মোট অবরোধ প্রতিরোধ
+      করে।
     figures:
       - src: /images/papers/agv-ir-simulation.jpg
-        alt: Several AGVs following a figure-eight track in the CoppeliaSim simulator
-        caption: AGVs sharing a figure-eight track in CoppeliaSim. Figure from the paper.
+        alt: CoppeliaSim সিমুলেটরে একটি চিত্র-আট ট্র্যাক অনুসরণ করে বেশ কয়েকটি AGV
+        caption: AGVs CoppeliaSim-এ একটি চিত্র-আট ট্র্যাক ভাগ করছে৷ কাগজ থেকে চিত্র.
     doi: 10.64820/aepjrr.11.15.23.122024
     open_access: true
     post: agv-ir-timed-automata-2024
-
-  - title: "A Novel IoT-Enabled Portable, Secure Automatic Self-Lecture Attendance System: Design, Development and Comparison"
+  - title: "একটি নতুন আইওটি-সক্ষম পোর্টেবল, সুরক্ষিত স্বয়ংক্রিয় স্ব-বক্তৃতা উপস্থিতি সিস্টেম: নকশা, উন্নয়ন এবং তুলনা"
     year: 2024
     type: journal
     venue: IJESDF
-    venue_full: International Journal of Electronic Security and Digital Forensics 16(6), Inderscience
-    authors: [A. J. Moshayedi, A. S. Roy, H. Ghorbani, H. Lotfi, X. Zhang, L. Liao, M. Gheisari]
+    venue_full: ইন্টারন্যাশনাল জার্নাল অফ ইলেকট্রনিক সিকিউরিটি অ্যান্ড ডিজিটাল ফরেনসিক 16(6), ইন্ডারসায়েন্স
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - H. Ghorbani
+      - H. Lotfi
+      - X. Zhang
+      - L. Liao
+      - M. Gheisari
     tldr: >-
-      Students mark their own attendance with a phone and a QR code on a small IoT
-      device, cheaply and with security and privacy built in. Tested in a live
-      lecture.
+      শিক্ষার্থীরা একটি ছোট IoT ডিভাইসে একটি ফোন এবং একটি QR কোড দিয়ে তাদের নিজেদের উপস্থিতি চিহ্নিত করে, সস্তায় এবং
+      নিরাপত্তা ও গোপনীয়তা সহ। একটি লাইভ লেকচারে পরীক্ষা করা হয়।
     abstract: >-
-      Monitoring student attendance matters, but existing tracking methods are
-      costly, slow or inaccurate, and often overlook security and privacy. This paper
-      presents SLAS, a novel IoT-based self-lecture attendance system that uses
-      smartphones and QR codes. It addresses security and privacy while keeping
-      attendance tracking simple, and it is compact, affordable, scalable and
-      flexible for teachers and students. Tests in a live lecture showed the system
-      is effective and accurate.
+      শিক্ষার্থীদের উপস্থিতির বিষয়গুলি পর্যবেক্ষণ করা, কিন্তু বিদ্যমান ট্র্যাকিং পদ্ধতিগুলি ব্যয়বহুল, ধীর বা ভুল এবং
+      প্রায়শই নিরাপত্তা এবং গোপনীয়তা উপেক্ষা করে। এই কাগজটি SLAS উপস্থাপন করে, একটি অভিনব IoT-ভিত্তিক স্ব-বক্তৃতা
+      উপস্থিতি সিস্টেম যা স্মার্টফোন এবং QR কোড ব্যবহার করে। উপস্থিতি ট্র্যাকিং সহজ রাখার সময় এটি নিরাপত্তা এবং
+      গোপনীয়তাকে সম্বোধন করে এবং এটি শিক্ষক ও শিক্ষার্থীদের জন্য কমপ্যাক্ট, সাশ্রয়ী, মাপযোগ্য এবং নমনীয়। একটি লাইভ
+      বক্তৃতায় পরীক্ষাগুলি দেখিয়েছে যে সিস্টেমটি কার্যকর এবং সঠিক।
     doi: 10.1504/IJESDF.2024.142009
     post: iot-self-lecture-attendance-2024
-
-  - title: "Attentive-YOLO: On-Site Water Pipeline Inspection Using Efficient Channel Attention and Reduced ELAN-Based YOLOv7"
+  - title: "মনোযোগী-ইওলো: দক্ষ চ্যানেলের মনোযোগ ব্যবহার করে অন-সাইট জলের পাইপলাইন পরিদর্শন এবং ELAN-ভিত্তিক YOLOv7 হ্রাস করা"
     year: 2024
     type: conference
     venue: VISAPP 2024
-    venue_full: Proceedings of the 19th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (VISIGRAPP 2024), Vol. 4 VISAPP, 492–499
-    authors: [A. S. Roy, P. Bagade]
+    venue_full: >-
+      কম্পিউটার ভিশন, ইমেজিং এবং কম্পিউটার গ্রাফিক্স থিওরি অ্যান্ড অ্যাপ্লিকেশন (VISIGRAPP 2024), ভলিউম। 4 VISAPP,
+      492-499
+    authors:
+      - A. S. Roy
+      - P. Bagade
     image: /images/papers/attentive-yolo-architecture.jpg
-    image_alt: Architecture diagram of Attentive-YOLO, from input image through ECAM attention and R-ELAN blocks to detection output
+    image_alt: >-
+      Attentive-YOLO এর আর্কিটেকচার ডায়াগ্রাম, ইনপুট ইমেজ থেকে ECAM মনোযোগ এবং R-ELAN ব্লকের মাধ্যমে সনাক্তকরণ আউটপুট
+      পর্যন্ত
     tldr: >-
-      A lighter YOLOv7 with channel attention finds water-pipe defects on a
-      Raspberry Pi: mAP 0.962 versus 0.93 for YOLOv7-tiny, with about 20% fewer
-      parameters.
+      চ্যানেল মনোযোগ সহ একটি হালকা YOLOv7 রাস্পবেরি পাইতে জল-পাইপের ত্রুটি খুঁজে পায়: mAP 0.962 বনাম 0.93
+      YOLOv7-ক্ষুদ্র, প্রায় 20% কম প্যারামিটার সহ।
     abstract: >-
-      Delivering clean water depends on timely inspection and repair of water pipes.
-      Traditional inspection needs expensive manual work and experts on site, and
-      real-time automatic detection is lacking. Current approaches such as YOLOv5
-      with Retinex-based illumination perform acceptably but are too bulky for fast
-      inference on edge devices. This paper proposes Attentive-YOLO, based on YOLOv7
-      with a reduced Efficient Layer Aggregation Network (ELAN) and a lightweight
-      attention module in the head and backbone, improving accuracy while cutting
-      model size. It is designed for edge devices such as the Raspberry Pi, for IoT
-      systems and pipeline inspection robots. Attentive-YOLO achieves an mAP of
-      0.962, compared with 0.93 for YOLOv7-tiny at one-third channel width, with
-      almost 20% fewer parameters.
+      পরিষ্কার জল সরবরাহ করা জলের পাইপগুলির সময়মত পরিদর্শন এবং মেরামতের উপর নির্ভর করে। ঐতিহ্যগত পরিদর্শনের জন্য
+      ব্যয়বহুল ম্যানুয়াল কাজ এবং সাইটে বিশেষজ্ঞদের প্রয়োজন, এবং রিয়েল-টাইম স্বয়ংক্রিয় সনাক্তকরণের অভাব রয়েছে।
+      রেটিনেক্স-ভিত্তিক আলোকসজ্জা সহ YOLOv5-এর মতো বর্তমান পদ্ধতিগুলি গ্রহণযোগ্যভাবে সঞ্চালন করে তবে প্রান্ত
+      ডিভাইসগুলিতে দ্রুত অনুমান করার জন্য এটি খুব ভারী। এই কাগজটি মনোযোগী-YOLO প্রস্তাব করেছে, YOLOv7 এর উপর ভিত্তি করে
+      একটি হ্রাসকৃত দক্ষ লেয়ার অ্যাগ্রিগেশন নেটওয়ার্ক (ELAN) এবং মাথা এবং মেরুদণ্ডে একটি হালকা মনোযোগ মডিউল, মডেলের
+      আকার কাটার সময় সঠিকতা উন্নত করে। এটি আইওটি সিস্টেম এবং পাইপলাইন পরিদর্শন রোবটের জন্য রাস্পবেরি পাই-এর মতো প্রান্ত
+      ডিভাইসগুলির জন্য ডিজাইন করা হয়েছে। Attentive-YOLO 0.962 একটি mAP অর্জন করে, YOLOv7-এর জন্য 0.93-এর তুলনায়
+      এক-তৃতীয়াংশ চ্যানেল প্রস্থে, প্রায় 20% কম প্যারামিটার সহ।
     figures:
       - src: /images/papers/attentive-yolo-architecture.jpg
-        alt: Architecture diagram of Attentive-YOLO, from input image through ECAM attention and R-ELAN blocks to detection output
-        caption: Architecture of Attentive-YOLO. Figure from the paper, CC BY-NC-ND 4.0.
+        alt: >-
+          Attentive-YOLO এর আর্কিটেকচার ডায়াগ্রাম, ইনপুট ইমেজ থেকে ECAM মনোযোগ এবং R-ELAN ব্লকের মাধ্যমে সনাক্তকরণ
+          আউটপুট পর্যন্ত
+        caption: মনোযোগী-YOLO এর আর্কিটেকচার। কাগজ থেকে চিত্র, CC BY-NC-ND 4.0.
       - src: /images/papers/attentive-yolo-hardware.jpg
-        alt: A Raspberry Pi with a camera, and two pipe images with detected defects boxed
-        caption: (A) Edge hardware. (B) Defects detected on site. Figure from the paper, CC BY-NC-ND 4.0.
+        alt: একটি ক্যামেরা সহ একটি রাস্পবেরি পাই, এবং শনাক্ত ত্রুটিযুক্ত দুটি পাইপের ছবি বাক্সযুক্ত৷
+        caption: (ক) এজ হার্ডওয়্যার। (খ) সাইটে ত্রুটি সনাক্ত করা হয়েছে। কাগজ থেকে চিত্র, CC BY-NC-ND 4.0.
     doi: 10.5220/0012374000003660
     open_access: true
     post: visapp-2024-attentive-yolo
-
-  - title: "Design and Development of FOODIEBOT Robot: From Simulation to Design"
+  - title: "FOODIEBOT রোবটের ডিজাইন এবং বিকাশ: সিমুলেশন থেকে ডিজাইন পর্যন্ত"
     year: 2024
     type: journal
     venue: IEEE Access
-    venue_full: IEEE Access 12, 36148–36172
-    authors: [A. J. Moshayedi, A. S. Roy, L. Liao, A. S. Khan, A. Kolahdooz, A. Eftekhari]
+    venue_full: IEEE অ্যাক্সেস 12, 36148–36172
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - L. Liao
+      - A. S. Khan
+      - A. Kolahdooz
+      - A. Eftekhari
     tldr: >-
-      A food-serving robot whose PID controller was tuned in simulation with four
-      optimizers (BAS, PSO, POA, EO). BAS was fastest, and real runs matched the
-      simulation.
+      একটি খাদ্য পরিবেশনকারী রোবট যার পিআইডি কন্ট্রোলারটি চারটি অপ্টিমাইজার (BAS, PSO, POA, EO) সহ সিমুলেশনে টিউন করা
+      হয়েছে৷ BAS দ্রুততম ছিল, এবং আসল রান সিমুলেশনের সাথে মিলেছিল।
     abstract: >-
-      This work covers the design and development of FOODIEBOT, an adaptive service
-      robot that uses image processing, a mobile app and a web interface to handle
-      objects in dining halls. Calibrating its PID controller was essential, so the
-      model was simulated in MATLAB and tested on circular, elliptical, spiral and
-      octagonal paths using four optimization methods: BAS, PSO, POA and EO. BAS was
-      the most efficient, with the shortest execution times on every path and the
-      best accuracy on one path; EO and POA were most accurate on others, and PSO
-      reached the highest speeds on three paths. Simulated and real-world
-      performance matched closely, confirming that simulation can reliably derive the
-      robot's PID values.
+      এই কাজটি FOODIEBOT এর ডিজাইন এবং বিকাশকে কভার করে, একটি অভিযোজিত পরিষেবা রোবট যা ইমেজ প্রসেসিং, একটি মোবাইল অ্যাপ
+      এবং ডাইনিং হলের বস্তুগুলি পরিচালনা করার জন্য একটি ওয়েব ইন্টারফেস ব্যবহার করে৷ এর পিআইডি কন্ট্রোলার ক্যালিব্রেট
+      করা অপরিহার্য ছিল, তাই মডেলটি MATLAB-তে সিমুলেট করা হয়েছিল এবং চারটি অপ্টিমাইজেশান পদ্ধতি ব্যবহার করে বৃত্তাকার,
+      উপবৃত্তাকার, সর্পিল এবং অষ্টভুজাকার পথে পরীক্ষা করা হয়েছিল: BAS, PSO, POA এবং EO। বিএএস ছিল সবচেয়ে দক্ষ, প্রতিটি
+      পথে সবচেয়ে কম কার্যকর করার সময় এবং একটি পথে সর্বোত্তম নির্ভুলতা; EO এবং POA অন্যদের জন্য সবচেয়ে সঠিক ছিল, এবং
+      PSO তিনটি পথে সর্বোচ্চ গতিতে পৌঁছেছে। সিমুলেটেড এবং বাস্তব-বিশ্বের কর্মক্ষমতা ঘনিষ্ঠভাবে মিলেছে, নিশ্চিত করে যে
+      সিমুলেশন নির্ভরযোগ্যভাবে রোবটের পিআইডি মানগুলি অর্জন করতে পারে।
     doi: 10.1109/ACCESS.2024.3355278
     open_access: true
     post: foodiebot-ieee-access-2024
-
-  - title: A Secure Traffic Police Remote Sensing Approach via a Deep Learning-Based Low-Altitude Vehicle Speed Detector through UAVs in Smart Cities
+  - title: >-
+      একটি সুরক্ষিত ট্রাফিক পুলিশ রিমোট সেন্সিং পদ্ধতির মাধ্যমে একটি গভীর শিক্ষা-ভিত্তিক লো-অল্টিটিউড ভেহিকল স্পিড
+      ডিটেক্টর স্মার্ট সিটিগুলিতে UAV-এর মাধ্যমে
     year: 2023
     type: journal
     venue: Future Transportation
-    venue_full: Future Transportation 3(1), 189–209, MDPI
-    authors: [A. J. Moshayedi, A. S. Roy, A. Taravet, L. Liao, J. Wu, M. Gheisari]
+    venue_full: ভবিষ্যত পরিবহন 3(1), 189-209, MDPI
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - A. Taravet
+      - L. Liao
+      - J. Wu
+      - M. Gheisari
     image: /images/papers/uav-speed-fov.jpg
-    image_alt: Diagram of a drone watching a car pass four timestamp points on a road
+    image_alt: একটি ড্রোন একটি গাড়িকে রাস্তার চারটি টাইমস্ট্যাম্প পয়েন্ট অতিক্রম করতে দেখছে
     tldr: >-
-      A drone with a Raspberry Pi and MobileNet-SSD measures vehicle speeds in real
-      time at a real intersection, flying 0.7 to 3 m high, with no officer on site.
+      একটি রাস্পবেরি পাই এবং মোবাইলনেট-এসএসডি সহ একটি ড্রোন একটি সত্যিকারের সংযোগস্থলে গাড়ির গতি পরিমাপ করে, 0.7 থেকে 3
+      মিটার উঁচুতে উড়ে যায়, সাইটে কোনও অফিসার নেই৷
     abstract: >-
-      Unmanned aerial vehicles (UAVs) are widely used in transportation, for example
-      for real-time vehicle speed detection in IoT-based smart cities. Most existing
-      speed estimation methods lack real-time detection across different scenarios.
-      This paper introduces a low-altitude vehicle speed detector using UAVs. We
-      found the best Raspberry Pi camera field of view indoors and outdoors by
-      changing its height and angle, embedded a MobileNet-SSD deep learning model on
-      a Raspberry Pi 4B with an Intel Neural Compute Stick 2, and tested it at a
-      JXUST university intersection with the UAV between 0.7 and 3 m. The result is
-      an intelligent speed-control system that works without police present.
+      মানবহীন এরিয়াল ভেহিকেল (UAVs) পরিবহনে ব্যাপকভাবে ব্যবহৃত হয়, উদাহরণস্বরূপ IoT-ভিত্তিক স্মার্ট শহরগুলিতে
+      রিয়েল-টাইম গাড়ির গতি সনাক্তকরণের জন্য। বেশিরভাগ বিদ্যমান গতি অনুমান পদ্ধতিতে বিভিন্ন পরিস্থিতিতে রিয়েল-টাইম
+      সনাক্তকরণের অভাব রয়েছে। এই কাগজ UAVs ব্যবহার করে একটি কম উচ্চতা যানবাহন গতি আবিষ্কারক প্রবর্তন করে। আমরা এর
+      উচ্চতা এবং কোণ পরিবর্তন করে ঘরের ভিতরে এবং বাইরে সর্বোত্তম রাস্পবেরি পাই ক্যামেরার ক্ষেত্র খুঁজে পেয়েছি, একটি
+      Intel নিউরাল কম্পিউট স্টিক 2 এর সাথে একটি Raspberry Pi 4B-এ একটি MobileNet-SSD গভীর শিক্ষার মডেল এমবেড করেছি এবং
+      0.7 এবং 3 মিটারের মধ্যে UAV এর সাথে JXUST বিশ্ববিদ্যালয়ের মোড়ে এটি পরীক্ষা করেছি। ফলাফল হল একটি বুদ্ধিমান
+      গতি-নিয়ন্ত্রণ ব্যবস্থা যা পুলিশ উপস্থিত ছাড়াই কাজ করে।
     figures:
       - src: /images/papers/uav-speed-fov.jpg
-        alt: Diagram of a drone watching a car pass four timestamp points over 14.94 m
-        caption: The real-vehicle test setup. Figure from the paper, CC BY 4.0.
+        alt: একটি ড্রোন একটি গাড়িকে 14.94 মিটারের উপরে চারটি টাইমস্ট্যাম্প পয়েন্ট অতিক্রম করে দেখছে
+        caption: বাস্তব যানবাহন পরীক্ষা সেটআপ. কাগজ থেকে চিত্র, CC BY 4.0।
     doi: 10.3390/futuretransp3010012
     open_access: true
     post: uav-speed-detector-2023
-
-  - title: Deep Learning Application Pros and Cons Over Algorithm
+  - title: অ্যালগরিদম ওভার ডিপ লার্নিং অ্যাপ্লিকেশন ভাল এবং অসুবিধা
     year: 2022
     type: journal
     venue: EAI Trans. AI & Robotics
-    venue_full: EAI Endorsed Transactions on AI and Robotics 1(1), 1–13
-    authors: [A. J. Moshayedi, A. S. Roy, A. Kolahdooz, Y. Shuxin]
+    venue_full: EAI AI এবং Robotics 1(1), 1-13-এ লেনদেন অনুমোদন করেছে
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - A. Kolahdooz
+      - Y. Shuxin
     image: /images/papers/deep-learning-applications.jpg
-    image_alt: Mind map of deep learning application areas and the models used in each
+    image_alt: ডিপ লার্নিং অ্যাপ্লিকেশান এরিয়ার মাইন্ড ম্যাপ এবং প্রতিটিতে ব্যবহৃত মডেল
     tldr: >-
-      A practical review of where deep learning beats traditional algorithms, from
-      speech and vision to chatbots and healthcare. My most-cited paper.
+      বক্তৃতা এবং দৃষ্টি থেকে চ্যাটবট এবং স্বাস্থ্যসেবা পর্যন্ত গভীর শিক্ষা যেখানে প্রথাগত অ্যালগরিদমকে হারায় তার একটি
+      ব্যবহারিক পর্যালোচনা। আমার সবচেয়ে উদ্ধৃত কাগজ.
     abstract: >-
-      Deep learning is a new area of machine learning research that applies
-      nonlinear, layered transformations to large datasets, and it has contributed
-      greatly to artificial intelligence. This article reviews the contributions and
-      new applications of deep learning, summarizing applications and algorithms for
-      scholars. It introduces the advantages of deep learning's hierarchical,
-      nonlinear approach and compares it with traditional algorithms in common
-      applications such as voice recognition, chatbots, search and vision, as well
-      as natural language processing, information retrieval and multimodal
-      processing. It gives researchers and students a general overview of deep
-      learning and its growing benefits.
+      ডিপ লার্নিং হল মেশিন লার্নিং গবেষণার একটি নতুন ক্ষেত্র যা বৃহৎ ডেটাসেটে অরৈখিক, স্তরযুক্ত রূপান্তর প্রয়োগ করে এবং
+      এটি কৃত্রিম বুদ্ধিমত্তায় ব্যাপক অবদান রেখেছে। এই নিবন্ধটি গভীর শিক্ষার অবদান এবং নতুন অ্যাপ্লিকেশন পর্যালোচনা
+      করে, পণ্ডিতদের জন্য অ্যাপ্লিকেশন এবং অ্যালগরিদমের সারাংশ। এটি গভীর শিক্ষার অনুক্রমিক, অরৈখিক পদ্ধতির সুবিধাগুলির
+      সাথে পরিচয় করিয়ে দেয় এবং এটিকে প্রচলিত অ্যালগরিদমের সাথে তুলনা করে সাধারণ অ্যাপ্লিকেশন যেমন ভয়েস স্বীকৃতি,
+      চ্যাটবট, অনুসন্ধান এবং দৃষ্টি, সেইসাথে প্রাকৃতিক ভাষা প্রক্রিয়াকরণ, তথ্য পুনরুদ্ধার এবং মাল্টিমডাল
+      প্রক্রিয়াকরণে। এটি গবেষক এবং শিক্ষার্থীদের গভীর শিক্ষা এবং এর ক্রমবর্ধমান সুবিধার একটি সাধারণ ওভারভিউ দেয়।
     figures:
       - src: /images/papers/deep-learning-applications.jpg
-        alt: Mind map of deep learning application areas and the models used in each
-        caption: Deep learning application areas and common models. Figure from the paper, CC BY 3.0.
+        alt: ডিপ লার্নিং অ্যাপ্লিকেশান এরিয়ার মাইন্ড ম্যাপ এবং প্রতিটিতে ব্যবহৃত মডেল
+        caption: গভীর শিক্ষার অ্যাপ্লিকেশন এলাকা এবং সাধারণ মডেল। কাগজ থেকে চিত্র, CC BY 3.0।
     doi: 10.4108/airo.v1i.19
     open_access: true
     post: deep-learning-pros-cons-2022
-
-  - title: "Review on: The Service Robot Mathematical Model"
+  - title: "পর্যালোচনা করুন: সার্ভিস রোবট গাণিতিক মডেল"
     year: 2022
     type: journal
     venue: EAI Trans. AI & Robotics
-    venue_full: EAI Endorsed Transactions on AI and Robotics 1(1), 1–19
-    authors: [A. J. Moshayedi, A. S. Roy, S. K. Sambo, Y. Zhong, L. Liao]
+    venue_full: EAI AI এবং Robotics 1(1), 1-19-এ লেনদেন অনুমোদন করেছে
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - S. K. Sambo
+      - Y. Zhong
+      - L. Liao
     image: /images/papers/service-robot-types.jpg
-    image_alt: Diagram of service robot types, from wheeled and legged robots to crawler and snake robots
+    image_alt: চাকাযুক্ত এবং পায়ের রোবট থেকে ক্রলার এবং স্নেক রোবট পর্যন্ত পরিষেবা রোবটের প্রকারের চিত্র
     tldr: >-
-      A starting point for modelling service robots: their shapes and uses, and the
-      dynamic models of differential-drive robots.
+      মডেলিং পরিষেবা রোবটগুলির জন্য একটি সূচনা পয়েন্ট: তাদের আকার এবং ব্যবহার এবং ডিফারেনশিয়াল-ড্রাইভ রোবটের গতিশীল
+      মডেল।
     abstract: >-
-      After nearly 30 years of development, service robots have advanced across
-      machinery, information, materials, control and medicine. They take many
-      shapes, often driven by their application, and analysing them requires
-      mathematical models of their structure and behaviour under control. This
-      paper reviews the shapes and applications of available service robots and
-      summarizes progress on robot dynamics, robot types and the dynamic models of
-      differential-drive service robots. It is meant as a starting point for
-      researchers, to support better simulation and analysis.
+      প্রায় 30 বছরের উন্নয়নের পর, পরিষেবা রোবটগুলি যন্ত্রপাতি, তথ্য, উপকরণ, নিয়ন্ত্রণ এবং ওষুধ জুড়ে অগ্রসর হয়েছে।
+      তারা অনেক আকার ধারণ করে, প্রায়শই তাদের প্রয়োগ দ্বারা চালিত হয় এবং তাদের বিশ্লেষণের জন্য তাদের গঠন এবং আচরণ
+      নিয়ন্ত্রণের গাণিতিক মডেলের প্রয়োজন হয়। এই কাগজটি উপলব্ধ পরিষেবা রোবটগুলির আকার এবং অ্যাপ্লিকেশনগুলি পর্যালোচনা
+      করে এবং রোবট গতিবিদ্যা, রোবটের প্রকার এবং ডিফারেনশিয়াল-ড্রাইভ পরিষেবা রোবটের গতিশীল মডেলগুলির অগ্রগতির সংক্ষিপ্ত
+      বিবরণ দেয়৷ এটি গবেষকদের জন্য একটি সূচনা পয়েন্ট হিসাবে বোঝানো হয়েছে, আরও ভাল সিমুলেশন এবং বিশ্লেষণকে সমর্থন করার
+      জন্য।
     figures:
       - src: /images/papers/service-robot-types.jpg
-        alt: Diagram of service robot types, from wheeled and legged robots to crawler and snake robots
-        caption: Types of service robots covered in the review. Figure from the paper, CC BY 3.0.
+        alt: চাকাযুক্ত এবং পায়ের রোবট থেকে ক্রলার এবং স্নেক রোবট পর্যন্ত পরিষেবা রোবটের প্রকারের চিত্র
+        caption: রিভিউতে কভার করা পরিষেবা রোবটের প্রকার। কাগজ থেকে চিত্র, CC BY 3.0।
     doi: 10.4108/airo.v1i.20
     open_access: true
     post: service-robot-model-review-2022
-
-  - title: Design and Promotion of Cost-Effective IoT-Based Heart Rate Monitoring
+  - title: খরচ-কার্যকর IoT-ভিত্তিক হার্ট রেট মনিটরিংয়ের ডিজাইন এবং প্রচার
     year: 2022
     type: conference
     venue: SPIE CICA 2022
-    venue_full: International Conference on Cloud Computing, Internet of Things, and Computer Applications (CICA 2022), Proc. SPIE
-    authors: [A. J. Moshayedi, A. Kolahdooz, A. S. Roy, S. A. L. Rostami, X. Xie]
-    tldr: >-
-      A low-cost Arduino heart rate monitor for remote care that reliably tracks a
-      person's heart rate.
+    venue_full: ক্লাউড কম্পিউটিং, ইন্টারনেট অফ থিংস এবং কম্পিউটার অ্যাপ্লিকেশন (CICA 2022), প্রক. SPIE
+    authors:
+      - A. J. Moshayedi
+      - A. Kolahdooz
+      - A. S. Roy
+      - S. A. L. Rostami
+      - X. Xie
+    tldr: দূরবর্তী যত্নের জন্য একটি কম খরচের Arduino হার্ট রেট মনিটর যা নির্ভরযোগ্যভাবে একজন ব্যক্তির হার্ট রেট ট্র্যাক করে।
     abstract: >-
-      Telemedicine, first described in the 1920s, matters more than ever for
-      patients far from medical centres or who need round-the-clock care. This paper
-      designs and implements an Arduino-based heart rate information system. Its low
-      price and easy availability make it suitable for many applications, and tests
-      showed it can track a person's heart rate.
+      টেলিমেডিসিন, প্রথম 1920-এর দশকে বর্ণিত, চিকিৎসা কেন্দ্র থেকে দূরে থাকা রোগীদের জন্য বা যাদের সার্বক্ষণিক যত্ন
+      প্রয়োজন তাদের জন্য আগের চেয়ে বেশি গুরুত্বপূর্ণ। এই কাগজটি একটি Arduino-ভিত্তিক হার্ট রেট তথ্য সিস্টেম ডিজাইন এবং
+      প্রয়োগ করে। এর কম দাম এবং সহজলভ্যতা এটিকে অনেক অ্যাপ্লিকেশনের জন্য উপযুক্ত করে তোলে এবং পরীক্ষায় দেখা গেছে এটি
+      একজন ব্যক্তির হৃদস্পন্দন ট্র্যাক করতে পারে।
     doi: 10.1117/12.2642725
     post: iot-heart-rate-monitor-2022
-
-  - title: "Automation Attendance Systems Approaches: A Practical Review"
+  - title: "অটোমেশন অ্যাটেনডেন্স সিস্টেম অ্যাপ্রোচস: একটি ব্যবহারিক পর্যালোচনা"
     year: 2021
     type: journal
     venue: BOHR IJIoT
-    venue_full: BOHR International Journal of Internet of Things Research 1, 23–31
-    authors: [A. J. Moshayedi, A. S. Roy, L. Liao, H. Lan, M. Gheisari, A. Abbasi]
-    tldr: >-
-      A review of the technologies behind automatic attendance: biometrics, RFID,
-      Bluetooth, GPS and QR codes.
+    venue_full: BOHR ইন্টারন্যাশনাল জার্নাল অফ ইন্টারনেট অফ থিংস রিসার্চ 1, 23-31
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - L. Liao
+      - H. Lan
+      - M. Gheisari
+      - A. Abbasi
+    tldr: "স্বয়ংক্রিয় উপস্থিতির পিছনে প্রযুক্তিগুলির একটি পর্যালোচনা: বায়োমেট্রিক্স, RFID, ব্লুটুথ, GPS এবং QR কোড।"
     abstract: >-
-      Keeping track of people is the first step for any organization, and building
-      and maintaining an attendance system costs money and effort. That is a
-      formality for large organizations, but a real burden for schools, colleges and
-      universities. Many technologies have been used to collect attendance,
-      including biometrics, RFID, Bluetooth, GPS and QR codes. This study reviews the
-      practical methods and technologies used in existing attendance systems to
-      guide future research.
+      লোকেদের ট্র্যাক রাখা যে কোনও সংস্থার জন্য প্রথম পদক্ষেপ, এবং উপস্থিতি সিস্টেম তৈরি এবং বজায় রাখতে অর্থ এবং
+      প্রচেষ্টা ব্যয় হয়। এটি বড় প্রতিষ্ঠানের জন্য একটি আনুষ্ঠানিকতা, কিন্তু স্কুল, কলেজ এবং বিশ্ববিদ্যালয়ের জন্য
+      একটি বাস্তব বোঝা। বায়োমেট্রিক্স, RFID, ব্লুটুথ, GPS এবং QR কোড সহ উপস্থিতি সংগ্রহ করতে অনেক প্রযুক্তি ব্যবহার করা
+      হয়েছে। এই অধ্যয়নটি ভবিষ্যত গবেষণা পরিচালনার জন্য বিদ্যমান উপস্থিতি সিস্টেমে ব্যবহৃত ব্যবহারিক পদ্ধতি এবং
+      প্রযুক্তি পর্যালোচনা করে।
     doi: 10.54646/bijiotr.003
     open_access: true
     post: attendance-systems-review-2021
-
-  - title: Raspberry Pi SCADA Zonal Based System for Agricultural Plant Monitoring
+  - title: কৃষি উদ্ভিদ পর্যবেক্ষণের জন্য রাস্পবেরি পাই SCADA জোনাল ভিত্তিক সিস্টেম
     year: 2019
     type: conference
     venue: IEEE ICISCE 2019
-    venue_full: 2019 6th International Conference on Information Science and Control Engineering (ICISCE), IEEE
-    authors: [A. J. Moshayedi, A. S. Roy, L. Liao, S. Li]
+    venue_full: 2019 6 তম আন্তর্জাতিক সম্মেলন তথ্য বিজ্ঞান এবং নিয়ন্ত্রণ প্রকৌশল (ICISCE), IEEE
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - L. Liao
+      - S. Li
     tldr: >-
-      A low-cost, web-based SCADA system for farms, hosted on a Raspberry Pi and
-      split into zones for security, with local and remote monitoring.
+      খামারগুলির জন্য একটি কম খরচে, ওয়েব-ভিত্তিক SCADA সিস্টেম, একটি রাস্পবেরি পাইতে হোস্ট করা হয়েছে এবং স্থানীয় এবং
+      দূরবর্তী পর্যবেক্ষণ সহ নিরাপত্তার জন্য জোনে বিভক্ত।
     abstract: >-
-      SCADA and DCS systems are central to industrial automation, but software cost
-      and limited extensibility keep them out of reach for small industries, and IoT
-      brings new security challenges. This paper designs and compares two small
-      SCADA systems for agriculture that reduce size and use a zonal method to
-      address security. A Raspberry Pi replaces a PC or laptop as the host, cutting
-      cost and size, a design not reported before. A web-based SCADA system
-      provides local and remote monitoring of an agricultural plant environment over
-      a Raspberry Pi network.
+      SCADA এবং DCS সিস্টেমগুলি শিল্প অটোমেশনের কেন্দ্রবিন্দু, কিন্তু সফ্টওয়্যার খরচ এবং সীমিত এক্সটেনসিবিলিটি তাদের
+      ছোট শিল্পের নাগালের বাইরে রাখে এবং IoT নতুন নিরাপত্তা চ্যালেঞ্জ নিয়ে আসে। এই কাগজটি কৃষির জন্য দুটি ছোট SCADA
+      সিস্টেমের নকশা এবং তুলনা করে যা আকারকে হ্রাস করে এবং নিরাপত্তার জন্য একটি জোনাল পদ্ধতি ব্যবহার করে। একটি রাস্পবেরি
+      পাই হোস্ট হিসাবে একটি পিসি বা ল্যাপটপকে প্রতিস্থাপন করে, খরচ এবং আকার কমিয়ে দেয়, এমন একটি ডিজাইন যা আগে রিপোর্ট
+      করা হয়নি। একটি ওয়েব-ভিত্তিক SCADA সিস্টেম রাস্পবেরি পাই নেটওয়ার্কের মাধ্যমে একটি কৃষি উদ্ভিদ পরিবেশের স্থানীয়
+      এবং দূরবর্তী পর্যবেক্ষণ প্রদান করে।
     doi: 10.1109/ICISCE48695.2019.00092
     post: raspberry-pi-scada-2019
-
-  - title: PID Tuning Method on AGV (Automated Guided Vehicle) Industrial Robot
+  - title: AGV (অটোমেটেড গাইডেড ভেহিকেল) ইন্ডাস্ট্রিয়াল রোবটে পিআইডি টিউনিং পদ্ধতি
     year: 2019
     type: journal
     venue: JSANTME
-    venue_full: Journal of Simulation and Analysis of Novel Technologies in Mechanical Engineering
-    authors: [A. J. Moshayedi, A. S. Roy, L. Liao]
+    venue_full: জার্নাল অফ সিমুলেশন অ্যান্ড অ্যানালাইসিস অফ নভেল টেকনোলজিস ইন মেকানিক্যাল ইঞ্জিনিয়ারিং
+    authors:
+      - A. J. Moshayedi
+      - A. S. Roy
+      - L. Liao
     tldr: >-
-      How each PID parameter affects a real AGV, and a comparison of tuning methods
-      from Ziegler–Nichols to fuzzy, neural and immune-inspired controllers.
+      কিভাবে প্রতিটি পিআইডি প্যারামিটার একটি বাস্তব AGV প্রভাবিত করে, এবং Ziegler-নিকলস থেকে অস্পষ্ট, নিউরাল এবং
+      ইমিউন-অনুপ্রাণিত কন্ট্রোলারের সাথে টিউনিং পদ্ধতির তুলনা।
     abstract: >-
-      PID control remains a classic solution, tuning proportional, integral and
-      derivative parameters for the best system response. AGVs, used across
-      industry, rely on PID controllers, and each needs tuning to avoid energy loss,
-      inefficiency, lag and lack of robustness. This paper introduces the PID
-      controller, shows the effect of each parameter on a real system, and compares
-      tuning methods used for AGV speed and steering control, including Lyapunov's
-      direct method, Ziegler–Nichols, fuzzy controllers, the humoral immune-system
-      method and neural networks.
+      PID কন্ট্রোল একটি ক্লাসিক সমাধান, সেরা সিস্টেম প্রতিক্রিয়ার জন্য সমানুপাতিক, অবিচ্ছেদ্য এবং ডেরিভেটিভ
+      প্যারামিটারগুলি টিউন করে। শিল্প জুড়ে ব্যবহৃত AGVs, PID কন্ট্রোলারের উপর নির্ভর করে এবং শক্তির ক্ষতি, অদক্ষতা,
+      পিছিয়ে এবং দৃঢ়তার অভাব এড়াতে প্রতিটিরই টিউনিং প্রয়োজন। এই কাগজটি PID কন্ট্রোলারের সাথে পরিচয় করিয়ে দেয়,
+      একটি বাস্তব সিস্টেমে প্রতিটি প্যারামিটারের প্রভাব দেখায়, এবং AGV গতি এবং স্টিয়ারিং নিয়ন্ত্রণের জন্য ব্যবহৃত
+      টিউনিং পদ্ধতির তুলনা করে, যার মধ্যে রয়েছে Lyapunov-এর সরাসরি পদ্ধতি, Ziegler-Nichols, ফাজি কন্ট্রোলার, হিউমারাল
+      ইমিউন-সিস্টেম পদ্ধতি এবং নিউরাল নেটওয়ার্ক।
     url: http://jsme.iaukhsh.ac.ir/article_673338_5f03b3a8af1fae3009190d0c21b8b518.pdf
     open_access: true
     post: pid-tuning-agv-2019

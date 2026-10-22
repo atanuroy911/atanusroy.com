@@ -14,7 +14,7 @@ hero:
     - DevOps
     - মেঘ
   tagline: >-
-    ফুল-স্ট্যাক এবং DevOps ইঞ্জিনিয়ার — React/Next.js ফ্রন্টএন্ড, লারাভেল এবং নোড ব্যাকএন্ড, ডকার এবং জেনকিন্সের সাথে
+    ফুল-স্ট্যাক এবং DevOps ইঞ্জিনিয়ার — React/Next.js ফ্রন্টএন্ড, Laravel এবং Node backends, Docker এবং Jenkins-এর সাথে
     AWS-এ পাঠানো হয়েছে। আমি Flutter এবং Python এর সাথে ক্রস-প্ল্যাটফর্ম ML অ্যাপও তৈরি করি।
   cta_primary: একটি বিনামূল্যে কল বুক করুন →
   cta_primary_link: https://calendly.com/atanusroy
@@ -47,11 +47,9 @@ services:
   items:
     - icon: ti-layout-dashboard
       title: ফুল-স্ট্যাক অ্যাপস
-      desc: >-
-        React/Next.js ফ্রন্টএন্ড Laravel (PHP) বা Node.js ব্যাকএন্ডের সাথে পেয়ার করা হয়েছে — প্রকৃত উৎপাদন সাইট, ডেমো
-        নয়।
+      desc: Laravel (PHP) বা Node.js ব্যাকএন্ডের সাথে যুক্ত React/Next.js ফ্রন্টএন্ডস — প্রকৃত উৎপাদন সাইট, ডেমো নয়।
     - icon: ti-cloud
-      title: ক্লাউড এবং ডিওঅপস
+      title: ক্লাউড এবং DevOps
       desc: AWS, Docker, এবং Jenkins CI/CD. আমি DigitalOcean থেকে প্রোডাকশন ইনফ্রা স্থানান্তরিত করেছি এবং এটি চালু রেখেছি।
     - icon: ti-api
       title: ডেটা ও ইন্টিগ্রেশন
@@ -78,7 +76,7 @@ process:
       title: স্থাপন এবং হ্যান্ড অফ
       desc: লাইভ, নথিভুক্ত, এবং আপনার — একটি 30-দিনের সমর্থন উইন্ডো সহ।
 quote:
-  text: আমি বরং নিখুঁত কিছু যা আমার ল্যাপটপ ছেড়ে যায় না তার চেয়ে প্রথম দিনে কিছু *ছোট এবং কাজ* পাঠাতে চাই।
+  text: আমি বরং নিখুঁত কিছুর চেয়ে প্রথম দিনে *ছোট এবং কর্মক্ষম* কিছু পাঠাতে চাই যা কখনই আমার ল্যাপটপ ছেড়ে যায় না।
   author: অতনু শুভম রায়
   role: সফটওয়্যার ও ডিভোপস ইঞ্জিনিয়ার
   initials: এআর

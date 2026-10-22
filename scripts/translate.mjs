@@ -24,6 +24,8 @@ const SKIP_KEYS = new Set([
   'featured_image', 'long_description',
   // Blog-specific keys
   'id', 'date', 'category', 'color', 'bg', 'tags',
+  // Links, paths and ids added later
+  'post', 'doi', 'url', 'dblp', 'image', 'video', 'poster', 'product_hunt',
 ])
 
 // Keys whose values are proper nouns / tech terms (don't translate)

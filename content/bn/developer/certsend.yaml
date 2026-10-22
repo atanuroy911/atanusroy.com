@@ -2,46 +2,59 @@
 # Run: npm run translate to regenerate
 
 certsend:
-  label: "// my_product"
+  label: // আমার_প্রোডাক্ট
   name: CertSend
-  tagline: Make and send certificates for free.
+  tagline: বিনামূল্যে শংসাপত্র তৈরি করুন এবং পাঠান।
   description: >-
-    Design a certificate, paste a list of names, then download every certificate
-    as a PDF (or one ZIP) or email them from Gmail. Everything runs in your
-    browser: no server, no sign-up, nothing uploaded.
-  banner_title: "New: I launched CertSend"
+    একটি শংসাপত্র ডিজাইন করুন, নামের একটি তালিকা পেস্ট করুন, তারপর প্রতিটি শংসাপত্র PDF (বা একটি জিপ) হিসাবে ডাউনলোড
+    করুন বা Gmail থেকে ইমেল করুন৷ সবকিছু আপনার ব্রাউজারে চলে: কোনো সার্ভার নেই, কোনো সাইন-আপ নেই, কিছুই আপলোড করা হয়নি৷
+  banner_title: "নতুন: আমি CertSend চালু করেছি"
   banner_sub: >-
-    A free certificate maker I designed and built end to end. Bulk names in,
-    print-ready PDFs out, all in the browser.
+    একটি বিনামূল্যের শংসাপত্র প্রস্তুতকারক যা আমি ডিজাইন করেছি এবং শেষ থেকে শেষ তৈরি করেছি। বাল্ক নাম, প্রিন্ট-রেডি
+    পিডিএফ আউট, সব ব্রাউজারে।
   link: https://certsend.app
   product_hunt: https://www.producthunt.com/products/certsend
   video: /assets/certsend/certsend-demo.mp4
   poster: /assets/certsend/certsend-poster.jpg
   icon: /assets/certsend/icon.png
-  features_title: What it does
+  features_title: এটা কি করে
   features:
-    - title: Ready-made designs
-      desc: Templates for achievement, participation, completion, awards, kids and more, or upload your own background.
-    - title: Drag-and-drop designer
-      desc: Text, fonts, colours, logos and signatures, with snapping guides, undo/redo and keyboard shortcuts.
-    - title: Bulk names
-      desc: Paste from Excel or Google Sheets, or open a CSV. Duplicates are removed and long names shrink to fit.
-    - title: PDF and ZIP output
-      desc: One PDF per person in a ZIP, or one combined PDF for printing. Fonts are embedded and text stays selectable.
-    - title: Gmail send queue
-      desc: Opens a ready-written Gmail message for each person with their certificate ready to attach.
-    - title: Private by design
-      desc: Work is autosaved in your own browser only. Nothing is uploaded to a server.
-  templates_title: Some of the templates
+    - title: রেডিমেড ডিজাইন
+      desc: >-
+        কৃতিত্ব, অংশগ্রহণ, সমাপ্তি, পুরষ্কার, বাচ্চাদের এবং আরও অনেক কিছুর জন্য টেমপ্লেট বা আপনার নিজস্ব পটভূমি আপলোড
+        করুন।
+    - title: ড্র্যাগ-এন্ড-ড্রপ ডিজাইনার
+      desc: টেক্সট, ফন্ট, রং, লোগো এবং স্বাক্ষর, স্ন্যাপিং গাইড, পূর্বাবস্থায় ফেরানো/পুনরায় করা এবং কীবোর্ড শর্টকাট সহ।
+    - title: বাল্ক নাম
+      desc: >-
+        Excel বা Google পত্রক থেকে পেস্ট করুন বা একটি CSV খুলুন। সদৃশগুলি সরানো হয় এবং লম্বা নামগুলি ফিট করার জন্য
+        সঙ্কুচিত হয়৷
+    - title: পিডিএফ এবং জিপ আউটপুট
+      desc: >-
+        একটি জিপ-এ জনপ্রতি একটি পিডিএফ, বা মুদ্রণের জন্য একটি সম্মিলিত PDF। ফন্ট এমবেড করা হয় এবং পাঠ্য নির্বাচনযোগ্য
+        থাকে।
+    - title: জিমেইল পাঠানোর সারি
+      desc: প্রতিটি ব্যক্তির জন্য তাদের শংসাপত্র সংযুক্ত করার জন্য প্রস্তুত সহ একটি প্রস্তুত-লিখিত Gmail বার্তা খোলে৷
+    - title: নকশা দ্বারা ব্যক্তিগত
+      desc: কাজ শুধুমাত্র আপনার নিজের ব্রাউজারে স্বয়ংক্রিয়ভাবে সংরক্ষিত হয়। সার্ভারে কিছুই আপলোড করা হয় না।
+  templates_title: টেমপ্লেট কিছু
   templates:
     - image: /assets/certsend/gold-frame.jpg
-      name: Gold Frame
+      name: সোনার ফ্রেম
     - image: /assets/certsend/black-gold.jpg
-      name: Black and Gold
+      name: কালো এবং সোনালি
     - image: /assets/certsend/kids-rainbow.jpg
-      name: Rainbow Star
-  stack_title: Built with
-  stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "pdf-lib", "JSZip", "IndexedDB", "Cloudflare Workers"]
-  cta_primary: Try CertSend free
-  cta_secondary: See it on Product Hunt
-  learn_more: Learn more
+      name: রংধনু তারকা
+  stack_title: দিয়ে নির্মিত
+  stack:
+    - Next.js 16
+    - প্রতিক্রিয়া 19
+    - টাইপস্ক্রিপ্ট
+    - Tailwind CSS v4
+    - pdf-lib
+    - জেএসজিপ
+    - ইনডেক্সডডিবি
+    - ক্লাউডফ্লেয়ার কর্মীরা
+  cta_primary: CertSend বিনামূল্যে চেষ্টা করুন
+  cta_secondary: প্রোডাক্ট হান্টে এটি দেখুন
+  learn_more: আরও জানুন

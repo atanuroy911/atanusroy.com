@@ -85,6 +85,12 @@ export function PublicationsClient({ content }: { content: any }) {
           {entry.journal || entry.booktitle || entry.venue}
         </span>
         <span className="rounded-full bg-blue-50 px-2 py-0.5 text-blue-700">{entry.year}</span>
+        {entry.doi && (
+          <a href={`https://doi.org/${entry.doi}`} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-blue-700 hover:underline">
+            <LinkIcon size={12} />
+            DOI
+          </a>
+        )}
         {(entry.pdf || entry.url) && (
           <a href={entry.pdf || entry.url} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-blue-700 hover:underline">
             <LinkIcon size={12} />

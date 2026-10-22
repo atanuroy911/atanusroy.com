@@ -30,7 +30,7 @@ blog_posts:
     date: "2026-05-08"
     category: publication
     tags: [agv, lidar, robotics, navigation, icfeict]
-    cover_image: ""
+    cover_image: "/images/news/agv-lidar-kinect-icfeict.jpg"
     summary: >
       Our chapter comparing LiDAR and Kinect sensors for XiaoQiang AGV navigation
       is out in the Proceedings of the 5th ICFEICT 2025 (Springer).
@@ -58,15 +58,15 @@ blog_posts:
       The chapter appears in *Proceedings of the 5th International Conference on
       Frontiers of Electronics, Information and Computation Technologies
       (ICFEICT 2025), Volume I*, published by Springer.
-    link: "https://link.springer.com/chapter/10.1007/978-981-95-8660-8_18"
+    link: "https://doi.org/10.1007/978-981-95-8660-8_18"
     pinned: true
 
   - id: beetle-antennae-agv-2026
     title: "Journal Paper: Beetle Antennae Search for Omnidirectional AGV Navigation"
-    date: "2026-01-15"
+    date: "2026-02-11"
     category: publication
     tags: [agv, path-planning, optimization, robotics]
-    cover_image: ""
+    cover_image: "/images/news/beetle-antennae-agv-2026.jpg"
     summary: >
       Our paper on an integrated Beetle Antennae Search–enabled navigation
       framework for omnidirectional AGVs in unknown environments is published in
@@ -86,8 +86,14 @@ blog_posts:
       to balance exploration and computational cost, aiming for reliable
       navigation without requiring a pre-built map.
 
-      Published in *EAI Endorsed Transactions on AI and Robotics* (2026).
-    link: ""
+      ![The omnidirectional AGV platform used in the study](/images/news/omni-agv-design-fig.png)
+
+      *The omnidirectional AGV platform used in the study. Figure from Moshayedi et
+      al. (2026), CC BY.*
+
+      Published in *EAI Endorsed Transactions on AI and Robotics* (2026). The paper
+      is open access.
+    link: "https://doi.org/10.4108/airo.11438"
     pinned: false
 
   - id: icraic-2025-path-planning
@@ -95,7 +101,7 @@ blog_posts:
     date: "2025-10-10"
     category: conference
     tags: [agv, path-planning, ieee, conference]
-    cover_image: ""
+    cover_image: "/images/news/icraic-2025-path-planning.jpg"
     summary: >
       Presented "Path Planning for AGVs: Balancing Computational Efficiency and
       Optimality" at the 5th ICRAIC 2025 (IEEE).
@@ -110,15 +116,15 @@ blog_posts:
 
       Presented at the **5th International Conference on Robotics, Automation,
       and Intelligent Control (ICRAIC 2025)**, IEEE.
-    link: ""
+    link: "https://doi.org/10.1109/ICRAIC67376.2025.11375850"
     pinned: false
 
   - id: urbanpark-iccit-2025
     title: "UrbanPark: LoRaWAN-Enabled Smart Parking at ICCIT 2025"
-    date: "2025-08-20"
+    date: "2025-04-13"
     category: conference
     tags: [iot, lorawan, smart-city, conference]
-    cover_image: ""
+    cover_image: "/images/news/urbanpark-iccit-2025.jpg"
     summary: >
       Our paper "UrbanPark" on LoRaWAN-enabled smart parking modules was
       presented at the 4th ICCIT 2025.
@@ -132,7 +138,7 @@ blog_posts:
 
       Presented at the **4th International Conference on Computing and
       Information Technology (ICCIT 2025)**.
-    link: ""
+    link: "https://doi.org/10.1109/ICCIT63348.2025.10989299"
     pinned: false
 
   - id: joined-ulab-2025
@@ -169,10 +175,10 @@ blog_posts:
 
   - id: emtihan-2025
     title: "EMTIHAN: A Secure Approach to Online Examinations"
-    date: "2025-01-10"
+    date: "2024-12-04"
     category: publication
     tags: [education-technology, security, remote-learning]
-    cover_image: ""
+    cover_image: "/images/news/emtihan-2025.jpg"
     summary: >
       Our paper on EMTIHAN, a secure online examination framework for remote
       learning, is published in Education and Information Technologies.
@@ -193,7 +199,7 @@ blog_posts:
 
       Published in *Education and Information Technologies* (Springer, 2025),
       with Ata Jahangir Moshayedi and collaborators.
-    link: "https://link.springer.com/article/10.1007/s10639-024-13170-4"
+    link: "https://doi.org/10.1007/s10639-024-13170-4"
     pinned: false
 
   - id: iot-self-lecture-attendance-2024
@@ -201,7 +207,7 @@ blog_posts:
     date: "2024-06-05"
     category: publication
     tags: [iot, attendance, embedded-systems]
-    cover_image: ""
+    cover_image: "/images/news/iot-self-lecture-attendance-2024.jpg"
     summary: >
       Our design for a portable, secure self-lecture attendance system (SLAS)
       using IoT and QR codes is published in the International Journal of
@@ -221,7 +227,7 @@ blog_posts:
 
       Published in the *International Journal of Electronic Security and
       Digital Forensics* (2024), with Ata Jahangir Moshayedi and collaborators.
-    link: ""
+    link: "https://doi.org/10.1504/IJESDF.2024.142009"
     pinned: false
 
   - id: visapp-2024-attentive-yolo
@@ -229,7 +235,7 @@ blog_posts:
     date: "2024-02-15"
     category: publication
     tags: [computer-vision, deep-learning, yolo, publication]
-    cover_image: ""
+    cover_image: "/images/news/visapp-2024-attentive-yolo.jpg"
     summary: >
       Our paper "Attentive-YOLO," on efficient on-site water pipeline inspection
       using an optimized YOLOv7, was accepted at VISAPP 2024.
@@ -250,7 +256,7 @@ blog_posts:
 
       Presented at the 19th International Conference on Computer Vision Theory
       and Applications (**VISAPP 2024**), Rome, Italy.
-    link: ""
+    link: "https://doi.org/10.5220/0012374000003660"
     pinned: false
 
   - id: foodiebot-ieee-access-2024
@@ -258,7 +264,7 @@ blog_posts:
     date: "2024-01-20"
     category: publication
     tags: [robotics, service-robots, ieee, publication]
-    cover_image: ""
+    cover_image: "/images/news/foodiebot-ieee-access-2024.jpg"
     summary: >
       Our paper on the design and development of FOODIEBOT, a food-service
       robot, is published in IEEE Access.
@@ -273,5 +279,313 @@ blog_posts:
       With Ata Jahangir Moshayedi, Liefa Liao, Amir Sohail Khan, Amin Kolahdooz,
       and Ali Eftekhari. Published in *IEEE Access*, Vol. 12, pp. 36148–36172
       (2024).
-    link: "https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf"
+    link: "https://doi.org/10.1109/ACCESS.2024.3355278"
+    pinned: false
+
+  - id: dr-orangeapp-2024
+    title: "Dr_OrangeApp: Spotting Citrus Pests in Real Time from a Phone"
+    date: "2024-12-27"
+    category: conference
+    tags: [agriculture, computer-vision, mobile-app, pest-detection]
+    cover_image: "/images/news/dr-orangeapp-2024.jpg"
+    summary: >
+      Our paper on Dr_OrangeApp, a mobile app that helps farmers detect orange
+      pests in real time, is published in the Proceedings of the 4th Asia-Pacific
+      Artificial Intelligence and Big Data Forum (ACM).
+    content: |
+      ## The Problem
+
+      Orange pests cut both the yield and the quality of citrus crops. Catching an
+      infestation early means farmers can act sooner and spray less.
+
+      ## What We Built
+
+      With Ata Jahangir Moshayedi, M. J. Jawadi and colleagues, I worked on
+      **Dr_OrangeApp**, a phone app that classifies pests from a photo and helps
+      farmers follow up with charts, reports and QR codes for each tree.
+
+      ## Results
+
+      - Tested on **313 images** covering five common pests
+      - **Precision 1.00**, average accuracy and recall **0.75**, F1 score **0.856**
+      - In a real orange orchard, the app found and reported **Citrus Leafminer** on 10 trees
+
+      Lighting, camera angle and image quality still affect accuracy, and taking a
+      few photos of the same spot helps.
+
+      Published in *Proceedings of the 4th Asia-Pacific Artificial Intelligence and
+      Big Data Forum* (ACM, 2024). The paper is open access.
+    link: "https://doi.org/10.1145/3718491.3718618"
+    pinned: false
+
+  - id: agv-ir-timed-automata-2024
+    title: "Easing AGV Traffic Jams with IR Sensors and Timed Automata"
+    date: "2024-12-31"
+    category: publication
+    tags: [agv, traffic-management, timed-automata, simulation]
+    cover_image: "/images/news/agv-ir-timed-automata-2024.jpg"
+    summary: >
+      Our paper with A. Das on path tracking and traffic management for
+      automated guided vehicles is out in the Journal of Robotics Research.
+    content: |
+      ## Why It Matters
+
+      When many AGVs share the same paths, as delivery robots increasingly do,
+      keeping them moving without collisions or gridlock gets hard.
+
+      ## Approach
+
+      A. Das and I reviewed existing strategies, then simulated a system that
+      combines **IR sensors** with **timed automata** to coordinate vehicles on
+      shared paths and cut waiting times.
+
+      ## Results
+
+      In CoppeliaSim (V-REP) simulations of high-congestion scenarios:
+
+      - AGVs kept normal to moderate speeds (5 to 7 units)
+      - Maximum congestion dropped by **20%**
+      - Traffic kept flowing with no total blockage
+
+      Published in *Journal of Robotics Research* (2024).
+    link: "https://doi.org/10.64820/aepjrr.11.15.23.122024"
+    pinned: false
+
+  - id: uav-speed-detector-2023
+    title: "Drones as Traffic Police: A Deep Learning Vehicle Speed Detector"
+    date: "2023-02-03"
+    category: publication
+    tags: [uav, deep-learning, smart-city, raspberry-pi, edge-ai]
+    cover_image: "/images/news/uav-speed-detector-2023.jpg"
+    summary: >
+      Our open-access paper in Future Transportation (MDPI) shows how a
+      low-altitude drone with a Raspberry Pi and MobileNet-SSD can measure
+      vehicle speeds in real time, with no police officer on site.
+    content: |
+      ## The Idea
+
+      Many vehicle speed detectors don't work in real time across different
+      scenes. We asked whether a low-flying drone could do the job in a smart
+      city, especially where it's hard to station traffic police.
+
+      ## How We Built It
+
+      With Ata Jahangir Moshayedi and colleagues, I:
+
+      1. Found the best Raspberry Pi camera field of view indoors and outdoors by
+         varying its height and angle
+      2. Ran a **MobileNet-SSD** deep learning model on a Raspberry Pi 4B with an
+         Intel Neural Compute Stick 2 at the edge
+      3. Tested it at a real intersection at JXUST, flying the drone between
+         **0.7 and 3 m** and changing the camera angle
+
+      The result is an intelligent speed-control system that runs entirely on the
+      drone's edge hardware.
+
+      Published in *Future Transportation* 3(1), 189–209 (MDPI, 2023). It is open
+      access, so anyone can read the full paper.
+    link: "https://doi.org/10.3390/futuretransp3010012"
+    pinned: false
+
+  - id: iot-heart-rate-monitor-2022
+    title: "A Low-Cost IoT Heart Rate Monitor for Remote Care"
+    date: "2022-07-28"
+    category: conference
+    tags: [iot, healthcare, arduino, telemedicine]
+    cover_image: "/images/news/iot-heart-rate-monitor-2022.jpg"
+    summary: >
+      Our paper on an affordable Arduino-based heart rate monitoring system is
+      published in the SPIE proceedings of CICA 2022.
+    content: |
+      ## Background
+
+      Telemedicine dates back to the 1920s, but it matters more than ever for
+      patients who live far from medical centres or need round-the-clock care.
+
+      ## What We Built
+
+      With Ata Jahangir Moshayedi, Amin Kolahdooz and colleagues, I helped design
+      and build an **Arduino-based heart rate information system**. It is cheap
+      and easy to get hold of, so it suits many settings.
+
+      Tests showed the system can reliably track a person's heart rate.
+
+      Published in the *International Conference on Cloud Computing, Internet of
+      Things, and Computer Applications (CICA 2022)*, Proc. SPIE.
+    link: "https://doi.org/10.1117/12.2642725"
+    pinned: false
+
+  - id: service-robot-model-review-2022
+    title: "A Review of Service Robot Mathematical Models"
+    date: "2022-02-23"
+    category: publication
+    tags: [robotics, service-robots, kinematics, review]
+    cover_image: "/images/news/service-robot-model-review-2022.jpg"
+    summary: >
+      Our open-access review in EAI Endorsed Transactions on AI and Robotics maps
+      the shapes, uses and dynamic models of service robots, as a starting point
+      for anyone simulating them.
+    content: |
+      ## Why a Review
+
+      Service robots come in many shapes, each driven by its job. To simulate one
+      and design its controller, you first need a mathematical model of it.
+
+      ## What It Covers
+
+      With Ata Jahangir Moshayedi and colleagues, I reviewed:
+
+      - The main types and applications of service robots
+      - Robot dynamics and the dynamic models of differential-drive robots
+      - How the application shapes which model you should use
+
+      ![Types of service robots covered in the review](/images/news/service-robot-types-fig.png)
+
+      *Types of service robots covered in the review. Figure from Moshayedi et al.
+      (2022), CC BY 3.0.*
+
+      Published in *EAI Endorsed Transactions on AI and Robotics* 1(1). The paper
+      is open access.
+    link: "https://doi.org/10.4108/airo.v1i.20"
+    pinned: false
+
+  - id: deep-learning-pros-cons-2022
+    title: "Deep Learning vs. Traditional Algorithms: Where It Wins"
+    date: "2022-02-20"
+    category: publication
+    tags: [deep-learning, machine-learning, review]
+    cover_image: "/images/news/deep-learning-pros-cons-2022.jpg"
+    summary: >
+      Our open-access review in EAI Endorsed Transactions on AI and Robotics
+      surveys where deep learning beats traditional algorithms. It has become my
+      most-cited paper.
+    content: |
+      ## What the Review Covers
+
+      With Ata Jahangir Moshayedi, Amin Kolahdooz and Yang Shuxin, I reviewed the
+      main applications of deep learning and compared its layered, nonlinear
+      approach with traditional algorithms.
+
+      ![Deep learning application areas and the models they use](/images/news/deep-learning-applications-fig.png)
+
+      *Deep learning application areas and the models commonly used in each.
+      Figure from Moshayedi et al. (2022), CC BY 3.0.*
+
+      ## How We Chose the Areas
+
+      We looked at fields where deep learning has clearly changed the game, such
+      as speech recognition, chatbots, search and vision, and where newer work in
+      language, information retrieval and multimodal processing is opening more
+      doors.
+
+      The review is meant as a quick, practical overview for students and
+      researchers starting out with deep learning.
+
+      Published in *EAI Endorsed Transactions on AI and Robotics* 1(1), 1–13. The
+      paper is open access.
+    link: "https://doi.org/10.4108/airo.v1i.19"
+    pinned: false
+
+  - id: attendance-systems-review-2021
+    title: "Reviewing How Organisations Take Attendance"
+    date: "2021-01-01"
+    category: publication
+    tags: [iot, attendance, rfid, biometrics, review]
+    cover_image: "/images/news/attendance-systems-review-2021.jpg"
+    summary: >
+      Our open-access review in the BOHR International Journal of IoT Research
+      compares the technologies behind automated attendance systems.
+    content: |
+      ## The Problem
+
+      Keeping track of people costs money and effort. For big companies it's a
+      formality, but for schools, colleges and universities the cost of building
+      and running an attendance system adds up.
+
+      ## What We Reviewed
+
+      With Ata Jahangir Moshayedi and colleagues, I reviewed practical attendance
+      systems built on:
+
+      - Biometrics
+      - RFID
+      - Bluetooth
+      - GPS
+      - QR codes
+
+      The review lays out what has worked so far, to guide researchers building
+      the next generation of attendance systems. It also fed into our own IoT
+      self-lecture attendance system.
+
+      Published in *BOHR International Journal of Internet of Things Research* 1,
+      23–31 (2021). The paper is open access.
+    link: "https://doi.org/10.54646/bijiotr.003"
+    pinned: false
+
+  - id: raspberry-pi-scada-2019
+    title: "A Pocket-Sized SCADA System for Farms, Built on Raspberry Pi"
+    date: "2019-12-01"
+    category: conference
+    tags: [iot, scada, raspberry-pi, agriculture]
+    cover_image: "/images/news/raspberry-pi-scada-2019.jpg"
+    summary: >
+      Our IEEE ICISCE 2019 paper shows how a Raspberry Pi network can run a
+      low-cost, web-based SCADA system to monitor agricultural plants locally and
+      remotely.
+    content: |
+      ## Why SCADA on a Raspberry Pi
+
+      SCADA systems run most industrial monitoring, but software costs and
+      hardware size keep them out of reach for small operations like farms.
+
+      ## What We Did
+
+      With Ata Jahangir Moshayedi, Liefa Liao and Shuai Li, I designed and compared
+      two small SCADA systems for agriculture that:
+
+      - Use a **Raspberry Pi** as the host instead of a PC or laptop, cutting cost
+        and size
+      - Split the plant into **zones** to tackle security problems
+      - Offer a **web-based** interface for local and remote monitoring
+
+      A compact, powerful SCADA host this small had not been reported before.
+
+      Published in the *2019 6th International Conference on Information Science
+      and Control Engineering (ICISCE)*, IEEE.
+    link: "https://doi.org/10.1109/ICISCE48695.2019.00092"
+    pinned: false
+
+  - id: pid-tuning-agv-2019
+    title: "How to Tune PID Controllers for AGV Robots"
+    date: "2019-11-01"
+    category: publication
+    tags: [agv, pid, control-systems, robotics]
+    cover_image: "/images/news/pid-tuning-agv-2019.jpg"
+    summary: >
+      Our journal paper reviews and compares PID tuning methods for the speed and
+      steering of automated guided vehicles.
+    content: |
+      ## Background
+
+      PID control is still the go-to way to control many systems, including the
+      automated guided vehicles (AGVs) used across industry. Poorly tuned
+      parameters waste energy and cause lag and instability.
+
+      ## What We Compared
+
+      With Ata Jahangir Moshayedi and Liefa Liao, I looked at how each PID
+      parameter affects a real AGV, then compared tuning methods used for speed
+      and steering control:
+
+      - Ziegler–Nichols
+      - Lyapunov's direct method
+      - Fuzzy controllers
+      - Neural networks
+      - The humoral (immune-system-inspired) method
+
+      The right choice depends on what the system needs.
+
+      Published in *Journal of Simulation and Analysis of Novel Technologies in
+      Mechanical Engineering* (2019).
+    link: "http://jsme.iaukhsh.ac.ir/article_673338_5f03b3a8af1fae3009190d0c21b8b518.pdf"
     pinned: false

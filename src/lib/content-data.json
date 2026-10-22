@@ -89,16 +89,16 @@
             "navigation",
             "icfeict"
           ],
-          "cover_image": "",
+          "cover_image": "/images/news/agv-lidar-kinect-icfeict.jpg",
           "summary": "Our chapter comparing LiDAR and Kinect sensors for XiaoQiang AGV navigation is out in the Proceedings of the 5th ICFEICT 2025 (Springer).\n",
           "content": "## What We Studied\n\nTogether with Ata Jahangir Moshayedi, Zhenpeng Zou, and Amin Kolahdooz, I\ncontributed to a comparative study of **LiDAR** and **Kinect** sensing for\ntrajectory tracking on the XiaoQiang Automated Guided Vehicle (AGV), evaluated\nin both real-world and simulated (ROS/Gazebo/MATLAB) settings.\n\n## Method\n\nWe ran 400 bidirectional trajectory trials and 100 parking tests across\nobstacle-free and obstacle-rich scenarios to measure path accuracy,\nprocessing latency, and sensor reliability.\n\n## Findings\n\n- **LiDAR** was more robust in cluttered environments — average distance\n  error of **1.7 cm** and angular deviation of **2.9°**.\n- **Kinect** processed faster in open spaces but showed more angular drift\n  (**2.4 cm** / **4.1°**).\n\nThe chapter appears in *Proceedings of the 5th International Conference on\nFrontiers of Electronics, Information and Computation Technologies\n(ICFEICT 2025), Volume I*, published by Springer.\n",
-          "link": "https://link.springer.com/chapter/10.1007/978-981-95-8660-8_18",
+          "link": "https://doi.org/10.1007/978-981-95-8660-8_18",
           "pinned": true
         },
         {
           "id": "beetle-antennae-agv-2026",
           "title": "Journal Paper: Beetle Antennae Search for Omnidirectional AGV Navigation",
-          "date": "2026-01-15",
+          "date": "2026-02-11",
           "category": "publication",
           "tags": [
             "agv",
@@ -106,10 +106,10 @@
             "optimization",
             "robotics"
           ],
-          "cover_image": "",
+          "cover_image": "/images/news/beetle-antennae-agv-2026.jpg",
           "summary": "Our paper on an integrated Beetle Antennae Search–enabled navigation framework for omnidirectional AGVs in unknown environments is published in EAI Endorsed Transactions on AI and Robotics.\n",
-          "content": "## Background\n\nOmnidirectional AGVs promise flexible motion in tight, unstructured spaces,\nbut path planning for them in **unknown environments** remains difficult.\nWith Ata Jahangir Moshayedi, Utsab Karan, Meng Zhang, and David Bassir, I\nworked on a navigation framework built around **Beetle Antennae Search\n(BAS)**, a swarm-inspired evolutionary optimization technique.\n\n## Contribution\n\nThe framework integrates BAS-based local search with global path planning\nto balance exploration and computational cost, aiming for reliable\nnavigation without requiring a pre-built map.\n\nPublished in *EAI Endorsed Transactions on AI and Robotics* (2026).\n",
-          "link": "",
+          "content": "## Background\n\nOmnidirectional AGVs promise flexible motion in tight, unstructured spaces,\nbut path planning for them in **unknown environments** remains difficult.\nWith Ata Jahangir Moshayedi, Utsab Karan, Meng Zhang, and David Bassir, I\nworked on a navigation framework built around **Beetle Antennae Search\n(BAS)**, a swarm-inspired evolutionary optimization technique.\n\n## Contribution\n\nThe framework integrates BAS-based local search with global path planning\nto balance exploration and computational cost, aiming for reliable\nnavigation without requiring a pre-built map.\n\n![The omnidirectional AGV platform used in the study](/images/news/omni-agv-design-fig.png)\n\n*The omnidirectional AGV platform used in the study. Figure from Moshayedi et\nal. (2026), CC BY.*\n\nPublished in *EAI Endorsed Transactions on AI and Robotics* (2026). The paper\nis open access.\n",
+          "link": "https://doi.org/10.4108/airo.11438",
           "pinned": false
         },
         {
@@ -123,16 +123,16 @@
             "ieee",
             "conference"
           ],
-          "cover_image": "",
+          "cover_image": "/images/news/icraic-2025-path-planning.jpg",
           "summary": "Presented \"Path Planning for AGVs: Balancing Computational Efficiency and Optimality\" at the 5th ICRAIC 2025 (IEEE).\n",
           "content": "## The Talk\n\nThis work, co-authored with Ata Jahangir Moshayedi, Zeashan Hameed Khan,\nSen Yang, Abolfazl Razi, and Mohammad E. Andani, compares classical and\nmetaheuristic path planners for AGVs under real-time computational\nconstraints — asking how much optimality you can trade for speed, and when\nthat trade is worth it.\n\nPresented at the **5th International Conference on Robotics, Automation,\nand Intelligent Control (ICRAIC 2025)**, IEEE.\n",
-          "link": "",
+          "link": "https://doi.org/10.1109/ICRAIC67376.2025.11375850",
           "pinned": false
         },
         {
           "id": "urbanpark-iccit-2025",
           "title": "UrbanPark: LoRaWAN-Enabled Smart Parking at ICCIT 2025",
-          "date": "2025-08-20",
+          "date": "2025-04-13",
           "category": "conference",
           "tags": [
             "iot",
@@ -140,10 +140,10 @@
             "smart-city",
             "conference"
           ],
-          "cover_image": "",
+          "cover_image": "/images/news/urbanpark-iccit-2025.jpg",
           "summary": "Our paper \"UrbanPark\" on LoRaWAN-enabled smart parking modules was presented at the 4th ICCIT 2025.\n",
           "content": "## Overview\n\nWith Ata Jahangir Moshayedi, Zeashan Ahmed Khan, and Sen Yang, I worked on\n**UrbanPark**, a low-power smart parking infrastructure built on LoRaWAN\nconnectivity — designed to scale across a city's parking modules without\nthe cost and maintenance burden of dense Wi-Fi or cellular deployments.\n\nPresented at the **4th International Conference on Computing and\nInformation Technology (ICCIT 2025)**.\n",
-          "link": "",
+          "link": "https://doi.org/10.1109/ICCIT63348.2025.10989299",
           "pinned": false
         },
         {
@@ -165,17 +165,17 @@
         {
           "id": "emtihan-2025",
           "title": "EMTIHAN: A Secure Approach to Online Examinations",
-          "date": "2025-01-10",
+          "date": "2024-12-04",
           "category": "publication",
           "tags": [
             "education-technology",
             "security",
             "remote-learning"
           ],
-          "cover_image": "",
+          "cover_image": "/images/news/emtihan-2025.jpg",
           "summary": "Our paper on EMTIHAN, a secure online examination framework for remote learning, is published in Education and Information Technologies.\n",
           "content": "## The Problem\n\nRemote examinations for handwritten or diagram-based answers remain\nawkward — students improvise with scanning apps, and instructors struggle\nto verify authenticity. **EMTIHAN** (Arabic/Persian/Urdu/Turkish for\n\"exam\") is our answer: a portable, secure submission workflow paired with\nlightweight cloud infrastructure.\n\n## Results\n\nTested across participants in five countries against existing tools like\nChaoxing MOOC and Google Classroom, EMTIHAN improved submission security\nand speed, with **94.5% student satisfaction**.\n\nPublished in *Education and Information Technologies* (Springer, 2025),\nwith Ata Jahangir Moshayedi and collaborators.\n",
-          "link": "https://link.springer.com/article/10.1007/s10639-024-13170-4",
+          "link": "https://doi.org/10.1007/s10639-024-13170-4",
           "pinned": false
         },
         {
@@ -188,10 +188,10 @@
             "attendance",
             "embedded-systems"
           ],
-          "cover_image": "",
+          "cover_image": "/images/news/iot-self-lecture-attendance-2024.jpg",
           "summary": "Our design for a portable, secure self-lecture attendance system (SLAS) using IoT and QR codes is published in the International Journal of Electronic Security and Digital Forensics.\n",
           "content": "## Motivation\n\nClassroom attendance tracking is still often manual, slow, or easy to\nspoof. We designed **SLAS**, a self-lecture attendance system that pairs\nstudents' smartphones with QR-code-based check-in over a low-cost IoT\nbackend, addressing privacy and security gaps in existing systems.\n\n## Deployment\n\nWe validated SLAS in a live lecture setting, comparing it against existing\nattendance methods on accuracy, cost, and processing time.\n\nPublished in the *International Journal of Electronic Security and\nDigital Forensics* (2024), with Ata Jahangir Moshayedi and collaborators.\n",
-          "link": "",
+          "link": "https://doi.org/10.1504/IJESDF.2024.142009",
           "pinned": false
         },
         {
@@ -205,10 +205,10 @@
             "yolo",
             "publication"
           ],
-          "cover_image": "",
+          "cover_image": "/images/news/visapp-2024-attentive-yolo.jpg",
           "summary": "Our paper \"Attentive-YOLO,\" on efficient on-site water pipeline inspection using an optimized YOLOv7, was accepted at VISAPP 2024.\n",
           "content": "## Background\n\nWater pipeline inspection under the Jal Jeevan Mission (Government of\nIndia) needs detection models that are both accurate and light enough to\nrun in the field. With Priyanka Bagade, I worked on **Attentive-YOLO**, a\nYOLOv7 variant integrating **Efficient Channel Attention (ECA)** and a\nreduced ELAN backbone.\n\n## Result\n\nThe optimized model cut parameter count by roughly **20%** compared to\nbaseline YOLOv7 while maintaining detection accuracy for pipeline defects —\nmaking on-site, real-time inspection more practical.\n\nPresented at the 19th International Conference on Computer Vision Theory\nand Applications (**VISAPP 2024**), Rome, Italy.\n",
-          "link": "",
+          "link": "https://doi.org/10.5220/0012374000003660",
           "pinned": false
         },
         {
@@ -222,10 +222,164 @@
             "ieee",
             "publication"
           ],
-          "cover_image": "",
+          "cover_image": "/images/news/foodiebot-ieee-access-2024.jpg",
           "summary": "Our paper on the design and development of FOODIEBOT, a food-service robot, is published in IEEE Access.\n",
           "content": "## Overview\n\nFOODIEBOT is an adaptive service robot for object manipulation and\ndelivery in dining-hall settings, combining image processing with mobile\nand web interfaces for control. This paper traces its evolution from\nsimulation to physical prototype.\n\nWith Ata Jahangir Moshayedi, Liefa Liao, Amir Sohail Khan, Amin Kolahdooz,\nand Ali Eftekhari. Published in *IEEE Access*, Vol. 12, pp. 36148–36172\n(2024).\n",
-          "link": "https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf",
+          "link": "https://doi.org/10.1109/ACCESS.2024.3355278",
+          "pinned": false
+        },
+        {
+          "id": "dr-orangeapp-2024",
+          "title": "Dr_OrangeApp: Spotting Citrus Pests in Real Time from a Phone",
+          "date": "2024-12-27",
+          "category": "conference",
+          "tags": [
+            "agriculture",
+            "computer-vision",
+            "mobile-app",
+            "pest-detection"
+          ],
+          "cover_image": "/images/news/dr-orangeapp-2024.jpg",
+          "summary": "Our paper on Dr_OrangeApp, a mobile app that helps farmers detect orange pests in real time, is published in the Proceedings of the 4th Asia-Pacific Artificial Intelligence and Big Data Forum (ACM).\n",
+          "content": "## The Problem\n\nOrange pests cut both the yield and the quality of citrus crops. Catching an\ninfestation early means farmers can act sooner and spray less.\n\n## What We Built\n\nWith Ata Jahangir Moshayedi, M. J. Jawadi and colleagues, I worked on\n**Dr_OrangeApp**, a phone app that classifies pests from a photo and helps\nfarmers follow up with charts, reports and QR codes for each tree.\n\n## Results\n\n- Tested on **313 images** covering five common pests\n- **Precision 1.00**, average accuracy and recall **0.75**, F1 score **0.856**\n- In a real orange orchard, the app found and reported **Citrus Leafminer** on 10 trees\n\nLighting, camera angle and image quality still affect accuracy, and taking a\nfew photos of the same spot helps.\n\nPublished in *Proceedings of the 4th Asia-Pacific Artificial Intelligence and\nBig Data Forum* (ACM, 2024). The paper is open access.\n",
+          "link": "https://doi.org/10.1145/3718491.3718618",
+          "pinned": false
+        },
+        {
+          "id": "agv-ir-timed-automata-2024",
+          "title": "Easing AGV Traffic Jams with IR Sensors and Timed Automata",
+          "date": "2024-12-31",
+          "category": "publication",
+          "tags": [
+            "agv",
+            "traffic-management",
+            "timed-automata",
+            "simulation"
+          ],
+          "cover_image": "/images/news/agv-ir-timed-automata-2024.jpg",
+          "summary": "Our paper with A. Das on path tracking and traffic management for automated guided vehicles is out in the Journal of Robotics Research.\n",
+          "content": "## Why It Matters\n\nWhen many AGVs share the same paths, as delivery robots increasingly do,\nkeeping them moving without collisions or gridlock gets hard.\n\n## Approach\n\nA. Das and I reviewed existing strategies, then simulated a system that\ncombines **IR sensors** with **timed automata** to coordinate vehicles on\nshared paths and cut waiting times.\n\n## Results\n\nIn CoppeliaSim (V-REP) simulations of high-congestion scenarios:\n\n- AGVs kept normal to moderate speeds (5 to 7 units)\n- Maximum congestion dropped by **20%**\n- Traffic kept flowing with no total blockage\n\nPublished in *Journal of Robotics Research* (2024).\n",
+          "link": "https://doi.org/10.64820/aepjrr.11.15.23.122024",
+          "pinned": false
+        },
+        {
+          "id": "uav-speed-detector-2023",
+          "title": "Drones as Traffic Police: A Deep Learning Vehicle Speed Detector",
+          "date": "2023-02-03",
+          "category": "publication",
+          "tags": [
+            "uav",
+            "deep-learning",
+            "smart-city",
+            "raspberry-pi",
+            "edge-ai"
+          ],
+          "cover_image": "/images/news/uav-speed-detector-2023.jpg",
+          "summary": "Our open-access paper in Future Transportation (MDPI) shows how a low-altitude drone with a Raspberry Pi and MobileNet-SSD can measure vehicle speeds in real time, with no police officer on site.\n",
+          "content": "## The Idea\n\nMany vehicle speed detectors don't work in real time across different\nscenes. We asked whether a low-flying drone could do the job in a smart\ncity, especially where it's hard to station traffic police.\n\n## How We Built It\n\nWith Ata Jahangir Moshayedi and colleagues, I:\n\n1. Found the best Raspberry Pi camera field of view indoors and outdoors by\n   varying its height and angle\n2. Ran a **MobileNet-SSD** deep learning model on a Raspberry Pi 4B with an\n   Intel Neural Compute Stick 2 at the edge\n3. Tested it at a real intersection at JXUST, flying the drone between\n   **0.7 and 3 m** and changing the camera angle\n\nThe result is an intelligent speed-control system that runs entirely on the\ndrone's edge hardware.\n\nPublished in *Future Transportation* 3(1), 189–209 (MDPI, 2023). It is open\naccess, so anyone can read the full paper.\n",
+          "link": "https://doi.org/10.3390/futuretransp3010012",
+          "pinned": false
+        },
+        {
+          "id": "iot-heart-rate-monitor-2022",
+          "title": "A Low-Cost IoT Heart Rate Monitor for Remote Care",
+          "date": "2022-07-28",
+          "category": "conference",
+          "tags": [
+            "iot",
+            "healthcare",
+            "arduino",
+            "telemedicine"
+          ],
+          "cover_image": "/images/news/iot-heart-rate-monitor-2022.jpg",
+          "summary": "Our paper on an affordable Arduino-based heart rate monitoring system is published in the SPIE proceedings of CICA 2022.\n",
+          "content": "## Background\n\nTelemedicine dates back to the 1920s, but it matters more than ever for\npatients who live far from medical centres or need round-the-clock care.\n\n## What We Built\n\nWith Ata Jahangir Moshayedi, Amin Kolahdooz and colleagues, I helped design\nand build an **Arduino-based heart rate information system**. It is cheap\nand easy to get hold of, so it suits many settings.\n\nTests showed the system can reliably track a person's heart rate.\n\nPublished in the *International Conference on Cloud Computing, Internet of\nThings, and Computer Applications (CICA 2022)*, Proc. SPIE.\n",
+          "link": "https://doi.org/10.1117/12.2642725",
+          "pinned": false
+        },
+        {
+          "id": "service-robot-model-review-2022",
+          "title": "A Review of Service Robot Mathematical Models",
+          "date": "2022-02-23",
+          "category": "publication",
+          "tags": [
+            "robotics",
+            "service-robots",
+            "kinematics",
+            "review"
+          ],
+          "cover_image": "/images/news/service-robot-model-review-2022.jpg",
+          "summary": "Our open-access review in EAI Endorsed Transactions on AI and Robotics maps the shapes, uses and dynamic models of service robots, as a starting point for anyone simulating them.\n",
+          "content": "## Why a Review\n\nService robots come in many shapes, each driven by its job. To simulate one\nand design its controller, you first need a mathematical model of it.\n\n## What It Covers\n\nWith Ata Jahangir Moshayedi and colleagues, I reviewed:\n\n- The main types and applications of service robots\n- Robot dynamics and the dynamic models of differential-drive robots\n- How the application shapes which model you should use\n\n![Types of service robots covered in the review](/images/news/service-robot-types-fig.png)\n\n*Types of service robots covered in the review. Figure from Moshayedi et al.\n(2022), CC BY 3.0.*\n\nPublished in *EAI Endorsed Transactions on AI and Robotics* 1(1). The paper\nis open access.\n",
+          "link": "https://doi.org/10.4108/airo.v1i.20",
+          "pinned": false
+        },
+        {
+          "id": "deep-learning-pros-cons-2022",
+          "title": "Deep Learning vs. Traditional Algorithms: Where It Wins",
+          "date": "2022-02-20",
+          "category": "publication",
+          "tags": [
+            "deep-learning",
+            "machine-learning",
+            "review"
+          ],
+          "cover_image": "/images/news/deep-learning-pros-cons-2022.jpg",
+          "summary": "Our open-access review in EAI Endorsed Transactions on AI and Robotics surveys where deep learning beats traditional algorithms. It has become my most-cited paper.\n",
+          "content": "## What the Review Covers\n\nWith Ata Jahangir Moshayedi, Amin Kolahdooz and Yang Shuxin, I reviewed the\nmain applications of deep learning and compared its layered, nonlinear\napproach with traditional algorithms.\n\n![Deep learning application areas and the models they use](/images/news/deep-learning-applications-fig.png)\n\n*Deep learning application areas and the models commonly used in each.\nFigure from Moshayedi et al. (2022), CC BY 3.0.*\n\n## How We Chose the Areas\n\nWe looked at fields where deep learning has clearly changed the game, such\nas speech recognition, chatbots, search and vision, and where newer work in\nlanguage, information retrieval and multimodal processing is opening more\ndoors.\n\nThe review is meant as a quick, practical overview for students and\nresearchers starting out with deep learning.\n\nPublished in *EAI Endorsed Transactions on AI and Robotics* 1(1), 1–13. The\npaper is open access.\n",
+          "link": "https://doi.org/10.4108/airo.v1i.19",
+          "pinned": false
+        },
+        {
+          "id": "attendance-systems-review-2021",
+          "title": "Reviewing How Organisations Take Attendance",
+          "date": "2021-01-01",
+          "category": "publication",
+          "tags": [
+            "iot",
+            "attendance",
+            "rfid",
+            "biometrics",
+            "review"
+          ],
+          "cover_image": "/images/news/attendance-systems-review-2021.jpg",
+          "summary": "Our open-access review in the BOHR International Journal of IoT Research compares the technologies behind automated attendance systems.\n",
+          "content": "## The Problem\n\nKeeping track of people costs money and effort. For big companies it's a\nformality, but for schools, colleges and universities the cost of building\nand running an attendance system adds up.\n\n## What We Reviewed\n\nWith Ata Jahangir Moshayedi and colleagues, I reviewed practical attendance\nsystems built on:\n\n- Biometrics\n- RFID\n- Bluetooth\n- GPS\n- QR codes\n\nThe review lays out what has worked so far, to guide researchers building\nthe next generation of attendance systems. It also fed into our own IoT\nself-lecture attendance system.\n\nPublished in *BOHR International Journal of Internet of Things Research* 1,\n23–31 (2021). The paper is open access.\n",
+          "link": "https://doi.org/10.54646/bijiotr.003",
+          "pinned": false
+        },
+        {
+          "id": "raspberry-pi-scada-2019",
+          "title": "A Pocket-Sized SCADA System for Farms, Built on Raspberry Pi",
+          "date": "2019-12-01",
+          "category": "conference",
+          "tags": [
+            "iot",
+            "scada",
+            "raspberry-pi",
+            "agriculture"
+          ],
+          "cover_image": "/images/news/raspberry-pi-scada-2019.jpg",
+          "summary": "Our IEEE ICISCE 2019 paper shows how a Raspberry Pi network can run a low-cost, web-based SCADA system to monitor agricultural plants locally and remotely.\n",
+          "content": "## Why SCADA on a Raspberry Pi\n\nSCADA systems run most industrial monitoring, but software costs and\nhardware size keep them out of reach for small operations like farms.\n\n## What We Did\n\nWith Ata Jahangir Moshayedi, Liefa Liao and Shuai Li, I designed and compared\ntwo small SCADA systems for agriculture that:\n\n- Use a **Raspberry Pi** as the host instead of a PC or laptop, cutting cost\n  and size\n- Split the plant into **zones** to tackle security problems\n- Offer a **web-based** interface for local and remote monitoring\n\nA compact, powerful SCADA host this small had not been reported before.\n\nPublished in the *2019 6th International Conference on Information Science\nand Control Engineering (ICISCE)*, IEEE.\n",
+          "link": "https://doi.org/10.1109/ICISCE48695.2019.00092",
+          "pinned": false
+        },
+        {
+          "id": "pid-tuning-agv-2019",
+          "title": "How to Tune PID Controllers for AGV Robots",
+          "date": "2019-11-01",
+          "category": "publication",
+          "tags": [
+            "agv",
+            "pid",
+            "control-systems",
+            "robotics"
+          ],
+          "cover_image": "/images/news/pid-tuning-agv-2019.jpg",
+          "summary": "Our journal paper reviews and compares PID tuning methods for the speed and steering of automated guided vehicles.\n",
+          "content": "## Background\n\nPID control is still the go-to way to control many systems, including the\nautomated guided vehicles (AGVs) used across industry. Poorly tuned\nparameters waste energy and cause lag and instability.\n\n## What We Compared\n\nWith Ata Jahangir Moshayedi and Liefa Liao, I looked at how each PID\nparameter affects a real AGV, then compared tuning methods used for speed\nand steering control:\n\n- Ziegler–Nichols\n- Lyapunov's direct method\n- Fuzzy controllers\n- Neural networks\n- The humoral (immune-system-inspired) method\n\nThe right choice depends on what the system needs.\n\nPublished in *Journal of Simulation and Analysis of Novel Technologies in\nMechanical Engineering* (2019).\n",
+          "link": "http://jsme.iaukhsh.ac.ir/article_673338_5f03b3a8af1fae3009190d0c21b8b518.pdf",
           "pinned": false
         }
       ],
@@ -477,7 +631,7 @@
           "blog_link": ""
         }
       ],
-      "publications_bibtex": "@incollection{moshayedi2026lidar,\n  title={Comparative Analysis of LiDAR and Kinect Sensors for XiaoQiang AGV Navigation in Real and Simulated Environments},\n  author={Moshayedi, A. J. and Zou, Z. and Roy, A. S. and Kolahdooz, A.},\n  booktitle={Proceedings of the 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Vol. I},\n  publisher={Springer},\n  year={2026},\n  type={conference},\n  pdf={}\n} @article{moshayedi2026integrated,\n  title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},\n  author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  pdf={}\n} @inproceedings{moshayedi2025path,\n  title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},\n  author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},\n  booktitle={5th ICRAIC 2025, IEEE},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},\n  author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},\n  booktitle={4th ICCIT 2025},\n  year={2025},\n  type={conference},\n  pdf={}\n} @inproceedings{moshayedi2024dr,\n  title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},\n  author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{roy2024advanced,\n  title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},\n  author={Roy, A.S. and Das, A.},\n  journal={Journal of Robotics Research (JRR), 1(1), 15–23},\n  year={2024},\n  type={journal},\n  pdf={}\n} @inproceedings{roy2024attentive,\n  title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},\n  author={Roy, A.S. and Bagade, P.},\n  booktitle={VISAPP 2024},\n  year={2024},\n  type={conference},\n  pdf={}\n} @article{moshayedi2023secure,\n  title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},\n  journal={Future transportation},\n  volume={3},\n  number={1},\n  pages={189--209},\n  year={2023},\n  publisher={MDPI},\n  pdf={}\n} @article{moshayedi2024design,\n  title={Design and development of FOODIEBOT robot: From simulation to design},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},\n  journal={IEEE access},\n  volume={12},\n  pages={36148--36172},\n  year={2024},\n  publisher={IEEE},\n  pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n} @article{moshayedi2025emtihan,\n  title={EMTIHAN: Design of a novel approach to secure online examination challenge in remote learning},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={Education and Information Technologies},\n  year={2025},\n  publisher={Springer},\n  pdf={}\n} @article{moshayedi2024iot,\n  title={A novel IoT-enabled portable, secure automatic self-lecture attendance system: design, development and comparison},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={International Journal of Electronic Security and Digital Forensics},\n  year={2024},\n  publisher={Inderscience},\n  pdf={}\n} @article{roy2022automation,\n  title={Automation Attendance Systems Approaches: A Practical Review},\n  author={Shuvam Roy, Atanu and Lan, H. and Gheisari, Mehdi and Abbasi, Aqif Afzaal and Moshayedi, Ata Jahangir and Liao, Liefa and Hosseini Bamakan, Seyed Mojtaba},\n  journal={BOHR International Journal of Internet of Things, Artificial Intelligence and Machine Learning},\n  year={2022},\n  pdf={}\n}\n",
+      "publications_bibtex": "@incollection{moshayedi2026lidar,\n  title={Comparative Analysis of LiDAR and Kinect Sensors for XiaoQiang AGV Navigation in Real and Simulated Environments},\n  author={Moshayedi, A. J. and Zou, Z. and Roy, A. S. and Kolahdooz, A.},\n  booktitle={Proceedings of the 5th International Conference on Frontiers of Electronics, Information and Computation Technologies (ICFEICT 2025), Vol. I},\n  publisher={Springer},\n  year={2026},\n  type={conference},\n  doi={10.1007/978-981-95-8660-8_18},    pdf={}\n} @article{moshayedi2026integrated,\n  title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},\n  author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2026},\n  type={journal},\n  doi={10.4108/airo.11438},    pdf={}\n} @inproceedings{moshayedi2025path,\n  title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},\n  author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},\n  booktitle={5th ICRAIC 2025, IEEE},\n  year={2025},\n  type={conference},\n  doi={10.1109/ICRAIC67376.2025.11375850},    pdf={}\n} @inproceedings{moshayedi2025urbanpark,\n  title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},\n  author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},\n  booktitle={4th ICCIT 2025},\n  year={2025},\n  type={conference},\n  doi={10.1109/ICCIT63348.2025.10989299},    pdf={}\n} @inproceedings{moshayedi2024dr,\n  title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},\n  author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},\n  booktitle={4th Asia-Pacific AI & Big Data Forum 2024},\n  year={2024},\n  type={conference},\n  doi={10.1145/3718491.3718618},    pdf={}\n} @article{roy2024advanced,\n  title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},\n  author={Roy, A.S. and Das, A.},\n  journal={Journal of Robotics Research (JRR), 1(1), 15–23},\n  year={2024},\n  type={journal},\n  doi={10.64820/aepjrr.11.15.23.122024},    pdf={}\n} @inproceedings{roy2024attentive,\n  title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},\n  author={Roy, A.S. and Bagade, P.},\n  booktitle={VISAPP 2024},\n  year={2024},\n  type={conference},\n  doi={10.5220/0012374000003660},    pdf={}\n} @article{moshayedi2023secure,\n  title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},\n  journal={Future transportation},\n  volume={3},\n  number={1},\n  pages={189--209},\n  year={2023},\n  publisher={MDPI},\n  doi={10.3390/futuretransp3010012},    pdf={}\n} @article{moshayedi2024design,\n  title={Design and development of FOODIEBOT robot: From simulation to design},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},\n  journal={IEEE access},\n  volume={12},\n  pages={36148--36172},\n  year={2024},\n  publisher={IEEE},\n  doi={10.1109/ACCESS.2024.3355278},    pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}\n} @article{moshayedi2025emtihan,\n  title={EMTIHAN: Design of a novel approach to secure online examination challenge in remote learning},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={Education and Information Technologies},\n  year={2025},\n  publisher={Springer},\n  doi={10.1007/s10639-024-13170-4},    pdf={}\n} @article{moshayedi2024iot,\n  title={A novel IoT-enabled portable, secure automatic self-lecture attendance system: design, development and comparison},\n  author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},\n  journal={International Journal of Electronic Security and Digital Forensics},\n  year={2024},\n  publisher={Inderscience},\n  doi={10.1504/IJESDF.2024.142009},    pdf={}\n} @article{roy2022automation,\n  title={Automation Attendance Systems Approaches: A Practical Review},\n  author={Shuvam Roy, Atanu and Lan, H. and Gheisari, Mehdi and Abbasi, Aqif Afzaal and Moshayedi, Ata Jahangir and Liao, Liefa and Hosseini Bamakan, Seyed Mojtaba},\n  journal={BOHR International Journal of Internet of Things, Artificial Intelligence and Machine Learning},\n  year={2022},\n  doi={10.54646/bijiotr.003},    pdf={}\n}\n@inproceedings{moshayedi2022heart,\n  title={Design and promotion of cost-effective IOT-based heart rate monitoring},\n  author={Moshayedi, A. J. and Kolahdooz, A. and Roy, A. S. and Rostami, S. A. L. and Xie, X.},\n  booktitle={International Conference on Cloud Computing, Internet of Things, and Computer Applications (CICA 2022), Proc. SPIE},\n  year={2022},\n  type={conference},\n  doi={10.1117/12.2642725},\n  pdf={}\n}\n@article{moshayedi2022deep,\n  title={Deep Learning Application Pros and Cons Over Algorithm},\n  author={Moshayedi, A. J. and Roy, A. S. and Kolahdooz, A. and Shuxin, Y.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2022},\n  type={journal},\n  doi={10.4108/airo.v1i.19},\n  pdf={}\n}\n@article{moshayedi2022review,\n  title={Review on: The Service Robot Mathematical Model},\n  author={Moshayedi, A. J. and Roy, A. S. and Sambo, S. K. and Zhong, Y. and Liao, L.},\n  journal={EAI Endorsed Transactions on AI and Robotics},\n  year={2022},\n  type={journal},\n  doi={10.4108/airo.v1i.20},\n  pdf={}\n}\n@inproceedings{moshayedi2019raspberry,\n  title={Raspberry Pi SCADA Zonal Based System for Agricultural Plant Monitoring},\n  author={Moshayedi, A. J. and Roy, A. S. and Liao, L. and Li, S.},\n  booktitle={2019 6th International Conference on Information Science and Control Engineering (ICISCE), IEEE},\n  year={2019},\n  type={conference},\n  doi={10.1109/ICISCE48695.2019.00092},\n  pdf={}\n}\n@article{moshayedi2019pid,\n  title={PID Tuning Method on AGV (Automated Guided Vehicle) Industrial Robot},\n  author={Moshayedi, A. J. and Roy, A. S. and Liao, L.},\n  journal={Journal of Simulation and Analysis of Novel Technologies in Mechanical Engineering},\n  year={2019},\n  type={journal},\n  url={http://jsme.iaukhsh.ac.ir/article_673338_5f03b3a8af1fae3009190d0c21b8b518.pdf},\n  pdf={}\n}\n",
       "research_statements": [
         {
           "title": "Autonomous Guided Vehicles (AGV)",

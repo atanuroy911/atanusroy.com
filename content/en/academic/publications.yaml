@@ -6,49 +6,49 @@ publications_bibtex: |
     publisher={Springer},
     year={2026},
     type={conference},
-    pdf={}
+    doi={10.1007/978-981-95-8660-8_18},    pdf={}
   } @article{moshayedi2026integrated,
     title={An Integrated Beetle Antennae Search–Enabled Navigation Framework for Omnidirectional AGV Mobile Robots in Unknown Environments},
     author={Moshayedi, A. J. and Roy, A. S. and Karan, U. and Zhang, M. and Bassir, D.},
     journal={EAI Endorsed Transactions on AI and Robotics},
     year={2026},
     type={journal},
-    pdf={}
+    doi={10.4108/airo.11438},    pdf={}
   } @inproceedings{moshayedi2025path,
     title={Path Planning for AGVs: Balancing Computational Efficiency and Optimality},
     author={Moshayedi, A. J. and Roy, A. S. and Khan, Z. H. and Yang, S. and Razi, A. and Andani, M. E.},
     booktitle={5th ICRAIC 2025, IEEE},
     year={2025},
     type={conference},
-    pdf={}
+    doi={10.1109/ICRAIC67376.2025.11375850},    pdf={}
   } @inproceedings{moshayedi2025urbanpark,
     title={UrbanPark: Advancing Parking Infrastructure with LoRaWAN enabled Smart Parking Modules},
     author={Moshayedi, A.J. and Roy, A.S. and Khan, Z. A. and Yang, S.},
     booktitle={4th ICCIT 2025},
     year={2025},
     type={conference},
-    pdf={}
+    doi={10.1109/ICCIT63348.2025.10989299},    pdf={}
   } @inproceedings{moshayedi2024dr,
     title={Dr OrangeApp: Revolutionizing Real-Time Pest Detection in Citrus Orchards},
     author={Moshayedi, A. J. and Jawadi, M. J. and Roy, A. S. and others},
     booktitle={4th Asia-Pacific AI & Big Data Forum 2024},
     year={2024},
     type={conference},
-    pdf={}
+    doi={10.1145/3718491.3718618},    pdf={}
   } @article{roy2024advanced,
     title={Advanced Path Tracking and Traffic Management Using IR Sensors and Timed Automata},
     author={Roy, A.S. and Das, A.},
     journal={Journal of Robotics Research (JRR), 1(1), 15–23},
     year={2024},
     type={journal},
-    pdf={}
+    doi={10.64820/aepjrr.11.15.23.122024},    pdf={}
   } @inproceedings{roy2024attentive,
     title={Attentive-YOLO: On-site Water Pipeline Inspection using Efficient Channel Attention and Reduced ELAN-based YOLOv7},
     author={Roy, A.S. and Bagade, P.},
     booktitle={VISAPP 2024},
     year={2024},
     type={conference},
-    pdf={}
+    doi={10.5220/0012374000003660},    pdf={}
   } @article{moshayedi2023secure,
     title={A secure traffic police remote sensing approach via a deep learning-based low-altitude vehicle speed detector through uavs in smart cites: Algorithm, implementation and evaluation},
     author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Taravet, Alireza and Liao, Liefa and Wu, Jianqing and Gheisari, Mehdi},
@@ -58,7 +58,7 @@ publications_bibtex: |
     pages={189--209},
     year={2023},
     publisher={MDPI},
-    pdf={}
+    doi={10.3390/futuretransp3010012},    pdf={}
   } @article{moshayedi2024design,
     title={Design and development of FOODIEBOT robot: From simulation to design},
     author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and Liao, Liefa and Khan, Amir Sohail and Kolahdooz, Amin and Eftekhari, Ali},
@@ -67,25 +67,70 @@ publications_bibtex: |
     pages={36148--36172},
     year={2024},
     publisher={IEEE},
-    pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}
+    doi={10.1109/ACCESS.2024.3355278},    pdf={https://ieeexplore.ieee.org/iel7/6287639/6514899/10401885.pdf}
   } @article{moshayedi2025emtihan,
     title={EMTIHAN: Design of a novel approach to secure online examination challenge in remote learning},
     author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},
     journal={Education and Information Technologies},
     year={2025},
     publisher={Springer},
-    pdf={}
+    doi={10.1007/s10639-024-13170-4},    pdf={}
   } @article{moshayedi2024iot,
     title={A novel IoT-enabled portable, secure automatic self-lecture attendance system: design, development and comparison},
     author={Moshayedi, Ata Jahangir and Roy, Atanu Shuvam and others},
     journal={International Journal of Electronic Security and Digital Forensics},
     year={2024},
     publisher={Inderscience},
-    pdf={}
+    doi={10.1504/IJESDF.2024.142009},    pdf={}
   } @article{roy2022automation,
     title={Automation Attendance Systems Approaches: A Practical Review},
     author={Shuvam Roy, Atanu and Lan, H. and Gheisari, Mehdi and Abbasi, Aqif Afzaal and Moshayedi, Ata Jahangir and Liao, Liefa and Hosseini Bamakan, Seyed Mojtaba},
     journal={BOHR International Journal of Internet of Things, Artificial Intelligence and Machine Learning},
     year={2022},
+    doi={10.54646/bijiotr.003},    pdf={}
+  }
+  @inproceedings{moshayedi2022heart,
+    title={Design and promotion of cost-effective IOT-based heart rate monitoring},
+    author={Moshayedi, A. J. and Kolahdooz, A. and Roy, A. S. and Rostami, S. A. L. and Xie, X.},
+    booktitle={International Conference on Cloud Computing, Internet of Things, and Computer Applications (CICA 2022), Proc. SPIE},
+    year={2022},
+    type={conference},
+    doi={10.1117/12.2642725},
+    pdf={}
+  }
+  @article{moshayedi2022deep,
+    title={Deep Learning Application Pros and Cons Over Algorithm},
+    author={Moshayedi, A. J. and Roy, A. S. and Kolahdooz, A. and Shuxin, Y.},
+    journal={EAI Endorsed Transactions on AI and Robotics},
+    year={2022},
+    type={journal},
+    doi={10.4108/airo.v1i.19},
+    pdf={}
+  }
+  @article{moshayedi2022review,
+    title={Review on: The Service Robot Mathematical Model},
+    author={Moshayedi, A. J. and Roy, A. S. and Sambo, S. K. and Zhong, Y. and Liao, L.},
+    journal={EAI Endorsed Transactions on AI and Robotics},
+    year={2022},
+    type={journal},
+    doi={10.4108/airo.v1i.20},
+    pdf={}
+  }
+  @inproceedings{moshayedi2019raspberry,
+    title={Raspberry Pi SCADA Zonal Based System for Agricultural Plant Monitoring},
+    author={Moshayedi, A. J. and Roy, A. S. and Liao, L. and Li, S.},
+    booktitle={2019 6th International Conference on Information Science and Control Engineering (ICISCE), IEEE},
+    year={2019},
+    type={conference},
+    doi={10.1109/ICISCE48695.2019.00092},
+    pdf={}
+  }
+  @article{moshayedi2019pid,
+    title={PID Tuning Method on AGV (Automated Guided Vehicle) Industrial Robot},
+    author={Moshayedi, A. J. and Roy, A. S. and Liao, L.},
+    journal={Journal of Simulation and Analysis of Novel Technologies in Mechanical Engineering},
+    year={2019},
+    type={journal},
+    url={http://jsme.iaukhsh.ac.ir/article_673338_5f03b3a8af1fae3009190d0c21b8b518.pdf},
     pdf={}
   }

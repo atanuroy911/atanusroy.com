@@ -45,7 +45,11 @@ export interface PageSEOOptions {
 
 // Search engines show ~155 characters; cut at a word boundary instead of mid-word
 function trimDescription(text: string, max = 158): string {
-  const clean = (text || '').replace(/\s+/g, ' ').trim()
+  const clean = (text || '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // [label](url) -> label
+    .replace(/\*\*/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
   if (clean.length <= max) return clean
   return clean.slice(0, clean.lastIndexOf(' ', max - 1)).replace(/[,;:.\s]+$/, '') + '…'
 }
@@ -131,7 +135,7 @@ export function getAcademicAboutSEO(locale: Locale): PageSEOOptions {
 export function getAcademicResearchSEO(locale: Locale): PageSEOOptions {
   return {
     title: 'Research — Atanu Shuvam Roy',
-    description: 'Research by Atanu Shuvam Roy in computer vision, autonomous ground vehicles, IoT anomaly detection, and deep learning.',
+    description: 'Research by Atanu Shuvam Roy on vision-language models, vision-language-action models, robotic simulation and computer vision, with papers in each area.',
     path: `/${locale}/research`,
     locale,
     keywords: ['Computer Vision', 'AGV', 'Autonomous Vehicles', 'Deep Reinforcement Learning', 'IoT', 'Edge Computing', 'Research'],

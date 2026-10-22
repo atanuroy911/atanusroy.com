@@ -5,6 +5,7 @@ import { buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
 import { Newspaper, ArrowRight, BookOpen, Download } from 'lucide-react'
 import { getBlogList } from '@/lib/blog'
 import { PublicationList } from '@/components/Publications'
+import { RichText } from '@/components/RichText'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -29,28 +30,7 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
         <h2 className="text-2xl md:text-3xl font-bold border-b border-border pb-2" style={{ color: 'var(--ac-navy)' }}>
           About
         </h2>
-        <p className="text-[15px] md:text-base leading-relaxed text-muted-foreground whitespace-pre-wrap max-w-5xl">
-          {content.academic.bio}
-        </p>
-        <div className="pt-1">
-          <h3 className="font-bold text-base md:text-lg mb-2.5">Research Interests</h3>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            {content.academic.research_interests?.map((ri: string) => (
-              <li key={ri} className="flex items-center gap-2 text-sm md:text-base">
-                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <span>{ri}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="pt-1">
-          <Link
-            href={`/${locale}/about`}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline underline-offset-4"
-          >
-            Full profile &amp; CV <ArrowRight size={14} />
-          </Link>
-        </div>
+        <RichText text={content.academic.bio} locale={locale} className="text-[15px] md:text-base leading-relaxed text-muted-foreground max-w-5xl" />
       </section>
 
       {/* ── Recent News ───────────────────────────────────────────── */}

@@ -1,32 +1,123 @@
 # AUTO-GENERATED — do not edit manually
 # Run: npm run translate to regenerate
 
-research_statements:
-  - title: অটোনোমাস গাইডেড ভেহিকেল (AGV)
-    description: >-
-      বিটল অ্যান্টেনা অনুসন্ধানের মতো বিবর্তনীয় পদ্ধতি ব্যবহার করে অজানা পরিবেশে সর্বমুখী AGV-এর জন্য শক্তি-সচেতন এবং
-      শক্তিশালী পথ পরিকল্পনা অ্যালগরিদম তৈরি করা।
-    long_description: >-
-      My AGV research focuses on making autonomous navigation practical in cluttered, dynamic environments. I work on
-      energy-aware path planning, robustness under uncertainty, and the balance between optimality and compute cost. The
-      aim is to make navigation methods reliable enough for real deployments in labs, campuses, and city-scale
-      environments.
-    featured_image: /assets/research/agv.jpg
-  - title: কম্পিউটার ভিশন এবং এজ এআই
-    description: >-
-      এজ ডিভাইসে রিয়েল-টাইম ইনফরেন্সের জন্য হালকা ওজনের ডিপ লার্নিং আর্কিটেকচার (যেমন, অ্যাটেনটিভ-ইওলো) ডিজাইন করা,
-      বিশেষ করে পাইপলাইনের ত্রুটি সনাক্তকরণ এবং কৃষি পর্যবেক্ষণের জন্য।
-    long_description: >-
-      I build compact computer vision models that can run where data is generated, not only in the cloud. This includes
-      optimizing detection pipelines for edge devices, improving latency and model size, and applying these systems to
-      infrastructure inspection and agricultural monitoring.
-    featured_image: /assets/research/vision.jpg
-  - title: আইওটি এবং স্মার্ট পরিকাঠামো
-    description: >-
-      স্মার্ট পার্কিং এবং বুদ্ধিমান রাস্তার আলোর মতো শহুরে চ্যালেঞ্জগুলির জন্য LoRaWAN এবং প্রান্ত কম্পিউটিং ব্যবহার করে
-      মাপযোগ্য, কম-পাওয়ার সমাধান তৈরি করা।
-    long_description: >-
-      This line of work explores how connected sensors and low-power networking can support modern infrastructure. I
-      focus on practical systems that are reliable, easy to deploy, and useful for smart parking, lighting control, and
-      other urban services that need continuous monitoring.
-    featured_image: /assets/research/iot.jpg
+research_intro: >-
+  আমার গবেষণা রোবট সম্পর্কে যা দেখতে, বুঝতে এবং কাজ করতে পারে। আজ আমি দৃষ্টি-ভাষা এবং দৃষ্টি-ভাষা-অ্যাকশন মডেল, রোবোটিক
+  সিমুলেশন এবং কম্পিউটার ভিশন নিয়ে কাজ করি, AGV নেভিগেশন এবং IoT সিস্টেমে আগের কাজের উপর ভিত্তি করে।
+research_areas:
+  - slug: vision-language-models
+    title: দৃষ্টি-ভাষা মডেল (VLMs)
+    status: বর্তমান ফোকাস
+    summary: >-
+      যে মডেলগুলি ছবি এবং ভাষাকে সংযুক্ত করে, তাই একটি সিস্টেম যা দেখে তা বর্ণনা করতে পারে, একটি দৃশ্য সম্পর্কে প্রশ্নের
+      উত্তর দিতে পারে এবং ভিজ্যুয়াল নির্দেশাবলী অনুসরণ করতে পারে৷
+    intro: >-
+      দৃষ্টি-ভাষা মডেলগুলি একজন ব্যক্তি যা বলে তার সাথে ক্যামেরা যা দেখে তা সংযুক্ত করে। আমি আগ্রহী যে তারা একটি ছবিতে
+      কতটা ভাল **গ্রাউন্ড** ভাষা: তারা একটি কাজের জন্য গুরুত্বপূর্ণ বিশদগুলি লক্ষ্য করে কিনা এবং যেখানে তারা ব্যর্থ হয়।
+      রোবটগুলির জন্য, সেই গ্রাউন্ডিং হল নির্দেশাবলী বোঝার প্রথম পদক্ষেপ যেমন "ল্যাপটপের পাশে কাপটি তুলে নিন"৷
+
+
+      এই দিকটি আমার [কম্পিউটার দৃষ্টি](/research/computer-vision) কাজ থেকে বেড়েছে, যেখানে আমি ডিটেক্টর তৈরি করেছি যা
+      ছোট ডিভাইসে এবং অগোছালো, বাস্তব-জগতের দৃশ্যে কাজ করতে হয়।
+    questions:
+      - VLM কতটা নির্ভরযোগ্যভাবে একটি চিত্রের সঠিক বস্তু এবং অঞ্চলে শব্দগুলিকে গ্রাউন্ড করে?
+      - কিভাবে তারা ছোট এবং দ্রুত রোবট এবং প্রান্ত ডিভাইস চালানোর জন্য যথেষ্ট করা যেতে পারে?
+      - কিভাবে তারা দৃশ্যে পরীক্ষা করা উচিত রোবট বাস্তবে দেখা, শুধু ওয়েব ইমেজ নয়?
+    related:
+      - 10.5220/0012374000003660
+      - 10.3390/futuretransp3010012
+      - 10.1145/3718491.3718618
+  - slug: vision-language-action-models
+    title: দৃষ্টি-ভাষা-অ্যাকশন মডেল (ভিএলএ)
+    status: বর্তমান ফোকাস
+    summary: মডেল যা একটি রোবট যা দেখে এবং যা বলা হয় তা ক্রিয়ায় পরিণত করে, নেভিগেশন থেকে জিনিস তোলা পর্যন্ত।
+    intro: >-
+      দৃষ্টি-ভাষা-অ্যাকশন মডেলগুলি VLM-এর চেয়ে এক ধাপ এগিয়ে যায়: তারা একটি চিত্র এবং একটি নির্দেশকে সরাসরি রোবট
+      অ্যাকশনে পরিণত করে। আমি এই নীতিগুলি বাস্তব রোবটের উপর নির্ভরযোগ্য করে তুলতে আগ্রহী, যেখানে ছোট ত্রুটিগুলি পুরো
+      টাস্কে যোগ করে।
+
+
+      আমার আগের রোবোটিক্সের কাজ, [AGV নেভিগেশন](/research/robotic-simulation), পিআইডি কন্ট্রোল এবং সার্ভিস রোবট, আমাকে
+      শিখিয়েছে গতি এবং নিয়ন্ত্রণের বিষয়ের নিম্ন-স্তরের বিশদ কত। আমি VLA গুলিকে কীভাবে দেখি সেই অভিজ্ঞতাটি আকার দেয়।
+    questions:
+      - একটি কাজের মাধ্যমে একটি ক্রিয়া ভুল হয়ে গেলে কীভাবে VLA নীতিগুলি পুনরুদ্ধার করতে পারে?
+      - >-
+        তাদের প্রশিক্ষণ দেওয়ার সময় কতটা [সিমুলেশন](/research/robotic-simulation) ব্যয়বহুল বাস্তব-রোবট ডেটা
+        প্রতিস্থাপন করতে পারে?
+      - কিভাবে আমরা তাদের কাজ এবং রোবট জুড়ে ন্যায্যভাবে পরীক্ষা করব?
+    related:
+      - 10.4108/airo.11438
+      - 10.1109/ACCESS.2024.3355278
+      - 10.1007/978-981-95-8660-8_18
+  - slug: robotic-simulation
+    title: রোবোটিক সিমুলেশন
+    status: বর্তমান ফোকাস
+    image: /images/papers/agv-ir-simulation.jpg
+    image_alt: CoppeliaSim সিমুলেটরে একটি চিত্র-আট ট্র্যাক অনুসরণ করে বেশ কয়েকটি AGV
+    summary: >-
+      CoppeliaSim, Gazebo এবং MATLAB-এর মতো সিমুলেটর ব্যবহার করে বাস্তব জগতে দৌড়ানোর আগে রোবট ডিজাইন, প্রশিক্ষণ এবং
+      পরীক্ষা করা।
+    intro: >-
+      আমার বেশিরভাগ রোবোটিক্স কাজ সিমুলেশনে শুরু হয়। আমি স্বয়ংক্রিয় নির্দেশিত যানবাহন (AGV), টিউন কন্ট্রোলার এবং
+      তুলনা সেন্সরগুলির জন্য নেভিগেশন বিকাশ করতে CoppeliaSim, ROS/Gazebo এবং MATLAB ব্যবহার করেছি, তারপর পরীক্ষা করে
+      দেখেছি যে ফলাফলগুলি বাস্তব রোবটগুলিতে কতটা ভালভাবে বহন করে।
+
+
+      হাইলাইটগুলির মধ্যে রয়েছে সর্বমুখী রোবটের জন্য একটি [বিটল-অনুপ্রাণিত নেভিগেশন
+      ফ্রেমওয়ার্ক](/blog/beetle-antennae-agv-2026), [অনেক AGV-এর জন্য ট্রাফিক
+      ব্যবস্থাপনা](/blog/agv-ir-timed-automata-2024) একই পথ ভাগ করা, এবং [FOODIEBOT](/blog/foodiebot-ieee-access-2024)
+      পরিষেবা রোবট, যার সিমুলেটেড এবং বাস্তব কার্যকারিতা ঘনিষ্ঠভাবে মিলেছে। এর বেশিরভাগই [রোবোটিক্স ও অটোমেশন রিসার্চ
+      ল্যাব (RARL)](https://www.rarl-lab.com) দিয়ে করা হয়েছিল। আজ আমি ডেটা তৈরি করতে এবং পরীক্ষা করার জন্য সিমুলেশন
+      ব্যবহার করি [দৃষ্টি-ভাষা-অ্যাকশন মডেল](/research/vision-language-action-models)।
+    questions:
+      - কিভাবে সিমুলেটেড প্রশিক্ষণ তথ্য বাস্তব বিশ্বের সাথে ব্যবধান বন্ধ করতে পারে?
+      - আমরা কীভাবে সিমুলেটেড পরীক্ষা তৈরি করব যা বাস্তব-রোবটের কর্মক্ষমতা ভবিষ্যদ্বাণী করে?
+    papers:
+      - 10.4108/airo.11438
+      - 10.1007/978-981-95-8660-8_18
+      - 10.1109/ICRAIC67376.2025.11375850
+      - 10.64820/aepjrr.11.15.23.122024
+      - 10.1109/ACCESS.2024.3355278
+      - 10.4108/airo.v1i.20
+      - PID Tuning Method on AGV (Automated Guided Vehicle) Industrial Robot
+  - slug: computer-vision
+    title: কম্পিউটার ভিশন
+    status: বর্তমান ফোকাস
+    image: /images/papers/attentive-yolo-architecture.jpg
+    image_alt: Attentive-YOLO এর আর্কিটেকচার ডায়াগ্রাম, মনোযোগ ব্লকের মাধ্যমে ইনপুট ইমেজ থেকে সনাক্তকরণ আউটপুট পর্যন্ত
+    summary: লাইটওয়েট ডিপ লার্নিং যা রিয়েল-টাইমে, ছোট ডিভাইসে, বাস্তব-বিশ্বের পরিস্থিতিতে জিনিস সনাক্ত করে এবং পরিমাপ করে।
+    intro: >-
+      আমি এমন কম্পিউটার ভিশন সিস্টেম তৈরি করি যা ডেটা যেখানে কাজ করে: একটি পাইপে রাস্পবেরি পাইতে, রাস্তার উপর একটি
+      ড্রোনে বা একটি বাগানে কৃষকের ফোনে৷ এর মানে এমন মডেল যা সঠিক কিন্তু ছোট, এবং ল্যাবের বাইরে পরীক্ষিত।
+
+
+      [আইওটি ভিশন ল্যাব, আইআইটি কানপুর](https://pbagade0.wixsite.com/priyanka/about)-এ, আমি
+      [মনোযোগী-YOLO](/blog/visapp-2024-attentive-yolo) তৈরি করেছি, যা YOLOv7-tiny-এর তুলনায় প্রায় 20% কম প্যারামিটার
+      সহ জল-পাইপের ত্রুটি খুঁজে পায়। অন্যান্য কাজের মধ্যে রয়েছে সাইট্রাস পোকা ধরার জন্য [ড্রোন যা গাড়ির গতি পরিমাপ
+      করে](/blog/uav-speed-detector-2023) এবং [Dr_OrangeApp](/blog/dr-orangeapp-2024)। এই কাজটি এখন [দৃষ্টি-ভাষা
+      মডেল](/research/vision-language-models) এর দিকে নিয়ে যায়।
+    papers:
+      - 10.5220/0012374000003660
+      - 10.3390/futuretransp3010012
+      - 10.1145/3718491.3718618
+      - 10.4108/airo.v1i.19
+  - slug: iot-embedded-systems
+    title: আইওটি এবং এমবেডেড সিস্টেম
+    status: আগের কাজ
+    image: /assets/research/iot.jpg
+    image_alt: IoT হার্ডওয়্যার প্রোটোটাইপ
+    summary: পার্কিং, উপস্থিতি, স্বাস্থ্যসেবা, কৃষিকাজ এবং নিরাপদ অনলাইন পরীক্ষার জন্য কম খরচে সংযুক্ত ডিভাইস।
+    intro: >-
+      রোবট এবং দৃষ্টিভঙ্গির উপর ফোকাস করার আগে, আমার বেশিরভাগ কাজ ছিল রাস্পবেরি পাই এবং আরডুইনো বোর্ডের মতো কম খরচের
+      অংশগুলি থেকে তৈরি ব্যবহারিক আইওটি সিস্টেমের উপর। এর মধ্যে রয়েছে [আরবানপার্ক](/blog/urbanpark-iccit-2025), একটি
+      LoRaWAN স্মার্ট পার্কিং সিস্টেম, একটি [সুরক্ষিত স্ব-বক্তৃতা উপস্থিতি
+      সিস্টেম](/blog/iot-self-lecture-attendance-2024), নিরাপদ অনলাইন পরীক্ষার জন্য [ইমতিহান](/blog/emtihan-2025), একটি
+      [রাস্পবেরি পাই SCADA সিস্টেম](/blog/raspberry-pi-scada-2019) খামারের জন্য, এবং একটি [কম খরচে হার্ট রেট
+      মনিটর](/blog/iot-heart-rate-monitor-2022)।
+    papers:
+      - 10.1109/ICCIT63348.2025.10989299
+      - 10.1007/s10639-024-13170-4
+      - 10.1504/IJESDF.2024.142009
+      - 10.1117/12.2642725
+      - 10.54646/bijiotr.003
+      - 10.1109/ICISCE48695.2019.00092

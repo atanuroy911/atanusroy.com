@@ -9,31 +9,35 @@ hero:
 bio: >-
   Robots are starting to see, understand instructions in plain language and act
   on them. I am interested in what it takes to make that work reliably. My current
-  research focuses on vision-language models (VLMs) and vision-language-action
-  models (VLAs), robotic simulation and computer vision: how robots can ground
-  language in what they see, and how simulation can be used to train and test
-  them before they meet the real world. This builds on my earlier work on
-  lightweight deep learning for on-site inspection, such as finding water-pipe
-  defects on a Raspberry Pi, and on navigation for automated guided vehicles in
-  unknown and crowded spaces.
+  research focuses on
+  [vision-language models (VLMs)](/research/vision-language-models),
+  [vision-language-action models (VLAs)](/research/vision-language-action-models),
+  [robotic simulation](/research/robotic-simulation) and
+  [computer vision](/research/computer-vision): how robots can ground language in
+  what they see, and how simulation can be used to train and test them before
+  they meet the real world. This builds on my earlier work on lightweight deep
+  learning for on-site inspection, such as
+  [finding water-pipe defects on a Raspberry Pi](/blog/visapp-2024-attentive-yolo),
+  and on [navigation for automated guided vehicles](/research/robotic-simulation)
+  in unknown and crowded spaces.
 
-  I am a Lecturer in Computer Science & Engineering at the University of Liberal
-  Arts Bangladesh (ULAB), where I teach and supervise capstone projects in
-  computer vision, IoT and robotics. I am also a member of the Robotics &
-  Automation Research Lab (RARL), now based in Leicester, UK. Before ULAB, I
-  completed my M.Tech in Computer Science & Engineering at IIT Kanpur
-  (2022–2024), advised by Dr. Priyanka Bagade, working as a Research Assistant
-  at the IoT Vision Lab on deep learning for water pipeline inspection under
-  India's Jal Jeevan Mission. I did my B.E. in Computer Science & Technology at
-  Jiangxi University of Science & Technology in China, advised by Dr. Ata
-  Jahangir Moshayedi, where I first joined RARL in 2018.
+  I am a Lecturer in Computer Science & Engineering at the
+  [University of Liberal Arts Bangladesh (ULAB)](https://ulab.edu.bd), where I
+  teach and supervise capstone projects in computer vision, IoT and robotics. I
+  am also a member of the
+  [Robotics & Automation Research Lab (RARL)](https://www.rarl-lab.com), now
+  based in Leicester, UK. Before ULAB, I completed my M.Tech in Computer Science
+  & Engineering at [IIT Kanpur](https://www.iitk.ac.in) (2022–2024), advised by
+  [Dr. Priyanka Bagade](https://pbagade0.wixsite.com/priyanka/about), working as
+  a Research Assistant at the
+  [IoT Vision Lab](https://pbagade0.wixsite.com/priyanka/about) on deep learning
+  for water pipeline inspection under India's Jal Jeevan Mission. I did my B.E.
+  in Computer Science & Technology at
+  [Jiangxi University of Science & Technology](https://www.jxust.edu.cn), advised
+  by [Dr. Ata Jahangir Moshayedi](https://drajm.com), where I first joined RARL
+  in 2018.
 
   Outside research, I enjoy playing guitar 🎸, singing 🎵 and travelling ✈️.
-research_interests:
-  - Vision-Language Models (VLMs)
-  - Vision-Language-Action Models (VLAs)
-  - Robotic Simulation
-  - Computer Vision
 education:
   - degree: M.Tech - Computer Science & Engineering
     institution: Indian Institute of Technology, Kanpur

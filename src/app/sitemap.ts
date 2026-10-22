@@ -87,6 +87,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Research area pages
+  for (const locale of LOCALES) {
+    for (const a of getContent(locale).academic.research_areas || []) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/research/${a.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      })
+    }
+  }
+
   // Free ebooks (PDFs are language-neutral, so list them once)
   for (const book of getContent('en').academic.free_ebooks || []) {
     entries.push({

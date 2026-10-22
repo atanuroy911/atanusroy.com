@@ -26,12 +26,23 @@ const SKIP_KEYS = new Set([
   'id', 'date', 'category', 'color', 'bg', 'tags',
   // Links, paths and ids added later
   'post', 'doi', 'url', 'dblp', 'image', 'video', 'poster', 'product_hunt',
+  'slug', 'papers', 'related',
 ])
 
 // Keys whose values are proper nouns / tech terms (don't translate)
 const PROPER_NOUN_KEYS = new Set([
   'institution', 'org', 'venue', 'authors', 'location', 'affiliation',
 ])
+
+// Google Translate sometimes translates the url part of [label](url) links.
+// Put the original urls back, in order, keeping only the translated labels.
+export function restoreLinks(original, translated) {
+  const urls = [...original.matchAll(/\]\(([^)\s]+)\)/g)].map((m) => m[1])
+  if (!urls.length) return translated
+  let i = 0
+  const fixed = translated.replace(/\]\s*\(([^)]*)\)/g, (m) => (i < urls.length ? `](${urls[i++]})` : m))
+  return i === urls.length ? fixed : translated
+}
 
 async function googleTranslate(text, from = 'en', to = 'bn') {
   if (!text || typeof text !== 'string' || text.trim() === '') return text
@@ -41,11 +52,30 @@ async function googleTranslate(text, from = 'en', to = 'bn') {
   try {
     const res = await fetch(url)
     const data = await res.json()
-    return data[0].map(item => item[0]).join('')
+    return restoreLinks(text, data[0].map(item => item[0]).join(''))
   } catch (err) {
     console.warn(`  ⚠ Failed to translate: "${text.slice(0, 40)}..."`)
     return text
   }
+}
+
+// Text with [label](url) links: translate the text with numbered placeholders in place of
+// the links, translate each label on its own, then put the links back. Keeps urls intact
+// and stops links being merged or dropped.
+async function translateWithLinks(text) {
+  const links = [...text.matchAll(/\[([^\]]+)\]\(([^)\s]+)\)/g)]
+  if (!links.length) return googleTranslate(text)
+  let i = 0
+  const masked = text.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, () => `[[${i++}]]`)
+  let out = await googleTranslate(masked)
+  for (let n = 0; n < links.length; n++) {
+    await new Promise(r => setTimeout(r, 80))
+    const label = await googleTranslate(links[n][1])
+    const re = new RegExp(`\\[\\s*\\[\\s*${n}\\s*\\]\\s*\\]`)
+    if (!re.test(out)) return text // placeholder lost: keep English rather than break links
+    out = out.replace(re, `[${label}](${links[n][2]})`)
+  }
+  return out
 }
 
 async function translateValue(key, value) {
@@ -53,7 +83,7 @@ async function translateValue(key, value) {
 
   if (typeof value === 'string') {
     await new Promise(r => setTimeout(r, 80)) // rate limit
-    const translated = await googleTranslate(value)
+    const translated = value.includes('](') ? await translateWithLinks(value) : await googleTranslate(value)
     console.log(`  ✓ ${key}: ${value.slice(0, 35)}... → ${translated.slice(0, 35)}...`)
     return translated
   }

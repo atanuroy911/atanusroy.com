@@ -405,13 +405,7 @@
         "cta_primary": "View Publications",
         "cta_secondary": "Contact Me"
       },
-      "bio": "Robots are starting to see, understand instructions in plain language and act on them. I am interested in what it takes to make that work reliably. My current research focuses on vision-language models (VLMs) and vision-language-action models (VLAs), robotic simulation and computer vision: how robots can ground language in what they see, and how simulation can be used to train and test them before they meet the real world. This builds on my earlier work on lightweight deep learning for on-site inspection, such as finding water-pipe defects on a Raspberry Pi, and on navigation for automated guided vehicles in unknown and crowded spaces.\nI am a Lecturer in Computer Science & Engineering at the University of Liberal Arts Bangladesh (ULAB), where I teach and supervise capstone projects in computer vision, IoT and robotics. I am also a member of the Robotics & Automation Research Lab (RARL), now based in Leicester, UK. Before ULAB, I completed my M.Tech in Computer Science & Engineering at IIT Kanpur (2022–2024), advised by Dr. Priyanka Bagade, working as a Research Assistant at the IoT Vision Lab on deep learning for water pipeline inspection under India's Jal Jeevan Mission. I did my B.E. in Computer Science & Technology at Jiangxi University of Science & Technology in China, advised by Dr. Ata Jahangir Moshayedi, where I first joined RARL in 2018.\nOutside research, I enjoy playing guitar 🎸, singing 🎵 and travelling ✈️.",
-      "research_interests": [
-        "Vision-Language Models (VLMs)",
-        "Vision-Language-Action Models (VLAs)",
-        "Robotic Simulation",
-        "Computer Vision"
-      ],
+      "bio": "Robots are starting to see, understand instructions in plain language and act on them. I am interested in what it takes to make that work reliably. My current research focuses on [vision-language models (VLMs)](/research/vision-language-models), [vision-language-action models (VLAs)](/research/vision-language-action-models), [robotic simulation](/research/robotic-simulation) and [computer vision](/research/computer-vision): how robots can ground language in what they see, and how simulation can be used to train and test them before they meet the real world. This builds on my earlier work on lightweight deep learning for on-site inspection, such as [finding water-pipe defects on a Raspberry Pi](/blog/visapp-2024-attentive-yolo), and on [navigation for automated guided vehicles](/research/robotic-simulation) in unknown and crowded spaces.\nI am a Lecturer in Computer Science & Engineering at the [University of Liberal Arts Bangladesh (ULAB)](https://ulab.edu.bd), where I teach and supervise capstone projects in computer vision, IoT and robotics. I am also a member of the [Robotics & Automation Research Lab (RARL)](https://www.rarl-lab.com), now based in Leicester, UK. Before ULAB, I completed my M.Tech in Computer Science & Engineering at [IIT Kanpur](https://www.iitk.ac.in) (2022–2024), advised by [Dr. Priyanka Bagade](https://pbagade0.wixsite.com/priyanka/about), working as a Research Assistant at the [IoT Vision Lab](https://pbagade0.wixsite.com/priyanka/about) on deep learning for water pipeline inspection under India's Jal Jeevan Mission. I did my B.E. in Computer Science & Technology at [Jiangxi University of Science & Technology](https://www.jxust.edu.cn), advised by [Dr. Ata Jahangir Moshayedi](https://drajm.com), where I first joined RARL in 2018.\nOutside research, I enjoy playing guitar 🎸, singing 🎵 and travelling ✈️.",
       "education": [
         {
           "degree": "M.Tech - Computer Science & Engineering",
@@ -1003,24 +997,95 @@
           "post": "pid-tuning-agv-2019"
         }
       ],
-      "research_statements": [
+      "research_intro": "My research is about robots that can see, understand and act. Today I work on vision-language and vision-language-action models, robotic simulation and computer vision, building on earlier work in AGV navigation and IoT systems.",
+      "research_areas": [
         {
-          "title": "Autonomous Guided Vehicles (AGV)",
-          "description": "Developing energy-aware and robust path planning algorithms for omnidirectional AGVs in unknown environments using evolutionary approaches like Beetle Antennae Search.",
-          "long_description": "My AGV research focuses on making autonomous navigation practical in cluttered, dynamic environments. I work on energy-aware path planning, robustness under uncertainty, and the balance between optimality and compute cost. The aim is to make navigation methods reliable enough for real deployments in labs, campuses, and city-scale environments.",
-          "featured_image": "/assets/research/agv.jpg"
+          "slug": "vision-language-models",
+          "title": "Vision-Language Models (VLMs)",
+          "status": "Current focus",
+          "summary": "Models that connect images and language, so a system can describe what it sees, answer questions about a scene and follow visual instructions.",
+          "intro": "Vision-language models connect what a camera sees with what a person says. I am interested in how well they really **ground** language in an image: whether they notice the details that matter for a task, and where they fail. For robots, that grounding is the first step towards understanding instructions such as \"pick up the cup next to the laptop\".\n\nThis direction grows out of my [computer vision](/research/computer-vision) work, where I built detectors that had to work on small devices and in messy, real-world scenes.",
+          "questions": [
+            "How reliably do VLMs ground words in the right objects and regions of an image?",
+            "How can they be made small and fast enough to run on robots and edge devices?",
+            "How should they be tested on the scenes robots actually meet, not just web images?"
+          ],
+          "related": [
+            "10.5220/0012374000003660",
+            "10.3390/futuretransp3010012",
+            "10.1145/3718491.3718618"
+          ]
         },
         {
-          "title": "Computer Vision & Edge AI",
-          "description": "Designing lightweight deep learning architectures (e.g., Attentive-YOLO) for real-time inference on edge devices, particularly for pipeline defect detection and agricultural monitoring.",
-          "long_description": "I build compact computer vision models that can run where data is generated, not only in the cloud. This includes optimizing detection pipelines for edge devices, improving latency and model size, and applying these systems to infrastructure inspection and agricultural monitoring.",
-          "featured_image": "/assets/research/vision.jpg"
+          "slug": "vision-language-action-models",
+          "title": "Vision-Language-Action Models (VLAs)",
+          "status": "Current focus",
+          "summary": "Models that turn what a robot sees and what it is told into actions, from navigation to picking things up.",
+          "intro": "Vision-language-action models go one step further than VLMs: they turn an image and an instruction directly into robot actions. I am interested in making these policies dependable on real robots, where small errors add up over a whole task.\n\nMy earlier robotics work, on [AGV navigation](/research/robotic-simulation), PID control and service robots, taught me how much the low-level details of motion and control matter. That experience shapes how I look at VLAs.",
+          "questions": [
+            "How can VLA policies recover when an action goes wrong partway through a task?",
+            "How much can [simulation](/research/robotic-simulation) replace costly real-robot data when training them?",
+            "How do we test them fairly, across tasks and robots?"
+          ],
+          "related": [
+            "10.4108/airo.11438",
+            "10.1109/ACCESS.2024.3355278",
+            "10.1007/978-981-95-8660-8_18"
+          ]
         },
         {
-          "title": "IoT & Smart Infrastructure",
-          "description": "Creating scalable, low-power solutions using LoRaWAN and edge computing for urban challenges like smart parking and intelligent street lighting.",
-          "long_description": "This line of work explores how connected sensors and low-power networking can support modern infrastructure. I focus on practical systems that are reliable, easy to deploy, and useful for smart parking, lighting control, and other urban services that need continuous monitoring.",
-          "featured_image": "/assets/research/iot.jpg"
+          "slug": "robotic-simulation",
+          "title": "Robotic Simulation",
+          "status": "Current focus",
+          "image": "/images/papers/agv-ir-simulation.jpg",
+          "image_alt": "Several AGVs following a figure-eight track in the CoppeliaSim simulator",
+          "summary": "Using simulators such as CoppeliaSim, Gazebo and MATLAB to design, train and test robots before they run in the real world.",
+          "intro": "Most of my robotics work starts in simulation. I have used CoppeliaSim, ROS/Gazebo and MATLAB to develop navigation for automated guided vehicles (AGVs), tune controllers and compare sensors, then checked how well the results carry over to real robots.\n\nHighlights include a [beetle-inspired navigation framework](/blog/beetle-antennae-agv-2026) for omnidirectional robots, [traffic management for many AGVs](/blog/agv-ir-timed-automata-2024) sharing the same paths, and the [FOODIEBOT](/blog/foodiebot-ieee-access-2024) service robot, whose simulated and real performance matched closely. Much of this was done with the [Robotics & Automation Research Lab (RARL)](https://www.rarl-lab.com). Today I use simulation to generate data and test [vision-language-action models](/research/vision-language-action-models).",
+          "questions": [
+            "How can simulated training data close the gap with the real world?",
+            "How do we build simulated tests that predict real-robot performance?"
+          ],
+          "papers": [
+            "10.4108/airo.11438",
+            "10.1007/978-981-95-8660-8_18",
+            "10.1109/ICRAIC67376.2025.11375850",
+            "10.64820/aepjrr.11.15.23.122024",
+            "10.1109/ACCESS.2024.3355278",
+            "10.4108/airo.v1i.20",
+            "PID Tuning Method on AGV (Automated Guided Vehicle) Industrial Robot"
+          ]
+        },
+        {
+          "slug": "computer-vision",
+          "title": "Computer Vision",
+          "status": "Current focus",
+          "image": "/images/papers/attentive-yolo-architecture.jpg",
+          "image_alt": "Architecture diagram of Attentive-YOLO, from input image through attention blocks to detection output",
+          "summary": "Lightweight deep learning that detects and measures things in real time, on small devices, in real-world conditions.",
+          "intro": "I build computer vision systems that work where the data is: on a Raspberry Pi in a pipe, on a drone over a road, or on a farmer's phone in an orchard. That means models that are accurate but small, and tested outside the lab.\n\nAt the [IoT Vision Lab, IIT Kanpur](https://pbagade0.wixsite.com/priyanka/about), I developed [Attentive-YOLO](/blog/visapp-2024-attentive-yolo), which finds water-pipe defects with about 20% fewer parameters than YOLOv7-tiny. Other work includes a [drone that measures vehicle speeds](/blog/uav-speed-detector-2023) and [Dr_OrangeApp](/blog/dr-orangeapp-2024) for spotting citrus pests. This work now leads into [vision-language models](/research/vision-language-models).",
+          "papers": [
+            "10.5220/0012374000003660",
+            "10.3390/futuretransp3010012",
+            "10.1145/3718491.3718618",
+            "10.4108/airo.v1i.19"
+          ]
+        },
+        {
+          "slug": "iot-embedded-systems",
+          "title": "IoT & Embedded Systems",
+          "status": "Earlier work",
+          "image": "/assets/research/iot.jpg",
+          "image_alt": "IoT hardware prototype",
+          "summary": "Low-cost connected devices for parking, attendance, healthcare, farming and secure online exams.",
+          "intro": "Before focusing on robots and vision, much of my work was on practical IoT systems built from low-cost parts such as Raspberry Pi and Arduino boards. They include [UrbanPark](/blog/urbanpark-iccit-2025), a LoRaWAN smart parking system, a [secure self-lecture attendance system](/blog/iot-self-lecture-attendance-2024), [EMTIHAN](/blog/emtihan-2025) for secure online exams, a [Raspberry Pi SCADA system](/blog/raspberry-pi-scada-2019) for farms, and a [low-cost heart rate monitor](/blog/iot-heart-rate-monitor-2022).",
+          "papers": [
+            "10.1109/ICCIT63348.2025.10989299",
+            "10.1007/s10639-024-13170-4",
+            "10.1504/IJESDF.2024.142009",
+            "10.1117/12.2642725",
+            "10.54646/bijiotr.003",
+            "10.1109/ICISCE48695.2019.00092"
+          ]
         }
       ],
       "students": [
@@ -2415,7 +2480,7 @@
           ],
           "cover_image": "/images/papers/omni-agv-design.jpg",
           "summary": "অজানা পরিবেশে সর্বমুখী AGV-এর জন্য একটি সমন্বিত বিটল অ্যান্টেনা অনুসন্ধান-সক্ষম ন্যাভিগেশন ফ্রেমওয়ার্কের বিষয়ে আমাদের গবেষণাপত্র EAI এন্ডোর্সড লেনদেন অন এআই এবং রোবোটিক্স-এ প্রকাশিত হয়েছে।",
-          "content": "## পটভূমি\n\nসর্বমুখী AGVগুলি আঁটসাঁট, অসংগঠিত স্থানগুলিতে নমনীয় গতির প্রতিশ্রুতি দেয়,\nকিন্তু **অজানা পরিবেশে** তাদের জন্য পথ পরিকল্পনা করা কঠিন থেকে যায়।\nআতা জাহাঙ্গীর মোশায়েদী, উত্সব করণ, মেং ঝাং এবং ডেভিড বাসিরের সাথে, আমি\n**বিটল অ্যান্টেনা অনুসন্ধানের চারপাশে নির্মিত একটি নেভিগেশন কাঠামোতে কাজ করেছে\n(BAS)**, একটি ঝাঁক-অনুপ্রাণিত বিবর্তনীয় অপ্টিমাইজেশান কৌশল।\n\n## অবদান\n\nফ্রেমওয়ার্ক বিশ্বব্যাপী পথ পরিকল্পনার সাথে BAS-ভিত্তিক স্থানীয় অনুসন্ধানকে একীভূত করে\nঅন্বেষণ এবং কম্পিউটেশনাল খরচের ভারসাম্য বজায় রাখা, নির্ভরযোগ্য করার লক্ষ্যে\nএকটি পূর্ব-নির্মিত মানচিত্রের প্রয়োজন ছাড়াই নেভিগেশন।\n\n![অধ্যয়নে ব্যবহৃত সর্বমুখী AGV প্ল্যাটফর্ম](/images/papers/omni-agv-design.jpg)\n\n*অধ্যয়নে ব্যবহৃত সর্বমুখী AGV প্ল্যাটফর্ম। মোশায়েদী এট থেকে চিত্র\nআল (2026), CC BY.*\n\n*EAI এনডোর্সড ট্রানজ্যাকশনস অন AI এবং রোবোটিক্স* (2026) এ প্রকাশিত। কাগজ\nখোলা প্রবেশাধিকার আছে।",
+          "content": "## পটভূমি\n\nসর্বমুখী AGVগুলি আঁটসাঁট, অসংগঠিত স্থানগুলিতে নমনীয় গতির প্রতিশ্রুতি দেয়,\nকিন্তু **অজানা পরিবেশে** তাদের জন্য পথ পরিকল্পনা করা কঠিন থেকে যায়।\nআতা জাহাঙ্গীর মোশায়েদী, উত্সব করণ, মেং ঝাং এবং ডেভিড বাসিরের সাথে, আমি\n**বিটল অ্যান্টেনা অনুসন্ধানের চারপাশে নির্মিত একটি নেভিগেশন কাঠামোতে কাজ করেছে\n(BAS)**, একটি ঝাঁক-অনুপ্রাণিত বিবর্তনীয় অপ্টিমাইজেশান কৌশল।\n\n## অবদান\n\nফ্রেমওয়ার্ক বিশ্বব্যাপী পথ পরিকল্পনার সাথে BAS-ভিত্তিক স্থানীয় অনুসন্ধানকে একীভূত করে\nঅন্বেষণ এবং কম্পিউটেশনাল খরচের ভারসাম্য বজায় রাখা, নির্ভরযোগ্য করার লক্ষ্যে\nএকটি পূর্ব-নির্মিত মানচিত্রের প্রয়োজন ছাড়াই নেভিগেশন।\n\n![গবেষণায় ব্যবহৃত সর্বমুখী AGV প্ল্যাটফর্ম](/images/papers/omni-agv-design.jpg)\n\n*অধ্যয়নে ব্যবহৃত সর্বমুখী AGV প্ল্যাটফর্ম। মোশায়েদী এট থেকে চিত্র\nআল (2026), CC BY.*\n\n*EAI এনডোর্সড ট্রানজ্যাকশনস অন AI এবং রোবোটিক্স* (2026) এ প্রকাশিত। কাগজ\nখোলা প্রবেশাধিকার আছে।",
           "link": "https://doi.org/10.4108/airo.11438",
           "pinned": false
         },
@@ -2497,7 +2562,7 @@
           ],
           "cover_image": "",
           "summary": "IoT এবং QR কোড ব্যবহার করে একটি পোর্টেবল, সুরক্ষিত সেলফ-লেকচার অ্যাটেনডেন্স সিস্টেম (SLAS) এর জন্য আমাদের ডিজাইনটি ইন্টারন্যাশনাল জার্নাল অফ ইলেকট্রনিক সিকিউরিটি অ্যান্ড ডিজিটাল ফরেনসিক্স-এ প্রকাশিত হয়েছে।",
-          "content": "## প্রেরণা\n\nশ্রেণীকক্ষে উপস্থিতি ট্র্যাকিং এখনও প্রায়ই ম্যানুয়াল, ধীর বা সহজ\nফাঁকি আমরা **SLAS** ডিজাইন করেছি, একটি স্ব-বক্তৃতা উপস্থিতি সিস্টেম যা জোড়া করে\nকম খরচে IoT-এর মাধ্যমে QR-কোড-ভিত্তিক চেক-ইন সহ শিক্ষার্থীদের স্মার্টফোন\nব্যাকএন্ড, বিদ্যমান সিস্টেমে গোপনীয়তা এবং সুরক্ষা ফাঁকগুলিকে মোকাবেলা করা।\n\n## স্থাপনা\n\nআমরা SLAS কে একটি লাইভ লেকচার সেটিংয়ে যাচাই করেছি, এটি বিদ্যমানের সাথে তুলনা করে\nসঠিকতা, খরচ, এবং প্রক্রিয়াকরণ সময় উপস্থিতি পদ্ধতি.\n\n*ইলেক্ট্রনিক নিরাপত্তার আন্তর্জাতিক জার্নালে প্রকাশিত এবং\nডিজিটাল ফরেনসিক* (2024), আতা জাহাঙ্গীর মোশায়েদী এবং সহযোগীদের সাথে।",
+          "content": "## প্রেরণা\n\nশ্রেণীকক্ষে উপস্থিতি ট্র্যাকিং এখনও প্রায়ই ম্যানুয়াল, ধীর বা সহজ\nফাঁকি আমরা **SLAS** ডিজাইন করেছি, একটি স্ব-বক্তৃতা উপস্থিতি সিস্টেম যা জোড়া করে\nQR-কোড-ভিত্তিক চেক-ইন সহ শিক্ষার্থীদের স্মার্টফোন একটি কম খরচে IoT-এর মাধ্যমে\nব্যাকএন্ড, বিদ্যমান সিস্টেমে গোপনীয়তা এবং সুরক্ষা ফাঁকগুলিকে মোকাবেলা করা।\n\n## স্থাপনা\n\nআমরা SLAS কে একটি লাইভ লেকচার সেটিংয়ে যাচাই করেছি, এটি বিদ্যমানের সাথে তুলনা করে\nসঠিকতা, খরচ, এবং প্রক্রিয়াকরণ সময় উপস্থিতি পদ্ধতি.\n\n*ইলেক্ট্রনিক নিরাপত্তার আন্তর্জাতিক জার্নালে প্রকাশিত এবং\nডিজিটাল ফরেনসিক* (2024), আতা জাহাঙ্গীর মোশায়েদী এবং সহযোগীদের সাথে।",
           "link": "https://doi.org/10.1504/IJESDF.2024.142009",
           "pinned": false
         },
@@ -2514,7 +2579,7 @@
           ],
           "cover_image": "/images/papers/attentive-yolo-hardware.jpg",
           "summary": "একটি অপ্টিমাইজড YOLOv7 ব্যবহার করে দক্ষ অন-সাইট জলের পাইপলাইন পরিদর্শনের বিষয়ে আমাদের কাগজ \"Attentive-YOLO\", VISAPP 2024-এ গৃহীত হয়েছিল।",
-          "content": "## পটভূমি\n\nজল জীবন মিশনের অধীনে জলের পাইপলাইন পরিদর্শন (সরকার\nভারত) সনাক্তকরণ মডেল প্রয়োজন যা সঠিক এবং যথেষ্ট হালকা\nমাঠে দৌড়াও। প্রিয়াঙ্কা বাগাদে-এর সাথে, আমি **Atentive-YOLO**, a-এ কাজ করেছি\nYOLOv7 ভেরিয়েন্ট ইন্টিগ্রেটিং **দক্ষ চ্যানেল অ্যাটেনশন (ECA)** এবং একটি\nELAN ব্যাকবোন হ্রাস।\n\n## ফলাফল\n\nঅপ্টিমাইজ করা মডেলের তুলনায় প্যারামিটারের সংখ্যা মোটামুটি **20%** কেটেছে\nপাইপলাইনের ত্রুটি সনাক্তকরণের নির্ভুলতা বজায় রাখার সময় বেসলাইন YOLOv7 —\nঅন-সাইটে, রিয়েল-টাইম পরিদর্শনকে আরও ব্যবহারিক করে তোলা।\n\n!\n\n*(A) প্রান্ত হার্ডওয়্যার সেটআপ। (খ) সাইটে পাইপলাইনের ত্রুটি সনাক্ত করা হয়েছে। চিত্র\nRoy & Bagade (2024), CC BY-NC-ND 4.0 থেকে।*\n\nকম্পিউটার ভিশন তত্ত্বের 19তম আন্তর্জাতিক সম্মেলনে উপস্থাপিত\nএবং অ্যাপ্লিকেশন (**VISAPP 2024**), রোম, ইতালি।",
+          "content": "## পটভূমি\n\nজল জীবন মিশনের অধীনে জলের পাইপলাইন পরিদর্শন (সরকার\nভারত) সনাক্তকরণ মডেল প্রয়োজন যা সঠিক এবং যথেষ্ট হালকা\nমাঠে দৌড়াও। প্রিয়াঙ্কা বাগাদে-এর সাথে, আমি **Atentive-YOLO**, a-এ কাজ করেছি\nYOLOv7 ভেরিয়েন্ট ইন্টিগ্রেটিং **দক্ষ চ্যানেল অ্যাটেনশন (ECA)** এবং একটি\nELAN ব্যাকবোন হ্রাস।\n\n## ফলাফল\n\nঅপ্টিমাইজ করা মডেলের তুলনায় প্যারামিটারের সংখ্যা মোটামুটি **20%** কেটেছে\nপাইপলাইনের ত্রুটি সনাক্তকরণের নির্ভুলতা বজায় রাখার সময় বেসলাইন YOLOv7 —\nঅন-সাইটে, রিয়েল-টাইম পরিদর্শনকে আরও ব্যবহারিক করে তোলা।\n\n![এজ হার্ডওয়্যার অ্যাটেনটিভ-ইওলো চলমান, এবং পাইপের ভিতরে এটি সনাক্ত করা ত্রুটিগুলি](/images/papers/attentive-yolo-hardware.jpg)\n\n*(A) প্রান্ত হার্ডওয়্যার সেটআপ। (খ) সাইটে পাইপলাইনের ত্রুটি সনাক্ত করা হয়েছে। চিত্র\nRoy & Bagade (2024), CC BY-NC-ND 4.0 থেকে।*\n\nকম্পিউটার ভিশন তত্ত্বের 19তম আন্তর্জাতিক সম্মেলনে উপস্থাপিত\nএবং অ্যাপ্লিকেশন (**VISAPP 2024**), রোম, ইতালি।",
           "link": "https://doi.org/10.5220/0012374000003660",
           "pinned": false
         },
@@ -2565,7 +2630,7 @@
           ],
           "cover_image": "/images/papers/agv-ir-simulation.jpg",
           "summary": "স্বয়ংক্রিয় নির্দেশিত যানবাহনের জন্য পাথ ট্র্যাকিং এবং ট্রাফিক ব্যবস্থাপনার বিষয়ে এ. দাসের সাথে আমাদের গবেষণাপত্র জার্নাল অফ রোবোটিক্স রিসার্চে প্রকাশিত হয়েছে।",
-          "content": "## কেন এটা গুরুত্বপূর্ণ\n\nযখন অনেক AGV একই পথ ভাগ করে, যেমন ডেলিভারি রোবট ক্রমবর্ধমানভাবে করে,\nসংঘর্ষ বা গ্রিডলক ছাড়া তাদের চলন্ত রাখা কঠিন হয়ে যায়।\n\n## পন্থা\n\nউ: দাস এবং আমি বিদ্যমান কৌশলগুলি পর্যালোচনা করেছি, তারপর একটি সিস্টেম সিমুলেট করেছি\nযানবাহনগুলিকে সমন্বয় করতে **টাইমড অটোমেটা** এর সাথে **IR সেন্সর**কে একত্রিত করে\nভাগ করা পাথ এবং অপেক্ষার সময় কাটা।\n\n## ফলাফল\n\nCoppeliaSim (V-REP) উচ্চ-জড়তা পরিস্থিতির সিমুলেশনে:\n\n- AGV স্বাভাবিক থেকে মাঝারি গতিতে রাখা হয়েছে (5 থেকে 7 ইউনিট)\n- সর্বাধিক যানজট **20%** কমেছে\n- ট্র্যাফিক মোট অবরোধ ছাড়া প্রবাহিত রাখা\n\n![কোপেলিয়াসিমে একটি চিত্র-আট ট্র্যাক অনুসরণ করে সিমুলেটেড AGV](/images/papers/agv-ir-simulation.jpg)\n\n*এজিভিগুলি কপেলিয়া সিম সিমুলেশনে একটি চিত্র-আট ট্র্যাক ভাগ করছে৷ থেকে চিত্র\nরায় ও দাস (2024)।*\n\n*জার্নাল অফ রোবোটিক্স রিসার্চ* (2024) এ প্রকাশিত।",
+          "content": "## কেন এটা গুরুত্বপূর্ণ\n\nযখন অনেক AGV একই পথ ভাগ করে, যেমন ডেলিভারি রোবট ক্রমবর্ধমানভাবে করে,\nসংঘর্ষ বা গ্রিডলক ছাড়া তাদের চলন্ত রাখা কঠিন হয়ে যায়।\n\n## পন্থা\n\nউ: দাস এবং আমি বিদ্যমান কৌশলগুলি পর্যালোচনা করেছি, তারপর একটি সিস্টেম সিমুলেট করেছি\nযানবাহনগুলিকে সমন্বয় করতে **টাইমড অটোমেটা** এর সাথে **IR সেন্সর**কে একত্রিত করে\nভাগ করা পাথ এবং অপেক্ষার সময় কাটা।\n\n## ফলাফল\n\nCoppeliaSim (V-REP) উচ্চ-জড়তা পরিস্থিতির সিমুলেশনে:\n\n- AGV স্বাভাবিক থেকে মাঝারি গতিতে রাখা হয়েছে (5 থেকে 7 ইউনিট)\n- সর্বাধিক যানজট **20%** কমেছে\n- ট্র্যাফিক মোট অবরোধ ছাড়া প্রবাহিত রাখা\n\n![CoppeliaSim-এ একটি চিত্র-আট ট্র্যাক অনুসরণ করে সিমুলেটেড AGV](/images/papers/agv-ir-simulation.jpg)\n\n*এজিভিগুলি কপেলিয়া সিম সিমুলেশনে একটি চিত্র-আট ট্র্যাক ভাগ করছে৷ থেকে চিত্র\nরায় ও দাস (2024)।*\n\n*জার্নাল অফ রোবোটিক্স রিসার্চ* (2024) এ প্রকাশিত।",
           "link": "https://doi.org/10.64820/aepjrr.11.15.23.122024",
           "pinned": false
         },
@@ -2583,7 +2648,7 @@
           ],
           "cover_image": "/images/papers/uav-speed-fov.jpg",
           "summary": "আমাদের ওপেন-অ্যাক্সেস পেপার ইন ফিউচার ট্রান্সপোর্টেশন (MDPI) দেখায় যে কীভাবে একটি রাস্পবেরি পাই এবং মোবাইলনেট-এসএসডি সহ একটি নিম্ন-উচ্চতাযুক্ত ড্রোন রিয়েল টাইমে গাড়ির গতি পরিমাপ করতে পারে, সাইটে কোনও পুলিশ অফিসার ছাড়াই৷",
-          "content": "## আইডিয়া\n\nঅনেক গাড়ির গতি সনাক্তকারী বিভিন্ন সময়ে বাস্তব সময়ে কাজ করে না\nদৃশ্য আমরা জিজ্ঞাসা করেছি একটি কম উড়ন্ত ড্রোন একটি স্মার্ট কাজ করতে পারে কিনা\nশহর, বিশেষ করে যেখানে ট্রাফিক পুলিশ রাখা কঠিন।\n\n## আমরা কীভাবে এটি তৈরি করেছি\n\nআতা জাহাঙ্গীর মোশায়েদী এবং সহকর্মীদের সাথে, আমি:\n\n1. সেরা রাস্পবেরি পাই ক্যামেরার ক্ষেত্র অভ্যন্তরীণ এবং বাইরের ভিউ খুঁজে পেয়েছেন৷\n   এর উচ্চতা এবং কোণ পরিবর্তিত\n2. একটি Raspberry Pi 4B-এ একটি **MobileNet-SSD** গভীর শিক্ষার মডেল চালান\n   প্রান্তে ইন্টেল নিউরাল কম্পিউট স্টিক 2\n3. এটিকে JXUST-এ একটি বাস্তব সংযোগস্থলে পরীক্ষা করা হয়েছে, এর মধ্যে ড্রোনটি উড়ছে\n   **0.7 এবং 3 m** এবং ক্যামেরার কোণ পরিবর্তন করা\n\n![পরীক্ষা সেটআপ: ড্রোনটি 14.94 মিটারের বেশি একটি গাড়ি পাস টাইমস্ট্যাম্প পয়েন্ট A থেকে D পর্যন্ত দেখে]\n\n* 0.25 থেকে 3 মিটার পর্যন্ত ড্রোনের উচ্চতা সহ প্রকৃত যানবাহন পরীক্ষার সেটআপ। চিত্র\nমোশায়েদী, রায় ও অন্যান্য থেকে। (2023), CC BY 4.0.*\n\nফলাফল হল একটি বুদ্ধিমান গতি-নিয়ন্ত্রণ ব্যবস্থা যা সম্পূর্ণভাবে চলে\nড্রোনের প্রান্তের হার্ডওয়্যার।\n\n*ফিউচার ট্রান্সপোর্টেশন* 3(1), 189–209 (MDPI, 2023) এ প্রকাশিত। এটা খোলা আছে\nঅ্যাক্সেস, যাতে যে কেউ সম্পূর্ণ কাগজ পড়তে পারে।",
+          "content": "## আইডিয়া\n\nঅনেক গাড়ির গতি সনাক্তকারী বিভিন্ন সময়ে বাস্তব সময়ে কাজ করে না\nদৃশ্য আমরা জিজ্ঞাসা করেছি একটি কম উড়ন্ত ড্রোন একটি স্মার্ট কাজ করতে পারে কিনা\nশহর, বিশেষ করে যেখানে ট্রাফিক পুলিশ রাখা কঠিন।\n\n## আমরা কীভাবে এটি তৈরি করেছি\n\nআতা জাহাঙ্গীর মোশায়েদী এবং সহকর্মীদের সাথে, আমি:\n\n1. সেরা রাস্পবেরি পাই ক্যামেরার ক্ষেত্র অভ্যন্তরীণ এবং বাইরের ভিউ খুঁজে পেয়েছেন৷\n   এর উচ্চতা এবং কোণ পরিবর্তিত\n2. একটি Raspberry Pi 4B-এ একটি **MobileNet-SSD** গভীর শিক্ষার মডেল চালান\n   প্রান্তে ইন্টেল নিউরাল কম্পিউট স্টিক 2\n3. এটিকে JXUST-এ একটি বাস্তব সংযোগস্থলে পরীক্ষা করা হয়েছে, এর মধ্যে ড্রোনটি উড়ছে\n   **0.7 এবং 3 m** এবং ক্যামেরার কোণ পরিবর্তন করা\n\n![পরীক্ষা সেটআপ: ড্রোনটি 14.94 মিটারের উপরে একটি গাড়ি পাস টাইমস্ট্যাম্প পয়েন্ট A থেকে D পর্যন্ত দেখে](/images/papers/uav-speed-fov.jpg)\n\n* 0.25 থেকে 3 মিটার পর্যন্ত ড্রোনের উচ্চতা সহ প্রকৃত যানবাহন পরীক্ষার সেটআপ। চিত্র\nমোশায়েদী, রায় ও অন্যান্য থেকে। (2023), CC BY 4.0.*\n\nফলাফল হল একটি বুদ্ধিমান গতি-নিয়ন্ত্রণ ব্যবস্থা যা সম্পূর্ণভাবে চলে\nড্রোনের প্রান্তের হার্ডওয়্যার।\n\n*ফিউচার ট্রান্সপোর্টেশন* 3(1), 189–209 (MDPI, 2023) এ প্রকাশিত। এটা খোলা আছে\nঅ্যাক্সেস, যাতে যে কেউ সম্পূর্ণ কাগজ পড়তে পারে।",
           "link": "https://doi.org/10.3390/futuretransp3010012",
           "pinned": false
         },
@@ -2617,7 +2682,7 @@
           ],
           "cover_image": "/images/papers/service-robot-types.jpg",
           "summary": "AI এবং Robotics-এ EAI অনুমোদনকৃত লেনদেন-এ আমাদের ওপেন-অ্যাক্সেস পর্যালোচনা পরিষেবা রোবটের আকার, ব্যবহার এবং গতিশীল মডেলগুলিকে ম্যাপ করে, যে কেউ সেগুলিকে অনুকরণ করে তাদের জন্য একটি সূচনা পয়েন্ট হিসাবে।",
-          "content": "## কেন একটি পর্যালোচনা\n\nপরিষেবা রোবট অনেক আকারে আসে, প্রতিটি তার কাজের দ্বারা চালিত হয়। একটি অনুকরণ করতে\nএবং এর নিয়ামক ডিজাইন করুন, আপনার প্রথমে এটির একটি গাণিতিক মডেল প্রয়োজন।\n\n## এটা কি কভার করে\n\nআতা জাহাঙ্গীর মোশায়েদী এবং সহকর্মীদের সাথে, আমি পর্যালোচনা করেছি:\n\n- পরিষেবা রোবটের প্রধান প্রকার এবং অ্যাপ্লিকেশন\n- রোবট গতিবিদ্যা এবং ডিফারেনশিয়াল-ড্রাইভ রোবটের গতিশীল মডেল\n- আপনার কোন মডেলটি ব্যবহার করা উচিত অ্যাপ্লিকেশনটি কীভাবে আকার দেয়\n\n![রিভিউতে কভার করা পরিষেবা রোবটের প্রকারগুলি](/images/papers/service-robot-types.jpg)\n\n*রিভিউতে কভার করা পরিষেবা রোবটের প্রকার। মোশায়েদী এট আল থেকে চিত্র।\n(2022), CC বাই 3.0.*\n\n*EAI এন্ডোর্সড লেনদেন AI এবং রোবোটিক্স* 1(1) এ প্রকাশিত। কাগজ\nখোলা প্রবেশাধিকার আছে।",
+          "content": "## কেন একটি পর্যালোচনা\n\nপরিষেবা রোবট অনেক আকারে আসে, প্রতিটি তার কাজের দ্বারা চালিত হয়। একটি অনুকরণ করতে\nএবং এর নিয়ামক ডিজাইন করুন, আপনার প্রথমে এটির একটি গাণিতিক মডেল প্রয়োজন।\n\n## এটা কি কভার করে\n\nআতা জাহাঙ্গীর মোশায়েদী এবং সহকর্মীদের সাথে, আমি পর্যালোচনা করেছি:\n\n- পরিষেবা রোবটের প্রধান প্রকার এবং অ্যাপ্লিকেশন\n- রোবট গতিবিদ্যা এবং ডিফারেনশিয়াল-ড্রাইভ রোবটের গতিশীল মডেল\n- আপনার কোন মডেলটি ব্যবহার করা উচিত অ্যাপ্লিকেশনটি কীভাবে আকার দেয়\n\n![রিভিউতে কভার করা পরিষেবা রোবটের প্রকার](/images/papers/service-robot-types.jpg)\n\n*রিভিউতে কভার করা পরিষেবা রোবটের প্রকার। মোশায়েদী এট আল থেকে চিত্র।\n(2022), CC বাই 3.0.*\n\n*EAI এন্ডোর্সড লেনদেন AI এবং রোবোটিক্স* 1(1) এ প্রকাশিত। কাগজ\nখোলা প্রবেশাধিকার আছে।",
           "link": "https://doi.org/10.4108/airo.v1i.20",
           "pinned": false
         },
@@ -2633,7 +2698,7 @@
           ],
           "cover_image": "/images/papers/deep-learning-applications.jpg",
           "summary": "আমাদের ওপেন-অ্যাক্সেস পর্যালোচনা AI এবং রোবোটিক্স সমীক্ষার উপর EAI অনুমোদনকৃত লেনদেন যেখানে গভীর শিক্ষা ঐতিহ্যগত অ্যালগরিদমকে হার মানায়। এটা আমার সবচেয়ে উদ্ধৃত কাগজ হয়ে গেছে.",
-          "content": "## পর্যালোচনা কি কভার করে\n\nআতা জাহাঙ্গীর মোশায়েদী, আমিন কোলাহদুজ এবং ইয়াং শুক্সিনের সাথে, আমি পর্যালোচনা করেছি\nগভীর শিক্ষার প্রধান অ্যাপ্লিকেশন এবং এর স্তরযুক্ত, অরৈখিক তুলনা\nঐতিহ্যগত অ্যালগরিদম সঙ্গে পদ্ধতির.\n\n![ডিপ লার্নিং অ্যাপ্লিকেশন এলাকা এবং তারা যে মডেলগুলি ব্যবহার করেন](/images/papers/deep-learning-applications.jpg)\n\n*ডিপ লার্নিং অ্যাপ্লিকেশান এলাকা এবং মডেলগুলি সাধারণত প্রতিটিতে ব্যবহৃত হয়।\nমোশায়েদী এট আল থেকে চিত্র। (2022), CC বাই 3.0.*\n\n## কিভাবে আমরা এলাকাগুলো বেছে নিই\n\nআমরা এমন ক্ষেত্রগুলির দিকে তাকিয়েছি যেখানে গভীর শিক্ষা স্পষ্টভাবে খেলাটিকে পরিবর্তন করেছে, যেমন\nস্পিচ রিকগনিশন, চ্যাটবট, সার্চ এবং ভিশন, এবং যেখানে নতুন কাজ\nভাষা, তথ্য পুনরুদ্ধার এবং মাল্টিমডাল প্রক্রিয়াকরণ আরও খোলা হচ্ছে\nদরজা\n\nপর্যালোচনাটি শিক্ষার্থীদের জন্য একটি দ্রুত, ব্যবহারিক ওভারভিউ হিসাবে বোঝানো হয়েছে এবং\nগবেষকরা গভীর শিক্ষা নিয়ে শুরু করছেন।\n\n*EAI এন্ডোর্সড ট্রানজ্যাকশনস অন এআই এবং রোবোটিক্স* 1(1), 1-13-এ প্রকাশিত। দ\nকাগজ খোলা প্রবেশাধিকার.",
+          "content": "## পর্যালোচনা কি কভার করে\n\nআতা জাহাঙ্গীর মোশায়েদী, আমিন কোলাহদুজ এবং ইয়াং শুক্সিনের সাথে, আমি পর্যালোচনা করেছি\nগভীর শিক্ষার প্রধান অ্যাপ্লিকেশন এবং এর স্তরযুক্ত, অরৈখিক তুলনা\nঐতিহ্যগত অ্যালগরিদম সঙ্গে পদ্ধতির.\n\n![গভীর শিক্ষার প্রয়োগের ক্ষেত্র এবং তারা যে মডেলগুলি ব্যবহার করে](/images/papers/deep-learning-applications.jpg)\n\n*ডিপ লার্নিং অ্যাপ্লিকেশান এলাকা এবং মডেলগুলি সাধারণত প্রতিটিতে ব্যবহৃত হয়।\nমোশায়েদী এট আল থেকে চিত্র। (2022), CC বাই 3.0.*\n\n## কিভাবে আমরা এলাকাগুলো বেছে নিই\n\nআমরা এমন ক্ষেত্রগুলির দিকে তাকিয়েছি যেখানে গভীর শিক্ষা স্পষ্টভাবে খেলাটিকে পরিবর্তন করেছে, যেমন\nস্পিচ রিকগনিশন, চ্যাটবট, সার্চ এবং ভিশন, এবং যেখানে নতুন কাজ\nভাষা, তথ্য পুনরুদ্ধার এবং মাল্টিমডাল প্রক্রিয়াকরণ আরও খোলা হচ্ছে\nদরজা\n\nপর্যালোচনাটি শিক্ষার্থীদের জন্য একটি দ্রুত, ব্যবহারিক ওভারভিউ হিসাবে বোঝানো হয়েছে এবং\nগবেষকরা গভীর শিক্ষা নিয়ে শুরু করছেন।\n\n*EAI এন্ডোর্সড ট্রানজ্যাকশনস অন এআই এবং রোবোটিক্স* 1(1), 1-13-এ প্রকাশিত। দ\nকাগজ খোলা প্রবেশাধিকার.",
           "link": "https://doi.org/10.4108/airo.v1i.19",
           "pinned": false
         },
@@ -2711,13 +2776,7 @@
         "cta_primary": "প্রকাশনা দেখুন",
         "cta_secondary": "আমার সাথে যোগাযোগ করুন"
       },
-      "bio": "রোবটগুলি সরল ভাষায় নির্দেশাবলী দেখতে, বুঝতে এবং তাদের উপর কাজ করতে শুরু করেছে। সেই কাজটি নির্ভরযোগ্যভাবে করতে যা লাগে তাতে আমি আগ্রহী। আমার বর্তমান গবেষণা দৃষ্টি-ভাষা মডেল (VLMs) এবং দৃষ্টি-ভাষা-অ্যাকশন মডেল (VLAs), রোবোটিক সিমুলেশন এবং কম্পিউটার ভিশনের উপর দৃষ্টি নিবদ্ধ করে: কীভাবে রোবটগুলি তারা যা দেখে তাতে গ্রাউন্ড ল্যাঙ্গুয়েজ করতে পারে এবং বাস্তব জগতের সাথে দেখা করার আগে তাদের প্রশিক্ষণ এবং পরীক্ষা করার জন্য কীভাবে সিমুলেশন ব্যবহার করা যেতে পারে। এটি সাইট পরিদর্শনের জন্য লাইটওয়েট ডিপ লার্নিং, যেমন রাস্পবেরি পাইতে জলের পাইপের ত্রুটিগুলি খুঁজে বের করা এবং অজানা এবং জনাকীর্ণ স্থানে স্বয়ংক্রিয় নির্দেশিত যানবাহনের জন্য নেভিগেশনের উপর আমার আগের কাজের উপর ভিত্তি করে তৈরি করে।\nআমি ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ (ইউল্যাব)-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এর একজন প্রভাষক, যেখানে আমি কম্পিউটার ভিশন, আইওটি এবং রোবোটিক্সে ক্যাপস্টোন প্রকল্পগুলি শেখাই এবং তত্ত্বাবধান করি। আমি এখন যুক্তরাজ্যের লিসেস্টারে অবস্থিত রোবোটিক্স অ্যান্ড অটোমেশন রিসার্চ ল্যাবের (RARL) সদস্য। ULAB-এর আগে, আমি IIT কানপুরে (2022-2024) কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এ আমার M.Tech সম্পন্ন করেছি, ডঃ প্রিয়াঙ্কা বাগাদে পরামর্শে, IoT ভিশন ল্যাবে গবেষণা সহকারী হিসেবে কাজ করছেন ভারতের জল জীবন মিশনের অধীনে জলের পাইপলাইন পরিদর্শনের জন্য গভীর শিক্ষার বিষয়ে। আমি আমার B.E করেছি। ডক্টর আতা জাহাঙ্গীর মোশায়েদীর পরামর্শে চীনের জিয়াংজি ইউনিভার্সিটি অফ সায়েন্স অ্যান্ড টেকনোলজিতে কম্পিউটার সায়েন্স অ্যান্ড টেকনোলজিতে, যেখানে আমি প্রথম 2018 সালে RARL এ যোগদান করি।\nগবেষণার বাইরে, আমি গিটার বাজানো, গান গাইতে এবং ভ্রমণ ✈️ উপভোগ করি।",
-      "research_interests": [
-        "দৃষ্টি-ভাষা মডেল (VLMs)",
-        "দৃষ্টি-ভাষা-অ্যাকশন মডেল (ভিএলএ)",
-        "রোবোটিক সিমুলেশন",
-        "কম্পিউটার ভিশন"
-      ],
+      "bio": "রোবটগুলি সরল ভাষায় নির্দেশাবলী দেখতে, বুঝতে এবং তাদের উপর কাজ করতে শুরু করেছে। সেই কাজটি নির্ভরযোগ্যভাবে করতে যা লাগে তাতে আমি আগ্রহী। আমার বর্তমান গবেষণা [দৃষ্টি-ভাষা মডেল (ভিএলএম)](/research/vision-language-models), [দৃষ্টি-ভাষা-অ্যাকশন মডেল (ভিএলএ)](/research/vision-language-action-models), [রোবোটিক সিমুলেশন](/research/robotic-simulation) এবং [কম্পিউটার দৃষ্টি](/research/computer-vision): কীভাবে রোবটরা যা দেখে তাতে ভাষা গ্রাউন্ড করতে পারে এবং বাস্তব জগতের সাথে দেখা করার আগে তাদের প্রশিক্ষণ ও পরীক্ষা করার জন্য কীভাবে সিমুলেশন ব্যবহার করা যেতে পারে তার উপর দৃষ্টি নিবদ্ধ করে। এটি অন-সাইট পরিদর্শনের জন্য লাইটওয়েট ডিপ লার্নিং, যেমন [একটি রাস্পবেরি পাইতে জলের পাইপের ত্রুটিগুলি সন্ধান করা](/blog/visapp-2024-attentive-yolo), এবং অজানা এবং জনাকীর্ণ জায়গায় [স্বয়ংক্রিয় নির্দেশিত যানবাহনের জন্য নেভিগেশন](/research/robotic-simulation) এর উপর আমার আগের কাজকে তৈরি করে।\nআমি [ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ (ইউল্যাব)](https://ulab.edu.bd)-এ কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এর একজন প্রভাষক, যেখানে আমি কম্পিউটার ভিশন, আইওটি এবং রোবোটিক্সের ক্যাপস্টোন প্রকল্পগুলি শেখাই এবং তত্ত্বাবধান করি। আমিও একজন সদস্য [রোবোটিক্স ও অটোমেশন রিসার্চ ল্যাব (RARL)](https://www.rarl-lab.com), এখন লিসেস্টার, যুক্তরাজ্যে অবস্থিত। ULAB-এর আগে, আমি [আইআইটি কানপুর](https://www.iitk.ac.in) (2022-2024) এ কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং-এ M.Tech সম্পন্ন করেছি, [প্রিয়াঙ্কা বাগদে ড](https://pbagade0.wixsite.com/priyanka/about) এর পরামর্শে, ভারতের জল জীবন মিশনের অধীনে জলের পাইপলাইন পরিদর্শনের জন্য গভীর শিক্ষার জন্য [আইওটি ভিশন ল্যাব](https://pbagade0.wixsite.com/priyanka/about)-এ গবেষণা সহকারী হিসেবে কাজ করছি। আমি আমার B.E করেছি। কম্পিউটার সায়েন্স অ্যান্ড টেকনোলজিতে [জিয়াংসি বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়](https://www.jxust.edu.cn), [আতা জাহাঙ্গীর মোশায়েদী ড](https://drajm.com)-এর পরামর্শে, যেখানে আমি প্রথম 2018 সালে RARL-এ যোগদান করি।\nগবেষণার বাইরে, আমি গিটার বাজানো, গান গাইতে এবং ভ্রমণ ✈️ উপভোগ করি।",
       "education": [
         {
           "degree": "M.Tech - কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং",
@@ -2912,7 +2971,7 @@
           ],
           "venue": "Personal Project",
           "description": "একটি LSTM-ভিত্তিক সেন্সর অ্যাক্টিভিটি রিকগনিশন মডেল ক্লাউডে স্থাপন করা হয়েছে, রিয়েল-টাইম মনিটরিং এবং ভবিষ্যদ্বাণীর জন্য একটি সহচর মোবাইল অ্যাপের সাথে যুক্ত।",
-          "abstract": "এই প্রকল্পটি সেন্সর-ভিত্তিক মানব কার্যকলাপ স্বীকৃতির জন্য PyTorch-এ একটি LSTM মডেলকে প্রশিক্ষণ দেয় এবং এটিকে একটি ক্লাউড-হোস্টেড ইনফারেন্স পরিষেবা হিসাবে স্থাপন করে৷ একটি সহচর মোবাইল অ্যাপ মডেলে লাইভ সেন্সর ডেটা স্ট্রিম করে এবং ব্যবহারকারীকে রিয়েল-টাইম কার্যকলাপের পূর্বাভাস দেয়।",
+          "abstract": "এই প্রকল্পটি সেন্সর-ভিত্তিক মানব কার্যকলাপ স্বীকৃতির জন্য PyTorch-এ একটি LSTM মডেলকে প্রশিক্ষণ দেয় এবং এটিকে একটি ক্লাউড-হোস্টেড ইনফারেন্স পরিষেবা হিসাবে স্থাপন করে৷ একটি সহচর মোবাইল অ্যাপ মডেলটিতে লাইভ সেন্সর ডেটা স্ট্রিম করে এবং ব্যবহারকারীকে রিয়েল-টাইম কার্যকলাপের পূর্বাভাস দেয়।",
           "image": "",
           "paper_link": "",
           "github_link": "",
@@ -3309,24 +3368,95 @@
           "post": "pid-tuning-agv-2019"
         }
       ],
-      "research_statements": [
+      "research_intro": "আমার গবেষণা রোবট সম্পর্কে যা দেখতে, বুঝতে এবং কাজ করতে পারে। আজ আমি দৃষ্টি-ভাষা এবং দৃষ্টি-ভাষা-অ্যাকশন মডেল, রোবোটিক সিমুলেশন এবং কম্পিউটার ভিশন নিয়ে কাজ করি, AGV নেভিগেশন এবং IoT সিস্টেমে আগের কাজের উপর ভিত্তি করে।",
+      "research_areas": [
         {
-          "title": "অটোনোমাস গাইডেড ভেহিকেল (AGV)",
-          "description": "বিটল অ্যান্টেনা অনুসন্ধানের মতো বিবর্তনীয় পদ্ধতি ব্যবহার করে অজানা পরিবেশে সর্বমুখী AGV-এর জন্য শক্তি-সচেতন এবং শক্তিশালী পথ পরিকল্পনা অ্যালগরিদম তৈরি করা।",
-          "long_description": "My AGV research focuses on making autonomous navigation practical in cluttered, dynamic environments. I work on energy-aware path planning, robustness under uncertainty, and the balance between optimality and compute cost. The aim is to make navigation methods reliable enough for real deployments in labs, campuses, and city-scale environments.",
-          "featured_image": "/assets/research/agv.jpg"
+          "slug": "vision-language-models",
+          "title": "দৃষ্টি-ভাষা মডেল (VLMs)",
+          "status": "বর্তমান ফোকাস",
+          "summary": "যে মডেলগুলি ছবি এবং ভাষাকে সংযুক্ত করে, তাই একটি সিস্টেম যা দেখে তা বর্ণনা করতে পারে, একটি দৃশ্য সম্পর্কে প্রশ্নের উত্তর দিতে পারে এবং ভিজ্যুয়াল নির্দেশাবলী অনুসরণ করতে পারে৷",
+          "intro": "দৃষ্টি-ভাষা মডেলগুলি একজন ব্যক্তি যা বলে তার সাথে ক্যামেরা যা দেখে তা সংযুক্ত করে। আমি আগ্রহী যে তারা একটি ছবিতে কতটা ভাল **গ্রাউন্ড** ভাষা: তারা একটি কাজের জন্য গুরুত্বপূর্ণ বিশদগুলি লক্ষ্য করে কিনা এবং যেখানে তারা ব্যর্থ হয়। রোবটগুলির জন্য, সেই গ্রাউন্ডিং হল নির্দেশাবলী বোঝার প্রথম পদক্ষেপ যেমন \"ল্যাপটপের পাশে কাপটি তুলে নিন\"৷\n\nএই দিকটি আমার [কম্পিউটার দৃষ্টি](/research/computer-vision) কাজ থেকে বেড়েছে, যেখানে আমি ডিটেক্টর তৈরি করেছি যা ছোট ডিভাইসে এবং অগোছালো, বাস্তব-জগতের দৃশ্যে কাজ করতে হয়।",
+          "questions": [
+            "VLM কতটা নির্ভরযোগ্যভাবে একটি চিত্রের সঠিক বস্তু এবং অঞ্চলে শব্দগুলিকে গ্রাউন্ড করে?",
+            "কিভাবে তারা ছোট এবং দ্রুত রোবট এবং প্রান্ত ডিভাইস চালানোর জন্য যথেষ্ট করা যেতে পারে?",
+            "কিভাবে তারা দৃশ্যে পরীক্ষা করা উচিত রোবট বাস্তবে দেখা, শুধু ওয়েব ইমেজ নয়?"
+          ],
+          "related": [
+            "10.5220/0012374000003660",
+            "10.3390/futuretransp3010012",
+            "10.1145/3718491.3718618"
+          ]
         },
         {
-          "title": "কম্পিউটার ভিশন এবং এজ এআই",
-          "description": "এজ ডিভাইসে রিয়েল-টাইম ইনফরেন্সের জন্য হালকা ওজনের ডিপ লার্নিং আর্কিটেকচার (যেমন, অ্যাটেনটিভ-ইওলো) ডিজাইন করা, বিশেষ করে পাইপলাইনের ত্রুটি সনাক্তকরণ এবং কৃষি পর্যবেক্ষণের জন্য।",
-          "long_description": "I build compact computer vision models that can run where data is generated, not only in the cloud. This includes optimizing detection pipelines for edge devices, improving latency and model size, and applying these systems to infrastructure inspection and agricultural monitoring.",
-          "featured_image": "/assets/research/vision.jpg"
+          "slug": "vision-language-action-models",
+          "title": "দৃষ্টি-ভাষা-অ্যাকশন মডেল (ভিএলএ)",
+          "status": "বর্তমান ফোকাস",
+          "summary": "মডেল যা একটি রোবট যা দেখে এবং যা বলা হয় তা ক্রিয়ায় পরিণত করে, নেভিগেশন থেকে জিনিস তোলা পর্যন্ত।",
+          "intro": "দৃষ্টি-ভাষা-অ্যাকশন মডেলগুলি VLM-এর চেয়ে এক ধাপ এগিয়ে যায়: তারা একটি চিত্র এবং একটি নির্দেশকে সরাসরি রোবট অ্যাকশনে পরিণত করে। আমি এই নীতিগুলি বাস্তব রোবটের উপর নির্ভরযোগ্য করে তুলতে আগ্রহী, যেখানে ছোট ত্রুটিগুলি পুরো টাস্কে যোগ করে।\n\nআমার আগের রোবোটিক্সের কাজ, [AGV নেভিগেশন](/research/robotic-simulation), পিআইডি কন্ট্রোল এবং সার্ভিস রোবট, আমাকে শিখিয়েছে গতি এবং নিয়ন্ত্রণের বিষয়ের নিম্ন-স্তরের বিশদ কত। আমি VLA গুলিকে কীভাবে দেখি সেই অভিজ্ঞতাটি আকার দেয়।",
+          "questions": [
+            "একটি কাজের মাধ্যমে একটি ক্রিয়া ভুল হয়ে গেলে কীভাবে VLA নীতিগুলি পুনরুদ্ধার করতে পারে?",
+            "তাদের প্রশিক্ষণ দেওয়ার সময় কতটা [সিমুলেশন](/research/robotic-simulation) ব্যয়বহুল বাস্তব-রোবট ডেটা প্রতিস্থাপন করতে পারে?",
+            "কিভাবে আমরা তাদের কাজ এবং রোবট জুড়ে ন্যায্যভাবে পরীক্ষা করব?"
+          ],
+          "related": [
+            "10.4108/airo.11438",
+            "10.1109/ACCESS.2024.3355278",
+            "10.1007/978-981-95-8660-8_18"
+          ]
         },
         {
-          "title": "আইওটি এবং স্মার্ট পরিকাঠামো",
-          "description": "স্মার্ট পার্কিং এবং বুদ্ধিমান রাস্তার আলোর মতো শহুরে চ্যালেঞ্জগুলির জন্য LoRaWAN এবং প্রান্ত কম্পিউটিং ব্যবহার করে মাপযোগ্য, কম-পাওয়ার সমাধান তৈরি করা।",
-          "long_description": "This line of work explores how connected sensors and low-power networking can support modern infrastructure. I focus on practical systems that are reliable, easy to deploy, and useful for smart parking, lighting control, and other urban services that need continuous monitoring.",
-          "featured_image": "/assets/research/iot.jpg"
+          "slug": "robotic-simulation",
+          "title": "রোবোটিক সিমুলেশন",
+          "status": "বর্তমান ফোকাস",
+          "image": "/images/papers/agv-ir-simulation.jpg",
+          "image_alt": "CoppeliaSim সিমুলেটরে একটি চিত্র-আট ট্র্যাক অনুসরণ করে বেশ কয়েকটি AGV",
+          "summary": "CoppeliaSim, Gazebo এবং MATLAB-এর মতো সিমুলেটর ব্যবহার করে বাস্তব জগতে দৌড়ানোর আগে রোবট ডিজাইন, প্রশিক্ষণ এবং পরীক্ষা করা।",
+          "intro": "আমার বেশিরভাগ রোবোটিক্স কাজ সিমুলেশনে শুরু হয়। আমি স্বয়ংক্রিয় নির্দেশিত যানবাহন (AGV), টিউন কন্ট্রোলার এবং তুলনা সেন্সরগুলির জন্য নেভিগেশন বিকাশ করতে CoppeliaSim, ROS/Gazebo এবং MATLAB ব্যবহার করেছি, তারপর পরীক্ষা করে দেখেছি যে ফলাফলগুলি বাস্তব রোবটগুলিতে কতটা ভালভাবে বহন করে।\n\nহাইলাইটগুলির মধ্যে রয়েছে সর্বমুখী রোবটের জন্য একটি [বিটল-অনুপ্রাণিত নেভিগেশন ফ্রেমওয়ার্ক](/blog/beetle-antennae-agv-2026), [অনেক AGV-এর জন্য ট্রাফিক ব্যবস্থাপনা](/blog/agv-ir-timed-automata-2024) একই পথ ভাগ করা, এবং [FOODIEBOT](/blog/foodiebot-ieee-access-2024) পরিষেবা রোবট, যার সিমুলেটেড এবং বাস্তব কার্যকারিতা ঘনিষ্ঠভাবে মিলেছে। এর বেশিরভাগই [রোবোটিক্স ও অটোমেশন রিসার্চ ল্যাব (RARL)](https://www.rarl-lab.com) দিয়ে করা হয়েছিল। আজ আমি ডেটা তৈরি করতে এবং পরীক্ষা করার জন্য সিমুলেশন ব্যবহার করি [দৃষ্টি-ভাষা-অ্যাকশন মডেল](/research/vision-language-action-models)।",
+          "questions": [
+            "কিভাবে সিমুলেটেড প্রশিক্ষণ তথ্য বাস্তব বিশ্বের সাথে ব্যবধান বন্ধ করতে পারে?",
+            "আমরা কীভাবে সিমুলেটেড পরীক্ষা তৈরি করব যা বাস্তব-রোবটের কর্মক্ষমতা ভবিষ্যদ্বাণী করে?"
+          ],
+          "papers": [
+            "10.4108/airo.11438",
+            "10.1007/978-981-95-8660-8_18",
+            "10.1109/ICRAIC67376.2025.11375850",
+            "10.64820/aepjrr.11.15.23.122024",
+            "10.1109/ACCESS.2024.3355278",
+            "10.4108/airo.v1i.20",
+            "PID Tuning Method on AGV (Automated Guided Vehicle) Industrial Robot"
+          ]
+        },
+        {
+          "slug": "computer-vision",
+          "title": "কম্পিউটার ভিশন",
+          "status": "বর্তমান ফোকাস",
+          "image": "/images/papers/attentive-yolo-architecture.jpg",
+          "image_alt": "Attentive-YOLO এর আর্কিটেকচার ডায়াগ্রাম, মনোযোগ ব্লকের মাধ্যমে ইনপুট ইমেজ থেকে সনাক্তকরণ আউটপুট পর্যন্ত",
+          "summary": "লাইটওয়েট ডিপ লার্নিং যা রিয়েল-টাইমে, ছোট ডিভাইসে, বাস্তব-বিশ্বের পরিস্থিতিতে জিনিস সনাক্ত করে এবং পরিমাপ করে।",
+          "intro": "আমি এমন কম্পিউটার ভিশন সিস্টেম তৈরি করি যা ডেটা যেখানে কাজ করে: একটি পাইপে রাস্পবেরি পাইতে, রাস্তার উপর একটি ড্রোনে বা একটি বাগানে কৃষকের ফোনে৷ এর মানে এমন মডেল যা সঠিক কিন্তু ছোট, এবং ল্যাবের বাইরে পরীক্ষিত।\n\n[আইওটি ভিশন ল্যাব, আইআইটি কানপুর](https://pbagade0.wixsite.com/priyanka/about)-এ, আমি [মনোযোগী-YOLO](/blog/visapp-2024-attentive-yolo) তৈরি করেছি, যা YOLOv7-tiny-এর তুলনায় প্রায় 20% কম প্যারামিটার সহ জল-পাইপের ত্রুটি খুঁজে পায়। অন্যান্য কাজের মধ্যে রয়েছে সাইট্রাস পোকা ধরার জন্য [ড্রোন যা গাড়ির গতি পরিমাপ করে](/blog/uav-speed-detector-2023) এবং [Dr_OrangeApp](/blog/dr-orangeapp-2024)। এই কাজটি এখন [দৃষ্টি-ভাষা মডেল](/research/vision-language-models) এর দিকে নিয়ে যায়।",
+          "papers": [
+            "10.5220/0012374000003660",
+            "10.3390/futuretransp3010012",
+            "10.1145/3718491.3718618",
+            "10.4108/airo.v1i.19"
+          ]
+        },
+        {
+          "slug": "iot-embedded-systems",
+          "title": "আইওটি এবং এমবেডেড সিস্টেম",
+          "status": "আগের কাজ",
+          "image": "/assets/research/iot.jpg",
+          "image_alt": "IoT হার্ডওয়্যার প্রোটোটাইপ",
+          "summary": "পার্কিং, উপস্থিতি, স্বাস্থ্যসেবা, কৃষিকাজ এবং নিরাপদ অনলাইন পরীক্ষার জন্য কম খরচে সংযুক্ত ডিভাইস।",
+          "intro": "রোবট এবং দৃষ্টিভঙ্গির উপর ফোকাস করার আগে, আমার বেশিরভাগ কাজ ছিল রাস্পবেরি পাই এবং আরডুইনো বোর্ডের মতো কম খরচের অংশগুলি থেকে তৈরি ব্যবহারিক আইওটি সিস্টেমের উপর। এর মধ্যে রয়েছে [আরবানপার্ক](/blog/urbanpark-iccit-2025), একটি LoRaWAN স্মার্ট পার্কিং সিস্টেম, একটি [সুরক্ষিত স্ব-বক্তৃতা উপস্থিতি সিস্টেম](/blog/iot-self-lecture-attendance-2024), নিরাপদ অনলাইন পরীক্ষার জন্য [ইমতিহান](/blog/emtihan-2025), একটি [রাস্পবেরি পাই SCADA সিস্টেম](/blog/raspberry-pi-scada-2019) খামারের জন্য, এবং একটি [কম খরচে হার্ট রেট মনিটর](/blog/iot-heart-rate-monitor-2022)।",
+          "papers": [
+            "10.1109/ICCIT63348.2025.10989299",
+            "10.1007/s10639-024-13170-4",
+            "10.1504/IJESDF.2024.142009",
+            "10.1117/12.2642725",
+            "10.54646/bijiotr.003",
+            "10.1109/ICISCE48695.2019.00092"
+          ]
         }
       ],
       "students": [
@@ -3850,7 +3980,7 @@
           ],
           "cover_image": "",
           "summary": "JSON-RPC-এর মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস — রিয়েল-টাইম ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট এবং লেনদেন সম্প্রচার।",
-          "content": "## চুলকানি\n\nএকটি বিটকয়েন কোর সম্পূর্ণ নোড চালানোর অর্থ হল যেকোনো কিছুর জন্য `বিটকয়েন-ক্লাই`-এ ড্রপ করা —\nমেম্পুল পরিসংখ্যান পরীক্ষা করা, UTXO তালিকা করা, একটি কাঁচা লেনদেন ডিকোড করা। আমি একটি পরিষ্কার চেয়েছিলাম\nপরিবর্তে ব্রাউজার UI, তাই আমি একটি তৈরি করেছি।\n\n## টেক স্ট্যাক\n\n- **ব্যাকএন্ড**: জাভা, JSON-RPC কলগুলি মোড়ানো\n- **ফ্রন্টেন্ড**: প্রতিক্রিয়া\n- **প্রমাণ**: HTTP মৌলিক প্রমাণীকরণ (`bitcoin.conf` এর মতো একই শংসাপত্র)\n\n## যা শিখলাম\n\n- বিটকয়েন কোরের RPC সারফেস *বিশাল* — আপনার যা প্রয়োজন তার সাথে লেগে থাকুন\n- `getblocktemplate` ব্যয়বহুল; ঘন ঘন কল করবেন না\n- মেম্পুল আপডেটের জন্য পোলিং ব্যাকঅফ করা দরকার, নতুবা আপনি নোডকে হাতুড়ি দেবেন\n\nউৎস GitHub-এ রয়েছে - পিআর এবং সমস্যাগুলি স্বাগত জানাই৷",
+          "content": "## চুলকানি\n\nএকটি বিটকয়েন কোর সম্পূর্ণ নোড চালানোর অর্থ হল যেকোনো কিছুর জন্য `বিটকয়েন-ক্লাই`-এ ড্রপ করা —\nমেম্পুল পরিসংখ্যান পরীক্ষা করা, UTXO তালিকা করা, একটি কাঁচা লেনদেন ডিকোড করা। আমি একটি পরিষ্কার চেয়েছিলাম\nপরিবর্তে ব্রাউজার UI, তাই আমি একটি তৈরি করেছি।\n\n## টেক স্ট্যাক\n\n- **ব্যাকএন্ড**: জাভা, JSON-RPC কলগুলি মোড়ানো\n- **ফ্রন্টেন্ড**: প্রতিক্রিয়া\n- **প্রমাণ**: HTTP মৌলিক প্রমাণীকরণ (`bitcoin.conf` এর মতো একই শংসাপত্র)\n\n## যা শিখেছি\n\n- বিটকয়েন কোরের RPC সারফেস *বিশাল* — আপনার যা প্রয়োজন তার সাথে লেগে থাকুন\n- `getblocktemplate` ব্যয়বহুল; ঘন ঘন কল করবেন না\n- মেম্পুল আপডেটের জন্য পোলিং ব্যাকঅফ করা দরকার, নতুবা আপনি নোডকে হাতুড়ি দেবেন\n\nউৎস GitHub-এ রয়েছে - পিআর এবং সমস্যাগুলি স্বাগত জানাই৷",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
           "link": "",
           "pinned": false
@@ -3886,7 +4016,7 @@
           ],
           "cover_image": "",
           "summary": "সেল্ফ-লেকচার অ্যাটেনডেন্স সিস্টেম (SLAS), একটি ওয়েচ্যাট মিনি প্রোগ্রাম যা আমি সুরক্ষিত QR-ভিত্তিক উপস্থিতির জন্য তৈরি করেছি, মধ্য চীনের \"ইন্টারনেট+\" উদ্ভাবন প্রতিযোগিতায় এবং 7তম \"ডিসকভারি কাপ\"-এ দ্বিতীয় পুরস্কার জিতেছে৷",
-          "content": "## SLAS কি করে\n\nSLAS হল একটি ফুল-স্ট্যাক QR-ভিত্তিক উপস্থিতি সিস্টেম যা একটি **WeChat Mini Program** হিসেবে নির্মিত\nএকটি **জাভা স্প্রিং বুট** ব্যাকএন্ড সহ, প্রতিষ্ঠানগুলিকে নিরাপদে উপস্থিতি রেকর্ড করতে দেয়\nঅতিরিক্ত হার্ডওয়্যার ছাড়া - শুধু ফোন শিক্ষার্থীরা ইতিমধ্যে বহন করে।\n\n## স্বীকৃতি\n\nপ্রকল্পটি মধ্য চীন \"ইন্টারনেট+\" উদ্ভাবন প্রতিযোগিতায় **২য় পুরস্কার** জিতেছে\nএবং চীনে **7ম \"ডিসকভারি কাপ\"**, এবং পরে একটি নিবন্ধিত ভিত্তি তৈরি করে\nসফ্টওয়্যার কপিরাইট (SLAS, কপিরাইট নম্বর 2020SR0058411)।\n\nএটি আইওটি-ভিত্তিক স্ব-বক্তৃতা উপস্থিতির উপর পরবর্তী একাডেমিক কাজে সরাসরি যোগ দেয়\nসিস্টেম",
+          "content": "## SLAS কি করে\n\nSLAS হল একটি ফুল-স্ট্যাক QR-ভিত্তিক উপস্থিতি সিস্টেম যা একটি **WeChat মিনি প্রোগ্রাম** হিসেবে তৈরি\nএকটি **জাভা স্প্রিং বুট** ব্যাকএন্ড সহ, প্রতিষ্ঠানগুলিকে নিরাপদে উপস্থিতি রেকর্ড করতে দেয়\nঅতিরিক্ত হার্ডওয়্যার ছাড়া - শুধু ফোন শিক্ষার্থীরা ইতিমধ্যে বহন করে।\n\n## স্বীকৃতি\n\nপ্রকল্পটি মধ্য চীন \"ইন্টারনেট+\" উদ্ভাবন প্রতিযোগিতায় **২য় পুরস্কার** জিতেছে\nএবং চীনে **7ম \"ডিসকভারি কাপ\"**, এবং পরে একটি নিবন্ধিত ভিত্তি তৈরি করে\nসফ্টওয়্যার কপিরাইট (SLAS, কপিরাইট নম্বর 2020SR0058411)।\n\nএটি আইওটি-ভিত্তিক স্ব-বক্তৃতা উপস্থিতির উপর পরবর্তী একাডেমিক কাজে সরাসরি যোগ দেয়\nসিস্টেম",
           "github": "",
           "link": "",
           "pinned": false

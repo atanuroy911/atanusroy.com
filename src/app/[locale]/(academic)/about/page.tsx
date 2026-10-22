@@ -1,4 +1,5 @@
 import { getContent, type Locale } from '@/lib/content'
+import { RichText } from '@/components/RichText'
 import type { Metadata } from 'next'
 import { buildMetadata, getAcademicAboutSEO } from '@/lib/seo'
 
@@ -23,20 +24,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     <div className="space-y-14 pb-16">
       <section id="about" className="space-y-5">
         <h1 className="text-3xl font-bold border-b border-border pb-2" style={{ color: 'var(--ac-navy)' }}>About Me</h1>
-        <p className="text-[15px] md:text-base leading-relaxed text-muted-foreground whitespace-pre-wrap max-w-5xl">
-          {content.academic.bio}
-        </p>
-        <div className="pt-3">
-          <h3 className="font-bold text-lg md:text-xl mb-3">Research Interests</h3>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-            {content.academic.research_interests?.map((ri: string) => (
-              <li key={ri} className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <span>{ri}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <div className="space-y-4"><RichText text={content.academic.bio} locale={locale} className="text-[15px] md:text-base leading-relaxed text-muted-foreground max-w-5xl" /></div>
       </section>
 
       <section id="experience" className="space-y-5">

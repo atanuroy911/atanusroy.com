@@ -1,35 +1,143 @@
-research_statements:
-  - title: Autonomous Guided Vehicles (AGV)
-    description: >-
-      Developing energy-aware and robust path planning algorithms for
-      omnidirectional AGVs in unknown environments using evolutionary approaches
-      like Beetle Antennae Search.
-    long_description: >-
-      My AGV research focuses on making autonomous navigation practical in
-      cluttered, dynamic environments. I work on energy-aware path planning,
-      robustness under uncertainty, and the balance between optimality and
-      compute cost. The aim is to make navigation methods reliable enough for
-      real deployments in labs, campuses, and city-scale environments.
-    featured_image: /assets/research/agv.jpg
-  - title: Computer Vision & Edge AI
-    description: >-
-      Designing lightweight deep learning architectures (e.g., Attentive-YOLO)
-      for real-time inference on edge devices, particularly for pipeline defect
-      detection and agricultural monitoring.
-    long_description: >-
-      I build compact computer vision models that can run where data is
-      generated, not only in the cloud. This includes optimizing detection
-      pipelines for edge devices, improving latency and model size, and
-      applying these systems to infrastructure inspection and agricultural
-      monitoring.
-    featured_image: /assets/research/vision.jpg
-  - title: IoT & Smart Infrastructure
-    description: >-
-      Creating scalable, low-power solutions using LoRaWAN and edge computing
-      for urban challenges like smart parking and intelligent street lighting.
-    long_description: >-
-      This line of work explores how connected sensors and low-power networking
-      can support modern infrastructure. I focus on practical systems that are
-      reliable, easy to deploy, and useful for smart parking, lighting control,
-      and other urban services that need continuous monitoring.
-    featured_image: /assets/research/iot.jpg
+# Research areas. Each gets its own page at /research/<slug>.
+# intro supports [link text](url) and **bold**. Links starting with / stay on this site.
+# papers: DOIs (or titles for papers without a DOI) from publications.yaml.
+# related: earlier papers that lead into this area.
+research_intro: >-
+  My research is about robots that can see, understand and act. Today I work on
+  vision-language and vision-language-action models, robotic simulation and
+  computer vision, building on earlier work in AGV navigation and IoT systems.
+research_areas:
+  - slug: vision-language-models
+    title: Vision-Language Models (VLMs)
+    status: Current focus
+    summary: >-
+      Models that connect images and language, so a system can describe what it
+      sees, answer questions about a scene and follow visual instructions.
+    intro: >-
+      Vision-language models connect what a camera sees with what a person says.
+      I am interested in how well they really **ground** language in an image:
+      whether they notice the details that matter for a task, and where they fail.
+      For robots, that grounding is the first step towards understanding
+      instructions such as "pick up the cup next to the laptop".
+
+
+      This direction grows out of my [computer vision](/research/computer-vision)
+      work, where I built detectors that had to work on small devices and in messy,
+      real-world scenes.
+    questions:
+      - How reliably do VLMs ground words in the right objects and regions of an image?
+      - How can they be made small and fast enough to run on robots and edge devices?
+      - How should they be tested on the scenes robots actually meet, not just web images?
+    related:
+      - 10.5220/0012374000003660
+      - 10.3390/futuretransp3010012
+      - 10.1145/3718491.3718618
+
+  - slug: vision-language-action-models
+    title: Vision-Language-Action Models (VLAs)
+    status: Current focus
+    summary: >-
+      Models that turn what a robot sees and what it is told into actions, from
+      navigation to picking things up.
+    intro: >-
+      Vision-language-action models go one step further than VLMs: they turn an
+      image and an instruction directly into robot actions. I am interested in
+      making these policies dependable on real robots, where small errors add up
+      over a whole task.
+
+
+      My earlier robotics work, on [AGV navigation](/research/robotic-simulation),
+      PID control and service robots, taught me how much the low-level details of
+      motion and control matter. That experience shapes how I look at VLAs.
+    questions:
+      - How can VLA policies recover when an action goes wrong partway through a task?
+      - How much can [simulation](/research/robotic-simulation) replace costly real-robot data when training them?
+      - How do we test them fairly, across tasks and robots?
+    related:
+      - 10.4108/airo.11438
+      - 10.1109/ACCESS.2024.3355278
+      - 10.1007/978-981-95-8660-8_18
+
+  - slug: robotic-simulation
+    title: Robotic Simulation
+    status: Current focus
+    image: /images/papers/agv-ir-simulation.jpg
+    image_alt: Several AGVs following a figure-eight track in the CoppeliaSim simulator
+    summary: >-
+      Using simulators such as CoppeliaSim, Gazebo and MATLAB to design, train and
+      test robots before they run in the real world.
+    intro: >-
+      Most of my robotics work starts in simulation. I have used CoppeliaSim,
+      ROS/Gazebo and MATLAB to develop navigation for automated guided vehicles
+      (AGVs), tune controllers and compare sensors, then checked how well the
+      results carry over to real robots.
+
+
+      Highlights include a [beetle-inspired navigation framework](/blog/beetle-antennae-agv-2026)
+      for omnidirectional robots, [traffic management for many AGVs](/blog/agv-ir-timed-automata-2024)
+      sharing the same paths, and the [FOODIEBOT](/blog/foodiebot-ieee-access-2024)
+      service robot, whose simulated and real performance matched closely. Much of
+      this was done with the [Robotics & Automation Research Lab (RARL)](https://www.rarl-lab.com).
+      Today I use simulation to generate data and test
+      [vision-language-action models](/research/vision-language-action-models).
+    questions:
+      - How can simulated training data close the gap with the real world?
+      - How do we build simulated tests that predict real-robot performance?
+    papers:
+      - 10.4108/airo.11438
+      - 10.1007/978-981-95-8660-8_18
+      - 10.1109/ICRAIC67376.2025.11375850
+      - 10.64820/aepjrr.11.15.23.122024
+      - 10.1109/ACCESS.2024.3355278
+      - 10.4108/airo.v1i.20
+      - PID Tuning Method on AGV (Automated Guided Vehicle) Industrial Robot
+
+  - slug: computer-vision
+    title: Computer Vision
+    status: Current focus
+    image: /images/papers/attentive-yolo-architecture.jpg
+    image_alt: Architecture diagram of Attentive-YOLO, from input image through attention blocks to detection output
+    summary: >-
+      Lightweight deep learning that detects and measures things in real time, on
+      small devices, in real-world conditions.
+    intro: >-
+      I build computer vision systems that work where the data is: on a Raspberry
+      Pi in a pipe, on a drone over a road, or on a farmer's phone in an orchard.
+      That means models that are accurate but small, and tested outside the lab.
+
+
+      At the [IoT Vision Lab, IIT Kanpur](https://pbagade0.wixsite.com/priyanka/about),
+      I developed [Attentive-YOLO](/blog/visapp-2024-attentive-yolo), which finds
+      water-pipe defects with about 20% fewer parameters than YOLOv7-tiny. Other
+      work includes a [drone that measures vehicle speeds](/blog/uav-speed-detector-2023)
+      and [Dr_OrangeApp](/blog/dr-orangeapp-2024) for spotting citrus pests. This
+      work now leads into [vision-language models](/research/vision-language-models).
+    papers:
+      - 10.5220/0012374000003660
+      - 10.3390/futuretransp3010012
+      - 10.1145/3718491.3718618
+      - 10.4108/airo.v1i.19
+
+  - slug: iot-embedded-systems
+    title: IoT & Embedded Systems
+    status: Earlier work
+    image: /assets/research/iot.jpg
+    image_alt: IoT hardware prototype
+    summary: >-
+      Low-cost connected devices for parking, attendance, healthcare, farming and
+      secure online exams.
+    intro: >-
+      Before focusing on robots and vision, much of my work was on practical IoT
+      systems built from low-cost parts such as Raspberry Pi and Arduino boards.
+      They include [UrbanPark](/blog/urbanpark-iccit-2025), a LoRaWAN smart parking
+      system, a [secure self-lecture attendance system](/blog/iot-self-lecture-attendance-2024),
+      [EMTIHAN](/blog/emtihan-2025) for secure online exams, a
+      [Raspberry Pi SCADA system](/blog/raspberry-pi-scada-2019) for farms, and a
+      [low-cost heart rate monitor](/blog/iot-heart-rate-monitor-2022).
+    papers:
+      - 10.1109/ICCIT63348.2025.10989299
+      - 10.1007/s10639-024-13170-4
+      - 10.1504/IJESDF.2024.142009
+      - 10.1117/12.2642725
+      - 10.54646/bijiotr.003
+      - 10.1109/ICISCE48695.2019.00092

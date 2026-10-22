@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { BookOpen, GraduationCap, Mail, X } from 'lucide-react'
@@ -18,6 +18,7 @@ type Student = {
   email?: string
   project?: string
   bio?: string
+  past?: boolean
 }
 
 type StudentYearGroup = {
@@ -53,6 +54,14 @@ function StudentDetailModal({
     if (!student.photo) return true
     return !!imageLoadedCache.get(student.photo)
   })
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
   if (!student) return null
 
   return (
@@ -221,6 +230,7 @@ function groupStudentsByYear(rawStudents: StudentInput[]): StudentYearGroup[] {
       email: student.email,
       project: student.project,
       bio: student.bio,
+      past: student.past,
     })
     groups.set(year, list)
   })
@@ -233,7 +243,14 @@ function groupStudentsByYear(rawStudents: StudentInput[]): StudentYearGroup[] {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function StudentsClient({ content }: { content: any }) {
   const rawStudents = content?.academic?.students || []
-  const sortedGroups = groupStudentsByYear(rawStudents)
+  const allGroups = groupStudentsByYear(rawStudents)
+  // Current students get photo cards; past students (past: true) get a compact list
+  const sortedGroups = allGroups
+    .map((g) => ({ ...g, students: g.students.filter((s) => !s.past) }))
+    .filter((g) => g.students.length > 0)
+  const pastGroups = allGroups
+    .map((g) => ({ ...g, students: g.students.filter((s) => s.past) }))
+    .filter((g) => g.students.length > 0)
   const [selectedStudent, setSelectedStudent] = useState<{ student: Student; year: string | number } | null>(null)
 
   return (
@@ -336,6 +353,38 @@ export function StudentsClient({ content }: { content: any }) {
             </section>
           ))}
         </div>
+
+        {pastGroups.length > 0 && (
+          <section id="past-students" className="mt-16 pt-10 border-t border-slate-200">
+            <h2 className="text-xl md:text-2xl font-bold" style={{ color: 'var(--ac-navy)' }}>
+              Past Students
+            </h2>
+            <div className="h-1 w-20 mt-3 mb-6 bg-(--ac-gold)" />
+            <div className="space-y-6">
+              {pastGroups.map((group) => (
+                <div key={String(group.year)}>
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-2">{group.year}</h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1.5">
+                    {group.students.map((student) => (
+                      <li key={`${group.year}-${student.name}`}>
+                        <button
+                          type="button"
+                          onClick={() => setSelectedStudent({ student, year: group.year })}
+                          className="text-left text-sm md:text-base hover:underline underline-offset-4"
+                        >
+                          <span className="font-semibold text-slate-800">{student.name}</span>
+                          {(student.project || student.designation) && (
+                            <span className="text-slate-500"> · {student.project || student.designation}</span>
+                          )}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
       {selectedStudent && (
         <StudentDetailModal

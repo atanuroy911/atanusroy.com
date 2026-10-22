@@ -22,7 +22,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   return (
     <div className="space-y-14 pb-16">
       <section id="about" className="space-y-5">
-        <h2 className="text-3xl font-bold border-b border-border pb-2" style={{ color: 'var(--ac-navy)' }}>About Me</h2>
+        <h1 className="text-3xl font-bold border-b border-border pb-2" style={{ color: 'var(--ac-navy)' }}>About Me</h1>
         <p className="text-base md:text-lg leading-relaxed text-muted-foreground whitespace-pre-wrap max-w-3xl">
           {content.academic.bio}
         </p>
@@ -57,7 +57,13 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
                 <div className="flex items-start justify-between gap-3">
                   <div className="text-sm md:text-lg font-medium leading-snug" style={{ color: 'var(--ac-navy)' }}>
-                    {exp.org}
+                    {exp.link ? (
+                      <a href={exp.link} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-4">
+                        {exp.org}
+                      </a>
+                    ) : (
+                      exp.org
+                    )}
                     <span className="text-slate-400 font-normal text-xs md:text-sm ml-2">({exp.location})</span>
                   </div>
                   {exp.logo ? (

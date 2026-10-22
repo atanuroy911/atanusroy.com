@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, ExternalLink, Tag } from 'lucide-react'
 import type { Metadata } from 'next'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, blogPostingJsonLd } from '@/lib/seo'
 import { ShareButtons } from '@/components/ShareButtons'
 
 const SITE_URL = 'https://www.atanusroy.com'
@@ -30,7 +30,7 @@ export async function generateMetadata({
   const post = getAcademicPostById(locale as Locale, postId)
   if (!post) return {}
   return buildMetadata({
-    title: `${post.title} | News — Atanu Shuvam Roy`,
+    title: post.title,
     description: post.summary,
     path: `/${locale}/blog/${postId}`,
     locale,
@@ -58,6 +58,7 @@ export default async function AcademicBlogPostPage({
 
   return (
     <div className="py-8 min-h-screen" style={{ background: 'var(--ac-bg)' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: blogPostingJsonLd(post, `/${locale}/blog/${postId}`) }} />
       <article className="max-w-3xl">
         {/* Back link */}
         <Link

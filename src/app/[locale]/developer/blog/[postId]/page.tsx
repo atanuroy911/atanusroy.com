@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, ExternalLink, Code2 } from 'lucide-react'
 import type { Metadata } from 'next'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, blogPostingJsonLd } from '@/lib/seo'
 
 export async function generateStaticParams() {
   const params: { locale: string; postId: string }[] = []
@@ -27,7 +27,7 @@ export async function generateMetadata({
   const post = getDeveloperPostById(locale as Locale, postId)
   if (!post) return {}
   return buildMetadata({
-    title: `${post.title} | Blog — Atanu Shuvam Roy`,
+    title: post.title,
     description: post.summary,
     path: `/${locale}/developer/blog/${postId}`,
     locale,
@@ -55,6 +55,7 @@ export default async function DevBlogPostPage({
 
   return (
     <div className="port pt-32 pb-24 min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: blogPostingJsonLd(post, `/${locale}/developer/blog/${postId}`) }} />
       <div className="max-w-3xl mx-auto px-6">
         {/* Back link */}
         <Link

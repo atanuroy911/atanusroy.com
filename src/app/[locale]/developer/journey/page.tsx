@@ -18,7 +18,7 @@ export default async function DevJourney({ params }: { params: Promise<{ locale:
       <div className="dev-journey-page">
         <div className="mb-16 text-center">
           <div className="sec-label">// my_journey</div>
-          <div className="sec-title">{journey?.title || 'Developer Journey'}</div>
+          <h1 className="sec-title">{journey?.title || 'Developer Journey'}</h1>
           <div className="sec-sub max-w-2xl mx-auto">{journey?.description}</div>
         </div>
         <DevJourneyTimeline timeline={journey?.timeline || []} />

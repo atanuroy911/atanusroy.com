@@ -47,6 +47,12 @@ export default async function LocaleLayout({
       name: 'University of Liberal Arts Bangladesh',
       url: 'https://ulab.edu.bd',
     },
+    memberOf: {
+      '@type': 'ResearchOrganization',
+      name: 'Robotics & Automation Research Lab (RARL)',
+      url: 'https://www.rarl-lab.com',
+      location: 'Leicester, UK',
+    },
     alumniOf: [
       {
         '@type': 'CollegeOrUniversity',

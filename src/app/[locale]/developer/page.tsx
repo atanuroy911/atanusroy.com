@@ -22,7 +22,7 @@ export default async function DevHomePage({ params }: { params: Promise<{ locale
 
   return (
     <div className="port">
-      <h2 className="sr-only">Atanu Shuvam Roy — Developer Portfolio</h2>
+      <h1 className="sr-only">Atanu Shuvam Roy — Software Engineer & Full-Stack Developer</h1>
       <DevHero content={pickContent(content, ['developer.hero'])} locale={locale} />
       <DevProductBanner product={content.developer.certsend} locale={locale} />
       <DevProjects content={pickContent(content, ['developer.projects'])} locale={locale} />

@@ -51,12 +51,13 @@ experience:
       - >-
         Guiding students in capstone projects across computer vision, IoT, and
         robotics
-  - role: Research Assistant (Remote)
-    org: Robotics & Automation Research Lab (RARL), JXUST
-    logo: /images/logos/jxust.png
+  - role: Member & Research Assistant (Remote)
+    org: Robotics & Automation Research Lab (RARL)
+    logo: /images/logos/rarl.png
+    link: https://www.rarl-lab.com
     type: research
     period: Aug 2024 - Present
-    location: Jiangxi, China
+    location: Leicester, UK
     bullets:
       - >-
         Energy-aware AGV shortest path planning using Dijkstra, Floyd-Warshall,
@@ -75,7 +76,8 @@ experience:
       - Prototyped streetlight management system with FMCW RADAR and LoRaWAN
   - role: Research Assistant
     org: Robotics & Automation Research Lab (RARL), JXUST
-    logo: /images/logos/jxust.png
+    logo: /images/logos/rarl.png
+    link: https://www.rarl-lab.com
     type: research
     period: Aug 2018 - Dec 2021
     location: Jiangxi, China

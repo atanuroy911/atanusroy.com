@@ -3,12 +3,13 @@ import { getContent, type Locale } from '@/lib/content'
 
 const SITE_URL = 'https://www.atanusroy.com'
 const SITE_NAME = 'Atanu Shuvam Roy'
-const OG_IMAGE = `${SITE_URL}/og-image.jpg` // place a 1200x630 image here
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`
 
 // ─── Base metadata that every page inherits ───────────────────────────────────
 export const baseMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
+  manifest: '/manifest.webmanifest',
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
@@ -19,8 +20,8 @@ export const baseMetadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }, { url: '/icon-192.png', sizes: '192x192', type: 'image/png' }],
+    shortcut: '/favicon.svg',
     apple: '/apple-touch-icon.png',
   },
   verification: {
@@ -42,10 +43,17 @@ export interface PageSEOOptions {
   tags?: string[]
 }
 
+// Search engines show ~155 characters; cut at a word boundary instead of mid-word
+function trimDescription(text: string, max = 158): string {
+  const clean = (text || '').replace(/\s+/g, ' ').trim()
+  if (clean.length <= max) return clean
+  return clean.slice(0, clean.lastIndexOf(' ', max - 1)).replace(/[,;:.\s]+$/, '') + '…'
+}
+
 export function buildMetadata(opts: PageSEOOptions): Metadata {
+  let { description } = opts
   const {
     title,
-    description,
     path,
     keywords = [],
     image = OG_IMAGE,
@@ -57,6 +65,7 @@ export function buildMetadata(opts: PageSEOOptions): Metadata {
   } = opts
 
   const url = `${SITE_URL}${path}`
+  description = trimDescription(description)
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
   const allKeywords = [SITE_NAME, 'Atanu Roy', 'IIT Kanpur', 'ULAB', 'Bangladesh', ...keywords, ...tags]
 
@@ -70,6 +79,7 @@ export function buildMetadata(opts: PageSEOOptions): Metadata {
       languages: {
         'en': `${SITE_URL}/en${path.replace(/^\/(en|bn)/, '')}`,
         'bn': `${SITE_URL}/bn${path.replace(/^\/(en|bn)/, '')}`,
+        'x-default': `${SITE_URL}/en${path.replace(/^\/(en|bn)/, '')}`,
       },
     },
     openGraph: {
@@ -98,7 +108,7 @@ export function getAcademicHomeSEO(locale: Locale): PageSEOOptions {
   const c = getContent(locale)
   return {
     title: `${c.personal.name} — Researcher & Educator`,
-    description: (c.academic?.bio as string)?.slice(0, 160) || 'Academic profile of Atanu Shuvam Roy — Researcher, Computer Vision, Robotics, IIT Kanpur.',
+    description: (c.academic?.bio as string) || 'Academic profile of Atanu Shuvam Roy — Researcher, Computer Vision, Robotics, IIT Kanpur.',
     path: `/${locale}`,
     locale,
     type: 'profile',
@@ -110,7 +120,7 @@ export function getAcademicAboutSEO(locale: Locale): PageSEOOptions {
   const c = getContent(locale)
   return {
     title: `About — ${c.personal.name}`,
-    description: (c.academic?.bio as string)?.slice(0, 160) || 'About Atanu Shuvam Roy — Lecturer, Researcher, Computer Vision, Robotics, IIT Kanpur.',
+    description: `Experience, education and awards of ${c.personal.name}: Lecturer in CSE at ULAB, M.Tech IIT Kanpur, researcher in computer vision, robotics and IoT.`,
     path: `/${locale}/about`,
     locale,
     type: 'profile',
@@ -151,7 +161,7 @@ export function getAcademicProjectsSEO(locale: Locale): PageSEOOptions {
 export function getAcademicTeachingSEO(locale: Locale): PageSEOOptions {
   return {
     title: 'Teaching — Atanu Shuvam Roy',
-    description: 'Courses taught by Atanu Shuvam Roy including Data Structures, Computer Vision, and Programming at ULAB.',
+    description: 'Courses taught by Atanu Shuvam Roy at ULAB: IoT, Python, Algorithms, Statistics and Software Engineering, with lecture slides and free ebooks to download.',
     path: `/${locale}/teaching`,
     locale,
     keywords: ['Teaching', 'Courses', 'Lecture Notes', 'ULAB', 'Computer Science', 'Educator'],
@@ -161,7 +171,7 @@ export function getAcademicTeachingSEO(locale: Locale): PageSEOOptions {
 export function getAcademicStudentsSEO(locale: Locale): PageSEOOptions {
   return {
     title: 'Students — Atanu Shuvam Roy',
-    description: 'Undergraduate and graduate students supervised by Atanu Shuvam Roy at ULAB.',
+    description: 'Current and past undergraduate students supervised by Atanu Shuvam Roy at ULAB, and their capstone projects in computer vision, IoT and robotics.',
     path: `/${locale}/students`,
     locale,
     keywords: ['Students', 'Supervision', 'Capstone', 'Undergraduate Research', 'ULAB'],
@@ -201,7 +211,7 @@ export function getAcademicBlogIndexSEO(locale: Locale): PageSEOOptions {
 export function getArchivedCoursesSEO(locale: Locale): PageSEOOptions {
   return {
     title: 'Archived Courses — Atanu Shuvam Roy',
-    description: 'Past courses taught by Atanu Shuvam Roy.',
+    description: 'Past courses taught by Atanu Shuvam Roy at ULAB, with course outlines, lecture slides and practice material free to download.',
     path: `/${locale}/teaching/archived`,
     locale,
     keywords: ['Courses', 'Teaching', 'Archived', 'ULAB'],
@@ -213,7 +223,7 @@ export function getDevHomeSEO(locale: Locale): PageSEOOptions {
   const c = getContent(locale)
   return {
     title: `${c.personal.name} — Software Engineer & Developer`,
-    description: (c.developer?.bio as string)?.slice(0, 160) || 'Full-stack developer and DevOps engineer building scalable web applications.',
+    description: 'Full-stack developer, DevOps and ML engineer. I build fast web apps, products like CertSend, automation tools and data pipelines for clients worldwide.',
     path: `/${locale}/developer`,
     locale,
     type: 'profile',
@@ -269,4 +279,22 @@ export function getDevBlogIndexSEO(locale: Locale): PageSEOOptions {
     locale,
     keywords: ['Dev Blog', 'Dev Logs', 'Technical Writing', 'Projects', 'Engineering'],
   }
+}
+
+// ─── JSON-LD for a blog/news post ─────────────────────────────────────────────
+export function blogPostingJsonLd(post: { title: string; summary: string; date: string; cover_image?: string; tags?: string[] }, path: string) {
+  const json = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.summary,
+    datePublished: post.date,
+    image: post.cover_image ? new URL(post.cover_image, SITE_URL).toString() : OG_IMAGE,
+    keywords: post.tags?.join(', '),
+    url: `${SITE_URL}${path}`,
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    author: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: SITE_NAME, url: SITE_URL },
+    publisher: { '@id': `${SITE_URL}/#person` },
+  }
+  return JSON.stringify(json).replace(/</g, '\u003c')
 }

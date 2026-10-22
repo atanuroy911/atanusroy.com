@@ -163,7 +163,7 @@ export default async function AcademicLayout({
                   <div className="w-24 h-24 overflow-hidden rounded-full border-4 border-border shadow mb-3">
                     <Image src={p.academic_photo || "/assets/placeholder-user-gray.svg"} alt={p.name} width={96} height={96} className="w-full h-full object-cover" />
                   </div>
-                  <h1 className="text-lg font-semibold text-foreground leading-tight mb-1">{p.name}</h1>
+                  <p className="text-lg font-semibold text-foreground leading-tight mb-1">{p.name}</p>
                   <p className="text-xs leading-snug text-muted-foreground">{acH.role}</p>
                   <p className="text-[11px] mt-0.5 leading-snug text-muted-foreground">{acH.department || acH.institution}</p>
                 </div>

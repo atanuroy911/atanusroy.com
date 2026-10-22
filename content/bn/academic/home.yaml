@@ -49,12 +49,13 @@ experience:
     bullets:
       - "UG CSE কোর্স পড়ানো: OS, DSA, পরিসংখ্যান, সফটওয়্যার ইঞ্জিনিয়ারিং, এমবেডেড সিস্টেম"
       - কম্পিউটার ভিশন, IoT, এবং রোবোটিক্স জুড়ে ক্যাপস্টোন প্রকল্পগুলিতে শিক্ষার্থীদের গাইড করা
-  - role: গবেষণা সহকারী (দূরবর্তী)
-    org: Robotics & Automation Research Lab (RARL), JXUST
-    logo: /images/logos/jxust.png
+  - role: সদস্য ও গবেষণা সহকারী (দূরবর্তী)
+    org: Robotics & Automation Research Lab (RARL)
+    logo: /images/logos/rarl.png
+    link: https://www.rarl-lab.com
     type: research
     period: Aug 2024 - Present
-    location: Jiangxi, China
+    location: Leicester, UK
     bullets:
       - Dijkstra, Floyd-Warshall, DFS ব্যবহার করে শক্তি-সচেতন AGV সংক্ষিপ্ত পথ পরিকল্পনা
       - কৃষি পর্যবেক্ষণের জন্য কম্পিউটার দৃষ্টিতে সহযোগিতা করা
@@ -71,7 +72,8 @@ experience:
       - FMCW RADAR এবং LoRaWAN সহ প্রোটোটাইপ করা স্ট্রিটলাইট ম্যানেজমেন্ট সিস্টেম
   - role: গবেষণা সহকারী
     org: Robotics & Automation Research Lab (RARL), JXUST
-    logo: /images/logos/jxust.png
+    logo: /images/logos/rarl.png
+    link: https://www.rarl-lab.com
     type: research
     period: Aug 2018 - Dec 2021
     location: Jiangxi, China

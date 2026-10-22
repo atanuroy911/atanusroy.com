@@ -298,12 +298,13 @@
           ]
         },
         {
-          "role": "Research Assistant (Remote)",
-          "org": "Robotics & Automation Research Lab (RARL), JXUST",
-          "logo": "/images/logos/jxust.png",
+          "role": "Member & Research Assistant (Remote)",
+          "org": "Robotics & Automation Research Lab (RARL)",
+          "logo": "/images/logos/rarl.png",
+          "link": "https://www.rarl-lab.com",
           "type": "research",
           "period": "Aug 2024 - Present",
-          "location": "Jiangxi, China",
+          "location": "Leicester, UK",
           "bullets": [
             "Energy-aware AGV shortest path planning using Dijkstra, Floyd-Warshall, DFS",
             "Collaborating on computer vision for agricultural monitoring"
@@ -324,7 +325,8 @@
         {
           "role": "Research Assistant",
           "org": "Robotics & Automation Research Lab (RARL), JXUST",
-          "logo": "/images/logos/jxust.png",
+          "logo": "/images/logos/rarl.png",
+          "link": "https://www.rarl-lab.com",
           "type": "research",
           "period": "Aug 2018 - Dec 2021",
           "location": "Jiangxi, China",
@@ -1514,7 +1516,7 @@
             "year": "2026",
             "title": "Present — full-stack, DevOps, and research",
             "summary": "Continuing production engineering at Backend Ace, freelance ML work, and AGV research with RARL.",
-            "details": "Currently splitting time between full-stack and DevOps engineering at Backend Ace, freelance cross-platform and ML projects, and ongoing robotics research collaboration with the Robotics & Automation Research Lab on AGV navigation.",
+            "details": "Currently splitting time between full-stack and DevOps engineering at Backend Ace, freelance cross-platform and ML projects, and AGV navigation research as a member of the Robotics & Automation Research Lab (RARL), now an independent lab in Leicester, UK.",
             "tags": [
               "Current"
             ],
@@ -2077,12 +2079,13 @@
           ]
         },
         {
-          "role": "গবেষণা সহকারী (দূরবর্তী)",
-          "org": "Robotics & Automation Research Lab (RARL), JXUST",
-          "logo": "/images/logos/jxust.png",
+          "role": "সদস্য ও গবেষণা সহকারী (দূরবর্তী)",
+          "org": "Robotics & Automation Research Lab (RARL)",
+          "logo": "/images/logos/rarl.png",
+          "link": "https://www.rarl-lab.com",
           "type": "research",
           "period": "Aug 2024 - Present",
-          "location": "Jiangxi, China",
+          "location": "Leicester, UK",
           "bullets": [
             "Dijkstra, Floyd-Warshall, DFS ব্যবহার করে শক্তি-সচেতন AGV সংক্ষিপ্ত পথ পরিকল্পনা",
             "কৃষি পর্যবেক্ষণের জন্য কম্পিউটার দৃষ্টিতে সহযোগিতা করা"
@@ -2103,7 +2106,8 @@
         {
           "role": "গবেষণা সহকারী",
           "org": "Robotics & Automation Research Lab (RARL), JXUST",
-          "logo": "/images/logos/jxust.png",
+          "logo": "/images/logos/rarl.png",
+          "link": "https://www.rarl-lab.com",
           "type": "research",
           "period": "Aug 2018 - Dec 2021",
           "location": "Jiangxi, China",

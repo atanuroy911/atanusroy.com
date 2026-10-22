@@ -32,6 +32,7 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
 
   return (
     <div className="space-y-14 pb-16">
+      <h1 className="sr-only">{content.personal.name}: {content.academic.hero?.role}, {content.academic.hero?.institution}</h1>
 
       {/* ── About (summary) ───────────────────────────────────────── */}
       <section id="about" className="space-y-4">

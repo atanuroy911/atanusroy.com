@@ -29,7 +29,7 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
         <h2 className="text-2xl md:text-3xl font-bold border-b border-border pb-2" style={{ color: 'var(--ac-navy)' }}>
           About
         </h2>
-        <p className="text-base md:text-lg leading-relaxed text-muted-foreground whitespace-pre-wrap max-w-3xl">
+        <p className="text-[15px] md:text-base leading-relaxed text-muted-foreground whitespace-pre-wrap max-w-5xl">
           {content.academic.bio}
         </p>
         <div className="pt-1">

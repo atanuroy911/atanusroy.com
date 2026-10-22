@@ -194,7 +194,7 @@ export function AcademicProjectsClient({ content }: { content: any }) {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
           <h1 className="text-2xl md:text-3xl font-bold text-blue-800">Research Projects</h1>
           <div className="h-1 w-16 mt-3 bg-blue-600" />
-          <p className="mt-4 max-w-2xl text-sm md:text-base leading-relaxed text-slate-600">
+          <p className="mt-4 max-w-4xl text-sm md:text-base leading-relaxed text-slate-600">
             Highlighting key academic research and capstone engineering projects. Click any project to read the full abstract.
           </p>
         </motion.div>

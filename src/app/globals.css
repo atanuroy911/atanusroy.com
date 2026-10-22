@@ -88,7 +88,7 @@
   --font-display: 'EB Garamond', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --sidebar-w: 230px;
-  --gap: 2.5rem;
+  --gap: clamp(1rem, 2.5vw, 2.25rem);
 }
 
 /* ── Dark ──────────────────────────────────────────────── */

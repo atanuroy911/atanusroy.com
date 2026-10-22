@@ -19,7 +19,7 @@ export function ArchivedCoursesClient({ content }: { content: any }) {
 
   return (
     <div className="py-8" style={{ minHeight: '100vh' }}>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
           <Link href={parentPath} className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-800 transition-colors mb-6 font-medium">
             <ArrowLeft size={16} />

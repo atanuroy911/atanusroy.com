@@ -55,13 +55,13 @@ export function TeachingClient({ content }: { content: any }) {
 
   return (
     <div className="py-8 sm:py-10" style={{ minHeight: '100vh' }}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-5xl">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl font-bold" style={{ color: 'var(--ac-navy)' }}>
             Teaching
           </h1>
           <div className="h-1 w-20 mt-4" style={{ background: 'var(--ac-gold)' }} />
-          <p className="mt-4 text-sm sm:text-base text-slate-600 max-w-2xl leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-slate-600 max-w-4xl leading-relaxed">
             I serve as a Lecturer in the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh (ULAB), guiding students in core computer science principles and supervising capstone engineering projects.
           </p>
         </motion.div>

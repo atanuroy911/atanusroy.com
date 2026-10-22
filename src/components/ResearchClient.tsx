@@ -72,7 +72,7 @@ export function ResearchClient({ content }: { content: any }) {
             Research Focus
             </h1>
             <div className="h-1 w-16 md:w-20 mt-3 md:mt-4" style={{ background: 'var(--ac-gold)' }} />
-            <p className="mt-3 md:mt-4 text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed">
+            <p className="mt-3 md:mt-4 text-sm md:text-base text-slate-600 max-w-4xl leading-relaxed">
               My research lies at the intersection of Computer Vision, Robotics, and Embedded Systems.
             </p>
           </motion.div>

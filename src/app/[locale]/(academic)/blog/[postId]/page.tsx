@@ -59,7 +59,7 @@ export default async function AcademicBlogPostPage({
   return (
     <div className="py-8 min-h-screen" style={{ background: 'var(--ac-bg)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: blogPostingJsonLd(post, `/${locale}/blog/${postId}`) }} />
-      <article className="max-w-3xl">
+      <article className="max-w-4xl">
         {/* Back link */}
         <Link
           href={`/${locale}/blog`}

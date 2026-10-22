@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/providers/ThemeProvider'
 import { PageTransitionProvider } from '@/providers/PageTransitionProvider'
 import { getContent, getStaticLocaleParams, type Locale } from '@/lib/content'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { PdfViewerHost } from '@/components/PdfViewer'
 import { buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
 
 export const dynamic = 'force-static'
@@ -119,6 +120,7 @@ export default async function LocaleLayout({
             {children}
           </div>
         </PageTransitionProvider>
+        <PdfViewerHost />
       </TooltipProvider>
     </ThemeProvider>
   )

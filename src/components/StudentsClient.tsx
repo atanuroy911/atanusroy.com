@@ -255,13 +255,13 @@ export function StudentsClient({ content }: { content: any }) {
 
   return (
     <div className="py-4" style={{ minHeight: '100vh' }}>
-      <div className="mx-auto max-w-6xl px-2 sm:px-4 lg:px-8">
+      <div className="max-w-6xl">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-14 text-left">
           <h1 className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--ac-navy)' }}>
             Students
           </h1>
           <div className="h-1 w-20 mt-4" style={{ background: 'var(--ac-gold)' }} />
-          <p className="mt-4 max-w-2xl leading-relaxed text-slate-600">
+          <p className="mt-4 max-w-4xl leading-relaxed text-slate-600">
             I actively guide undergraduate students in their final year capstone projects. My supervision focuses on solving complex engineering problems within the domains of computer vision, IoT systems, and robotics.
           </p>
         </motion.div>

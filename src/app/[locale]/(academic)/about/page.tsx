@@ -23,7 +23,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     <div className="space-y-14 pb-16">
       <section id="about" className="space-y-5">
         <h1 className="text-3xl font-bold border-b border-border pb-2" style={{ color: 'var(--ac-navy)' }}>About Me</h1>
-        <p className="text-base md:text-lg leading-relaxed text-muted-foreground whitespace-pre-wrap max-w-3xl">
+        <p className="text-[15px] md:text-base leading-relaxed text-muted-foreground whitespace-pre-wrap max-w-5xl">
           {content.academic.bio}
         </p>
         <div className="pt-3">

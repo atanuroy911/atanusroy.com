@@ -108,7 +108,7 @@ export default async function AcademicLayout({
   return (
     <ModeProvider forcedMode="academic">
       <div className="min-h-screen bg-background flex flex-col pt-16 ac-font-serif">
-        <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col">
+        <div className="mx-auto flex w-full max-w-[1440px] flex-1 flex-col">
           <Navbar content={pickContent(content, ['nav'])} locale={locale as Locale} isDev={false} />
 
           {/* ── Mobile profile bar ──────────────────────────────── */}

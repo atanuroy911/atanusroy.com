@@ -3,7 +3,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { buildMetadata, getAcademicHomeSEO } from '@/lib/seo'
 import { Newspaper, ArrowRight, BookOpen, Download } from 'lucide-react'
-import { HomeProjectsSection } from '@/components/home/HomeProjectsSection'
+import { getCombinedBlog } from '@/lib/blog'
+import { SelectedPublications } from '@/components/home/SelectedPublications'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -14,19 +15,8 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
   const { locale } = await params
   const content = getContent(locale as Locale)
 
-  // Get top 5 news/blog posts sorted by date desc
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const allPosts: any[] = content?.academic?.blog_posts || []
-  const latestNews = [...allPosts]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 5)
+  const latestNews = getCombinedBlog(locale as Locale).posts.slice(0, 5)
 
-  // Get latest 3 projects sorted by year desc
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const allProjects: any[] = content?.academic?.academic_projects || []
-  const latestProjects = [...allProjects]
-    .sort((a, b) => Number(b.year ?? 0) - Number(a.year ?? 0))
-    .slice(0, 3)
 
   const ebooks: { title: string; description?: string; link: string }[] = content?.academic?.free_ebooks || []
 
@@ -67,43 +57,56 @@ export default async function AcademicHome({ params }: { params: Promise<{ local
       <section id="news" className="space-y-4">
         <div className="flex items-center justify-between border-b border-border pb-2">
           <h2 className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--ac-navy)' }}>
-            Recent News
+            Latest from the Blog
           </h2>
           <Link
             href={`/${locale}/blog`}
             className="text-xs font-semibold text-primary hover:underline underline-offset-4 flex items-center gap-1"
           >
-            All news <ArrowRight size={12} />
+            All posts <ArrowRight size={12} aria-hidden="true" />
           </Link>
         </div>
         <ul className="space-y-2.5">
-          {latestNews.map((post: any) => (
-            <li key={post.id} className="flex items-start gap-2.5 text-sm md:text-base">
-              <Newspaper size={15} className="text-muted-foreground shrink-0 mt-0.5" />
-              <span className="text-muted-foreground text-xs md:text-sm shrink-0 pt-0.5 font-mono-dev">
+          {latestNews.map((post) => (
+            <li key={post.href} className="flex items-start gap-2.5 text-sm md:text-base">
+              <Newspaper size={15} className="text-muted-foreground shrink-0 mt-1" aria-hidden="true" />
+              <time dateTime={post.date} className="text-muted-foreground text-xs md:text-sm shrink-0 pt-0.5 font-mono-dev w-16">
                 {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
-              </span>
-              <span className="leading-snug text-foreground">{post.summary?.trim() || post.title}</span>
+              </time>
+              <Link href={post.href} className="leading-snug text-foreground hover:underline underline-offset-4">
+                {post.title}
+              </Link>
             </li>
           ))}
         </ul>
       </section>
 
-      {/* ── Latest Projects ───────────────────────────────────────── */}
-      <section id="latest-projects" className="space-y-4">
-        <div className="flex items-center justify-between border-b border-border pb-2">
-          <h2 className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--ac-navy)' }}>
-            Latest Projects
+      {/* ── Publications ──────────────────────────────────────────── */}
+      <section id="publications" aria-labelledby="publications-heading" className="space-y-4">
+        <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-border pb-2">
+          <h2 id="publications-heading" className="text-2xl md:text-3xl font-bold" style={{ color: 'var(--ac-navy)' }}>
+            Publications
           </h2>
-          <Link
-            href={`/${locale}/projects`}
-            className="text-xs font-semibold text-primary hover:underline underline-offset-4 flex items-center gap-1"
+          <a
+            href={content.personal.google_scholar}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-primary hover:underline underline-offset-4 flex items-center gap-1"
           >
-            All projects <ArrowRight size={12} />
-          </Link>
+            All papers on Google Scholar <ArrowRight size={14} aria-hidden="true" />
+            <span className="sr-only">(opens in a new tab)</span>
+          </a>
+          <a
+            href={content.personal.dblp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-primary hover:underline underline-offset-4"
+          >
+            DBLP<span className="sr-only"> (opens in a new tab)</span>
+          </a>
         </div>
-        {/* Client component handles the modal interaction */}
-        <HomeProjectsSection projects={latestProjects} />
+        <p className="text-sm text-muted-foreground">Selected papers. Select a card for the abstract and figures.</p>
+        <SelectedPublications pubs={content.academic.selected_publications || []} locale={locale} />
       </section>
 
       {/* ── Free Ebooks ───────────────────────────────────────────── */}

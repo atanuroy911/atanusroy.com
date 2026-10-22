@@ -67,6 +67,7 @@ export default async function LocaleLayout({
       p.linkedin,
       p.github,
       p.google_scholar,
+      p.dblp,
       p.researchgate,
       p.orcid,
       p.youtube,
@@ -88,7 +89,6 @@ export default async function LocaleLayout({
     { name: nav.home || 'Home', path: '' },
     { name: nav.about || 'About', path: '/about' },
     { name: nav.research || 'Research', path: '/research' },
-    { name: nav.publications || 'Publications', path: '/publications' },
     { name: nav.projects || 'Projects', path: '/projects' },
     { name: nav.teaching || 'Teaching', path: '/teaching' },
     { name: nav.students || 'Students', path: '/students' },
@@ -113,6 +113,7 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
         />
+        <a href="#main" className="skip-link">Skip to content</a>
         <PageTransitionProvider>
           <div lang={locale} className={isBn ? 'font-bangla' : undefined}>
             {children}

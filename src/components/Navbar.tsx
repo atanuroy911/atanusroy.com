@@ -54,11 +54,10 @@ export function Navbar({ content, locale, isDev }: Props) {
     { href: `/${locale}`, label: nav?.home || 'Home' },
     { href: `/${locale}/about`, label: nav?.about || 'About' },
     { href: `/${locale}/research`, label: nav?.research || 'Research' },
-    { href: `/${locale}/publications`, label: nav?.publications || 'Publications' },
     { href: `/${locale}/projects`, label: nav?.projects || 'Projects' },
     { href: `/${locale}/teaching`, label: nav?.teaching || 'Teaching' },
     { href: `/${locale}/students`, label: nav?.students || 'Students' },
-    { href: `/${locale}/blog`, label: nav?.blog || 'News' },
+    { href: `/${locale}/blog`, label: nav?.blog || 'Blog' },
     { href: `/${locale}/journey`, label: nav?.gallery || 'Gallery' },
     { href: `/${locale}/contact`, label: nav?.contact || 'Contact' },
   ]

@@ -52,3 +52,24 @@ export function formatBlogDate(dateStr: string) {
     day: 'numeric',
   })
 }
+
+export type BlogListItem = Omit<BlogPost, 'content'> & { href: string }
+
+// One feed for both sides of the site: academic news and developer posts together.
+// Each post keeps its own URL; the body is left out because lists only show summaries.
+export function getCombinedBlog(locale: Locale): { posts: BlogListItem[]; categories: BlogCategory[] } {
+  const ac = getAcademicBlogPosts(locale)
+  const dev = getDeveloperBlogPosts(locale)
+  const strip = (p: BlogPost, href: string): BlogListItem => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { content, ...rest } = p
+    return { ...rest, href }
+  }
+  const posts = [
+    ...ac.posts.map((p) => strip(p, `/${locale}/blog/${p.id}`)),
+    ...dev.posts.map((p) => strip(p, `/${locale}/developer/blog/${p.id}`)),
+  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  const seen = new Set<string>()
+  const categories = [...ac.categories, ...dev.categories].filter((c) => !seen.has(c.id) && !!seen.add(c.id))
+  return { posts, categories }
+}

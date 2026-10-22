@@ -11,7 +11,6 @@ const staticAcademicRoutes = [
   '/contact',
   '/journey',
   '/projects',
-  '/publications',
   '/research',
   '/students',
   '/teaching',

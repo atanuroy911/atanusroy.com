@@ -30,7 +30,7 @@ blog_posts:
     date: "2026-05-08"
     category: publication
     tags: [agv, lidar, robotics, navigation, icfeict]
-    cover_image: "/images/news/agv-lidar-kinect-icfeict.jpg"
+    cover_image: ""
     summary: >
       Our chapter comparing LiDAR and Kinect sensors for XiaoQiang AGV navigation
       is out in the Proceedings of the 5th ICFEICT 2025 (Springer).
@@ -66,7 +66,7 @@ blog_posts:
     date: "2026-02-11"
     category: publication
     tags: [agv, path-planning, optimization, robotics]
-    cover_image: "/images/news/beetle-antennae-agv-2026.jpg"
+    cover_image: "/images/papers/omni-agv-design.jpg"
     summary: >
       Our paper on an integrated Beetle Antennae Search–enabled navigation
       framework for omnidirectional AGVs in unknown environments is published in
@@ -86,7 +86,7 @@ blog_posts:
       to balance exploration and computational cost, aiming for reliable
       navigation without requiring a pre-built map.
 
-      ![The omnidirectional AGV platform used in the study](/images/news/omni-agv-design-fig.png)
+      ![The omnidirectional AGV platform used in the study](/images/papers/omni-agv-design.jpg)
 
       *The omnidirectional AGV platform used in the study. Figure from Moshayedi et
       al. (2026), CC BY.*
@@ -101,7 +101,7 @@ blog_posts:
     date: "2025-10-10"
     category: conference
     tags: [agv, path-planning, ieee, conference]
-    cover_image: "/images/news/icraic-2025-path-planning.jpg"
+    cover_image: ""
     summary: >
       Presented "Path Planning for AGVs: Balancing Computational Efficiency and
       Optimality" at the 5th ICRAIC 2025 (IEEE).
@@ -124,7 +124,7 @@ blog_posts:
     date: "2025-04-13"
     category: conference
     tags: [iot, lorawan, smart-city, conference]
-    cover_image: "/images/news/urbanpark-iccit-2025.jpg"
+    cover_image: ""
     summary: >
       Our paper "UrbanPark" on LoRaWAN-enabled smart parking modules was
       presented at the 4th ICCIT 2025.
@@ -178,7 +178,7 @@ blog_posts:
     date: "2024-12-04"
     category: publication
     tags: [education-technology, security, remote-learning]
-    cover_image: "/images/news/emtihan-2025.jpg"
+    cover_image: ""
     summary: >
       Our paper on EMTIHAN, a secure online examination framework for remote
       learning, is published in Education and Information Technologies.
@@ -207,7 +207,7 @@ blog_posts:
     date: "2024-06-05"
     category: publication
     tags: [iot, attendance, embedded-systems]
-    cover_image: "/images/news/iot-self-lecture-attendance-2024.jpg"
+    cover_image: ""
     summary: >
       Our design for a portable, secure self-lecture attendance system (SLAS)
       using IoT and QR codes is published in the International Journal of
@@ -235,7 +235,7 @@ blog_posts:
     date: "2024-02-15"
     category: publication
     tags: [computer-vision, deep-learning, yolo, publication]
-    cover_image: "/images/news/visapp-2024-attentive-yolo.jpg"
+    cover_image: "/images/papers/attentive-yolo-hardware.jpg"
     summary: >
       Our paper "Attentive-YOLO," on efficient on-site water pipeline inspection
       using an optimized YOLOv7, was accepted at VISAPP 2024.
@@ -254,6 +254,11 @@ blog_posts:
       baseline YOLOv7 while maintaining detection accuracy for pipeline defects —
       making on-site, real-time inspection more practical.
 
+      ![Edge hardware running Attentive-YOLO, and defects it detected inside pipes](/images/papers/attentive-yolo-hardware.jpg)
+
+      *(A) The edge hardware setup. (B) Pipeline defects detected on site. Figure
+      from Roy & Bagade (2024), CC BY-NC-ND 4.0.*
+
       Presented at the 19th International Conference on Computer Vision Theory
       and Applications (**VISAPP 2024**), Rome, Italy.
     link: "https://doi.org/10.5220/0012374000003660"
@@ -264,7 +269,7 @@ blog_posts:
     date: "2024-01-20"
     category: publication
     tags: [robotics, service-robots, ieee, publication]
-    cover_image: "/images/news/foodiebot-ieee-access-2024.jpg"
+    cover_image: ""
     summary: >
       Our paper on the design and development of FOODIEBOT, a food-service
       robot, is published in IEEE Access.
@@ -287,7 +292,7 @@ blog_posts:
     date: "2024-12-27"
     category: conference
     tags: [agriculture, computer-vision, mobile-app, pest-detection]
-    cover_image: "/images/news/dr-orangeapp-2024.jpg"
+    cover_image: ""
     summary: >
       Our paper on Dr_OrangeApp, a mobile app that helps farmers detect orange
       pests in real time, is published in the Proceedings of the 4th Asia-Pacific
@@ -323,7 +328,7 @@ blog_posts:
     date: "2024-12-31"
     category: publication
     tags: [agv, traffic-management, timed-automata, simulation]
-    cover_image: "/images/news/agv-ir-timed-automata-2024.jpg"
+    cover_image: "/images/papers/agv-ir-simulation.jpg"
     summary: >
       Our paper with A. Das on path tracking and traffic management for
       automated guided vehicles is out in the Journal of Robotics Research.
@@ -347,6 +352,11 @@ blog_posts:
       - Maximum congestion dropped by **20%**
       - Traffic kept flowing with no total blockage
 
+      ![Simulated AGVs following a figure-eight track in CoppeliaSim](/images/papers/agv-ir-simulation.jpg)
+
+      *AGVs sharing a figure-eight track in the CoppeliaSim simulation. Figure from
+      Roy & Das (2024).*
+
       Published in *Journal of Robotics Research* (2024).
     link: "https://doi.org/10.64820/aepjrr.11.15.23.122024"
     pinned: false
@@ -356,7 +366,7 @@ blog_posts:
     date: "2023-02-03"
     category: publication
     tags: [uav, deep-learning, smart-city, raspberry-pi, edge-ai]
-    cover_image: "/images/news/uav-speed-detector-2023.jpg"
+    cover_image: "/images/papers/uav-speed-fov.jpg"
     summary: >
       Our open-access paper in Future Transportation (MDPI) shows how a
       low-altitude drone with a Raspberry Pi and MobileNet-SSD can measure
@@ -379,6 +389,11 @@ blog_posts:
       3. Tested it at a real intersection at JXUST, flying the drone between
          **0.7 and 3 m** and changing the camera angle
 
+      ![Test setup: the drone watches a car pass timestamp points A to D over 14.94 m](/images/papers/uav-speed-fov.jpg)
+
+      *The real-vehicle test setup, with drone heights from 0.25 to 3 m. Figure
+      from Moshayedi, Roy et al. (2023), CC BY 4.0.*
+
       The result is an intelligent speed-control system that runs entirely on the
       drone's edge hardware.
 
@@ -392,7 +407,7 @@ blog_posts:
     date: "2022-07-28"
     category: conference
     tags: [iot, healthcare, arduino, telemedicine]
-    cover_image: "/images/news/iot-heart-rate-monitor-2022.jpg"
+    cover_image: ""
     summary: >
       Our paper on an affordable Arduino-based heart rate monitoring system is
       published in the SPIE proceedings of CICA 2022.
@@ -420,7 +435,7 @@ blog_posts:
     date: "2022-02-23"
     category: publication
     tags: [robotics, service-robots, kinematics, review]
-    cover_image: "/images/news/service-robot-model-review-2022.jpg"
+    cover_image: "/images/papers/service-robot-types.jpg"
     summary: >
       Our open-access review in EAI Endorsed Transactions on AI and Robotics maps
       the shapes, uses and dynamic models of service robots, as a starting point
@@ -439,7 +454,7 @@ blog_posts:
       - Robot dynamics and the dynamic models of differential-drive robots
       - How the application shapes which model you should use
 
-      ![Types of service robots covered in the review](/images/news/service-robot-types-fig.png)
+      ![Types of service robots covered in the review](/images/papers/service-robot-types.jpg)
 
       *Types of service robots covered in the review. Figure from Moshayedi et al.
       (2022), CC BY 3.0.*
@@ -454,7 +469,7 @@ blog_posts:
     date: "2022-02-20"
     category: publication
     tags: [deep-learning, machine-learning, review]
-    cover_image: "/images/news/deep-learning-pros-cons-2022.jpg"
+    cover_image: "/images/papers/deep-learning-applications.jpg"
     summary: >
       Our open-access review in EAI Endorsed Transactions on AI and Robotics
       surveys where deep learning beats traditional algorithms. It has become my
@@ -466,7 +481,7 @@ blog_posts:
       main applications of deep learning and compared its layered, nonlinear
       approach with traditional algorithms.
 
-      ![Deep learning application areas and the models they use](/images/news/deep-learning-applications-fig.png)
+      ![Deep learning application areas and the models they use](/images/papers/deep-learning-applications.jpg)
 
       *Deep learning application areas and the models commonly used in each.
       Figure from Moshayedi et al. (2022), CC BY 3.0.*
@@ -491,7 +506,7 @@ blog_posts:
     date: "2021-01-01"
     category: publication
     tags: [iot, attendance, rfid, biometrics, review]
-    cover_image: "/images/news/attendance-systems-review-2021.jpg"
+    cover_image: ""
     summary: >
       Our open-access review in the BOHR International Journal of IoT Research
       compares the technologies behind automated attendance systems.
@@ -527,7 +542,7 @@ blog_posts:
     date: "2019-12-01"
     category: conference
     tags: [iot, scada, raspberry-pi, agriculture]
-    cover_image: "/images/news/raspberry-pi-scada-2019.jpg"
+    cover_image: ""
     summary: >
       Our IEEE ICISCE 2019 paper shows how a Raspberry Pi network can run a
       low-cost, web-based SCADA system to monitor agricultural plants locally and
@@ -560,7 +575,7 @@ blog_posts:
     date: "2019-11-01"
     category: publication
     tags: [agv, pid, control-systems, robotics]
-    cover_image: "/images/news/pid-tuning-agv-2019.jpg"
+    cover_image: ""
     summary: >
       Our journal paper reviews and compares PID tuning methods for the speed and
       steering of automated guided vehicles.

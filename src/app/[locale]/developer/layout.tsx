@@ -24,7 +24,7 @@ export default async function DevLayout({
           <CursorGlow />
           <ScrollToTop />
           <Navbar content={pickContent(content, ['nav'])} locale={locale as Locale} isDev={true} />
-          <main>{children}</main>
+          <main id="main" tabIndex={-1} className="focus:outline-none">{children}</main>
           <Footer content={pickContent(content, ['personal', 'footer'])} isDev={true} />
         </div>
       </DevThemeProvider>

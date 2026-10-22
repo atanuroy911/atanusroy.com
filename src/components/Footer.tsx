@@ -17,6 +17,7 @@ export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
     p?.github && { href: p.github, icon: <Github width={16} height={16} />, label: 'GitHub' },
     p?.linkedin && { href: p.linkedin, icon: <Linkedin width={16} height={16} />, label: 'LinkedIn' },
     p?.google_scholar && { href: p.google_scholar, icon: <BookOpen size={16} />, label: 'Google Scholar' },
+    p?.dblp && { href: p.dblp, icon: <BookOpen size={16} />, label: 'DBLP' },
     p?.email && { href: `mailto:${p.email}`, icon: <Mail size={16} />, label: 'Email' },
   ].filter(Boolean) as { href: string; icon: React.ReactNode; label: string }[]
 

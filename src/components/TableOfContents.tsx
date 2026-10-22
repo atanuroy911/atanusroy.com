@@ -41,8 +41,9 @@ export function TableOfContents({ locale }: { locale: string }) {
   } else if (pathname === `/${locale}` || pathname === `/${locale}/`) {
     sections = [
       { id: 'about', label: 'About' },
-      { id: 'news', label: 'Recent News' },
-      { id: 'latest-projects', label: 'Latest Projects' },
+      { id: 'news', label: 'Latest from the Blog' },
+      { id: 'publications', label: 'Publications' },
+      { id: 'free-ebooks', label: 'Free Ebooks' },
     ]
   } else if (pathname === `/${locale}/about`) {
     sections = [
@@ -54,11 +55,6 @@ export function TableOfContents({ locale }: { locale: string }) {
   } else if (pathname === `/${locale}/research`) {
     sections = [
       { id: 'research', label: 'Research' },
-    ]
-  } else if (pathname === `/${locale}/publications`) {
-    sections = [
-      { id: 'conference', label: 'Conference' },
-      { id: 'journal', label: 'Journal' },
     ]
   } else if (pathname === `/${locale}/projects`) {
     sections = projectSections.length > 0 ? projectSections : [{ id: 'projects', label: 'Projects' }]

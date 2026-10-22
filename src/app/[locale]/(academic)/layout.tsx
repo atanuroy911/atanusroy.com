@@ -1,3 +1,4 @@
+import { SiDblp } from 'react-icons/si'
 import { getContent, pickContent, type Locale } from '@/lib/content'
 import Image from 'next/image'
 import { ModeProvider } from '@/providers/ModeProvider'
@@ -130,6 +131,9 @@ export default async function AcademicLayout({
                   <SocialLink href={p.google_scholar} label="Google Scholar">
                     <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><GoogleScholar size={16} /><span>Google Scholar</span></span>
                   </SocialLink>
+                  <SocialLink href={p.dblp} label="DBLP">
+                    <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><SiDblp size={16} aria-hidden="true" /><span>DBLP</span></span>
+                  </SocialLink>
                   <SocialLink href={p.github} label="GitHub">
                     <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><Github size={16} /><span>GitHub</span></span>
                   </SocialLink>
@@ -185,6 +189,7 @@ export default async function AcademicLayout({
                 {/* ── Social Buttons ────────────────────────────── */}
                 <div className="flex flex-col gap-2 w-full">
                   <SidebarBtn href={p.google_scholar} icon={<GoogleScholar size={15} />} label="Google Scholar" accent className="w-full justify-start" />
+                  <SidebarBtn href={p.dblp} icon={<SiDblp size={15} aria-hidden="true" />} label="DBLP" className="w-full justify-start" />
                   <SidebarBtn href={p.github} icon={<Github size={15} />} label="GitHub" className="w-full justify-start" />
                   <SidebarBtn href={p.linkedin} icon={<Linkedin size={15} />} label="LinkedIn" className="w-full justify-start" />
                   <SidebarBtn href={p.researchgate} icon={<ResearchGate size={15} />} label="ResearchGate" className="w-full justify-start" />
@@ -207,7 +212,7 @@ export default async function AcademicLayout({
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 min-w-0" style={{ padding: 'var(--gap)' }}>
+            <main id="main" tabIndex={-1} className="flex-1 min-w-0 focus:outline-none" style={{ padding: 'var(--gap)' }}>
               {children}
             </main>
 

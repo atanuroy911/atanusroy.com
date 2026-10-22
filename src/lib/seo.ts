@@ -138,16 +138,6 @@ export function getAcademicResearchSEO(locale: Locale): PageSEOOptions {
   }
 }
 
-export function getAcademicPublicationsSEO(locale: Locale): PageSEOOptions {
-  return {
-    title: 'Publications — Atanu Shuvam Roy',
-    description: 'Peer-reviewed publications by Atanu Shuvam Roy in IEEE, VISAPP, and other leading venues.',
-    path: `/${locale}/publications`,
-    locale,
-    keywords: ['Publications', 'IEEE', 'VISAPP', 'Journal', 'Conference', 'Papers', 'Computer Vision', 'Robotics'],
-  }
-}
-
 export function getAcademicProjectsSEO(locale: Locale): PageSEOOptions {
   return {
     title: 'Projects — Atanu Shuvam Roy',

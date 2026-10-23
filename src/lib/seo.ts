@@ -37,7 +37,7 @@ export interface PageSEOOptions {
   keywords?: string[]
   image?: string
   locale?: string
-  type?: 'website' | 'article' | 'profile'
+  type?: 'website' | 'article' | 'profile' | 'book'
   publishedAt?: string
   modifiedAt?: string
   tags?: string[]
@@ -93,7 +93,7 @@ export function buildMetadata(opts: PageSEOOptions): Metadata {
       siteName: SITE_NAME,
       images: [{ url: image, width: 1200, height: 630, alt: fullTitle }],
       locale: locale === 'bn' ? 'bn_BD' : 'en_US',
-      type: type === 'article' ? 'article' : type === 'profile' ? 'profile' : 'website',
+      type: type === 'article' || type === 'profile' || type === 'book' ? type : 'website',
       ...(type === 'article' && publishedAt ? { publishedTime: publishedAt } : {}),
       ...(type === 'article' && modifiedAt ? { modifiedTime: modifiedAt } : {}),
     },

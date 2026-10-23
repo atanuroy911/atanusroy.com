@@ -99,14 +99,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Free ebooks (PDFs are language-neutral, so list them once)
-  for (const book of getContent('en').academic.free_ebooks || []) {
-    entries.push({
-      url: `${SITE_URL}${encodeURI(book.link)}`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    })
+  // Free ebook pages (the PDFs themselves are linked from these)
+  for (const locale of LOCALES) {
+    for (const book of getContent(locale).academic.free_ebooks || []) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/ebooks/${book.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      })
+    }
   }
 
   return entries

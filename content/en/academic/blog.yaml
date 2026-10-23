@@ -25,6 +25,66 @@ blog_categories:
     bg: "#fef2f2"
 
 blog_posts:
+  - id: two-free-ebooks-rarl-ai-practitioner-series
+    title: "Two Free Ebooks: Write Like a Researcher and Train Like an Engineer"
+    date: "2026-10-23"
+    category: news
+    tags: [ebook, ai, research-writing, machine-learning, rarl]
+    cover_image: "/images/ebooks/ebooks-launch.jpg"
+    summary: >
+      I've released the first two volumes of the RARL AI Practitioner Series, free
+      to read and download: one on writing scientific papers with AI, one on running
+      AI experiments that don't fall over.
+    content: |
+      ## Why I Wrote Them
+
+      Working with students and collaborators, I kept seeing the same two problems.
+      Papers that had good results but didn't tell a clear story, and experiments
+      that crashed overnight, couldn't be reproduced, or produced numbers nobody
+      could trace back. AI tools can help with both, but only if you stay in charge.
+
+      So I wrote the guides I wish I'd had: practical, short enough to finish, and
+      honest about where AI goes wrong. Both are free, and both are supported by the
+      [Robotics & Automation Research Lab (RARL)](https://www.rarl-lab.com).
+
+      ![The covers of Write Like a Researcher and Train Like an Engineer side by side](/images/ebooks/ebooks-launch.jpg)
+
+      ## Volume 1: Write Like a Researcher
+
+      *A Field Guide to AI-Assisted Scientific Writing* · 66 pages
+
+      For anyone who uses AI to draft, edit or review scientific work. It covers:
+
+      - Treating a paper as a story: the chain of reasoning every manuscript needs
+      - Writing abstracts, introductions and methods others can reproduce
+      - Presenting results, figures and captions honestly
+      - A human–AI writing workflow, and where AI goes wrong
+      - A reviewer's checklist of twenty questions and one master prompt
+
+      [Read or download Write Like a Researcher](/en/ebooks/write-like-a-researcher)
+
+      ## Volume 2: Train Like an Engineer
+
+      *A Guide to Reliable AI Experiments* · 70 pages
+
+      For anyone training models who has lost a night's work to a crash. It covers:
+
+      - Project structure, configuration and reproducibility
+      - Resumable runs with checkpoints, and testing before you trust results
+      - An out-of-memory playbook
+      - Figures and tables that convince, including for vision papers
+      - Cleaning up, shipping, and working safely with AI coding agents
+
+      [Read or download Train Like an Engineer](/en/ebooks/train-like-an-engineer)
+
+      ## Share Them
+
+      If you teach, supervise or run a lab, feel free to share them with your
+      students. I'd love to hear what's useful and what's missing for the next
+      volume.
+    link: ""
+    pinned: true
+
   - id: throwback-icisce-2019-shanghai
     title: "Throwback: My First Conference Paper, in Shanghai"
     date: "2026-10-23"

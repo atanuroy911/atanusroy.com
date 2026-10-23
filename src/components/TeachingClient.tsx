@@ -7,6 +7,8 @@ import { SiYoutube } from 'react-icons/si'
 import { BookOpen, Code, Server, Cpu, Activity, Link as LinkIcon, ChevronDown, ChevronUp, FileText, FolderOpen, History, Download } from 'lucide-react'
 
 import { usePathname } from 'next/navigation'
+import { EbookCards } from '@/components/EbookCards'
+import type { Ebook } from '@/lib/ebooks'
 
 type TeachingCourseMaterialItem = {
   name: string
@@ -34,7 +36,7 @@ export function TeachingClient({ content }: { content: any }) {
   const courses = (content?.academic?.teaching_courses || []) as TeachingCourse[]
 
   const yt = content?.academic?.youtube_channel as { name: string; url: string; banner: string; banner_alt: string; description: string; cta: string } | undefined
-  const ebooks = (content?.academic?.free_ebooks || []) as { title: string; description?: string; link: string }[]
+  const ebooks = (content?.academic?.free_ebooks || []) as Ebook[]
 
   const activeCourses = courses.filter((c) => !c.archived)
   const archivedCourses = courses.filter((c) => c.archived)
@@ -114,26 +116,7 @@ export function TeachingClient({ content }: { content: any }) {
                 <span className="w-2 h-2 rounded-full bg-amber-500" />
                 Free Ebooks
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {ebooks.map((b) => (
-                  <a
-                    key={b.link}
-                    href={b.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ac-paper rounded-xl border border-slate-200 p-4 sm:p-5 flex items-start gap-3 hover:bg-slate-50 transition-colors"
-                  >
-                    <div className="w-10 h-10 rounded-lg flex items-center justify-center border bg-amber-50 border-amber-100 text-amber-600 shrink-0">
-                      <BookOpen size={20} />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h4 className="font-bold text-slate-800 text-sm sm:text-base leading-snug">{b.title}</h4>
-                      {b.description && <p className="text-xs sm:text-sm text-slate-500 mt-1">{b.description}</p>}
-                    </div>
-                    <Download size={16} className="text-slate-400 mt-1 shrink-0" />
-                  </a>
-                ))}
-              </div>
+              <EbookCards ebooks={ebooks} locale={pathname.split('/')[1] || 'en'} />
             </div>
           )}
 

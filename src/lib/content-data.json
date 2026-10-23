@@ -80,6 +80,24 @@
       ],
       "blog_posts": [
         {
+          "id": "two-free-ebooks-rarl-ai-practitioner-series",
+          "title": "Two Free Ebooks: Write Like a Researcher and Train Like an Engineer",
+          "date": "2026-10-23",
+          "category": "news",
+          "tags": [
+            "ebook",
+            "ai",
+            "research-writing",
+            "machine-learning",
+            "rarl"
+          ],
+          "cover_image": "/images/ebooks/ebooks-launch.jpg",
+          "summary": "I've released the first two volumes of the RARL AI Practitioner Series, free to read and download: one on writing scientific papers with AI, one on running AI experiments that don't fall over.\n",
+          "content": "## Why I Wrote Them\n\nWorking with students and collaborators, I kept seeing the same two problems.\nPapers that had good results but didn't tell a clear story, and experiments\nthat crashed overnight, couldn't be reproduced, or produced numbers nobody\ncould trace back. AI tools can help with both, but only if you stay in charge.\n\nSo I wrote the guides I wish I'd had: practical, short enough to finish, and\nhonest about where AI goes wrong. Both are free, and both are supported by the\n[Robotics & Automation Research Lab (RARL)](https://www.rarl-lab.com).\n\n![The covers of Write Like a Researcher and Train Like an Engineer side by side](/images/ebooks/ebooks-launch.jpg)\n\n## Volume 1: Write Like a Researcher\n\n*A Field Guide to AI-Assisted Scientific Writing* · 66 pages\n\nFor anyone who uses AI to draft, edit or review scientific work. It covers:\n\n- Treating a paper as a story: the chain of reasoning every manuscript needs\n- Writing abstracts, introductions and methods others can reproduce\n- Presenting results, figures and captions honestly\n- A human–AI writing workflow, and where AI goes wrong\n- A reviewer's checklist of twenty questions and one master prompt\n\n[Read or download Write Like a Researcher](/en/ebooks/write-like-a-researcher)\n\n## Volume 2: Train Like an Engineer\n\n*A Guide to Reliable AI Experiments* · 70 pages\n\nFor anyone training models who has lost a night's work to a crash. It covers:\n\n- Project structure, configuration and reproducibility\n- Resumable runs with checkpoints, and testing before you trust results\n- An out-of-memory playbook\n- Figures and tables that convince, including for vision papers\n- Cleaning up, shipping, and working safely with AI coding agents\n\n[Read or download Train Like an Engineer](/en/ebooks/train-like-an-engineer)\n\n## Share Them\n\nIf you teach, supervise or run a lab, feel free to share them with your\nstudents. I'd love to hear what's useful and what's missing for the next\nvolume.\n",
+          "link": "",
+          "pinned": true
+        },
+        {
           "id": "throwback-icisce-2019-shanghai",
           "title": "Throwback: My First Conference Paper, in Shanghai",
           "date": "2026-10-23",
@@ -1569,14 +1587,50 @@
       ],
       "free_ebooks": [
         {
+          "slug": "write-like-a-researcher",
           "title": "Write Like a Researcher",
-          "description": "A practical guide to academic and research writing.",
-          "link": "/assets/free-ebooks/Write Like a Researcher.pdf"
+          "subtitle": "A Field Guide to AI-Assisted Scientific Writing",
+          "series": "RARL AI Practitioner Series, Volume 1",
+          "pages": 66,
+          "year": 2026,
+          "description": "A practical guide for researchers and students who use AI to draft, edit and review scientific papers. It shows how to tell a paper's story, write methods others can reproduce, present results and figures honestly, and keep a human in charge of every claim.",
+          "contents": [
+            "A paper is a story: the chain of reasoning every manuscript must carry",
+            "Voice, tone and tense, and the anatomy of a paper",
+            "Abstracts, introductions, research questions and literature reviews",
+            "Methods others can reproduce, and results without the noise",
+            "Figures, tables and captions, with seven figure types every paper needs",
+            "Discussion, limitations and conclusions",
+            "The human–AI writing workflow, and where AI goes wrong",
+            "A reviewer's checklist of twenty questions and one master prompt"
+          ],
+          "cover": "/images/ebooks/write-like-a-researcher-cover.jpg",
+          "share_image": "/images/ebooks/write-like-a-researcher-share.jpg",
+          "link": "/assets/free-ebooks/Write Like a Researcher.pdf",
+          "companion": "train-like-an-engineer"
         },
         {
+          "slug": "train-like-an-engineer",
           "title": "Train Like an Engineer",
-          "description": "A practical guide to building engineering skills and habits.",
-          "link": "/assets/free-ebooks/Train Like an Engineer.pdf"
+          "subtitle": "A Guide to Reliable AI Experiments",
+          "series": "RARL AI Practitioner Series, Volume 2",
+          "pages": 70,
+          "year": 2026,
+          "description": "A hands-on guide to running AI experiments that don't fall over. It covers project structure and configuration, reproducibility, resumable long runs, testing before you trust results, out-of-memory fixes, figures for vision papers, and working safely with AI coding agents.",
+          "contents": [
+            "Why experiments fail, and the seven habits that prevent it",
+            "Structure and configuration with modular code and YAML configs",
+            "Reproducibility, so every number is traceable",
+            "Resumable runs with checkpoints and atomic writes",
+            "Automation, monitoring, and testing before you trust",
+            "The out-of-memory playbook",
+            "Saving, analysing and plotting results, including figures for vision papers",
+            "Cleaning up, shipping, and working with AI agents"
+          ],
+          "cover": "/images/ebooks/train-like-an-engineer-cover.jpg",
+          "share_image": "/images/ebooks/train-like-an-engineer-share.jpg",
+          "link": "/assets/free-ebooks/Train Like an Engineer.pdf",
+          "companion": "write-like-a-researcher"
         }
       ]
     },
@@ -2552,6 +2606,24 @@
         }
       ],
       "blog_posts": [
+        {
+          "id": "two-free-ebooks-rarl-ai-practitioner-series",
+          "title": "দুটি ফ্রি ইবুক: Write Like a Researcher ও Train Like an Engineer",
+          "date": "2026-10-23",
+          "category": "news",
+          "tags": [
+            "ebook",
+            "ai",
+            "research-writing",
+            "machine-learning",
+            "rarl"
+          ],
+          "cover_image": "/images/ebooks/ebooks-launch.jpg",
+          "summary": "RARL AI Practitioner Series-এর প্রথম দুটি ভলিউম প্রকাশ করেছি, বিনামূল্যে পড়া ও ডাউনলোডের জন্য: একটি এআই দিয়ে বৈজ্ঞানিক পেপার লেখা নিয়ে, আরেকটি এমন এআই এক্সপেরিমেন্ট চালানো নিয়ে যা মাঝপথে ভেঙে পড়ে না।\n",
+          "content": "## কেন লিখলাম\n\nশিক্ষার্থী ও সহকর্মীদের সঙ্গে কাজ করতে গিয়ে বারবার দুটি সমস্যা দেখেছি। ভালো\nফলাফল থাকা সত্ত্বেও পেপারগুলো পরিষ্কার গল্প বলে না, আর এক্সপেরিমেন্ট রাতে\nভেঙে পড়ে, পুনরায় করা যায় না, বা এমন সংখ্যা দেয় যার উৎস কেউ খুঁজে পায় না।\nএআই দুটোতেই সাহায্য করতে পারে, তবে কেবল তখনই যখন নিয়ন্ত্রণ আপনার হাতে থাকে।\n\nতাই এমন গাইড লিখেছি যা আমি নিজে চাইতাম: ব্যবহারিক, শেষ করার মতো ছোট, আর এআই\nকোথায় ভুল করে সে বিষয়ে সৎ। দুটোই বিনামূল্যে, এবং দুটোই\n[রোবোটিক্স অ্যান্ড অটোমেশন রিসার্চ ল্যাব (RARL)](https://www.rarl-lab.com)-এর\nসহায়তায়।\n\n![Write Like a Researcher ও Train Like an Engineer-এর কভার পাশাপাশি](/images/ebooks/ebooks-launch.jpg)\n\n## ভলিউম ১: Write Like a Researcher\n\n*A Field Guide to AI-Assisted Scientific Writing* · ৬৬ পৃষ্ঠা\n\nযাঁরা বৈজ্ঞানিক কাজের খসড়া, সম্পাদনা বা রিভিউয়ে এআই ব্যবহার করেন তাঁদের জন্য।\nএতে আছে:\n\n- পেপারকে একটি গল্প হিসেবে দেখা: প্রতিটি পাণ্ডুলিপিতে দরকারি যুক্তির ধারা\n- অ্যাবস্ট্র্যাক্ট, ভূমিকা এবং অন্যরা পুনরাবৃত্তি করতে পারে এমন মেথড লেখা\n- ফলাফল, ফিগার ও ক্যাপশন সৎভাবে উপস্থাপন\n- মানুষ ও এআই মিলে লেখার কর্মপ্রবাহ, এবং এআই কোথায় ভুল করে\n- রিভিউয়ারের চেকলিস্ট: বিশটি প্রশ্ন ও একটি মাস্টার প্রম্পট\n\n[Write Like a Researcher পড়ুন বা ডাউনলোড করুন](/bn/ebooks/write-like-a-researcher)\n\n## ভলিউম ২: Train Like an Engineer\n\n*A Guide to Reliable AI Experiments* · ৭০ পৃষ্ঠা\n\nযাঁরা মডেল ট্রেন করেন এবং কখনো ক্র্যাশে এক রাতের কাজ হারিয়েছেন তাঁদের জন্য।\nএতে আছে:\n\n- প্রজেক্টের গঠন, কনফিগারেশন ও পুনরুৎপাদনযোগ্যতা\n- চেকপয়েন্ট দিয়ে আবার চালু করা যায় এমন রান, এবং ফলাফলে ভরসার আগে পরীক্ষা\n- মেমরি শেষ হয়ে যাওয়ার (OOM) সমাধান\n- বিশ্বাসযোগ্য ফিগার ও টেবিল, ভিশন পেপারসহ\n- গোছানো, প্রকাশ করা, এবং এআই কোডিং এজেন্টের সঙ্গে নিরাপদে কাজ\n\n[Train Like an Engineer পড়ুন বা ডাউনলোড করুন](/bn/ebooks/train-like-an-engineer)\n\n## শেয়ার করুন\n\nআপনি যদি পড়ান, তত্ত্বাবধান করেন বা ল্যাব চালান, শিক্ষার্থীদের সঙ্গে নির্দ্বিধায়\nশেয়ার করুন। কোনটা কাজে লাগল আর পরের ভলিউমে কী থাকা উচিত, জানালে খুশি হব।\n",
+          "link": "",
+          "pinned": true
+        },
         {
           "id": "throwback-icisce-2019-shanghai",
           "title": "থ্রোব্যাক: সাংহাইয়ে আমার প্রথম কনফারেন্স পেপার",
@@ -4042,14 +4114,50 @@
       ],
       "free_ebooks": [
         {
-          "title": "একজন গবেষকের মতো লিখুন",
-          "description": "একাডেমিক এবং গবেষণা লেখার জন্য একটি ব্যবহারিক গাইড।",
-          "link": "/assets/free-ebooks/Write Like a Researcher.pdf"
+          "slug": "write-like-a-researcher",
+          "title": "Write Like a Researcher",
+          "subtitle": "A Field Guide to AI-Assisted Scientific Writing",
+          "series": "RARL AI Practitioner Series, ভলিউম ১",
+          "pages": 66,
+          "year": 2026,
+          "description": "যেসব গবেষক ও শিক্ষার্থী বৈজ্ঞানিক পেপারের খসড়া, সম্পাদনা ও রিভিউয়ের জন্য এআই ব্যবহার করেন, তাঁদের জন্য একটি ব্যবহারিক গাইড। এতে দেখানো হয়েছে কীভাবে একটি পেপারের গল্প বলতে হয়, অন্যরা পুনরাবৃত্তি করতে পারে এমন মেথড লিখতে হয়, ফলাফল ও ফিগার সৎভাবে উপস্থাপন করতে হয়, এবং প্রতিটি দাবির দায়িত্ব মানুষের হাতে রাখতে হয়।",
+          "contents": [
+            "একটি পেপার একটি গল্প: প্রতিটি পাণ্ডুলিপিতে যে যুক্তির ধারা থাকা চাই",
+            "লেখার স্বর, ভঙ্গি ও কাল, এবং একটি পেপারের গঠন",
+            "অ্যাবস্ট্র্যাক্ট, ভূমিকা, গবেষণা প্রশ্ন ও সাহিত্য পর্যালোচনা",
+            "অন্যরা পুনরাবৃত্তি করতে পারে এমন মেথড, এবং বাড়তি কথা ছাড়া ফলাফল",
+            "ফিগার, টেবিল ও ক্যাপশন, সঙ্গে প্রতিটি পেপারে দরকারি সাত ধরনের ফিগার",
+            "আলোচনা, সীমাবদ্ধতা ও উপসংহার",
+            "মানুষ ও এআই মিলে লেখার কর্মপ্রবাহ, এবং এআই কোথায় ভুল করে",
+            "রিভিউয়ারের চেকলিস্ট: বিশটি প্রশ্ন ও একটি মাস্টার প্রম্পট"
+          ],
+          "cover": "/images/ebooks/write-like-a-researcher-cover.jpg",
+          "share_image": "/images/ebooks/write-like-a-researcher-share.jpg",
+          "link": "/assets/free-ebooks/Write Like a Researcher.pdf",
+          "companion": "train-like-an-engineer"
         },
         {
-          "title": "একজন ইঞ্জিনিয়ারের মতো ট্রেন করুন",
-          "description": "ইঞ্জিনিয়ারিং দক্ষতা এবং অভ্যাস তৈরির জন্য একটি ব্যবহারিক গাইড।",
-          "link": "/assets/free-ebooks/Train Like an Engineer.pdf"
+          "slug": "train-like-an-engineer",
+          "title": "Train Like an Engineer",
+          "subtitle": "A Guide to Reliable AI Experiments",
+          "series": "RARL AI Practitioner Series, ভলিউম ২",
+          "pages": 70,
+          "year": 2026,
+          "description": "এমন এআই এক্সপেরিমেন্ট চালানোর হাতে-কলমে গাইড, যা মাঝপথে ভেঙে পড়ে না। এতে আছে প্রজেক্টের গঠন ও কনফিগারেশন, পুনরুৎপাদনযোগ্যতা, দীর্ঘ রান আবার চালু করা, ফলাফলে ভরসা করার আগে পরীক্ষা, মেমরি শেষ হয়ে যাওয়ার সমাধান, ভিশন পেপারের ফিগার, এবং এআই কোডিং এজেন্টের সঙ্গে নিরাপদে কাজ করা।",
+          "contents": [
+            "এক্সপেরিমেন্ট কেন ব্যর্থ হয়, এবং তা ঠেকানোর সাতটি অভ্যাস",
+            "মডুলার কোড ও YAML কনফিগ দিয়ে গঠন ও কনফিগারেশন",
+            "পুনরুৎপাদনযোগ্যতা, যাতে প্রতিটি সংখ্যার উৎস খুঁজে পাওয়া যায়",
+            "চেকপয়েন্ট ও অ্যাটমিক রাইট দিয়ে আবার চালু করা যায় এমন রান",
+            "অটোমেশন, মনিটরিং, এবং ভরসা করার আগে পরীক্ষা",
+            "মেমরি শেষ হয়ে যাওয়ার (OOM) সমাধান",
+            "ফলাফল সংরক্ষণ, বিশ্লেষণ ও প্লট, ভিশন পেপারের ফিগারসহ",
+            "গোছানো, প্রকাশ করা, এবং এআই এজেন্টের সঙ্গে কাজ"
+          ],
+          "cover": "/images/ebooks/train-like-an-engineer-cover.jpg",
+          "share_image": "/images/ebooks/train-like-an-engineer-share.jpg",
+          "link": "/assets/free-ebooks/Train Like an Engineer.pdf",
+          "companion": "write-like-a-researcher"
         }
       ]
     },

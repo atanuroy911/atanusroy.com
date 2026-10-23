@@ -216,9 +216,51 @@ teaching_courses:
           - name: ব্যায়াম সমাধান - Lec 8
             link: /classroom/Spring 26/STA 2101 - Statistics and Probability/Exercise Solutions - Lec 8.pdf
 free_ebooks:
-  - title: একজন গবেষকের মতো লিখুন
-    description: একাডেমিক এবং গবেষণা লেখার জন্য একটি ব্যবহারিক গাইড।
-    link: /assets/free-ebooks/Write Like a Researcher.pdf
-  - title: একজন ইঞ্জিনিয়ারের মতো ট্রেন করুন
-    description: ইঞ্জিনিয়ারিং দক্ষতা এবং অভ্যাস তৈরির জন্য একটি ব্যবহারিক গাইড।
-    link: /assets/free-ebooks/Train Like an Engineer.pdf
+  - slug: write-like-a-researcher
+    title: Write Like a Researcher
+    subtitle: A Field Guide to AI-Assisted Scientific Writing
+    series: RARL AI Practitioner Series, ভলিউম ১
+    pages: 66
+    year: 2026
+    description: >-
+      যেসব গবেষক ও শিক্ষার্থী বৈজ্ঞানিক পেপারের খসড়া, সম্পাদনা ও রিভিউয়ের জন্য এআই
+      ব্যবহার করেন, তাঁদের জন্য একটি ব্যবহারিক গাইড। এতে দেখানো হয়েছে কীভাবে একটি
+      পেপারের গল্প বলতে হয়, অন্যরা পুনরাবৃত্তি করতে পারে এমন মেথড লিখতে হয়, ফলাফল ও
+      ফিগার সৎভাবে উপস্থাপন করতে হয়, এবং প্রতিটি দাবির দায়িত্ব মানুষের হাতে রাখতে হয়।
+    contents:
+      - "একটি পেপার একটি গল্প: প্রতিটি পাণ্ডুলিপিতে যে যুক্তির ধারা থাকা চাই"
+      - লেখার স্বর, ভঙ্গি ও কাল, এবং একটি পেপারের গঠন
+      - অ্যাবস্ট্র্যাক্ট, ভূমিকা, গবেষণা প্রশ্ন ও সাহিত্য পর্যালোচনা
+      - অন্যরা পুনরাবৃত্তি করতে পারে এমন মেথড, এবং বাড়তি কথা ছাড়া ফলাফল
+      - ফিগার, টেবিল ও ক্যাপশন, সঙ্গে প্রতিটি পেপারে দরকারি সাত ধরনের ফিগার
+      - আলোচনা, সীমাবদ্ধতা ও উপসংহার
+      - মানুষ ও এআই মিলে লেখার কর্মপ্রবাহ, এবং এআই কোথায় ভুল করে
+      - "রিভিউয়ারের চেকলিস্ট: বিশটি প্রশ্ন ও একটি মাস্টার প্রম্পট"
+    cover: /images/ebooks/write-like-a-researcher-cover.jpg
+    share_image: /images/ebooks/write-like-a-researcher-share.jpg
+    link: '/assets/free-ebooks/Write Like a Researcher.pdf'
+    companion: train-like-an-engineer
+  - slug: train-like-an-engineer
+    title: Train Like an Engineer
+    subtitle: A Guide to Reliable AI Experiments
+    series: RARL AI Practitioner Series, ভলিউম ২
+    pages: 70
+    year: 2026
+    description: >-
+      এমন এআই এক্সপেরিমেন্ট চালানোর হাতে-কলমে গাইড, যা মাঝপথে ভেঙে পড়ে না। এতে আছে
+      প্রজেক্টের গঠন ও কনফিগারেশন, পুনরুৎপাদনযোগ্যতা, দীর্ঘ রান আবার চালু করা, ফলাফলে
+      ভরসা করার আগে পরীক্ষা, মেমরি শেষ হয়ে যাওয়ার সমাধান, ভিশন পেপারের ফিগার, এবং
+      এআই কোডিং এজেন্টের সঙ্গে নিরাপদে কাজ করা।
+    contents:
+      - এক্সপেরিমেন্ট কেন ব্যর্থ হয়, এবং তা ঠেকানোর সাতটি অভ্যাস
+      - মডুলার কোড ও YAML কনফিগ দিয়ে গঠন ও কনফিগারেশন
+      - পুনরুৎপাদনযোগ্যতা, যাতে প্রতিটি সংখ্যার উৎস খুঁজে পাওয়া যায়
+      - চেকপয়েন্ট ও অ্যাটমিক রাইট দিয়ে আবার চালু করা যায় এমন রান
+      - অটোমেশন, মনিটরিং, এবং ভরসা করার আগে পরীক্ষা
+      - মেমরি শেষ হয়ে যাওয়ার (OOM) সমাধান
+      - ফলাফল সংরক্ষণ, বিশ্লেষণ ও প্লট, ভিশন পেপারের ফিগারসহ
+      - গোছানো, প্রকাশ করা, এবং এআই এজেন্টের সঙ্গে কাজ
+    cover: /images/ebooks/train-like-an-engineer-cover.jpg
+    share_image: /images/ebooks/train-like-an-engineer-share.jpg
+    link: '/assets/free-ebooks/Train Like an Engineer.pdf'
+    companion: write-like-a-researcher

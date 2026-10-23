@@ -221,9 +221,51 @@ teaching_courses:
           - name: 'Exercise Solutions - Lec 8'
             link: '/classroom/Spring 26/STA 2101 - Statistics and Probability/Exercise Solutions - Lec 8.pdf'
 free_ebooks:
-  - title: Write Like a Researcher
-    description: A practical guide to academic and research writing.
+  - slug: write-like-a-researcher
+    title: Write Like a Researcher
+    subtitle: A Field Guide to AI-Assisted Scientific Writing
+    series: RARL AI Practitioner Series, Volume 1
+    pages: 66
+    year: 2026
+    description: >-
+      A practical guide for researchers and students who use AI to draft, edit and
+      review scientific papers. It shows how to tell a paper's story, write methods
+      others can reproduce, present results and figures honestly, and keep a human
+      in charge of every claim.
+    contents:
+      - "A paper is a story: the chain of reasoning every manuscript must carry"
+      - Voice, tone and tense, and the anatomy of a paper
+      - Abstracts, introductions, research questions and literature reviews
+      - Methods others can reproduce, and results without the noise
+      - Figures, tables and captions, with seven figure types every paper needs
+      - Discussion, limitations and conclusions
+      - The human–AI writing workflow, and where AI goes wrong
+      - A reviewer's checklist of twenty questions and one master prompt
+    cover: /images/ebooks/write-like-a-researcher-cover.jpg
+    share_image: /images/ebooks/write-like-a-researcher-share.jpg
     link: '/assets/free-ebooks/Write Like a Researcher.pdf'
-  - title: Train Like an Engineer
-    description: A practical guide to building engineering skills and habits.
+    companion: train-like-an-engineer
+  - slug: train-like-an-engineer
+    title: Train Like an Engineer
+    subtitle: A Guide to Reliable AI Experiments
+    series: RARL AI Practitioner Series, Volume 2
+    pages: 70
+    year: 2026
+    description: >-
+      A hands-on guide to running AI experiments that don't fall over. It covers
+      project structure and configuration, reproducibility, resumable long runs,
+      testing before you trust results, out-of-memory fixes, figures for vision
+      papers, and working safely with AI coding agents.
+    contents:
+      - Why experiments fail, and the seven habits that prevent it
+      - Structure and configuration with modular code and YAML configs
+      - Reproducibility, so every number is traceable
+      - Resumable runs with checkpoints and atomic writes
+      - Automation, monitoring, and testing before you trust
+      - The out-of-memory playbook
+      - Saving, analysing and plotting results, including figures for vision papers
+      - Cleaning up, shipping, and working with AI agents
+    cover: /images/ebooks/train-like-an-engineer-cover.jpg
+    share_image: /images/ebooks/train-like-an-engineer-share.jpg
     link: '/assets/free-ebooks/Train Like an Engineer.pdf'
+    companion: write-like-a-researcher

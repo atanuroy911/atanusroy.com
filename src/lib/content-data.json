@@ -1090,6 +1090,52 @@
       ],
       "students": [
         {
+          "year": 2026,
+          "name": "Umme Mehajabin Anisha",
+          "designation": "Undergraduate Researcher",
+          "linkedin": "https://www.linkedin.com/in/umme-mehajabin-anisha-520253319",
+          "email": "anishamehajabin@gmail.com",
+          "project": "A Vision-Based Framework for Traffic and Pedestrian Prediction in Autonomous Vehicles via Monocular Depth Estimation and Object Tracking",
+          "bio": "At University of Liberal Arts Bangladesh, actively working on a vision-based framework for traffic and pedestrian prediction in autonomous vehicles via monocular depth estimation and object tracking. Her work integrates deep learning architectures, spatial tracking, and scene segmentation pipelines to address real-world challenges and develop intelligent autonomous driving solutions."
+        },
+        {
+          "year": 2026,
+          "name": "Jahidul Islam Zim",
+          "photo": "/images/students/jahidul.jpeg",
+          "designation": "Undergraduate Researcher",
+          "linkedin": "https://www.linkedin.com/in/jahidulislamzim",
+          "email": "jahidulislamzim845@gmail.com",
+          "project": "ESP32-Based Decentralized Mesh Network",
+          "bio": "At the University of Liberal Arts Bangladesh, conducting research on ESP32-based decentralized mesh networks to enhance communication reliability and efficiency. His work focuses on intelligent routing algorithms, automatic node failure detection, bandwidth optimization, and emergency message prioritization to ensure fast and uninterrupted communication without a central server. He is passionate about embedded systems, computer networking, and developing innovative solutions to real-world technological challenges."
+        },
+        {
+          "year": 2026,
+          "name": "Sagor",
+          "photo": "/images/students/sagor.jpeg",
+          "designation": "Undergraduate Researcher",
+          "email": "mdsagorrobi3@gmail.com",
+          "project": "ESP32-Based Decentralized Mesh Network",
+          "bio": "At the University of Liberal Arts Bangladesh, conducting research on ESP32-based decentralized mesh networks to enhance communication reliability and efficiency. His work focuses on intelligent routing algorithms, automatic node failure detection, bandwidth optimization, and emergency message prioritization to ensure fast and uninterrupted communication without a central server. He is passionate about embedded systems, computer networking, and developing innovative solutions to real-world technological challenges."
+        },
+        {
+          "year": 2026,
+          "name": "Md Jannatun Naem Refat",
+          "designation": "Undergraduate Researcher",
+          "linkedin": "https://www.linkedin.com/in/md-jannatun-naem-refat-839655234/",
+          "email": "refatislam630@gmail.com",
+          "project": "ESP32-Based Decentralized Mesh Network",
+          "bio": "At the University of Liberal Arts Bangladesh, conducting research on ESP32-based decentralized mesh networks to enhance communication reliability and efficiency. His work focuses on intelligent routing algorithms, automatic node failure detection, bandwidth optimization, and emergency message prioritization to ensure fast and uninterrupted communication without a central server. He is passionate about embedded systems, computer networking, and developing innovative solutions to real-world technological challenges."
+        },
+        {
+          "year": 2026,
+          "name": "Rashid Shahriar",
+          "designation": "Undergraduate Researcher",
+          "linkedin": "https://www.linkedin.com/in/rashid-shahriar-5310852b2/",
+          "email": "rashid.cse00@gmail.com",
+          "project": "ESP32-Based Decentralized Mesh Network",
+          "bio": "At the University of Liberal Arts Bangladesh, conducting research on ESP32-based decentralized mesh networks to enhance communication reliability and efficiency. His work focuses on intelligent routing algorithms, automatic node failure detection, bandwidth optimization, and emergency message prioritization to ensure fast and uninterrupted communication without a central server. He is passionate about embedded systems, computer networking, and developing innovative solutions to real-world technological challenges."
+        },
+        {
           "year": 2025,
           "name": "Saika Mehnaz Khan",
           "photo": "/images/students/saika.jpeg",
@@ -2562,7 +2608,7 @@
           ],
           "cover_image": "",
           "summary": "IoT এবং QR কোড ব্যবহার করে একটি পোর্টেবল, সুরক্ষিত সেলফ-লেকচার অ্যাটেনডেন্স সিস্টেম (SLAS) এর জন্য আমাদের ডিজাইনটি ইন্টারন্যাশনাল জার্নাল অফ ইলেকট্রনিক সিকিউরিটি অ্যান্ড ডিজিটাল ফরেনসিক্স-এ প্রকাশিত হয়েছে।",
-          "content": "## প্রেরণা\n\nশ্রেণীকক্ষে উপস্থিতি ট্র্যাকিং এখনও প্রায়ই ম্যানুয়াল, ধীর বা সহজ\nফাঁকি আমরা **SLAS** ডিজাইন করেছি, একটি স্ব-বক্তৃতা উপস্থিতি সিস্টেম যা জোড়া করে\nQR-কোড-ভিত্তিক চেক-ইন সহ শিক্ষার্থীদের স্মার্টফোন একটি কম খরচে IoT-এর মাধ্যমে\nব্যাকএন্ড, বিদ্যমান সিস্টেমে গোপনীয়তা এবং সুরক্ষা ফাঁকগুলিকে মোকাবেলা করা।\n\n## স্থাপনা\n\nআমরা SLAS কে একটি লাইভ লেকচার সেটিংয়ে যাচাই করেছি, এটি বিদ্যমানের সাথে তুলনা করে\nসঠিকতা, খরচ, এবং প্রক্রিয়াকরণ সময় উপস্থিতি পদ্ধতি.\n\n*ইলেক্ট্রনিক নিরাপত্তার আন্তর্জাতিক জার্নালে প্রকাশিত এবং\nডিজিটাল ফরেনসিক* (2024), আতা জাহাঙ্গীর মোশায়েদী এবং সহযোগীদের সাথে।",
+          "content": "## প্রেরণা\n\nশ্রেণীকক্ষে উপস্থিতি ট্র্যাকিং এখনও প্রায়ই ম্যানুয়াল, ধীর বা সহজ\nফাঁকি আমরা **SLAS** ডিজাইন করেছি, একটি স্ব-বক্তৃতা উপস্থিতি সিস্টেম যা জোড়া করে\nকম খরচে IoT-এর মাধ্যমে QR-কোড-ভিত্তিক চেক-ইন সহ শিক্ষার্থীদের স্মার্টফোন\nব্যাকএন্ড, বিদ্যমান সিস্টেমে গোপনীয়তা এবং সুরক্ষা ফাঁকগুলিকে মোকাবেলা করা।\n\n## স্থাপনা\n\nআমরা SLAS কে একটি লাইভ লেকচার সেটিংয়ে যাচাই করেছি, এটি বিদ্যমানের সাথে তুলনা করে\nসঠিকতা, খরচ, এবং প্রক্রিয়াকরণ সময় উপস্থিতি পদ্ধতি.\n\n*ইলেক্ট্রনিক নিরাপত্তার আন্তর্জাতিক জার্নালে প্রকাশিত এবং\nডিজিটাল ফরেনসিক* (2024), আতা জাহাঙ্গীর মোশায়েদী এবং সহযোগীদের সাথে।",
           "link": "https://doi.org/10.1504/IJESDF.2024.142009",
           "pinned": false
         },
@@ -2971,7 +3017,7 @@
           ],
           "venue": "Personal Project",
           "description": "একটি LSTM-ভিত্তিক সেন্সর অ্যাক্টিভিটি রিকগনিশন মডেল ক্লাউডে স্থাপন করা হয়েছে, রিয়েল-টাইম মনিটরিং এবং ভবিষ্যদ্বাণীর জন্য একটি সহচর মোবাইল অ্যাপের সাথে যুক্ত।",
-          "abstract": "এই প্রকল্পটি সেন্সর-ভিত্তিক মানব কার্যকলাপ স্বীকৃতির জন্য PyTorch-এ একটি LSTM মডেলকে প্রশিক্ষণ দেয় এবং এটিকে একটি ক্লাউড-হোস্টেড ইনফারেন্স পরিষেবা হিসাবে স্থাপন করে৷ একটি সহচর মোবাইল অ্যাপ মডেলটিতে লাইভ সেন্সর ডেটা স্ট্রিম করে এবং ব্যবহারকারীকে রিয়েল-টাইম কার্যকলাপের পূর্বাভাস দেয়।",
+          "abstract": "এই প্রকল্পটি সেন্সর-ভিত্তিক মানব কার্যকলাপ স্বীকৃতির জন্য PyTorch-এ একটি LSTM মডেলকে প্রশিক্ষণ দেয় এবং এটিকে একটি ক্লাউড-হোস্টেড ইনফারেন্স পরিষেবা হিসাবে স্থাপন করে৷ একটি সহচর মোবাইল অ্যাপ মডেলে লাইভ সেন্সর ডেটা স্ট্রিম করে এবং ব্যবহারকারীকে রিয়েল-টাইম কার্যকলাপের পূর্বাভাস দেয়।",
           "image": "",
           "paper_link": "",
           "github_link": "",
@@ -3461,6 +3507,52 @@
       ],
       "students": [
         {
+          "year": 2026,
+          "name": "উম্মে মেহজাবিন আনিশা",
+          "designation": "স্নাতক গবেষক",
+          "linkedin": "https://www.linkedin.com/in/umme-mehajabin-anisha-520253319",
+          "email": "anishamehajabin@gmail.com",
+          "project": "মনোকুলার ডেপথ এস্টিমেশন এবং অবজেক্ট ট্র্যাকিংয়ের মাধ্যমে স্বায়ত্তশাসিত যানবাহনে ট্র্যাফিক এবং পথচারীদের পূর্বাভাসের জন্য একটি দৃষ্টি-ভিত্তিক কাঠামো",
+          "bio": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এ, একচেটিয়া গভীরতা অনুমান এবং অবজেক্ট ট্র্যাকিংয়ের মাধ্যমে স্বায়ত্তশাসিত যানবাহনে ট্র্যাফিক এবং পথচারীদের পূর্বাভাসের জন্য একটি দৃষ্টি-ভিত্তিক কাঠামোতে সক্রিয়ভাবে কাজ করছে। তার কাজ বাস্তব-বিশ্বের চ্যালেঞ্জ মোকাবেলা করতে এবং বুদ্ধিমান স্বায়ত্তশাসিত ড্রাইভিং সমাধান বিকাশের জন্য গভীর শিক্ষার আর্কিটেকচার, স্থানিক ট্র্যাকিং এবং দৃশ্য বিভাজন পাইপলাইনগুলিকে একীভূত করে৷"
+        },
+        {
+          "year": 2026,
+          "name": "জাহিদুল ইসলাম জিম",
+          "photo": "/images/students/jahidul.jpeg",
+          "designation": "স্নাতক গবেষক",
+          "linkedin": "https://www.linkedin.com/in/jahidulislamzim",
+          "email": "jahidulislamzim845@gmail.com",
+          "project": "ESP32-ভিত্তিক বিকেন্দ্রীভূত মেশ নেটওয়ার্ক",
+          "bio": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এ, যোগাযোগের নির্ভরযোগ্যতা এবং দক্ষতা বাড়াতে ESP32-ভিত্তিক বিকেন্দ্রীভূত জাল নেটওয়ার্কের উপর গবেষণা পরিচালনা করছে। তার কাজ বুদ্ধিমান রাউটিং অ্যালগরিদম, স্বয়ংক্রিয় নোড ব্যর্থতা সনাক্তকরণ, ব্যান্ডউইথ অপ্টিমাইজেশান, এবং জরুরী বার্তা অগ্রাধিকারের উপর ফোকাস করে যাতে একটি কেন্দ্রীয় সার্ভার ছাড়াই দ্রুত এবং নিরবচ্ছিন্ন যোগাযোগ নিশ্চিত করা যায়। তিনি এমবেডেড সিস্টেম, কম্পিউটার নেটওয়ার্কিং এবং বাস্তব-বিশ্বের প্রযুক্তিগত চ্যালেঞ্জের উদ্ভাবনী সমাধানের বিষয়ে উত্সাহী।"
+        },
+        {
+          "year": 2026,
+          "name": "সাগর",
+          "photo": "/images/students/sagor.jpeg",
+          "designation": "স্নাতক গবেষক",
+          "email": "mdsagorrobi3@gmail.com",
+          "project": "ESP32-ভিত্তিক বিকেন্দ্রীভূত মেশ নেটওয়ার্ক",
+          "bio": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এ, যোগাযোগের নির্ভরযোগ্যতা এবং দক্ষতা বাড়াতে ESP32-ভিত্তিক বিকেন্দ্রীভূত জাল নেটওয়ার্কের উপর গবেষণা পরিচালনা করছে। তার কাজ বুদ্ধিমান রাউটিং অ্যালগরিদম, স্বয়ংক্রিয় নোড ব্যর্থতা সনাক্তকরণ, ব্যান্ডউইথ অপ্টিমাইজেশান, এবং জরুরী বার্তা অগ্রাধিকারের উপর ফোকাস করে যাতে একটি কেন্দ্রীয় সার্ভার ছাড়াই দ্রুত এবং নিরবচ্ছিন্ন যোগাযোগ নিশ্চিত করা যায়। তিনি এমবেডেড সিস্টেম, কম্পিউটার নেটওয়ার্কিং এবং বাস্তব-বিশ্বের প্রযুক্তিগত চ্যালেঞ্জের উদ্ভাবনী সমাধানের বিষয়ে উত্সাহী।"
+        },
+        {
+          "year": 2026,
+          "name": "মোঃ জান্নাতুন নাঈম রেফাত",
+          "designation": "স্নাতক গবেষক",
+          "linkedin": "https://www.linkedin.com/in/md-jannatun-naem-refat-839655234/",
+          "email": "refatislam630@gmail.com",
+          "project": "ESP32-ভিত্তিক বিকেন্দ্রীভূত মেশ নেটওয়ার্ক",
+          "bio": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এ, যোগাযোগের নির্ভরযোগ্যতা এবং দক্ষতা বাড়াতে ESP32-ভিত্তিক বিকেন্দ্রীভূত জাল নেটওয়ার্কের উপর গবেষণা পরিচালনা করছে। তার কাজ বুদ্ধিমান রাউটিং অ্যালগরিদম, স্বয়ংক্রিয় নোড ব্যর্থতা সনাক্তকরণ, ব্যান্ডউইথ অপ্টিমাইজেশান, এবং জরুরী বার্তা অগ্রাধিকারের উপর ফোকাস করে যাতে একটি কেন্দ্রীয় সার্ভার ছাড়াই দ্রুত এবং নিরবচ্ছিন্ন যোগাযোগ নিশ্চিত করা যায়। তিনি এমবেডেড সিস্টেম, কম্পিউটার নেটওয়ার্কিং এবং বাস্তব-বিশ্বের প্রযুক্তিগত চ্যালেঞ্জের উদ্ভাবনী সমাধানের বিষয়ে উত্সাহী।"
+        },
+        {
+          "year": 2026,
+          "name": "রশিদ শাহরিয়ার",
+          "designation": "স্নাতক গবেষক",
+          "linkedin": "https://www.linkedin.com/in/rashid-shahriar-5310852b2/",
+          "email": "rashid.cse00@gmail.com",
+          "project": "ESP32-ভিত্তিক বিকেন্দ্রীভূত মেশ নেটওয়ার্ক",
+          "bio": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এ, যোগাযোগের নির্ভরযোগ্যতা এবং দক্ষতা বাড়াতে ESP32-ভিত্তিক বিকেন্দ্রীভূত জাল নেটওয়ার্কের উপর গবেষণা পরিচালনা করছে। তার কাজ বুদ্ধিমান রাউটিং অ্যালগরিদম, স্বয়ংক্রিয় নোড ব্যর্থতা সনাক্তকরণ, ব্যান্ডউইথ অপ্টিমাইজেশান, এবং জরুরী বার্তা অগ্রাধিকারের উপর ফোকাস করে যাতে একটি কেন্দ্রীয় সার্ভার ছাড়াই দ্রুত এবং নিরবচ্ছিন্ন যোগাযোগ নিশ্চিত করা যায়। তিনি এমবেডেড সিস্টেম, কম্পিউটার নেটওয়ার্কিং এবং বাস্তব-বিশ্বের প্রযুক্তিগত চ্যালেঞ্জের উদ্ভাবনী সমাধানের বিষয়ে উত্সাহী।"
+        },
+        {
           "year": 2025,
           "name": "সাইকা মেহনাজ খান",
           "photo": "/images/students/saika.jpeg",
@@ -3472,7 +3564,7 @@
         },
         {
           "year": 2025,
-          "name": "মিঃ মুস্তারা খাতুন মুগনী",
+          "name": "মোসাঃ মুস্তারা খাতুন মুগনী",
           "photo": "/images/students/mugni.jpeg",
           "designation": "স্নাতক গবেষক",
           "linkedin": "https://www.linkedin.com/in/mustara-khatun-mugni-b09727301",
@@ -3980,7 +4072,7 @@
           ],
           "cover_image": "",
           "summary": "JSON-RPC-এর মাধ্যমে বিটকয়েন কোর নোডের সাথে ইন্টারঅ্যাক্ট করার জন্য একটি সম্পূর্ণ ওয়েব ইন্টারফেস — রিয়েল-টাইম ব্লক ডেটা, ওয়ালেট ম্যানেজমেন্ট এবং লেনদেন সম্প্রচার।",
-          "content": "## চুলকানি\n\nএকটি বিটকয়েন কোর সম্পূর্ণ নোড চালানোর অর্থ হল যেকোনো কিছুর জন্য `বিটকয়েন-ক্লাই`-এ ড্রপ করা —\nমেম্পুল পরিসংখ্যান পরীক্ষা করা, UTXO তালিকা করা, একটি কাঁচা লেনদেন ডিকোড করা। আমি একটি পরিষ্কার চেয়েছিলাম\nপরিবর্তে ব্রাউজার UI, তাই আমি একটি তৈরি করেছি।\n\n## টেক স্ট্যাক\n\n- **ব্যাকএন্ড**: জাভা, JSON-RPC কলগুলি মোড়ানো\n- **ফ্রন্টেন্ড**: প্রতিক্রিয়া\n- **প্রমাণ**: HTTP মৌলিক প্রমাণীকরণ (`bitcoin.conf` এর মতো একই শংসাপত্র)\n\n## যা শিখেছি\n\n- বিটকয়েন কোরের RPC সারফেস *বিশাল* — আপনার যা প্রয়োজন তার সাথে লেগে থাকুন\n- `getblocktemplate` ব্যয়বহুল; ঘন ঘন কল করবেন না\n- মেম্পুল আপডেটের জন্য পোলিং ব্যাকঅফ করা দরকার, নতুবা আপনি নোডকে হাতুড়ি দেবেন\n\nউৎস GitHub-এ রয়েছে - পিআর এবং সমস্যাগুলি স্বাগত জানাই৷",
+          "content": "## চুলকানি\n\nএকটি বিটকয়েন কোর সম্পূর্ণ নোড চালানোর অর্থ হল যেকোনো কিছুর জন্য `বিটকয়েন-ক্লাই`-এ ড্রপ করা —\nমেম্পুল পরিসংখ্যান পরীক্ষা করা, UTXO তালিকা করা, একটি কাঁচা লেনদেন ডিকোড করা। আমি একটি পরিষ্কার চেয়েছিলাম\nপরিবর্তে ব্রাউজার UI, তাই আমি একটি তৈরি করেছি।\n\n## টেক স্ট্যাক\n\n- **ব্যাকএন্ড**: জাভা, JSON-RPC কলগুলি মোড়ানো\n- **ফ্রন্টেন্ড**: প্রতিক্রিয়া\n- **প্রমাণ**: HTTP মৌলিক প্রমাণীকরণ (`bitcoin.conf` এর মতো একই শংসাপত্র)\n\n## যা শিখলাম\n\n- বিটকয়েন কোরের RPC সারফেস *বিশাল* — আপনার যা প্রয়োজন তার সাথে লেগে থাকুন\n- `getblocktemplate` ব্যয়বহুল; ঘন ঘন কল করবেন না\n- মেম্পুল আপডেটের জন্য পোলিং ব্যাকঅফ করা দরকার, নতুবা আপনি নোডকে হাতুড়ি দেবেন\n\nউৎস GitHub-এ রয়েছে - পিআর এবং সমস্যাগুলি স্বাগত জানাই৷",
           "github": "https://github.com/atanuroy911/BTC-CORE-WEBAPP",
           "link": "",
           "pinned": false

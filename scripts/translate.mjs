@@ -26,7 +26,7 @@ const SKIP_KEYS = new Set([
   'id', 'date', 'category', 'color', 'bg', 'tags',
   // Links, paths and ids added later
   'post', 'doi', 'url', 'dblp', 'image', 'video', 'poster', 'product_hunt',
-  'slug', 'papers', 'related',
+  'slug', 'papers', 'related', 'photo',
 ])
 
 // Keys whose values are proper nouns / tech terms (don't translate)

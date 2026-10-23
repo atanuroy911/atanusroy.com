@@ -1,7 +1,7 @@
 students:
   - year: 2026
     name: Umme Mehajabin Anisha
-    # photo: /images/students/anisha.jpeg  (add the photo file, then uncomment)
+    photo: /images/students/anisha.jpeg
     designation: Undergraduate Researcher
     linkedin: https://www.linkedin.com/in/umme-mehajabin-anisha-520253319
     email: anishamehajabin@gmail.com
@@ -24,7 +24,7 @@ students:
     bio: At the University of Liberal Arts Bangladesh, conducting research on ESP32-based decentralized mesh networks to enhance communication reliability and efficiency. His work focuses on intelligent routing algorithms, automatic node failure detection, bandwidth optimization, and emergency message prioritization to ensure fast and uninterrupted communication without a central server. He is passionate about embedded systems, computer networking, and developing innovative solutions to real-world technological challenges.
   - year: 2026
     name: Md Jannatun Naem Refat
-    # photo: /images/students/refat.jpeg  (add the photo file, then uncomment)
+    photo: /images/students/refat.jpeg
     designation: Undergraduate Researcher
     linkedin: https://www.linkedin.com/in/md-jannatun-naem-refat-839655234/
     email: refatislam630@gmail.com
@@ -32,7 +32,7 @@ students:
     bio: At the University of Liberal Arts Bangladesh, conducting research on ESP32-based decentralized mesh networks to enhance communication reliability and efficiency. His work focuses on intelligent routing algorithms, automatic node failure detection, bandwidth optimization, and emergency message prioritization to ensure fast and uninterrupted communication without a central server. He is passionate about embedded systems, computer networking, and developing innovative solutions to real-world technological challenges.
   - year: 2026
     name: Rashid Shahriar
-    # photo: /images/students/rashid.jpeg  (add the photo file, then uncomment)
+    photo: /images/students/rashid.jpeg
     designation: Undergraduate Researcher
     linkedin: https://www.linkedin.com/in/rashid-shahriar-5310852b2/
     email: rashid.cse00@gmail.com

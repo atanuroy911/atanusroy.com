@@ -1093,6 +1093,7 @@
         {
           "year": 2026,
           "name": "Umme Mehajabin Anisha",
+          "photo": "/images/students/anisha.jpeg",
           "designation": "Undergraduate Researcher",
           "linkedin": "https://www.linkedin.com/in/umme-mehajabin-anisha-520253319",
           "email": "anishamehajabin@gmail.com",
@@ -1121,6 +1122,7 @@
         {
           "year": 2026,
           "name": "Md Jannatun Naem Refat",
+          "photo": "/images/students/refat.jpeg",
           "designation": "Undergraduate Researcher",
           "linkedin": "https://www.linkedin.com/in/md-jannatun-naem-refat-839655234/",
           "email": "refatislam630@gmail.com",
@@ -1130,6 +1132,7 @@
         {
           "year": 2026,
           "name": "Rashid Shahriar",
+          "photo": "/images/students/rashid.jpeg",
           "designation": "Undergraduate Researcher",
           "linkedin": "https://www.linkedin.com/in/rashid-shahriar-5310852b2/",
           "email": "rashid.cse00@gmail.com",
@@ -3519,6 +3522,7 @@
         {
           "year": 2026,
           "name": "উম্মে মেহজাবিন আনিশা",
+          "photo": "/images/students/anisha.jpeg",
           "designation": "স্নাতক গবেষক",
           "linkedin": "https://www.linkedin.com/in/umme-mehajabin-anisha-520253319",
           "email": "anishamehajabin@gmail.com",
@@ -3547,6 +3551,7 @@
         {
           "year": 2026,
           "name": "মোঃ জান্নাতুন নাঈম রেফাত",
+          "photo": "/images/students/refat.jpeg",
           "designation": "স্নাতক গবেষক",
           "linkedin": "https://www.linkedin.com/in/md-jannatun-naem-refat-839655234/",
           "email": "refatislam630@gmail.com",
@@ -3556,6 +3561,7 @@
         {
           "year": 2026,
           "name": "রশিদ শাহরিয়ার",
+          "photo": "/images/students/rashid.jpeg",
           "designation": "স্নাতক গবেষক",
           "linkedin": "https://www.linkedin.com/in/rashid-shahriar-5310852b2/",
           "email": "rashid.cse00@gmail.com",

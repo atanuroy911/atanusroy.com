@@ -2,6 +2,14 @@ gallery:
   title: Gallery
   description: Screens, demos, and moments from what I've shipped.
   images:
+    - src: /images/blog/icisce-2019-shanghai/presenting.jpg
+      caption: Presenting my first conference paper at IEEE ICISCE 2019, Shanghai
+    - src: /images/blog/icisce-2019-shanghai/shanghai-night.jpg
+      caption: Shanghai at night, looking down on Lujiazui
+    - src: /images/blog/icisce-2019-shanghai/group-selfie.jpg
+      caption: With friends at the observation deck, Shanghai 2019
+    - src: /images/blog/icisce-2019-shanghai/observation-deck.jpg
+      caption: Shanghai observation deck after the conference, December 2019
     - src: >-
         https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80
       caption: Late night debugging sessions

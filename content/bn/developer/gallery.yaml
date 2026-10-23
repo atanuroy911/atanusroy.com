@@ -5,6 +5,14 @@ gallery:
   title: গ্যালারি
   description: স্ক্রীন, ডেমো এবং মুহূর্ত যা আমি পাঠিয়েছি।
   images:
+    - src: /images/blog/icisce-2019-shanghai/presenting.jpg
+      caption: সাংহাইয়ে IEEE ICISCE 2019-এ আমার প্রথম কনফারেন্স পেপার উপস্থাপন
+    - src: /images/blog/icisce-2019-shanghai/shanghai-night.jpg
+      caption: রাতের সাংহাই, ওপর থেকে লুজিয়াজুইয়ের দৃশ্য
+    - src: /images/blog/icisce-2019-shanghai/group-selfie.jpg
+      caption: অবজারভেশন ডেকে বন্ধুদের সঙ্গে, সাংহাই ২০১৯
+    - src: /images/blog/icisce-2019-shanghai/observation-deck.jpg
+      caption: কনফারেন্সের পর সাংহাইয়ের অবজারভেশন ডেকে, ডিসেম্বর ২০১৯
     - src: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80
       caption: গভীর রাতে ডিবাগিং সেশন
     - src: https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80

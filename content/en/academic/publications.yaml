@@ -378,7 +378,7 @@ publications:
     year: 2019
     type: conference
     venue: IEEE ICISCE 2019
-    venue_full: 2019 6th International Conference on Information Science and Control Engineering (ICISCE), IEEE
+    venue_full: 2019 6th International Conference on Information Science and Control Engineering (ICISCE), IEEE, 427–433
     authors: [A. J. Moshayedi, A. S. Roy, L. Liao, S. Li]
     tldr: >-
       A low-cost, web-based SCADA system for farms, hosted on a Raspberry Pi and

@@ -25,6 +25,71 @@ blog_categories:
     bg: "#fef2f2"
 
 blog_posts:
+  - id: throwback-icisce-2019-shanghai
+    title: "Throwback: My First Conference Paper, in Shanghai"
+    date: "2026-10-23"
+    category: conference
+    tags: [throwback, conference, iot, scada, shanghai]
+    cover_image: "/images/blog/icisce-2019-shanghai/presenting.jpg"
+    summary: >
+      Looking back at December 2019, when I presented my first conference paper,
+      a Raspberry Pi SCADA system for farms, at IEEE ICISCE 2019 in Shanghai.
+    content: |
+      ## Where It Started
+
+      In December 2019 I was an undergraduate at Jiangxi University of Science &
+      Technology, and I travelled to Shanghai to present my first ever conference
+      paper at the **2019 6th International Conference on Information Science and
+      Control Engineering (ICISCE)**.
+
+      ![Presenting at ICISCE 2019 in front of the conference title slide](/images/blog/icisce-2019-shanghai/presenting.jpg)
+
+      *Presenting at ICISCE 2019.*
+
+      ## The Paper
+
+      **Raspberry Pi SCADA Zonal Based System for Agricultural Plant Monitoring**,
+      with [Dr. Ata Jahangir Moshayedi](https://drajm.com), Liefa Liao and Shuai Li.
+
+      SCADA (Supervisory Control and Data Acquisition) systems run most of the
+      world's industrial monitoring, but expensive software and hard-to-extend
+      setups keep them out of reach for small operations like farms. We asked a
+      simple question: could a SCADA system run on something as small and cheap as
+      a **Raspberry Pi**?
+
+      We designed and compared two small SCADA systems for agriculture:
+
+      - A **Raspberry Pi** as the host, instead of a PC or laptop, cutting both
+        cost and size
+      - A **zonal** layout that splits the farm into zones to tackle security
+        problems
+      - A **web-based** interface for monitoring the plant environment locally and
+        remotely
+
+      A SCADA host that compact had not been reported before. The paper appeared in
+      the IEEE proceedings (pages 427–433), published on 20 December 2019.
+
+      ## Shanghai at Night
+
+      After the sessions, we went up to an observation deck high above Lujiazui.
+      Looking straight down at the blue-lit Shanghai World Financial Center was
+      unforgettable.
+
+      ![Night view looking down on Shanghai's Lujiazui skyline and the river](/images/blog/icisce-2019-shanghai/shanghai-night.jpg)
+
+      ![Group selfie with friends at the observation deck, the city lights behind us](/images/blog/icisce-2019-shanghai/group-selfie.jpg)
+
+      ![Three of us standing at the observation deck window at night](/images/blog/icisce-2019-shanghai/observation-deck.jpg)
+
+      ## Looking Back
+
+      That small Raspberry Pi system was the start of everything that followed: IoT
+      for parking and attendance, computer vision on edge devices, and now robots
+      that see and act. Every research path starts somewhere, and mine started in
+      Shanghai.
+    link: "https://doi.org/10.1109/ICISCE48695.2019.00092"
+    pinned: false
+
   - id: agv-lidar-kinect-icfeict
     title: "New Book Chapter: Comparing LiDAR and Kinect for AGV Navigation"
     date: "2026-05-08"
@@ -546,7 +611,7 @@ blog_posts:
 
   - id: raspberry-pi-scada-2019
     title: "A Pocket-Sized SCADA System for Farms, Built on Raspberry Pi"
-    date: "2019-12-01"
+    date: "2019-12-20"
     category: conference
     tags: [iot, scada, raspberry-pi, agriculture]
     cover_image: ""

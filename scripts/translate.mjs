@@ -57,15 +57,24 @@ async function googleTranslate(text, from = 'en', to = 'bn') {
   
   const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${from}&tl=${to}&dt=t&q=${encodeURIComponent(text)}`
   
-  try {
-    const res = await fetch(url)
-    const data = await res.json()
-    return applyFixes(restoreLinks(text, data[0].map(item => item[0]).join('')))
-  } catch (err) {
-    console.warn(`  ⚠ Failed to translate: "${text.slice(0, 40)}..."`)
-    return text
+  // Google rate-limits bursts; wait longer between each retry
+  for (const wait of [0, 2000, 5000, 15000, 30000]) {
+    if (wait) await new Promise(r => setTimeout(r, wait))
+    try {
+      const res = await fetch(url)
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      const data = await res.json()
+      return applyFixes(restoreLinks(text, data[0].map(item => item[0]).join('')))
+    } catch {
+      // retry
+    }
   }
+  failures++
+  console.warn(`  ⚠ Failed to translate: "${text.slice(0, 40)}..."`)
+  return text
 }
+
+let failures = 0
 
 // Text with [label](url) links: translate the text with numbered placeholders in place of
 // the links, translate each label on its own, then put the links back. Keeps urls intact
@@ -187,6 +196,11 @@ async function main() {
   const bnDir = join(ROOT, 'content', 'bn')
   
   await processDirectory(enDir, bnDir)
+
+  if (failures) {
+    console.error(`\n❌ ${failures} strings could not be translated and were left in English. Run again later.`)
+    process.exitCode = 1
+  }
 }
 
 main().catch(err => {

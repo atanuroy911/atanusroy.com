@@ -1,5 +1,6 @@
 'use client'
 
+import { SiFacebook } from 'react-icons/si'
 import { motion } from 'framer-motion'
 import { useMode } from '@/providers/ModeProvider'
 import { Mail, MapPin, BookOpen, UserCircle2, Send } from 'lucide-react'
@@ -134,6 +135,12 @@ export function ContactClient({ content }: { content: any }) {
                       GitHub
                     </a>
                   )}
+                  {p?.facebook && (
+                    <a href={p.facebook} target="_blank" rel="noreferrer" className="dev-social-btn">
+                      <SiFacebook size={16} aria-hidden="true" />
+                      Facebook
+                    </a>
+                  )}
                   {p?.linkedin && (
                     <a href={p.linkedin} target="_blank" rel="noreferrer" className="dev-social-btn">
                       <LinkedinIcon size={16} />
@@ -232,6 +239,11 @@ export function ContactClient({ content }: { content: any }) {
                   {p?.dblp && (
                     <a href={p.dblp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 hover:border-slate-300 bg-white dark:bg-slate-900 text-sm font-medium transition-colors">
                       <BookOpen size={16} style={{ color: 'var(--ac-navy)' }} /> DBLP
+                    </a>
+                  )}
+                  {p?.facebook && (
+                    <a href={p.facebook} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 hover:border-slate-300 bg-white dark:bg-slate-900 text-sm font-medium transition-colors">
+                      <SiFacebook size={16} aria-hidden="true" /> Facebook
                     </a>
                   )}
                   {p?.linkedin && (

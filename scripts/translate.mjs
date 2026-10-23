@@ -44,6 +44,14 @@ export function restoreLinks(original, translated) {
   return i === urls.length ? fixed : translated
 }
 
+// Fixes for known mistranslations, applied after every translation.
+// e.g. Google turns the women's title "Mst" into "মিঃ" (Mr.).
+const TERM_FIXES = [
+  ['মিঃ মুস্তারা', 'মোসাঃ মুস্তারা'],
+]
+
+const applyFixes = (t) => TERM_FIXES.reduce((acc, [bad, good]) => acc.split(bad).join(good), t)
+
 async function googleTranslate(text, from = 'en', to = 'bn') {
   if (!text || typeof text !== 'string' || text.trim() === '') return text
   
@@ -52,7 +60,7 @@ async function googleTranslate(text, from = 'en', to = 'bn') {
   try {
     const res = await fetch(url)
     const data = await res.json()
-    return restoreLinks(text, data[0].map(item => item[0]).join(''))
+    return applyFixes(restoreLinks(text, data[0].map(item => item[0]).join('')))
   } catch (err) {
     console.warn(`  ⚠ Failed to translate: "${text.slice(0, 40)}..."`)
     return text

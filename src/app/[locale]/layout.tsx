@@ -73,6 +73,7 @@ export default async function LocaleLayout({
       p.orcid,
       p.youtube,
       p.instagram,
+      p.facebook,
     ].filter(Boolean),
   }
 

@@ -1,5 +1,6 @@
 'use client'
 
+import { SiFacebook } from 'react-icons/si'
 import { useMode } from '@/providers/ModeProvider'
 import { useOptionalDevTheme } from '@/providers/DevThemeProvider'
 import { Mail, BookOpen, Sun, Moon } from 'lucide-react'
@@ -16,6 +17,7 @@ export function Footer({ content, isDev }: { content: any; isDev?: boolean }) {
   const socials = [
     p?.github && { href: p.github, icon: <Github width={16} height={16} />, label: 'GitHub' },
     p?.linkedin && { href: p.linkedin, icon: <Linkedin width={16} height={16} />, label: 'LinkedIn' },
+    p?.facebook && { href: p.facebook, icon: <SiFacebook size={16} />, label: 'Facebook' },
     p?.google_scholar && { href: p.google_scholar, icon: <BookOpen size={16} />, label: 'Google Scholar' },
     p?.dblp && { href: p.dblp, icon: <BookOpen size={16} />, label: 'DBLP' },
     p?.email && { href: `mailto:${p.email}`, icon: <Mail size={16} />, label: 'Email' },

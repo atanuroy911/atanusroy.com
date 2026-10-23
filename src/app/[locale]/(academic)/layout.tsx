@@ -1,4 +1,4 @@
-import { SiDblp } from 'react-icons/si'
+import { SiDblp, SiFacebook } from 'react-icons/si'
 import { getContent, pickContent, type Locale } from '@/lib/content'
 import Image from 'next/image'
 import { ModeProvider } from '@/providers/ModeProvider'
@@ -139,6 +139,9 @@ export default async function AcademicLayout({
                   </SocialLink>
                   <SocialLink href={p.linkedin} label="LinkedIn">
                     <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><Linkedin size={16} /><span>LinkedIn</span></span>
+                  </SocialLink>
+                  <SocialLink href={p.facebook} label="Facebook">
+                    <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><SiFacebook size={16} aria-hidden="true" /><span>Facebook</span></span>
                   </SocialLink>
                   <SocialLink href={p.researchgate} label="ResearchGate">
                     <span className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-muted"><ResearchGate size={16} /><span>ResearchGate</span></span>

@@ -1,3 +1,17 @@
+youtube_channel:
+  name: Applied CS Academy
+  url: https://www.youtube.com/@appliedcsacademy
+  banner: /assets/applied-cs-academy-banner.jpg
+  banner_alt: >-
+    Applied CS Academy banner: Atanu Shuvam Roy at a desk, with the Bengali
+    headline "Let's learn computer science together, simply and with real
+    examples", covering programming, data structures and algorithms, computer
+    systems, databases, networks and security, and AI.
+  description: >-
+    My YouTube channel, in Bengali. Computer science explained simply with real
+    examples: programming, data structures and algorithms, databases, networks,
+    AI and careers.
+  cta: Subscribe on YouTube
 teaching_courses:
   - code: CSE 4417
     name: Internet of Things (IoT)

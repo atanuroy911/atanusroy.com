@@ -13,7 +13,7 @@ export default async function TeachingPage({ params }: { params: Promise<{ local
   const content = getContent(locale as Locale)
   return (
     <div id="teaching">
-      <TeachingClient content={pickContent(content, ['academic.teaching_courses', 'academic.free_ebooks'])} />
+      <TeachingClient content={pickContent(content, ['academic.teaching_courses', 'academic.free_ebooks', 'academic.youtube_channel'])} />
     </div>
   )
 }

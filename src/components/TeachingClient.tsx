@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import { SiYoutube } from 'react-icons/si'
 import { BookOpen, Code, Server, Cpu, Activity, Link as LinkIcon, ChevronDown, ChevronUp, FileText, FolderOpen, History, Download } from 'lucide-react'
 
 import { usePathname } from 'next/navigation'
@@ -32,6 +33,7 @@ export function TeachingClient({ content }: { content: any }) {
   const pathname = usePathname()
   const courses = (content?.academic?.teaching_courses || []) as TeachingCourse[]
 
+  const yt = content?.academic?.youtube_channel as { name: string; url: string; banner: string; banner_alt: string; description: string; cta: string } | undefined
   const ebooks = (content?.academic?.free_ebooks || []) as { title: string; description?: string; link: string }[]
 
   const activeCourses = courses.filter((c) => !c.archived)
@@ -65,6 +67,31 @@ export function TeachingClient({ content }: { content: any }) {
             I serve as a Lecturer in the Department of Computer Science & Engineering at the University of Liberal Arts Bangladesh (ULAB), guiding students in core computer science principles and supervising capstone engineering projects.
           </p>
         </motion.div>
+
+        {yt && (
+          <section aria-labelledby="youtube-heading" className="mb-10 overflow-hidden rounded-xl ac-paper">
+            <a href={yt.url} target="_blank" rel="noopener noreferrer" className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={yt.banner} alt={yt.banner_alt} className="w-full h-auto" />
+              <span className="sr-only"> (opens YouTube in a new tab)</span>
+            </a>
+            <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 id="youtube-heading" className="text-lg font-bold text-slate-800 dark:text-slate-100">{yt.name}</h2>
+                <p className="mt-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{yt.description}</p>
+              </div>
+              <a
+                href={yt.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-red-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:ring-offset-2"
+              >
+                <SiYoutube size={18} aria-hidden="true" /> {yt.cta}
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </section>
+        )}
 
         <div className="space-y-10">
           {Object.entries(coursesBySemester).map(([semester, sCourses]) => (

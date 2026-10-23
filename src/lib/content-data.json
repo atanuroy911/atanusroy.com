@@ -29,6 +29,7 @@
       "linkedin": "https://linkedin.com/in/atanu-shuvam-roy",
       "researchgate": "https://www.researchgate.net/profile/Atanu-Roy-5",
       "instagram": "https://www.instagram.com/atanu_shuvam_roy/",
+      "facebook": "https://www.facebook.com/profile.php?id=61595742626411",
       "github": "https://github.com/atanuroy911",
       "youtube": "https://www.youtube.com/@atanushuvamroy",
       "google_scholar": "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en",
@@ -1156,6 +1157,14 @@
           "bio": "At University of Liberal Arts Bangladesh, actively working on a Biometrically Secured Women Safety Device focused on improving personal security through smart technology. Her work integrates biometric authentication, emergency alert mechanisms, and embedded systems to create a reliable and user-friendly safety solution for women. She is passionate about using technology to address real-world social challenges and develop impactful innovations."
         }
       ],
+      "youtube_channel": {
+        "name": "Applied CS Academy",
+        "url": "https://www.youtube.com/@appliedcsacademy",
+        "banner": "/assets/applied-cs-academy-banner.jpg",
+        "banner_alt": "Applied CS Academy banner: Atanu Shuvam Roy at a desk, with the Bengali headline \"Let's learn computer science together, simply and with real examples\", covering programming, data structures and algorithms, computer systems, databases, networks and security, and AI.",
+        "description": "My YouTube channel, in Bengali. Computer science explained simply with real examples: programming, data structures and algorithms, databases, networks, AI and careers.",
+        "cta": "Subscribe on YouTube"
+      },
       "teaching_courses": [
         {
           "code": "CSE 4417",
@@ -2446,6 +2455,7 @@
       "linkedin": "https://linkedin.com/in/atanu-shuvam-roy",
       "researchgate": "https://www.researchgate.net/profile/Atanu-Roy-5",
       "instagram": "https://www.instagram.com/atanu_shuvam_roy/",
+      "facebook": "https://www.facebook.com/profile.php?id=61595742626411",
       "github": "https://github.com/atanuroy911",
       "youtube": "https://www.youtube.com/@atanushuvamroy",
       "google_scholar": "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en",
@@ -3527,7 +3537,7 @@
         },
         {
           "year": 2026,
-          "name": "মোঃ সাগর হোসাইন",
+          "name": "মোঃ সাগর হোসেন",
           "photo": "/images/students/sagor.jpeg",
           "designation": "স্নাতক গবেষক",
           "email": "mdsagorrobi3@gmail.com",
@@ -3573,6 +3583,14 @@
           "bio": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ-এ, সক্রিয়ভাবে একটি বায়োমেট্রিকলি সিকিউরড উইমেন সেফটি ডিভাইসে কাজ করছে যা স্মার্ট প্রযুক্তির মাধ্যমে ব্যক্তিগত নিরাপত্তার উন্নতির উপর দৃষ্টি নিবদ্ধ করে। তার কাজ মহিলাদের জন্য একটি নির্ভরযোগ্য এবং ব্যবহারকারী-বান্ধব নিরাপত্তা সমাধান তৈরি করতে বায়োমেট্রিক প্রমাণীকরণ, জরুরি সতর্কতা প্রক্রিয়া এবং এমবেডেড সিস্টেমগুলিকে একীভূত করে৷ তিনি বাস্তব-বিশ্বের সামাজিক চ্যালেঞ্জ মোকাবেলা করতে এবং প্রভাবশালী উদ্ভাবন বিকাশের জন্য প্রযুক্তি ব্যবহার করার বিষয়ে উত্সাহী।"
         }
       ],
+      "youtube_channel": {
+        "name": "ফলিত সিএস একাডেমী",
+        "url": "https://www.youtube.com/@appliedcsacademy",
+        "banner": "/assets/applied-cs-academy-banner.jpg",
+        "banner_alt": "ফলিত CS একাডেমি ব্যানার: অতনু শুভম রায় একটি ডেস্কে, বাংলা শিরোনাম \"আসুন একসাথে কম্পিউটার বিজ্ঞান শিখি, সহজভাবে এবং বাস্তব উদাহরণ সহ\", প্রোগ্রামিং, ডেটা স্ট্রাকচার এবং অ্যালগরিদম, কম্পিউটার সিস্টেম, ডাটাবেস, নেটওয়ার্ক এবং নিরাপত্তা, এবং AI কভার করে।",
+        "description": "আমার ইউটিউব চ্যানেল, বাংলায়। কম্পিউটার বিজ্ঞানকে বাস্তব উদাহরণ দিয়ে ব্যাখ্যা করা হয়েছে: প্রোগ্রামিং, ডেটা স্ট্রাকচার এবং অ্যালগরিদম, ডাটাবেস, নেটওয়ার্ক, এআই এবং ক্যারিয়ার।",
+        "cta": "ইউটিউবে সাবস্ক্রাইব করুন"
+      },
       "teaching_courses": [
         {
           "code": "CSE 4417",

@@ -1110,6 +1110,16 @@
       "students": [
         {
           "year": 2026,
+          "name": "Mahdia Hossain",
+          "photo": "/images/students/mahdia.jpeg",
+          "designation": "Undergraduate Researcher",
+          "linkedin": "https://www.linkedin.com/in/mahdia-hossain-046688439",
+          "email": "mahdia.hossain.cse@ulab.edu.bd",
+          "project": "Computer Vision for Safer Roads and Smarter Transportation",
+          "bio": "A final-year Computer Science and Engineering student at the University of Liberal Arts Bangladesh (ULAB), she is currently working on a capstone project in computer vision, exploring how intelligent systems can help make roads safer and transportation smarter. She is interested in applying AI and emerging technologies to real-world problems, and enjoys building solutions that create meaningful impact."
+        },
+        {
+          "year": 2026,
           "name": "Umme Mehajabin Anisha",
           "photo": "/images/students/anisha.jpeg",
           "designation": "Undergraduate Researcher",
@@ -3571,6 +3581,16 @@
         }
       ],
       "students": [
+        {
+          "year": 2026,
+          "name": "মাহদিয়া হোসেন",
+          "photo": "/images/students/mahdia.jpeg",
+          "designation": "স্নাতক গবেষক",
+          "linkedin": "https://www.linkedin.com/in/mahdia-hossain-046688439",
+          "email": "mahdia.hossain.cse@ulab.edu.bd",
+          "project": "নিরাপদ সড়ক ও স্মার্ট পরিবহনের জন্য কম্পিউটার ভিশন",
+          "bio": "ইউনিভার্সিটি অফ লিবারেল আর্টস বাংলাদেশ (ইউল্যাব)-এর কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিংয়ের চূড়ান্ত বর্ষের শিক্ষার্থী। তিনি বর্তমানে কম্পিউটার ভিশনে একটি ক্যাপস্টোন প্রজেক্টে কাজ করছেন, যেখানে তিনি খুঁজে দেখছেন কীভাবে বুদ্ধিমান সিস্টেম সড়ককে আরও নিরাপদ এবং পরিবহনকে আরও স্মার্ট করতে পারে। বাস্তব সমস্যায় এআই ও নতুন প্রযুক্তি প্রয়োগে তাঁর আগ্রহ রয়েছে, এবং অর্থবহ প্রভাব ফেলে এমন সমাধান তৈরি করতে তিনি ভালোবাসেন।"
+        },
         {
           "year": 2026,
           "name": "উম্মে মেহজাবিন আনিশা",

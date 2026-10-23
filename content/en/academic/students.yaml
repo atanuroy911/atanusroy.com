@@ -1,5 +1,13 @@
 students:
   - year: 2026
+    name: Mahdia Hossain
+    photo: /images/students/mahdia.jpeg
+    designation: Undergraduate Researcher
+    linkedin: https://www.linkedin.com/in/mahdia-hossain-046688439
+    email: mahdia.hossain.cse@ulab.edu.bd
+    project: Computer Vision for Safer Roads and Smarter Transportation
+    bio: A final-year Computer Science and Engineering student at the University of Liberal Arts Bangladesh (ULAB), she is currently working on a capstone project in computer vision, exploring how intelligent systems can help make roads safer and transportation smarter. She is interested in applying AI and emerging technologies to real-world problems, and enjoys building solutions that create meaningful impact.
+  - year: 2026
     name: Umme Mehajabin Anisha
     photo: /images/students/anisha.jpeg
     designation: Undergraduate Researcher

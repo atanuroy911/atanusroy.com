@@ -102,7 +102,8 @@ export function buildMetadata(opts: PageSEOOptions): Metadata {
       title: fullTitle,
       description,
       images: [image],
-      creator: '@atanusroy',
+      creator: '@atanuroy911',
+      site: '@atanuroy911',
     },
   }
 }

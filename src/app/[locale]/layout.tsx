@@ -74,6 +74,7 @@ export default async function LocaleLayout({
       p.youtube,
       p.instagram,
       p.facebook,
+      p.x,
     ].filter(Boolean),
   }
 

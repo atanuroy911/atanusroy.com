@@ -52,7 +52,7 @@ export function ShareButtons({ url, title }: ShareButtonsProps) {
     {
       name: 'X (Twitter)',
       icon: XIcon,
-      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}&via=atanuroy911`,
     },
   ]
 

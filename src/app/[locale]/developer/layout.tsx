@@ -3,9 +3,9 @@ import { Footer } from '@/components/Footer'
 import { getContent, pickContent, type Locale } from '@/lib/content'
 import { ModeProvider } from '@/providers/ModeProvider'
 import { DevThemeProvider } from '@/providers/DevThemeProvider'
-import { CursorGlow } from '@/components/developer/CursorGlow'
 import { ScrollToTop } from '@/components/developer/ScrollToTop'
 import './DevStyles.css'
+import './AppleStyles.css'
 
 export default async function DevLayout({
   children,
@@ -21,7 +21,6 @@ export default async function DevLayout({
     <ModeProvider forcedMode="developer">
       <DevThemeProvider>
         <div className="flex flex-col dev-layout">
-          <CursorGlow />
           <ScrollToTop />
           <Navbar content={pickContent(content, ['nav'])} locale={locale as Locale} isDev={true} />
           <main id="main" tabIndex={-1} className="focus:outline-none">{children}</main>

@@ -58,7 +58,7 @@ function BlogIndex({
         <div className="dev-blog-page">
           {/* Header */}
           <div className="dev-blog-header">
-            <div className="sec-label">// blog</div>
+            <p className="sec-label">Blog</p>
             <h1 className="sec-title">Blog &amp; Notes</h1>
             <p className="sec-sub" style={{ marginBottom: 32 }}>
               Dev logs, project write-ups, tools, and technical deep-dives.

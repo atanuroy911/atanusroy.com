@@ -45,7 +45,6 @@ export function Navbar({ content, locale, isDev }: Props) {
   const links = isDev ? [
     { href: `/${locale}/developer`, label: nav?.home || 'Home' },
     { href: `/${locale}/developer/projects`, label: nav?.projects || 'Projects' },
-    { href: `/${locale}/developer/certsend`, label: nav?.certsend || 'CertSend' },
     { href: `/${locale}/developer/blog`, label: nav?.blog || 'Blog' },
     { href: `/${locale}/developer/journey`, label: nav?.journey || 'Journey' },
     { href: `/${locale}/developer/gallery`, label: nav?.gallery || 'Gallery' },

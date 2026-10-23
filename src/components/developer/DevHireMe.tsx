@@ -20,7 +20,7 @@ export function DevHireMe({ content, locale = 'en' }: { content: any; locale?: s
       <div className="hire-page">
         {/* Hero */}
         <div className="hire-hero">
-          <div className="sec-label">// hire_me</div>
+          <p className="sec-label">Hire me</p>
           <h1 className="sec-title">{hm.title}</h1>
           <p className="sec-sub">{hm.sub}</p>
           <div className="hero-btns" style={{ marginTop: 28 }}>
@@ -63,7 +63,7 @@ export function DevHireMe({ content, locale = 'en' }: { content: any; locale?: s
 
         {/* Case studies */}
         <div id="case-studies">
-          <div className="sec-label">// proof</div>
+          <p className="sec-label">Proof</p>
           <h2 className="project-title" style={{ marginBottom: 24 }}>Real projects, real results</h2>
           <div className="case-study-grid">
             {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
@@ -100,7 +100,7 @@ export function DevHireMe({ content, locale = 'en' }: { content: any; locale?: s
 
         {/* Comparison */}
         <div>
-          <div className="sec-label">// comparison</div>
+          <p className="sec-label">Comparison</p>
           <h2 className="project-title" style={{ marginBottom: 24 }}>{hm.comparison.title}</h2>
           <div className="comparison-wrap">
             <table className="comparison-table">
@@ -140,7 +140,7 @@ export function DevHireMe({ content, locale = 'en' }: { content: any; locale?: s
 
         {/* FAQ */}
         <div>
-          <div className="sec-label">// faq</div>
+          <p className="sec-label">FAQ</p>
           <h2 className="project-title" style={{ marginBottom: 24 }}>Questions you might have</h2>
           <div className="faq-list">
             {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}

@@ -17,7 +17,7 @@ export default async function DevGalleryPage({ params }: { params: Promise<{ loc
     <div className="port">
       <div className="dev-gallery-page">
         <div className="mb-16 text-center">
-          <div className="sec-label">// gallery</div>
+          <p className="sec-label">Gallery</p>
           <h1 className="sec-title">{gallery?.title || 'Gallery'}</h1>
           <div className="sec-sub max-w-2xl mx-auto">{gallery?.description}</div>
         </div>

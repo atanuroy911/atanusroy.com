@@ -1,15 +1,7 @@
 import { getContent, pickContent, type Locale } from '@/lib/content'
 import type { Metadata } from 'next'
 import { buildMetadata, getDevHomeSEO } from '@/lib/seo'
-
-import { DevHero } from '@/components/developer/DevHero'
-import { DevProjects } from '@/components/developer/DevProjects'
-import { DevHireMeTeaser } from '@/components/developer/DevHireMeTeaser'
-import { DevServices } from '@/components/developer/DevServices'
-import { DevProcess } from '@/components/developer/DevProcess'
-import { DevQuote } from '@/components/developer/DevQuote'
-import { DevCTA } from '@/components/developer/DevCTA'
-import { DevProductBanner } from '@/components/developer/DevProductBanner'
+import { DevHome } from '@/components/developer/DevHome'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -22,15 +14,17 @@ export default async function DevHomePage({ params }: { params: Promise<{ locale
 
   return (
     <div className="port">
-      <h1 className="sr-only">Atanu Shuvam Roy — Software Engineer & Full-Stack Developer</h1>
-      <DevHero content={pickContent(content, ['developer.hero'])} locale={locale} />
-      <DevProductBanner product={content.developer.certsend} locale={locale} />
-      <DevProjects content={pickContent(content, ['developer.projects'])} locale={locale} />
-      <DevHireMeTeaser locale={locale} />
-      <DevServices content={pickContent(content, ['developer.services'])} />
-      <DevProcess content={pickContent(content, ['developer.process'])} />
-      <DevQuote content={pickContent(content, ['developer.quote'])} />
-      <DevCTA content={pickContent(content, ['developer.cta'])} locale={locale} />
+      <DevHome
+        content={pickContent(content, [
+          'developer.hero',
+          'developer.services',
+          'developer.process',
+          'developer.quote',
+          'developer.cta',
+          'developer.projects',
+        ])}
+        locale={locale}
+      />
     </div>
   )
 }

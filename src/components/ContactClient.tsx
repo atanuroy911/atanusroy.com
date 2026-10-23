@@ -28,7 +28,7 @@ export function ContactClient({ content }: { content: any }) {
         <div className="dev-contact-page">
           {/* Header */}
           <div style={{ marginBottom: 48 }}>
-            <div className="sec-label">// ping_me</div>
+            <p className="sec-label">Contact</p>
             <h1 className="sec-title">Get in Touch</h1>
             <p className="sec-sub" style={{ maxWidth: 520 }}>
               Have a project idea? Let&apos;s talk. I reply within 24 hours.

@@ -1738,7 +1738,7 @@
         }
       ],
       "certsend": {
-        "label": "// my_product",
+        "label": "My product",
         "name": "CertSend",
         "tagline": "Make and send certificates for free.",
         "description": "Design a certificate, paste a list of names, then download every certificate as a PDF (or one ZIP) or email them from Gmail. Everything runs in your browser: no server, no sign-up, nothing uploaded.",
@@ -4211,7 +4211,7 @@
         }
       ],
       "certsend": {
-        "label": "// আমার_প্রোডাক্ট",
+        "label": "আমার প্রোডাক্ট",
         "name": "CertSend",
         "tagline": "বিনামূল্যে শংসাপত্র তৈরি করুন এবং পাঠান।",
         "description": "একটি শংসাপত্র ডিজাইন করুন, নামের একটি তালিকা পেস্ট করুন, তারপর প্রতিটি শংসাপত্র PDF (বা একটি জিপ) হিসাবে ডাউনলোড করুন বা Gmail থেকে ইমেল করুন৷ সবকিছু আপনার ব্রাউজারে চলে: কোনো সার্ভার নেই, কোনো সাইন-আপ নেই, কিছুই আপলোড করা হয়নি৷",

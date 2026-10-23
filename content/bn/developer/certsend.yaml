@@ -2,7 +2,7 @@
 # Run: npm run translate to regenerate
 
 certsend:
-  label: // আমার_প্রোডাক্ট
+  label: আমার প্রোডাক্ট
   name: CertSend
   tagline: বিনামূল্যে শংসাপত্র তৈরি করুন এবং পাঠান।
   description: >-

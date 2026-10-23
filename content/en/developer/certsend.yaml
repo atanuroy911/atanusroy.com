@@ -1,5 +1,5 @@
 certsend:
-  label: "// my_product"
+  label: "My product"
   name: CertSend
   tagline: Make and send certificates for free.
   description: >-

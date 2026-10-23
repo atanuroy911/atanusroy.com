@@ -11,5 +11,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function DevProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const content = getContent(locale as Locale)
-  return <ProjectsClient content={content} />
+  return (
+    <ProjectsClient
+      projects={content.developer.projects || []}
+      product={content.developer.certsend}
+      locale={locale}
+    />
+  )
 }

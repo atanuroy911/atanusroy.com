@@ -117,7 +117,7 @@ export default async function DevBlogPostPage({
             <MarkdownRenderer content={post.content} mode="developer" />
           </div>
         ) : (
-          <p className="font-mono-dev text-slate-500 italic">// no_content_found</p>
+          <p className="text-slate-500 italic">No content yet.</p>
         )}
 
         {/* Footer CTAs */}
